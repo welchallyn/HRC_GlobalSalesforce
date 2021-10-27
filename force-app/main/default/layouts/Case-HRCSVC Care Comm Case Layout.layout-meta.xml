@@ -10,7 +10,7 @@
         <label>Protocol</label>
         <layoutColumns>
             <layoutItems>
-                <behavior>Readonly</behavior>
+                <behavior>Edit</behavior>
                 <field>HRCSVC_Protocol_Category__c</field>
             </layoutItems>
             <layoutItems>
