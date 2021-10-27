@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRC_Product</fullName>
+    <active>true</active>
+    <description>Default Standard Product</description>
+    <label>HRC Product</label>
+    <picklistValues>
+        <picklist>Family</picklist>
+        <values>
+            <fullName>Cardio Control</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CardioPulmonary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Colposcopes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Continuous Monitoring</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cuffs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Digital BP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Endoscopy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Excel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eye %26 Ear</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Headlights</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Laryngoscopes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lighting Products Division</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low Acuity Vitals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mechanical BP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical Lighting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NHDS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NIV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Physical Assessment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stethoscopes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thermometry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vag Specs</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HRCSVC_JDE_Category_Code_39__c</picklist>
+        <values>
+            <fullName>N</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PAO</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>QuantityUnitOfMeasure</picklist>
+        <values>
+            <fullName>Each</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

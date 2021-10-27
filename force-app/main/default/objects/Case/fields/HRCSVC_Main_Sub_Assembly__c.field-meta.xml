@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Main_Sub_Assembly__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>The third level in the &apos;Problem/Resolution Code&apos; hierarchy. SE-1033.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Search for Main - Sub Assembly using &apos;###&apos;</inlineHelpText>
+    <label>Main - Sub Assembly</label>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>Main - Sub Assembly does not match selected Complaint Code.</errorMessage>
+        <filterItems>
+            <field>HRCSVC_Problem_Resolution_Code__c.HRCSVC_Parent_Problem_Code__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.HRCSVC_Complaint_Code__c</valueField>
+        </filterItems>
+        <filterItems>
+            <field>HRCSVC_Problem_Resolution_Code__c.Id</field>
+            <operation>notEqual</operation>
+            <valueField>$Source.HRCSVC_As_Reported__c</valueField>
+        </filterItems>
+        <filterItems>
+            <field>HRCSVC_Problem_Resolution_Code__c.HRCSVC_Type__c</field>
+            <operation>equals</operation>
+            <value>Main Assembly - Sub Assembly</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>HRCSVC_Problem_Resolution_Code__c</referenceTo>
+    <relationshipLabel>Cases (Product Feature/Component)</relationshipLabel>
+    <relationshipName>Cases2</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

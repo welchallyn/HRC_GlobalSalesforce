@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Order_Attachment_Integration__c</fullName>
+    <externalId>false</externalId>
+    <formula>&quot;Sold To Attention Name~&quot;&amp;HRCSVC_Ship_To_Attn_Name__c&amp;&quot;~        &quot;&amp;
+&quot;Sold To Phone Number~&quot;&amp;HRCSVC_Ship_To_Attn_Phone__c&amp;&quot;~        &quot;&amp;
+&quot;Sold To Fax~~        &quot;&amp;
+&quot;Sold To Email~&quot;&amp;HRCSVC_Sold_To_Email_Address__c&amp;&quot;~        &quot;&amp;
+&quot;Ship To Attention Name~&quot;&amp;HRCSVC_Ship_To_Attn_Name__c&amp;&quot;~        &quot;&amp;
+&quot;Ship To Attention Phone Number~&quot;&amp;HRCSVC_Ship_To_Attn_Phone__c&amp;&quot;~        &quot;&amp;
+&quot;Order Notes~~        &quot;&amp;
+&quot;Markings~~        &quot;&amp;
+&quot;Invoice Only Notes~~        &quot;&amp;
+&quot;Loading Instructions~&quot;&amp;HRCSVC_Delivery_Instruction__c&amp;&quot;~        &quot;&amp;
+&quot;Delivery Instructions and RMA Notes~~        &quot;&amp;
+&quot;Evaluation Notes~~        &quot;&amp;
+&quot;Evaluation Return~~        &quot;&amp;
+&quot;Commissions / Pricing~~        &quot;&amp;
+&quot;Internal Notes~&quot;&amp;HRCSVC_Internal_Order_Notes__c&amp;&quot;~        &quot;&amp;
+&quot;Arch. Products Monitor Note~~        &quot;&amp;
+&quot;45 Day Delivery Notification~~        &quot;&amp;
+&quot;25 Day Delivery Notification~~        &quot;&amp;
+&quot;14 Day Delivery Notification~~        &quot;&amp;
+&quot;Monday Delivery Notification~~        &quot;&amp;
+&quot;RMA Return Notes~~        &quot;&amp;
+&quot;Order Result Of Evaluation~~        &quot;&amp;
+&quot;Direct Ship Order Notes~~        &quot;&amp;
+&quot;Returns/Allowance Reason~~        &quot;&amp;
+&quot;Order Audit Information~~        &quot;&amp;
+&quot;Warranty Notes~~        &quot;&amp;
+&quot;Email Sold To Order contact (Europe Use only)~~        &quot;&amp;
+&quot;Email Ship To Order contact (Europe Use only)~~        &quot;</formula>
+    <label>Order Attachment Integration</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

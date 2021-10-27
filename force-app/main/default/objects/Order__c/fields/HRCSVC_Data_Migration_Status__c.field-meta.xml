@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Data_Migration_Status__c</fullName>
+    <description>Created to track records that have been updated during various steps in data migration prep for Service Cloud 1.0 go live for Care Comm</description>
+    <externalId>false</externalId>
+    <label>HRCSVC Data Migration Status</label>
+    <length>1</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

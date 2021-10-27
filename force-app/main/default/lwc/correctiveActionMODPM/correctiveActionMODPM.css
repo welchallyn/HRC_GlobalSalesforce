@@ -1,0 +1,25 @@
+.no-class{
+    color:red;
+}
+
+.parent{
+    display:flex;
+}
+
+.child{
+    flex:1 1 auto;
+    margin:0px 2px;
+}
+
+div .LARGE {
+    color: red;
+    
+}
+div .SMALL {
+    color: blue;
+     
+}
+
+.blackborder{
+     border: 1px solid rgb(0, 0, 0); 
+}

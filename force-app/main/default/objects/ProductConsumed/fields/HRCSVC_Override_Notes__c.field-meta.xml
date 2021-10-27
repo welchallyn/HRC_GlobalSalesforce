@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Override_Notes__c</fullName>
+    <description>Field that captures notes which may be input as part of the coverage override process. SE-189.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Required if Coverage Override is Warranty</inlineHelpText>
+    <label>Override Notes</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

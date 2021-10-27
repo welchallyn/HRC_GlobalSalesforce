@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Product_Feature_Component__c</fullName>
+    <description>Formula that pulls the &quot;Main - Sub Assembly&quot; from the Case onto the Complaint Qualification. SE-1033.</description>
+    <externalId>false</externalId>
+    <formula>HRCSVC_Case__r.HRCSVC_Main_Sub_Assembly__r.Name</formula>
+    <label>Main - Sub Assembly</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

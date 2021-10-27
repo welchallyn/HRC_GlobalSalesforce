@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>SE-115: Invokes flow HRCSVC_Create_Facility_Account to create Facility Account from case</description>
+    <flowDefinition>HRCSVC_Create_Facility_Account</flowDefinition>
+    <label>Create Temporary Account</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

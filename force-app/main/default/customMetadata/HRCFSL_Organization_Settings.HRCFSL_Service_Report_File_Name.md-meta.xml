@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Service Report File Name</label>
+    <protected>false</protected>
+    <values>
+        <field>HRCFSL_Component_Description__c</field>
+        <value xsi:type="xsd:string">List of fields that are concatenated in the service report pdf file name. No spaces!</value>
+    </values>
+    <values>
+        <field>HRCFSL_Component_Detail_Long__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>HRCFSL_Component_Detail__c</field>
+        <value xsi:type="xsd:string">HRCFSL_JDE_ID__c,HRCFSL_Sales_Order__c,HRCFSL_Location_Number__c,HRCFSL_Location_Name__c,HRCFSL_Patient_First_Name__c,HRCFSL_Patient_Last_Name__c,HRCFSL_Actual_End__c</value>
+    </values>
+</CustomMetadata>

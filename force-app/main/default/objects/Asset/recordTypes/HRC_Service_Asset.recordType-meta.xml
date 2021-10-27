@@ -1,0 +1,1923 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRC_Service_Asset</fullName>
+    <active>true</active>
+    <description>Asset Record Type used for HRC Field Service Assets</description>
+    <label>HRC Service Asset</label>
+    <picklistValues>
+        <picklist>HECSVC_Voalte_Me_SW_Version__c</picklist>
+        <values>
+            <fullName>Android Voalte Me 3%2E5%2E4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Android Voalte Me 3%2E6%2E1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Android Voalte Me 3%2E6%2E3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Android Voalte Me 3%2E7%2E0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Android Voalte Me 3%2E7%2E1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Android Voalte Me 3%2E7%2E10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Android Voalte Me 3%2E7%2E12</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Android Voalte Me 3%2E7%2E13</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Android Voalte Me 3%2E7%2E3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Android Voalte Me 3%2E7%2E5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Android Voalte Me 3%2E7%2E9</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Android Voalte Me 3%2E9%2E0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iOS Voalte Me 3%2E5%2E2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iOS Voalte Me 3%2E5%2E3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iOS Voalte Me 3%2E5%2E4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iOS Voalte Me 3%2E5%2E6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iOS Voalte Me 3%2E6%2E0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iOS Voalte Me 3%2E6%2E1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iOS Voalte Me 3%2E6%2E2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iOS Voalte Me 3%2E6%2E3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iOS Voalte Me 3%2E6%2E4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iOS Voalte Me 3%2E7%2E0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iOS Voalte Me 3%2E7%2E1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iOS Voalte Me 3%2E7%2E10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iOS Voalte Me 3%2E7%2E11</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iOS Voalte Me 3%2E7%2E14</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iOS Voalte Me 3%2E7%2E2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iOS Voalte Me 3%2E7%2E3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iOS Voalte Me 3%2E7%2E4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iOS Voalte Me 3%2E7%2E5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iOS Voalte Me 3%2E7%2E9</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HRCFSL_Asset_Status__c</picklist>
+        <values>
+            <fullName>00</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1H</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>At Customer Site %28ECUS%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carcass Pool</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EQ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>L1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>L2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>P1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requires Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>XA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>XD</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HRCSVC_Advanced_Integrations__c</picklist>
+        <values>
+            <fullName>Airstrip</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amtelco</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Epic Alerts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Epic Interapp Linking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Everbridge SMTP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hurley Paging</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Masimo Safety Net</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patients</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ReadyList</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Red Alerts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RedAlert</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SmartWeb</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TUGS Robots</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Teletracking</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HRCSVC_AlarmView_UI_Integration__c</picklist>
+        <values>
+            <fullName>Epic Canto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Epic Haiku</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Epic Rover</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voalte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vocera</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HRCSVC_Alarm_Navigator_SW_Version__c</picklist>
+        <values>
+            <fullName>Alarm Navigator 1%2E1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alarm Navigator 1%2E3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alarm Navigator 1%2E3%2E1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alarm Navigator 1%2E4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alarm Navigator 1%2E6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alarm Navigator 2%2E0</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HRCSVC_Alarm_Navigator_UI_Integration__c</picklist>
+        <values>
+            <fullName>AllScripts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cerner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Epic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meditech</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HRCSVC_Asset_Category__c</picklist>
+        <values>
+            <fullName>Exchange</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Loaner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rental</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Demo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Test Equipment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trial%2FEvaluation</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HRCSVC_BedComm_Bedside_Device_Types__c</picklist>
+        <values>
+            <fullName>CarePanel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Perle</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HRCSVC_BedComm_HL7_Data_Inbound__c</picklist>
+        <values>
+            <fullName>AllScripts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ancillary Device Vendor Gateways</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BedMasterEx</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Capsule</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cerner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cerner iBus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draeger Gateway</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Epic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GE VC150</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meditech</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mindray Accutorr</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nuvon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Philips VS2%2FVS4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WAVE Clinical Platform</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Welch Allyn Gateway</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iSirona</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HRCSVC_BedComm_HL7_Data_Outbound__c</picklist>
+        <values>
+            <fullName>AllScripts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BedMasterEx</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cerner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Epic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meditech</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WAVE Clinical Platform</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HRCSVC_BedComm_SW_Version__c</picklist>
+        <values>
+            <fullName>BedComm 1%2E9</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BedComm 2%2E0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BedComm 2%2E1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BedComm 2%2E2%2E0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BedComm 2%2E3%2E1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BedComm 2%2E4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BedComm 2%2E5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BedComm 2%2E5%2E1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BedComm 2%2E6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BedComm 2%2E7</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BedComm 2%2E8</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HRCSVC_BedMaster_HL7_Data_Inbound__c</picklist>
+        <values>
+            <fullName>AllScripts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ancillary Device Vendor Gateways</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BedComm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Capsule</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cerner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cerner iBus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draeger Gateway</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Epic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GE VC150</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meditech</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mindray Accutorr</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nuvon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Philips VS2%2FVS4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WAVE Clinical Platform</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Welch Allyn Gateway</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iSirona</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HRCSVC_BedMaster_HL7_Data_Outbound__c</picklist>
+        <values>
+            <fullName>AllScripts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BedComm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cerner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Epic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meditech</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WAVE Clinical Platform</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HRCSVC_BedMaster_Version__c</picklist>
+        <values>
+            <fullName>BedMaster Ex 3%2E9%2E1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BedMaster Ex 4%2E0%2E17</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BedMaster Ex 4%2E1%2E1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BedMaster Ex 4%2E1%2E10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BedMaster Ex 4%2E1%2E11</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BedMaster Ex 4%2E1%2E12</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BedMaster Ex 4%2E1%2E7</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BedMaster Ex 4%2E1%2E8</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BedMaster Ex 4%2E2%2E1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BedMaster Ex 4%2E3%2E0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BedMaster Ex 4%2E3%2E1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BedMaster Ex 4%2E3%2E2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BedMaster Ex 4%2E3%2E3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BedMaster Ex 5%2E0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BedMaster Ex 5%2E1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BedMaster Ex 5%2E1%2E1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BedMaster Ex 5%2E1%2E2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BedMaster Ex 5%2E1%2E3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BedMaster Ex 5%2E2</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HRCSVC_HL7__c</picklist>
+        <values>
+            <fullName>ADT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Care Sign</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inbound Falls</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outbound Bed Data</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HRCSVC_Locating__c</picklist>
+        <values>
+            <fullName>CenTrak</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hillrom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Versus</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HRCSVC_MDM__c</picklist>
+        <values>
+            <fullName>CN700</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CitrixWorks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer AirWatch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JAMF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MAAS 360</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Microsoft Intune</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MobileIron</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Skybox %28AirWatch%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WorkSpace One</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>XenMobile</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HRCSVC_Middleware__c</picklist>
+        <values>
+            <fullName>Amcom%2FSpok</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cerner AlertLink</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Connexall</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emergin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VAAM</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HRCSVC_Non_Supported_Products__c</picklist>
+        <values>
+            <fullName>Asset_Tracking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Environmental Monitoring</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hand Hygiene</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SmartSync</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WatchChild</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HRCSVC_Nurse_Call__c</picklist>
+        <values>
+            <fullName>Direct- Hillrom NNC %28WCTP%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct- Hillrom VNC %28WCTP%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct- Rauland Responder 5 %28SIP%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct- Westcom %28WCTP%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dukane%2FGE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GE%2FTelligence %28Ascom%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hillrom NCM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hillrom NNC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hillrom VNC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rauland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rauland Responder 4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rauland Responder 5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rauland Responder 6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rauland Responder 7</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>West Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Westcom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zettler</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HRCSVC_On_Call_Scheduling__c</picklist>
+        <values>
+            <fullName>LightningBolt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QGenda</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HRCSVC_PBX_Vendor__c</picklist>
+        <values>
+            <fullName>Avaya</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cisco</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hitachi%2FMitel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NEC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shoretell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Siemens</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HRCSVC_Phone_Hardware__c</picklist>
+        <values>
+            <fullName>Honeywell CT50</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SpectraLink Pivot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SpectraLink Versity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zebra MC40</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zebra TC51</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zebra TC52</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iPhone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iPhone 3GS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iPhone 4S</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iPhone 5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iPhone 5S</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iPhone 6S</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iPhone 7</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iPhone 8</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iPhone SE %281st Gen%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iPhone SE %282nd Gen%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iPhone X</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iPhone XR%2C</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HRCSVC_Phone_OS__c</picklist>
+        <values>
+            <fullName>Android</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iOS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HRCSVC_Physiological_Monitoring__c</picklist>
+        <values>
+            <fullName>GE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nihon Kohden</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Philips</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spacelabs</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HRCSVC_Project_Status__c</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Info</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Started</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Started</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HRCSVC_Smart_Bed__c</picklist>
+        <values>
+            <fullName>CFCM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WatchCare</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HRCSVC_TeleTrend_UI_Integration__c</picklist>
+        <values>
+            <fullName>Epic Haiku</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Epic Hyperspace</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voalte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vocera</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HRCSVC_Voalte_EMR_Integration__c</picklist>
+        <values>
+            <fullName>Allscripts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cerner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Epic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meditech</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HRCSVC_Voalte_One_Version__c</picklist>
+        <values>
+            <fullName>Android Voalte One 3%2E5%2E2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Android Voalte One 3%2E5%2E4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Android Voalte One 3%2E5%2E5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Android Voalte One 3%2E6%2E0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Android Voalte One 3%2E6%2E1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Android Voalte One 3%2E6%2E3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Android Voalte One 3%2E7%2E0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Android Voalte One 3%2E7%2E1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Android Voalte One 3%2E7%2E10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Android Voalte One 3%2E7%2E14</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Android Voalte One 3%2E7%2E3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Android Voalte One 3%2E7%2E5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Android Voalte One 3%2E7%2E9</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Android Voalte One 3%2E9%2E0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iOS Voalte One 3%2E5%2E2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iOS Voalte One 3%2E5%2E4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iOS Voalte One 3%2E5%2E5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iOS Voalte One 3%2E5%2E7</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iOS Voalte One 3%2E5%2E8</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iOS Voalte One 3%2E6%2E1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iOS Voalte One 3%2E6%2E3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iOS Voalte One 3%2E6%2E4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iOS Voalte One 3%2E7%2E0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iOS Voalte One 3%2E7%2E1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iOS Voalte One 3%2E7%2E10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iOS Voalte One 3%2E7%2E11</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iOS Voalte One 3%2E7%2E14</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iOS Voalte One 3%2E7%2E3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iOS Voalte One 3%2E7%2E4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iOS Voalte One 3%2E7%2E5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iOS Voalte One 3%2E7%2E6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iOS Voalte One 3%2E7%2E7</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iOS Voalte One 3%2E7%2E8</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iOS Voalte One 3%2E7%2E9</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HRCSVC_Wave_Clinical_Platfrom_SW_Version__c</picklist>
+        <values>
+            <fullName>WAVE Clinical Platform 1%2E3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wave Clinical Platform 1%2E5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wave Clinical Platform 1%2E6</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HRCSVC_Wireless_Network__c</picklist>
+        <values>
+            <fullName>AIA Voalte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AeroHive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AreoScout</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aruba</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BlackBox</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cisco</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meru</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Xtreme</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HRCSVC_Wireless__c</picklist>
+        <values>
+            <fullName>Longleaf</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voalte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WCTP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WDC</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Patient_Monitoring_Waveform_Integration__c</picklist>
+        <values>
+            <fullName>GE CareScape</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GE Direct Connect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nihon Kohden</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Philips PIIC Classic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Philips PIIC IX</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>00</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1H</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>At Customer Site %28ECUS%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carcass Pool</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EQ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>L1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>L2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>P1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requires Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>XA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>XD</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Wireless_Vendor__c</picklist>
+        <values>
+            <fullName>Cisco</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Connexall</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voalte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vocera</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

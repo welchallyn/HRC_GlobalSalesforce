@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <assignments>
+        <name>Update_Has_skill_attribute</name>
+        <label>Update Has skill attribute</label>
+        <locationX>333</locationX>
+        <locationY>267</locationY>
+        <assignmentItems>
+            <assignToReference>hasSkills</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>WO_update</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Update_Has_Skills</name>
+        <label>Update Has Skills</label>
+        <locationX>807</locationX>
+        <locationY>225</locationY>
+        <assignmentItems>
+            <assignToReference>hasSkills</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>WO_update</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Update_SR_hasSkill_Flag</name>
+        <label>Update SR hasSkill Flag</label>
+        <locationX>1108</locationX>
+        <locationY>590</locationY>
+        <assignmentItems>
+            <assignToReference>hasSkills</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Loop_WO_Skills</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Append Service Resource skills in text veriable.</description>
+        <name>Update_SR_Skills</name>
+        <label>Append SR Skills</label>
+        <locationX>944</locationX>
+        <locationY>477</locationY>
+        <assignmentItems>
+            <assignToReference>SR_Skills_var</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>SRSkill_var.SkillId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Loop_SR_Skills</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <description>Active Skill Present</description>
+        <name>Active_Skill_Present</name>
+        <label>Active Skill Present?</label>
+        <locationX>1091</locationX>
+        <locationY>52</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Is_Active_skill_present</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>SR_Skills_var</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>SR_Skills_var</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue> </stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Loop_WO_Skills</targetReference>
+            </connector>
+            <label>Active skill present</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>check whether the skill expired or current</description>
+        <name>Is_Skill_Expired</name>
+        <label>Is Skill Expired?</label>
+        <locationX>932</locationX>
+        <locationY>277</locationY>
+        <defaultConnector>
+            <targetReference>Loop_SR_Skills</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Skill Expired</defaultConnectorLabel>
+        <rules>
+            <name>Skill_is_Current</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>SRSkill_var.EffectiveEndDate</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>SRSkill_var.EffectiveEndDate</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>$Flow.CurrentDateTime</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_SR_Skills</targetReference>
+            </connector>
+            <label>Skill is Current</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Service Resource has Active skills</description>
+        <name>Service_Resource_has_skills</name>
+        <label>Service Resource has skills?</label>
+        <locationX>797</locationX>
+        <locationY>50</locationY>
+        <defaultConnector>
+            <targetReference>Update_Has_Skills</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No Skill</defaultConnectorLabel>
+        <rules>
+            <name>Has_Skill</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>SRSkiils_list</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Loop_SR_Skills</targetReference>
+            </connector>
+            <label>Has Skill</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>WO Skill Matches with SR Skills</description>
+        <name>Skill_Matches_with_SR_Skills</name>
+        <label>Skill Matches with SR Skills</label>
+        <locationX>1103</locationX>
+        <locationY>391</locationY>
+        <defaultConnector>
+            <targetReference>Loop_WO_Skills</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Skill doesn&apos;t Match</defaultConnectorLabel>
+        <rules>
+            <name>Skill_Match</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>SR_Skills_var</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <elementReference>WO_Skill_var.SkillId</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_SR_hasSkill_Flag</targetReference>
+            </connector>
+            <label>Skill Match</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Skills Requirement Exist for Work order</description>
+        <name>WO_Skills_Requirement_Exist</name>
+        <label>Skills Requirement Exist?</label>
+        <locationX>326</locationX>
+        <locationY>52</locationY>
+        <defaultConnector>
+            <targetReference>Update_Has_skill_attribute</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>WO doesn&apos;t have Skill requirement</defaultConnectorLabel>
+        <rules>
+            <name>Skills_Requirement_Exist</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>WOReqSkill_list</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Service_Reource</targetReference>
+            </connector>
+            <label>Skills Requirement Exist</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>WO_update</name>
+        <label>WO update?</label>
+        <locationX>921</locationX>
+        <locationY>650</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>True</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>WONeedstobeUpdated</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_WO_Has_skill</targetReference>
+            </connector>
+            <label>True</label>
+        </rules>
+    </decisions>
+    <interviewLabel>HRCFSL Identify Service Resource Skills Subflow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>HRCFSL Identify Service Resource Skills Subflow</label>
+    <loops>
+        <name>Loop_SR_Skills</name>
+        <label>Loop SR Skills</label>
+        <locationX>944</locationX>
+        <locationY>51</locationY>
+        <assignNextValueToReference>SRSkill_var</assignNextValueToReference>
+        <collectionReference>SRSkiils_list</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Is_Skill_Expired</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Active_Skill_Present</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <loops>
+        <description>for querying WO skills</description>
+        <name>Loop_WO_Skills</name>
+        <label>Loop WO Skills</label>
+        <locationX>1103</locationX>
+        <locationY>211</locationY>
+        <assignNextValueToReference>WO_Skill_var</assignNextValueToReference>
+        <collectionReference>WOReqSkill_list</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Skill_Matches_with_SR_Skills</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>WO_update</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>for getting service resource based on logged in user-id</description>
+        <name>Get_Service_Reource</name>
+        <label>Get Service Reource</label>
+        <locationX>549</locationX>
+        <locationY>50</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Service_Resource_Skills</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>RelatedRecordId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>userId</elementReference>
+            </value>
+        </filters>
+        <object>ServiceResource</object>
+        <outputReference>ServiceResource_obj</outputReference>
+        <queriedFields>Id</queriedFields>
+    </recordLookups>
+    <recordLookups>
+        <description>Get Service Resource Skills</description>
+        <name>Get_Service_Resource_Skills</name>
+        <label>Get Service Resource Skills</label>
+        <locationX>686</locationX>
+        <locationY>50</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Service_Resource_has_skills</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>EffectiveStartDate</field>
+            <operator>LessThanOrEqualTo</operator>
+            <value>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>ServiceResourceId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>ServiceResource_obj.Id</elementReference>
+            </value>
+        </filters>
+        <object>ServiceResourceSkill</object>
+        <outputReference>SRSkiils_list</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>SkillId</queriedFields>
+        <queriedFields>EffectiveStartDate</queriedFields>
+        <queriedFields>EffectiveEndDate</queriedFields>
+    </recordLookups>
+    <recordLookups>
+        <description>Getting the required skills for particular WO</description>
+        <name>Get_WO_Skill_Requirements</name>
+        <label>Get WO Skill Requirements</label>
+        <locationX>202</locationX>
+        <locationY>240</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>WO_Skills_Requirement_Exist</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>RelatedRecordId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>WorkOrderId</elementReference>
+            </value>
+        </filters>
+        <object>SkillRequirement</object>
+        <outputReference>WOReqSkill_list</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>SkillId</queriedFields>
+        <queriedFields>SkillLevel</queriedFields>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_WO_Has_skill</name>
+        <label>Update WO Has skill</label>
+        <locationX>935</locationX>
+        <locationY>814</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>WorkOrderId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>HRCFSL_Technician_has_Skills__c</field>
+            <value>
+                <elementReference>hasSkills</elementReference>
+            </value>
+        </inputAssignments>
+        <object>WorkOrder</object>
+    </recordUpdates>
+    <runInMode>DefaultMode</runInMode>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Get_WO_Skill_Requirements</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Flag for identifying whether the particular resource have the required skills</description>
+        <name>hasSkills</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <booleanValue>false</booleanValue>
+        </value>
+    </variables>
+    <variables>
+        <description>Service Resource record</description>
+        <name>ServiceResource_obj</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>ServiceResource</objectType>
+    </variables>
+    <variables>
+        <description>Text variable for holding all Active skills of service Resource</description>
+        <name>SR_Skills_var</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>SRSkiils_list</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>ServiceResourceSkill</objectType>
+    </variables>
+    <variables>
+        <description>Loop Variable for holding Service Resource Skills</description>
+        <name>SRSkill_var</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>ServiceResourceSkill</objectType>
+    </variables>
+    <variables>
+        <name>SRSkills_list</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Logged in User Id of the user</description>
+        <name>userId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>WO_Skill_var</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>SkillRequirement</objectType>
+    </variables>
+    <variables>
+        <name>WONeedstobeUpdated</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <booleanValue>true</booleanValue>
+        </value>
+    </variables>
+    <variables>
+        <description>list for storing the required skills related for particular WO</description>
+        <name>WOReqSkill_list</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>SkillRequirement</objectType>
+    </variables>
+    <variables>
+        <description>Work Order Record Id</description>
+        <name>WorkOrderId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCFSL_Allowd_No_Of_Char_In_Service_Note</fullName>
+    <active>true</active>
+    <description>HF-51 validation rule, 
+23-8-2019 RV: Updated maximum length based on HF-316 and applied escape of validation rule
+SE-878 : By pass this VR if service note ends with &quot;Signee Not Available.&quot;</description>
+    <errorConditionFormula>AND(LEN(ServiceNote)&gt;128,
+Not(RIGHT(ServiceNote, 21)== &quot;Signee Not Available.&quot;), NOT($Setup.HRCFSL_Org_Exception_Rule__c.HRCFSL_Validation_Rule__c)
+)</errorConditionFormula>
+    <errorMessage>A maximum of 128 characters is allowed in the Service Notes during capture signature process.</errorMessage>
+</ValidationRule>

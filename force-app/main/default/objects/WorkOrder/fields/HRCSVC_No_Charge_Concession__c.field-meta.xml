@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_No_Charge_Concession__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This checkbox will be checked if the work order should be provided without billing.</description>
+    <externalId>false</externalId>
+    <label>No Charge Concession</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

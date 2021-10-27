@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Complaint_Code__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>The highest level in the &apos;Problem/Resolution Code&apos; hierarchy. SE-1033. &amp; SE-1450</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Search for Code List by Product using &apos;###&apos;</inlineHelpText>
+    <label>Code List by Product</label>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>Please choose a top-level Problem Code</errorMessage>
+        <filterItems>
+            <field>HRCSVC_Problem_Resolution_Code__c.HRCSVC_Parent_Problem_Code__c</field>
+            <operation>equals</operation>
+            <value></value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>HRCSVC_Problem_Resolution_Code__c</referenceTo>
+    <relationshipLabel>Cases</relationshipLabel>
+    <relationshipName>Cases</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

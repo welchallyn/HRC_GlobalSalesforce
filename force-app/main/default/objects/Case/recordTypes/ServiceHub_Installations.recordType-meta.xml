@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ServiceHub_Installations</fullName>
+    <active>true</active>
+    <businessProcess>HRC Service</businessProcess>
+    <description>Used for Welch Allyn Installations</description>
+    <label>ServiceHub Installations</label>
+    <picklistValues>
+        <picklist>HRCSVC_Cancel_Reason__c</picklist>
+        <values>
+            <fullName>Duplicate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spam %2F Junk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Test %2F Created in Error</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HRCSVC_Preferred_Contact_Override__c</picklist>
+        <values>
+            <fullName>Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HRCSVC_Protocol_Category__c</picklist>
+        <values>
+            <fullName>Capital Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Care Comm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Depot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rental</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HRCSVC_Send_Email_Notifications_Picklist__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HRCSVC_Subtypes__c</picklist>
+        <values>
+            <fullName>Complaint%2FAllegation of Deficiency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Configuration Change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Demo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Duplicate Case</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Factory Repair%2FReplacement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Field Action%2FMod</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hardware</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Installation%2FCommissioning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal Communication %2F Message Technician</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Action Required</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-Technical Inquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Onsite Repair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Enhancement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quality of Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quote</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Return for Credit No Allegation of Deficiency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Return for Credit w%2F Allegation of Deficiency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Routine Calibration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Routine%2FPreventative Maintenance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Safety Corrective Action</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Software</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technical Inquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Upgrade Request</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Origin</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Fax</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voicemail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>Critical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason</picklist>
+        <values>
+            <fullName>Change%2FCancel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Field Action</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Important Communications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical Credit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Planning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Repair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requesting Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Return%2FCredit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shipping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transferred</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Troubleshooting</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason__c</picklist>
+        <values>
+            <fullName>Monitoring</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Access to Product</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Customer Issue Resolution Notes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Customer Purchase Order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending KB Article</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Root Cause Analysis %28RCA%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Work Order Completion</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Administration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Configuration%2FEnhancement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incorrect Order %2F Quality of Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Orders</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Routine Maintenance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Upgrade</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

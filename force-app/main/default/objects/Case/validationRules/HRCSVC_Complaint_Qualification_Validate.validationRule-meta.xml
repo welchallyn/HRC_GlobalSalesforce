@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Complaint_Qualification_Validate</fullName>
+    <active>true</active>
+    <description>This is to validate Complaint Qualification record exists or not
+Developed for #SE-142</description>
+    <errorConditionFormula>AND(NOT($Setup.HRCFSL_Org_Exception_Rule__c.HRCFSL_Validation_Rule__c),ISCHANGED(Status),NOT(ISNEW()),NOT(HRCSVC_Is_Complain_Qualification_Exist__c),CONTAINS($CustomMetadata.HRCFSL_Organization_Settings__mdt.HRCSVC_Case_Type.HRCFSL_Component_Detail__c,TEXT(Type)),NOT(ISBLANK(TEXT(Type))))</errorConditionFormula>
+    <errorMessage>Complain Qualification is required for this Case Type</errorMessage>
+</ValidationRule>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Is_On_Site_Repair__c</fullName>
+    <externalId>false</externalId>
+    <formula>ISPICKVAL(HRCFSL_Activity_Type__c, &quot;Y&quot;)</formula>
+    <label>Is On-Site Repair?</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

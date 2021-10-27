@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Asset.WorkOrders$Name</field>
+    </columns>
+    <columns>
+        <field>Asset.WorkOrders$Account</field>
+    </columns>
+    <columns>
+        <field>Asset.WorkOrders$HRCFSL_Work_Type_Name__c</field>
+    </columns>
+    <columns>
+        <field>Asset.WorkOrders$Location</field>
+    </columns>
+    <columns>
+        <field>Asset.WorkOrders$ServiceTerritory</field>
+    </columns>
+    <columns>
+        <field>Asset.WorkOrders$Status</field>
+    </columns>
+    <currency>USD</currency>
+    <description>Work Order Volume by Product (filtered by Repair Activity Types)</description>
+    <filter>
+        <criteriaItems>
+            <column>Asset.WorkOrders$HRCFSL_Activity_Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Y,7,T,Z</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Asset$HRCFSL_Model_Description__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Work Order Volume by Product</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>HRCFSL_Assets_with_Work_Orders__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Asset$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

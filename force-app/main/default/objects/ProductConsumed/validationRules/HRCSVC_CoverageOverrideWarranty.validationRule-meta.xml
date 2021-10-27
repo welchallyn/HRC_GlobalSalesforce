@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_CoverageOverrideWarranty</fullName>
+    <active>true</active>
+    <description>When Coverage Override = Warranty, then Override Notes can not be null</description>
+    <errorConditionFormula>ISPICKVAL(HRCSVC_Coverage_Override__c , &quot;Warranty&quot;) &amp;&amp; ISBLANK(HRCSVC_Override_Notes__c)</errorConditionFormula>
+    <errorDisplayField>HRCSVC_Override_Notes__c</errorDisplayField>
+    <errorMessage>You have selected that the Coverage Override reason was Warranty.  Override Notes are required.</errorMessage>
+</ValidationRule>

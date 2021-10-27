@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_CoverageOverrideConsumedAsPartO</fullName>
+    <active>true</active>
+    <description>When Coverage Override = Consumed As Part of Job, then Material Number is required</description>
+    <errorConditionFormula>ISPICKVAL(HRCSVC_Coverage_Override__c , &quot;Consumed as Part of a Job&quot;) &amp;&amp; ISBLANK(Material__c)</errorConditionFormula>
+    <errorDisplayField>Material__c</errorDisplayField>
+    <errorMessage>You have selected that the Coverage Override reason was Consumed As Part of a Job.  Material Number is required.</errorMessage>
+</ValidationRule>

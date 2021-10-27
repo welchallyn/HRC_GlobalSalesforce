@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Activity Type for Existing Rental Order</label>
+    <protected>false</protected>
+    <values>
+        <field>HRCFSL_Component_Description__c</field>
+        <value xsi:type="xsd:string">#SE:112&amp;SE:1183 : metadata to store applicable activity types for existing rental sales order and OLI</value>
+    </values>
+    <values>
+        <field>HRCFSL_Component_Detail_Long__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>HRCFSL_Component_Detail__c</field>
+        <value xsi:type="xsd:string">R,Z,7,8,S,Y</value>
+    </values>
+</CustomMetadata>

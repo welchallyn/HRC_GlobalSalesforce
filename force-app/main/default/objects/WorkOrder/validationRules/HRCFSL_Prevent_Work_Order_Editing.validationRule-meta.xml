@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCFSL_Prevent_Work_Order_Editing</fullName>
+    <active>true</active>
+    <description>prevents editing of the work order if the prior value of the status category field is Completed or Canceled and the profile name does NOT contain &apos;Admin&apos; or &apos;Integration&apos;</description>
+    <errorConditionFormula>AND(CONTAINS( $CustomMetadata.HRCFSL_Organization_Settings__mdt.WO_Status_Category.HRCFSL_Component_Detail__c , TEXT(PRIORVALUE( StatusCategory )) ),
+	HRCFSL_Lock_Work_Order__c,
+	PRIORVALUE(HRCFSL_Lock_Work_Order__c),
+	NOT( $Setup.HRCFSL_Org_Exception_Rule__c.HRCFSL_Validation_Rule__c ),
+ NOT($Setup.HRCSVC_Org_Exception_Test_Agent__c.HRCSVC_Validation_Rule__c) 
+	)</errorConditionFormula>
+    <errorMessage>You cannot edit Work Orders with Completed or Canceled Status.</errorMessage>
+</ValidationRule>

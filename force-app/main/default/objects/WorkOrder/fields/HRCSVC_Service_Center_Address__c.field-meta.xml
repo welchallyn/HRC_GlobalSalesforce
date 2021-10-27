@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Service_Center_Address__c</fullName>
+    <externalId>false</externalId>
+    <formula>ServiceTerritory.Street &amp; &apos; &apos; &amp;  ServiceTerritory.City &amp; &apos; &apos; &amp; ServiceTerritory.State &amp; &apos; &apos; &amp; ServiceTerritory.PostalCode &amp; &apos; &apos; &amp;  ServiceTerritory.Country</formula>
+    <label>Service Center Address</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

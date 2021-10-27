@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCFSL_SWORD_Equipment_Class</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+NOT( $Setup.HRCFSL_Org_Exception_Rule__c.HRCFSL_Validation_Rule__c ),
+NOT(ISBLANK(AssetId)),
+OR(
+AND( VLOOKUP(
+$ObjectType.HRCFSL_SWORD__c.Fields.HRCFSL_Equipment_Class022__c,
+$ObjectType.HRCFSL_SWORD__c.Fields.Name,
+HRCFSL_SWORD_ID__c) = &quot;Y&quot;,
+Asset.HRCFSL_Eq_Class__c &lt;&gt; &quot;022&quot;),
+
+AND(
+VLOOKUP(
+$ObjectType.HRCFSL_SWORD__c.Fields.HRCFSL_Equipment_Class022__c,
+$ObjectType.HRCFSL_SWORD__c.Fields.Name,
+HRCFSL_SWORD_ID__c) = &quot;N&quot;,
+Asset.HRCFSL_Eq_Class__c = &quot;022&quot;)
+),
+$Profile.Name!= &apos;HRC Service Agent&apos;)</errorConditionFormula>
+    <errorMessage>Asset Equipment Class not valid for this Work Type.</errorMessage>
+</ValidationRule>

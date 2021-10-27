@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCFSL_Prevent_Fields_Editing_in_JDE</fullName>
+    <active>true</active>
+    <description>HF-190</description>
+    <errorConditionFormula>AND(NOT(HRCFSL_Tech_Generated__c), ISBLANK(MaintenancePlanId),
+     OR(  ISCHANGED( HRCFSL_Contact_Title__c ),
+          ISCHANGED(  HRCFSL_Contact_First_Name__c ),
+          ISCHANGED(  HRCFSL_Contact_Last_Name__c ),
+          ISCHANGED(  HRCFSL_Contact_Phone__c ),
+          ISCHANGED(  HRCFSL_Contact_Department__c ),
+          ISCHANGED(   HRCFSL_Patient_Title__c ),
+          ISCHANGED(   HRCFSL_Patient_First_Name__c ),   
+          ISCHANGED(   HRCFSL_Patient_Last_Name__c ),
+          ISCHANGED(    HRCFSL_Medical_Rec_No__c )
+),
+NOT( $Setup.HRCFSL_Org_Exception_Rule__c.HRCFSL_Validation_Rule__c ) 
+)</errorConditionFormula>
+    <errorMessage>It&apos;s not allowed to modify this field.</errorMessage>
+</ValidationRule>

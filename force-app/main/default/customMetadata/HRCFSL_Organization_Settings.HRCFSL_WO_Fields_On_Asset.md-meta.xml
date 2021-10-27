@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>WO Fields On Asset</label>
+    <protected>false</protected>
+    <values>
+        <field>HRCFSL_Component_Description__c</field>
+        <value xsi:type="xsd:string">Work Order fields which appear at the asset level in the Salesforce message</value>
+    </values>
+    <values>
+        <field>HRCFSL_Component_Detail_Long__c</field>
+        <value xsi:type="xsd:string">HRCFSL_Patient_First_Name__c,HRCFSL_Patient_Last_Name__c,HRCFSL_Ward_Name__c,HRCFSL_Patient_Room__c,HRCFSL_Patient_on_date__c,HRCFSL_Patient_Off_Date__c</value>
+    </values>
+    <values>
+        <field>HRCFSL_Component_Detail__c</field>
+        <value xsi:type="xsd:string">NA</value>
+    </values>
+</CustomMetadata>

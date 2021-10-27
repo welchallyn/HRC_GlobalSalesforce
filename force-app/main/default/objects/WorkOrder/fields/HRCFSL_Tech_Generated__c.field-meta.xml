@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCFSL_Tech_Generated__c</fullName>
+    <externalId>false</externalId>
+    <formula>If( CONTAINS(
+$CustomMetadata.HRCFSL_Organization_Settings__mdt.HRCFSL_Technician_Profile.HRCFSL_Component_Detail__c , CreatedBy.Profile.Name
+) &amp;&amp; NOT(ISBLANK(CreatedBy.Profile.Name)),
+True, False )</formula>
+    <label>Tech Generated?</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCFSL_Product_Model__c</fullName>
+    <description>Get the value of Product Model from Inspection Template. Developed this for #SE-749</description>
+    <externalId>false</externalId>
+    <formula>HRCFSL_Inspection_Template__r.HRCFSL_Product_Model__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Product Model</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>50.0</apiVersion>
+    <assignments>
+        <name>Block_Creation</name>
+        <label>Block Creation</label>
+        <locationX>50</locationX>
+        <locationY>493</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.HRCFSL_Block_Creation__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>Is_Duplicate_Tool</name>
+        <label>Is Duplicate Tool?</label>
+        <locationX>182</locationX>
+        <locationY>373</locationY>
+        <defaultConnectorLabel>Duplicate No</defaultConnectorLabel>
+        <rules>
+            <name>Duplicate_Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Existing_Tool</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Block_Creation</targetReference>
+            </connector>
+            <label>Duplicate Yes</label>
+        </rules>
+    </decisions>
+    <description>Record triggered flow that checks for an existing Calibrated Tool that is a duplicate (same Work Order, same Asset) and sets a checkbox to block creation if so. SE-302.</description>
+    <interviewLabel>HRCFSL Prevent Duplicate Tool {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>HRCFSL Prevent Duplicate Tool</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Existing_Tool</name>
+        <label>Existing Tool</label>
+        <locationX>182</locationX>
+        <locationY>253</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Is_Duplicate_Tool</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>HRCFSL_Asset__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.HRCFSL_Asset__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>HRCFSL_Work_Order__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.HRCFSL_Work_Order__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>HRCFSL_Calibrated_Tool__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Existing_Tool</targetReference>
+        </connector>
+        <object>HRCFSL_Calibrated_Tool__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

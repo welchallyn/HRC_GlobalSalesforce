@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Created as a part of #SE131 to clone existing cases with associated complaint qualification</description>
+    <flowDefinition>HRCSVC_Clone_Existing_Case</flowDefinition>
+    <label>Clone case along with Complaint Qualification Record</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

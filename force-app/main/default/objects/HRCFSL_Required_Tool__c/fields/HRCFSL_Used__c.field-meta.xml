@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCFSL_Used__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checkbox field that indicates whether this particular required tool has been used on the Work Order. Is changed from false to true when a Calibrated Tool of this product model is added to the Work Order.</description>
+    <externalId>false</externalId>
+    <label>Used?</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

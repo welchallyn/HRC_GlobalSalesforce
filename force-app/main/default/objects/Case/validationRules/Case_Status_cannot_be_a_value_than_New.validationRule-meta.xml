@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Status_cannot_be_a_value_than_New</fullName>
+    <active>true</active>
+    <description>SE-1140</description>
+    <errorConditionFormula>AND( OR(ISNEW(), ISCHANGED(Status)), NOT(ISPICKVAL(Status, &quot;New&quot;)), NOT( $Setup.HRCFSL_Org_Exception_Rule__c.HRCFSL_Validation_Rule__c ), ISPICKVAL(Type, &quot;Problem - Product Related&quot;), HRCSVC_Is_Complain_Qualification_Exist__c = false )</errorConditionFormula>
+    <errorMessage>Case Status cannot be a value other than New if the Type = &quot;Problem - Product Related&quot; and zero related complaint qualification records.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>SE-406: This quick action invokes flow HRCFSL Set Printed Checkbox as true on Work Order and sets Printed checkbox as true on work order.</description>
+    <flowDefinition>HRCFSL_Set_Printed_Checkbox_as_true_on_Work_Order</flowDefinition>
+    <label>Print Label</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

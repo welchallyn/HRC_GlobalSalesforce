@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_ETQ_Complaint_Number__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>This field is the Original ID, not the ETQ Complaint Number.</description>
+    <externalId>true</externalId>
+    <label>Original ID</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

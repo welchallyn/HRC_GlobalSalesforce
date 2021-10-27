@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Cancel_Rsn_Other_Requires_Remarks</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISPickval(HRCSVC_Cancel_Reason__c,&apos;Other&apos;), ISBLANK(HRCSVC_Cancellation_Remarks__c))</errorConditionFormula>
+    <errorMessage>Please Add Cancellation Remarks</errorMessage>
+</ValidationRule>

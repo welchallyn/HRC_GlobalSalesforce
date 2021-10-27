@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Options_Required__c</fullName>
+    <description>SE 42</description>
+    <externalId>false</externalId>
+    <label>Options Required</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Interp</fullName>
+                <default>false</default>
+                <label>Interp</label>
+            </value>
+            <value>
+                <fullName>DICOM</fullName>
+                <default>false</default>
+                <label>DICOM</label>
+            </value>
+            <value>
+                <fullName>Pediatric Interp</fullName>
+                <default>false</default>
+                <label>Pediatric Interp</label>
+            </value>
+            <value>
+                <fullName>Communications</fullName>
+                <default>false</default>
+                <label>Communications</label>
+            </value>
+            <value>
+                <fullName>Expanded memory (med)</fullName>
+                <default>false</default>
+                <label>Expanded memory (med)</label>
+            </value>
+            <value>
+                <fullName>Modem</fullName>
+                <default>false</default>
+                <label>Modem</label>
+            </value>
+            <value>
+                <fullName>Expanded memory (high)</fullName>
+                <default>false</default>
+                <label>Expanded memory (high)</label>
+            </value>
+            <value>
+                <fullName>LAN</fullName>
+                <default>false</default>
+                <label>LAN</label>
+            </value>
+            <value>
+                <fullName>15 Lead</fullName>
+                <default>false</default>
+                <label>15 Lead</label>
+            </value>
+            <value>
+                <fullName>WLAN-B</fullName>
+                <default>false</default>
+                <label>WLAN-B</label>
+            </value>
+            <value>
+                <fullName>Multi-Site</fullName>
+                <default>false</default>
+                <label>Multi-Site</label>
+            </value>
+            <value>
+                <fullName>WLAN-G2</fullName>
+                <default>false</default>
+                <label>WLAN-G2</label>
+            </value>
+            <value>
+                <fullName>WAM</fullName>
+                <default>false</default>
+                <label>WAM</label>
+            </value>
+            <value>
+                <fullName>WLAN-G2  Quadtech</fullName>
+                <default>false</default>
+                <label>WLAN-G2  Quadtech</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

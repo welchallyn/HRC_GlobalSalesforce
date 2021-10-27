@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCFSL_Block_Creation__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checkbox used to trigger a validation rule if the user tries to add the same tool multiple times on a Work Order. SE-302.</description>
+    <externalId>false</externalId>
+    <label>Block Creation</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

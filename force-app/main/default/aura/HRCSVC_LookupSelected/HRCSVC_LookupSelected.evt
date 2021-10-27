@@ -1,0 +1,8 @@
+<aura:event type="COMPONENT" description="Lookup Selected" >
+    <aura:attribute type="sobject" name="selectedRecord"/>
+    <aura:attribute type="string" name = "label" />
+    <aura:attribute type="string" name="uniqueId" />
+    <aura:attribute type="string" name="Index" />
+    <aura:attribute type="Boolean" name="OnLoadEvt" default="false" description="to specify whether the event got fired at the time of page load or not "/>
+    <aura:attribute type="Order_Line_Item__c" name="AssociatedRec" />
+</aura:event>

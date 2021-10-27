@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Prevent_Additional_WO_Creation__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>#SE:318 Created a checkbox to stop creating WO when the OLI is created</description>
+    <externalId>false</externalId>
+    <label>Prevent Additional WO Creation</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

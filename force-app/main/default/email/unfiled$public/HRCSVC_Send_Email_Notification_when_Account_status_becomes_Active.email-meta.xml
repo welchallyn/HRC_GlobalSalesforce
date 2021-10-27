@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>SE-115:</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>HRCSVC Send Email Notification when Account status becomes Active</name>
+    <style>none</style>
+    <subject>Temporary Account Created</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

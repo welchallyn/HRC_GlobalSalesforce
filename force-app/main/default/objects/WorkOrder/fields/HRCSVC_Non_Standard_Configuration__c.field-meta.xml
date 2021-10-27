@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Non_Standard_Configuration__c</fullName>
+    <description>SE-260 - This fields value is fetched from Asset.</description>
+    <externalId>false</externalId>
+    <formula>Asset.HRCSVC_Non_Standard_Configuration__c</formula>
+    <label>Non-Standard Configuration?</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRC_Contact</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>HRCSVC_Contact_Compact_Layout</compactLayoutAssignment>
+    <description>North America and Canada Default Record Type for Contacts</description>
+    <label>HRC Contact</label>
+    <picklistValues>
+        <picklist>Department_UK__c</picklist>
+        <values>
+            <fullName>Critical Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manual Handling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maternity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Med%2FSurg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Occupational Therapy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Physiotherapy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Procurement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tissue Viability</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LeadSource</picklist>
+        <values>
+            <fullName>Customer Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exhibits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Focus Groups</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Google Display%2FRetargeting%2FGeofencing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Google Search %28Ad Words%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inside Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Launch Events</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partners</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public Relations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referral Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SOM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seminar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tech Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technician</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telemarketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade Show</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>VIP Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webinar</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Name</picklist>
+        <values>
+            <fullName>Dr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mrs%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ms%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prof%2E</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Role__c</picklist>
+        <values>
+            <fullName>Accounting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Administration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Biomed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Capital SWO Recipient</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Clinical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Facilities%2FEngineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Facility Leadership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interim</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Logistics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Materials Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nurse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nurse Practitioner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Operating Room Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Physician</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Physician Assistant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Purchasing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rental SWO Recipient</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Respiratory Therapist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Risk Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Contracts SWO Recipient</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wound Care</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

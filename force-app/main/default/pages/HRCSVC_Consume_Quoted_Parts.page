@@ -1,0 +1,43 @@
+<apex:page standardController="HRCFSL_Quoted_Part__c" recordSetVar="qps" extensions="PassSelectedQuotedPartIdsToVFController" lightningStylesheets="true">
+    <html>
+        <head>
+            <apex:includeLightning />
+        </head>
+        <body class="slds-scope">
+            <div id="flowContainer" />
+            <script>
+            var statusChange = function (event) {
+               if(event.getParam("status") === "FINISHED") {
+                  var outputVariables = event.getParam("outputVariables");
+                  var key;
+                  for(key in outputVariables) {
+                     if(outputVariables[key].name === "myOutput") {
+                     }
+                  }
+               }
+            };
+            $Lightning.use("c:FlowContainer", function() {
+               $Lightning.createComponent("lightning:flow", {"onstatuschange":statusChange},
+                  "flowContainer",
+                  function (component) {
+                     var inputVariables = [
+                        {
+                           name : 'Input_Values',
+                           type : 'String',
+                           value : "{!SelectedQuotedPartIDs}"
+                        }
+                     ];
+                     component.startFlow("HRCSVC_Consume_Multiple_Quoted_Parts", inputVariables);
+                  }
+               );
+            });
+            </script>
+            <apex:includeScript value="/support/console/50.0/integration.js"/>
+            <script type="text/javascript">
+                sforce.console.getFocusedSubtabId(function(result) {
+                   sforce.console.setTabTitle('Consume Parts', result.id);
+                });
+            </script>
+        </body>
+    </html>
+</apex:page>

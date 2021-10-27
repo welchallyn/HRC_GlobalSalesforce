@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Reg_Open_Change_except_for_MAN</fullName>
+    <active>true</active>
+    <description>This validation rule ensures that only on a work order which is type MA-N, we can change a flag to ‘reg open’</description>
+    <errorConditionFormula>AND(
+NOT(ISPICKVAL(HRCFSL_Doc_Type__c , &apos;MA&apos;)),
+NOT(ISPICKVAL(HRCFSL_Activity_Type__c, &apos;N&apos;)),
+ ISCHANGED(HRCSVC_Reg_Open__c),
+NOT( $Setup.HRCFSL_Org_Exception_Rule__c.HRCFSL_Validation_Rule__c )
+)</errorConditionFormula>
+    <errorDisplayField>HRCSVC_Reg_Open__c</errorDisplayField>
+    <errorMessage>You can change Reg Open flag only for MA-N work orders.</errorMessage>
+</ValidationRule>

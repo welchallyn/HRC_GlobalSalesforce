@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Estimate_Form</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <hasMenubar>false</hasMenubar>
+    <hasScrollbars>true</hasScrollbars>
+    <hasToolbar>false</hasToolbar>
+    <height>600</height>
+    <isResizable>true</isResizable>
+    <linkType>url</linkType>
+    <masterLabel>Estimate Form</masterLabel>
+    <openType>newWindow</openType>
+    <position>none</position>
+    <protected>false</protected>
+    <showsLocation>false</showsLocation>
+    <showsStatus>false</showsStatus>
+    <url>/apex/APXTConga4__Conga_Composer?sessionId={!API.Session_ID} &amp;serverUrl={!API.Partner_Server_URL_490} &amp;Id={!ReturnOrder.Id} &amp;ReportID=[RO]00O4W000007xWcCUAU,[WO]00O4W000007xWcDUAU,[QP]00O4W000007xWc8UAE &amp;QueryID=[WOQP]aE54W0000010wBbSAI?pv0={!ReturnOrder.Id},[QPD]aE54W0000010wBgSAI?pv0={!ReturnOrder.Id},[ROT]aE54W0000010wBfSAI?pv0={!ReturnOrder.Id} &amp;DS7=11 &amp;TemplateId=aED4W000000wkB9WAI &amp;DefaultPDF=1 &amp;FP0=1 &amp;RM=1 &amp;OFN=Estimate-{!ReturnOrder.ReturnOrderNumber}-{!TODAY()}_{!TIMEVALUE(NOW())} &amp;ReturnPath={!ReturnOrder.Id}</url>
+</WebLink>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_40_Characters_Limit_for_Street</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(OR(
+LEN(HRCSVC_Street__c) &gt; 40,
+LEN(HRCSVC_Street_2__c) &gt; 40),
+NOT( $Setup.HRCFSL_Org_Exception_Rule__c.HRCFSL_Validation_Rule__c )
+)</errorConditionFormula>
+    <errorMessage>You have exceeded the 40 character limit for the street field.</errorMessage>
+</ValidationRule>

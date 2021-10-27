@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Fields_Required_Before_Submission</fullName>
+    <active>false</active>
+    <description>SE-1248</description>
+    <errorConditionFormula>AND(NOT($Setup.HRCFSL_Org_Exception_Rule__c.HRCFSL_Validation_Rule__c),
+RecordType.DeveloperName = &quot;HRCSVC_Parts_Order&quot;,
+ISCHANGED(HRCSVC_Status__c),
+ISPICKVAL( HRCSVC_Status__c , &apos;Submitted&apos;),
+OR(ISBLANK(HRCSVC_Ship_To_Attn_Name__c),
+ISBLANK( HRCSVC_Ship_To_Attn_Phone__c ), ISBLANK(HRCSVC_Street__c), ISBLANK(HRCSVC_City__c), ISBLANK(HRCSVC_State_Province__c), ISBLANK(HRCSVC_Zip_Postal_Code__c),
+ISBLANK(HRCSVC_Country__c)
+
+))</errorConditionFormula>
+    <errorMessage>These fields(Ship To Attn Name, Ship To Attn Phone, Street, City, State, Zip, Country) are required for parts orders, please fill before submission.</errorMessage>
+</ValidationRule>

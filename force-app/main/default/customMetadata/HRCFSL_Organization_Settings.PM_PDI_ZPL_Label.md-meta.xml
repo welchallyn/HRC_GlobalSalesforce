@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>PM/PDI ZPL Label</label>
+    <protected>false</protected>
+    <values>
+        <field>HRCFSL_Component_Description__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>HRCFSL_Component_Detail_Long__c</field>
+        <value xsi:type="xsd:string">^XA
+^FO20,120^A0N,26,22^FD{!Get_Work_Order.Asset.Competitor_Product__r.Description}^FS
+^FO100,170^A0N,26,22^FD{!Get_Work_Order.Asset.SerialNumber}^FS
+^FO450,100^BY2^B3N,N,110,Y,N^FD{!Get_Work_Order.Asset.SerialNumber}^FS
+^FO20,620^A0N,26,22^FD{!Get_Work_Order.Asset.Competitor_Product__r.Description}^FS
+^FO100,670^A0N,26,22^FD{!Get_Work_Order.Asset.SerialNumber}^FS
+^FO450,600^BY2^B3N,N,110,Y,N^FD{!Get_Work_Order.Asset.SerialNumber}^FS
+^FO210,850^A0N,28,22^FD{!DisinfectantUsed}^FS
+^FO235,900^A0N,28,22^FD{!TechnicianName}^FS
+^FO600,900^A0N,28,22^FD{!DisinfectantUsedDate}^FS
+^FO235,950^A0N,28,22^FD{!assignedEngineerName}^FS
+^FO600,950^A0N,28,22^FD{!Get_Work_Order.HRCFSL_Actual_End__c}^FS
+^XZ</value>
+    </values>
+    <values>
+        <field>HRCFSL_Component_Detail__c</field>
+        <value xsi:type="xsd:string">PM/PDI Zebra Printing Language (ZPL) label with parameters</value>
+    </values>
+</CustomMetadata>

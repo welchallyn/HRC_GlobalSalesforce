@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Dutch</label>
+    <protected>false</protected>
+    <values>
+        <field>HRCSVC_Email_Text__c</field>
+        <value xsi:type="xsd:string">Bedankt dat u contact hebt opgenomen met Hillrom. Uw case {!Get_Case_Details.CaseNumber} betreffende {!Dynamic_Product} met referentie &quot;{!Get_Case_Details.Description}&quot; is gesloten. Neem bij aanvullende vragen contact op met uw plaatselijke technische ondersteuningsteam.</value>
+    </values>
+    <values>
+        <field>HRCSVC_Language__c</field>
+        <value xsi:type="xsd:string">nl_NL</value>
+    </values>
+    <values>
+        <field>HRCSVC_Protocol_Category__c</field>
+        <value xsi:type="xsd:string">Capital Service</value>
+    </values>
+    <values>
+        <field>HRCSVC_Subject__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>HRCSVC_Type__c</field>
+        <value xsi:type="xsd:string">Closure</value>
+    </values>
+</CustomMetadata>

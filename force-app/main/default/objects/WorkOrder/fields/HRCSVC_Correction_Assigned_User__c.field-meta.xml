@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Correction_Assigned_User__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <inlineHelpText>A task to correct the attached documentation will be assigned to this user when Doc Status is set to &apos;Pending Correction&apos;</inlineHelpText>
+    <label>Correction Assigned To</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Work_Orders2</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

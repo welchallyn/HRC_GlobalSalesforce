@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCFSL_Asset__c</fullName>
+    <externalId>false</externalId>
+    <label>Asset</label>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>The tool you have selected is out of service and cannot be used.</errorMessage>
+        <filterItems>
+            <field>Asset.HRCFSL_Active__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Asset</referenceTo>
+    <relationshipLabel>Calibrated Tool</relationshipLabel>
+    <relationshipName>Calibrated_Tool</relationshipName>
+    <relationshipOrder>1</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>true</writeRequiresMasterRead>
+</CustomField>

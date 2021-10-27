@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Product Consumed Integration Fields</label>
+    <protected>false</protected>
+    <values>
+        <field>HRCFSL_Component_Description__c</field>
+        <value xsi:type="xsd:string">This is the list of fields that are included at the Product Consumed (parts) level for FSL -&gt; JDE work order integration. HF-67.</value>
+    </values>
+    <values>
+        <field>HRCFSL_Component_Detail_Long__c</field>
+        <value xsi:type="xsd:string">hrcfsl_disposition_code__c, hrcfsl_part_number__c,quantityconsumed,hrcfsl_part_name__c</value>
+    </values>
+    <values>
+        <field>HRCFSL_Component_Detail__c</field>
+        <value xsi:type="xsd:string">N/A</value>
+    </values>
+</CustomMetadata>

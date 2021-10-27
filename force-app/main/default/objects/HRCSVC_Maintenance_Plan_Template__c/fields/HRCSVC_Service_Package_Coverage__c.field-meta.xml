@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Service_Package_Coverage__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Service Package Coverage</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>HRCSVC_Service_Package_Coverage__c.HRCSVC_Service_Package__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.HRCSVC_Service_Package__c</valueField>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>HRCSVC_Service_Package_Coverage__c</referenceTo>
+    <relationshipLabel>Maintenance Plan Templates</relationshipLabel>
+    <relationshipName>Maintenance_Plan_Templates</relationshipName>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

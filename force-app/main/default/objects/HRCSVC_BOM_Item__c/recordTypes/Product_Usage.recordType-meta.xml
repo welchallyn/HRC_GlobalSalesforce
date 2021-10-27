@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Usage</fullName>
+    <active>true</active>
+    <label>Product Usage</label>
+    <picklistValues>
+        <picklist>HRCSVC_Region__c</picklist>
+        <values>
+            <fullName>AU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HRCSVC_Type__c</picklist>
+        <values>
+            <fullName>Product Usage</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product_Usage_Unit_of_Measure__c</picklist>
+        <values>
+            <fullName>Cycles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Days</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hours</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

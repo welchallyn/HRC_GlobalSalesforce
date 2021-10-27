@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Order__c$Sold_To__c</field>
+    </columns>
+    <columns>
+        <field>Order__c$Name</field>
+    </columns>
+    <columns>
+        <field>CDF1</field>
+    </columns>
+    <columns>
+        <field>Order__c.Order_Line_Items__r$Product__c.ProductCode</field>
+    </columns>
+    <columns>
+        <field>Order__c.Order_Line_Items__r$Product__c</field>
+    </columns>
+    <columns>
+        <field>Order__c.Order_Line_Items__r$Item_Description__c</field>
+    </columns>
+    <columns>
+        <field>Order__c$HRCSVC_Ship_To_Location__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Order__c$HRCSVC_Evaluation_Duration__c</field>
+    </columns>
+    <columns>
+        <field>Order__c.Order_Line_Items__r$HRCSVC_Contact_Name__c.Email</field>
+    </columns>
+    <columns>
+        <field>Order__c.Order_Line_Items__r$HRCSVC_Contact_Name__c</field>
+    </columns>
+    <currency>USD</currency>
+    <customDetailFormulas>
+        <calculatedFormula>Order__c.HRCSVC_Evaluation_Received_Date__c</calculatedFormula>
+        <dataType>DateOnly</dataType>
+        <developerName>CDF1</developerName>
+        <label>Date Created</label>
+        <scale>2</scale>
+    </customDetailFormulas>
+    <filter>
+        <criteriaItems>
+            <column>Order__c$HRCSVC_Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Active Evaluation</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Outstanding Evaluation Devices</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Orders_with_Order_Line_Items__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Order__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Quote_Grand_Total__c</fullName>
+    <description>The grand total used for quotes which includes quoted parts on this work order as well as on any child work orders.</description>
+    <externalId>false</externalId>
+    <label>Quote Grand Total</label>
+    <precision>12</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

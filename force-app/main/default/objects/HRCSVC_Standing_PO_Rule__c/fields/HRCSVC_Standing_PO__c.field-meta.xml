@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Standing_PO__c</fullName>
+    <externalId>false</externalId>
+    <label>Standing PO</label>
+    <referenceTo>HRCSVC_Standing_PO__c</referenceTo>
+    <relationshipLabel>Standing PO Rule</relationshipLabel>
+    <relationshipName>Standing_PO_Rule</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Case</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>Case path for status (Capital Service)</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>HRCSVC_Cancel_Reason__c</fieldNames>
+        <fieldNames>HRCSVC_Cancellation_Remarks__c</fieldNames>
+        <fieldNames>HRCSVC_Cancel_Child_Case__c</fieldNames>
+        <fieldNames>HRCSVC_Cancel_Work_Orders__c</fieldNames>
+        <info>&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Checking Cancel Work Orders will Cancel All Open Work Orders Related to This Case. Would you like to continue?”&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>Canceled</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>HRCSVC_Case_Resolution__c</fieldNames>
+        <fieldNames>Type</fieldNames>
+        <fieldNames>HRCSVC_Close_Child_Cases__c</fieldNames>
+        <fieldNames>HRCSVC_Email_Case_Contacts__c</fieldNames>
+        <info>&lt;p&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;Please ensure the Case Resolution and Type are updated before Closing the Case.&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>Closed</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>HRCSVC_Status_Reason__c</fieldNames>
+        <picklistValueName>On Hold</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>HRCSVC_Case_Resolution__c</fieldNames>
+        <fieldNames>Type</fieldNames>
+        <fieldNames>HRCSVC_Close_Child_Cases__c</fieldNames>
+        <fieldNames>HRCSVC_Send_Email_Notifications_Picklist__c</fieldNames>
+        <fieldNames>HRCSVC_Email_Case_Contacts__c</fieldNames>
+        <picklistValueName>Re-Opened</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>HRCSVC_Case_Resolution__c</fieldNames>
+        <fieldNames>Type</fieldNames>
+        <fieldNames>HRCSVC_Close_Child_Cases__c</fieldNames>
+        <fieldNames>HRCSVC_Send_Email_Notifications_Picklist__c</fieldNames>
+        <fieldNames>HRCSVC_Email_Case_Contacts__c</fieldNames>
+        <picklistValueName>Resolved</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>HRCSVC_Capital_Service</recordTypeName>
+</PathAssistant>

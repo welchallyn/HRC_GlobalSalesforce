@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Customer_Not_Responded_Since__c</fullName>
+    <description>This is field is used to calculate the customer response days.
+Developed for #SE-46</description>
+    <externalId>false</externalId>
+    <formula>IF(ISNULL(HRCSVC_Latest_Quote_Status_Change__c),0,NOW()-HRCSVC_Latest_Quote_Status_Change__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Customer Not Responded Since</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCFSL_Prevent_Billing_Off_Date_Enter</fullName>
+    <active>true</active>
+    <description>HF-529, Validation rule to restrict user from entering billing off date before billing on date</description>
+    <errorConditionFormula>AND(
+
+    OR(ISNEW(),
+ISCHANGED(HRCFSL_Patient_Off_Date__c )),
+ NOT(ISBLANK( HRCFSL_Patient_Off_Date__c )),
+   HRCFSL_Patient_Off_Date__c  &lt; HRCFSL_Patient_on_date__c ,
+NOT( $Setup.HRCFSL_Org_Exception_Rule__c.HRCFSL_Validation_Rule__c ),$Profile.Name != &apos;HRC Service Agent&apos;
+
+   
+)</errorConditionFormula>
+    <errorMessage>It&apos;s not allowed to enter a Billing off-date before the Billing on-date</errorMessage>
+</ValidationRule>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Case_Resolution_for_Closure</fullName>
+    <active>true</active>
+    <description>SE-155: To prevent closing a case without case resolution</description>
+    <errorConditionFormula>AND(
+ISCHANGED(Status),
+CONTAINS($CustomMetadata.HRCFSL_Organization_Settings__mdt.HRCSVC_Case_Status_for_Resolution.HRCFSL_Component_Detail__c ,
+text( Status )),
+ISBLANK(HRCSVC_Case_Resolution__c)
+)</errorConditionFormula>
+    <errorDisplayField>HRCSVC_Case_Resolution__c</errorDisplayField>
+    <errorMessage>You cannot close a case without a resolution</errorMessage>
+</ValidationRule>

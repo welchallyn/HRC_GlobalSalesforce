@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>CC</fullName>
+        <default>false</default>
+        <label>Advanced Care Comm</label>
+    </customValue>
+    <customValue>
+        <fullName>WV</fullName>
+        <default>false</default>
+        <label>Capital Service</label>
+    </customValue>
+    <customValue>
+        <fullName>XV</fullName>
+        <default>false</default>
+        <label>Cintas Equipment Repair</label>
+    </customValue>
+    <customValue>
+        <fullName>CV</fullName>
+        <default>false</default>
+        <label>Communications Capital Repair</label>
+    </customValue>
+    <customValue>
+        <fullName>DV</fullName>
+        <default>false</default>
+        <label>Full Serv. Contract-Like Duke</label>
+    </customValue>
+    <customValue>
+        <fullName>LV</fullName>
+        <default>false</default>
+        <label>Lift Service</label>
+    </customValue>
+    <customValue>
+        <fullName>MS</fullName>
+        <default>false</default>
+        <label>MME Sales</label>
+    </customValue>
+    <customValue>
+        <fullName>RV</fullName>
+        <default>false</default>
+        <label>Mortara Service</label>
+    </customValue>
+    <customValue>
+        <fullName>NP</fullName>
+        <default>false</default>
+        <label>NP - No Page</label>
+    </customValue>
+    <customValue>
+        <fullName>OV</fullName>
+        <default>false</default>
+        <label>OR Products / Epicare Products</label>
+    </customValue>
+    <customValue>
+        <fullName>SS</fullName>
+        <default>false</default>
+        <label>Surface Clinical Sales</label>
+    </customValue>
+    <customValue>
+        <fullName>SE</fullName>
+        <default>false</default>
+        <label>Surface Executive Sales</label>
+    </customValue>
+    <customValue>
+        <fullName>SA</fullName>
+        <default>false</default>
+        <label>Surfaces Admin</label>
+    </customValue>
+    <customValue>
+        <fullName>SV</fullName>
+        <default>false</default>
+        <label>Rental Therapy Service</label>
+    </customValue>
+    <customValue>
+        <fullName>TV</fullName>
+        <default>false</default>
+        <label>Trumpf Service</label>
+    </customValue>
+    <customValue>
+        <fullName>VA</fullName>
+        <default>false</default>
+        <label>Vest Admin</label>
+    </customValue>
+    <customValue>
+        <fullName>VS</fullName>
+        <default>false</default>
+        <label>Vest Sales</label>
+    </customValue>
+    <customValue>
+        <fullName>VV</fullName>
+        <default>false</default>
+        <label>Vest Service</label>
+    </customValue>
+    <customValue>
+        <fullName>MG</fullName>
+        <default>false</default>
+        <label>MG</label>
+    </customValue>
+    <customValue>
+        <fullName>CS</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>CS</label>
+    </customValue>
+    <customValue>
+        <fullName>SSH</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>SSH</label>
+    </customValue>
+    <customValue>
+        <fullName>MV</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>MME Service</label>
+    </customValue>
+    <description>For maintaining the paging team which would be used fot sending notification related to Work order (HF-26)</description>
+    <masterLabel>Paging Team</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

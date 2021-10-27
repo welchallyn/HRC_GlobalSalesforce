@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Latest_Quote_Status_Change__c</fullName>
+    <description>This field is used to track the change in Quote Status field.
+Developed for #SE-46</description>
+    <externalId>false</externalId>
+    <label>Latest Quote Status Change</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

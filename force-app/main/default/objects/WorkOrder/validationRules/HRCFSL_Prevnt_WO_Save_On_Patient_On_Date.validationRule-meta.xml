@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCFSL_Prevnt_WO_Save_On_Patient_On_Date</fullName>
+    <active>true</active>
+    <description>Prevents the work order from being saved on the bases of patient on date</description>
+    <errorConditionFormula>OR(
+
+AND( NOT(ISNULL( HRCFSL_Patient_on_date__c )),
+
+OR(
+
+HRCFSL_Patient_on_date__c &gt;TODAY()+1,
+
+HRCFSL_Patient_on_date__c&lt;TODAY()
+
+),
+
+NOT( $Setup.HRCFSL_Org_Exception_Rule__c.HRCFSL_Validation_Rule__c ),
+
+ISCHANGED(HRCFSL_Patient_on_date__c),
+
+ISPICKVAL( HRCFSL_Doc_Type__c , &quot;SQ&quot;),
+NOT(ISPICKVAL(HRCFSL_Activity_Type__c, &quot;R&quot;) )
+),
+AND( ISNEW(),
+
+NOT(ISNULL( HRCFSL_Patient_on_date__c )),
+
+OR(
+
+HRCFSL_Patient_on_date__c &gt;TODAY()+1,
+
+HRCFSL_Patient_on_date__c&lt;TODAY()
+
+),
+
+NOT( $Setup.HRCFSL_Org_Exception_Rule__c.HRCFSL_Validation_Rule__c ),
+
+ISPICKVAL( HRCFSL_Doc_Type__c , &quot;SQ&quot;),
+NOT(ISPICKVAL(HRCFSL_Activity_Type__c, &quot;R&quot;) )
+)
+
+)</errorConditionFormula>
+    <errorMessage>The &apos;Patient On&apos; date should be between today and tomorrow.</errorMessage>
+</ValidationRule>

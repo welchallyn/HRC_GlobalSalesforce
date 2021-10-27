@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <assignments>
+        <name>Assign_Work_Order</name>
+        <label>Assign Work Order</label>
+        <locationX>599</locationX>
+        <locationY>243</locationY>
+        <assignmentItems>
+            <assignToReference>Get_CQ.HRCSVC_Work_Order__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>workOrderId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Work_Order</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Has_CQ</name>
+        <label>Has CQ?</label>
+        <locationX>373</locationX>
+        <locationY>225</locationY>
+        <defaultConnectorLabel>CQ No</defaultConnectorLabel>
+        <rules>
+            <name>CQ_Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_CQ</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Work_Order</targetReference>
+            </connector>
+            <label>CQ Yes</label>
+        </rules>
+    </decisions>
+    <interviewLabel>HRCSVC Assign CQ to Work Order {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>HRCSVC Assign CQ to Work Order</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_CQ</name>
+        <label>Get CQ</label>
+        <locationX>167</locationX>
+        <locationY>225</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Has_CQ</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>HRCSVC_Case__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>caseId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>HRCSVC_Complaint_Qualification__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Work_Order</name>
+        <label>Update Work Order</label>
+        <locationX>497</locationX>
+        <locationY>72</locationY>
+        <inputReference>Get_CQ</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Get_CQ</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>caseId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>workOrderId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

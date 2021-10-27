@@ -1,0 +1,11 @@
+.THIS .leftPaddingClass {
+    padding-left: 2rem;
+}
+
+.THIS .pillSizenonEditable{
+    width:100%;
+    background-color:rgb(236, 235, 234);
+}
+.THIS .pillSize{
+    width:100%;    
+}

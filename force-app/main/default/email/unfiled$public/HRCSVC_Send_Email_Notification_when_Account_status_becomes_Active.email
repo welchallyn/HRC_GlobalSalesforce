@@ -1,0 +1,1 @@
+The following account, {!Account.Name} has been created by {!Account.CreatedBy} on {!Account.CreatedDate} in Salesforce.com.  The account will also need to be created in your system if it doesn’t exist yet.  If you have not received an account request yet please contact {!Account.CreatedBy}.

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCFSL_Activity_Type__c</fullName>
+    <description>Custom field used to store the Activity Type associated with a Work Type. Used so that multiple Salesforce Work Types can be related to the same JDE Doc Type/Activity Type combination.</description>
+    <externalId>false</externalId>
+    <label>Activity Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>HRCFSL_Activity_Type</valueSetName>
+    </valueSet>
+</CustomField>

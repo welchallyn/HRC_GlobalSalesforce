@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCFSL_Description__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISBLANK(HRCFSL_Work_Order__r.HRCFSL_JDE_ID__c ),&apos;&apos;, HRCFSL_Work_Order__r.HRCFSL_JDE_ID__c &amp; &apos; • &apos;)&amp;
+HRCFSL_Work_Order__r.HRCFSL_Work_Type_Name__c &amp;
+IF(ISBLANK(HRCFSL_Work_Order__r.LocationId ),&apos;&apos;,&apos; • &apos; &amp; HRCFSL_Work_Order__r.Location.Name)&amp;
+IF(ISBLANK(HRCFSL_Work_Order__r.HRCFSL_Ward__c  ),&apos;&apos;,&apos; • &apos; &amp; HRCFSL_Work_Order__r.HRCFSL_Ward_Name__c)&amp;
+IF(ISBLANK(HRCFSL_Work_Order__r.HRCFSL_Patient_Room__c  ),&apos;&apos;,&apos; • &apos; &amp; HRCFSL_Work_Order__r.HRCFSL_Patient_Room__c)&amp;
+IF(ISBLANK(HRCFSL_Work_Order__r.HRCFSL_Product_Item_Description__c ),&apos;&apos;,&apos; • &apos; &amp; IF(ISBLANK( HRCFSL_Work_Order__r.HRCFSL_Kit_Name__c ),HRCFSL_Work_Order__r.HRCFSL_Product_Item_Description__c, HRCFSL_Work_Order__r.HRCFSL_Kit_Name__c))&amp;
+IF(ISBLANK(HRCFSL_Work_Order__r.Asset.Name ),&apos;&apos;,&apos; • &apos; &amp; HRCFSL_Work_Order__r.Asset.Name)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Description</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

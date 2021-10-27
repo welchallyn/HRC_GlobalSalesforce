@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Depot_Activity_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Depot Activity Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CAL</fullName>
+                <default>false</default>
+                <label>CAL - Calibration</label>
+            </value>
+            <value>
+                <fullName>CON</fullName>
+                <default>false</default>
+                <label>CON - Consignment</label>
+            </value>
+            <value>
+                <fullName>CR</fullName>
+                <default>false</default>
+                <label>CR - Credit Return</label>
+            </value>
+            <value>
+                <fullName>CVN</fullName>
+                <default>false</default>
+                <label>CVN - Convention</label>
+            </value>
+            <value>
+                <fullName>EVL</fullName>
+                <default>false</default>
+                <label>EVL - Evaluation</label>
+            </value>
+            <value>
+                <fullName>EXP</fullName>
+                <default>false</default>
+                <label>EXP - Expedite Service</label>
+            </value>
+            <value>
+                <fullName>FSC</fullName>
+                <default>false</default>
+                <label>FSC - Field Service Call</label>
+            </value>
+            <value>
+                <fullName>IAC</fullName>
+                <default>false</default>
+                <label>IAC - IntraCo</label>
+            </value>
+            <value>
+                <fullName>IEC</fullName>
+                <default>false</default>
+                <label>IEC - InterCo</label>
+            </value>
+            <value>
+                <fullName>LNR</fullName>
+                <default>false</default>
+                <label>LNR - Loaner</label>
+            </value>
+            <value>
+                <fullName>OCS</fullName>
+                <default>false</default>
+                <label>OCS - Outside Contractor Services</label>
+            </value>
+            <value>
+                <fullName>PPM</fullName>
+                <default>false</default>
+                <label>PPM - Planned Preventive Maintenance</label>
+            </value>
+            <value>
+                <fullName>RCL</fullName>
+                <default>false</default>
+                <label>RCL - Recall</label>
+            </value>
+            <value>
+                <fullName>REF</fullName>
+                <default>false</default>
+                <label>REF - Refurb</label>
+            </value>
+            <value>
+                <fullName>TRD</fullName>
+                <default>false</default>
+                <label>TRD - Trade In</label>
+            </value>
+            <value>
+                <fullName>TRI</fullName>
+                <default>false</default>
+                <label>TRI - Trial</label>
+            </value>
+            <value>
+                <fullName>UPG</fullName>
+                <default>false</default>
+                <label>UPG - Upgrade</label>
+            </value>
+            <value>
+                <fullName>WTY</fullName>
+                <default>false</default>
+                <label>WTY - Wty Replace</label>
+            </value>
+            <value>
+                <fullName>ZER</fullName>
+                <default>false</default>
+                <label>ZER - Service Replaced</label>
+            </value>
+            <value>
+                <fullName>ZEX</fullName>
+                <default>false</default>
+                <label>ZEX - Exchange</label>
+            </value>
+            <value>
+                <fullName>ZSC</fullName>
+                <default>false</default>
+                <label>ZSC - Service Contract</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

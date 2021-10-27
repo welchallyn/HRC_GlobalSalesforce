@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Work Order Integration Fields</label>
+    <protected>false</protected>
+    <values>
+        <field>HRCFSL_Component_Description__c</field>
+        <value xsi:type="xsd:string">This is the list of fields that are included at the Work Order header level for FSL -&gt; JDE work order integration. HF-67.</value>
+    </values>
+    <values>
+        <field>HRCFSL_Component_Detail_Long__c</field>
+        <value xsi:type="xsd:string">Status,HRCFSL_Service_Territory_JDE_Id__c,HRCFSL_JDE_Cost_Center__c ,HRCFSL_Actual_Start__c,HRCFSL_Actual_End__c,HRCFSL_Engineer_JDE_Id__c,HRCFSL_Product_Model__c ,HRCFSL_Location_Number__c,HRCFSL_Contact_First_Name__c,HRCFSL_Contact_Last_Name__c,HRCFSL_Contact_Phone__c,HRCFSL_Contact_Title__c,HRCFSL_Signee_Name__c ,HRCFSL_Signee_Title__c,HRCFSL_Repair_Template_Question_4C_Funct__c,HRCFSL_Repair_Template_Question_4C_Audib__c,HRCFSL_Repair_Template_Question_4C_Visua__c,WorkOrderNumber,HRCFSL_JDE_Action_Code__c,HRCFSL_Activity_Type__c,HRCFSL_Doc_Type__c,HRCFSL_JDE_ID__c,HRCFSL_Engineer_Federation_ID__c,HRCFSL_PO__c,HRCFSL_Comments__c,HRCFSL_Repair_Template_Question_1__c,HRCFSL_Repair_Template_Question_2__c,HRCFSL_Repair_Template_Question_3__c,HRCFSL_Repair_Template_Question_4A__c,HRCFSL_Repair_Template_Question_5__c,HRCFSL_Repair_Template_Question_6__c,HRCFSL_Repair_Template_Question_7__c,HRCFSL_Repair_Template_Question_9B__c,HRCFSL_Repair_Template_Question_8B__c, HRCFSL_Repair_Template_Question_9A__c, hrcfsl_time_zone__c, hrcfsl_pm_bpi__c,hrcfsl_service_note__c,hrcfsl_substitution_code__c,	HRCFSL_Customer_Comments__c,HRCFSL_Is_Kit_Child__c, HRCFSL_Repair_Template__c,HRCFSL_Contact_Department__c, HRCFSL_Signee_Email__c,HRCSVC_No_Charge_Concession__c</value>
+    </values>
+    <values>
+        <field>HRCFSL_Component_Detail__c</field>
+        <value xsi:type="xsd:string">N/A</value>
+    </values>
+</CustomMetadata>

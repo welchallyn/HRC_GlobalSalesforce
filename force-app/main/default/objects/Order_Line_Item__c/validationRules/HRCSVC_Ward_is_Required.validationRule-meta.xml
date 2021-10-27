@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Ward_is_Required</fullName>
+    <active>false</active>
+    <description>SE-1109 - Ward is required for the European rental orders.</description>
+    <errorConditionFormula>NOT( $Setup.HRCFSL_Org_Exception_Rule__c.HRCFSL_Validation_Rule__c )
+
+ &amp;&amp; 
+
+ Order__r.HRCSVC_Ship_To_Location__r.HRCSVC_Region__c = &quot;Europe&quot;
+
+ &amp;&amp; 
+
+ ISBLANK(HRCSVC_Ward__c) 
+
+ &amp;&amp;
+
+RecordType.DeveloperName = &quot;HRCSVC_Rental_Order_Line_Item&quot;</errorConditionFormula>
+    <errorDisplayField>HRCSVC_Ward__c</errorDisplayField>
+    <errorMessage>Please provide the Ward</errorMessage>
+</ValidationRule>

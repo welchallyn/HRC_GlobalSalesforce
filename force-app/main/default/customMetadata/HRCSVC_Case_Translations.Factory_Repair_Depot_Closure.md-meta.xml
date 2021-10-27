@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Factory Repair Depot Closure</label>
+    <protected>false</protected>
+    <values>
+        <field>HRCSVC_Email_Text__c</field>
+        <value xsi:type="xsd:string">Thank you for contacting Hillrom. Your case {!Get_Case_Details.CaseNumber} regarding {!Dynamic_Product} regarding &quot;{!Get_Case_Details.Description}&quot; has been closed. If you have additional questions, please contact your local technical support team.</value>
+    </values>
+    <values>
+        <field>HRCSVC_Language__c</field>
+        <value xsi:type="xsd:string">en_US</value>
+    </values>
+    <values>
+        <field>HRCSVC_Protocol_Category__c</field>
+        <value xsi:type="xsd:string">Depot</value>
+    </values>
+    <values>
+        <field>HRCSVC_Subject__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>HRCSVC_Type__c</field>
+        <value xsi:type="xsd:string">Closure</value>
+    </values>
+</CustomMetadata>

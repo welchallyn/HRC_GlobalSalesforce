@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>SE-201: This quick action create Order Line Item records by invoking the flow - HRCSVC Create Order Line Item</description>
+    <flowDefinition>HRCSVC_Create_Order_Line_Item</flowDefinition>
+    <label>Create Order Line Item</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

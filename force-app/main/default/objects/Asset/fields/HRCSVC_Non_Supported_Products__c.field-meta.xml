@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Non_Supported_Products__c</fullName>
+    <description>SE-1173</description>
+    <externalId>false</externalId>
+    <label>Non-Supported Products</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Asset_Tracking</fullName>
+                <default>false</default>
+                <label>Asset Tracking</label>
+            </value>
+            <value>
+                <fullName>Environmental Monitoring</fullName>
+                <default>false</default>
+                <label>Environmental Monitoring</label>
+            </value>
+            <value>
+                <fullName>Hand Hygiene</fullName>
+                <default>false</default>
+                <label>Hand Hygiene</label>
+            </value>
+            <value>
+                <fullName>SmartSync</fullName>
+                <default>false</default>
+                <label>SmartSync</label>
+            </value>
+            <value>
+                <fullName>WatchChild</fullName>
+                <default>false</default>
+                <label>WatchChild</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

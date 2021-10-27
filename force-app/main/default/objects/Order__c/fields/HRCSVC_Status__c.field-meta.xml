@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Status__c</fullName>
+    <description>Created this field for #SE-112</description>
+    <externalId>false</externalId>
+    <label>Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Completed Rental</fullName>
+                <default>false</default>
+                <label>Completed Rental</label>
+            </value>
+            <value>
+                <fullName>Swapped</fullName>
+                <default>false</default>
+                <label>Swapped</label>
+            </value>
+            <value>
+                <fullName>Requested Rental</fullName>
+                <default>false</default>
+                <label>Requested Rental</label>
+            </value>
+            <value>
+                <fullName>Rental Activity</fullName>
+                <default>false</default>
+                <label>Rental Activity</label>
+            </value>
+            <value>
+                <fullName>Active Rental</fullName>
+                <default>false</default>
+                <label>Active Rental</label>
+            </value>
+            <value>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+                <label>Cancelled</label>
+            </value>
+            <value>
+                <fullName>Evaluation Requested</fullName>
+                <default>false</default>
+                <label>Evaluation Requested</label>
+            </value>
+            <value>
+                <fullName>Active Evaluation</fullName>
+                <default>false</default>
+                <label>Active Evaluation</label>
+            </value>
+            <value>
+                <fullName>Completed Evaluation</fullName>
+                <default>false</default>
+                <label>Completed Evaluation</label>
+            </value>
+            <value>
+                <fullName>Active Loaner</fullName>
+                <default>false</default>
+                <label>Active Loaner</label>
+            </value>
+            <value>
+                <fullName>Draft</fullName>
+                <default>false</default>
+                <label>Draft</label>
+            </value>
+            <value>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+                <label>Submitted</label>
+            </value>
+            <value>
+                <fullName>Completed Loaner</fullName>
+                <default>false</default>
+                <label>Completed Loaner</label>
+            </value>
+            <value>
+                <fullName>Loaner Requested</fullName>
+                <default>false</default>
+                <label>Loaner Requested</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>SE-46</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>HillromEmail_ServiceEstimate</name>
+    <style>none</style>
+    <subject>Hillrom Service Estimate for Serial Number {!WorkOrder.Asset}</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Source_Of_Complaint__c</fullName>
+    <externalId>false</externalId>
+    <label>Source Of Complaint</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Customer</fullName>
+                <default>false</default>
+                <label>Customer</label>
+            </value>
+            <value>
+                <fullName>Distributor/Authorized Service Personnel</fullName>
+                <default>false</default>
+                <label>Distributor/Authorized Service Personnel</label>
+            </value>
+            <value>
+                <fullName>Regulatory Agency</fullName>
+                <default>false</default>
+                <label>Regulatory Agency</label>
+            </value>
+            <value>
+                <fullName>Hill-Rom Service Personnel</fullName>
+                <default>false</default>
+                <label>Hill-Rom Service Personnel</label>
+            </value>
+            <value>
+                <fullName>Company Representative-Other Hill-Rom Employee (Sales; Marketing; etc.)</fullName>
+                <default>false</default>
+                <label>Company Representative-Other Hill-Rom Employee (Sales; Marketing; etc.)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,3 @@
+This message is regarding {!Case.CaseNumber}, {!Case.Subject}. This case is a {!Case.Priority} priority and has been in {!Case.Status} status for 240 minutes. Please click the hyperlink if you would like to open the case in Salesforce to view more details.
+
+{!Case.Link}

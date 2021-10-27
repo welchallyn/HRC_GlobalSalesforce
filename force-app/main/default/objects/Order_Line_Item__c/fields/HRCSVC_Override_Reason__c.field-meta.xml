@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Override_Reason__c</fullName>
+    <description>SE-76</description>
+    <externalId>false</externalId>
+    <label>Override Reason</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>2 - BILLING ISSUES</fullName>
+                <default>false</default>
+                <label>2 - BILLING ISSUES</label>
+            </value>
+            <value>
+                <fullName>3 - DME MAX</fullName>
+                <default>false</default>
+                <label>3 - DME MAX</label>
+            </value>
+            <value>
+                <fullName>4 - INACTIVE</fullName>
+                <default>false</default>
+                <label>4 - INACTIVE</label>
+            </value>
+            <value>
+                <fullName>5 - INSURANCE TERMED</fullName>
+                <default>false</default>
+                <label>5 - INSURANCE TERMED</label>
+            </value>
+            <value>
+                <fullName>6 - LIFETIME MEDICAL MAX MET</fullName>
+                <default>false</default>
+                <label>6 - LIFETIME MEDICAL MAX MET</label>
+            </value>
+            <value>
+                <fullName>7 - MEDICARE DENIAL</fullName>
+                <default>false</default>
+                <label>7 - MEDICARE DENIAL</label>
+            </value>
+            <value>
+                <fullName>8 - PECOS</fullName>
+                <default>false</default>
+                <label>8 - PECOS</label>
+            </value>
+            <value>
+                <fullName>9 - CHANGE OF INSURANCE</fullName>
+                <default>false</default>
+                <label>9 - CHANGE OF INSURANCE</label>
+            </value>
+            <value>
+                <fullName>10 - WOPD ERROR</fullName>
+                <default>false</default>
+                <label>10 - WOPD ERROR</label>
+            </value>
+            <value>
+                <fullName>11 - INVALID AUTH</fullName>
+                <default>false</default>
+                <label>11 - INVALID AUTH</label>
+            </value>
+            <value>
+                <fullName>12 - PATIENT DECEASED</fullName>
+                <default>false</default>
+                <label>12 - PATIENT DECEASED</label>
+            </value>
+            <value>
+                <fullName>13 - PRED CLAIM</fullName>
+                <default>false</default>
+                <label>13 - PRED CLAIM</label>
+            </value>
+            <value>
+                <fullName>14 - PRED PAID</fullName>
+                <default>false</default>
+                <label>14 - PRED PAID</label>
+            </value>
+            <value>
+                <fullName>15 - PRED DENIED</fullName>
+                <default>false</default>
+                <label>15 - PRED DENIED</label>
+            </value>
+            <value>
+                <fullName>16 - REAUTH</fullName>
+                <default>false</default>
+                <label>16 - REAUTH</label>
+            </value>
+            <value>
+                <fullName>20 - EQUIPMENT/DEVICE RETURNED</fullName>
+                <default>false</default>
+                <label>20 - EQUIPMENT/DEVICE RETURNED</label>
+            </value>
+            <value>
+                <fullName>21 - USE ASSESSMENT</fullName>
+                <default>false</default>
+                <label>21 - USE ASSESSMENT</label>
+            </value>
+            <value>
+                <fullName>22 - UA/DC APPROVED</fullName>
+                <default>false</default>
+                <label>22 - UA/DC APPROVED</label>
+            </value>
+            <value>
+                <fullName>23 - UA/DC PENDING</fullName>
+                <default>false</default>
+                <label>23 - UA/DC PENDING</label>
+            </value>
+            <value>
+                <fullName>24 - REFER TO SELF-PAY/FOUNDATION</fullName>
+                <default>false</default>
+                <label>24 - REFER TO SELF-PAY/FOUNDATION</label>
+            </value>
+            <value>
+                <fullName>25 - MEDICARE PENDING 10 MO LETTER</fullName>
+                <default>false</default>
+                <label>25 - MEDICARE PENDING 10 MO LETTER</label>
+            </value>
+            <value>
+                <fullName>26 - ADMIN ITEM REQUESTED</fullName>
+                <default>false</default>
+                <label>26 - ADMIN ITEM REQUESTED</label>
+            </value>
+            <value>
+                <fullName>28 - HOSPICE</fullName>
+                <default>false</default>
+                <label>28 - HOSPICE</label>
+            </value>
+            <value>
+                <fullName>29 - INPATIENT / SNF</fullName>
+                <default>false</default>
+                <label>29 - INPATIENT / SNF</label>
+            </value>
+            <value>
+                <fullName>30 - PENDING PRIMARY EOB</fullName>
+                <default>false</default>
+                <label>30 - PENDING PRIMARY EOB</label>
+            </value>
+            <value>
+                <fullName>31 - PRIMARY DENIED/PURSUING 2ND</fullName>
+                <default>false</default>
+                <label>31 - PRIMARY DENIED/PURSUING 2ND</label>
+            </value>
+            <value>
+                <fullName>32 - APPEAL REVIEW</fullName>
+                <default>false</default>
+                <label>32 - APPEAL REVIEW</label>
+            </value>
+            <value>
+                <fullName>33 - CONVERSION</fullName>
+                <default>false</default>
+                <label>33 - CONVERSION</label>
+            </value>
+            <value>
+                <fullName>34 - 30 DAY AUDIT LETTER DENIED</fullName>
+                <default>false</default>
+                <label>34 - 30 DAY AUDIT LETTER DENIED</label>
+            </value>
+            <value>
+                <fullName>35 - MEDICARE SECONDARY</fullName>
+                <default>false</default>
+                <label>35 - MEDICARE SECONDARY</label>
+            </value>
+            <value>
+                <fullName>40 - REGION C PENDING</fullName>
+                <default>false</default>
+                <label>40 - REGION C PENDING</label>
+            </value>
+            <value>
+                <fullName>45 - PAYER ISSUES</fullName>
+                <default>false</default>
+                <label>45 - PAYER ISSUES</label>
+            </value>
+            <value>
+                <fullName>12 - MARKUP</fullName>
+                <default>false</default>
+                <label>12 - MARKUP</label>
+            </value>
+            <value>
+                <fullName>AGED  - AGED ORDERS</fullName>
+                <default>false</default>
+                <label>AGED  - AGED ORDERS</label>
+            </value>
+            <value>
+                <fullName>AUDIT - AUDIT ISSUES</fullName>
+                <default>false</default>
+                <label>AUDIT - AUDIT ISSUES</label>
+            </value>
+            <value>
+                <fullName>CCO - CUSTOMER CHANGED ORDER</fullName>
+                <default>false</default>
+                <label>CCO - CUSTOMER CHANGED ORDER</label>
+            </value>
+            <value>
+                <fullName>CUSRE - CUSTOMER RELATIONS</fullName>
+                <default>false</default>
+                <label>CUSRE - CUSTOMER RELATIONS</label>
+            </value>
+            <value>
+                <fullName>DSPTD - DISPUTED</fullName>
+                <default>false</default>
+                <label>DSPTD - DISPUTED</label>
+            </value>
+            <value>
+                <fullName>DUPB - DUPLICATE BILLING</fullName>
+                <default>false</default>
+                <label>DUPB - DUPLICATE BILLING</label>
+            </value>
+            <value>
+                <fullName>ENA - EQUIPMENT NOT AVAILABLE</fullName>
+                <default>false</default>
+                <label>ENA - EQUIPMENT NOT AVAILABLE</label>
+            </value>
+            <value>
+                <fullName>ERROR - ORDER ERROR</fullName>
+                <default>false</default>
+                <label>ERROR - ORDER ERROR</label>
+            </value>
+            <value>
+                <fullName>GAP - GAP IN BILLING</fullName>
+                <default>false</default>
+                <label>GAP - GAP IN BILLING</label>
+            </value>
+            <value>
+                <fullName>HOLD - EQUIPMENT HOLD</fullName>
+                <default>false</default>
+                <label>HOLD - EQUIPMENT HOLD</label>
+            </value>
+            <value>
+                <fullName>HOSP - NO BILL DAYS WHILE IN HOSP</fullName>
+                <default>false</default>
+                <label>HOSP - NO BILL DAYS WHILE IN HOSP</label>
+            </value>
+            <value>
+                <fullName>HOST - HOSTAGE</fullName>
+                <default>false</default>
+                <label>HOST - HOSTAGE</label>
+            </value>
+            <value>
+                <fullName>HR1 - HURRICANE RELIEF</fullName>
+                <default>false</default>
+                <label>HR1 - HURRICANE RELIEF</label>
+            </value>
+            <value>
+                <fullName>IBL - ITEM BRANCH LOCATION ISSUE</fullName>
+                <default>false</default>
+                <label>IBL - ITEM BRANCH LOCATION ISSUE</label>
+            </value>
+            <value>
+                <fullName>LIST - LIST PRICE</fullName>
+                <default>false</default>
+                <label>LIST - LIST PRICE</label>
+            </value>
+            <value>
+                <fullName>LOSTE - LOST EQUIPMENT</fullName>
+                <default>false</default>
+                <label>LOSTE - LOST EQUIPMENT</label>
+            </value>
+            <value>
+                <fullName>MBO - MIS-BOOKED ORDER</fullName>
+                <default>false</default>
+                <label>MBO - MIS-BOOKED ORDER</label>
+            </value>
+            <value>
+                <fullName>PPFA - PENDING PFA</fullName>
+                <default>false</default>
+                <label>PPFA - PENDING PFA</label>
+            </value>
+            <value>
+                <fullName>PROMO - OME PROMOTION</fullName>
+                <default>false</default>
+                <label>PROMO - OME PROMOTION</label>
+            </value>
+            <value>
+                <fullName>RET - RETURN PENDING</fullName>
+                <default>false</default>
+                <label>RET - RETURN PENDING</label>
+            </value>
+            <value>
+                <fullName>RTP - RENT TO PURCHASE</fullName>
+                <default>false</default>
+                <label>RTP - RENT TO PURCHASE</label>
+            </value>
+            <value>
+                <fullName>SDV  - SAME - DIFFERENT VERS</fullName>
+                <default>false</default>
+                <label>SDV  - SAME - DIFFERENT VERS</label>
+            </value>
+            <value>
+                <fullName>SPL - SPECIAL HANDLING CHARGES</fullName>
+                <default>false</default>
+                <label>SPL - SPECIAL HANDLING CHARGES</label>
+            </value>
+            <value>
+                <fullName>SPP - SPECIAL PRICING PATIENT</fullName>
+                <default>false</default>
+                <label>SPP - SPECIAL PRICING PATIENT</label>
+            </value>
+            <value>
+                <fullName>SUB - SUBSTITUTION</fullName>
+                <default>false</default>
+                <label>SUB - SUBSTITUTION</label>
+            </value>
+            <value>
+                <fullName>TRIAL - TRIAL &amp; EVAL</fullName>
+                <default>false</default>
+                <label>TRIAL - TRIAL &amp; EVAL</label>
+            </value>
+            <value>
+                <fullName>TRLWP - TRIAL WITH PATIENT</fullName>
+                <default>false</default>
+                <label>TRLWP - TRIAL WITH PATIENT</label>
+            </value>
+            <value>
+                <fullName>UNIU - UNIT NOT IN USE</fullName>
+                <default>false</default>
+                <label>UNIU - UNIT NOT IN USE</label>
+            </value>
+            <value>
+                <fullName>USERE - USER ERROR</fullName>
+                <default>false</default>
+                <label>USERE - USER ERROR</label>
+            </value>
+            <value>
+                <fullName>VNT - Rent A Vent Event</fullName>
+                <default>false</default>
+                <label>VNT - Rent A Vent Event</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

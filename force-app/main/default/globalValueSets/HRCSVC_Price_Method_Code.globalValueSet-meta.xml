@@ -1,0 +1,1435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>12</fullName>
+        <default>false</default>
+        <label>12 - 12-month rate</label>
+    </customValue>
+    <customValue>
+        <fullName>24</fullName>
+        <default>false</default>
+        <label>24 - 24-month rate</label>
+    </customValue>
+    <customValue>
+        <fullName>36</fullName>
+        <default>false</default>
+        <label>36 - 36-Month Rate</label>
+    </customValue>
+    <customValue>
+        <fullName>03</fullName>
+        <default>false</default>
+        <label>03 - 3-month rate</label>
+    </customValue>
+    <customValue>
+        <fullName>06</fullName>
+        <default>false</default>
+        <label>06 - 6-month rate</label>
+    </customValue>
+    <customValue>
+        <fullName>IN031</fullName>
+        <default>false</default>
+        <label>IN031 - ACCUMAXVPC</label>
+    </customValue>
+    <customValue>
+        <fullName>AUP</fullName>
+        <default>false</default>
+        <label>AUP - Acucair Usage Program</label>
+    </customValue>
+    <customValue>
+        <fullName>AC</fullName>
+        <default>false</default>
+        <label>AC - ACUTE CARE</label>
+    </customValue>
+    <customValue>
+        <fullName>ACO</fullName>
+        <default>false</default>
+        <label>ACO - Acute Care Austria</label>
+    </customValue>
+    <customValue>
+        <fullName>ACB</fullName>
+        <default>false</default>
+        <label>ACB - Acute Care Belgium</label>
+    </customValue>
+    <customValue>
+        <fullName>ACC</fullName>
+        <default>false</default>
+        <label>ACC - Acute Care Canada</label>
+    </customValue>
+    <customValue>
+        <fullName>ACK</fullName>
+        <default>false</default>
+        <label>ACK - Acute Care Denmark</label>
+    </customValue>
+    <customValue>
+        <fullName>ACF</fullName>
+        <default>false</default>
+        <label>ACF - Acute Care Finland</label>
+    </customValue>
+    <customValue>
+        <fullName>ACR</fullName>
+        <default>false</default>
+        <label>ACR - Acute Care France</label>
+    </customValue>
+    <customValue>
+        <fullName>ACD</fullName>
+        <default>false</default>
+        <label>ACD - Acute Care Germany</label>
+    </customValue>
+    <customValue>
+        <fullName>ACE</fullName>
+        <default>false</default>
+        <label>ACE - Acute Care Ireland</label>
+    </customValue>
+    <customValue>
+        <fullName>ACI</fullName>
+        <default>false</default>
+        <label>ACI - Acute Care Italy</label>
+    </customValue>
+    <customValue>
+        <fullName>ACN</fullName>
+        <default>false</default>
+        <label>ACN - Acute Care Netherlands</label>
+    </customValue>
+    <customValue>
+        <fullName>ACW</fullName>
+        <default>false</default>
+        <label>ACW - Acute Care Norway</label>
+    </customValue>
+    <customValue>
+        <fullName>ACP</fullName>
+        <default>false</default>
+        <label>ACP - Acute Care Private UK</label>
+    </customValue>
+    <customValue>
+        <fullName>AES</fullName>
+        <default>false</default>
+        <label>AES - Acute Care Spain</label>
+    </customValue>
+    <customValue>
+        <fullName>ACV</fullName>
+        <default>false</default>
+        <label>ACV - Acute Care Sweden</label>
+    </customValue>
+    <customValue>
+        <fullName>ACS</fullName>
+        <default>false</default>
+        <label>ACS - Acute Care Switzerland</label>
+    </customValue>
+    <customValue>
+        <fullName>ACU</fullName>
+        <default>false</default>
+        <label>ACU - Acute Care United Kingdom</label>
+    </customValue>
+    <customValue>
+        <fullName>IN022</fullName>
+        <default>false</default>
+        <label>IN022 - AFC1STD</label>
+    </customValue>
+    <customValue>
+        <fullName>IN012</fullName>
+        <default>false</default>
+        <label>IN012 - AFC2STD</label>
+    </customValue>
+    <customValue>
+        <fullName>IN026</fullName>
+        <default>false</default>
+        <label>IN026 - AFFINITYBED</label>
+    </customValue>
+    <customValue>
+        <fullName>STAK</fullName>
+        <default>false</default>
+        <label>STAK - AK MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>VCAL</fullName>
+        <default>false</default>
+        <label>VCAL - Alabama Vital Cough 13 Month</label>
+    </customValue>
+    <customValue>
+        <fullName>VCAK</fullName>
+        <default>false</default>
+        <label>VCAK - Alaska Vital Cough 13 Month</label>
+    </customValue>
+    <customValue>
+        <fullName>STAL</fullName>
+        <default>false</default>
+        <label>STAL - AL MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>VCAZ</fullName>
+        <default>false</default>
+        <label>VCAZ - Arizona Vital Cough 13 Month</label>
+    </customValue>
+    <customValue>
+        <fullName>VCAR</fullName>
+        <default>false</default>
+        <label>VCAR - Arkansas Vital Cough 13 Month</label>
+    </customValue>
+    <customValue>
+        <fullName>STAR</fullName>
+        <default>false</default>
+        <label>STAR - AR MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>STAZ</fullName>
+        <default>false</default>
+        <label>STAZ - AZ MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>BARI</fullName>
+        <default>false</default>
+        <label>BARI - Bariatric Rental Promotion</label>
+    </customValue>
+    <customValue>
+        <fullName>BSR</fullName>
+        <default>false</default>
+        <label>BSR - Bariatric Select Rental Progra</label>
+    </customValue>
+    <customValue>
+        <fullName>IN033</fullName>
+        <default>false</default>
+        <label>IN033 - BARIAXLCOMMODEMS</label>
+    </customValue>
+    <customValue>
+        <fullName>BARIM</fullName>
+        <default>false</default>
+        <label>BARIM - BARI MOBILITY</label>
+    </customValue>
+    <customValue>
+        <fullName>BARIS</fullName>
+        <default>false</default>
+        <label>BARIS - BARI SAFE PATIENT HANDLING</label>
+    </customValue>
+    <customValue>
+        <fullName>SEB</fullName>
+        <default>false</default>
+        <label>SEB - Block Service Belgium</label>
+    </customValue>
+    <customValue>
+        <fullName>BSN</fullName>
+        <default>false</default>
+        <label>BSN - Block Support Netherlands</label>
+    </customValue>
+    <customValue>
+        <fullName>SEN</fullName>
+        <default>false</default>
+        <label>SEN - Block Support Plus Netherlands</label>
+    </customValue>
+    <customValue>
+        <fullName>VCCA</fullName>
+        <default>false</default>
+        <label>VCCA - California Vital Cough 13 Mont</label>
+    </customValue>
+    <customValue>
+        <fullName>STCA</fullName>
+        <default>false</default>
+        <label>STCA - CA MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>IN001</fullName>
+        <default>false</default>
+        <label>IN001 - CLACUNIT</label>
+    </customValue>
+    <customValue>
+        <fullName>IN013</fullName>
+        <default>false</default>
+        <label>IN013 - CLINIMAT</label>
+    </customValue>
+    <customValue>
+        <fullName>VCCO</fullName>
+        <default>false</default>
+        <label>VCCO - Colorado  Vital Cough 13 Month</label>
+    </customValue>
+    <customValue>
+        <fullName>STCO</fullName>
+        <default>false</default>
+        <label>STCO - CO MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>IN023</fullName>
+        <default>false</default>
+        <label>IN023 - COMPELLARENT</label>
+    </customValue>
+    <customValue>
+        <fullName>IN030</fullName>
+        <default>false</default>
+        <label>IN030 - COMPELLARENTFOAM</label>
+    </customValue>
+    <customValue>
+        <fullName>IN029</fullName>
+        <default>false</default>
+        <label>IN029 - COMPELLARENTPULM</label>
+    </customValue>
+    <customValue>
+        <fullName>VCCT</fullName>
+        <default>false</default>
+        <label>VCCT - Connecticut  Vital Cough 13 Mo</label>
+    </customValue>
+    <customValue>
+        <fullName>CONV</fullName>
+        <default>false</default>
+        <label>CONV - Conversion Program - N. Mehdi</label>
+    </customValue>
+    <customValue>
+        <fullName>VSCNV</fullName>
+        <default>false</default>
+        <label>VSCNV - Conversion Rate</label>
+    </customValue>
+    <customValue>
+        <fullName>STCT</fullName>
+        <default>false</default>
+        <label>STCT - CT MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>ADZ</fullName>
+        <default>false</default>
+        <label>ADZ - DACH (DE &amp; AT) Zero Price</label>
+    </customValue>
+    <customValue>
+        <fullName>STDC</fullName>
+        <default>false</default>
+        <label>STDC - DC MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>VCDE</fullName>
+        <default>false</default>
+        <label>VCDE - Delaware  Vital Cough 13 Month</label>
+    </customValue>
+    <customValue>
+        <fullName>STDE</fullName>
+        <default>false</default>
+        <label>STDE - DE MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>IN002</fullName>
+        <default>false</default>
+        <label>IN002 - DUO2MATT</label>
+    </customValue>
+    <customValue>
+        <fullName>IN014</fullName>
+        <default>false</default>
+        <label>IN014 - DUOMATT</label>
+    </customValue>
+    <customValue>
+        <fullName>EXCEL</fullName>
+        <default>false</default>
+        <label>EXCEL - Excel Capital Replacement</label>
+    </customValue>
+    <customValue>
+        <fullName>STFL</fullName>
+        <default>false</default>
+        <label>STFL - FL MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>VCFL</fullName>
+        <default>false</default>
+        <label>VCFL - Florida  Vital Cough 13 Month</label>
+    </customValue>
+    <customValue>
+        <fullName>STGA</fullName>
+        <default>false</default>
+        <label>STGA - GA MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>VCGA</fullName>
+        <default>false</default>
+        <label>VCGA - Georgia  Vital Cough 13 Month</label>
+    </customValue>
+    <customValue>
+        <fullName>VCHI</fullName>
+        <default>false</default>
+        <label>VCHI - Hawaii Vital Cough 13 Month</label>
+    </customValue>
+    <customValue>
+        <fullName>STHI</fullName>
+        <default>false</default>
+        <label>STHI - HI MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>HC</fullName>
+        <default>false</default>
+        <label>HC - HOME CARE</label>
+    </customValue>
+    <customValue>
+        <fullName>HCO</fullName>
+        <default>false</default>
+        <label>HCO - Home Care Austria</label>
+    </customValue>
+    <customValue>
+        <fullName>HCB</fullName>
+        <default>false</default>
+        <label>HCB - Home Care Belgium</label>
+    </customValue>
+    <customValue>
+        <fullName>HCC</fullName>
+        <default>false</default>
+        <label>HCC - Home Care Canada</label>
+    </customValue>
+    <customValue>
+        <fullName>HCR</fullName>
+        <default>false</default>
+        <label>HCR - Home Care France</label>
+    </customValue>
+    <customValue>
+        <fullName>HCD</fullName>
+        <default>false</default>
+        <label>HCD - Home Care Germany</label>
+    </customValue>
+    <customValue>
+        <fullName>HCE</fullName>
+        <default>false</default>
+        <label>HCE - Home Care Ireland</label>
+    </customValue>
+    <customValue>
+        <fullName>HTI</fullName>
+        <default>false</default>
+        <label>HTI - Home Care Italy</label>
+    </customValue>
+    <customValue>
+        <fullName>HCN</fullName>
+        <default>false</default>
+        <label>HCN - Home Care Netherlands</label>
+    </customValue>
+    <customValue>
+        <fullName>HCW</fullName>
+        <default>false</default>
+        <label>HCW - Home Care Norway</label>
+    </customValue>
+    <customValue>
+        <fullName>HES</fullName>
+        <default>false</default>
+        <label>HES - Home Care Spain</label>
+    </customValue>
+    <customValue>
+        <fullName>HCV</fullName>
+        <default>false</default>
+        <label>HCV - Home Care Sweden</label>
+    </customValue>
+    <customValue>
+        <fullName>HCS</fullName>
+        <default>false</default>
+        <label>HCS - Home Care Switzerland</label>
+    </customValue>
+    <customValue>
+        <fullName>HCU</fullName>
+        <default>false</default>
+        <label>HCU - Home Care United Kingdom</label>
+    </customValue>
+    <customValue>
+        <fullName>HRA</fullName>
+        <default>false</default>
+        <label>HRA - HPG Rental Advantage Program</label>
+    </customValue>
+    <customValue>
+        <fullName>IN021</fullName>
+        <default>false</default>
+        <label>IN021 - HR900BED</label>
+    </customValue>
+    <customValue>
+        <fullName>STIA</fullName>
+        <default>false</default>
+        <label>STIA - IA MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>VCID</fullName>
+        <default>false</default>
+        <label>VCID - Idaho Vital Cough 13 Month</label>
+    </customValue>
+    <customValue>
+        <fullName>STID</fullName>
+        <default>false</default>
+        <label>STID - ID MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>VCIL</fullName>
+        <default>false</default>
+        <label>VCIL - Illinois Vital Cough 13 Month</label>
+    </customValue>
+    <customValue>
+        <fullName>STIL</fullName>
+        <default>false</default>
+        <label>STIL - IL MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>VCIN</fullName>
+        <default>false</default>
+        <label>VCIN - Indiana Vital Cough 13 Month</label>
+    </customValue>
+    <customValue>
+        <fullName>STIN</fullName>
+        <default>false</default>
+        <label>STIN - IN MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>VCIA</fullName>
+        <default>false</default>
+        <label>VCIA - Iowa Vital Cough 13 Month</label>
+    </customValue>
+    <customValue>
+        <fullName>JUMP</fullName>
+        <default>false</default>
+        <label>JUMP - JUMP START HEALING PROMOTION</label>
+    </customValue>
+    <customValue>
+        <fullName>VCKS</fullName>
+        <default>false</default>
+        <label>VCKS - Kansas Vital Cough 13 Month</label>
+    </customValue>
+    <customValue>
+        <fullName>VCKY</fullName>
+        <default>false</default>
+        <label>VCKY - Kentucky Vital Cough 13 Month</label>
+    </customValue>
+    <customValue>
+        <fullName>KC</fullName>
+        <default>false</default>
+        <label>KC - KIT CHILD IDENTIFIER</label>
+    </customValue>
+    <customValue>
+        <fullName>STKS</fullName>
+        <default>false</default>
+        <label>STKS - KS MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>STKY</fullName>
+        <default>false</default>
+        <label>STKY - KY MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>STLA</fullName>
+        <default>false</default>
+        <label>STLA - LA MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>ACZ</fullName>
+        <default>false</default>
+        <label>ACZ - Leased Rental United Kingdom</label>
+    </customValue>
+    <customValue>
+        <fullName>LT</fullName>
+        <default>false</default>
+        <label>LT - LONG TERM CARE</label>
+    </customValue>
+    <customValue>
+        <fullName>LTO</fullName>
+        <default>false</default>
+        <label>LTO - Long Term Care Austria</label>
+    </customValue>
+    <customValue>
+        <fullName>LTB</fullName>
+        <default>false</default>
+        <label>LTB - Long Term Care Belgium</label>
+    </customValue>
+    <customValue>
+        <fullName>LTC</fullName>
+        <default>false</default>
+        <label>LTC - Long Term Care Canada</label>
+    </customValue>
+    <customValue>
+        <fullName>LTR</fullName>
+        <default>false</default>
+        <label>LTR - Long Term Care France</label>
+    </customValue>
+    <customValue>
+        <fullName>LTD</fullName>
+        <default>false</default>
+        <label>LTD - Long Term Care Germany</label>
+    </customValue>
+    <customValue>
+        <fullName>LTE</fullName>
+        <default>false</default>
+        <label>LTE - Long Term Care Ireland</label>
+    </customValue>
+    <customValue>
+        <fullName>LTI</fullName>
+        <default>false</default>
+        <label>LTI - Long Term Care Italy</label>
+    </customValue>
+    <customValue>
+        <fullName>LTN</fullName>
+        <default>false</default>
+        <label>LTN - Long Term Care Netherlands</label>
+    </customValue>
+    <customValue>
+        <fullName>LTW</fullName>
+        <default>false</default>
+        <label>LTW - Long Term Care Norway</label>
+    </customValue>
+    <customValue>
+        <fullName>LES</fullName>
+        <default>false</default>
+        <label>LES - Long Term Care Spain</label>
+    </customValue>
+    <customValue>
+        <fullName>LTV</fullName>
+        <default>false</default>
+        <label>LTV - Long Term Care Sweden</label>
+    </customValue>
+    <customValue>
+        <fullName>LTS</fullName>
+        <default>false</default>
+        <label>LTS - Long Term Care Switzerland</label>
+    </customValue>
+    <customValue>
+        <fullName>LTU</fullName>
+        <default>false</default>
+        <label>LTU - Long Term Care United Kingdom</label>
+    </customValue>
+    <customValue>
+        <fullName>LTRUS</fullName>
+        <default>false</default>
+        <label>LTRUS - Long Term Rental US</label>
+    </customValue>
+    <customValue>
+        <fullName>12LT</fullName>
+        <default>false</default>
+        <label>12LT - LONG TERM VEST RENTAL</label>
+    </customValue>
+    <customValue>
+        <fullName>LTRAC</fullName>
+        <default>false</default>
+        <label>LTRAC - LON TERM RENTAL ACUTE CARE</label>
+    </customValue>
+    <customValue>
+        <fullName>VCLA</fullName>
+        <default>false</default>
+        <label>VCLA - Louisiana Vital Cough 13 Month</label>
+    </customValue>
+    <customValue>
+        <fullName>VCME</fullName>
+        <default>false</default>
+        <label>VCME - Maine Vital Cough 13 Month</label>
+    </customValue>
+    <customValue>
+        <fullName>STMA</fullName>
+        <default>false</default>
+        <label>STMA - MA MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>VCMD</fullName>
+        <default>false</default>
+        <label>VCMD - Maryland Vital Cough 13 Month</label>
+    </customValue>
+    <customValue>
+        <fullName>VCMA</fullName>
+        <default>false</default>
+        <label>VCMA - Massachusetts Vital Cough 13 M</label>
+    </customValue>
+    <customValue>
+        <fullName>STMD</fullName>
+        <default>false</default>
+        <label>STMD - MD MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>ZZNPS</fullName>
+        <default>false</default>
+        <label>ZZNPS - Med-B List For No Pay Secondar</label>
+    </customValue>
+    <customValue>
+        <fullName>ZZMDB</fullName>
+        <default>false</default>
+        <label>ZZMDB - Med-B List Pricing</label>
+    </customValue>
+    <customValue>
+        <fullName>STME</fullName>
+        <default>false</default>
+        <label>STME - ME MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>TECH</fullName>
+        <default>false</default>
+        <label>TECH - Metaneb tech rental</label>
+    </customValue>
+    <customValue>
+        <fullName>VCMI</fullName>
+        <default>false</default>
+        <label>VCMI - Michigan Vital Cough 13 Month</label>
+    </customValue>
+    <customValue>
+        <fullName>STMI</fullName>
+        <default>false</default>
+        <label>STMI - MI MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>VCMN</fullName>
+        <default>false</default>
+        <label>VCMN - Minnesota Vital Cough 13 Month</label>
+    </customValue>
+    <customValue>
+        <fullName>VCMS</fullName>
+        <default>false</default>
+        <label>VCMS - Mississippi Vital Cough 13 Mon</label>
+    </customValue>
+    <customValue>
+        <fullName>VCMO</fullName>
+        <default>false</default>
+        <label>VCMO - Missouri Vital Cough 13 Month</label>
+    </customValue>
+    <customValue>
+        <fullName>PRO12</fullName>
+        <default>false</default>
+        <label>PRO12 - MME Promotional 12 Month Rate</label>
+    </customValue>
+    <customValue>
+        <fullName>PRO1</fullName>
+        <default>false</default>
+        <label>PRO1 - MME Promotional 1Month Rate</label>
+    </customValue>
+    <customValue>
+        <fullName>PRO3</fullName>
+        <default>false</default>
+        <label>PRO3 - MME Promotional 3 Month Rate</label>
+    </customValue>
+    <customValue>
+        <fullName>STMN</fullName>
+        <default>false</default>
+        <label>STMN - MN MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>STMO</fullName>
+        <default>false</default>
+        <label>STMO - MO MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>VCMT</fullName>
+        <default>false</default>
+        <label>VCMT - Montana Vital Cough 13 Month</label>
+    </customValue>
+    <customValue>
+        <fullName>MOCAP</fullName>
+        <default>false</default>
+        <label>MOCAP - MONTHLY SURFACE CAP</label>
+    </customValue>
+    <customValue>
+        <fullName>STMS</fullName>
+        <default>false</default>
+        <label>STMS - MS MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>STMT</fullName>
+        <default>false</default>
+        <label>STMT - MT MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>STNC</fullName>
+        <default>false</default>
+        <label>STNC - NC MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>STND</fullName>
+        <default>false</default>
+        <label>STND - ND MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>VCNE</fullName>
+        <default>false</default>
+        <label>VCNE - Nebraska Vital Cough 13 Month</label>
+    </customValue>
+    <customValue>
+        <fullName>STNE</fullName>
+        <default>false</default>
+        <label>STNE - NE MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>VCNV</fullName>
+        <default>false</default>
+        <label>VCNV - Nevada Vital Cough 13 Month</label>
+    </customValue>
+    <customValue>
+        <fullName>VCNH</fullName>
+        <default>false</default>
+        <label>VCNH - New Hampshire Vital Cough 13 M</label>
+    </customValue>
+    <customValue>
+        <fullName>VCNJ</fullName>
+        <default>false</default>
+        <label>VCNJ - New Jersey Vital Cough 13 Mont</label>
+    </customValue>
+    <customValue>
+        <fullName>VCNM</fullName>
+        <default>false</default>
+        <label>VCNM - New Mexico Vital Cough 13 Mont</label>
+    </customValue>
+    <customValue>
+        <fullName>VCNY</fullName>
+        <default>false</default>
+        <label>VCNY - New York Vital Cough 13 Month</label>
+    </customValue>
+    <customValue>
+        <fullName>STNH</fullName>
+        <default>false</default>
+        <label>STNH - NH MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>STNJ</fullName>
+        <default>false</default>
+        <label>STNJ - NJ MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>STNM</fullName>
+        <default>false</default>
+        <label>STNM - NM MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>NOMOD</fullName>
+        <default>false</default>
+        <label>NOMOD - No Modules</label>
+    </customValue>
+    <customValue>
+        <fullName>ANZ</fullName>
+        <default>false</default>
+        <label>ANZ - NORDIC Zero Price</label>
+    </customValue>
+    <customValue>
+        <fullName>VCNC</fullName>
+        <default>false</default>
+        <label>VCNC - North Carolina Vital Cough 13</label>
+    </customValue>
+    <customValue>
+        <fullName>VCND</fullName>
+        <default>false</default>
+        <label>VCND - North Dakota Vital Cough 13 Mo</label>
+    </customValue>
+    <customValue>
+        <fullName>NOSCL</fullName>
+        <default>false</default>
+        <label>NOSCL - NO SCALE</label>
+    </customValue>
+    <customValue>
+        <fullName>IN017</fullName>
+        <default>false</default>
+        <label>IN017 - NP150MATT</label>
+    </customValue>
+    <customValue>
+        <fullName>STNV</fullName>
+        <default>false</default>
+        <label>STNV - NV MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>STNY</fullName>
+        <default>false</default>
+        <label>STNY - NY MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>VCOH</fullName>
+        <default>false</default>
+        <label>VCOH - Ohio Vital Cough 13 Month</label>
+    </customValue>
+    <customValue>
+        <fullName>STOH</fullName>
+        <default>false</default>
+        <label>STOH - OH MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>VCOK</fullName>
+        <default>false</default>
+        <label>VCOK - Oklahoma Vital Cough 13 Month</label>
+    </customValue>
+    <customValue>
+        <fullName>STOK</fullName>
+        <default>false</default>
+        <label>STOK - OK MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>SD</fullName>
+        <default>false</default>
+        <label>SD - OME SHUT DOWN</label>
+    </customValue>
+    <customValue>
+        <fullName>OS</fullName>
+        <default>false</default>
+        <label>OS - One Source</label>
+    </customValue>
+    <customValue>
+        <fullName>OSD</fullName>
+        <default>false</default>
+        <label>OSD - On Site Germany</label>
+    </customValue>
+    <customValue>
+        <fullName>VCOR</fullName>
+        <default>false</default>
+        <label>VCOR - Oregon Vital Cough 13 Month</label>
+    </customValue>
+    <customValue>
+        <fullName>STOR</fullName>
+        <default>false</default>
+        <label>STOR - OR MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>IN015</fullName>
+        <default>false</default>
+        <label>IN015 - P280MRS</label>
+    </customValue>
+    <customValue>
+        <fullName>IN016</fullName>
+        <default>false</default>
+        <label>IN016 - P280OVERLAY</label>
+    </customValue>
+    <customValue>
+        <fullName>STPA</fullName>
+        <default>false</default>
+        <label>STPA - PA MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>PEAK</fullName>
+        <default>false</default>
+        <label>PEAK - Peak Need Rental Program</label>
+    </customValue>
+    <customValue>
+        <fullName>IN027</fullName>
+        <default>false</default>
+        <label>IN027 - PEARLSAFT</label>
+    </customValue>
+    <customValue>
+        <fullName>VCPA</fullName>
+        <default>false</default>
+        <label>VCPA - Pennsylvania Vital Cough 13 Mo</label>
+    </customValue>
+    <customValue>
+        <fullName>IN003</fullName>
+        <default>false</default>
+        <label>IN003 - PRIMOMATT</label>
+    </customValue>
+    <customValue>
+        <fullName>STPR</fullName>
+        <default>false</default>
+        <label>STPR - PR MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>IN004</fullName>
+        <default>false</default>
+        <label>IN004 - PROAXISPLUS</label>
+    </customValue>
+    <customValue>
+        <fullName>IN032</fullName>
+        <default>false</default>
+        <label>IN032 - PROGRESSA</label>
+    </customValue>
+    <customValue>
+        <fullName>IN034</fullName>
+        <default>false</default>
+        <label>IN034 - PROGRESSARENTPULM</label>
+    </customValue>
+    <customValue>
+        <fullName>PROMO</fullName>
+        <default>false</default>
+        <label>PROMO - Promotional Program</label>
+    </customValue>
+    <customValue>
+        <fullName>VCPR</fullName>
+        <default>false</default>
+        <label>VCPR - Puerto Rico Vital Cough 13 mon</label>
+    </customValue>
+    <customValue>
+        <fullName>RAS</fullName>
+        <default>false</default>
+        <label>RAS - RENTAL ADVANTAGE</label>
+    </customValue>
+    <customValue>
+        <fullName>RNTEQ</fullName>
+        <default>false</default>
+        <label>RNTEQ - Rental Equity Program</label>
+    </customValue>
+    <customValue>
+        <fullName>RM</fullName>
+        <default>false</default>
+        <label>RM - Request by Month</label>
+    </customValue>
+    <customValue>
+        <fullName>IN018</fullName>
+        <default>false</default>
+        <label>IN018 - RESPISTAR</label>
+    </customValue>
+    <customValue>
+        <fullName>IN024</fullName>
+        <default>false</default>
+        <label>IN024 - RESPISTAR+EVO156</label>
+    </customValue>
+    <customValue>
+        <fullName>VCRI</fullName>
+        <default>false</default>
+        <label>VCRI - Rhode Island Vital Cough 13 Mo</label>
+    </customValue>
+    <customValue>
+        <fullName>STRI</fullName>
+        <default>false</default>
+        <label>STRI - RI MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>STSC</fullName>
+        <default>false</default>
+        <label>STSC - SC MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>STSD</fullName>
+        <default>false</default>
+        <label>STSD - SD MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>SSN</fullName>
+        <default>false</default>
+        <label>SSN - Self Support Netherlands</label>
+    </customValue>
+    <customValue>
+        <fullName>SM</fullName>
+        <default>false</default>
+        <label>SM - SERVICE AND MAINTENANCE</label>
+    </customValue>
+    <customValue>
+        <fullName>IN005</fullName>
+        <default>false</default>
+        <label>IN005 - SIMCAIR</label>
+    </customValue>
+    <customValue>
+        <fullName>VCSC</fullName>
+        <default>false</default>
+        <label>VCSC - South Carolina Vital Cough 13</label>
+    </customValue>
+    <customValue>
+        <fullName>VCSD</fullName>
+        <default>false</default>
+        <label>VCSD - South Dakota Vital Cough 13 Mo</label>
+    </customValue>
+    <customValue>
+        <fullName>SPLIT</fullName>
+        <default>false</default>
+        <label>SPLIT - Split Rate</label>
+    </customValue>
+    <customValue>
+        <fullName>SBB</fullName>
+        <default>false</default>
+        <label>SBB - Standby Belgium</label>
+    </customValue>
+    <customValue>
+        <fullName>SBR</fullName>
+        <default>false</default>
+        <label>SBR - Standby France</label>
+    </customValue>
+    <customValue>
+        <fullName>SBI</fullName>
+        <default>false</default>
+        <label>SBI - Standby Italy</label>
+    </customValue>
+    <customValue>
+        <fullName>SBN</fullName>
+        <default>false</default>
+        <label>SBN - Standby Netherlands</label>
+    </customValue>
+    <customValue>
+        <fullName>SPN</fullName>
+        <default>false</default>
+        <label>SPN - Standby Plus Netherlands</label>
+    </customValue>
+    <customValue>
+        <fullName>SBV</fullName>
+        <default>false</default>
+        <label>SBV - Standby Sweden</label>
+    </customValue>
+    <customValue>
+        <fullName>10</fullName>
+        <default>false</default>
+        <label>10 - STND 10 FOR 10</label>
+    </customValue>
+    <customValue>
+        <fullName>STO</fullName>
+        <default>false</default>
+        <label>STO - Storage Austria</label>
+    </customValue>
+    <customValue>
+        <fullName>STD</fullName>
+        <default>false</default>
+        <label>STD - Storage Germany</label>
+    </customValue>
+    <customValue>
+        <fullName>STV</fullName>
+        <default>false</default>
+        <label>STV - Storage Sweden</label>
+    </customValue>
+    <customValue>
+        <fullName>STS</fullName>
+        <default>false</default>
+        <label>STS - Storage Switzerland</label>
+    </customValue>
+    <customValue>
+        <fullName>ASZ</fullName>
+        <default>false</default>
+        <label>ASZ - Switzerland Zero Price</label>
+    </customValue>
+    <customValue>
+        <fullName>IN011</fullName>
+        <default>false</default>
+        <label>IN011 - TCBARIAPLUSAIRFLOW</label>
+    </customValue>
+    <customValue>
+        <fullName>IN006</fullName>
+        <default>false</default>
+        <label>IN006 - TCBARIAPLUSFOAM</label>
+    </customValue>
+    <customValue>
+        <fullName>IN007</fullName>
+        <default>false</default>
+        <label>IN007 - TCBARIAPLUSPULMO</label>
+    </customValue>
+    <customValue>
+        <fullName>IN008</fullName>
+        <default>false</default>
+        <label>IN008 - TCDUO2</label>
+    </customValue>
+    <customValue>
+        <fullName>TCHTP</fullName>
+        <default>false</default>
+        <label>TCHTP - TC HT/HCA PEAK NEED PRICING</label>
+    </customValue>
+    <customValue>
+        <fullName>IN025</fullName>
+        <default>false</default>
+        <label>IN025 - TCP500CONNECT</label>
+    </customValue>
+    <customValue>
+        <fullName>IN009</fullName>
+        <default>false</default>
+        <label>IN009 - TCSPORT</label>
+    </customValue>
+    <customValue>
+        <fullName>VCTN</fullName>
+        <default>false</default>
+        <label>VCTN - Tennessee Vital Cough 13 Month</label>
+    </customValue>
+    <customValue>
+        <fullName>TC 1</fullName>
+        <default>false</default>
+        <label>TC 1 - Test Code 1</label>
+    </customValue>
+    <customValue>
+        <fullName>TC 2</fullName>
+        <default>false</default>
+        <label>TC 2 - Test Code 2</label>
+    </customValue>
+    <customValue>
+        <fullName>TC 3</fullName>
+        <default>false</default>
+        <label>TC 3 - Test Code 3</label>
+    </customValue>
+    <customValue>
+        <fullName>TC 4</fullName>
+        <default>false</default>
+        <label>TC 4 - Test Code 4</label>
+    </customValue>
+    <customValue>
+        <fullName>TC 5</fullName>
+        <default>false</default>
+        <label>TC 5 - Test Code 5</label>
+    </customValue>
+    <customValue>
+        <fullName>VCTX</fullName>
+        <default>false</default>
+        <label>VCTX - Texas Vital Cough 13 Month</label>
+    </customValue>
+    <customValue>
+        <fullName>IN019</fullName>
+        <default>false</default>
+        <label>IN019 - THERMOCONTMATT</label>
+    </customValue>
+    <customValue>
+        <fullName>STTN</fullName>
+        <default>false</default>
+        <label>STTN - TN MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>IN010</fullName>
+        <default>false</default>
+        <label>IN010 - TOTALCAREBED</label>
+    </customValue>
+    <customValue>
+        <fullName>TRK</fullName>
+        <default>false</default>
+        <label>TRK - TRACKING ITEM - NO BILLING</label>
+    </customValue>
+    <customValue>
+        <fullName>TDN</fullName>
+        <default>false</default>
+        <label>TDN - Trial Daily Netherlands</label>
+    </customValue>
+    <customValue>
+        <fullName>STTX</fullName>
+        <default>false</default>
+        <label>STTX - TX MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>USAGE</fullName>
+        <default>false</default>
+        <label>USAGE - Usage Based Billing</label>
+    </customValue>
+    <customValue>
+        <fullName>VCUT</fullName>
+        <default>false</default>
+        <label>VCUT - Utah Vital Cough 13 Month</label>
+    </customValue>
+    <customValue>
+        <fullName>STUT</fullName>
+        <default>false</default>
+        <label>STUT - UT MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>STVA</fullName>
+        <default>false</default>
+        <label>STVA - VA MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>VCVT</fullName>
+        <default>false</default>
+        <label>VCVT - Vermont Vital Cough 13 Month</label>
+    </customValue>
+    <customValue>
+        <fullName>VS10M</fullName>
+        <default>false</default>
+        <label>VS10M - VEST 10 MONTH RENTAL</label>
+    </customValue>
+    <customValue>
+        <fullName>VS11M</fullName>
+        <default>false</default>
+        <label>VS11M - VEST 11 MONTH RENTAL</label>
+    </customValue>
+    <customValue>
+        <fullName>VS12M</fullName>
+        <default>false</default>
+        <label>VS12M - VEST 12 MONTH RENTAL</label>
+    </customValue>
+    <customValue>
+        <fullName>VS13M</fullName>
+        <default>false</default>
+        <label>VS13M - VEST 13 MONTH RENTAL</label>
+    </customValue>
+    <customValue>
+        <fullName>VS14M</fullName>
+        <default>false</default>
+        <label>VS14M - VEST 14 MONTH RENTAL</label>
+    </customValue>
+    <customValue>
+        <fullName>VS15M</fullName>
+        <default>false</default>
+        <label>VS15M - VEST 15 MONTH RENTAL</label>
+    </customValue>
+    <customValue>
+        <fullName>VS36M</fullName>
+        <default>false</default>
+        <label>VS36M - VEST 36 MONTH RENTAL</label>
+    </customValue>
+    <customValue>
+        <fullName>VS40M</fullName>
+        <default>false</default>
+        <label>VS40M - VEST 40 MONTH RENTAL</label>
+    </customValue>
+    <customValue>
+        <fullName>VS42M</fullName>
+        <default>false</default>
+        <label>VS42M - VEST 42 MONTH RENTAL</label>
+    </customValue>
+    <customValue>
+        <fullName>VS60M</fullName>
+        <default>false</default>
+        <label>VS60M - VEST 60 MONTH RENTAL</label>
+    </customValue>
+    <customValue>
+        <fullName>VSDAY</fullName>
+        <default>false</default>
+        <label>VSDAY - VEST DAILY RENTAL</label>
+    </customValue>
+    <customValue>
+        <fullName>VSRNT</fullName>
+        <default>false</default>
+        <label>VSRNT - VEST MONTHLY RENTAL</label>
+    </customValue>
+    <customValue>
+        <fullName>VS01M</fullName>
+        <default>false</default>
+        <label>VS01M - VEST PURCHASE</label>
+    </customValue>
+    <customValue>
+        <fullName>VIP1</fullName>
+        <default>false</default>
+        <label>VIP1 - VIP ACUCAIR OLD PRICING</label>
+    </customValue>
+    <customValue>
+        <fullName>VIP</fullName>
+        <default>false</default>
+        <label>VIP - VIP ACUCAIR PRICING</label>
+    </customValue>
+    <customValue>
+        <fullName>VCVA</fullName>
+        <default>false</default>
+        <label>VCVA - Virginia Vital Cough 13 Month</label>
+    </customValue>
+    <customValue>
+        <fullName>VCVI</fullName>
+        <default>false</default>
+        <label>VCVI - Virgin Islands Vital Cough 13</label>
+    </customValue>
+    <customValue>
+        <fullName>VC10M</fullName>
+        <default>false</default>
+        <label>VC10M - VITAL COUGH 10 MONTH RENTAL</label>
+    </customValue>
+    <customValue>
+        <fullName>VC11M</fullName>
+        <default>false</default>
+        <label>VC11M - VITAL COUGH 11 MONTH RENTAL</label>
+    </customValue>
+    <customValue>
+        <fullName>VC12M</fullName>
+        <default>false</default>
+        <label>VC12M - VITAL COUGH 12 MONTH RENTAL</label>
+    </customValue>
+    <customValue>
+        <fullName>VC13M</fullName>
+        <default>false</default>
+        <label>VC13M - VITAL COUGH 13 MONTH RENTAL</label>
+    </customValue>
+    <customValue>
+        <fullName>VC14M</fullName>
+        <default>false</default>
+        <label>VC14M - VITAL COUGH 14 MONTH RENTAL</label>
+    </customValue>
+    <customValue>
+        <fullName>VC15M</fullName>
+        <default>false</default>
+        <label>VC15M - VITAL COUGH 15 MONTH RENTAL</label>
+    </customValue>
+    <customValue>
+        <fullName>VC24M</fullName>
+        <default>false</default>
+        <label>VC24M - VITAL COUGH 24 MONTH RENTAL</label>
+    </customValue>
+    <customValue>
+        <fullName>VC30M</fullName>
+        <default>false</default>
+        <label>VC30M - VITAL COUGH 30 MONTH RENTAL</label>
+    </customValue>
+    <customValue>
+        <fullName>VC60M</fullName>
+        <default>false</default>
+        <label>VC60M - VITAL COUGH 60 MONTHS</label>
+    </customValue>
+    <customValue>
+        <fullName>VC09M</fullName>
+        <default>false</default>
+        <label>VC09M - VITAL COUGH 9 MONTH RENTAL</label>
+    </customValue>
+    <customValue>
+        <fullName>VCCNV</fullName>
+        <default>false</default>
+        <label>VCCNV - VITAL COUGH CONVERSION RATE</label>
+    </customValue>
+    <customValue>
+        <fullName>VCDAY</fullName>
+        <default>false</default>
+        <label>VCDAY - VITAL COUGH DAILY RENTAL</label>
+    </customValue>
+    <customValue>
+        <fullName>VCRNT</fullName>
+        <default>false</default>
+        <label>VCRNT - VITAL COUGH MONTHLY RENTAL</label>
+    </customValue>
+    <customValue>
+        <fullName>VC01M</fullName>
+        <default>false</default>
+        <label>VC01M - VITAL COUGH PURCHASE</label>
+    </customValue>
+    <customValue>
+        <fullName>TCB</fullName>
+        <default>false</default>
+        <label>TCB - VOID-2/28/2013 TC Bari Promo</label>
+    </customValue>
+    <customValue>
+        <fullName>RTUSE</fullName>
+        <default>false</default>
+        <label>RTUSE - VOID- 3/1/13 PGATES</label>
+    </customValue>
+    <customValue>
+        <fullName>IN020</fullName>
+        <default>false</default>
+        <label>IN020 - VOLK5380</label>
+    </customValue>
+    <customValue>
+        <fullName>IN028</fullName>
+        <default>false</default>
+        <label>IN028 - VOLKS962-2</label>
+    </customValue>
+    <customValue>
+        <fullName>STVT</fullName>
+        <default>false</default>
+        <label>STVT - VT MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>STWA</fullName>
+        <default>false</default>
+        <label>STWA - WA MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>VCDC</fullName>
+        <default>false</default>
+        <label>VCDC - Washington, DC Vital Cough 13</label>
+    </customValue>
+    <customValue>
+        <fullName>VCWA</fullName>
+        <default>false</default>
+        <label>VCWA - Washington Vital Cough 13 Mont</label>
+    </customValue>
+    <customValue>
+        <fullName>VCWV</fullName>
+        <default>false</default>
+        <label>VCWV - West Virginia Vital Cough 13 M</label>
+    </customValue>
+    <customValue>
+        <fullName>STWI</fullName>
+        <default>false</default>
+        <label>STWI - WI MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>VCWI</fullName>
+        <default>false</default>
+        <label>VCWI - Wisconsin Vital Cough 13 Month</label>
+    </customValue>
+    <customValue>
+        <fullName>FRAME</fullName>
+        <default>false</default>
+        <label>FRAME - WITH FRAME</label>
+    </customValue>
+    <customValue>
+        <fullName>STWV</fullName>
+        <default>false</default>
+        <label>STWV - WV MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>STWY</fullName>
+        <default>false</default>
+        <label>STWY - WY MEDICARE PFFS</label>
+    </customValue>
+    <customValue>
+        <fullName>VCWY</fullName>
+        <default>false</default>
+        <label>VCWY - Wyoming Vital Cough 13 Month</label>
+    </customValue>
+    <customValue>
+        <fullName>ARZ</fullName>
+        <default>false</default>
+        <label>ARZ - Zero Price France</label>
+    </customValue>
+    <customValue>
+        <fullName>AHZ</fullName>
+        <default>false</default>
+        <label>AHZ - Zero Price Holland</label>
+    </customValue>
+    <customValue>
+        <fullName>AIZ</fullName>
+        <default>false</default>
+        <label>AIZ - Zero Price Italy</label>
+    </customValue>
+    <customValue>
+        <fullName>AEZ</fullName>
+        <default>false</default>
+        <label>AEZ - Zero price Spain</label>
+    </customValue>
+    <masterLabel>Price Method Code</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

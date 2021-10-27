@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Order_Line_Ship</fullName>
+    <fields>Name</fields>
+    <fields>Order_Line_Item__c</fields>
+    <fields>Return_Order_Line_Item__c</fields>
+    <fields>Status__c</fields>
+    <fields>Tracking_Number__c</fields>
+    <fields>Shipment__c</fields>
+    <label>HRCSVC Order Line Ship</label>
+</CompactLayout>

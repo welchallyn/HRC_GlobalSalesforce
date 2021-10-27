@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Concession_Reason_Not_provided</fullName>
+    <active>true</active>
+    <description>SE-223-When a concession is given on a work order and reason is not provided as to why a concession was given, then this validation will be fired.</description>
+    <errorConditionFormula>IF( AND(HRCSVC_No_Charge_Concession__c = True,NOT($Setup.HRCFSL_Org_Exception_Rule__c.HRCFSL_Validation_Rule__c),ISBLANK( HRCSVC_Concession_Reason__c )), true, false)</errorConditionFormula>
+    <errorMessage>Please provide a legitimate reason to give a concession.</errorMessage>
+</ValidationRule>

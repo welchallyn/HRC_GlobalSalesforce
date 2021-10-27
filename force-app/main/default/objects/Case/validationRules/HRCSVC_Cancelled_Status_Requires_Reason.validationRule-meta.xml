@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Cancelled_Status_Requires_Reason</fullName>
+    <active>true</active>
+    <description>Status Reason needs to be provided for cancelled cases</description>
+    <errorConditionFormula>AND(ISPickval(Status,&apos;Canceled&apos;), ISBLANK(TEXT(HRCSVC_Cancel_Reason__c)))</errorConditionFormula>
+    <errorDisplayField>HRCSVC_Cancel_Reason__c</errorDisplayField>
+    <errorMessage>Please provide cancellation reason.</errorMessage>
+</ValidationRule>

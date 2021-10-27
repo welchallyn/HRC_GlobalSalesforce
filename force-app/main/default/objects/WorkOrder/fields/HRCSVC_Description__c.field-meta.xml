@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Description__c</fullName>
+    <description>SE-1484 - Original story - HF-446 -AC #3: “The FSL Mobile Service Appointment overview and Work Order header info should align with the fields from the SD.4&quot;.</description>
+    <externalId>false</externalId>
+    <formula>IF (ISBLANK(HRCFSL_JDE_ID__c),&quot;&quot;, HRCFSL_JDE_ID__c) &amp;
+IF (ISBLANK(HRCFSL_JDE_ID__c) || ISBLANK(LocationId),&quot;&quot;,&quot; • &quot;) &amp;
+IF (ISBLANK(LocationId),&quot;&quot;, Location.Name) &amp; &quot; • &quot; &amp;
+WorkType.Name &amp; &quot; • &quot; &amp;
+HRCFSL_Product_Item_Description__c</formula>
+    <label>Description</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_ERP_Status_New__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(OR(ISPICKVAL(HRCSVC_ERP_Status__c,&apos;35&apos;),ISPICKVAL(HRCSVC_ERP_Status__c,&apos;45&apos;)),&apos;Active&apos;,TEXT(HRCSVC_ERP_Status__c))</formula>
+    <label>Service Contract Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCFSL_Inspection_Template__c</fullName>
+    <externalId>false</externalId>
+    <label>Inspection Template</label>
+    <referenceTo>HRCFSL_Inspection_Template__c</referenceTo>
+    <relationshipLabel>Inspection Template Work Types</relationshipLabel>
+    <relationshipName>Inspection_Template_Work_Types</relationshipName>
+    <relationshipOrder>1</relationshipOrder>
+    <reparentableMasterDetail>true</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

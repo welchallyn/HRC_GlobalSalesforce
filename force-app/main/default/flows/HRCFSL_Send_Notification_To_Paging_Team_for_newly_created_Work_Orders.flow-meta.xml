@@ -1,0 +1,810 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>For posting a chatter feed on calling work order object, mentioning specific users.</description>
+        <name>HRCFSL_Notify_User_about_New_Work_Order</name>
+        <label>Notify User about New Work Order</label>
+        <locationX>1018</locationX>
+        <locationY>50</locationY>
+        <actionName>chatterPost</actionName>
+        <actionType>chatterPost</actionType>
+        <inputParameters>
+            <name>text</name>
+            <value>
+                <elementReference>ChatterMessageContent</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>subjectNameOrId</name>
+            <value>
+                <elementReference>WorkOrderId</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>49.0</apiVersion>
+    <assignments>
+        <name>Add_the_Dedicated_resource_member_list</name>
+        <label>Add the Dedicated resource member list</label>
+        <locationX>1385</locationX>
+        <locationY>280</locationY>
+        <assignmentItems>
+            <assignToReference>varMentionUser</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>DedicatedResourceUserVar</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>HRCFSL_Get_Service_Resource_Ids</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>for Assigning preferred users to the paging message</description>
+        <name>Assign_Preferred_users</name>
+        <label>Assign Preferred users</label>
+        <locationX>1497</locationX>
+        <locationY>167</locationY>
+        <assignmentItems>
+            <assignToReference>varMentionUser</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>ResourcePreferenceUserVar</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>HRCFSL_Get_Service_Resource_Ids</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>For non dedicated resource.</description>
+        <name>Gather_Non_Dedicated_User_id</name>
+        <label>Gather Non Dedicated User id</label>
+        <locationX>1026</locationX>
+        <locationY>516</locationY>
+        <assignmentItems>
+            <assignToReference>varMentionUser</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>varUserRef</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>HRCFSL_Get_Service_Resource_Ids</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Check_if_any_Resource_Preference_object_is_found</name>
+        <label>Check if any Resource Preference object is found</label>
+        <locationX>1384</locationX>
+        <locationY>62</locationY>
+        <defaultConnector>
+            <targetReference>HRCFSL_Get_Service_Resource_Ids</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Res_Pref_found</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Resource_Preference_Var</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Preferred_users</targetReference>
+            </connector>
+            <label>Res_Pref found</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_if_Shift_record_is_found</name>
+        <label>Check if Shift record is found</label>
+        <locationX>1603</locationX>
+        <locationY>282</locationY>
+        <defaultConnector>
+            <targetReference>Get_all_Resource_Preference_Object_records</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Shift_Record_found</name>
+            <conditionLogic>1 AND (2 OR 3)</conditionLogic>
+            <conditions>
+                <leftValueReference>shift_Var</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>workorder_Var.Priority</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>1</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>workorder_Var.Priority</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>2</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Add_the_Dedicated_resource_member_list</targetReference>
+            </connector>
+            <label>Shift Record found</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>CheckToFire</name>
+        <label>CheckToFire</label>
+        <locationX>411</locationX>
+        <locationY>325</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Fire</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>PagingTeam</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>AssignedEngineer</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue></stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Pause</targetReference>
+            </connector>
+            <label>Fire</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Ded_resource_found_or_not</name>
+        <label>Ded resource found or not</label>
+        <locationX>1216</locationX>
+        <locationY>373</locationY>
+        <defaultConnector>
+            <targetReference>Gather_Non_Dedicated_User_id</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Non Ded resource Other Priority</defaultConnectorLabel>
+        <rules>
+            <name>Ded_resource_found</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Service_Teritory_member_Var.HRCFSL_Dedicated_Resource__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_all_Shift_Records</targetReference>
+            </connector>
+            <label>Ded resource found</label>
+        </rules>
+        <rules>
+            <name>Non_Ded_resource_Priority_3</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Service_Teritory_member_Var.HRCFSL_Dedicated_Resource__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>workorder_Var.Priority</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>3</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Extended_Shift</targetReference>
+            </connector>
+            <label>Non Ded resource Priority 3</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Has_Extended_Shift</name>
+        <label>Has Extended Shift?</label>
+        <locationX>865</locationX>
+        <locationY>589</locationY>
+        <defaultConnector>
+            <targetReference>Gather_Non_Dedicated_User_id</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Extended Shift No</defaultConnectorLabel>
+        <rules>
+            <name>Extended_Shift_Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Extended_Shift</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>HRCFSL_Get_Service_Resource_Ids</targetReference>
+            </connector>
+            <label>Extended Shift Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Whether service territory member is available for specific territory.</description>
+        <name>Members_Found</name>
+        <label>Members Found</label>
+        <locationX>840</locationX>
+        <locationY>274</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Resource_Found</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Service_Territory_Members_List</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>HRCFSL_Get_Service_Resource_Ids</targetReference>
+            </connector>
+            <label>Resource Found</label>
+        </rules>
+    </decisions>
+    <description>#HF 26: For sending work order notification to Paging team related to the work order.</description>
+    <interviewLabel>Auto Update Work Type in Work Order {!$Flow.CurrentDateTime}
+the worktypekey = {!WorktypeKey}
+worktypeid={!WorkTypeId}</interviewLabel>
+    <label>Send Notification To Paging Team for newly created Work Orders</label>
+    <loops>
+        <description>For getting Service Resource IDs from Service Territory members.</description>
+        <name>HRCFSL_Get_Service_Resource_Ids</name>
+        <label>Get Service Resource Ids</label>
+        <locationX>1018</locationX>
+        <locationY>268</locationY>
+        <assignNextValueToReference>Service_Teritory_member_Var</assignNextValueToReference>
+        <collectionReference>Service_Territory_Members_List</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Ded_resource_found_or_not</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>HRCFSL_Notify_User_about_New_Work_Order</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Get all Resource Preference Object records</description>
+        <name>Get_all_Resource_Preference_Object_records</name>
+        <label>Get all Resource Preference Object records</label>
+        <locationX>1761</locationX>
+        <locationY>137</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_if_any_Resource_Preference_object_is_found</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>PreferenceType</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Preferred</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>RelatedRecordId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>workorder_Var.AccountId</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>ServiceResourceId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Service_Teritory_member_Var.ServiceResource.Id</elementReference>
+            </value>
+        </filters>
+        <object>ResourcePreference</object>
+        <outputReference>Resource_Preference_Var</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>PreferenceType</queriedFields>
+        <queriedFields>ServiceResourceId</queriedFields>
+        <queriedFields>ResourcePreferenceNumber</queriedFields>
+        <queriedFields>RelatedRecordId</queriedFields>
+        <queriedFields>HRCFSL_Service_Resource_User__c</queriedFields>
+    </recordLookups>
+    <recordLookups>
+        <description>Get all the Shift records</description>
+        <name>Get_all_Shift_Records</name>
+        <label>Get all Shift Records</label>
+        <locationX>1774</locationX>
+        <locationY>395</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_if_Shift_record_is_found</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>EndTime</field>
+            <operator>GreaterThan</operator>
+            <value>
+                <elementReference>workorder_Var.CreatedDate</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>ServiceResourceId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Service_Teritory_member_Var.ServiceResource.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>StartTime</field>
+            <operator>LessThan</operator>
+            <value>
+                <elementReference>workorder_Var.CreatedDate</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>TimeSlotType</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Extended</stringValue>
+            </value>
+        </filters>
+        <object>Shift</object>
+        <outputReference>shift_Var</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>ShiftNumber</queriedFields>
+        <queriedFields>TimeSlotType</queriedFields>
+        <queriedFields>ServiceResourceId</queriedFields>
+        <queriedFields>ServiceTerritoryId</queriedFields>
+        <queriedFields>StartTime</queriedFields>
+        <queriedFields>EndTime</queriedFields>
+        <queriedFields>Status</queriedFields>
+        <queriedFields>HRCFSL_Service_Resource_User__c</queriedFields>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Extended_Shift</name>
+        <label>Get Extended Shift</label>
+        <locationX>1288</locationX>
+        <locationY>600</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Has_Extended_Shift</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>EndTime</field>
+            <operator>GreaterThanOrEqualTo</operator>
+            <value>
+                <elementReference>workorder_Var.CreatedDate</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>ServiceResourceId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Service_Teritory_member_Var.ServiceResourceId</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>StartTime</field>
+            <operator>LessThanOrEqualTo</operator>
+            <value>
+                <elementReference>workorder_Var.CreatedDate</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>TimeSlotType</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Extended</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Shift</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>for getting the work order based on workorder id</description>
+        <name>Get_Work_Order</name>
+        <label>Get Work Order</label>
+        <locationX>703</locationX>
+        <locationY>323</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>HRCFSL_Get_Service_Territory_Members</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>WorkOrderId</elementReference>
+            </value>
+        </filters>
+        <object>WorkOrder</object>
+        <outputReference>workorder_Var</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>WorkTypeId</queriedFields>
+        <queriedFields>ServiceTerritoryId</queriedFields>
+        <queriedFields>StartDate</queriedFields>
+        <queriedFields>CreatedById</queriedFields>
+        <queriedFields>HRCFSL_Paging_Team__c</queriedFields>
+        <queriedFields>HRCFSL_Work_Order_Url__c</queriedFields>
+        <queriedFields>HRCFSL_Location_Number__c</queriedFields>
+        <queriedFields>HRCFSL_JDE_ID__c</queriedFields>
+        <queriedFields>HRCFSL_Item_No__c</queriedFields>
+        <queriedFields>HRCFSL_Patient_First_Name__c</queriedFields>
+        <queriedFields>HRCFSL_Patient_Last_Name__c</queriedFields>
+        <queriedFields>HRCFSL_Patient_Room__c</queriedFields>
+        <queriedFields>HRCFSL_Special_Instructions__c</queriedFields>
+        <queriedFields>HRCFSL_Contact_First_Name__c</queriedFields>
+        <queriedFields>HRCFSL_Contact_Last_Name__c</queriedFields>
+        <queriedFields>HRCFSL_Contact_Phone__c</queriedFields>
+        <queriedFields>HRCFSL_Ward_Name__c</queriedFields>
+        <queriedFields>HRCFSL_Second_Item_No__c</queriedFields>
+        <queriedFields>AccountId</queriedFields>
+        <queriedFields>CreatedDate</queriedFields>
+        <queriedFields>Priority</queriedFields>
+        <queriedFields>HRCFSL_Location_Name__c</queriedFields>
+        <queriedFields>HRCFSL_Work_Type_Name__c</queriedFields>
+        <queriedFields>HRCFSL_Asset_Product_Description__c</queriedFields>
+        <queriedFields>HRCFSL_Asset_Name__c</queriedFields>
+    </recordLookups>
+    <recordLookups>
+        <description>For Getting the Service Territory Members related to work order&apos;s Territory and Paging team fields (#HF 26)</description>
+        <name>HRCFSL_Get_Service_Territory_Members</name>
+        <label>Get Service Territory Members</label>
+        <locationX>768</locationX>
+        <locationY>481</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Members_Found</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>HRCFSL_Paging_Team_Members__c</field>
+            <operator>Contains</operator>
+            <value>
+                <elementReference>workorder_Var.HRCFSL_Paging_Team__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>ServiceTerritoryId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>workorder_Var.ServiceTerritoryId</elementReference>
+            </value>
+        </filters>
+        <object>ServiceTerritoryMember</object>
+        <outputReference>Service_Territory_Members_List</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>ServiceResourceId</queriedFields>
+        <queriedFields>HRCFSL_Service_Resource_User__c</queriedFields>
+        <queriedFields>HRCFSL_Dedicated_Resource__c</queriedFields>
+        <queriedFields>ServiceTerritoryId</queriedFields>
+    </recordLookups>
+    <start>
+        <locationX>50</locationX>
+        <locationY>305</locationY>
+        <connector>
+            <targetReference>CheckToFire</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <description>for storing the content of the  chatter Message</description>
+        <name>ChatterMessageContent</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Following work order has been created with the below details :
+
+o ERP Work Order Nr : {!workorder_Var.HRCFSL_JDE_ID__c}
+o Location Name : {!workorder_Var.HRCFSL_Location_Name__c}
+o Location JDE Id : {!workorder_Var.HRCFSL_Location_Number__c}
+o WorkType Name : {!workorder_Var.HRCFSL_Work_Type_Name__c}
+o Asset Name : {!workorder_Var.HRCFSL_Asset_Name__c}
+o Product Description : {!workorder_Var.HRCFSL_Asset_Product_Description__c}
+o Item Number : {!workorder_Var.HRCFSL_Second_Item_No__c}
+o Ward / Floor : {!workorder_Var.HRCFSL_Ward_Name__c}
+o Start Date : {!workorder_Var.StartDate}
+o Patient First Name : {!workorder_Var.HRCFSL_Patient_First_Name__c}
+o Patient Last Name : {!workorder_Var.HRCFSL_Patient_Last_Name__c}
+o Patient Room : {!workorder_Var.HRCFSL_Patient_Room__c}
+o Special Instructions : {!workorder_Var.HRCFSL_Special_Instructions__c}
+o Contact Name : {!workorder_Var.HRCFSL_Contact_First_Name__c} {!workorder_Var.HRCFSL_Contact_Last_Name__c}
+o Contact Phone : {!workorder_Var.HRCFSL_Contact_Phone__c}
+
+{!varMentionUser}</text>
+    </textTemplates>
+    <textTemplates>
+        <name>DedicatedResourceUserVar</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>@[{!shift_Var.HRCFSL_Service_Resource_User__c}]</text>
+    </textTemplates>
+    <textTemplates>
+        <name>ResourcePreferenceUserVar</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>@[{!Resource_Preference_Var.HRCFSL_Service_Resource_User__c}]</text>
+    </textTemplates>
+    <textTemplates>
+        <description>for storing the reference of the user</description>
+        <name>varUserRef</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>@[{!Service_Teritory_member_Var.HRCFSL_Service_Resource_User__c}]</text>
+    </textTemplates>
+    <variables>
+        <description>for storing Asset_Prodct_Model , got from PB</description>
+        <name>Asset_Prodct_Model</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Value got from PB, Related to Work Order</description>
+        <name>AssetName</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>for storing related AssetProductDescription ,  come via PB</description>
+        <name>AssetProductDescription</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>AssignedEngineer</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+    <variables>
+        <name>DedRes_VarList</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>DedResList</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>LowPrior_Var</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>NonDedresList</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>NonRes_VarList</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>PagingTeam</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Store all Resource preference object records</description>
+        <name>Resource_Pref_List</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>ResourcePreference</objectType>
+    </variables>
+    <variables>
+        <description>Temporary variable for holding Resource preference object</description>
+        <name>Resource_Preference_Var</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>ResourcePreference</objectType>
+    </variables>
+    <variables>
+        <description>containing list of  record  of service resource object</description>
+        <name>service_resources_List</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>ServiceResource</objectType>
+    </variables>
+    <variables>
+        <description>for maintaining the variable of  Service Territory Member object.</description>
+        <name>Service_Teritory_member_Var</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>ServiceTerritoryMember</objectType>
+    </variables>
+    <variables>
+        <description>for getting the list of service territory members based on work order Service Territory and paging team field.</description>
+        <name>Service_Territory_Members_List</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>ServiceTerritoryMember</objectType>
+    </variables>
+    <variables>
+        <description>Store all the Shift object records in a variable (SE-26)</description>
+        <name>Shift_Records_List</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Shift</objectType>
+    </variables>
+    <variables>
+        <name>shift_Var</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Shift</objectType>
+    </variables>
+    <variables>
+        <description>for storing user tags needs to be notified</description>
+        <name>varMentionUser</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Users list to be tagged in chatter feed.</description>
+        <name>varMentionUsers</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>for storing related Work type name , inputted via Work order.</description>
+        <name>WO_WorkTypeName</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>for Storing WOLocation JDE ID  , Input via PB</description>
+        <name>WOLocationJDEId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>For Storing Work Order Location Name , inputted via PB</description>
+        <name>WOLocationName</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>work order that were updated/created passed through process builder</description>
+        <name>workorder_Var</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>WorkOrder</objectType>
+    </variables>
+    <variables>
+        <description>Id of WorkOrder</description>
+        <name>WorkOrderId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>Id of the Queried Work type</description>
+        <name>WorkTypeId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>combination of doctype and activity type fields of work order</description>
+        <name>WorktypeKey</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <waits>
+        <name>Pause</name>
+        <label>Pause</label>
+        <locationX>551</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default Path</defaultConnectorLabel>
+        <waitEvents>
+            <name>Resume</name>
+            <conditionLogic>and</conditionLogic>
+            <connector>
+                <targetReference>Get_Work_Order</targetReference>
+            </connector>
+            <eventType>AlarmEvent</eventType>
+            <inputParameters>
+                <name>AlarmTime</name>
+                <value>
+                    <elementReference>$Flow.CurrentDateTime</elementReference>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>TimeOffset</name>
+                <value>
+                    <numberValue>0.0</numberValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>TimeOffsetUnit</name>
+                <value>
+                    <stringValue>Hours</stringValue>
+                </value>
+            </inputParameters>
+            <label>Resume</label>
+        </waitEvents>
+    </waits>
+</Flow>

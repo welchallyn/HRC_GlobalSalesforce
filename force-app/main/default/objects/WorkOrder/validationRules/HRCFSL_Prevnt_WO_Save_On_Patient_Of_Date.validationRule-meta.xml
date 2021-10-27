@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCFSL_Prevnt_WO_Save_On_Patient_Of_Date</fullName>
+    <active>true</active>
+    <description>Prevents the work order from being saved on the bases of patient off date</description>
+    <errorConditionFormula>OR(
+AND(
+NOT(ISNULL( HRCFSL_Patient_Off_Date__c )),
+OR(
+HRCFSL_Patient_Off_Date__c&lt;TODAY()-3,
+HRCFSL_Patient_Off_Date__c&gt;TODAY()
+),
+NOT( $Setup.HRCFSL_Org_Exception_Rule__c.HRCFSL_Validation_Rule__c ),
+ISCHANGED(HRCFSL_Patient_Off_Date__c),
+ISPICKVAL( HRCFSL_Doc_Type__c , &quot;SQ&quot;),$Profile.Name != &apos;HRC Service Agent&apos;),
+
+AND( ISNEW(),
+NOT(ISNULL( HRCFSL_Patient_Off_Date__c )),
+OR(
+HRCFSL_Patient_Off_Date__c&lt;TODAY()-3,
+HRCFSL_Patient_Off_Date__c&gt;TODAY()
+),
+NOT( $Setup.HRCFSL_Org_Exception_Rule__c.HRCFSL_Validation_Rule__c ),
+ISPICKVAL( HRCFSL_Doc_Type__c , &quot;SQ&quot;),$Profile.Name != &apos;HRC Service Agent&apos;)
+
+)</errorConditionFormula>
+    <errorMessage>The &apos;Patient Off&apos; date should be between the past 3 days and today.</errorMessage>
+</ValidationRule>

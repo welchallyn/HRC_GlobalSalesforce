@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Created as part of SE-960: This quick action invokes a flow(HRCSVC Cancel Order Line Item) to cancel Order Line Item</description>
+    <flowDefinition>HRCSVC_Cancel_Order_Line_Item</flowDefinition>
+    <label>Cancel Order Line Item</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

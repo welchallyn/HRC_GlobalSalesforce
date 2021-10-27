@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Medical_Record_Id_is_required</fullName>
+    <active>false</active>
+    <description>SE-1109 - Medical record Id is required for the European region for rental orders.</description>
+    <errorConditionFormula>AND( NOT($Setup.HRCFSL_Org_Exception_Rule__c.HRCFSL_Validation_Rule__c), HRCSVC_Ship_To_Location__r.HRCSVC_Region__c = &quot;Europe&quot; ,    ISBLANK(HRCSVC_Medical_Record_ID__c),  RecordType.DeveloperName = &quot;Rental_Orders&quot; )</errorConditionFormula>
+    <errorDisplayField>HRCSVC_Medical_Record_ID__c</errorDisplayField>
+    <errorMessage>Please fill the Medical Record Id</errorMessage>
+</ValidationRule>

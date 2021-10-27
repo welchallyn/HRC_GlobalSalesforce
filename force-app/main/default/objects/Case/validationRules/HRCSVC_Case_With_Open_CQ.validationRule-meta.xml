@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Case_With_Open_CQ</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISCHANGED(Status),CONTAINS( $CustomMetadata.HRCFSL_Organization_Settings__mdt.HRCSVC_Case_Status_For_Cancel.HRCFSL_Component_Detail__c
+,TEXT(Status)),HRCSVC_Prevent_Case_Close__c,NOT($Setup.HRCFSL_Org_Exception_Rule__c.HRCFSL_Validation_Rule__c))</errorConditionFormula>
+    <errorMessage>Case with Complaint Qualifications without a resolution cannot be canceled.</errorMessage>
+</ValidationRule>

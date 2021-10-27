@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCFSL_Asset_Location_Work_Order_Match</fullName>
+    <active>true</active>
+    <description>Validation Rule that is used to ensure the Asset&apos;s Location matches the Work Order&apos;s Location for certain activity types.</description>
+    <errorConditionFormula>$Setup.HRCFSL_Org_Exception_Rule__c.HRCFSL_Validation_Rule__c = false &amp;&amp; 
+HRCSVC_Bypass_VR__c  = False &amp;&amp;
+NOT(isblank( AssetId )) &amp;&amp; 
+NOT(isblank( LocationId )) &amp;&amp; 
+ Asset.LocationId &lt;&gt;  LocationId &amp;&amp; 
+ISPICKVAL(HRCFSL_Doc_Type__c , &apos;SQ&apos;) &amp;&amp;
+NOT( CONTAINS( $CustomMetadata.HRCFSL_Organization_Settings__mdt.Not_Allowed_Activity_type_for_Prefill.HRCFSL_Component_Detail__c ,  text(HRCFSL_Activity_Type__c )) )</errorConditionFormula>
+    <errorMessage>The Asset&apos;s location must match the Customer for this Work Type.</errorMessage>
+</ValidationRule>

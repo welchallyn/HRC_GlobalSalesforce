@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>SE-201:Creates parts order and order line item by invoking the flow HRCSVC Create Parts Order On Case</description>
+    <flowDefinition>HRCSVC_Create_Parts_Order_On_Case</flowDefinition>
+    <label>Create Parts Order</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

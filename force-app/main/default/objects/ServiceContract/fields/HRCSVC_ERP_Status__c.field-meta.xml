@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_ERP_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>ERP Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>10</fullName>
+                <default>false</default>
+                <label>10 - Quote Submitted</label>
+            </value>
+            <value>
+                <fullName>15</fullName>
+                <default>false</default>
+                <label>15 - Contract Accepted</label>
+            </value>
+            <value>
+                <fullName>20</fullName>
+                <default>false</default>
+                <label>20 - Quote Rejected</label>
+            </value>
+            <value>
+                <fullName>30</fullName>
+                <default>false</default>
+                <label>30 - Active Contract</label>
+            </value>
+            <value>
+                <fullName>35</fullName>
+                <default>false</default>
+                <label>35 - Active Contract</label>
+            </value>
+            <value>
+                <fullName>38</fullName>
+                <default>false</default>
+                <label>38 - Reconfigured</label>
+            </value>
+            <value>
+                <fullName>40</fullName>
+                <default>false</default>
+                <label>40 - Renewal Letter Sent</label>
+            </value>
+            <value>
+                <fullName>41</fullName>
+                <default>false</default>
+                <label>41 - Essential Over Spent</label>
+            </value>
+            <value>
+                <fullName>42</fullName>
+                <default>false</default>
+                <label>42 - Essential Expired</label>
+            </value>
+            <value>
+                <fullName>45</fullName>
+                <default>false</default>
+                <label>45 - Interim Billing - MTM</label>
+            </value>
+            <value>
+                <fullName>50</fullName>
+                <default>false</default>
+                <label>50 - USE FOR RETAINER/EXTENDED/PROJ</label>
+            </value>
+            <value>
+                <fullName>51</fullName>
+                <default>false</default>
+                <label>51 - CANCEL Budget</label>
+            </value>
+            <value>
+                <fullName>53</fullName>
+                <default>false</default>
+                <label>53 - CANCEL Competition</label>
+            </value>
+            <value>
+                <fullName>54</fullName>
+                <default>false</default>
+                <label>54 - CANCEL In House</label>
+            </value>
+            <value>
+                <fullName>55</fullName>
+                <default>false</default>
+                <label>55 - CANCEL New Products</label>
+            </value>
+            <value>
+                <fullName>57</fullName>
+                <default>false</default>
+                <label>57 - CANCEL Unresponsive</label>
+            </value>
+            <value>
+                <fullName>58</fullName>
+                <default>false</default>
+                <label>58 - CANCEL Margin</label>
+            </value>
+            <value>
+                <fullName>60</fullName>
+                <default>false</default>
+                <label>60 - CANCEL IDN</label>
+            </value>
+            <value>
+                <fullName>61</fullName>
+                <default>false</default>
+                <label>61 - SUSPEND - Delay at Hospital</label>
+            </value>
+            <value>
+                <fullName>73</fullName>
+                <default>false</default>
+                <label>73 - CANCEL Watch Child</label>
+            </value>
+            <value>
+                <fullName>74</fullName>
+                <default>false</default>
+                <label>74 - CANCEL Communications</label>
+            </value>
+            <value>
+                <fullName>76</fullName>
+                <default>false</default>
+                <label>76 - CANCEL - Customer unsatisfied</label>
+            </value>
+            <value>
+                <fullName>80</fullName>
+                <default>false</default>
+                <label>80 - CFCM Deactivation</label>
+            </value>
+            <value>
+                <fullName>97</fullName>
+                <default>false</default>
+                <label>97 - Contract Complete</label>
+            </value>
+            <value>
+                <fullName>98</fullName>
+                <default>false</default>
+                <label>98 - Renewed</label>
+            </value>
+            <value>
+                <fullName>99</fullName>
+                <default>false</default>
+                <label>99 - Deleted</label>
+            </value>
+            <value>
+                <fullName>CH</fullName>
+                <default>false</default>
+                <label>CH - CUSTOMER CREDIT HOLD</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

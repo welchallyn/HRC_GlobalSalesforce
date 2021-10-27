@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Only_one_article_allowed_for_Care_Comm</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISPICKVAL(HRCSVC_Case__r.HRCSVC_Protocol_Category__c, &quot;Care Comm&quot;) &amp;&amp;
+ISPICKVAL(HRCSVC_Type__c, &quot;Article&quot;) &amp;&amp;
+HRCSVC_Case__r.HRCSVC_Num_of_Article_References__c &gt; 1</errorConditionFormula>
+    <errorMessage>You may only link one Reference of Type &quot;Article&quot; to a Care Comm case.</errorMessage>
+</ValidationRule>

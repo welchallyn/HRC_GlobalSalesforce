@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Advanced_Integrations__c</fullName>
+    <description>SE-1173</description>
+    <externalId>false</externalId>
+    <label>Advanced Integrations</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Epic Alerts</fullName>
+                <default>false</default>
+                <label>Epic Alerts</label>
+            </value>
+            <value>
+                <fullName>Hurley Paging</fullName>
+                <default>false</default>
+                <label>Hurley Paging</label>
+            </value>
+            <value>
+                <fullName>Teletracking</fullName>
+                <default>false</default>
+                <label>Teletracking</label>
+            </value>
+            <value>
+                <fullName>TUGS Robots</fullName>
+                <default>false</default>
+                <label>TUGS Robots</label>
+            </value>
+            <value>
+                <fullName>Airstrip</fullName>
+                <default>false</default>
+                <label>Airstrip</label>
+            </value>
+            <value>
+                <fullName>Masimo Safety Net</fullName>
+                <default>false</default>
+                <label>Masimo Safety Net</label>
+            </value>
+            <value>
+                <fullName>RedAlert</fullName>
+                <default>false</default>
+                <label>RedAlert</label>
+            </value>
+            <value>
+                <fullName>ReadyList</fullName>
+                <default>false</default>
+                <label>ReadyList</label>
+            </value>
+            <value>
+                <fullName>SmartWeb</fullName>
+                <default>false</default>
+                <label>SmartWeb</label>
+            </value>
+            <value>
+                <fullName>Epic Interapp Linking</fullName>
+                <default>false</default>
+                <label>Epic Interapp Linking</label>
+            </value>
+            <value>
+                <fullName>Patients</fullName>
+                <default>false</default>
+                <label>Patients</label>
+            </value>
+            <value>
+                <fullName>Amtelco</fullName>
+                <default>false</default>
+                <label>Amtelco</label>
+            </value>
+            <value>
+                <fullName>Red Alerts</fullName>
+                <default>false</default>
+                <label>Red Alerts</label>
+            </value>
+            <value>
+                <fullName>Everbridge SMTP</fullName>
+                <default>false</default>
+                <label>Everbridge SMTP</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Patient Integration</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Patient Integration</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Asset Integration Fields</label>
+    <protected>false</protected>
+    <values>
+        <field>HRCFSL_Component_Description__c</field>
+        <value xsi:type="xsd:string">This is the list of fields that are included at the Work Order header level for FSL -&gt; JDE work order integration. HF-67.</value>
+    </values>
+    <values>
+        <field>HRCFSL_Component_Detail_Long__c</field>
+        <value xsi:type="xsd:string">ProductFamily,HRCFSL_JDE_ASSET__c,HRCFSL_Second_Item__c,HRCFSL_Sh_Item__c,HRCFSL_SO__c,HRCFSL_SO_LN__c,SerialNumber, hrcfsl_product_family__c</value>
+    </values>
+    <values>
+        <field>HRCFSL_Component_Detail__c</field>
+        <value xsi:type="xsd:string">N/A</value>
+    </values>
+</CustomMetadata>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_CoverageOverrideBillable</fullName>
+    <active>true</active>
+    <description>When Coverage Override = Billable, then PO is required</description>
+    <errorConditionFormula>ISPICKVAL(HRCSVC_Coverage_Override__c , &quot;Billable&quot;) &amp;&amp; ISBLANK( HRCFSL_Purchase_Order_Number__c )</errorConditionFormula>
+    <errorDisplayField>HRCFSL_Purchase_Order_Number__c</errorDisplayField>
+    <errorMessage>You have selected that the Coverage Override reason was Billable.  PO Number is required.</errorMessage>
+</ValidationRule>

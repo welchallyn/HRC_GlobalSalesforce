@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Nurse_Call__c</fullName>
+    <description>SE-1173</description>
+    <externalId>false</externalId>
+    <label>Nurse Call</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Direct- Westcom (WCTP)</fullName>
+                <default>false</default>
+                <label>Direct- Westcom (WCTP)</label>
+            </value>
+            <value>
+                <fullName>Direct- Rauland Responder 5 (SIP)</fullName>
+                <default>false</default>
+                <label>Direct- Rauland Responder 5 (SIP)</label>
+            </value>
+            <value>
+                <fullName>Direct- Hillrom NNC (WCTP)</fullName>
+                <default>false</default>
+                <label>Direct- Hillrom NNC (WCTP)</label>
+            </value>
+            <value>
+                <fullName>Direct- Hillrom VNC (WCTP)</fullName>
+                <default>false</default>
+                <label>Direct- Hillrom VNC (WCTP)</label>
+            </value>
+            <value>
+                <fullName>Rauland</fullName>
+                <default>false</default>
+                <label>Rauland</label>
+            </value>
+            <value>
+                <fullName>Rauland Responder 4</fullName>
+                <default>false</default>
+                <label>Rauland Responder 4</label>
+            </value>
+            <value>
+                <fullName>Rauland Responder 5</fullName>
+                <default>false</default>
+                <label>Rauland Responder 5</label>
+            </value>
+            <value>
+                <fullName>Rauland Responder 6</fullName>
+                <default>false</default>
+                <label>Rauland Responder 6</label>
+            </value>
+            <value>
+                <fullName>Rauland Responder 7</fullName>
+                <default>false</default>
+                <label>Rauland Responder 7</label>
+            </value>
+            <value>
+                <fullName>Hillrom NCM</fullName>
+                <default>false</default>
+                <label>Hillrom NCM</label>
+            </value>
+            <value>
+                <fullName>Hillrom NNC</fullName>
+                <default>false</default>
+                <label>Hillrom NNC</label>
+            </value>
+            <value>
+                <fullName>Hillrom VNC</fullName>
+                <default>false</default>
+                <label>Hillrom VNC</label>
+            </value>
+            <value>
+                <fullName>Westcom</fullName>
+                <default>false</default>
+                <label>Westcom</label>
+            </value>
+            <value>
+                <fullName>Dukane/GE</fullName>
+                <default>false</default>
+                <label>Dukane/GE</label>
+            </value>
+            <value>
+                <fullName>GE/Telligence (Ascom)</fullName>
+                <default>false</default>
+                <label>GE/Telligence (Ascom)</label>
+            </value>
+            <value>
+                <fullName>West Call</fullName>
+                <default>false</default>
+                <label>West Call</label>
+            </value>
+            <value>
+                <fullName>Zettler</fullName>
+                <default>false</default>
+                <label>Zettler</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Stop_Status_Edit</fullName>
+    <active>true</active>
+    <description>This will prevent the user to edit the record based on status.
+Developed for #SE-129.</description>
+    <errorConditionFormula>AND(NOT(ISNEW()),NOT($Setup.HRCFSL_Org_Exception_Rule__c.HRCFSL_Validation_Rule__c),ISCHANGED(Status),IF(TEXT(PRIORVALUE(Status)) == &apos;Submitted&apos; &amp;&amp; TEXT(Status) == &apos;Canceled&apos;,false,IF(TEXT(PRIORVALUE(Status)) == &apos;Submitted&apos; &amp;&amp; TEXT(Status) != &apos;Canceled&apos;,true,false)))</errorConditionFormula>
+    <errorMessage>You cannot edit a Submitted record</errorMessage>
+</ValidationRule>

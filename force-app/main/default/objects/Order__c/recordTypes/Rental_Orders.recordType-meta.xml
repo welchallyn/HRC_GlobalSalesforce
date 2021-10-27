@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rental_Orders</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>Rental_Order_Header</compactLayoutAssignment>
+    <description>Record type to define Rental Orders</description>
+    <label>Rental Order</label>
+    <picklistValues>
+        <picklist>HRCSVC_Carrier_Level_of_Service__c</picklist>
+        <values>
+            <fullName>FedEx Ground</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>FedEx Priority Overnight</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FedEx Second Day Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FedEx Standard Overnight</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HRCSVC_Carrier__c</picklist>
+        <values>
+            <fullName>FedEx</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HRCSVC_Contact_Source__c</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fax</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Rep</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Tech%2FService Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telephone</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Web%2FHillrom Direct</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HRCSVC_Order_Reason__c</picklist>
+        <values>
+            <fullName>Contracts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fee for Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stock</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HRCSVC_Order_Type__c</picklist>
+        <values>
+            <fullName>Rental Order</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>SX</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HRCSVC_Status__c</picklist>
+        <values>
+            <fullName>Active Rental</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed Rental</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rental Activity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requested Rental</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Swapped</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

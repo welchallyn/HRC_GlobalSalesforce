@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Prevent_Order_until_Acc_in_ERP</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND(
+NOT( $Setup.HRCFSL_Org_Exception_Rule__c.HRCFSL_Validation_Rule__c ),
+ISBLANK(Account__r.Reltio_Id__c ),
+CONTAINS( $CustomMetadata.HRCFSL_Organization_Settings__mdt.HRCSVC_Order_Completed_Status.HRCFSL_Component_Detail__c ,TEXT( HRCSVC_Status__c )),
+$Profile.Name != &quot;API Profile&quot;
+)</errorConditionFormula>
+    <errorDisplayField>Adjustment_Schedule_Name__c</errorDisplayField>
+    <errorMessage>This order can not be completed until the related Account is created in the ERP system.</errorMessage>
+</ValidationRule>

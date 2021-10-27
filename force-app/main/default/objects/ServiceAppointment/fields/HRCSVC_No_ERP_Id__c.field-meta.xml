@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_No_ERP_Id__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used to trigger validation rule if there is no ERP id.</description>
+    <externalId>false</externalId>
+    <label>No ERP Id</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

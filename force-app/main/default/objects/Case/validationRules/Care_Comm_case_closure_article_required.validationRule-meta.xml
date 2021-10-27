@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Care_Comm_case_closure_article_required</fullName>
+    <active>true</active>
+    <description>**Updated as per Jira ticket - SE-1723</description>
+    <errorConditionFormula>RecordType.DeveloperName = &quot;Care_Comm&quot; &amp;&amp; 
+ISPICKVAL(Status, &quot;Closed&quot;) &amp;&amp;
+ISPICKVAL(Type,&quot;Problem - Product Related&quot;)&amp;&amp; 
+HRCSVC_Num_of_Article_References__c &lt; 1</errorConditionFormula>
+    <errorDisplayField>AccountId</errorDisplayField>
+    <errorMessage>A Reference of Type &quot;Article&quot; is required to close a Care Comm Case with Type &apos;Problem - Product Related&apos;</errorMessage>
+</ValidationRule>

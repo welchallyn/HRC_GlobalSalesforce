@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Modlst_cannot_b_chngd_once_poputd</fullName>
+    <active>true</active>
+    <description>SE-257 - Set the Field Action/Mod value - not editable if set by the maintenance plan</description>
+    <errorConditionFormula>AND(
+NOT( $Setup.HRCFSL_Org_Exception_Rule__c.HRCFSL_Validation_Rule__c ),  
+OR( AND(NOT(ISBLANK( HRCFSL_ModList__c )),ISCHANGED( HRCFSL_ModList__c )),  
+AND(ISCHANGED( HRCFSL_ModList__c ),ISBLANK( HRCFSL_ModList__c ))), 
+IsGeneratedFromMaintenancePlan = true )</errorConditionFormula>
+    <errorDisplayField>HRCFSL_ModList__c</errorDisplayField>
+    <errorMessage>Field Action/Mod cannot be changed once populated.</errorMessage>
+</ValidationRule>

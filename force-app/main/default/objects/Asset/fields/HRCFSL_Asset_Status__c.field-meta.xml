@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCFSL_Asset_Status__c</fullName>
+    <description>SE-108 : for maintaining the asset status based on IBoar validation.</description>
+    <externalId>false</externalId>
+    <label>Asset Status</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Available</fullName>
+                <default>false</default>
+                <label>Available</label>
+            </value>
+            <value>
+                <fullName>Not available</fullName>
+                <default>false</default>
+                <label>Not available</label>
+            </value>
+            <value>
+                <fullName>AM</fullName>
+                <default>false</default>
+                <label>Awaiting Maintenance</label>
+            </value>
+            <value>
+                <fullName>WA</fullName>
+                <default>false</default>
+                <label>Warehouse Available</label>
+            </value>
+            <value>
+                <fullName>00</fullName>
+                <default>false</default>
+                <label>00</label>
+            </value>
+            <value>
+                <fullName>DS</fullName>
+                <default>false</default>
+                <label>DS</label>
+            </value>
+            <value>
+                <fullName>TO</fullName>
+                <default>false</default>
+                <label>TO</label>
+            </value>
+            <value>
+                <fullName>TS</fullName>
+                <default>false</default>
+                <label>TS</label>
+            </value>
+            <value>
+                <fullName>AC</fullName>
+                <default>false</default>
+                <label>AUP-In Storage</label>
+            </value>
+            <value>
+                <fullName>AI</fullName>
+                <default>false</default>
+                <label>Awaiting Inspection</label>
+            </value>
+            <value>
+                <fullName>AL</fullName>
+                <default>false</default>
+                <label>Account Lost</label>
+            </value>
+            <value>
+                <fullName>AS</fullName>
+                <default>false</default>
+                <label>AUP-In Use</label>
+            </value>
+            <value>
+                <fullName>AT</fullName>
+                <default>false</default>
+                <label>Asset Transfer</label>
+            </value>
+            <value>
+                <fullName>BH</fullName>
+                <default>false</default>
+                <label>Bed Hold</label>
+            </value>
+            <value>
+                <fullName>CH</fullName>
+                <default>false</default>
+                <label>Customer Hold</label>
+            </value>
+            <value>
+                <fullName>EA</fullName>
+                <default>false</default>
+                <label>Eval - Assigned for Delivery</label>
+            </value>
+            <value>
+                <fullName>ED</fullName>
+                <default>false</default>
+                <label>Eval - Damaged</label>
+            </value>
+            <value>
+                <fullName>EE</fullName>
+                <default>false</default>
+                <label>Eval - Extended</label>
+            </value>
+            <value>
+                <fullName>EL</fullName>
+                <default>false</default>
+                <label>Eval - Lost</label>
+            </value>
+            <value>
+                <fullName>EM</fullName>
+                <default>false</default>
+                <label>Eval - Awaiting Maintenance</label>
+            </value>
+            <value>
+                <fullName>EN</fullName>
+                <default>false</default>
+                <label>Eval - Evaluation Not Tracked</label>
+            </value>
+            <value>
+                <fullName>EP</fullName>
+                <default>false</default>
+                <label>Eval - On Hold for Rep</label>
+            </value>
+            <value>
+                <fullName>EQ</fullName>
+                <default>false</default>
+                <label>Eval - Quoted</label>
+            </value>
+            <value>
+                <fullName>ES</fullName>
+                <default>false</default>
+                <label>Eval - Scrapped</label>
+            </value>
+            <value>
+                <fullName>EV</fullName>
+                <default>false</default>
+                <label>Eval - Eval Prodt Vest&amp;Charles</label>
+            </value>
+            <value>
+                <fullName>EY</fullName>
+                <default>false</default>
+                <label>Eval - Hostage</label>
+            </value>
+            <value>
+                <fullName>HO</fullName>
+                <default>false</default>
+                <label>Hostage</label>
+            </value>
+            <value>
+                <fullName>L1</fullName>
+                <default>false</default>
+                <label>Step 1-LEP</label>
+            </value>
+            <value>
+                <fullName>L2</fullName>
+                <default>false</default>
+                <label>Step 2-LEP</label>
+            </value>
+            <value>
+                <fullName>P1</fullName>
+                <default>false</default>
+                <label>PM Captive Notification</label>
+            </value>
+            <value>
+                <fullName>QD</fullName>
+                <default>false</default>
+                <label>QUALITY DOWN</label>
+            </value>
+            <value>
+                <fullName>SB</fullName>
+                <default>false</default>
+                <label>Standby Storage</label>
+            </value>
+            <value>
+                <fullName>SI</fullName>
+                <default>false</default>
+                <label>Standby In Use</label>
+            </value>
+            <value>
+                <fullName>TT</fullName>
+                <default>false</default>
+                <label>Disposed Thpy - Title Transfer</label>
+            </value>
+            <value>
+                <fullName>WL</fullName>
+                <default>false</default>
+                <label>Warehouse Lost</label>
+            </value>
+            <value>
+                <fullName>XA</fullName>
+                <default>false</default>
+                <label>Excess Available</label>
+            </value>
+            <value>
+                <fullName>XD</fullName>
+                <default>false</default>
+                <label>Excess Down</label>
+            </value>
+            <value>
+                <fullName>CO</fullName>
+                <default>false</default>
+                <label>Customer Owned</label>
+            </value>
+            <value>
+                <fullName>EC</fullName>
+                <default>false</default>
+                <label>Eval - At Customer Location</label>
+            </value>
+            <value>
+                <fullName>EF</fullName>
+                <default>false</default>
+                <label>Eval - For Sale</label>
+            </value>
+            <value>
+                <fullName>EH</fullName>
+                <default>false</default>
+                <label>Eval - On Hold</label>
+            </value>
+            <value>
+                <fullName>EI</fullName>
+                <default>false</default>
+                <label>Eval - Incoming</label>
+            </value>
+            <value>
+                <fullName>ER</fullName>
+                <default>false</default>
+                <label>Eval - Ready</label>
+            </value>
+            <value>
+                <fullName>EX</fullName>
+                <default>false</default>
+                <label>Eval - HC Liko Demo (1099/DME)</label>
+            </value>
+            <value>
+                <fullName>IS</fullName>
+                <default>false</default>
+                <label>In Service</label>
+            </value>
+            <value>
+                <fullName>RP</fullName>
+                <default>false</default>
+                <label>Asset in Rental Pool</label>
+            </value>
+            <value>
+                <fullName>SE</fullName>
+                <default>false</default>
+                <label>Eval - Sale of Eval</label>
+            </value>
+            <value>
+                <fullName>SS</fullName>
+                <default>false</default>
+                <label>Storage In-Service</label>
+            </value>
+            <value>
+                <fullName>ST</fullName>
+                <default>false</default>
+                <label>Stored</label>
+            </value>
+            <value>
+                <fullName>WD</fullName>
+                <default>false</default>
+                <label>Warehouse Down</label>
+            </value>
+            <value>
+                <fullName>TA</fullName>
+                <default>false</default>
+                <label>TA</label>
+            </value>
+            <value>
+                <fullName>TC</fullName>
+                <default>false</default>
+                <label>TC</label>
+            </value>
+            <value>
+                <fullName>IW</fullName>
+                <default>false</default>
+                <label>In the Warehouse</label>
+            </value>
+            <value>
+                <fullName>Carcass Pool</fullName>
+                <default>false</default>
+                <label>Carcass Pool</label>
+            </value>
+            <value>
+                <fullName>At Customer Site (ECUS)</fullName>
+                <default>false</default>
+                <label>At Customer Site (ECUS)</label>
+            </value>
+            <value>
+                <fullName>Requires Service</fullName>
+                <default>false</default>
+                <label>Requires Service</label>
+            </value>
+            <value>
+                <fullName>CE</fullName>
+                <default>false</default>
+                <label>CE</label>
+            </value>
+            <value>
+                <fullName>DO</fullName>
+                <default>false</default>
+                <label>DO</label>
+            </value>
+            <value>
+                <fullName>PR</fullName>
+                <default>false</default>
+                <label>PR</label>
+            </value>
+            <value>
+                <fullName>DC</fullName>
+                <default>false</default>
+                <label>DC</label>
+            </value>
+            <value>
+                <fullName>TH</fullName>
+                <default>false</default>
+                <label>TH</label>
+            </value>
+            <value>
+                <fullName>LN</fullName>
+                <default>false</default>
+                <label>LN</label>
+            </value>
+            <value>
+                <fullName>TD</fullName>
+                <default>false</default>
+                <label>TD</label>
+            </value>
+            <value>
+                <fullName>RE</fullName>
+                <default>false</default>
+                <label>RE</label>
+            </value>
+            <value>
+                <fullName>FA</fullName>
+                <default>false</default>
+                <label>FA</label>
+            </value>
+            <value>
+                <fullName>TW</fullName>
+                <default>false</default>
+                <label>TW</label>
+            </value>
+            <value>
+                <fullName>DL</fullName>
+                <default>false</default>
+                <label>DL</label>
+            </value>
+            <value>
+                <fullName>DD</fullName>
+                <default>false</default>
+                <label>DD</label>
+            </value>
+            <value>
+                <fullName>1H</fullName>
+                <default>false</default>
+                <label>1H</label>
+            </value>
+            <value>
+                <fullName>RI</fullName>
+                <default>false</default>
+                <label>RI</label>
+            </value>
+            <value>
+                <fullName>DH</fullName>
+                <default>false</default>
+                <label>DH</label>
+            </value>
+            <value>
+                <fullName>RH</fullName>
+                <default>false</default>
+                <label>RH</label>
+            </value>
+            <value>
+                <fullName>1C</fullName>
+                <default>false</default>
+                <label>1C</label>
+            </value>
+            <value>
+                <fullName>TX</fullName>
+                <default>false</default>
+                <label>TX</label>
+            </value>
+            <value>
+                <fullName>TR</fullName>
+                <default>false</default>
+                <label>TR</label>
+            </value>
+            <value>
+                <fullName>US</fullName>
+                <default>false</default>
+                <label>US</label>
+            </value>
+            <value>
+                <fullName>RS</fullName>
+                <default>false</default>
+                <label>RS</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

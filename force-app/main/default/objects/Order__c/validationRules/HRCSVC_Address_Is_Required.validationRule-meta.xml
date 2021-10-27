@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Address_Is_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( ($Profile.Name != &quot;API Profile&quot;),
+NOT($Setup.HRCFSL_Org_Exception_Rule__c.HRCFSL_Validation_Rule__c),
+NOT(OR(
+AND(
+NOT ( ISBLANK (HRCSVC_City__c   )),
+NOT ( ISBLANK (HRCSVC_Country__c)),
+NOT ( ISBLANK (HRCSVC_Street__c)),
+NOT ( ISBLANK (HRCSVC_Zip_Postal_Code__c )),
+NOT ( ISBLANK (HRCSVC_State_Province__c ))
+),
+AND(
+( ISBLANK (HRCSVC_City__c   )),
+( ISBLANK (HRCSVC_Country__c)),
+( ISBLANK (HRCSVC_Street__c)),
+( ISBLANK (HRCSVC_Zip_Postal_Code__c )),
+( ISBLANK (HRCSVC_State_Province__c )) ,
+( ISBLANK (HRCSVC_Street_2__c))
+)
+)
+))</errorConditionFormula>
+    <errorMessage>If overwriting the Ship To address, all address fields must be populated.</errorMessage>
+</ValidationRule>

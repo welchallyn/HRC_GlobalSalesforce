@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>MA</fullName>
+        <default>false</default>
+        <label>MA - Serialized Mod</label>
+    </customValue>
+    <customValue>
+        <fullName>MP</fullName>
+        <default>false</default>
+        <label>MP - Non-Serialized Mod</label>
+    </customValue>
+    <customValue>
+        <fullName>SE</fullName>
+        <default>false</default>
+        <label>SE - Service Contract Service Order</label>
+    </customValue>
+    <customValue>
+        <fullName>SN</fullName>
+        <default>false</default>
+        <label>SN - Fee For Service</label>
+    </customValue>
+    <customValue>
+        <fullName>SQ</fullName>
+        <default>false</default>
+        <label>SQ - Rental-MME SWO</label>
+    </customValue>
+    <customValue>
+        <fullName>SU</fullName>
+        <default>false</default>
+        <label>SU - No Charge SWO</label>
+    </customValue>
+    <customValue>
+        <fullName>SV</fullName>
+        <default>false</default>
+        <label>SV - Base Warranty Service Order</label>
+    </customValue>
+    <customValue>
+        <fullName>TE</fullName>
+        <default>false</default>
+        <label>TE - Time Sheet Entry</label>
+    </customValue>
+    <customValue>
+        <fullName>No</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>No</label>
+    </customValue>
+    <customValue>
+        <fullName>Fe</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Fe</label>
+    </customValue>
+    <customValue>
+        <fullName>ZM</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>ZM</label>
+    </customValue>
+    <customValue>
+        <fullName>CC</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>CC</label>
+    </customValue>
+    <customValue>
+        <fullName>Wa</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Wa</label>
+    </customValue>
+    <masterLabel>Doc Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

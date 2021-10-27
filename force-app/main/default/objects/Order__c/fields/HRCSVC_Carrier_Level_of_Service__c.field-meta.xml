@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Carrier_Level_of_Service__c</fullName>
+    <externalId>false</externalId>
+    <label>Carrier Level of Service</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>HRCSVC_Carrier__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>FedEx Priority Overnight</fullName>
+                <default>false</default>
+                <label>FedEx Priority Overnight</label>
+            </value>
+            <value>
+                <fullName>FedEx Standard Overnight</fullName>
+                <default>false</default>
+                <label>FedEx Standard Overnight</label>
+            </value>
+            <value>
+                <fullName>FedEx Second Day Service</fullName>
+                <default>false</default>
+                <label>FedEx Second Day Service</label>
+            </value>
+            <value>
+                <fullName>FedEx Ground</fullName>
+                <default>true</default>
+                <label>FedEx Ground</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>FedEx</controllingFieldValue>
+            <valueName>FedEx Priority Overnight</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FedEx</controllingFieldValue>
+            <valueName>FedEx Standard Overnight</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FedEx</controllingFieldValue>
+            <valueName>FedEx Second Day Service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FedEx</controllingFieldValue>
+            <valueName>FedEx Ground</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This is to enable easier provisioning of &quot;Super User&quot; permissions which comprise of approximately 10 separate permission sets</description>
+    <label>HRCSVC Super User</label>
+    <permissionSets>HRCSVC_BOM_Product_Usage</permissionSets>
+    <permissionSets>HRCSVC_Edit_Asset_Permissions</permissionSets>
+    <permissionSets>HRCSVC_Edit_Non_Standard_Config_Details</permissionSets>
+    <permissionSets>HRCSVC_INT_Contact_Access</permissionSets>
+    <permissionSets>HRCSVC_Maintenance_Plan_Access</permissionSets>
+    <permissionSets>HRCSVC_Manage_Customer_Rental_Products</permissionSets>
+    <permissionSets>HRCSVC_Manage_Override_Codes</permissionSets>
+    <permissionSets>HRCSVC_Manage_Problem_Resolution_Codes</permissionSets>
+    <permissionSets>HRCSVC_Manage_Product_Availability</permissionSets>
+    <permissionSets>HRCSVC_Manage_SLAs</permissionSets>
+    <permissionSets>HRCSVC_Manage_Standing_POs</permissionSets>
+    <permissionSets>HRCSVC_Permissions</permissionSets>
+    <permissionSets>HRCSVC_US_Contact_Access</permissionSets>
+    <permissionSets>HRSVC_Manage_BOM</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Design_Life_Override_Justificatn__c</fullName>
+    <defaultValue>&apos;None&apos;</defaultValue>
+    <description>SE-163 - Default as None</description>
+    <externalId>false</externalId>
+    <label>Design Life Override Justification</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>None</fullName>
+                <default>true</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>Date/Lot Code Entered Manually</fullName>
+                <default>false</default>
+                <label>Date/Lot Code Entered Manually</label>
+            </value>
+            <value>
+                <fullName>Serial Number Verified Manually</fullName>
+                <default>false</default>
+                <label>Serial Number Verified Manually</label>
+            </value>
+            <value>
+                <fullName>Software Version Verified Manually</fullName>
+                <default>false</default>
+                <label>Software Version Verified Manually</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

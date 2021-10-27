@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Override_Code__c</fullName>
+    <externalId>false</externalId>
+    <label>Override Code</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>009 - CUSTOMER RELATIONS (MSC)</fullName>
+                <default>false</default>
+                <label>009 - CUSTOMER RELATIONS (MSC)</label>
+            </value>
+            <value>
+                <fullName>CAP - N/C CAPPED UNIT</fullName>
+                <default>false</default>
+                <label>CAP - N/C CAPPED UNIT</label>
+            </value>
+            <value>
+                <fullName>DEMO - DEMO ZERO BILLING</fullName>
+                <default>false</default>
+                <label>DEMO - DEMO ZERO BILLING</label>
+            </value>
+            <value>
+                <fullName>EHZ - EQUIPMENT HOLD - ZERO BILLED</fullName>
+                <default>false</default>
+                <label>EHZ - EQUIPMENT HOLD - ZERO BILLED</label>
+            </value>
+            <value>
+                <fullName>EQH - EQUIPMENT HOLD</fullName>
+                <default>false</default>
+                <label>EQH - EQUIPMENT HOLD</label>
+            </value>
+            <value>
+                <fullName>HOLD - ORDER ON HOLD</fullName>
+                <default>false</default>
+                <label>HOLD - ORDER ON HOLD</label>
+            </value>
+            <value>
+                <fullName>NB0 - N/C FREE PER CONTRACT</fullName>
+                <default>false</default>
+                <label>NB0 - N/C FREE PER CONTRACT</label>
+            </value>
+            <value>
+                <fullName>NB1 - N/C FREE TRIAL&amp;EVALUATION</fullName>
+                <default>false</default>
+                <label>NB1 - N/C FREE TRIAL&amp;EVALUATION</label>
+            </value>
+            <value>
+                <fullName>PAO - PRICE AS ORDERED</fullName>
+                <default>false</default>
+                <label>PAO - PRICE AS ORDERED</label>
+            </value>
+            <value>
+                <fullName>R/P - N/C-RENT TO PURCH CONTRAC</fullName>
+                <default>false</default>
+                <label>R/P - N/C-RENT TO PURCH CONTRAC</label>
+            </value>
+            <value>
+                <fullName>ROMZ - ZERO BILL:  RENTAL ORDMGMT ONLY</fullName>
+                <default>false</default>
+                <label>ROMZ - ZERO BILL:  RENTAL ORDMGMT ONLY</label>
+            </value>
+            <value>
+                <fullName>RTP - RENT TO PURCHASE</fullName>
+                <default>false</default>
+                <label>RTP - RENT TO PURCHASE</label>
+            </value>
+            <value>
+                <fullName>SSI - N/C-RELATIVE OF EMPLOYEE</fullName>
+                <default>false</default>
+                <label>SSI - N/C-RELATIVE OF EMPLOYEE</label>
+            </value>
+            <value>
+                <fullName>SUB - SUBSTITUTION CANCEL</fullName>
+                <default>false</default>
+                <label>SUB - SUBSTITUTION CANCEL</label>
+            </value>
+            <value>
+                <fullName>ZER - ZERO BILLING</fullName>
+                <default>false</default>
+                <label>ZER - ZERO BILLING</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

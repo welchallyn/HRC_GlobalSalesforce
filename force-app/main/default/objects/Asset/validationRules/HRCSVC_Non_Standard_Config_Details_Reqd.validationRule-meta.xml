@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Non_Standard_Config_Details_Reqd</fullName>
+    <active>true</active>
+    <description>SE-260 - Enforce so that on record save/update so that Non Standard Configuration is true then Non-Standard Configuration Details must not be blank</description>
+    <errorConditionFormula>IF(
+ 
+ AND
+      (NOT($Setup.HRCFSL_Org_Exception_Rule__c.HRCFSL_Validation_Rule__c),
+
+      OR(
+	    OR(
+                 AND(ISNEW(),HRCSVC_Non_Standard_Configuration__c = True, ISBLANK( HRCSVC_Non_Standard_Config_Details__c )) , 
+                 AND(HRCSVC_Non_Standard_Configuration__c = True, ISBLANK(HRCSVC_Non_Standard_Config_Details__c ))),
+			   
+            AND(HRCSVC_Non_Standard_Configuration__c = False, NOT(ISBLANK( HRCSVC_Non_Standard_Config_Details__c )))
+        )
+  ), 
+
+       
+
+true, false)</errorConditionFormula>
+    <errorMessage>Please fill the Non-Standard Configuration Checkbox/Details</errorMessage>
+</ValidationRule>

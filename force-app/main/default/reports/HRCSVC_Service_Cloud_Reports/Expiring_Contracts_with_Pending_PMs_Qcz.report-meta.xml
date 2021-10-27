@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>WorkOrder$Name</field>
+    </columns>
+    <columns>
+        <field>WorkOrder$Account</field>
+    </columns>
+    <columns>
+        <field>WorkOrder$Status</field>
+    </columns>
+    <columns>
+        <field>WorkOrder$Entitlement.ServiceContract</field>
+    </columns>
+    <columns>
+        <field>WorkOrder$Entitlement.HRCSVC_Service_Contract_Number__c</field>
+    </columns>
+    <columns>
+        <field>WorkOrder$Entitlement.StartDate</field>
+    </columns>
+    <columns>
+        <field>WorkOrder$Entitlement.EndDate</field>
+    </columns>
+    <currency>USD</currency>
+    <description>Expiring Contracts with Pending PM Work Orders Open</description>
+    <filter>
+        <criteriaItems>
+            <column>WorkOrder$HRCFSL_Activity_Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>U</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>WorkOrder$Status</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>SC,Complete - Service Order</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>WorkOrder$Entitlement.EndDate</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>NEXT_90_DAYS</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Expiring Contracts with Pending PMs</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Work_Orders_with_Entitlements_Service_Contracts__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>WorkOrder$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

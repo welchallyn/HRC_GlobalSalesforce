@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Test_performed_per_service_manual__c</fullName>
+    <description>SE-163 - From existing repair template</description>
+    <externalId>false</externalId>
+    <label>Test performed per service manual</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Functional</fullName>
+                <default>false</default>
+                <label>Functional</label>
+            </value>
+            <value>
+                <fullName>Visual</fullName>
+                <default>false</default>
+                <label>Visual</label>
+            </value>
+            <value>
+                <fullName>Audible</fullName>
+                <default>false</default>
+                <label>Audible</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

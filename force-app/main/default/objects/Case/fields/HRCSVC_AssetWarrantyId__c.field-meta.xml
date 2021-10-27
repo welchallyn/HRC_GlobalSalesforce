@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_AssetWarrantyId__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Asset Warranty</label>
+    <lookupFilter>
+        <active>true</active>
+        <booleanFilter>(1 AND 2 AND 3) OR 4 OR 5</booleanFilter>
+        <filterItems>
+            <field>HRCSVC_Asset_Warranty__c.HRCSVC_Asset__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.AssetId</valueField>
+        </filterItems>
+        <filterItems>
+            <field>$Source.AssetId</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </filterItems>
+        <filterItems>
+            <field>HRCSVC_Asset_Warranty__c.HRCSVC_Warranty_Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filterItems>
+        <filterItems>
+            <field>$User.CommunityNickname</field>
+            <operation>equals</operation>
+            <value>mulesoft Integration</value>
+        </filterItems>
+        <filterItems>
+            <field>$Source.HRCSVC_Reopened_Case_by_ETQ__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>HRCSVC_Asset_Warranty__c</referenceTo>
+    <relationshipLabel>Cases</relationshipLabel>
+    <relationshipName>Cases</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

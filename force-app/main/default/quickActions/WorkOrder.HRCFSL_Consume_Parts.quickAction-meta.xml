@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldOverrides>
+        <field>HRCFSL_Root_Work_Order__c</field>
+        <formula>IF(NOT(ISBLANK( WorkOrder.ParentWorkOrderId )),WorkOrder.ParentWorkOrderId, WorkOrder.Id )</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>QuantityConsumed</field>
+        <formula>1</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>WorkOrderId</field>
+        <formula>WorkOrder.Id</formula>
+    </fieldOverrides>
+    <label>Consume Parts</label>
+    <optionsCreateFeedItem>true</optionsCreateFeedItem>
+    <quickActionLayout>
+        <layoutSectionStyle>TwoColumnsLeftToRight</layoutSectionStyle>
+        <quickActionLayoutColumns>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>PricebookEntryId</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>QuantityConsumed</field>
+                <uiBehavior>Required</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>HRCFSL_Serial_Number_In__c</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+        </quickActionLayoutColumns>
+        <quickActionLayoutColumns>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>HRCFSL_Disposition_Code__c</field>
+                <uiBehavior>Required</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>HRCFSL_Serial_Number_Out__c</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+        </quickActionLayoutColumns>
+    </quickActionLayout>
+    <targetObject>ProductConsumed</targetObject>
+    <targetParentField>WorkOrder</targetParentField>
+    <type>Create</type>
+</QuickAction>

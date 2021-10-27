@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Active_Status__c</fullName>
+    <externalId>false</externalId>
+    <formula>AND((StartDate &lt;= TODAY()) &amp;&amp; (TODAY() &lt; (EndDate +30)),
+(ServiceContract.HRCSVC_ERP_Status_New__c  = &quot;Active&quot;),
+ ISBLANK(ContractLineItem.HRCSVC_Suspend_Date__c),
+ ISBLANK(ContractLineItem.HRCSVC_Cancel_Date__c))</formula>
+    <label>Active Status</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

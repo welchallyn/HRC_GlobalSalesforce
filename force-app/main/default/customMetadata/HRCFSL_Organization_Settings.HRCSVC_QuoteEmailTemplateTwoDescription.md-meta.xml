@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>QuoteEmailTemplateTwoDescription</label>
+    <protected>false</protected>
+    <values>
+        <field>HRCFSL_Component_Description__c</field>
+        <value xsi:type="xsd:string">This is an description for quote email template two. Used in HRCSVC_BatchToSendServiceEstimate
+Developed for #SE-46</value>
+    </values>
+    <values>
+        <field>HRCFSL_Component_Detail_Long__c</field>
+        <value xsi:type="xsd:string">This is a follow up on the service estimate that was previously sent to you.  Attached is a service estimate for serial number {#AssetSerialNumber} based on our service engineer’s recent inspection. This estimate does not include taxes which will be determined based on the locality where the work is performed.
+In order to keep your equipment maintained in accordance with the manufacturer’s specifications, please provide us with a Purchase Order Number to allow us to proceed with the repair.
+This estimate is valid for 60 days from the date shown on the estimate.
+
+Regards,
+Hillrom Service</value>
+    </values>
+    <values>
+        <field>HRCFSL_Component_Detail__c</field>
+        <value xsi:type="xsd:string">None</value>
+    </values>
+</CustomMetadata>

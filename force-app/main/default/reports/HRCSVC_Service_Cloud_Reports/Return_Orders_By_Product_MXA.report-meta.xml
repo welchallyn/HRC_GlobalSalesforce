@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ReturnOrder$Name</field>
+    </columns>
+    <columns>
+        <field>ReturnOrder.ReturnOrderLineItems$HRCSVC_Return_Type__c</field>
+    </columns>
+    <columns>
+        <field>ReturnOrder.ReturnOrderLineItems$HRCSVC_Status__c</field>
+    </columns>
+    <columns>
+        <field>ReturnOrder$Account</field>
+    </columns>
+    <columns>
+        <field>ReturnOrder.ReturnOrderLineItems$HRCSVC_Shipment_Date__c</field>
+    </columns>
+    <columns>
+        <field>ReturnOrder$DestinationLocation</field>
+    </columns>
+    <currency>USD</currency>
+    <description>Return Orders By Product</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>ReturnOrder.ReturnOrderLineItems$Description</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Return Order Volume by Product</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Return_Orders_with_Return_Order_Line_Items__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>ReturnOrder$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

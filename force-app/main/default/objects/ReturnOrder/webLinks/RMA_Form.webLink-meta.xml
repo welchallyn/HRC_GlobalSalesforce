@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RMA_Form</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <hasMenubar>false</hasMenubar>
+    <hasScrollbars>true</hasScrollbars>
+    <hasToolbar>false</hasToolbar>
+    <height>600</height>
+    <isResizable>true</isResizable>
+    <linkType>url</linkType>
+    <masterLabel>RMA Form</masterLabel>
+    <openType>newWindow</openType>
+    <position>none</position>
+    <protected>false</protected>
+    <showsLocation>false</showsLocation>
+    <showsStatus>false</showsStatus>
+    <url>/apex/APXTConga4__Conga_Composer?sessionId={!API.Session_ID} &amp;serverUrl={!API.Partner_Server_URL_490} &amp;Id={!ReturnOrder.Id} &amp;ReportID=[RO]00O4W000007xWcCUAU,[ROLI]00O4W000007xWcBUAU &amp;DS7=11 &amp;TemplateId=aED4W000000wkBAWAY &amp;DefaultPDF=1 &amp;FP0=1 &amp;RM=1 &amp;OFN=RMA-{!ReturnOrder.ReturnOrderNumber}-{!TODAY()}_{!TIMEVALUE(NOW())} &amp;ReturnPath={!ReturnOrder.Id}</url>
+</WebLink>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Resolution_Status__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(NOT(ISBLANK(HRCSVC_Case__c)) &amp;&amp; ISBLANK(HRCSVC_Case__r.ClosedDate), TEXT(HRCSVC_Case__r.Status), 
+   IF(NOT(ISBLANK(HRCSVC_Work_Order__c)), CASE(HRCSVC_Work_Order__r.Status, &quot;SA&quot;, &quot;Open - Service Order&quot;, 
+                                                                &quot;SB&quot;, &quot;Waiting on Parts - Service Order&quot;,
+                                                                         &quot;SC&quot;,&quot;Complete - Service Order&quot;,
+                                                                        &quot;SE&quot;,&quot;Cancelled - Service Order&quot;,
+                                                                          &quot;SP&quot;,&quot;Printed - Service Order&quot;,
+                                                                         &quot;ST&quot;,&quot;Troubleshooting Complete&quot;,
+                                                                        &quot;SS&quot;,&quot;Suspended - Service Order&quot;,
+                                                                                             &quot;No Value&quot;),
+      IF(NOT(ISBLANK(HRCSVC_Case__c)), TEXT(HRCSVC_Case__r.Status), &quot;No Case or Work Order Attached&quot;
+      )
+   )
+)</formula>
+    <label>Resolution Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

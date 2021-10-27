@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_All_Open_Factory_Repair_WO</fullName>
+    <booleanFilter>1 AND 2</booleanFilter>
+    <columns>Name</columns>
+    <columns>WorkType</columns>
+    <columns>Asset</columns>
+    <columns>Account</columns>
+    <columns>CreatedDate</columns>
+    <columns>EndDate</columns>
+    <columns>Status</columns>
+    <columns>Priority</columns>
+    <columns>HRCSVC_Sub_Status__c</columns>
+    <columns>HRCFSL_Assigned_Engineer__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RecordType</field>
+        <operation>equals</operation>
+        <value>WorkOrder.HRCSVC_Factory_Repair_WO</value>
+    </filters>
+    <filters>
+        <field>StatusCategory</field>
+        <operation>notEqual</operation>
+        <value>3,7</value>
+    </filters>
+    <label>All Open Factory Repair WO</label>
+    <language>en_US</language>
+</ListView>

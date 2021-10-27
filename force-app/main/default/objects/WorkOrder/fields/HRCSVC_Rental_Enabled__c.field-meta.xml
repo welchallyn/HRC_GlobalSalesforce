@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Rental_Enabled__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF($CustomMetadata.HRCFSL_Organization_Settings__mdt.Rental_Enabled.HRCFSL_Component_Detail__c = &quot;FALSE&quot;, FALSE, TRUE)</formula>
+    <label>Rental Enabled</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

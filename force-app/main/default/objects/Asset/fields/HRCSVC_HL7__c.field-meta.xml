@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_HL7__c</fullName>
+    <description>SE-1173</description>
+    <externalId>false</externalId>
+    <label>HL7</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ADT</fullName>
+                <default>false</default>
+                <label>ADT</label>
+            </value>
+            <value>
+                <fullName>Outbound Bed Data</fullName>
+                <default>false</default>
+                <label>Outbound Bed Data</label>
+            </value>
+            <value>
+                <fullName>Inbound Falls</fullName>
+                <default>false</default>
+                <label>Inbound Falls</label>
+            </value>
+            <value>
+                <fullName>Care Sign</fullName>
+                <default>false</default>
+                <label>Care Sign</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

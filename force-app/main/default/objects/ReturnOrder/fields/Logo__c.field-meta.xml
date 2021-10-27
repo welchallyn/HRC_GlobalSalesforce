@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Logo__c</fullName>
+    <externalId>false</externalId>
+    <formula>IMAGE(&quot;https://hill-rom--hrctest.lightning.force.com/sfc/servlet.shepherd/version/download/0680200000060PVAAY&quot;, &quot;Hillrom Logo&quot;,60,200)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Logo</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_US_Locations</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>HRCFSL Share US Locations</label>
+        <sharedTo>
+            <group>HRCFSL_US</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>HRCFSL_Country__c</field>
+            <operation>equals</operation>
+            <value>US</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

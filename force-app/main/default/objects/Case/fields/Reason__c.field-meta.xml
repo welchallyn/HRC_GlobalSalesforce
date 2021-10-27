@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Pending Status Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Status</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Pending KB Article</fullName>
+                <default>false</default>
+                <label>Pending KB Article</label>
+            </value>
+            <value>
+                <fullName>Pending Customer Purchase Order</fullName>
+                <default>false</default>
+                <label>Pending Customer Purchase Order</label>
+            </value>
+            <value>
+                <fullName>Pending Access to Product</fullName>
+                <default>false</default>
+                <label>Pending Access to Product</label>
+            </value>
+            <value>
+                <fullName>Pending Customer Issue Resolution Notes</fullName>
+                <default>false</default>
+                <label>Pending Customer Issue Resolution Notes</label>
+            </value>
+            <value>
+                <fullName>Monitoring</fullName>
+                <default>false</default>
+                <label>Monitoring</label>
+            </value>
+            <value>
+                <fullName>Pending Work Order Completion</fullName>
+                <default>false</default>
+                <label>Pending Work Order Completion</label>
+            </value>
+            <value>
+                <fullName>Pending Root Cause Analysis (RCA)</fullName>
+                <default>false</default>
+                <label>Pending Root Cause Analysis (RCA)</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Pending</controllingFieldValue>
+            <valueName>Pending KB Article</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pending</controllingFieldValue>
+            <valueName>Pending Customer Purchase Order</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pending</controllingFieldValue>
+            <valueName>Pending Access to Product</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pending</controllingFieldValue>
+            <valueName>Pending Customer Issue Resolution Notes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pending</controllingFieldValue>
+            <valueName>Monitoring</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pending</controllingFieldValue>
+            <valueName>Pending Work Order Completion</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pending</controllingFieldValue>
+            <valueName>Pending Root Cause Analysis (RCA)</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

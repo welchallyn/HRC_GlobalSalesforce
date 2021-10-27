@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Status__c</fullName>
+    <externalId>false</externalId>
+    <formula>If(AND(OR(Value(Last_Status__c)&lt;980,Value(Last_Status__c)=999),Value(Next_Status__c)=999),&quot;Closed&quot;,If(AND(Value(Last_Status__c)&gt;=980,Value(Next_Status__c)=999),&quot;Cancelled&quot;,If(Value(Next_Status__c)&gt;560,&quot;Shipped&quot;,If(AND(Value(Next_Status__c)&lt;=560,Value(Next_Status__c)&gt;=524),If(Order__r.Hold_Code_01__c=&apos;PN&apos;,&quot;Pending&quot;,&quot;Open&quot;),If(Value(Next_Status__c)&lt;524,&quot;Pending&quot;,&quot;Not Applicable&quot;)))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Status</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

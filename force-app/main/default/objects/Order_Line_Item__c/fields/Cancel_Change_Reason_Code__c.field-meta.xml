@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancel_Change_Reason_Code__c</fullName>
+    <description>Created as part of SE-960: This field captures Cancel/Change Reason Codes</description>
+    <externalId>false</externalId>
+    <label>Cancel/Change Reason Code</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1</fullName>
+                <default>false</default>
+                <label>Approved</label>
+            </value>
+            <value>
+                <fullName>DUP</fullName>
+                <default>false</default>
+                <label>DUPLICATE/CONVERSION</label>
+            </value>
+            <value>
+                <fullName>ENA</fullName>
+                <default>false</default>
+                <label>EQUIPMENT NOT AVAILABLE</label>
+            </value>
+            <value>
+                <fullName>MBO</fullName>
+                <default>false</default>
+                <label>MIS-BOOKED ORDER</label>
+            </value>
+            <value>
+                <fullName>OCA</fullName>
+                <default>false</default>
+                <label>9025 - Override Code Added</label>
+            </value>
+            <value>
+                <fullName>OCD</fullName>
+                <default>false</default>
+                <label>9025 - Override Code Deleted</label>
+            </value>
+            <value>
+                <fullName>OCR</fullName>
+                <default>false</default>
+                <label>9025 - Override Code Revised</label>
+            </value>
+            <value>
+                <fullName>ODC</fullName>
+                <default>false</default>
+                <label>9001 - On/Off Date Change</label>
+            </value>
+            <value>
+                <fullName>PNO</fullName>
+                <default>false</default>
+                <label>PATIENT NEVER ON</label>
+            </value>
+            <value>
+                <fullName>SB</fullName>
+                <default>false</default>
+                <label>SUBSTITUTION</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

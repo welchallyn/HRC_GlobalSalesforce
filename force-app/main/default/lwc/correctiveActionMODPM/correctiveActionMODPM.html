@@ -1,0 +1,151 @@
+<template>
+
+    <article class="slds-card blackborder">
+  
+      <!-- Card Header -->
+      <div class="slds-card__header slds-grid">
+        <header class="slds-media slds-media_center slds-has-flexi-truncate">
+          <div class="slds-media__body">
+            <h2 class="slds-card__header-title">
+              <span class="slds-align_absolute-center">Search Criteria</span>
+            </h2>
+  
+           
+          </div>
+        </header>
+      </div>
+  
+      <!-- Card Body -->
+  
+      <div class=" slds-card__body slds-card__body_inner slds-grid slds-wrap">
+        <div
+          class="slds-col slds-p-horizontal_xx-small slds-large-size_2-of-12 slds-medium-size_12-of-12 slds-size_12-of-12"
+        >
+          <lightning-input
+            type="search"
+            onchange={handleKeyChangeSnum}
+            class="slds-text-align--center"
+            label="Serial Number"
+            value={searchKeySnum}
+          ></lightning-input>
+        </div>
+        <div
+          class="slds-col slds-p-horizontal_xx-small slds-large-size_2-of-12 slds-medium-size_12-of-12 slds-size_12-of-12"
+        >
+          <lightning-input
+            type="search"
+            onchange={handleKeyChangeCust}
+            class="slds-text-align--center"
+            label="Customer"
+            value={searchKeyCust}
+          ></lightning-input>
+        </div>
+        <div
+          class="slds-col slds-p-horizontal_xx-small slds-large-size_2-of-12 slds-medium-size_12-of-12 slds-size_12-of-12"
+        >
+          <lightning-input
+            type="search"
+            onchange={handleKeyChangeSTerr}
+            class="slds-text-align--center"
+            label="Service Territory"
+            value={searchKeySTerr}
+          ></lightning-input>
+        </div>
+        <div
+          class="slds-col slds-p-horizontal_xx-small slds-large-size_2-of-12 slds-medium-size_12-of-12 slds-size_12-of-12"
+        >
+          <lightning-input
+            type="search"
+            onchange={handleKeyChangeMPType}
+            class="slds-text-align--center"
+            label="Maintenance Plan Type"
+            value={searchKeyMPType}
+          ></lightning-input>
+        </div>
+        <div
+          class="slds-col slds-p-horizontal_xx-small slds-large-size_2-of-12 slds-medium-size_12-of-12 slds-size_12-of-12"
+        >
+          <lightning-input
+            type="search"
+            onchange={handleKeyChangeMOD}
+            class="slds-text-align--center"
+            label="MOD/Field Action #"
+            value={searchKeyMOD}
+          ></lightning-input>
+        </div>
+        <div
+          class="slds-col slds-p-horizontal_xx-small slds-large-size_2-of-12 slds-medium-size_12-of-12 slds-size_12-of-12"
+        >
+          <lightning-input
+            type="date"
+            onchange={handleKeyChangeWODue}
+            class="slds-text-align--center"
+            label="Work Order Due Date On/Before"
+            value={searchKeyWODue}
+          ></lightning-input>
+        </div>
+      </div>
+      <div class="slds-align_absolute-center slds-m-top_x-small slds-m-bottom_x-small">
+        <lightning-button
+          variant="brand"
+          label="Search"
+          onclick={handleSearchBtn}
+        >
+        </lightning-button>
+      </div>
+  
+    </article>
+    <div if:true={wosSpinner} class="">
+      <lightning-spinner variant="brand" 
+                         alternative-text="Loading WorkOrders"     
+                         size="medium">
+      </lightning-spinner>
+  </div>
+    
+    <br>
+    <br>
+    <br>
+    <template if:true={showTable}>
+      <lightning-card title="Upcoming/Outstanding Work Orders" >
+          <div class="slds-m-around_medium">
+            <!-- <div style="height: 180px;" class="blackborder"> -->
+              <div class="blackborder">
+
+                
+                <!-- class="slds-max-medium-table_stacked"  -->
+                  <lightning-datatable 
+                      key-field="id"
+                      data={data}
+                      columns={columns}
+                      sorted-by={sortBy}
+                      sorted-direction={sortDirection}
+                      onsort={handleSortdata}
+                      hide-checkbox-column="true"
+                      column-widths-mode="auto">
+                  </lightning-datatable>
+              </div>
+          </div>
+          <template if:false={listEmpty}>
+          <div class="slds-m-around_medium">
+              <p class="slds-m-vertical_medium content">
+                       Displaying {startingRecord} to {endingRecord} of {totalRecountCount} records.
+                      
+                       <span>
+                         <template if:false={singlePage}> Page {page} of {totalPage}.</template>
+                        </span> 
+                      </p>
+                       <template if:false={singlePage}>
+              <c-paginator onprevious={previousHandler} onnext={nextHandler}></c-paginator>
+            </template>
+          </div>
+        </template>
+        <template if:true={listEmpty}>
+          <div class="slds-m-around_medium">
+            <p class="slds-m-vertical_medium content">
+                     Displaying 0 records.     </p>
+            <!-- <c-paginator onprevious={previousHandler} onnext={nextHandler}></c-paginator> -->
+        </div>
+        </template>
+      </lightning-card>
+    </template>
+  </template>

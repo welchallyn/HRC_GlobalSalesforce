@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Quote_Individual_Total__c</fullName>
+    <externalId>false</externalId>
+    <label>Quoted Total</label>
+    <summarizedField>HRCFSL_Quoted_Part__c.HRCSVC_Total_Price__c</summarizedField>
+    <summaryForeignKey>HRCFSL_Quoted_Part__c.HRCFSL_Work_Order__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

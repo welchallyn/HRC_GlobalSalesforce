@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_ETQ_Complaint__c</fullName>
+    <description>SE-163 - Hyperlink of ETQ Complaint Number field</description>
+    <externalId>false</externalId>
+    <formula>HYPERLINK(&apos;http://indsaetq01vd.hrc.corp:8080/ETQQA/reliance?ETQ$CMD=CMD_OPEN_DOC&amp;ETQ$APPLICATION_NAME=COMPLAINTS&amp;ETQ$FORM_NAME=COMPLAINTS_COMPLAINT_DOCUMENT&amp;ETQ$KEY_NAME=COMPLAINT_DOCUMENT_ID&amp;ETQ$KEY_VALUE=&apos;&amp; HRCSVC_ETQ_Complaint_Number__c &amp;&apos;&amp;ETQ$SCREEN_WIDTH=1536&apos;  ,  HRCSVC_Real_ETQ_Complaint_Number__c )</formula>
+    <label>ETQ Complaint #</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

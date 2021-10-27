@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCFSL_IsEventForChildWO__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This indicates whether the event is for child or parent. Default is parent.</description>
+    <externalId>false</externalId>
+    <isFilteringDisabled>false</isFilteringDisabled>
+    <isNameField>false</isNameField>
+    <isSortingDisabled>false</isSortingDisabled>
+    <label>Is Event for Child WO?</label>
+    <type>Checkbox</type>
+</CustomField>

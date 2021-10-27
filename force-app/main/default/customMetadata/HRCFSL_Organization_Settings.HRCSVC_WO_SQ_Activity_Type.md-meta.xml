@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>WO SQ Activity Type</label>
+    <protected>false</protected>
+    <values>
+        <field>HRCFSL_Component_Description__c</field>
+        <value xsi:type="xsd:string">This component is used in HRCSVC_CreateOrderAndOrderLineItem to show values of Activity Type that is dependent on WO Doc Type SQ in the lightning component</value>
+    </values>
+    <values>
+        <field>HRCFSL_Component_Detail_Long__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>HRCFSL_Component_Detail__c</field>
+        <value xsi:type="xsd:string">M,4,A,B,C,U,V,X,Y,S,1,2,6,8,D,G,H,J,L,O,P,R,Z,7</value>
+    </values>
+</CustomMetadata>

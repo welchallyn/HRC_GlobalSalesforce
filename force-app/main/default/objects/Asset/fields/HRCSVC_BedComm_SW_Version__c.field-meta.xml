@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_BedComm_SW_Version__c</fullName>
+    <description>SE-1173</description>
+    <externalId>false</externalId>
+    <label>BedComm- SW Version</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BedComm 2.5</fullName>
+                <default>false</default>
+                <label>BedComm 2.5</label>
+            </value>
+            <value>
+                <fullName>BedComm 2.5.1</fullName>
+                <default>false</default>
+                <label>BedComm 2.5.1</label>
+            </value>
+            <value>
+                <fullName>BedComm 2.6</fullName>
+                <default>false</default>
+                <label>BedComm 2.6</label>
+            </value>
+            <value>
+                <fullName>BedComm 2.7</fullName>
+                <default>false</default>
+                <label>BedComm 2.7</label>
+            </value>
+            <value>
+                <fullName>BedComm 2.8</fullName>
+                <default>false</default>
+                <label>BedComm 2.8</label>
+            </value>
+            <value>
+                <fullName>BedComm 1.9</fullName>
+                <default>false</default>
+                <label>BedComm 1.9</label>
+            </value>
+            <value>
+                <fullName>BedComm 2.0</fullName>
+                <default>false</default>
+                <label>BedComm 2.0</label>
+            </value>
+            <value>
+                <fullName>BedComm 2.1</fullName>
+                <default>false</default>
+                <label>BedComm 2.1</label>
+            </value>
+            <value>
+                <fullName>BedComm 2.2.0</fullName>
+                <default>false</default>
+                <label>BedComm 2.2.0</label>
+            </value>
+            <value>
+                <fullName>BedComm 2.3.1</fullName>
+                <default>false</default>
+                <label>BedComm 2.3.1</label>
+            </value>
+            <value>
+                <fullName>BedComm 2.4</fullName>
+                <default>false</default>
+                <label>BedComm 2.4</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

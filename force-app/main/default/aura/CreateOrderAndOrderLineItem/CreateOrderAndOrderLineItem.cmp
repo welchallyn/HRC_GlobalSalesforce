@@ -1,0 +1,1404 @@
+<!--**************************************************************************************************************************
+* Name                             :  CreateOrderAndOrderLineItem
+* Author                           :  Shubham Singh
+* Date                             :  November/04/2020
+* Requirement/Project Name         :  Hill-Rom
+* Requirement/Project Description  :  To create Order and create/update order line items
+* Revison                          :
+/***************************************************************************************************************************-->
+<aura:component
+  controller="HRCSVC_CreateOrderAndOrderLineItem"
+  implements="force:hasrecordId,force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction"
+  access="global"
+>
+  <aura:attribute name="customOrder" type="Order__c" default="{}" />
+  <aura:attribute name="orderLineItemList" type="Order_Line_Item__c[]" />
+  <aura:attribute
+    name="selectedOrderLineItemList"
+    type="Order_Line_Item__c[]"
+  />
+  <aura:attribute name="workOrders" type="WorkOrder[]" />
+  <aura:attribute name="selectedShipTo" type="sObject" />
+  <aura:attribute name="selectedSoldTo" type="sObject" />
+  <aura:attribute name="contact" type="sObject" default="{}" />
+  <aura:attribute name="accountProtocol" type="String" default="" />
+  <aura:attribute name="createWORecords" type="Boolean" default="false" />
+  <aura:attribute name="eligibilityErrorMessage" type="String" default="" />
+  <aura:attribute name="eligibilityModal" type="Boolean" default="false" />
+  <aura:attribute name="adminCompleteEligible" type="Boolean" default="false" />
+  <aura:attribute name="sheetChangeShowModal" type="Boolean" default="false" />
+  <aura:attribute name="pageReference" type="Object" />
+  <aura:attribute name="buttonClicked" type="String" access="PRIVATE" />
+  <aura:attribute name="cancelResonCode" type="Map" />
+  <aura:attribute name="serviceActivityType" type="Map" />
+  <aura:attribute name="orderLinteItemStatus" type="Map" />
+  <aura:attribute name="contactSourceMap" type="Map" />
+  <aura:attribute name="pagingTeamMap" type="Map" />
+  <aura:attribute name="contactMethod" type="Map" />
+  <aura:attribute name="priceMethodCodeMap" type="Map" />
+  <aura:attribute name="isAccountProtocol" type="boolean" default="false" />
+  <aura:attribute name="tableMessage" type="String" default="" />
+  <aura:attribute name="showTableError" type="boolean" default="false" />
+  <aura:attribute name="message" type="String" default="" />
+  <aura:attribute name="showError" type="boolean" default="false" />
+  <aura:attribute name="isError" type="boolean" default="false" />
+  <aura:attribute name="isDuplicate" type="boolean" default="false" />
+  <aura:attribute name="showDuplicateMessage" type="String" default="" />
+  <aura:attribute
+    name="showAdditionalWOFields"
+    type="boolean"
+    default="false"
+  />
+  <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+  <aura:attribute name="recordId" type="String" />
+  <aura:handler
+    name="selectionChange"
+    event="c:HRCSVC_LookupSelected"
+    action="{!c.handleSelection}"
+  />
+  <aura:attribute name="adminBedMoveShowModal" type="Boolean" default="false" />
+  <aura:attribute name="adminBedWorkOrders" type="WorkOrder[]" />
+  <aura:attribute name="adminDisableLookup" type="Boolean" default="true" />
+  
+  <div class="c-container">
+    <div class="slds-grid slds-wrap slds-gutters">
+      <div class="slds-col slds-size_4-of-12">
+        <div class="slds-card">
+          <div class="slds-card__header">
+            <header
+              class="slds-media slds-media_center slds-has-flexi-truncate"
+            >
+              <div class="slds-media__body">
+                <h2 class="slds-card__header-title">
+                  <span>Account Protocol</span>
+                </h2>
+              </div>
+            </header>
+          </div>
+          <div class="slds-card__body slds-card__body_inner">
+            <lightning:formattedRichText value="{!v.accountProtocol}" />
+          </div>
+        </div>
+      </div>
+      <aura:if isTrue="{!(empty(v.recordId))}">
+        <div class="slds-col slds-size_8-of-12">
+          <div class="slds-card">
+            <div class="slds-card__header">
+              <header
+                class="slds-media slds-media_center slds-has-flexi-truncate"
+              >
+                <div class="slds-media__body">
+                  <h2 class="slds-card__header-title">
+                    <span>Order</span>
+                  </h2>
+                </div>
+              </header>
+            </div>
+            <div class="slds-card__body slds-card__body_inner">
+              <aura:renderIf isTrue="{!v.showError}">
+                <div class="slds-text-color_error">
+                  <lightning:dynamicIcon
+                    type="trend"
+                    option="down"
+                    alternativeText="Trending down"
+                  />&nbsp;
+                  <b>{!v.message}</b>
+                </div>
+              </aura:renderIf>
+              <div class="slds-grid slds-gutters">
+                <div class="slds-col slds-size_1-of-3">
+                  <c:customLookup
+                    objectAPIName="Account"
+                    IconName="standard:account"
+                    selectedRecord="{!v.selectedSoldTo}"
+                    label="Sold To"
+                  />
+                </div>
+                <div class="slds-col slds_size_1-of-3">
+                  <c:customLookup
+                    objectAPIName="Location"
+                    uniqueId="shipto"
+                    IconName="standard:location"
+                    selectedRecord="{!v.selectedShipTo}"
+                    label="Ship To"
+                  />
+                </div>
+                <div class="slds-col slds_size_1-of-4">
+                  <lightning:select
+                    name="contactSource"
+                    label="Contact Source"
+                    aura:id="contSource"
+                    value="{!v.customOrder.HRCSVC_Contact_Source__c}"
+                  >
+                    <aura:iteration
+                      items="{!v.contactSourceMap}"
+                      var="serv"
+                      indexVar="key"
+                    >
+                      <option
+                        text="{!serv.value}"
+                        value="{!serv.key}"
+                        selected="{!serv.key==v.customOrder.HRCSVC_Price_Method_Code__c}"
+                      />
+                    </aura:iteration>
+                  </lightning:select>
+                </div>
+              </div>
+              <div class="slds-grid slds-gutters">
+                <div class="slds-col slds_size_1-of-4">
+                  <lightning:input
+                    name="patientFN"
+                    label="Patient First Name"
+                    value="{!v.customOrder.HRCSVC_Patient_First_Name__c}"
+                  />
+                </div>
+                <div class="slds-col slds_size_1-of-4">
+                  <lightning:input
+                    class=".slds-text-title_caps"
+                    name="patientLN"
+                    label="Patient Last Name"
+                    value="{!v.customOrder.HRCSVC_Patient_Last_Name__c}"
+                  />
+                </div>
+                <div class="slds-col slds_size_1-of-4">
+                  <lightning:input
+                    class=".slds-text-title_caps"
+                    name="patientMRI"
+                    label="Medical Record ID"
+                    value="{!v.customOrder.HRCSVC_Medical_Record_ID__c}"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aura:if>
+      <aura:if isTrue="{!not(empty(v.recordId))}">
+        <div class="slds-align_absolute-center slds-p-top_small">
+          <lightning:button
+            variant="neutral"
+            label="Admin Complete"
+            title="Admin Complete"
+            disabled="{!not(v.adminCompleteEligible)}"
+            onclick="{! c.onAdminComplete }"
+          />
+          <lightning:button
+            variant="neutral"
+            label="Removal"
+            title="Removal"
+            onclick="{!c.onRemoval}"
+          />
+
+          <lightning:button
+            variant="neutral"
+            label="Technician Bed Move"
+            title="Technician Bed Move"
+            onclick="{! c.onTechnicianBedMove }"
+          />
+          <lightning:button
+            variant="neutral"
+            label="Admin Bed Move"
+            title="Admin Bed Move"
+            onclick="{! c.onAdminBedMove }"
+          />
+          <lightning:button
+            variant="neutral"
+            label="Repair Swap"
+            title="Repair Swap"
+            onclick="{! c.onRepairSwap }"
+          />
+          <lightning:button
+            variant="neutral"
+            label="On-Site Repair"
+            title="On-Site Repair"
+            onclick="{! c.onSheetChange }"
+          />
+          <lightning:button
+            variant="neutral"
+            label="Non-Repair Swap"
+            title="Non-Repair Swap"
+            onclick="{! c.selectedNonRepairSwap }"
+          />
+          <lightning:button
+            variant="neutral"
+            label="Substitution"
+            title="Substitution"
+            onclick="{! c.selectedSubstitution }"
+          />
+          <lightning:button
+            variant="neutral"
+            label="Sheet Change"
+            title="Sheet Change"
+            onclick="{! c.onSheetChange }"
+          />
+        </div>
+      </aura:if>
+    </div>
+  </div>
+  <div style="margin-right: 2rem; margin-top: 2rem">
+    <aura:renderIf isTrue="{!v.showTableError}">
+        <div class="slds-text-color_error">
+          <lightning:dynamicIcon
+            type="trend"
+            option="down"
+            alternativeText="Trending down"
+          />&nbsp;
+          <b>{!v.tableMessage}</b>
+        </div>
+      </aura:renderIf>
+    <div class="slds-grid slds-wrap slds-scrollable">
+      
+      <table
+        class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered"
+      >
+        <thead>
+          <tr class="slds-text-title_caps">
+            <aura:if isTrue="{!(empty(v.recordId))}">
+              <th scope="col">
+                <div class="slds-truncate" style="width: 5rem" title="Action">
+                  Action
+                </div>
+              </th>
+            </aura:if>
+            <aura:if isTrue="{!not(empty(v.recordId))}">
+              <th scope="col">
+                <div class="slds-truncate">Select</div>
+              </th>
+            </aura:if>
+            <th scope="col">
+              <div class="slds-truncate">Line#</div>
+            </th>
+            <th scope="col">
+              <div
+                class="slds-truncate"
+                style="width: 10rem"
+                title="Contact Name"
+              >
+                Contact Name
+              </div>
+            </th>
+            <th scope="col">
+              <div
+                class="slds-truncate"
+                style="width: 10rem"
+                title="Service Activity Type"
+              >
+                Service Activity Type
+              </div>
+            </th>
+            <th scope="col">
+              <div class="slds-truncate" style="width: 6rem" title="Quantity">
+                Quantity
+              </div>
+            </th>
+            <aura:if isTrue="{!not(empty(v.recordId))}">
+              <th scope="col">
+                <div class="slds-truncate" style="width: 6rem" title="Status">
+                  Status
+                </div>
+              </th>
+            </aura:if>
+            <th scope="col">
+              <div
+                class="slds-truncate"
+                style="width: 10rem"
+                title="Serial Number"
+              >
+                Serial Number
+              </div>
+            </th>
+            <th scope="col">
+              <div
+                class="slds-truncate"
+                style="width: 10rem"
+                title="Billing On Date"
+              >
+                Billing On Date
+              </div>
+            </th>
+            <th scope="col">
+              <div
+                class="slds-truncate"
+                style="width: 10rem"
+                title="Billing Off Date"
+              >
+                Billing Off Date
+              </div>
+            </th>
+            <th scope="col">
+              <div
+                class="slds-truncate"
+                style="width: 10rem"
+                title="Equipment On Date"
+              >
+                Equipment On Date
+              </div>
+            </th>
+            <th scope="col">
+              <div
+                class="slds-truncate"
+                style="width: 10rem"
+                title="Equipment OFF Date"
+              >
+                Equipment OFF Date
+              </div>
+            </th>
+            <th scope="col">
+              <div
+                class="slds-truncate"
+                style="width: 10rem"
+                title="Patient Room #"
+              >
+                Patient Room #
+              </div>
+            </th>
+            <th scope="col">
+              <div class="slds-truncate" style="width: 10rem" title="Ward">
+                Ward
+              </div>
+            </th>
+            <th scope="col">
+              <div class="slds-truncate" style="width: 10rem" title="Product">
+                Product
+              </div>
+            </th>
+            <th scope="col">
+              <div
+                class="slds-truncate"
+                style="width: 10rem"
+                title="Price Method Code"
+              >
+                Price Method Code
+              </div>
+            </th>
+            <th scope="col">
+              <div class="slds-truncate" style="width: 10rem" title="PO Number">
+                PO Number
+              </div>
+            </th>
+            <th scope="col">
+              <div
+                class="slds-truncate"
+                style="width: 10rem"
+                title="Standing PO"
+              >
+                Standing PO
+              </div>
+            </th>
+            <th scope="col">
+              <div
+                class="slds-truncate"
+                style="width: 10rem"
+                title="Paging Team"
+              >
+                Paging Team
+              </div>
+            </th>
+            <!--<th scope="col">
+                            <div class="slds-truncate" style="width:10rem;" title="Team Type Descriptions">Team Type Descriptions</div>
+                        </th>-->
+            <th scope="col">
+              <div
+                class="slds-truncate"
+                style="width: 10rem"
+                title="Contact Method"
+              >
+                Contact Method
+              </div>
+            </th>
+            <th scope="col">
+              <div
+                class="slds-truncate"
+                style="width: 10rem"
+                title="Cancellation Reason Notes"
+              >
+                Cancellation Reason Notes
+              </div>
+            </th>
+            <th scope="col">
+              <div
+                class="slds-truncate"
+                style="width: 10rem"
+                title="PO Expiration Date"
+              >
+                PO Expiration Date
+              </div>
+            </th>
+            <th scope="col">
+              <div
+                class="slds-truncate"
+                style="width: 12rem"
+                title="Customer Cost Center"
+              >
+                Customer Cost Center
+              </div>
+            </th>
+            <th scope="col">
+              <div
+                class="slds-truncate"
+                style="width: 10rem"
+                title="Cancel/Change Reason Code"
+              >
+                Cancel/Change Reason Code
+              </div>
+            </th>
+            <th scope="col">
+              <div
+                class="slds-truncate"
+                style="width: 10rem"
+                title="Cancelation Approver"
+              >
+                Cancelation Approver
+              </div>
+            </th>
+            <th scope="col">
+              <div
+                class="slds-truncate"
+                style="width: 10rem"
+                title="Special Instructions"
+              >
+                Special Instructions
+              </div>
+            </th>
+            <th scope="col">
+              <div
+                class="slds-truncate"
+                style="width: 10rem"
+                title="Customer Request Date and Time"
+              >
+                Customer Request Date and Time
+              </div>
+            </th>
+            <th scope="col">
+              <div
+                class="slds-truncate"
+                style="width: 10rem"
+                title="Default Request Date and Time"
+              >
+                Default Request Date and Time
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <aura:iteration
+            items="{!v.orderLineItemList}"
+            var="oli"
+            indexVar="index"
+          >
+            <tr>
+              <aura:if isTrue="{!(empty(v.recordId))}">
+                <div style="position: fixed;">
+                <td>
+                  <a onclick="{!c.addRow}" data-record="{!index}">
+                    <lightning:icon
+                      iconName="utility:add"
+                      size="small"
+                      alternativeText="Add"
+                    />
+                    <span class="slds-assistive-text">Add Rows</span>
+                  </a>
+                  <a
+                    style="margin-left: 10px"
+                    onclick="{!c.removeRow}"
+                    data-record="{!index}"
+                  >
+                    <lightning:icon
+                      iconName="utility:delete"
+                      size="small"
+                      alternativeText="Delete"
+                    />
+                    <span class="slds-assistive-text">Delete</span>
+                  </a>
+                </td>
+              </div>
+              </aura:if>
+              <aura:if isTrue="{!not(empty(v.recordId))}">
+                <td scope="row" class="slds-text-align--right" style="width:3.25rem;">
+                  <aura:if isTrue="{!or(oli.HRCSVC_End_Date__c == '',oli.HRCSVC_Order_Line_Item_Status__c != 'Canceled')}">
+                      <label class="slds-checkbox">
+                          <ui:inputCheckbox change="{!c.updateCheckedLines}" aura:id="checkedOLI" value="" text="{!oli}"/>
+                          <span class="slds-checkbox--faux" />
+                          <span class="slds-form-element__label"></span>
+                      </label>
+                  </aura:if>
+              </td>
+              </aura:if>
+              <td>{!index + 1}</td>
+              <td style="width: 10rem">
+                <!-- disableLookup="{!oli.HRCSVC_Disable_Component_Edit__c}"-->
+                <aura:if isTrue="{!(empty(v.recordId))}">
+                   <c:customLookup objectAPIName="contact" index="{!index}" orderLineItem="{!oli}" IconName="standard:contact" selectedRecordID="{!oli.HRCSVC_Contact_Name__c}" label="Contact Name"/>
+                    <aura:set attribute="else"> 
+                        <c:customLookup objectAPIName="contact" index="{!index}" orderLineItem="{!oli}" IconName="standard:contact" selectedRecordID="{!oli.HRCSVC_Contact_Name__c}" label="Contact Name" disableLookup="{!oli.HRCSVC_Disable_Component_Edit__c}"/>                   
+                     </aura:set>
+                </aura:if>
+              </td>
+              <td style="width: 10rem">
+                <lightning:select
+                  disabled="{!oli.HRCSVC_Disable_Component_Edit__c}"
+                  name="serviceAT"
+                  label="Service Activity Type"
+                  aura:id="serviceAT"
+                  value="{!oli.HRCSVC_Service_Activity_Type__c}"
+                >
+                  <option value="">----None----</option>
+                  <aura:iteration
+                    items="{!v.serviceActivityType}"
+                    var="serv"
+                    indexVar="key"
+                  >
+                    <option
+                      text="{!serv.value}"
+                      value="{!serv.key}"
+                      selected="{!serv.key==oli.HRCSVC_Service_Activity_Type__c}"
+                    />
+                  </aura:iteration>
+                </lightning:select>
+              </td>
+              <td style="width: 6rem">
+                <lightning:input
+                  disabled="{!oli.HRCSVC_Disable_Component_Edit__c}"
+                  name="quantity"
+                  required="true"
+                  type="Number"
+                  maxlength="18"
+                  label="Quantity"
+                  value="{!oli.Quantity__c}"
+                />
+              </td>
+              <aura:if isTrue="{!not(empty(v.recordId))}">
+                <td style="width: 10rem">
+                  <lightning:select
+                    disabled="true"
+                    name="orderLineStatus"
+                    label="Order Line Item Status"
+                    aura:id="oliStatus"
+                    value="{!oli.HRCSVC_Order_Line_Item_Status__c}"
+                  >
+                    <aura:iteration
+                      items="{!v.orderLinteItemStatus}"
+                      var="status"
+                      indexVar="key"
+                    >
+                      <option
+                        text="{!status.value}"
+                        value="{!status.key}"
+                        selected="{!status.key==oli.HRCSVC_Order_Line_Item_Status__c}"
+                      />
+                    </aura:iteration>
+                  </lightning:select>
+                </td>
+              </aura:if>
+              <td style="width: 10rem">
+                <lightning:input
+                  disabled="{!oli.HRCSVC_Disable_Component_Edit__c}"
+                  name="serialNumber"
+                  type="text"
+                  maxlength="255"
+                  label="Serial Number"
+                  value="{!oli.HRCSVC_Serial_Number__c}"
+                />
+              </td>
+              <td style="width: 6rem">
+                <ui:inputDate
+                  disabled="{!oli.HRCSVC_Disable_Component_Edit__c}"
+                  aura:id="startDate"
+                  label="Billing On Date"
+                  format="yyyy-MM-dd"
+                  labelClass="slds-form-element__label"
+                  value="{!oli.HRCSVC_Start_Date__c}"
+                  displayDatePicker="true"
+                />
+              </td>
+              <td style="width: 6rem">
+                <ui:inputDate
+                  disabled="{!oli.HRCSVC_Disable_Component_Edit__c}"
+                  aura:id="endDate"
+                  label="Billing Off Date"
+                  format="yyyy-MM-dd"
+                  labelClass="slds-form-element__label"
+                  value="{!oli.HRCSVC_End_Date__c}"
+                  displayDatePicker="true"
+                />
+              </td>
+              <td style="width: 6rem">
+                <ui:inputDate
+                  disabled="{!oli.HRCSVC_Disable_Component_Edit__c}"
+                  aura:id="equipmentOnDate"
+                  label="Equipment On Date"
+                  format="yyyy-MM-dd"
+                  labelClass="slds-form-element__label"
+                  value="{!oli.HRCSVC_Equipment_On_Date__c}"
+                  displayDatePicker="true"
+                />
+              </td>
+              <td style="width: 6rem">
+                <ui:inputDate
+                  disabled="{!oli.HRCSVC_Disable_Component_Edit__c}"
+                  aura:id="equipmentOFFDate"
+                  label="Equipment OFF Date"
+                  format="yyyy-MM-dd"
+                  labelClass="slds-form-element__label"
+                  value="{!oli.HRCSVC_Equipment_OFF_Date__c}"
+                  displayDatePicker="true"
+                />
+              </td>
+              <td style="width: 10rem">
+                <lightning:input
+                  disabled="{!oli.HRCSVC_Disable_Component_Edit__c}"
+                  name="patientRoom"
+                  type="text"
+                  maxlength="50"
+                  label="Patient Room #"
+                  value="{!oli.HRCSVC_Patient_Room__c}"
+                />
+              </td>
+              <td style="width: 10rem">
+                <aura:if isTrue="{!(empty(v.recordId))}">
+                  <c:customLookup  objectAPIName="HRCFSL_Ward__c" index="{!index}" orderLineItem="{!oli}" IconName="custom:custom94" selectedRecordID="{!oli.HRCSVC_Ward__c}" label="Ward" />
+                  <aura:set attribute="else"> 
+                      <c:customLookup disableLookup="{!oli.HRCSVC_Disable_Component_Edit__c}" objectAPIName="HRCFSL_Ward__c" index="{!index}" orderLineItem="{!oli}" IconName="custom:custom94" selectedRecordID="{!oli.HRCSVC_Ward__c}" label="Ward" />
+                  </aura:set>
+                </aura:if>
+              </td>
+              <td style="width: 10rem">
+                <aura:if isTrue="{!(empty(v.recordId))}">
+                  <c:customLookup SelectedShipto="{!v.selectedShipTo}" uniqueId="{!'product' + index}" objectAPIName="product2" index="{!index}" orderLineItem="{!oli}" IconName="standard:product" selectedRecordID="{!oli.Product__c}"  aura:id="Productlkupid" label="Product"  filterCondition="HRCSVC_Rental_Offering__c = true AND id not in (select hrcsvc_product__c from HRCSVC_ST_Product_Unavailability__c where hrcsvc_service_territory__c = [ST ID])"/>
+                  <aura:set attribute="else"> 
+                      <c:customLookup SelectedShipto="{!v.selectedShipTo}" uniqueId="{!'product' + index}" disableLookup="{!oli.HRCSVC_Disable_Component_Edit__c}" objectAPIName="product2" index="{!index}" orderLineItem="{!oli}" aura:id="Productlkupid" IconName="standard:product" selectedRecordID="{!oli.Product__c}" label="Product"  filterCondition="HRCSVC_Rental_Offering__c = true AND id not in (select hrcsvc_product__c from HRCSVC_ST_Product_Unavailability__c where hrcsvc_service_territory__c = [ST ID])"/>
+                  </aura:set>
+                </aura:if>
+              </td>
+              <td style="width: 10rem">
+                <lightning:select
+                  disabled="{!oli.HRCSVC_Disable_Component_Edit__c}"
+                  name="priceMethodC"
+                  label="Price Method Code"
+                  aura:id="pricemc"
+                  value="{!oli.HRCSVC_Price_Method_Code__c}"
+                >
+                  <option value="">----None----</option>
+                  <aura:iteration
+                    items="{!v.priceMethodCodeMap}"
+                    var="serv"
+                    indexVar="key"
+                  >
+                    <option
+                      text="{!serv.value}"
+                      value="{!serv.key}"
+                      selected="{!serv.key==oli.HRCSVC_Price_Method_Code__c}"
+                    />
+                  </aura:iteration>
+                </lightning:select>
+              </td>
+              <td style="width: 10rem">
+                <lightning:input
+                  disabled="{!oli.HRCSVC_Disable_Component_Edit__c}"
+                  name="poNumber"
+                  type="text"
+                  maxlength="255"
+                  label="PO Number"
+                  value="{!oli.HRCSVC_PO_Number__c}"
+                />
+              </td>
+              <td style="width: 10rem">
+                <lightning:input
+                  disabled="true"
+                  name="standingPO"
+                  type="text"
+                  maxlength="255"
+                  label="Standing PO"
+                  value="{!oli.HRCSVC_Standing_PO__c}"
+                />
+              </td>
+              <td style="width: 10rem">
+                <lightning:select
+                  disabled="{!oli.HRCSVC_Disable_Component_Edit__c}"
+                  required="true"
+                  name="pagingT"
+                  label="Paging Team"
+                  aura:id="pagingTeam"
+                  value="{!oli.HRCSVC_Paging_Team__c}"
+                >
+                  <aura:iteration
+                    items="{!v.pagingTeamMap}"
+                    var="serv"
+                    indexVar="key"
+                  >
+                    <option
+                      text="{!serv.value}"
+                      value="{!serv.key}"
+                      selected="{!serv.key==oli.HRCSVC_Paging_Team__c}"
+                    />
+                  </aura:iteration>
+                </lightning:select>
+              </td>
+              <td style="width: 10rem">
+                <lightning:select
+                  disabled="true"
+                  name="contactMethod"
+                  label="Contact Method"
+                  aura:id="contMethod"
+                  value="{!oli.HRCSVC_Contact_Method__c}"
+                >
+                  <option value="">----None----</option>
+                  <aura:iteration
+                    items="{!v.contactMethod}"
+                    var="serv"
+                    indexVar="key"
+                  >
+                    <option
+                      text="{!serv.value}"
+                      value="{!serv.key}"
+                      selected="{!serv.key==oli.HRCSVC_Contact_Method__c}"
+                    />
+                  </aura:iteration>
+                </lightning:select>
+              </td>
+              <td style="width: 10rem">
+                <lightning:input
+                  disabled="{!oli.HRCSVC_Disable_Component_Edit__c}"
+                  name="cancellationRN"
+                  type="text"
+                  maxlength="255"
+                  label="Cancellation Reason Notes"
+                  value="{!oli.HRCSVC_Cancellation_Reason_Notes__c}"
+                />
+              </td>
+              <td style="width: 6rem">
+                <ui:inputDate
+                  disabled="{!oli.HRCSVC_Disable_Component_Edit__c}"
+                  aura:id="poExipration"
+                  label="PO Expiration Date"
+                  format="yyyy-MM-dd"
+                  labelClass="slds-form-element__label"
+                  value="{!oli.HRCSVC_PO_Expiration_Date__c	}"
+                  displayDatePicker="true"
+                />
+              </td>
+              <td style="width: 12rem">
+                <lightning:input
+                  disabled="{!oli.HRCSVC_Disable_Component_Edit__c}"
+                  name="customerCC"
+                  type="text"
+                  maxlength="50"
+                  label="Customer Cost Center"
+                  value="{!oli.HRCSVC_Customer_Cost_Center__c}"
+                />
+              </td>
+              <td style="width: 10rem">
+                <lightning:select
+                  disabled="{!oli.HRCSVC_Disable_Component_Edit__c}"
+                  name="ccReasonCode"
+                  label="Cancel/Change Reason Code"
+                  aura:id="ccReasonCode"
+                  value="{!oli.Cancel_Change_Reason_Code__c}"
+                >
+                  <option value="">----None----</option>
+                  <aura:iteration
+                    items="{!v.cancelResonCode}"
+                    var="can"
+                    indexVar="key"
+                  >
+                    <option
+                      text="{!can.value}"
+                      value="{!can.key}"
+                      selected="{!can.key==oli.Cancel_Change_Reason_Code__c}"
+                    />
+                  </aura:iteration>
+                </lightning:select>
+              </td>
+              <td style="width: 10rem">
+                <aura:if isTrue="{!(empty(v.recordId))}">
+                    <c:customLookup  objectAPIName="user" index="{!index}" orderLineItem="{!oli}" IconName="standard:user" selectedRecordID="{!oli.HRCSVC_Cancelation_Approver__c}" label="Cancelation Approver"/>
+                    <aura:set attribute="else"> 
+                        <c:customLookup disableLookup="{!oli.HRCSVC_Disable_Component_Edit__c}" objectAPIName="user" index="{!index}" orderLineItem="{!oli}" IconName="standard:user" selectedRecordID="{!oli.HRCSVC_Cancelation_Approver__c}" label="Cancelation Approver"/>
+                    </aura:set>
+                  </aura:if>
+              </td>
+              <td style="width: 10rem">
+                <lightning:textarea
+                  disabled="{!oli.HRCSVC_Disable_Component_Edit__c}"
+                  name="specialInstr"
+                  label="Special Instructions"
+                  placeholder="type here..."
+                  value="{!oli.HRCSVC_Special_Instructions__c}"
+                />
+              </td>
+              <td style="width: 8rem">
+                <ui:inputDateTime
+                  disabled="{!oli.HRCSVC_Disable_Component_Edit__c}"
+                  aura:id="customerRequestDT"
+                  label="Customer Request Date and Time"
+                  class="fieldTime"
+                  value="{!oli.HRCSVC_Customer_Request_Date_Time__c}"
+                  displayDatePicker="true"
+                />
+              </td>
+              <td style="width: 8rem">
+                <ui:inputDateTime
+                  disabled="true"
+                  aura:id="actualRequestT"
+                  label="Default Request Date and Time"
+                  class="fieldTime"
+                  value="{!oli.HRCSVC_Default_Request_Date_and_Time__c}"
+                  displayDatePicker="true"
+                />
+              </td>
+            </tr>
+          </aura:iteration>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <aura:if isTrue="{!v.eligibilityModal}">
+    <section
+      role="dialog"
+      tabindex="-1"
+      aria-labelledby="modal-heading-01"
+      aria-modal="true"
+      aria-describedby="modal-content-id-1"
+      class="slds-modal slds-fade-in-open"
+    >
+      <div class="slds-modal__container">
+        <header class="slds-modal__header slds-text-color_error">
+          <lightning:buttonIcon
+            iconName="utility:close"
+            onclick="{! c.closeModel }"
+            alternativeText="close"
+            variant="bare-inverse"
+            class="slds-modal__close"
+          />
+          <h2
+            id="modal-heading-01"
+            class="slds-text-title_bold slds-modal__title slds-hyphenate"
+          >
+            <b>Error</b>
+          </h2>
+        </header>
+        <div
+          class="slds-text-heading_medium slds-modal__content slds-p-around_medium"
+          id="modal-content-id-1"
+        >
+          <aura:unescapedHtml value="{!v.eligibilityErrorMessage}" />
+        </div>
+        <footer class="slds-modal__footer">
+          <lightning:button
+            variant="brand"
+            label="Ok"
+            title="Ok"
+            onclick="{! c.closeModel }"
+          />
+        </footer>
+      </div>
+    </section>
+  </aura:if>
+  <div class="slds-align_absolute-center slds-p-top_small">
+    <lightning:button
+      variant="brand"
+      label="Save"
+      title="Brand action"
+      onclick="{!c.save}"
+    />
+    <lightning:button
+      label="Cancel"
+      title="Brand action"
+      onclick="{!c.cancelRecord}"
+    />
+    <lightning:spinner
+      aura:id="mySpinner"
+      alternativeText="Saving.."
+      title="Saving.."
+      variant="brand"
+      size="large"
+      class="slds-hide"
+    />
+  </div>
+  <aura:if isTrue="{!v.isDuplicate}">
+    <!-- Modal/Popup Box starts here-->
+    <section
+      role="dialog"
+      tabindex="-1"
+      aria-labelledby="modal-heading-01"
+      aria-modal="true"
+      aria-describedby="modal-content-id-1"
+      class="slds-modal slds-fade-in-open"
+    >
+      <div class="slds-modal__container">
+        <!-- Modal/Popup Box Header Starts here-->
+        <header class="slds-modal__header">
+          <lightning:buttonIcon
+            iconName="utility:close"
+            onclick="{! c.closeModel }"
+            alternativeText="close"
+            variant="bare-inverse"
+            class="slds-modal__close"
+          />
+          <h2
+            id="modal-heading-01"
+            class="slds-text-heading_medium slds-hyphenate"
+          >
+            <b>Duplicate Record Found</b>
+          </h2>
+        </header>
+        <!--Modal/Popup Box Body Starts here-->
+        <div
+          class="slds-modal__content slds-p-around_medium"
+          id="modal-content-id-1"
+        >
+          <p>{!v.showDuplicateMessage}</p>
+        </div>
+        <!--Modal/Popup Box Footer Starts here-->
+        <footer class="slds-modal__footer">
+          <lightning:button
+            variant="brand"
+            label="Yes"
+            title="Yes"
+            onclick="{!c.saveDuplicateRecord}"
+          />
+          <lightning:button
+            variant="neutral"
+            label="No"
+            title="No"
+            onclick="{! c.closeModel }"
+          />
+        </footer>
+      </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+  </aura:if>
+  <aura:if isTrue="{!v.sheetChangeShowModal}">
+    <!-- Modal/Popup Box starts here-->
+    <section
+      role="dialog"
+      tabindex="-1"
+      aria-labelledby="modal-heading-01"
+      aria-modal="true"
+      aria-describedby="modal-content-id-1"
+      class="slds-modal slds-fade-in-open"
+    >
+      <div class="slds-modal__container">
+        <!-- Modal/Popup Box Header Starts here-->
+        <header class="slds-modal__header">
+          <lightning:buttonIcon
+            iconName="utility:close"
+            onclick="{! c.closeModel }"
+            alternativeText="close"
+            variant="bare-inverse"
+            class="slds-modal__close"
+          />
+          <h2
+            id="modal-heading-01"
+            class="slds-text-heading_medium slds-hyphenate"
+          >
+            <b>Enter Extended Instructions for {!v.buttonClicked}</b>
+          </h2>
+        </header>
+        <!--Modal/Popup Box Body Starts here-->
+        <div
+        class="slds-modal__content slds-p-around_medium"
+        id="modal-content-id-1"
+      >
+      <div class="slds-grid slds-wrap slds-scrollable">
+        <table
+          class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered"
+        >
+          <thead>
+            <tr class="slds-text-title_caps">
+              <th scope="col">
+                <div
+                  class=""
+                  style="width: 10rem"
+                  title="ORDER LINE ITEM NUMBER"
+                >
+                  ORDER LINE ITEM NUMBER
+                </div>
+              </th>
+              
+
+              <th scope="col">
+                <div
+                  class="slds-truncate"
+                  style="width: 15rem"
+                  title="EXTENDED INSTRUCTIONS"
+                >
+                  EXTENDED INSTRUCTIONS
+                </div>
+              </th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <aura:iteration
+            items="{!v.selectedOrderLineItemList}"
+            var="oli"
+            indexVar="index"
+          >
+              <tr>
+                <td style="width: 10rem">
+                  <lightning:input
+                  name="oliName"
+                  type="text"
+                  maxlength="255"
+                  label="Order Line Item Number"
+                  value="{!oli.Name}"
+                  readonly="true"
+                />
+                </td>
+
+                <td style="width: 15rem">
+                  <lightning:textarea
+                  name="extendedInstn"
+                  label="Extended Instruction"
+                  placeholder="type here..."
+                  value="{!oli.HRCSVC_WO_Extended_Instructions__c}"
+                />
+                </td>
+              </tr>
+            </aura:iteration>
+          </tbody>
+        </table>
+      </div>
+      </div>
+<!-- <div
+          class="slds-modal__content slds-p-around_medium"
+          id="modal-content-id-2"
+        >
+          <thead>
+            <tr class="slds-text-title_caps">
+              <th class="slds-size_1-of-2" scope="col">
+                <div title="Order Line Item Number">Order Line Item Number</div>
+              </th>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <th scope="col" class="slds-size_1-of-2">
+                <div title="Extended Instruction">Extended Instruction</div>
+              </th>
+            </tr>
+          </thead>
+          <aura:iteration
+            items="{!v.selectedOrderLineItemList}"
+            var="oli"
+            indexVar="index"
+          >
+            <tbody>
+              <td class="slds-size_1-of-2">
+                <lightning:input
+                  name="oliName"
+                  type="text"
+                  maxlength="255"
+                  label="Order Line Item Number"
+                  value="{!oli.Name}"
+                  readonly="true"
+                />
+              </td>
+              <td class="slds-size_1-of-2">
+                <lightning:textarea
+                  name="extendedInstn"
+                  label="Extended Instruction"
+                  placeholder="type here..."
+                  value="{!oli.HRCSVC_WO_Extended_Instructions__c}"
+                />
+              </td>
+              
+            </tbody>
+          </aura:iteration>
+        </div> -->
+
+        
+
+        <!--Modal/Popup Box Footer Starts here-->
+        <footer class="slds-modal__footer">
+          <lightning:button
+            variant="brand"
+            label="Save"
+            title="Save"
+            onclick="{!c.save}"
+          />
+          <lightning:button
+            variant="neutral"
+            label="Close"
+            title="Close"
+            onclick="{! c.closeModel }"
+          />
+        </footer>
+      </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+  </aura:if>
+
+  <!-- this is the modal popup for the modal when the user clicks Admin Complete -->
+  <aura:if isTrue="{!v.showAdditionalWOFields}">
+    <!-- Modal/Popup Box starts here-->
+    <section
+      role="dialog"
+      tabindex="-1"
+      aria-labelledby="modal-heading-01"
+      aria-modal="true"
+      aria-describedby="modal-content-id-1"
+      class="slds-modal slds-modal--large slds-fade-in-open"
+    >
+      <div class="slds-modal__container">
+        <!-- Modal/Popup Box Header Starts here-->
+        <header class="slds-modal__header">
+          <lightning:buttonIcon
+            iconName="utility:close"
+            onclick="{! c.closeModel }"
+            alternativeText="close"
+            variant="bare-inverse"
+            class="slds-modal__close"
+          />
+          <h2
+            id="modal-heading-01"
+            class="slds-text-heading_medium slds-hyphenate"
+          >
+            <b>Enter Information to Admin Complete Work Orders</b>
+          </h2>
+        </header>
+        <!--Modal/Popup Box Body Starts here-->
+              
+        <div
+        class="slds-modal__content slds-p-around_medium"
+        id="modal-content-id-1"
+      >
+      <div class="slds-grid slds-wrap slds-scrollable">
+        <table
+          class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered"
+        >
+          <thead>
+            <tr class="slds-text-title_caps">
+              <th scope="col">
+                <div
+                  class=""
+                  style="width: 10rem"
+                  title="ORDER LINE ITEM NUMBER"
+                >
+                  ORDER LINE ITEM NUMBER
+                </div>
+              </th>
+              <th scope="col">
+                <div class="slds-truncate">ASSET</div>
+              </th>
+
+              <th scope="col">
+                <div
+                  class="slds-truncate"
+                  style="width: 10rem"
+                  title="START DATE/TIME"
+                >
+                  START DATE/TIME
+                </div>
+              </th>
+              <th scope="col">
+                <div class="slds-truncate" style="width: 6rem" title="COMPLETED DATE/TIME">
+                  COMPLETED DATE/TIME
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+             <aura:iteration items="{!v.workOrders}" var="wo" indexVar="woindex">
+              <tr>
+                
+                  <td style="width: 5rem">
+                       <lightning:input
+                  name="oliName"
+                  type="text"
+                  maxlength="255"
+                  label="Order Line Item Number"
+                  value="{!wo.HRCSVC_Order_Line_Item__r.Name}"
+                  readonly="true"
+                />
+  </td>
+                <td style="width: 10rem">
+                  <c:customLookup
+                    objectAPIName="asset"
+                  uniqueId="{!'wo' + woindex}"
+                  index="{!woindex}"
+                  IconName="standard:asset"
+                  selectedRecordID="{!wo.AssetId}"
+                  label="Asset"
+                  />
+                </td>
+                <td style="width: 10rem">
+                  <lightning:input
+                    type="datetime"
+                  name="dtinput2"
+                  label="Start Date/Time"
+                  value="{!wo.HRCFSL_Actual_Start__c}"
+                  />
+                </td>
+                <td style="width: 10rem">
+                  <lightning:input
+                    type="datetime"
+                  name="dtinput"
+                  label="Completed Date/Time"
+                  value="{!wo.HRCFSL_Actual_End__c}"
+                  />
+                </td>
+              </tr>
+            </aura:iteration>
+          </tbody>
+        </table>
+      </div>
+      </div>
+        <!--Modal/Popup Box Footer Starts here-->
+        <footer class="slds-modal__footer">
+          <lightning:button
+            variant="brand"
+            label="Save"
+            title="Save"
+            onclick="{!c.updateWorkOrders}"
+          />
+          <lightning:button
+            variant="neutral"
+            label="Cancel"
+            title="Cancel"
+            onclick="{! c.closeModel }"
+          />
+        </footer>
+      </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+  </aura:if>
+
+  <!-- this is the modal popup for the modal when the user clicks Admin Bed Move -->
+  <aura:if isTrue="{!v.adminBedMoveShowModal}">
+    <!-- Modal/Popup Box starts here-->
+    <section
+      role="dialog"
+      tabindex="-1"
+      aria-labelledby="modal-heading-01"
+      aria-modal="true"
+      aria-describedby="modal-content-id-1"
+      class="slds-modal slds-modal--large slds-fade-in-open"
+    >
+      <div class="slds-modal__container">
+        <!-- Modal/Popup Box Header Starts here-->
+        <header class="slds-modal__header">
+          <lightning:buttonIcon
+            iconName="utility:close"
+            onclick="{! c.closeAdminBedMoveModal }"
+            alternativeText="close"
+            variant="bare-inverse"
+            class="slds-modal__close"
+          />
+          <h2
+            id="modal-heading-01"
+            class="slds-text-heading_medium slds-hyphenate"
+          >
+           <b>Enter Information to Admin Bed Move Work Orders</b>
+          </h2>
+        </header>
+        <!--Modal/Popup Box Body Starts here-->
+        
+        <div
+        class="slds-modal__content slds-p-around_medium"
+        id="modal-content-id-1"
+      >
+      <div class="slds-grid slds-wrap slds-scrollable">
+        <table
+          class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered"
+        >
+          <thead>
+            <tr class="slds-text-title_caps">
+              <th scope="col">
+                <div
+                  class=""
+                  style="width: 10rem"
+                  title="ORDER LINE ITEM NUMBER"
+                >
+                  ORDER LINE ITEM NUMBER
+                </div>
+              </th>
+              <th scope="col">
+                <div class="slds-truncate">ASSET</div>
+              </th>
+
+              <th scope="col">
+                <div
+                  class="slds-truncate"
+                  style="width: 10rem"
+                  title="START DATE/TIME"
+                >
+                  START DATE/TIME
+                </div>
+              </th>
+              <th scope="col">
+                <div class="slds-truncate" style="width: 6rem" title="COMPLETED DATE/TIME">
+                  COMPLETED DATE/TIME
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <aura:iteration
+              items="{!v.adminBedWorkOrders}"
+              var="woObj"
+              indexVar="woindex"
+            >
+              <tr>
+                <td style="width: 10rem">
+                  <c:customLookup
+                    objectAPIName="Order_Line_Item__c"
+                    index="{!woindex}"
+                    IconName="standard:contact"
+                    selectedRecordID="{!woObj.HRCSVC_Order_Line_Item__c}"
+                    label="Order Line Item name"
+                    disableLookup="true"
+                  />
+                </td>
+
+                <td style="width: 10rem">
+                  <c:customLookup
+                    objectAPIName="Asset"
+                    uniqueId="{!'admwo' + woindex}"
+                    index="{!woindex}"
+                    IconName="standard:asset_relationship"
+                    selectedRecordID="{!woObj.AssetId}"
+                    label="Asset"
+                  />
+                </td>
+                <td style="width: 10rem">
+                  <lightning:input
+                    type="datetime"
+                    name="dtinput2"
+                    label="Start Date/Time"
+                    value="{!woObj.HRCFSL_Actual_Start__c}"
+                  />
+                </td>
+                <td style="width: 10rem">
+                  <lightning:input
+                    type="datetime"
+                    name="dtinput"
+                    label="Completed Date/Time"
+                    value="{!woObj.HRCFSL_Actual_End__c}"
+                  />
+                </td>
+              </tr>
+            </aura:iteration>
+          </tbody>
+        </table>
+      </div>
+      </div>
+        
+        <!--Modal/Popup Box Footer Starts here-->
+        <footer class="slds-modal__footer">
+          <lightning:button
+            variant="brand"
+            label="Save"
+            title="Save"
+            onclick="{!c.save}"
+          />
+          <lightning:button
+            variant="neutral"
+            label="Cancel"
+            title="Cancel"
+            onclick="{! c.closeAdminBedMoveModal }"
+          />
+        </footer>
+      </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+  </aura:if>
+</aura:component>

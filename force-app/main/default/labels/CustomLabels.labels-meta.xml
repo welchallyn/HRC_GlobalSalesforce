@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Asset_Status</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Asset Status</shortDescription>
+        <value>AC,AM,EI,ST,WA,WD,IS</value>
+    </labels>
+    <labels>
+        <fullName>Duplicate</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Duplicate</shortDescription>
+        <value>Duplicate</value>
+    </labels>
+    <labels>
+        <fullName>HRCFSL_Work_Order_Status_Category</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Work Order Status Category</shortDescription>
+        <value>Completed</value>
+    </labels>
+    <labels>
+        <fullName>HRCSVC_Minutes_For_Auto_SA</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Used in HRCSVC_Auto_CreateSA_Batch to store mins</shortDescription>
+        <value>30</value>
+    </labels>
+    <labels>
+        <fullName>HRC_CFR_Capital_Financial_Approver_Level_1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HRC CFR Capital Financial Approver Level 1</shortDescription>
+        <value>50000</value>
+    </labels>
+    <labels>
+        <fullName>HRC_CFR_Capital_Financial_Approver_Level_2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HRC CFR Capital Financial Approver Level 2</shortDescription>
+        <value>100000</value>
+    </labels>
+    <labels>
+        <fullName>HRC_CFR_Capital_Financial_Approver_Level_3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HRC CFR Capital Financial Approver Level 3</shortDescription>
+        <value>250000</value>
+    </labels>
+    <labels>
+        <fullName>HRC_CFR_Capital_Financial_Approver_Level_4</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HRC CFR Capital Financial Approver Level 4</shortDescription>
+        <value>250000</value>
+    </labels>
+    <labels>
+        <fullName>HRC_CFR_Capital_Financial_Approver_Level_5</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HRC CFR Capital Financial Approver Level 5</shortDescription>
+        <value>5000000</value>
+    </labels>
+    <labels>
+        <fullName>HRC_CFR_Capital_Financial_Approver_Level_6</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HRC CFR Capital Financial Approver Level 6</shortDescription>
+        <value>10000000</value>
+    </labels>
+    <labels>
+        <fullName>HRC_CFR_Capital_Item_Tax</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HRC CFR Capital Item Tax</shortDescription>
+        <value>0.08</value>
+    </labels>
+    <labels>
+        <fullName>HRC_CFR_Lease_Financial_Approver_Level_1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HRC CFR Lease Financial Approver Level 1</shortDescription>
+        <value>50000</value>
+    </labels>
+    <labels>
+        <fullName>HRC_CFR_Lease_Financial_Approver_Level_2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HRC CFR Lease Financial Approver Level 2</shortDescription>
+        <value>100000</value>
+    </labels>
+    <labels>
+        <fullName>HRC_CFR_Lease_Financial_Approver_Level_3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HRC CFR Lease Financial Approver Level 3</shortDescription>
+        <value>250000</value>
+    </labels>
+    <labels>
+        <fullName>HRC_CFR_Lease_Financial_Approver_Level_4</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HRC CFR Lease Financial Approver Level 4</shortDescription>
+        <value>500000</value>
+    </labels>
+    <labels>
+        <fullName>HRC_CFR_Lease_Financial_Approver_Level_5</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HRC CFR Lease Financial Approver Level 5</shortDescription>
+        <value>1000000</value>
+    </labels>
+    <labels>
+        <fullName>HRC_CFR_Lease_Financial_Approver_Level_6</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HRC CFR Lease Financial Approver Level 6</shortDescription>
+        <value>5000000</value>
+    </labels>
+    <labels>
+        <fullName>HRC_CFR_Lease_Financial_Approver_Level_7</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HRC CFR Lease Financial Approver Level 7</shortDescription>
+        <value>10000000</value>
+    </labels>
+    <labels>
+        <fullName>HRC_TerritoryInfoRedirect</fullName>
+        <categories>HRC_TerritoryInfoRedirect</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HRC_TerritoryInfoRedirect</shortDescription>
+        <value>00Bc0000000V0ND</value>
+    </labels>
+    <labels>
+        <fullName>HTCFSL_Field_Service_Parts_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Field Service Parts Label</shortDescription>
+        <value>Field Service Parts</value>
+    </labels>
+    <labels>
+        <fullName>IMC_DSP_BaseURL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>IMC_DSP_BaseURL</shortDescription>
+        <value>https://mxhillromqa01s0asa323ws.us4.hana.ondemand.com/</value>
+    </labels>
+    <labels>
+        <fullName>IMC_DSP_MetadataPopUp</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>IMC_DSP_MetadataPopUp</shortDescription>
+        <value>False</value>
+    </labels>
+    <labels>
+        <fullName>Master</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Master</shortDescription>
+        <value>Master</value>
+    </labels>
+    <labels>
+        <fullName>Opp_WA_RecordType_developer_Name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Opp WA RecordType developer Name</shortDescription>
+        <value>Welch_Allyn</value>
+    </labels>
+    <labels>
+        <fullName>OpportunityNaming</fullName>
+        <categories>OpportunityNaming</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OpportunityNaming</shortDescription>
+        <value>HRC Account Executive,HRC CCE,HRC Mobility Specialist,HRC Architectural Specialist,HRC Watchchild,HRC Contract Sales Director,HRC Mobility</value>
+    </labels>
+    <labels>
+        <fullName>ProbabilityStartRanges</fullName>
+        <categories>Opportunity Matrix</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ProbabilityStartRanges</shortDescription>
+        <value>30,50,60,75</value>
+    </labels>
+    <labels>
+        <fullName>Prospect</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Prospect</shortDescription>
+        <value>Prospect</value>
+    </labels>
+    <labels>
+        <fullName>SL_PMK_Account</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Copy the Delete Audit Name From Account Name</shortDescription>
+        <value>PMK-</value>
+    </labels>
+    <labels>
+        <fullName>ServiceReportHeader</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ServiceReportHeader</shortDescription>
+        <value>Raymon is testing if this can be used in a section header</value>
+    </labels>
+    <labels>
+        <fullName>Sharepoint_Child_Folders</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sharepoint Child Folders</shortDescription>
+        <value>CWA,IRD,Network%20Topology,NNC%20As-built%20drawings,Project%20Management%20Notes,TRLS%20As-built%20drawings</value>
+    </labels>
+    <labels>
+        <fullName>Sharepoint_Link</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sharepoint Link</shortDescription>
+        <value>https://myhillrom.sharepoint.com/teams/CareCommCRMDocuments/Account/</value>
+    </labels>
+    <labels>
+        <fullName>System_Administrator</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>admins</shortDescription>
+        <value>System Administrator</value>
+    </labels>
+    <labels>
+        <fullName>ZM01_Work_TypeId</fullName>
+        <categories>Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ZM01 Work TypeId</shortDescription>
+        <value>08q4W000000cEYZQA2</value>
+    </labels>
+    <labels>
+        <fullName>ZM03_Work_TypeId</fullName>
+        <categories>Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ZM03 Work TypeId</shortDescription>
+        <value>08q4W000000cEYPQA2</value>
+    </labels>
+</CustomLabels>

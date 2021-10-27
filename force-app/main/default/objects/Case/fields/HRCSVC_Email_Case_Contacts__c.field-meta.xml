@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Email_Case_Contacts__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checkbox that indicates whether the Case Contacts should be emailed on case email notifications in addition to the Contact on the case itself.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Help text would go here</inlineHelpText>
+    <label>CC Account Administrator on Case Emails</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

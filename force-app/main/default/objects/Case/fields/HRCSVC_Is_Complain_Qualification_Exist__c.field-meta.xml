@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Is_Complain_Qualification_Exist__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is updated from the flow &apos;HRCSV Complain Qualification Check; for #SE-142</description>
+    <externalId>false</externalId>
+    <label>Is Complain Qualification Exist</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

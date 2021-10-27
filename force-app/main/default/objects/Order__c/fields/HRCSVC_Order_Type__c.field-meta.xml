@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Order_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Order Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>SA</fullName>
+                <default>false</default>
+                <label>Sales Adjustment</label>
+            </value>
+            <value>
+                <fullName>SH</fullName>
+                <default>false</default>
+                <label>House Order</label>
+            </value>
+            <value>
+                <fullName>SW</fullName>
+                <default>false</default>
+                <label>Service Warranty Order</label>
+            </value>
+            <value>
+                <fullName>SZ</fullName>
+                <default>false</default>
+                <label>Export Markets Warranty  Ord</label>
+            </value>
+            <value>
+                <fullName>Y3</fullName>
+                <default>false</default>
+                <label>Essential Contract Orders</label>
+            </value>
+            <value>
+                <fullName>Rental Order</fullName>
+                <default>true</default>
+                <label>Rental Order</label>
+            </value>
+            <value>
+                <fullName>Evaluation</fullName>
+                <default>false</default>
+                <label>Evaluation</label>
+            </value>
+            <value>
+                <fullName>Loaner Order</fullName>
+                <default>false</default>
+                <label>Loaner Order</label>
+            </value>
+            <value>
+                <fullName>Exchange</fullName>
+                <default>false</default>
+                <label>Exchange</label>
+            </value>
+            <value>
+                <fullName>S4</fullName>
+                <default>false</default>
+                <label>Sales Order - TBM</label>
+            </value>
+            <value>
+                <fullName>S5</fullName>
+                <default>false</default>
+                <label>Credit Only</label>
+            </value>
+            <value>
+                <fullName>S6</fullName>
+                <default>false</default>
+                <label>Invoice Only</label>
+            </value>
+            <value>
+                <fullName>SX</fullName>
+                <default>false</default>
+                <label>Sales Order - Export Markets</label>
+            </value>
+            <value>
+                <fullName>SO</fullName>
+                <default>false</default>
+                <label>Sales Order</label>
+            </value>
+            <value>
+                <fullName>SP</fullName>
+                <default>false</default>
+                <label>Sales Proposal</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

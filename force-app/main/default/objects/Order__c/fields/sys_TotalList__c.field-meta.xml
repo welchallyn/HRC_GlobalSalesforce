@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>sys_TotalList__c</fullName>
+    <description>Total of line items list prices</description>
+    <externalId>false</externalId>
+    <label>Total List Price</label>
+    <summarizedField>Order_Line_Item__c.List_Price__c</summarizedField>
+    <summaryForeignKey>Order_Line_Item__c.Order__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

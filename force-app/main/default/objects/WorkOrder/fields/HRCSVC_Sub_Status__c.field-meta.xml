@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Sub_Status__c</fullName>
+    <description>SE-73</description>
+    <externalId>false</externalId>
+    <label>Sub Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Quote Prepared</fullName>
+                <default>false</default>
+                <label>Quote Prepared</label>
+            </value>
+            <value>
+                <fullName>Quote Sent</fullName>
+                <default>false</default>
+                <label>Quote Sent</label>
+            </value>
+            <value>
+                <fullName>Quote Follow-up Call 1</fullName>
+                <default>false</default>
+                <label>Quote Follow-up Call 1</label>
+            </value>
+            <value>
+                <fullName>Quote Follow-up Call 2</fullName>
+                <default>false</default>
+                <label>Quote Follow-up Call 2</label>
+            </value>
+            <value>
+                <fullName>Quote - No Response</fullName>
+                <default>false</default>
+                <label>Quote - No Response</label>
+            </value>
+            <value>
+                <fullName>Quote Accepted</fullName>
+                <default>false</default>
+                <label>Quote Accepted</label>
+            </value>
+            <value>
+                <fullName>Quote Rejected</fullName>
+                <default>false</default>
+                <label>Quote Rejected</label>
+            </value>
+            <value>
+                <fullName>Evaluation</fullName>
+                <default>false</default>
+                <label>Evaluation</label>
+            </value>
+            <value>
+                <fullName>Requires Info Payment/Method</fullName>
+                <default>false</default>
+                <label>Requires Info Payment/Method</label>
+            </value>
+            <value>
+                <fullName>At the Benches</fullName>
+                <default>false</default>
+                <label>At the Benches</label>
+            </value>
+            <value>
+                <fullName>TEST QUEUE</fullName>
+                <default>false</default>
+                <label>TEST QUEUE</label>
+            </value>
+            <value>
+                <fullName>Notified Outside Contractor</fullName>
+                <default>false</default>
+                <label>Notified Outside Contractor</label>
+            </value>
+            <value>
+                <fullName>Fwd  to Outside Contractor</fullName>
+                <default>false</default>
+                <label>Fwd  to Outside Contractor</label>
+            </value>
+            <value>
+                <fullName>Rec&apos;d from Outside Contractor</fullName>
+                <default>false</default>
+                <label>Rec&apos;d from Outside Contractor</label>
+            </value>
+            <value>
+                <fullName>Holding for parts</fullName>
+                <default>false</default>
+                <label>Holding for parts</label>
+            </value>
+            <value>
+                <fullName>Under Eng.Evaluation</fullName>
+                <default>false</default>
+                <label>Under Eng.Evaluation</label>
+            </value>
+            <value>
+                <fullName>Holding for Failure Analysis</fullName>
+                <default>false</default>
+                <label>Holding for Failure Analysis</label>
+            </value>
+            <value>
+                <fullName>Holding for Tech Support</fullName>
+                <default>false</default>
+                <label>Holding for Tech Support</label>
+            </value>
+            <value>
+                <fullName>Holding_Miscellaneous</fullName>
+                <default>false</default>
+                <label>Holding_Miscellaneous</label>
+            </value>
+            <value>
+                <fullName>No Longer Repairable</fullName>
+                <default>false</default>
+                <label>No Longer Repairable</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

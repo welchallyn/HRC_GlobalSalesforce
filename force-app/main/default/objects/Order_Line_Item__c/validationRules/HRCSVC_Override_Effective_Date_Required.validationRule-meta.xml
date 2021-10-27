@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Override_Effective_Date_Required</fullName>
+    <active>true</active>
+    <description>SE-76 - Based on the override code I select, I am able to enter the subsequent required/not required override fields.</description>
+    <errorConditionFormula>AND(RecordType.DeveloperName = &apos;HRCSVC_Rental_Order_Line_Item&apos;, NOT( $Setup.HRCFSL_Org_Exception_Rule__c.HRCFSL_Validation_Rule__c ),(VLOOKUP(  $ObjectType.Override_Codes__c.Fields.HRCSVC_Override_Effective_Date__c  ,$ObjectType.Override_Codes__c.Fields.Name,
+TEXT(HRCSVC_Override_Code__c) )), ISBLANK( HRCSVC_Override_Effective_Date__c  ))</errorConditionFormula>
+    <errorDisplayField>HRCSVC_Override_Effective_Date__c</errorDisplayField>
+    <errorMessage>For the selected Override Code, the Override Effective Date is required.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>HRCSVC_Email_Alert_for_Account_Status_Change_to_Active</fullName>
+        <ccEmails>customermastersalesalignment@hillrom.com</ccEmails>
+        <ccEmails>system@hillrom.com</ccEmails>
+        <description>HRCSVC Email Alert for Account Status Change to Active</description>
+        <protected>false</protected>
+        <senderAddress>noreply@hillrom.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/HRCSVC_Send_Email_Notification_when_Account_status_becomes_Active</template>
+    </alerts>
+    <rules>
+        <fullName>HRCSVC Send Email Notification when Account status changes from Needs Stewarding to Active</fullName>
+        <actions>
+            <name>HRCSVC_Email_Alert_for_Account_Status_Change_to_Active</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <description>SE-115: Sends Email Notification when Account status changes from Needs Stewarding to Active</description>
+        <formula>AND(RecordType.DeveloperName=&apos;Facility&apos;, ISCHANGED(Status__c), ISPICKVAL(PRIORVALUE(Status__c),&quot;Needs Stewardship&quot;), ISPICKVAL(Status__c,&quot;Active&quot;) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

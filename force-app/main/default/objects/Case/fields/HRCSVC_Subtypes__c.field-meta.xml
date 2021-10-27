@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Subtypes__c</fullName>
+    <description>SE-1140</description>
+    <externalId>false</externalId>
+    <label>Subtypes</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Type</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Complaint/Allegation of Deficiency</fullName>
+                <default>false</default>
+                <label>Complaint/Allegation of Deficiency</label>
+            </value>
+            <value>
+                <fullName>Configuration Change</fullName>
+                <default>false</default>
+                <label>Configuration Change</label>
+            </value>
+            <value>
+                <fullName>Demo</fullName>
+                <default>false</default>
+                <label>Demo</label>
+            </value>
+            <value>
+                <fullName>Duplicate Case</fullName>
+                <default>false</default>
+                <label>Duplicate Case</label>
+            </value>
+            <value>
+                <fullName>Factory Repair/Replacement</fullName>
+                <default>false</default>
+                <label>Factory Repair/Replacement</label>
+            </value>
+            <value>
+                <fullName>Field Action/Mod</fullName>
+                <default>false</default>
+                <label>Field Action/Mod</label>
+            </value>
+            <value>
+                <fullName>Hardware</fullName>
+                <default>false</default>
+                <label>Hardware</label>
+            </value>
+            <value>
+                <fullName>Installation/Commissioning</fullName>
+                <default>false</default>
+                <label>Installation/Commissioning</label>
+            </value>
+            <value>
+                <fullName>Internal Communication / Message Technician</fullName>
+                <default>false</default>
+                <label>Internal Communication / Message Technician</label>
+            </value>
+            <value>
+                <fullName>No Action Required</fullName>
+                <default>false</default>
+                <label>No Action Required</label>
+            </value>
+            <value>
+                <fullName>Non-Technical Inquiry</fullName>
+                <default>false</default>
+                <label>Non-Technical Inquiry</label>
+            </value>
+            <value>
+                <fullName>Onsite Repair</fullName>
+                <default>false</default>
+                <label>Onsite Repair</label>
+            </value>
+            <value>
+                <fullName>Parts</fullName>
+                <default>false</default>
+                <label>Parts</label>
+            </value>
+            <value>
+                <fullName>Product Enhancement</fullName>
+                <default>false</default>
+                <label>Product Enhancement</label>
+            </value>
+            <value>
+                <fullName>Quality of Service</fullName>
+                <default>false</default>
+                <label>Quality of Service</label>
+            </value>
+            <value>
+                <fullName>Quote</fullName>
+                <default>false</default>
+                <label>Quote</label>
+            </value>
+            <value>
+                <fullName>Return for Credit No Allegation of Deficiency</fullName>
+                <default>false</default>
+                <label>Return for Credit No Allegation of Deficiency</label>
+            </value>
+            <value>
+                <fullName>Return for Credit w/ Allegation of Deficiency</fullName>
+                <default>false</default>
+                <label>Return for Credit w/ Allegation of Deficiency</label>
+            </value>
+            <value>
+                <fullName>Routine/Preventative Maintenance</fullName>
+                <default>false</default>
+                <label>Routine/Preventative Maintenance</label>
+            </value>
+            <value>
+                <fullName>Routine Calibration</fullName>
+                <default>false</default>
+                <label>Routine Calibration</label>
+            </value>
+            <value>
+                <fullName>Safety Corrective Action</fullName>
+                <default>false</default>
+                <label>Safety Corrective Action</label>
+            </value>
+            <value>
+                <fullName>Software</fullName>
+                <default>false</default>
+                <label>Software</label>
+            </value>
+            <value>
+                <fullName>Technical Inquiry</fullName>
+                <default>false</default>
+                <label>Technical Inquiry</label>
+            </value>
+            <value>
+                <fullName>Upgrade Request</fullName>
+                <default>false</default>
+                <label>Upgrade Request</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Problem - Product Related</controllingFieldValue>
+            <valueName>Complaint/Allegation of Deficiency</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Problem - Product Related</controllingFieldValue>
+            <valueName>Factory Repair/Replacement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Problem - Product Related</controllingFieldValue>
+            <valueName>Onsite Repair</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Problem - Product Related</controllingFieldValue>
+            <valueName>Return for Credit w/ Allegation of Deficiency</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Problem - Product Related</controllingFieldValue>
+            <valueName>Safety Corrective Action</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Routine Maintenance</controllingFieldValue>
+            <valueName>Field Action/Mod</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Routine Maintenance</controllingFieldValue>
+            <valueName>Routine/Preventative Maintenance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Routine Maintenance</controllingFieldValue>
+            <valueName>Routine Calibration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administration</controllingFieldValue>
+            <valueName>Duplicate Case</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administration</controllingFieldValue>
+            <valueName>Internal Communication / Message Technician</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administration</controllingFieldValue>
+            <valueName>No Action Required</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administration</controllingFieldValue>
+            <valueName>Non-Technical Inquiry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administration</controllingFieldValue>
+            <valueName>Technical Inquiry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Configuration/Enhancement</controllingFieldValue>
+            <valueName>Configuration Change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Configuration/Enhancement</controllingFieldValue>
+            <valueName>Installation/Commissioning</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Configuration/Enhancement</controllingFieldValue>
+            <valueName>Product Enhancement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Configuration/Enhancement</controllingFieldValue>
+            <valueName>Upgrade Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Incorrect Order / Quality of Service</controllingFieldValue>
+            <valueName>Quality of Service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Incorrect Order / Quality of Service</controllingFieldValue>
+            <valueName>Return for Credit No Allegation of Deficiency</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Orders</controllingFieldValue>
+            <valueName>Demo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Orders</controllingFieldValue>
+            <valueName>Hardware</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Orders</controllingFieldValue>
+            <valueName>Parts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Orders</controllingFieldValue>
+            <valueName>Quote</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Orders</controllingFieldValue>
+            <valueName>Software</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

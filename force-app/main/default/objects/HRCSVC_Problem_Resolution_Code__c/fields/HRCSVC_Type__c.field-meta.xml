@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Type</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Complaint Code List by Product</fullName>
+                <default>false</default>
+                <label>Complaint Code List by Product</label>
+            </value>
+            <value>
+                <fullName>As Reported</fullName>
+                <default>false</default>
+                <label>As Reported</label>
+            </value>
+            <value>
+                <fullName>Main Assembly - Sub Assembly</fullName>
+                <default>false</default>
+                <label>Main Assembly - Sub Assembly</label>
+            </value>
+            <value>
+                <fullName>Reason</fullName>
+                <default>false</default>
+                <label>Reason</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

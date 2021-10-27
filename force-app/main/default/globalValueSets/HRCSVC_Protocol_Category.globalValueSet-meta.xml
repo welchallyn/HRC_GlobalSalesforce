@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Depot</fullName>
+        <default>false</default>
+        <label>Depot</label>
+    </customValue>
+    <customValue>
+        <fullName>Rental</fullName>
+        <default>false</default>
+        <label>Rental</label>
+    </customValue>
+    <customValue>
+        <fullName>Care Comm</fullName>
+        <default>false</default>
+        <label>Care Comm</label>
+    </customValue>
+    <customValue>
+        <fullName>Capital Service</fullName>
+        <default>false</default>
+        <label>Capital Service</label>
+    </customValue>
+    <masterLabel>HRCSVC Protocol Category</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

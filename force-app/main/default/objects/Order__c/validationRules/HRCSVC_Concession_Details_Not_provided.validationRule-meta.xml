@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Concession_Details_Not_provided</fullName>
+    <active>true</active>
+    <description>SE-171</description>
+    <errorConditionFormula>IF( OR(
+
+AND(
+
+HRCSVC_No_Charge_Concession__c = True,NOT($Setup.HRCFSL_Org_Exception_Rule__c.HRCFSL_Validation_Rule__c),
+OR(ISBLANK( HRCSVC_Concession_Reason__c ), ISBLANK( HRCSVC_Concession_Approved_By__c ))), 
+
+AND(
+
+HRCSVC_No_Charge_Concession__c = False,NOT($Setup.HRCFSL_Org_Exception_Rule__c.HRCFSL_Validation_Rule__c),
+OR(NOT(ISBLANK( HRCSVC_Concession_Reason__c )), NOT(ISBLANK( HRCSVC_Concession_Approved_By__c ))))
+
+), true, false)</errorConditionFormula>
+    <errorMessage>Please fill the concession checkbox/details.</errorMessage>
+</ValidationRule>

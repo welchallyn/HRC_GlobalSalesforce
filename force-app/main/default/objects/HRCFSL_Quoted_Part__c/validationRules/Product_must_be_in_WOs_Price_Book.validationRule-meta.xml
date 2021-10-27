@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_must_be_in_WOs_Price_Book</fullName>
+    <active>true</active>
+    <errorConditionFormula>HRCSVC_Not_In_Price_Book__c</errorConditionFormula>
+    <errorMessage>The product you selected is not available for your business unit and region, or it isn&apos;t in the Price Book on the Work Order you are quoting. Select a different product or contact your system administrator for assistance.</errorMessage>
+</ValidationRule>

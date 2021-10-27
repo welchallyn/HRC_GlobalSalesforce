@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This metadata is to map the status field on asset and based on this we will update the asset active checkbox.
+Used in &apos;HRCFSL Reset Asset Status&apos;
+Developed for #SE-273</description>
+    <label>HRCSVC Asset Status Mappings</label>
+    <pluralLabel>HRCSVC Asset Status Mappings</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

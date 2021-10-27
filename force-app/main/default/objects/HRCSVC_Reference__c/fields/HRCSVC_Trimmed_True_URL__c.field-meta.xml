@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Trimmed_True_URL__c</fullName>
+    <externalId>false</externalId>
+    <formula>MID(
+   HRCSVC_URL__c,
+   IF(
+      CONTAINS(HRCSVC_URL__c, &quot;www.&quot;),
+      FIND(&quot;www.&quot;, HRCSVC_URL__c) + 4,
+      IF(
+         CONTAINS(HRCSVC_URL__c, &quot;://&quot;),
+         FIND(&quot;://&quot;, HRCSVC_URL__c) + 3,
+         0
+      )
+   ),
+   LEN(HRCSVC_URL__c) -
+   IF(
+      CONTAINS(HRCSVC_URL__c, &quot;www.&quot;),
+      FIND(&quot;www.&quot;, HRCSVC_URL__c) + 3,
+      IF(
+         CONTAINS(HRCSVC_URL__c, &quot;://&quot;),
+         FIND(&quot;://&quot;, HRCSVC_URL__c) + 2,
+         0
+      )
+   ) - IF(RIGHT(HRCSVC_URL__c, 1) = &quot;/&quot;, 1, 0)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Trimmed URL</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

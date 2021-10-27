@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Events_Occurred_Allegation__c</fullName>
+    <description>SE-2259 Updates to Manage Complaint flow</description>
+    <externalId>false</externalId>
+    <label>Events Occurred Allegation</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Delayed/Prolonged Diagnosis Treatment or Hospitalization</fullName>
+                <default>false</default>
+                <label>Delayed/Prolonged Diagnosis Treatment or Hospitalization</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Patient Condition Deteriorated</fullName>
+                <default>false</default>
+                <label>Patient Condition Deteriorated</label>
+            </value>
+            <value>
+                <fullName>Prolonged Procedure/Surgery</fullName>
+                <default>false</default>
+                <label>Prolonged Procedure/Surgery</label>
+            </value>
+            <value>
+                <fullName>Sterile Field Compromised</fullName>
+                <default>false</default>
+                <label>Sterile Field Compromised</label>
+            </value>
+            <value>
+                <fullName>Unintended Movement of Patient</fullName>
+                <default>false</default>
+                <label>Unintended Movement of Patient</label>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+                <label>Unknown</label>
+            </value>
+            <value>
+                <fullName>Unnecessary Medication Treatment</fullName>
+                <default>false</default>
+                <label>Unnecessary Medication Treatment</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

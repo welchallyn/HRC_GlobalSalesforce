@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCFSL_SWORD_Require_Contact</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ 				NOT( $Setup.HRCFSL_Org_Exception_Rule__c.HRCFSL_Validation_Rule__c),
+				
+				VLOOKUP( $ObjectType.HRCFSL_SWORD__c.Fields.HRCFSL_Require_Contact__c,
+												 $ObjectType.HRCFSL_SWORD__c.Fields.Name,
+												 HRCFSL_Work_Order__r.HRCFSL_SWORD_ID__c) = TRUE,
+				ISBLANK( HRCFSL_Work_Order__r.HRCFSL_Contact_First_Name__c),
+				ISBLANK( HRCFSL_Work_Order__r.HRCFSL_Contact_Last_Name__c),
+                                ISBLANK( HRCFSL_Work_Order__r.ContactId), 
+				ISPICKVAL(Status, &quot;Awaiting Signature&quot;))</errorConditionFormula>
+    <errorMessage>Contact is Required.</errorMessage>
+</ValidationRule>

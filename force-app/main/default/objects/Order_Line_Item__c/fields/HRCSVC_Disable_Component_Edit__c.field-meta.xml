@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Disable_Component_Edit__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Developed this for #SE-1008</description>
+    <externalId>false</externalId>
+    <label>Disable Component Edit</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

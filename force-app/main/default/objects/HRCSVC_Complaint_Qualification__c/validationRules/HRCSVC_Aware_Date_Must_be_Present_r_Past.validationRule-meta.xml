@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Aware_Date_Must_be_Present_r_Past</fullName>
+    <active>true</active>
+    <description>SE-937</description>
+    <errorConditionFormula>AND(NOT($Setup.HRCFSL_Org_Exception_Rule__c.HRCFSL_Validation_Rule__c),  NOT(ISBLANK( HRCSVC_Aware_Date__c )) , HRCSVC_Aware_Date__c  &gt;  TODAY() )</errorConditionFormula>
+    <errorMessage>Please select the Aware date as today or from past days</errorMessage>
+</ValidationRule>

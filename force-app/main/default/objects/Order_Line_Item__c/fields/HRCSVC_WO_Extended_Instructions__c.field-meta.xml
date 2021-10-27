@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_WO_Extended_Instructions__c</fullName>
+    <description>This field is used by the Rental Lightning Component so that we can copy the user entered Extended Instructions to the Work Order that gets created as a part of various rental &quot;buttons&quot; e.g. SE-1008, SE-1007. This is a technical field only and should NOT be used for any other purpose than facilitating copying information from the rental component to the Work Order.</description>
+    <externalId>false</externalId>
+    <label>WO Extended Instructions</label>
+    <length>450</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_changes_after_case_closure</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISPICKVAL(HRCSVC_Case__r.Status, &quot;Closed&quot;)</errorConditionFormula>
+    <errorMessage>You cannot change a reference after the parent case is closed. You must re-open the case or contact your administrator.</errorMessage>
+</ValidationRule>
