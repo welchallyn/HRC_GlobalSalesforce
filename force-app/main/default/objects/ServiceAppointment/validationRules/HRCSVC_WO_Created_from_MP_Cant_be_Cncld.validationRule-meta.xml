@@ -3,6 +3,6 @@
     <fullName>HRCSVC_WO_Created_from_MP_Cant_be_Cncld</fullName>
     <active>true</active>
     <description>SE-257 - Field Techs should not be able to cancel work orders created from the Maintenance plan.</description>
-    <errorConditionFormula>AND(NOT( $Setup.HRCFSL_Org_Exception_Rule__c.HRCFSL_Validation_Rule__c ), ISCHANGED( Status )  ,  ISPICKVAL(Status, &quot;Canceled&quot;) , HRCFSL_Work_Order__r.IsGeneratedFromMaintenancePlan = true)</errorConditionFormula>
+    <errorConditionFormula>AND(NOT( $Setup.HRCFSL_Org_Exception_Rule__c.HRCFSL_Validation_Rule__c ), ISCHANGED( Status )  ,  ISPICKVAL(Status, &quot;Canceled&quot;) , HRCFSL_Work_Order__r.IsGeneratedFromMaintenancePlan = true,NOT( $Permission.HRCSVC2_Can_cancel_WOs_generated_from_Maintenance_Plans ))</errorConditionFormula>
     <errorMessage>Work orders cannot be canceled which are generated from the maintenance plan.</errorMessage>
 </ValidationRule>

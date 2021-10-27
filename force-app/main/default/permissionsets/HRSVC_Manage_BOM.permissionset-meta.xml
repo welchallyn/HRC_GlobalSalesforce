@@ -1737,6 +1737,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>HRCSVC_Problem_Resolution_Code__c.ExternalId__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>HRCSVC_Problem_Resolution_Code__c.HRCSVC_Parent_Problem_Code__c</field>
         <readable>false</readable>
     </fieldPermissions>

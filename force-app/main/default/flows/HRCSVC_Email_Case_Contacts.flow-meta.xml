@@ -194,13 +194,6 @@
                     <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
-            <conditions>
-                <leftValueReference>Get_Case_Details.RecordType.Name</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Care Comm</stringValue>
-                </rightValue>
-            </conditions>
             <connector>
                 <targetReference>Assign_Template</targetReference>
             </connector>

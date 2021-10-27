@@ -1182,7 +1182,7 @@
             <targetReference>Get_Service_Appointment_Details</targetReference>
         </connector>
     </start>
-    <status>Obsolete</status>
+    <status>Active</status>
     <subflows>
         <name>Cancel_Notification</name>
         <label>Cancel Notification</label>
@@ -1265,12 +1265,6 @@
             <name>Id</name>
             <value>
                 <elementReference>ServiceAppointmentDetails.HRCFSL_Work_Order__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>SA_Status</name>
-            <value>
-                <elementReference>Status_InProgress_Selection</elementReference>
             </value>
         </inputAssignments>
     </subflows>

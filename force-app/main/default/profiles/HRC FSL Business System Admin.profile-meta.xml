@@ -1956,6 +1956,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>HRCSVC_Problem_Resolution_Code__c.ExternalId__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>HRCSVC_Problem_Resolution_Code__c.HRCSVC_Parent_Problem_Code__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -4706,13 +4711,11 @@
     </pageAccesses>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>Asset.HRC_Service_Asset</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>Case.Care_Comm</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -4793,7 +4796,6 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>Order_Line_Item__c.HRCSVC_Parts_Order_Line_Item</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -4814,7 +4816,6 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>Order__c.HRCSVC_Parts_Order</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>

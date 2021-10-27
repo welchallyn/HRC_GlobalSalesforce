@@ -117,7 +117,7 @@
             <targetReference>IBOAR_Validation_SF</targetReference>
         </connector>
     </start>
-    <status>Obsolete</status>
+    <status>Draft</status>
     <subflows>
         <name>Check_Asset_Location_SF</name>
         <label>Check Asset Location</label>

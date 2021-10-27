@@ -27,11 +27,6 @@
                 <default>false</default>
                 <label>Death</label>
             </value>
-            <value>
-                <fullName>Asked but not provided</fullName>
-                <default>false</default>
-                <label>Asked but not provided</label>
-            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

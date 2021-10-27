@@ -1955,6 +1955,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>HRCSVC_Problem_Resolution_Code__c.ExternalId__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>HRCSVC_Problem_Resolution_Code__c.HRCSVC_Parent_Problem_Code__c</field>
         <readable>true</readable>
@@ -4957,7 +4962,6 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>Case.Care_Comm</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -5072,9 +5076,10 @@
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
-        <default>false</default>
+        <default>true</default>
+        <personAccountDefault>true</personAccountDefault>
         <recordType>WorkOrder.HRCFSL_Capital_Field_Service</recordType>
-        <visible>false</visible>
+        <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
@@ -5099,12 +5104,12 @@
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>WorkOrder.HRCFSL_Quote</recordType>
-        <visible>false</visible>
+        <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>WorkOrder.HRCFSL_Rental</recordType>
-        <visible>false</visible>
+        <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
@@ -5139,22 +5144,22 @@
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>WorkOrder.HRCSVC_EMEA_Mortara_Field_Service</recordType>
-        <visible>false</visible>
+        <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>WorkOrder.HRCSVC_EMEA_Trumpf_Field_Service</recordType>
-        <visible>false</visible>
+        <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>WorkOrder.HRCSVC_Factory_Repair_WO</recordType>
-        <visible>false</visible>
+        <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>WorkOrder.HRCSVC_Field_IE_WO</recordType>
-        <visible>false</visible>
+        <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
@@ -5164,7 +5169,7 @@
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>WorkOrder.HRCSVC_Remote_IE_Software_Support_WO</recordType>
-        <visible>false</visible>
+        <visible>true</visible>
     </recordTypeVisibilities>
     <tabVisibilities>
         <tab>Corrective_Action_MOD_PM</tab>
