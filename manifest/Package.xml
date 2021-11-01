@@ -874,6 +874,7 @@
 		<members>Case.HRCSVC_Open_Work_Orders__c</members>
 		<members>Case.HRCSVC_SW_Version_Missing__c</members>
 		<members>Additional_Account_Info__c.Account__c</members>
+        <members>HRCSVC_BOM_Item__c.HRCSVC20_BOM_Header_Product__c</members>
 		<name>CustomField</name>
 	</types>
 	<types>
