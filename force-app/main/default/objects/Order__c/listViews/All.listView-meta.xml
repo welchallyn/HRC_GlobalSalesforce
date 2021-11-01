@@ -11,10 +11,5 @@
     <columns>HRCSVC_Medical_Record_ID__c</columns>
     <columns>HRCSVC_ERP_ID__c</columns>
     <filterScope>Everything</filterScope>
-    <filters>
-        <field>RECORDTYPE</field>
-        <operation>equals</operation>
-        <value>Order__c.Rental_Orders</value>
-    </filters>
     <label>All</label>
 </ListView>
