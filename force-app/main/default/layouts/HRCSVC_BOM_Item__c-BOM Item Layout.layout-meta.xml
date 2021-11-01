@@ -16,7 +16,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>BOM_Header_Product__c</field>
+                <field>HRCSVC20_BOM_Header_Product__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
