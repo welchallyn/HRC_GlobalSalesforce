@@ -22,6 +22,7 @@
         <connector>
             <targetReference>myDecision13</targetReference>
         </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <processMetadataValues>
                 <name>dataType</name>
@@ -87,6 +88,7 @@
         <connector>
             <targetReference>myDecision19</targetReference>
         </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <processMetadataValues>
                 <name>dataType</name>
@@ -152,6 +154,7 @@
         <connector>
             <targetReference>myDecision21</targetReference>
         </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <processMetadataValues>
                 <name>dataType</name>
@@ -217,6 +220,7 @@
         <connector>
             <targetReference>myDecision26</targetReference>
         </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <processMetadataValues>
                 <name>dataType</name>
@@ -324,6 +328,7 @@
         <connector>
             <targetReference>myDecision31</targetReference>
         </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <processMetadataValues>
                 <name>dataType</name>
@@ -389,6 +394,7 @@
         <connector>
             <targetReference>myDecision39</targetReference>
         </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <processMetadataValues>
                 <name>dataType</name>
@@ -496,6 +502,7 @@
         <connector>
             <targetReference>myDecision52</targetReference>
         </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <processMetadataValues>
                 <name>dataType</name>
@@ -603,6 +610,7 @@
         <connector>
             <targetReference>myRule_5_A2</targetReference>
         </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <processMetadataValues>
                 <name>dataType</name>
@@ -710,6 +718,7 @@
         <connector>
             <targetReference>myDecision6</targetReference>
         </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <processMetadataValues>
                 <name>dataType</name>
@@ -2443,7 +2452,7 @@
                 <leftValueReference>myVariable_current.OwnerId</leftValueReference>
                 <operator>StartsWith</operator>
                 <rightValue>
-                    <elementReference>formula_8_myRule_7_0459298280</elementReference>
+                    <elementReference>formula_8_myRule_7_3332238415</elementReference>
                 </rightValue>
             </conditions>
             <connector>
@@ -3760,7 +3769,7 @@
                 <leftValueReference>myVariable_old.OwnerId</leftValueReference>
                 <operator>StartsWith</operator>
                 <rightValue>
-                    <elementReference>formula_9_myRule_7_pmetrule_3523730753</elementReference>
+                    <elementReference>formula_9_myRule_7_pmetrule_0886618762</elementReference>
                 </rightValue>
             </conditions>
             <connector>
@@ -3777,7 +3786,7 @@
                 <stringValue>NOW() </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_10_myRule_7_A1_8469202218</name>
+        <name>formula_10_myRule_7_A1_1579950279</name>
         <dataType>DateTime</dataType>
         <expression>NOW()</expression>
     </formulas>
@@ -3788,7 +3797,7 @@
                 <stringValue>NOW() </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_54_myWaitEvent_myWait_myRule_53_event_0_SA1_8468164175</name>
+        <name>formula_54_myWaitEvent_myWait_myRule_53_event_0_SA1_9683976203</name>
         <dataType>DateTime</dataType>
         <expression>NOW()</expression>
     </formulas>
@@ -3799,7 +3808,7 @@
                 <stringValue>&quot;005&quot;</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_8_myRule_7_0459298280</name>
+        <name>formula_8_myRule_7_3332238415</name>
         <dataType>String</dataType>
         <expression>&quot;005&quot;</expression>
     </formulas>
@@ -3810,7 +3819,7 @@
                 <stringValue>&quot;005&quot;</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_9_myRule_7_pmetrule_3523730753</name>
+        <name>formula_9_myRule_7_pmetrule_0886618762</name>
         <dataType>String</dataType>
         <expression>&quot;005&quot;</expression>
     </formulas>
@@ -3940,12 +3949,12 @@ ISPICKVAL(PRIORVALUE({!myVariable_current.Reason__c}) , &quot;Pending Customer I
         <processMetadataValues>
             <name>originalFormula</name>
             <value>
-                <stringValue>ISNEW() &amp;&amp; ISPICKVAL([Case].HRCSVC_Send_Email_Notifications_Picklist__c, &quot;Yes&quot;) &amp;&amp; (ISPICKVAL([Case].Origin, &quot;Email&quot;) || ISPICKVAL([Case].Origin, &quot;Phone&quot;))</stringValue>
+                <stringValue>ISNEW() &amp;&amp; ISPICKVAL([Case].HRCSVC_Send_Email_Notifications_Picklist__c, &quot;Yes&quot;) &amp;&amp; (ISPICKVAL([Case].Origin, &quot;Email&quot;) || ISPICKVAL([Case].Origin, &quot;Phone&quot;) || (ISPICKVAL([Case].Origin, &quot;Web&quot;) &amp;&amp; [Case].CreatedBy.Full_Name__c = &quot;Mulesoft Integration&quot;))</stringValue>
             </value>
         </processMetadataValues>
         <name>formula_myRule_38</name>
         <dataType>Boolean</dataType>
-        <expression>ISNEW() &amp;&amp; ISPICKVAL({!myVariable_current.HRCSVC_Send_Email_Notifications_Picklist__c}, &quot;Yes&quot;) &amp;&amp; (ISPICKVAL({!myVariable_current.Origin}, &quot;Email&quot;) || ISPICKVAL({!myVariable_current.Origin}, &quot;Phone&quot;))</expression>
+        <expression>ISNEW() &amp;&amp; ISPICKVAL({!myVariable_current.HRCSVC_Send_Email_Notifications_Picklist__c}, &quot;Yes&quot;) &amp;&amp; (ISPICKVAL({!myVariable_current.Origin}, &quot;Email&quot;) || ISPICKVAL({!myVariable_current.Origin}, &quot;Phone&quot;) || (ISPICKVAL({!myVariable_current.Origin}, &quot;Web&quot;) &amp;&amp; {!myVariable_current.CreatedBy.Full_Name__c} = &quot;Mulesoft Integration&quot;))</expression>
     </formulas>
     <formulas>
         <processMetadataValues>
@@ -4067,7 +4076,7 @@ ISCHANGED({!myVariable_old.HRCSVC_Location__c} )
 )
 )</expression>
     </formulas>
-    <interviewLabel>HRCSVC_Case_Actions-4_InterviewLabel</interviewLabel>
+    <interviewLabel>HRCSVC_Case_Actions-5_InterviewLabel</interviewLabel>
     <label>HRCSVC Case Actions</label>
     <processMetadataValues>
         <name>ObjectType</name>
@@ -4201,7 +4210,7 @@ ISCHANGED({!myVariable_old.HRCSVC_Location__c} )
             </processMetadataValues>
             <field>ReminderDateTime</field>
             <value>
-                <elementReference>formula_54_myWaitEvent_myWait_myRule_53_event_0_SA1_8468164175</elementReference>
+                <elementReference>formula_54_myWaitEvent_myWait_myRule_53_event_0_SA1_9683976203</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -6077,7 +6086,7 @@ ISCHANGED({!myVariable_old.HRCSVC_Location__c} )
             </processMetadataValues>
             <field>HRCSVC_Date_Time_Individual_Was_Assigned__c</field>
             <value>
-                <elementReference>formula_10_myRule_7_A1_8469202218</elementReference>
+                <elementReference>formula_10_myRule_7_A1_1579950279</elementReference>
             </value>
         </inputAssignments>
         <object>Case</object>

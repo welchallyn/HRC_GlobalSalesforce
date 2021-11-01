@@ -6,6 +6,7 @@
  Create a validation rule on the Work Order object* that doesn&apos;t allow change of the Customer field (Location Lookup) if this field is already populated.</description>
     <errorConditionFormula>AND( ISCHANGED(LocationId), 
 NOT(ISBLANK(PRIORVALUE(LocationId))), 
+NOT(HRCFSL_PM_PDI__c),
 NOT( $Setup.HRCFSL_Org_Exception_Rule__c.HRCFSL_Validation_Rule__c ))</errorConditionFormula>
     <errorMessage>You cannot change the Customer as it is already populated.</errorMessage>
 </ValidationRule>

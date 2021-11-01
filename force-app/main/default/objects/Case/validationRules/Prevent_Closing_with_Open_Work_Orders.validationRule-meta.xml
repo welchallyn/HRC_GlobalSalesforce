@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Closing_with_Open_Work_Orders</fullName>
+    <active>true</active>
+    <description>GSC-315 - used in conjunction with Complaint Qualification Check flow</description>
+    <errorConditionFormula>HRCSVC_Open_Work_Orders__c</errorConditionFormula>
+    <errorMessage>You cannot close this Case since it is related to an open Work Order</errorMessage>
+</ValidationRule>

@@ -23,6 +23,10 @@
                 <behavior>Edit</behavior>
                 <field>HRCSVC_Required__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>BOM_Header_Product__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

@@ -10,6 +10,7 @@
         <connector>
             <targetReference>Create_Mail_Message</targetReference>
         </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <name>casenumber</name>
             <value>
@@ -399,6 +400,16 @@
         <name>emailBody</name>
         <dataType>String</dataType>
         <expression>{!emailTemplate}</expression>
+    </formulas>
+    <formulas>
+        <name>Portal_Case_Signature</name>
+        <dataType>String</dataType>
+        <expression>IF(
+AND(ISPICKVAL({!Get_Case_Details.Origin} , &quot;Web&quot;),
+{!Get_Case_Details.CreatedBy.Full_Name__c} = &quot;Mulesoft Integration&quot;
+),
+&quot;Link to your Case --&gt; &quot; &amp; &quot;https://www.hillrom.com/en/portal/caseportal/#/case-details/&quot; &amp; {!Get_Case_Details.CaseNumber},&quot;&quot;
+)</expression>
     </formulas>
     <formulas>
         <name>ProductName</name>

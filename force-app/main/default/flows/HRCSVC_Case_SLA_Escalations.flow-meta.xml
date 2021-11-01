@@ -16,6 +16,7 @@
         <connector>
             <targetReference>myWaitEvent_myWait_myRule_1_event_0_SA2</targetReference>
         </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <name>text</name>
             <value>
@@ -48,6 +49,7 @@
         <connector>
             <targetReference>myAssignment_myWaitEvent_myWait_myRule_1_event_0_SA3</targetReference>
         </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <name>text</name>
             <value>
@@ -92,6 +94,7 @@
         <connector>
             <targetReference>myWaitEvent_myWait_myRule_1_event_0_postWaitExecutionAssignment</targetReference>
         </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <name>customNotifTypeId</name>
             <value>
@@ -181,6 +184,7 @@
         <connector>
             <targetReference>myWaitEvent_myWait_myRule_1_event_1_SA2</targetReference>
         </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <name>text</name>
             <value>
@@ -213,6 +217,7 @@
         <connector>
             <targetReference>myAssignment_myWaitEvent_myWait_myRule_1_event_1_SA3</targetReference>
         </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <name>text</name>
             <value>
@@ -257,6 +262,7 @@
         <connector>
             <targetReference>myWaitEvent_myWait_myRule_1_event_1_postWaitExecutionAssignment</targetReference>
         </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <name>customNotifTypeId</name>
             <value>
@@ -346,6 +352,7 @@
         <connector>
             <targetReference>myWaitEvent_myWait_myRule_1_event_2_SA2</targetReference>
         </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <name>text</name>
             <value>
@@ -378,6 +385,7 @@
         <connector>
             <targetReference>myAssignment_myWaitEvent_myWait_myRule_1_event_2_SA3</targetReference>
         </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <name>text</name>
             <value>
@@ -422,6 +430,7 @@
         <connector>
             <targetReference>myWaitEvent_myWait_myRule_1_event_2_SA4</targetReference>
         </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <name>customNotifTypeId</name>
             <value>
@@ -511,6 +520,7 @@
         <connector>
             <targetReference>myWaitEvent_myWait_myRule_1_event_2_postWaitExecutionAssignment</targetReference>
         </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <name>text</name>
             <value>
@@ -543,6 +553,7 @@
         <connector>
             <targetReference>myWaitEvent_myWait_myRule_1_event_3_SA2</targetReference>
         </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <name>SObjectRowId</name>
             <value>
@@ -566,6 +577,7 @@
         <connector>
             <targetReference>myAssignment_myWaitEvent_myWait_myRule_1_event_3_SA3</targetReference>
         </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <name>text</name>
             <value>
@@ -610,6 +622,7 @@
         <connector>
             <targetReference>myWaitEvent_myWait_myRule_1_event_3_SA4</targetReference>
         </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <name>customNotifTypeId</name>
             <value>
@@ -699,6 +712,7 @@
         <connector>
             <targetReference>myWaitEvent_myWait_myRule_1_event_3_SA5</targetReference>
         </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <name>text</name>
             <value>
@@ -731,6 +745,7 @@
         <connector>
             <targetReference>myWaitEvent_myWait_myRule_1_event_3_postWaitExecutionAssignment</targetReference>
         </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <name>text</name>
             <value>
