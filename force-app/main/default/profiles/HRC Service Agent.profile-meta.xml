@@ -1404,7 +1404,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>HRCSVC_BOM_Item__c.BOM_Header_Product__c</field>
+        <field>HRCSVC_BOM_Item__c.HRCSVC20_BOM_Header_Product__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>

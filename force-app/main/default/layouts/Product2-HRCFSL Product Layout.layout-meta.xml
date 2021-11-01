@@ -286,7 +286,7 @@
         <fields>HRCSVC_Serial_Number__c</fields>
         <fields>Tool_Product_Model__c</fields>
         <fields>HRCSVC_Type__c</fields>
-        <relatedList>HRCSVC_BOM_Item__c.BOM_Header_Product__c</relatedList>
+        <relatedList>HRCSVC_BOM_Item__c.HRCSVC20_BOM_Header_Product__c</relatedList>
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
