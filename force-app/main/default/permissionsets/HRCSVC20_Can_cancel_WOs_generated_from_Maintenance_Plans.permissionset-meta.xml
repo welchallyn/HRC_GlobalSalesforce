@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>HRCSVC20_Can_cancel_WOs_generated_from_Maintenance_Plans</name>
+    </customPermissions>
+    <description>#SE-1186: Created the custom permission set to prevent users from canceling the WOs created from MP</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>HRCSVC20 Can cancel WOs generated from Maintenance Plans</label>
+    <license>Salesforce</license>
+</PermissionSet>
