@@ -4389,11 +4389,23 @@
         <layout>Additional_Account_Info__c-HRCSVC Additional Account Info Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Asset-Asset Layout</layout>
+        <recordType>Asset.Breathe_Asset</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Asset-HRCFSL Asset Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Asset-HRCFSL Asset Layout</layout>
         <recordType>Asset.HRC_Service_Asset</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Asset-INT Competitor Asset</layout>
+        <recordType>Asset.INT_Competitor_Asset</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Asset-INT Demo Asset</layout>
+        <recordType>Asset.INT_Demo_Asset</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Case-Case Layout</layout>
@@ -4794,8 +4806,24 @@
         <enabled>false</enabled>
     </pageAccesses>
     <recordTypeVisibilities>
+        <default>true</default>
+        <personAccountDefault>true</personAccountDefault>
+        <recordType>Asset.Breathe_Asset</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
         <default>false</default>
         <recordType>Asset.HRC_Service_Asset</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>Asset.INT_Competitor_Asset</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>Asset.INT_Demo_Asset</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>

@@ -874,7 +874,6 @@
 		<members>Case.HRCSVC_Open_Work_Orders__c</members>
 		<members>Case.HRCSVC_SW_Version_Missing__c</members>
 		<members>Additional_Account_Info__c.Account__c</members>
-        <members>HRCSVC_BOM_Item__c.HRCSVC20_BOM_Header_Product__c</members>
 		<name>CustomField</name>
 	</types>
 	<types>
@@ -1162,6 +1161,7 @@
 		<members>HRCSVC_Asset_Warranty_Record_Page</members>
 		<members>HRCSVC_Case_Record_Page</members>
 		<members>HRCSVC_Complaint_Qualification_Record_Page</members>
+		<members>HRCSVC_Complaint_Qualification_Record_Page_11</members>
 		<members>HRCSVC_Create_Rental_Order</members>
 		<members>HRCSVC_Entitlement_Record_Page</members>
 		<members>HRCSVC_Order_Dynamic_Lightning_Record</members>
@@ -1311,6 +1311,8 @@
 		<members>HRCSVC_Incoming_Email_Actions</members>
 		<members>HRCSVC_Re_Open_Case_on_EtQ_Task_Received</members>
 		<members>HRCSVC_Update_Historical_Comments</members>
+		<members>HRCSVC20_Component_Swap</members>
+		<members>HRCSVC20_Consume_BOM_Item</members>
 		<name>Flow</name>
 	</types>
 	<types>
@@ -1322,6 +1324,7 @@
 		<members>HRCSVC_Protocol_Category</members>
 		<members>HRCSVC_Work_Order_Record_Types</members>
 		<members>HRCSVC_Quantity_Unit_of_Measure</members>
+		<members>Language</members>
 		<name>GlobalValueSet</name>
 	</types>
 	<types>
@@ -1485,6 +1488,10 @@
 		<name>PathAssistant</name>
 	</types>
 	<types>
+      <members>HRCSVC20_Can_cancel_WOs_generated_from_Maintenance_Plans</members>
+      <name>CustomPermission</name>
+    </types>
+	<types>
 		<members>HRCFSL_Permissions</members>
 		<members>HRCFSL_Record_Type_Permission</members>
 		<members>HRCFSL_Team_Lead</members>
@@ -1513,6 +1520,7 @@
 		<members>HRCSVC_Merge_Cases</members>
 		<members>HRCSVC_Transfer_Cases_Permission</members>
 		<members>HRCSVC_US_CCV_Contact_Access</members>
+		<members>HRCSVC20_Can_cancel_WOs_generated_from_Maintenance_Plans</members>
 		<name>PermissionSet</name>
 	</types>
 	<types>
@@ -1589,10 +1597,14 @@
 		<members>WorkOrder.HRCSVC_Create_Temporary_Account</members>
 		<members>WorkOrder.Product_Usage</members>
 		<members>WorkOrder.Track_Product_Usage</members>
+		<members>HRCSVC_BOM_Item__c.Test_List_Button</members>
 		<name>QuickAction</name>
 	</types>
 	<types>
 		<members>Asset.HRC_Service_Asset</members>
+		<members>Asset.Breathe_Asset</members>
+		<members>Asset.INT_Competitor_Asset</members>
+		<members>Asset.INT_Demo_Asset</members>
 		<members>Case.Care_Comm</members>
 		<members>Case.Factory_Repair_Depot</members>
 		<members>Case.HRCSVC_Capital_Service</members>
@@ -1863,6 +1875,7 @@
 		<members>Case.Asset_is_required</members>
 		<members>Case.Prevent_Closing_with_Open_Work_Orders</members>
 		<members>Case.SW_Version_Required_to_Close</members>
+        <members>WorkOrder.HRCFSL_Comments_Are_Required</members>
 		<name>ValidationRule</name>
 	</types>
 	<types>

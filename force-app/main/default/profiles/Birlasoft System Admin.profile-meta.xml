@@ -4374,8 +4374,20 @@
         <layout>Asset-Asset Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Asset-Breathe Layout</layout>
+        <recordType>Asset.Breathe_Asset</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Asset-HRCFSL Asset Layout</layout>
         <recordType>Asset.HRC_Service_Asset</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Asset-INT Competitor Asset</layout>
+        <recordType>Asset.INT_Competitor_Asset</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Asset-INT Demo Asset</layout>
+        <recordType>Asset.INT_Demo_Asset</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Case-Case Layout</layout>
@@ -4995,8 +5007,23 @@
         <enabled>false</enabled>
     </pageAccesses>
     <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>Asset.Breathe_Asset</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
         <default>true</default>
         <recordType>Asset.HRC_Service_Asset</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>Asset.INT_Competitor_Asset</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>Asset.INT_Demo_Asset</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
