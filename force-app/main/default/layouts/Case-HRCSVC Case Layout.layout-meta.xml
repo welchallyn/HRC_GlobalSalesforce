@@ -650,7 +650,6 @@
         <fields>HRCSVC_Work_Order__c</fields>
         <fields>CREATED_DATE</fields>
         <fields>CREATEDBY_USER</fields>
-        <fields>HRCSVC_Status__c</fields>
         <fields>HRCSVC_ETQ_Complaint__c</fields>
         <fields>HRCSVC_Device_Age__c</fields>
         <fields>HRCSVC_Injury_or_Death__c</fields>

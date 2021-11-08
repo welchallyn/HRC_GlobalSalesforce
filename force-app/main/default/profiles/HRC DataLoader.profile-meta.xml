@@ -99,6 +99,14 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>HRCSVC_Auto_CreateSA_Batch</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>HRCSVC_Auto_CreateSA_Batch_Test</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>HRCSVC_BatchToSendServiceEstimate</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -120,6 +128,14 @@
     </classAccesses>
     <classAccesses>
         <apexClass>HRCSVC_CreateOrderAndOrderLineItemTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>HRCSVC_Email_Case_Contacts</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>HRCSVC_Email_Case_Contacts_Test</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -179,6 +195,11 @@
         <editable>false</editable>
         <field>AccountContactRelation.HRCSVC_Is_Admin__c</field>
         <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Additional_Account_Info__c.Account__c</field>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -847,6 +868,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Case.HRCSVC_Open_Work_Orders__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Case.HRCSVC_PO_Number__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -882,7 +908,17 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Case.HRCSVC_Reopened_Case_by_ETQ__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Case.HRCSVC_SLA_Milestone_Time__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Case.HRCSVC_SW_Version_Missing__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1048,6 +1084,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Entitlement.HRCSVC_Service_Package__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Entitlement.HRCSVC_Status_Notes__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1352,6 +1393,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>HRCSVC_BOM_Item__c.HRCSVC20_BOM_Header_Product__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>HRCSVC_BOM_Item__c.HRCSVC_Product_Model__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -1388,6 +1434,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>HRCSVC_BOM_Item__c.Tool_Product_Model__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>HRCSVC_BOM__c.Product_Lookup__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -4328,7 +4379,19 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Asset-HRCFSL Asset Layout</layout>
+        <recordType>Asset.Breathe_Asset</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Asset-HRCFSL Asset Layout</layout>
         <recordType>Asset.HRC_Service_Asset</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Asset-INT Competitor Asset</layout>
+        <recordType>Asset.INT_Competitor_Asset</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Asset-INT Demo Asset</layout>
+        <recordType>Asset.INT_Demo_Asset</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Case-Case Layout</layout>
@@ -4460,6 +4523,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>HRCSVC_Remote_Access__c-HRCSVC Remote Access Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>HRCSVC_ST_Product_Unavailability__c-Service Territory Product Unavailability Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>HRCSVC_Service_Package_Coverage__c-Service Package Coverage Layout</layout>
@@ -4944,9 +5010,24 @@
         <enabled>false</enabled>
     </pageAccesses>
     <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>Asset.Breathe_Asset</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
         <default>true</default>
         <personAccountDefault>true</personAccountDefault>
         <recordType>Asset.HRC_Service_Asset</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>Asset.INT_Competitor_Asset</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>Asset.INT_Demo_Asset</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>

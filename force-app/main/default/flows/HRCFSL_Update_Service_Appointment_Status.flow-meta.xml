@@ -19,6 +19,7 @@
         <locationY>200</locationY>
         <actionName>HRCFSL_Platform_Event_for_Emailing</actionName>
         <actionType>flow</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <processMetadataValues>
                 <name>dataType</name>

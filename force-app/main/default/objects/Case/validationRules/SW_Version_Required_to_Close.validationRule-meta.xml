@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SW_Version_Required_to_Close</fullName>
+    <active>true</active>
+    <description>SE-2521</description>
+    <errorConditionFormula>HRCSVC_SW_Version_Missing__c</errorConditionFormula>
+    <errorDisplayField>HRCSVC_Software_Version__c</errorDisplayField>
+    <errorMessage>Software Version is required when closing a Case with a Complaint Qualification</errorMessage>
+</ValidationRule>

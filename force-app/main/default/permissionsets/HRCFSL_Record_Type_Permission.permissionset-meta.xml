@@ -22,6 +22,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Additional_Account_Info__c.Account__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Additional_Account_Info__c.HRCSVC_Account_Protocol__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -687,6 +692,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Case.HRCSVC_Open_Work_Orders__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Case.HRCSVC_PO_Number__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -722,7 +732,17 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Case.HRCSVC_Reopened_Case_by_ETQ__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Case.HRCSVC_SLA_Milestone_Time__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.HRCSVC_SW_Version_Missing__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -863,6 +883,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Entitlement.HRCSVC_Service_Package__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Entitlement.HRCSVC_Status_Notes__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1147,6 +1172,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>HRCSVC_BOM_Item__c.HRCSVC20_BOM_Header_Product__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>HRCSVC_BOM_Item__c.HRCSVC_Product_Model__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -1183,6 +1213,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>HRCSVC_BOM_Item__c.Tool_Product_Model__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>HRCSVC_BOM__c.Product_Lookup__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>

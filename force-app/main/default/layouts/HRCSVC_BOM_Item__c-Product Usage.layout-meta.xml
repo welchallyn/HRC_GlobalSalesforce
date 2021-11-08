@@ -23,6 +23,10 @@
                 <behavior>Edit</behavior>
                 <field>Product_Usage_Unit_of_Measure__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>HRCSVC20_BOM_Header_Product__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

@@ -19,6 +19,7 @@
         <locationY>200</locationY>
         <actionName>HRCSVC_Cancel_WO_if_Order_line_Item_is_cancelled</actionName>
         <actionType>flow</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <processMetadataValues>
                 <name>dataType</name>
@@ -84,6 +85,7 @@
         <connector>
             <targetReference>myDecision6</targetReference>
         </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <processMetadataValues>
                 <name>dataType</name>
@@ -149,6 +151,7 @@
         <connector>
             <targetReference>myDecision8</targetReference>
         </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <processMetadataValues>
                 <name>dataType</name>

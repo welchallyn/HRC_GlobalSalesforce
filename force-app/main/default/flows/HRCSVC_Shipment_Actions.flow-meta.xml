@@ -19,6 +19,7 @@
         <locationY>200</locationY>
         <actionName>HRCSVC_Update_OLI_Actual_Ship_date_with_Shipment_Date</actionName>
         <actionType>flow</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <processMetadataValues>
                 <name>dataType</name>

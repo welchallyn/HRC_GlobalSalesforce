@@ -159,7 +159,17 @@
         <type>AutoNumber</type>
     </nameField>
     <pluralLabel>BOM Items</pluralLabel>
-    <searchLayouts></searchLayouts>
+    <searchLayouts>
+        <listViewButtons>Test_List_Button</listViewButtons>
+        <lookupDialogsAdditionalFields>HRCSVC_Product_Model__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>HRCSVC_Region__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>HRCSVC_Serial_Number__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Tool_Product_Model__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>HRCSVC_Product_Model__c</searchFilterFields>
+        <searchFilterFields>HRCSVC_Serial_Number__c</searchFilterFields>
+        <searchFilterFields>Tool_Product_Model__c</searchFilterFields>
+        <searchFilterFields>HRCSVC_Type__c</searchFilterFields>
+    </searchLayouts>
     <sharingModel>ControlledByParent</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

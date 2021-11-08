@@ -20,7 +20,7 @@
         <name>Assign_Audible_0</name>
         <label>Assign Audible</label>
         <locationX>182</locationX>
-        <locationY>4454</locationY>
+        <locationY>3014</locationY>
         <assignmentItems>
             <assignToReference>TestsPerfomedValues</assignToReference>
             <operator>Add</operator>
@@ -138,7 +138,7 @@
         <name>Assign_CQ_Inputs</name>
         <label>Assign CQ Inputs</label>
         <locationX>314</locationX>
-        <locationY>5342</locationY>
+        <locationY>3902</locationY>
         <assignmentItems>
             <assignToReference>complaintQualification.HRCSVC_Describe_Malfunction_Event__c</assignToReference>
             <operator>Assign</operator>
@@ -372,7 +372,7 @@
         <name>Assign_Functional_0</name>
         <label>Assign Functional</label>
         <locationX>182</locationX>
-        <locationY>4790</locationY>
+        <locationY>3350</locationY>
         <assignmentItems>
             <assignToReference>TestsPerfomedValues</assignToReference>
             <operator>Add</operator>
@@ -427,7 +427,7 @@
         <name>Assign_Visual_0</name>
         <label>Assign Visual</label>
         <locationX>182</locationX>
-        <locationY>5126</locationY>
+        <locationY>3686</locationY>
         <assignmentItems>
             <assignToReference>TestsPerfomedValues</assignToReference>
             <operator>Add</operator>
@@ -437,6 +437,71 @@
         </assignmentItems>
         <connector>
             <targetReference>Assign_CQ_Inputs</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Set_Question_Variables</name>
+        <label>Set Question Variables</label>
+        <locationX>578</locationX>
+        <locationY>2534</locationY>
+        <assignmentItems>
+            <assignToReference>Q3_Trb_Cause_Resolution</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>X3_Document_troubleshooting_cause_resolution</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Q4_Functioning_As_Designed</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>X4A_Functioning_as_designed_post_repair</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Q4b_Explain_If_No</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>X4B_Explain_if_No</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Q1_Found_During_PM_BPI</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>X1_Issue_covered_by_and_found_during_PM_or_BPI_PDI</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Q6_Occurrence_Location</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>X6_Occurrence_Location</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Q4C_Audible</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Audible</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Q4C_Functional</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Functional</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Q4C_Visual</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Visual</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Repair_Template_on_WO</targetReference>
         </connector>
     </assignments>
     <choices>
@@ -547,7 +612,7 @@
         <name>AudibleTrue</name>
         <label>Audible</label>
         <locationX>314</locationX>
-        <locationY>4334</locationY>
+        <locationY>2894</locationY>
         <defaultConnector>
             <targetReference>FunctionalTrue</targetReference>
         </defaultConnector>
@@ -669,39 +734,10 @@
         </rules>
     </decisions>
     <decisions>
-        <name>Explain_if_No_0</name>
-        <label>Explain if No</label>
-        <locationX>424</locationX>
-        <locationY>2654</locationY>
-        <defaultConnector>
-            <targetReference>Tests_Performed</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>Required_0</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>X4A_Functioning_as_designed_post_repair</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <elementReference>Choice_No</elementReference>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>X4B_Explain_if_No</leftValueReference>
-                <operator>EqualTo</operator>
-            </conditions>
-            <connector>
-                <targetReference>Explain_if_No_screen_0</targetReference>
-            </connector>
-            <label>Required</label>
-        </rules>
-    </decisions>
-    <decisions>
         <name>FunctionalTrue</name>
         <label>Functional</label>
         <locationX>314</locationX>
-        <locationY>4670</locationY>
+        <locationY>3230</locationY>
         <defaultConnector>
             <targetReference>VisualTrue</targetReference>
         </defaultConnector>
@@ -726,9 +762,9 @@
         <name>Go_to_Section_B</name>
         <label>Go to Section B?</label>
         <locationX>578</locationX>
-        <locationY>3422</locationY>
+        <locationY>2198</locationY>
         <defaultConnector>
-            <targetReference>Update_Repair_Template_on_WO</targetReference>
+            <targetReference>Set_Question_Variables</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>No</defaultConnectorLabel>
         <rules>
@@ -751,7 +787,7 @@
         <name>Has_Existing_CQ</name>
         <label>Has Existing CQ</label>
         <locationX>314</locationX>
-        <locationY>5462</locationY>
+        <locationY>4022</locationY>
         <defaultConnectorLabel>No CQ or Case</defaultConnectorLabel>
         <rules>
             <name>Existing_CQ</name>
@@ -788,7 +824,7 @@
         <name>Has_Existing_CQ_0</name>
         <label>Has Existing CQ</label>
         <locationX>578</locationX>
-        <locationY>4214</locationY>
+        <locationY>2774</locationY>
         <defaultConnectorLabel>No CQ or Case</defaultConnectorLabel>
         <rules>
             <name>Existing_CQ_or_Case</name>
@@ -879,128 +915,10 @@
         </rules>
     </decisions>
     <decisions>
-        <name>Question_4</name>
-        <label>Question 4</label>
-        <locationX>424</locationX>
-        <locationY>2318</locationY>
-        <defaultConnector>
-            <targetReference>Explain_if_No_0</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>Blank_on_Awaiting_Signature</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>X4A_Functioning_as_designed_post_repair</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Missing_Q4</targetReference>
-            </connector>
-            <label>Blank on Awaiting Signature</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>Service_Appointment_Status</name>
-        <label>Service Appointment Status</label>
-        <locationX>578</locationX>
-        <locationY>2198</locationY>
-        <defaultConnector>
-            <targetReference>Go_to_Section_B</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>Awaiting_Signature</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>SA_Status</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Awaiting signature</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Question_4</targetReference>
-            </connector>
-            <label>Awaiting Signature</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>Service_Appointment_Status_0_0</name>
-        <label>Service Appointment Status</label>
-        <locationX>424</locationX>
-        <locationY>3662</locationY>
-        <defaultConnector>
-            <targetReference>Update_Repair_Template_on_WO</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>Required_fields_on_Awaiting_Signature</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>SA_Status</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Awaiting signature</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>X6_Occurrence_Location</leftValueReference>
-                <operator>EqualTo</operator>
-            </conditions>
-            <connector>
-                <targetReference>Missing_Location</targetReference>
-            </connector>
-            <label>Required fields on Awaiting Signature</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>Tests_Performed</name>
-        <label>Tests Performed</label>
-        <locationX>424</locationX>
-        <locationY>2990</locationY>
-        <defaultConnector>
-            <targetReference>Go_to_Section_B</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>All_Missing</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>Audible</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>Functional</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>Visual</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Missing_Tests_Performed</targetReference>
-            </connector>
-            <label>All Missing</label>
-        </rules>
-    </decisions>
-    <decisions>
         <name>VisualTrue</name>
         <label>Visual</label>
         <locationX>314</locationX>
-        <locationY>5006</locationY>
+        <locationY>3566</locationY>
         <defaultConnector>
             <targetReference>Assign_CQ_Inputs</targetReference>
         </defaultConnector>
@@ -1107,7 +1025,7 @@
         <name>Create_CQ_0_0</name>
         <label>Create CQ</label>
         <locationX>314</locationX>
-        <locationY>5582</locationY>
+        <locationY>4142</locationY>
         <inputReference>complaintQualification</inputReference>
     </recordCreates>
     <recordLookups>
@@ -1226,14 +1144,14 @@
         <name>Update_CQ</name>
         <label>Update CQ</label>
         <locationX>50</locationX>
-        <locationY>5582</locationY>
+        <locationY>4142</locationY>
         <inputReference>complaintQualification</inputReference>
     </recordUpdates>
     <recordUpdates>
         <name>Update_Repair_Template_on_WO</name>
         <label>Update Repair Template on WO</label>
         <locationX>578</locationX>
-        <locationY>4094</locationY>
+        <locationY>2654</locationY>
         <connector>
             <targetReference>Has_Existing_CQ_0</targetReference>
         </connector>
@@ -1338,82 +1256,6 @@
         <object>WorkOrder</object>
     </recordUpdates>
     <screens>
-        <name>Explain_if_No_screen_0</name>
-        <label>Explain if No</label>
-        <locationX>292</locationX>
-        <locationY>2774</locationY>
-        <allowBack>true</allowBack>
-        <allowFinish>false</allowFinish>
-        <allowPause>true</allowPause>
-        <connector>
-            <targetReference>Tests_Performed</targetReference>
-        </connector>
-        <fields>
-            <name>Explain_if_No_Text_0</name>
-            <fieldText>&lt;p&gt;You answered &apos;No&apos; to question 4 (Functioning as designed post-repair). You must provide an explanation.&lt;/p&gt;&lt;p&gt;Click on the Previous button to go back and fill in the field &apos;Explain if No&apos;.&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <showFooter>true</showFooter>
-        <showHeader>true</showHeader>
-    </screens>
-    <screens>
-        <name>Missing_Location</name>
-        <label>Missing Location</label>
-        <locationX>292</locationX>
-        <locationY>3782</locationY>
-        <allowBack>true</allowBack>
-        <allowFinish>false</allowFinish>
-        <allowPause>true</allowPause>
-        <connector>
-            <targetReference>Update_Repair_Template_on_WO</targetReference>
-        </connector>
-        <fields>
-            <name>Missing_Location_Test</name>
-            <fieldText>&lt;p&gt;You must select the Occurrence Location.&lt;/p&gt;&lt;p&gt;Click on the Previous button to go back.&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <showFooter>true</showFooter>
-        <showHeader>true</showHeader>
-    </screens>
-    <screens>
-        <name>Missing_Q4</name>
-        <label>Missing Q4</label>
-        <locationX>292</locationX>
-        <locationY>2438</locationY>
-        <allowBack>true</allowBack>
-        <allowFinish>false</allowFinish>
-        <allowPause>true</allowPause>
-        <connector>
-            <targetReference>Explain_if_No_0</targetReference>
-        </connector>
-        <fields>
-            <name>Missing_Q4_Text</name>
-            <fieldText>&lt;p&gt;You must answer question 4 (Functioning as designed post-repair).&lt;/p&gt;&lt;p&gt;Click on the Previous button to go back and answer the question.&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <showFooter>true</showFooter>
-        <showHeader>true</showHeader>
-    </screens>
-    <screens>
-        <name>Missing_Tests_Performed</name>
-        <label>Missing Tests Performed</label>
-        <locationX>292</locationX>
-        <locationY>3110</locationY>
-        <allowBack>true</allowBack>
-        <allowFinish>false</allowFinish>
-        <allowPause>true</allowPause>
-        <connector>
-            <targetReference>Go_to_Section_B</targetReference>
-        </connector>
-        <fields>
-            <name>Missing_Tests_txt</name>
-            <fieldText>&lt;p&gt;Select which tests you have performed  (Audible/Functional/Visual). You must select at least one option.&lt;/p&gt;&lt;p&gt;Click on the Previous button to go back.&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <showFooter>true</showFooter>
-        <showHeader>true</showHeader>
-    </screens>
-    <screens>
         <name>Section_A</name>
         <label>Section A</label>
         <locationX>578</locationX>
@@ -1422,7 +1264,7 @@
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
         <connector>
-            <targetReference>Service_Appointment_Status</targetReference>
+            <targetReference>Go_to_Section_B</targetReference>
         </connector>
         <fields>
             <name>X1_Issue_covered_by_and_found_during_PM_or_BPI_PDI</name>
@@ -1528,13 +1370,13 @@
     <screens>
         <name>Section_B</name>
         <label>Section B</label>
-        <locationX>424</locationX>
-        <locationY>3542</locationY>
+        <locationX>446</locationX>
+        <locationY>2318</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
         <connector>
-            <targetReference>Service_Appointment_Status_0_0</targetReference>
+            <targetReference>Set_Question_Variables</targetReference>
         </connector>
         <fields>
             <name>X5_Part_serial_and_or_Revision_if_applicable</name>
@@ -1606,7 +1448,7 @@
             <targetReference>Desktop_or_Mobile</targetReference>
         </connector>
     </start>
-    <status>Obsolete</status>
+    <status>Active</status>
     <textTemplates>
         <name>RepairTemplate_TEXT</name>
         <isViewedAsPlainText>true</isViewedAsPlainText>
@@ -1661,6 +1503,62 @@ PM Sticker Date- {!X9_PM_sticker_date}</text>
         <isOutput>false</isOutput>
     </variables>
     <variables>
+        <name>Q1_Found_During_PM_BPI</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>Q3_Trb_Cause_Resolution</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>Q4_Functioning_As_Designed</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>Q4b_Explain_If_No</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>Q4C_Audible</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>Q4C_Functional</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>Q4C_Visual</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>Q6_Occurrence_Location</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
         <name>Question1_Value_VAR</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>
@@ -1676,13 +1574,6 @@ PM Sticker Date- {!X9_PM_sticker_date}</text>
     </variables>
     <variables>
         <name>recordId</name>
-        <dataType>String</dataType>
-        <isCollection>false</isCollection>
-        <isInput>true</isInput>
-        <isOutput>false</isOutput>
-    </variables>
-    <variables>
-        <name>SA_Status</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>
         <isInput>true</isInput>

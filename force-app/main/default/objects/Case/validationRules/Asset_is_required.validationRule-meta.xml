@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Asset_is_required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(OR(ISPICKVAL(Status, &apos;In Process&apos;), ISPICKVAL(Status, &apos;On Hold&apos;),ISPICKVAL(Status, &apos;Escalated&apos;),ISPICKVAL(Status, &apos;Pending&apos;),ISPICKVAL(Status, &apos;Resolved&apos;),ISPICKVAL(Status, &apos;Closed&apos;)), RecordType.Name = &apos;Care Comm&apos;, OR (ISPICKVAL(Type, &apos;Problem - Product Related&apos;),ISPICKVAL(Type, &apos;Configuration/Enhancement&apos;),ISPICKVAL(Type, &apos;Routine Maintenance&apos;)),ISBLANK( AssetId ))</errorConditionFormula>
+    <errorDisplayField>AssetId</errorDisplayField>
+    <errorMessage>Asset is required</errorMessage>
+</ValidationRule>

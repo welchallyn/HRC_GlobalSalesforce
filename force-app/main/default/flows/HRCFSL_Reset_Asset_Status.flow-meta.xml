@@ -22,6 +22,7 @@
         <connector>
             <targetReference>myDecision6</targetReference>
         </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <processMetadataValues>
                 <name>dataType</name>

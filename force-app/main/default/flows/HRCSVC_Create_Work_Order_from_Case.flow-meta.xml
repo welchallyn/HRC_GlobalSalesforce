@@ -1215,6 +1215,7 @@ IF(NOT(ISBLANK({!Get_Contact.MobilePhone})),LEFT({!Get_Contact.MobilePhone},20),
                     <booleanValue>true</booleanValue>
                 </value>
             </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
             <outputParameters>
                 <assignToReference>WorkType.Id</assignToReference>
@@ -1265,6 +1266,7 @@ IF(NOT(ISBLANK({!Get_Contact.MobilePhone})),LEFT({!Get_Contact.MobilePhone},20),
                     <elementReference>Get_Asset_from_Case.Id</elementReference>
                 </value>
             </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
             <storeOutputAutomatically>true</storeOutputAutomatically>
         </fields>
@@ -1302,6 +1304,7 @@ IF(NOT(ISBLANK({!Get_Contact.MobilePhone})),LEFT({!Get_Contact.MobilePhone},20),
                     <elementReference>Get_Case.AccountId</elementReference>
                 </value>
             </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
             <storeOutputAutomatically>true</storeOutputAutomatically>
         </fields>
@@ -1339,6 +1342,7 @@ IF(NOT(ISBLANK({!Get_Contact.MobilePhone})),LEFT({!Get_Contact.MobilePhone},20),
                     <elementReference>Get_Case.ContactId</elementReference>
                 </value>
             </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
             <storeOutputAutomatically>true</storeOutputAutomatically>
         </fields>
@@ -1376,6 +1380,7 @@ IF(NOT(ISBLANK({!Get_Contact.MobilePhone})),LEFT({!Get_Contact.MobilePhone},20),
                     <elementReference>Get_Case.HRCSVC_Location__c</elementReference>
                 </value>
             </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
             <storeOutputAutomatically>true</storeOutputAutomatically>
         </fields>
