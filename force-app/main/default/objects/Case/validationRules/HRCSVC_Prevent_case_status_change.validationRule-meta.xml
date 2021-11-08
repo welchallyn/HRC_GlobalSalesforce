@@ -5,7 +5,11 @@
     <description>Created this to prevent case status to be changed if closed date is 30 or more than 30 for #SE-146
 Update to to SE-2458</description>
     <errorConditionFormula>AND(
+
+OR(
 ISPICKVAL(PRIORVALUE(Status),&quot;Closed&quot;),
+ISPICKVAL(PRIORVALUE(Status),&quot;Canceled&quot;)
+),
 
 OR(
 (ISBLANK(PRIORVALUE(HRCSVC_Awaiting_Customer_Response_Date__c))),
@@ -17,5 +21,5 @@ NOT($Setup.HRCFSL_Org_Exception_Rule__c.HRCFSL_Validation_Rule__c),
 RecordType.Name &lt;&gt; &apos;Scaletronix Service&apos;,
 RecordType.Name &lt;&gt; &apos;WA Technical Support&apos;
 )</errorConditionFormula>
-    <errorMessage>You cannot Update the Case as the Status is Closed</errorMessage>
+    <errorMessage>You cannot update a canceled or closed Case</errorMessage>
 </ValidationRule>

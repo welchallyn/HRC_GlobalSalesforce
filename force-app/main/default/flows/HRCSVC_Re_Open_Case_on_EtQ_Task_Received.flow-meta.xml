@@ -46,6 +46,13 @@
                     <stringValue>Resolved</stringValue>
                 </rightValue>
             </conditions>
+            <conditions>
+                <leftValueReference>Get_Case.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Canceled</stringValue>
+                </rightValue>
+            </conditions>
             <connector>
                 <targetReference>Update_Status</targetReference>
             </connector>
