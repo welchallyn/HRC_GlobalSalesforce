@@ -2491,6 +2491,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Location.Language__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>MaintenancePlan.HRCFSL_ModList__c</field>
         <readable>false</readable>
     </fieldPermissions>
