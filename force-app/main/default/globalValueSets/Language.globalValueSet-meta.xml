@@ -57,5 +57,5 @@
     </customValue>
     <description>Languages used by Hillrom users</description>
     <masterLabel>Language</masterLabel>
-    <sorted>false</sorted>
+    <sorted>false</sorted> 
 </GlobalValueSet>
