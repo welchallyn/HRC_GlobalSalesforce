@@ -4487,9 +4487,6 @@
         <layout>HRCSVC_Case_Translations__mdt-HRCSVC Case Translations Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>HRCSVC_Complaint_Qualification__c-HRCSVC Complaint Qualification Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
         <layout>HRCSVC_Contact_Certification__c-Contact Certification Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
