@@ -874,6 +874,8 @@
 		<members>Case.HRCSVC_Open_Work_Orders__c</members>
 		<members>Case.HRCSVC_SW_Version_Missing__c</members>
 		<members>Additional_Account_Info__c.Account__c</members>
+		<members>Location.Language__c</members>
+		<members>Asset.Status</members>
 		<name>CustomField</name>
 	</types>
 	<types>
@@ -1313,6 +1315,7 @@
 		<members>HRCSVC_Update_Historical_Comments</members>
 		<members>HRCSVC20_Component_Swap</members>
 		<members>HRCSVC20_Consume_BOM_Item</members>
+		<members>HRCFSL_Check_Entitlement_SF</members>
 		<name>Flow</name>
 	</types>
 	<types>
@@ -1600,6 +1603,7 @@
 		<members>HRCSVC_BOM_Item__c.Test_List_Button</members>
 		<name>QuickAction</name>
 	</types>
+	<!--
 	<types>
 		<members>Asset.HRC_Service_Asset</members>
 		<members>Asset.Breathe_Asset</members>
@@ -1615,7 +1619,6 @@
 		<members>Case.WA_Technical_Support</members>
 		<members>Contact.HRC_Contact</members>
 		<members>Contact.INT_Contacts</members>
-		<!--<members>ContentVersion.Case_Files</members><members>ContentVersion.Standard</members>-->
 		<members>HRCFSL_Inspection_Step__c.HRCFSL_Display_Text</members>
 		<members>HRCFSL_Inspection_Step__c.HRCFSL_Range</members>
 		<members>HRCSVC_BOM_Item__c.Product_Usage</members>
@@ -1649,8 +1652,14 @@
 		<members>WorkOrder.HRCSVC_Field_IE_WO</members>
 		<members>WorkOrder.HRCSVC_Implementation_WO</members>
 		<members>WorkOrder.HRCSVC_Remote_IE_Software_Support_WO</members>
+		<members>Contact.Account_Required</members>
+		<members>Contact.HRC_CCV_Contact</members>
+		<members>Contact.HRC_CRC_User</members>
+		<members>Contact.INT_Own_Data</members>
+		<members>Contact.INT_Cegedim</members>
 		<name>RecordType</name>
 	</types>
+	-->
 	<types>
 		<!--<members>CongaReports/Distinct_Quoted_Parts_9pa</members>-->
 		<members>CongaReports/Location_1MK</members>

@@ -728,6 +728,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Asset.Status</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Asset.Voalte_Experience__c</field>
         <readable>true</readable>
@@ -2340,6 +2345,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Location.HRCSVC_Website__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Location.Language__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -4392,59 +4402,7 @@
         <layout>Asset-HRCFSL Asset Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>Asset-HRCFSL Asset Layout</layout>
-        <recordType>Asset.Breathe_Asset</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Asset-HRCFSL Asset Layout</layout>
-        <recordType>Asset.HRC_Service_Asset</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Asset-INT Competitor Asset</layout>
-        <recordType>Asset.INT_Competitor_Asset</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Asset-INT Demo Asset</layout>
-        <recordType>Asset.INT_Demo_Asset</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Case-Case Layout</layout>
-        <recordType>Case.Junk</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Case-Case Layout</layout>
-        <recordType>Case.Respiratory_Email_Request</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Case-Case Layout</layout>
-        <recordType>Case.ServiceHub_Installations</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Case-HRCSVC Care Comm Case Layout</layout>
-        <recordType>Case.Care_Comm</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
         <layout>Case-HRCSVC Case Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Case-HRCSVC Case Layout</layout>
-        <recordType>Case.Factory_Repair_Depot</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Case-HRCSVC Case Layout</layout>
-        <recordType>Case.HRCSVC_Capital_Service</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Case-Scaletronix Service Case Layout</layout>
-        <recordType>Case.Scaletronix_Service</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Case-WA Tech Support Case Layout</layout>
-        <recordType>Case.WA_Technical_Support</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Contact-HRC Contact Layout</layout>
-        <recordType>Contact.HRC_Contact</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>ContentVersion-General</layout>
@@ -4641,83 +4599,7 @@
         <layout>ShipmentItem-Shipment Item Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>WorkOrder-HRCFSL Capital Other Work Order Layout</layout>
-        <recordType>WorkOrder.HRCFSL_Capital_Other</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>WorkOrder-HRCFSL Capital Other w Parts Work Order Layout</layout>
-        <recordType>WorkOrder.HRCFSL_Capital_Other_w_Parts</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>WorkOrder-HRCFSL Capital Preventative Work Order Layout</layout>
-        <recordType>WorkOrder.HRCFSL_Capital_Preventative</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>WorkOrder-HRCFSL Capital Repair Work Order Layout</layout>
-        <recordType>WorkOrder.HRCFSL_Capital_Repair</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>WorkOrder-HRCFSL Quote Layout</layout>
-        <recordType>WorkOrder.HRCFSL_Quote</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>WorkOrder-HRCFSL Rental BPI Work Order Layout</layout>
-        <recordType>WorkOrder.HRCFSL_Rental_BPI</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>WorkOrder-HRCFSL Rental Delivery Work Order Layout</layout>
-        <recordType>WorkOrder.HRCFSL_Rental_Delivery</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>WorkOrder-HRCFSL Rental Other Work Order Layout</layout>
-        <recordType>WorkOrder.HRCFSL_Rental_Other</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>WorkOrder-HRCFSL Rental Preventative Work Order Layout</layout>
-        <recordType>WorkOrder.HRCFSL_Rental_Preventative</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>WorkOrder-HRCFSL Rental Removal Work Order Layout</layout>
-        <recordType>WorkOrder.HRCFSL_Rental_Removal</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>WorkOrder-HRCFSL Rental Repair Work Order Layout</layout>
-        <recordType>WorkOrder.HRCFSL_Rental_Repair</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
         <layout>WorkOrder-HRCFSL Work Order Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>WorkOrder-HRCFSL Work Order Layout</layout>
-        <recordType>WorkOrder.HRCFSL_Capital_Field_Service</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>WorkOrder-HRCFSL Work Order Layout</layout>
-        <recordType>WorkOrder.HRCFSL_Rental</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>WorkOrder-HRCFSL Work Order Layout</layout>
-        <recordType>WorkOrder.HRCSVC_EMEA_Mortara_Field_Service</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>WorkOrder-HRCFSL Work Order Layout</layout>
-        <recordType>WorkOrder.HRCSVC_EMEA_Trumpf_Field_Service</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>WorkOrder-HRCFSL Work Order Layout</layout>
-        <recordType>WorkOrder.HRCSVC_Field_IE_WO</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>WorkOrder-HRCSVC Care Comm Layout</layout>
-        <recordType>WorkOrder.HRCSVC_Implementation_WO</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>WorkOrder-HRCSVC Care Comm Layout</layout>
-        <recordType>WorkOrder.HRCSVC_Remote_IE_Software_Support_WO</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>WorkOrder-HRCSVC Factory Repair Layout</layout>
-        <recordType>WorkOrder.HRCSVC_Factory_Repair_WO</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>WorkOrderLineItem-Work Order Line Item Layout</layout>
@@ -4824,85 +4706,6 @@
         <enabled>true</enabled>
     </pageAccesses>
     <recordTypeVisibilities>
-        <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
-        <recordType>Asset.Breathe_Asset</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>Asset.HRC_Service_Asset</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>Asset.INT_Competitor_Asset</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>Asset.INT_Demo_Asset</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
-        <recordType>Case.Care_Comm</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>Case.Factory_Repair_Depot</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>Case.HRCSVC_Capital_Service</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>Case.Junk</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>Case.Respiratory_Email_Request</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>Case.Scaletronix_Service</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>Case.ServiceHub_Installations</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>Case.WA_Technical_Support</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
-        <recordType>Contact.HRC_Contact</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
-        <recordType>HRCFSL_Inspection_Step__c.HRCFSL_Display_Text</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>HRCFSL_Inspection_Step__c.HRCFSL_Range</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
         <default>false</default>
         <recordType>HRCSVC_BOM_Item__c.Product_Usage</recordType>
         <visible>false</visible>
@@ -4957,106 +4760,6 @@
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>Order__c.Rental_Orders</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>Product2.HRC_Product</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>WorkOrder.HRCFSL_Capital_Field_Service</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>WorkOrder.HRCFSL_Capital_Other</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>WorkOrder.HRCFSL_Capital_Other_w_Parts</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>WorkOrder.HRCFSL_Capital_Preventative</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>WorkOrder.HRCFSL_Capital_Repair</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>WorkOrder.HRCFSL_Quote</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>WorkOrder.HRCFSL_Rental</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>WorkOrder.HRCFSL_Rental_BPI</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>WorkOrder.HRCFSL_Rental_Delivery</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>WorkOrder.HRCFSL_Rental_Other</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>WorkOrder.HRCFSL_Rental_Preventative</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>WorkOrder.HRCFSL_Rental_Removal</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>WorkOrder.HRCFSL_Rental_Repair</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>WorkOrder.HRCSVC_EMEA_Mortara_Field_Service</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>WorkOrder.HRCSVC_EMEA_Trumpf_Field_Service</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>WorkOrder.HRCSVC_Factory_Repair_WO</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>WorkOrder.HRCSVC_Field_IE_WO</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>WorkOrder.HRCSVC_Implementation_WO</recordType>
-        <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>WorkOrder.HRCSVC_Remote_IE_Software_Support_WO</recordType>
         <visible>false</visible>
     </recordTypeVisibilities>
     <tabVisibilities>
