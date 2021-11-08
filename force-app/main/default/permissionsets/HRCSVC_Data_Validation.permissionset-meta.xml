@@ -2674,6 +2674,11 @@ Should not be used in typical day to day functionality</description>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Location.Language__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>MaintenancePlan.HRCFSL_ModList__c</field>
         <readable>false</readable>
     </fieldPermissions>
