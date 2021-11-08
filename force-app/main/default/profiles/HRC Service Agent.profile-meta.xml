@@ -4812,7 +4812,7 @@
         <enabled>true</enabled>
     </pageAccesses>
     <recordTypeVisibilities>
-        <default>false</default>
+        <default>true</default>
         <recordType>Asset.HRC_Service_Asset</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>

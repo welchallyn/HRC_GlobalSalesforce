@@ -1161,6 +1161,7 @@
 		<members>HRCSVC_Asset_Warranty_Record_Page</members>
 		<members>HRCSVC_Case_Record_Page</members>
 		<members>HRCSVC_Complaint_Qualification_Record_Page</members>
+		<members>HRCSVC_Complaint_Qualification_Record_Page_11</members>
 		<members>HRCSVC_Create_Rental_Order</members>
 		<members>HRCSVC_Entitlement_Record_Page</members>
 		<members>HRCSVC_Order_Dynamic_Lightning_Record</members>
@@ -1601,6 +1602,9 @@
 	</types>
 	<types>
 		<members>Asset.HRC_Service_Asset</members>
+		<members>Asset.Breathe_Asset</members>
+		<members>Asset.INT_Competitor_Asset</members>
+		<members>Asset.INT_Demo_Asset</members>
 		<members>Case.Care_Comm</members>
 		<members>Case.Factory_Repair_Depot</members>
 		<members>Case.HRCSVC_Capital_Service</members>
