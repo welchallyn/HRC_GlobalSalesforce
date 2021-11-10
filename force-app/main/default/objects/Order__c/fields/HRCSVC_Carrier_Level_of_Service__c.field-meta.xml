@@ -32,6 +32,26 @@
                 <default>true</default>
                 <label>FedEx Ground</label>
             </value>
+            <value>
+                <fullName>Purolator Ground</fullName>
+                <default>false</default>
+                <label>Purolator Ground</label>
+            </value>
+            <value>
+                <fullName>Purolator Overnight Express</fullName>
+                <default>false</default>
+                <label>Purolator Overnight Express</label>
+            </value>
+            <value>
+                <fullName>Purolator Overnight 9:00 am</fullName>
+                <default>false</default>
+                <label>Purolator Overnight 9:00 am</label>
+            </value>
+            <value>
+                <fullName>Purolator Overnight 10:30 am</fullName>
+                <default>false</default>
+                <label>Purolator Overnight 10:30 am</label>
+            </value>
         </valueSetDefinition>
         <valueSettings>
             <controllingFieldValue>FedEx</controllingFieldValue>
@@ -48,6 +68,22 @@
         <valueSettings>
             <controllingFieldValue>FedEx</controllingFieldValue>
             <valueName>FedEx Ground</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Purolator</controllingFieldValue>
+            <valueName>Purolator Ground</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Purolator</controllingFieldValue>
+            <valueName>Purolator Overnight Express</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Purolator</controllingFieldValue>
+            <valueName>Purolator Overnight 9:00 am</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Purolator</controllingFieldValue>
+            <valueName>Purolator Overnight 10:30 am</valueName>
         </valueSettings>
     </valueSet>
 </CustomField>

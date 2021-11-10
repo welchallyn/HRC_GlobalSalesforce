@@ -12,6 +12,10 @@
         <field>HRCFSL_Product_Item_Description__c</field>
         <formula>Order_Line_Item__c.Product__r.ProductCode</formula>
     </fieldOverrides>
+    <fieldOverrides>
+        <field>StartDate</field>
+        <formula>NOW()</formula>
+    </fieldOverrides>
     <optionsCreateFeedItem>true</optionsCreateFeedItem>
     <quickActionLayout>
         <layoutSectionStyle>TwoColumnsLeftToRight</layoutSectionStyle>

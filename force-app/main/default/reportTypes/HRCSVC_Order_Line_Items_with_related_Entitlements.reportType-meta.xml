@@ -326,6 +326,11 @@
             <field>HRCSVC_Entitlement_Name__c</field>
             <table>Order_Line_Item__c</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>HRCSVC20_Customer_Price__c</field>
+            <table>Order_Line_Item__c</table>
+        </columns>
         <masterLabel>Order Line Items</masterLabel>
     </sections>
 </ReportType>

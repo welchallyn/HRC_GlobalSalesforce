@@ -10,5 +10,5 @@
     <openType>sidebar</openType>
     <protected>false</protected>
     <requireRowSelection>true</requireRowSelection>
-    <url>http://www.google.com</url>
+    <url>/flow/HRCSVC20_Consume_BOM_Item?ids={!GETRECORDIDS($ObjectType.HRCSVC_BOM_Item__c)}&amp;retURL=a01/o</url>
 </WebLink>

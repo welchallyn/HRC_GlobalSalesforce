@@ -2354,6 +2354,11 @@ Should not be used in typical day to day functionality</description>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>HRCSVC_Problem_Resolution_Code__c.ExternalId__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>HRCSVC_Problem_Resolution_Code__c.HRCSVC_Parent_Problem_Code__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -2755,6 +2760,11 @@ Should not be used in typical day to day functionality</description>
     <fieldPermissions>
         <editable>false</editable>
         <field>Order_Line_Item__c.Freight_Description__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Order_Line_Item__c.HRCSVC20_Customer_Price__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>

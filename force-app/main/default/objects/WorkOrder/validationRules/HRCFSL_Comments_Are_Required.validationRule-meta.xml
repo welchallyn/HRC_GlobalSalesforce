@@ -7,7 +7,8 @@
     <errorConditionFormula>AND(
     CONTAINS( $CustomMetadata.HRCFSL_Organization_Settings__mdt.Not_Allowed_Status_without_Comment_on_WO.HRCFSL_Component_Detail__c ,TEXT( Status )),
 				ISBLANK( HRCFSL_Comments__c ),
-				NOT( $Setup.HRCFSL_Org_Exception_Rule__c.HRCFSL_Validation_Rule__c ) 
+				NOT( $Setup.HRCFSL_Org_Exception_Rule__c.HRCFSL_Validation_Rule__c ) ,
+NOT( $Permission.HRCSVC20_Can_cancel_WOs_generated_from_Maintenance_Plans )
 )</errorConditionFormula>
     <errorMessage>Comments are required in order to set the Work Order status to &apos;Canceled&apos; or &apos;Awaiting Parts&apos;.</errorMessage>
 </ValidationRule>

@@ -475,11 +475,6 @@
             <sortOrder>27</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>Share</actionName>
-            <actionType>StandardButton</actionType>
-            <sortOrder>28</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
             <actionName>Case.HRCSVC_Create_Cases_for_Child_Assets</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>29</sortOrder>
@@ -548,6 +543,11 @@
             <actionName>Case.HRCSVC_Create_Work_Order_Quote</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>25</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>Share</actionName>
+            <actionType>StandardButton</actionType>
+            <sortOrder>28</sortOrder>
         </platformActionListItems>
     </platformActionList>
     <quickActionList>
