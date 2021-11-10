@@ -10,6 +10,7 @@
         <connector>
             <targetReference>Cancel_Notification</targetReference>
         </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <name>HRCFSL_Cancel_Authorized_By__c</name>
             <value>
@@ -451,6 +452,87 @@
                 <targetReference>Assign_Work_Order_Duration</targetReference>
             </connector>
             <label>Has Duration</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Missing_Required_Fields_on_RT</name>
+        <label>Missing Required Fields on RT</label>
+        <locationX>1630</locationX>
+        <locationY>963</locationY>
+        <defaultConnector>
+            <targetReference>Success_message</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Missing_Required_Fields_on_RT_Yes</name>
+            <conditionLogic>1 OR 2 OR (3 AND 6) OR (4 AND 5) OR (7 AND 8 AND 9)</conditionLogic>
+            <conditions>
+                <leftValueReference>Q3_Trb_Cause_Resolution</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Q4_Functioning_As_Designed</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Q4_Functioning_As_Designed</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>No</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Q1_Found_During_PM_BPI</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>No</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Q6_Occurrence_Location</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Q4b_Explain_If_No</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Q4C_Audible</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Q4C_Functional</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Q4C_Visual</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Repair_Template_Error_Screen</targetReference>
+            </connector>
+            <label>Yes</label>
         </rules>
     </decisions>
     <decisions>
@@ -1033,6 +1115,22 @@
         <showHeader>true</showHeader>
     </screens>
     <screens>
+        <name>Repair_Template_Error_Screen</name>
+        <label>Repair Template Error Screen</label>
+        <locationX>1794</locationX>
+        <locationY>960</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>RT_Error_Text</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;color: rgb(255, 0, 0);&quot;&gt;&lt;u&gt;ERROR&lt;/u&gt;&lt;/b&gt;: Please make sure you enter the information below in the Repair Template before moving the appointment to Awaiting Signature:&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;1 - Document troubleshooting, cause, resolution&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;2 - Functioning as designed post repair. &lt;b&gt;If answer is No&lt;/b&gt;: Explain if No&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;3 - Test performed per service manual: at least one option must be selected&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;4 - Occurrence Location: only required if you answered No to question 1 (Issue found during PM or BPI/PDI)&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
         <name>Screen</name>
         <label>Screen</label>
         <locationX>1632</locationX>
@@ -1077,7 +1175,7 @@
         <label>Success message</label>
         <locationX>1444</locationX>
         <locationY>854</locationY>
-        <allowBack>true</allowBack>
+        <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
         <connector>
@@ -1182,7 +1280,7 @@
             <targetReference>Get_Service_Appointment_Details</targetReference>
         </connector>
     </start>
-    <status>Obsolete</status>
+    <status>Active</status>
     <subflows>
         <name>Cancel_Notification</name>
         <label>Cancel Notification</label>
@@ -1258,7 +1356,7 @@
         <locationX>1446</locationX>
         <locationY>969</locationY>
         <connector>
-            <targetReference>Success_message</targetReference>
+            <targetReference>Missing_Required_Fields_on_RT</targetReference>
         </connector>
         <flowName>HRCFSL_Repair_Template</flowName>
         <inputAssignments>
@@ -1267,12 +1365,38 @@
                 <elementReference>ServiceAppointmentDetails.HRCFSL_Work_Order__c</elementReference>
             </value>
         </inputAssignments>
-        <inputAssignments>
-            <name>SA_Status</name>
-            <value>
-                <elementReference>Status_InProgress_Selection</elementReference>
-            </value>
-        </inputAssignments>
+        <outputAssignments>
+            <assignToReference>Q1_Found_During_PM_BPI</assignToReference>
+            <name>Q1_Found_During_PM_BPI</name>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>Q3_Trb_Cause_Resolution</assignToReference>
+            <name>Q3_Trb_Cause_Resolution</name>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>Q4_Functioning_As_Designed</assignToReference>
+            <name>Q4_Functioning_As_Designed</name>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>Q4b_Explain_If_No</assignToReference>
+            <name>Q4b_Explain_If_No</name>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>Q4C_Audible</assignToReference>
+            <name>Q4C_Audible</name>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>Q4C_Functional</assignToReference>
+            <name>Q4C_Functional</name>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>Q4C_Visual</assignToReference>
+            <name>Q4C_Visual</name>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>Q6_Occurrence_Location</assignToReference>
+            <name>Q6_Occurrence_Location</name>
+        </outputAssignments>
     </subflows>
     <subflows>
         <name>Work_Order_Validation</name>
@@ -1368,6 +1492,62 @@ o Product: {!WorkOrderDetails.HRCFSL_Model_Description__c}
         <isInput>false</isInput>
         <isOutput>false</isOutput>
         <objectType>ServiceAppointment</objectType>
+    </variables>
+    <variables>
+        <name>Q1_Found_During_PM_BPI</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>Q3_Trb_Cause_Resolution</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>Q4_Functioning_As_Designed</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>Q4b_Explain_If_No</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>Q4C_Audible</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>Q4C_Functional</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>Q4C_Visual</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>Q6_Occurrence_Location</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
     </variables>
     <variables>
         <name>RCVar_SkillRequirements</name>

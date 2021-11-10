@@ -221,6 +221,19 @@
         <fields>PRODUCT2.DESCRIPTION</fields>
         <relatedList>Product2.HRCSVC_Basic_Service_Fee__c</relatedList>
     </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <fields>HRCSVC_Product_Model__c</fields>
+        <fields>RECORDTYPE</fields>
+        <fields>HRCSVC_Serial_Number__c</fields>
+        <fields>Tool_Product_Model__c</fields>
+        <fields>HRCSVC_Type__c</fields>
+        <relatedList>HRCSVC_BOM_Item__c.HRCSVC20_BOM_Header_Product__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <relatedList>HRCSVC_BOM__c.Product_Lookup__c</relatedList>
+    </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>
     <showInteractionLogPanel>false</showInteractionLogPanel>

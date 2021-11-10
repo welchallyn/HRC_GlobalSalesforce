@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>52.0</apiVersion>
+    <assignments>
+        <name>Update_Historical_Comments</name>
+        <label>Update Historical Comments</label>
+        <locationX>167</locationX>
+        <locationY>451</locationY>
+        <assignmentItems>
+            <assignToReference>Get_Case.HRCSVC_Historical_Comments__c</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>CommentHistory</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Case</targetReference>
+        </connector>
+    </assignments>
+    <formulas>
+        <name>CommentHistory</name>
+        <dataType>String</dataType>
+        <expression>&apos;Case Comment deleted by &apos; &amp; {!$User.Full_Name__c} &amp; &apos; on &apos; &amp; SUBSTITUTE(TEXT({!$Flow.CurrentDateTime}),&apos;Z&apos;,&apos; GMT&apos;) &amp; &apos;&lt;br&gt; Old value: &apos; &amp; {!$Record.CommentBody} &amp; &apos;&lt;br&gt; &lt;br&gt;&apos;</expression>
+    </formulas>
+    <interviewLabel>HRCSVC Case Comment Deleted {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>HRCSVC Case Comment Deleted</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Case</name>
+        <label>Get Case</label>
+        <locationX>171</locationX>
+        <locationY>318</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_Historical_Comments</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.ParentId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Case</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Case</name>
+        <label>Update Case</label>
+        <locationX>166</locationX>
+        <locationY>601</locationY>
+        <inputReference>Get_Case</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Get_Case</targetReference>
+        </connector>
+        <object>CaseComment</object>
+        <recordTriggerType>Delete</recordTriggerType>
+        <triggerType>RecordBeforeDelete</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

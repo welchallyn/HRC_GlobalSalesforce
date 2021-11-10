@@ -19,6 +19,7 @@
         <locationY>200</locationY>
         <actionName>HRCSVC_Email_Case_Contacts</actionName>
         <actionType>flow</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <processMetadataValues>
                 <name>dataType</name>

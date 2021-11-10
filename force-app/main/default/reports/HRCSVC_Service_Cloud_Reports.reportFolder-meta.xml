@@ -5,7 +5,7 @@
         <sharedTo>AllInternalUsers</sharedTo>
         <sharedToType>Organization</sharedToType>
     </folderShares>
-    <folderShares>
+    <!--<folderShares>
         <accessLevel>View</accessLevel>
         <sharedTo>mcculla1@hrc.corp</sharedTo>
         <sharedToType>User</sharedToType>
@@ -114,6 +114,6 @@
         <accessLevel>View</accessLevel>
         <sharedTo>doans1@hrc.corp</sharedTo>
         <sharedToType>User</sharedToType>
-    </folderShares>
+    </folderShares>-->
     <name>Service Cloud Reports</name>
 </ReportFolder>

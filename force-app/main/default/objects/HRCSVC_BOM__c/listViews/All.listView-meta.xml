@@ -5,6 +5,7 @@
     <columns>HRCSVC_Product_Model__c</columns>
     <columns>UPDATEDBY_USER</columns>
     <columns>CREATED_DATE</columns>
+    <columns>Product_Lookup__c</columns>
     <filterScope>Everything</filterScope>
     <label>All</label>
 </ListView>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Reopened_Case_by_ETQ__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Updates to True if the case is re-opened by Mulesoft Integration
+
+-- Created as part of CR00032777 | GSC-346</description>
+    <externalId>false</externalId>
+    <label>Reopened Case by ETQ</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>
