@@ -962,7 +962,7 @@ Updated to fix SE-2518</description>
             <targetReference>PRIMARY_DECISION_CHECK</targetReference>
         </connector>
     </start>
-    <status>Obsolete</status>
+    <status>Draft</status>
     <variables>
         <name>AssetUpdated</name>
         <dataType>Boolean</dataType>

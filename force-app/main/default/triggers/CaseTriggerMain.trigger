@@ -11,6 +11,7 @@ trigger CaseTriggerMain on Case (before insert, after insert, before update, aft
     if(trigger.isafter && trigger.isInsert)
     {
         if(CaseHandler.isTriggerRun)
+            
             objHandler.onAfterInsert(trigger.new);
     }
     //handles before update

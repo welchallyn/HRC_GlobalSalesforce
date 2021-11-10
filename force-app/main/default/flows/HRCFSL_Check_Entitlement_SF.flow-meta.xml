@@ -125,7 +125,7 @@
             <targetReference>Get_SWORD</targetReference>
         </connector>
     </start>
-    <status>Obsolete</status>
+    <status>Draft</status>
     <variables>
         <name>Outcome</name>
         <dataType>String</dataType>

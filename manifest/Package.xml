@@ -1179,6 +1179,7 @@
 		<members>Standing_PO_Record_Page</members>
 		<members>Standing_PO_Record_Page1</members>
 		<members>Work_Order_Record_Page1</members>
+		<members>HRCSVC_Order_Dynamic_Lightning_Record_Page</members>
 		<name>FlexiPage</name>
 	</types>
 	<types>
@@ -1788,6 +1789,7 @@
 		<members>Work_Orders_with_Service_Appointments</members>
 		<members>location</members>
 		<members>Return_Orders_with_Return_Order_Line_Items</members>
+		<members>Assets_with_Orders_and_OLI</members>
 		<name>ReportType</name>
 	</types>
 	<types>
@@ -1845,6 +1847,8 @@
 		<members>Order__c.HRCSVC_Prevent_Order_until_Acc_in_ERP</members>
 		<members>Order__c.HRCSVC_40_Characters_Limit_for_Street</members>
 		<members>Order__c.HRCSVC_Address_Is_Required</members>
+		<members>Order__c.HRCSVC20_Order_Not_Allowed_For_Customer</members>
+		<members>WorkOrder.HRCSVC20_Patient_details_are_required</members>
 		<members>ProductConsumed.HRCSVC_Cannot_change_if_quoted</members>
 		<members>ProductConsumed.HRCSVC_CoverageOverrideBillable</members>
 		<members>ProductConsumed.HRCSVC_CoverageOverrideConcessionAppr</members>

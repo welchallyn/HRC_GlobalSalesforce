@@ -8,9 +8,7 @@
         </actions>
         <active>true</active>
         <description>if a case is closed but a new email is received, re-open the case.</description>
-        <formula>AND(Incoming = true,
- Parent.IsClosed = true,
- Parent.RecordType.Name  &lt;&gt; &apos;Care Comm&apos;)</formula>
+        <formula>AND(Incoming = true,  Parent.IsClosed = true,  Parent.RecordType.Name  &lt;&gt; &apos;Care Comm&apos;)</formula>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
 </Workflow>
