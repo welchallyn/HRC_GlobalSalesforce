@@ -1897,6 +1897,8 @@
 	<types>
 		<members>Account.HRCSVC_Email_Alert_for_Account_Status_Change_to_Active</members>
 		<members>Case.HRCSVC_Case_SLA_Escalation_Notifications</members>
+		<members>ServiceAppointment.Email_Alert_To_Escalation_Manager</members>
+		<members>WorkOrder.HRCFSL_Email_Alert_to_Escalation_Manager</members>
 		<name>WorkflowAlert</name>
 	</types>
 	<types>
