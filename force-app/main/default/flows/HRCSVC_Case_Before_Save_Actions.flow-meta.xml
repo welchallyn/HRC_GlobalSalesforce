@@ -5,12 +5,12 @@
         <name>Assign_case_language_based_on_location</name>
         <label>Assign case language based on location</label>
         <locationX>50</locationX>
-        <locationY>1343</locationY>
+        <locationY>1007</locationY>
         <assignmentItems>
             <assignToReference>$Record.Language</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Get_Related_Location.Language__c</elementReference>
+                <elementReference>$Record.HRCSVC_Location__r.Language__c</elementReference>
             </value>
         </assignmentItems>
     </assignments>
@@ -18,12 +18,12 @@
         <name>Assign_case_language_based_on_location_0</name>
         <label>Assign case language based on location</label>
         <locationX>710</locationX>
-        <locationY>1007</locationY>
+        <locationY>671</locationY>
         <assignmentItems>
             <assignToReference>$Record.Language</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Get_Related_Location.Language__c</elementReference>
+                <elementReference>$Record.HRCSVC_Location__r.Language__c</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -34,7 +34,7 @@
         <name>Assign_SV_as_null</name>
         <label>Assign SV as null</label>
         <locationX>842</locationX>
-        <locationY>1343</locationY>
+        <locationY>1007</locationY>
         <assignmentItems>
             <assignToReference>$Record.HRCSVC_Software_Version__c</assignToReference>
             <operator>Assign</operator>
@@ -47,7 +47,7 @@
         <name>Assign_SV_from_Asset</name>
         <label>Assign SV from Asset</label>
         <locationX>578</locationX>
-        <locationY>1343</locationY>
+        <locationY>1007</locationY>
         <assignmentItems>
             <assignToReference>$Record.HRCSVC_Software_Version__c</assignToReference>
             <operator>Assign</operator>
@@ -60,7 +60,7 @@
         <name>Assign_SV_Value_from_Asset</name>
         <label>Assign SV Value from Asset</label>
         <locationX>50</locationX>
-        <locationY>1007</locationY>
+        <locationY>671</locationY>
         <assignmentItems>
             <assignToReference>$Record.HRCSVC_Software_Version__c</assignToReference>
             <operator>Assign</operator>
@@ -76,7 +76,7 @@
         <name>Asset_is_null</name>
         <label>Asset is null?</label>
         <locationX>182</locationX>
-        <locationY>767</locationY>
+        <locationY>431</locationY>
         <defaultConnector>
             <targetReference>Location_is_added</targetReference>
         </defaultConnector>
@@ -101,7 +101,7 @@
         <name>Check_Asset_s_current_and_prior_value</name>
         <label>Check Asset&apos;s current and prior value</label>
         <locationX>842</locationX>
-        <locationY>1223</locationY>
+        <locationY>887</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Asset_Id_not_null_and_Prior_value_null</name>
@@ -152,7 +152,7 @@
         <name>Create_Or_Update_Action</name>
         <label>Create Or Update Action</label>
         <locationX>776</locationX>
-        <locationY>647</locationY>
+        <locationY>311</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Creation</name>
@@ -190,7 +190,7 @@
         <name>Location_is_added</name>
         <label>Location is added?</label>
         <locationX>182</locationX>
-        <locationY>1223</locationY>
+        <locationY>887</locationY>
         <defaultConnectorLabel>No</defaultConnectorLabel>
         <rules>
             <name>Yes</name>
@@ -209,35 +209,10 @@
         </rules>
     </decisions>
     <decisions>
-        <name>Location_is_not_null</name>
-        <label>Location is not null</label>
-        <locationX>776</locationX>
-        <locationY>311</locationY>
-        <defaultConnector>
-            <targetReference>Create_Or_Update_Action</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>null</defaultConnectorLabel>
-        <rules>
-            <name>not_null</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.HRCSVC_Location__c</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Get_Related_Location</targetReference>
-            </connector>
-            <label>not null</label>
-        </rules>
-    </decisions>
-    <decisions>
         <name>Location_is_updated</name>
         <label>Location is updated?</label>
         <locationX>842</locationX>
-        <locationY>887</locationY>
+        <locationY>551</locationY>
         <defaultConnector>
             <targetReference>Check_Asset_s_current_and_prior_value</targetReference>
         </defaultConnector>
@@ -291,7 +266,7 @@
         <name>Get_Related_Asset</name>
         <label>Get Related Asset</label>
         <locationX>50</locationX>
-        <locationY>887</locationY>
+        <locationY>551</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Assign_SV_Value_from_Asset</targetReference>
@@ -310,32 +285,11 @@
         <queriedFields>HRCSVC_Software_Version__c</queriedFields>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
-    <recordLookups>
-        <name>Get_Related_Location</name>
-        <label>Get Related Location</label>
-        <locationX>644</locationX>
-        <locationY>431</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
-        <connector>
-            <targetReference>Create_Or_Update_Action</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Id</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>$Record.HRCSVC_Location__c</elementReference>
-            </value>
-        </filters>
-        <getFirstRecordOnly>true</getFirstRecordOnly>
-        <object>Location</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordLookups>
     <recordUpdates>
         <name>Update_Case_Resolution</name>
         <label>Update Case Resolution</label>
         <locationX>842</locationX>
-        <locationY>767</locationY>
+        <locationY>431</locationY>
         <connector>
             <targetReference>Location_is_updated</targetReference>
         </connector>
@@ -359,7 +313,7 @@
         <locationX>650</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Location_is_not_null</targetReference>
+            <targetReference>Create_Or_Update_Action</targetReference>
         </connector>
         <object>Case</object>
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
