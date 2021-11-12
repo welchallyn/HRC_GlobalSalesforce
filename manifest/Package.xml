@@ -1847,7 +1847,7 @@
 		<members>Order__c.HRCSVC_Prevent_Order_until_Acc_in_ERP</members>
 		<members>Order__c.HRCSVC_40_Characters_Limit_for_Street</members>
 		<members>Order__c.HRCSVC_Address_Is_Required</members>
-		<members>Order__c.HRCSVC20_Order_Not_Allowed_For_Customer</members>
+		<!--<members>Order__c.HRCSVC20_Order_Not_Allowed_For_Customer</members>-->
 		<!--<members>WorkOrder.HRCSVC20_Patient_details_are_required</members>-->
 		<members>ProductConsumed.HRCSVC_Cannot_change_if_quoted</members>
 		<members>ProductConsumed.HRCSVC_CoverageOverrideBillable</members>
