@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LinkOpportunity</fullName>
+    <availability>online</availability>
+    <description>Button Changed to read as &apos;Link&apos;.</description>
+    <displayType>button</displayType>
+    <height>600</height>
+    <linkType>page</linkType>
+    <masterLabel>LinkOpportunity</masterLabel>
+    <openType>sidebar</openType>
+    <page>LinkOpportunity</page>
+    <protected>false</protected>
+</WebLink>

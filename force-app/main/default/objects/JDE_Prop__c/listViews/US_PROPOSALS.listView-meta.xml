@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>US_PROPOSALS</fullName>
+    <columns>NAME</columns>
+    <columns>Proposal_Date__c</columns>
+    <columns>Proposal_Expiration_Date__c</columns>
+    <columns>Ship_To__c</columns>
+    <columns>sys_TotalNet__c</columns>
+    <columns>Main_SRP_Code_2_Description__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CURRENCY_ISO_CODE</field>
+        <operation>equals</operation>
+        <value>USD</value>
+    </filters>
+    <filters>
+        <field>Main_SRP_Code_3__c</field>
+        <operation>notEqual</operation>
+        <value>OME</value>
+    </filters>
+    <filters>
+        <field>Main_SRP_Code_3_Description__c</field>
+        <operation>notEqual</operation>
+        <value>PARTS</value>
+    </filters>
+    <label>MY PROPOSALS (excludes Parts &amp; OME)</label>
+    <language>en_US</language>
+    <sharedTo>
+        <group>NAAC_Reports</group>
+        <roleAndSubordinates>JDE_201796</roleAndSubordinates>
+        <roleAndSubordinates>JDE_206794</roleAndSubordinates>
+        <roleAndSubordinates>JDE_50004261</roleAndSubordinates>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,58 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId,force:hasSObjectName"
+                access="global"> 
+    <!-- initializing values at the time of component load-->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>  
+    
+    <!-- Defining Attributes for loading -->
+    <aura:attribute name="acountRecord" type="Object" />
+    <aura:attribute name="recordError" type="String" />
+    <aura:attribute name="srcURL" type="String" />
+    <aura:attribute name="srcURLFull" type="String" /> 
+    <aura:attribute name="goodToGo" type="boolean" default="false"/>
+    <aura:attribute name="metadataPopUpVar" type="boolean"/>
+    <!-- Css to hide the standard save button-->
+    <aura:html tag="style">
+        .slds-button.slds-button_brand.saveBtn {
+      	  display: none !important;
+        }
+        .modal-body.scrollable.slds-modal__content.slds-p-around--medium spam{
+        	display: none;
+        }
+        .slds-m-bottom--small{
+        	display: none;
+        }
+        .confirmation{
+        	display: none;
+        }
+        .modal-body.scrollable.slds-modal__content.slds-p-around--medium:after {
+  		   content: "Reminder to save the changes you made to your quote! You'll lose them when you leave Account.";
+        }
+    </aura:html> 
+    
+    <!-- Executing Metadat Popup auomatically after sfdc script gets loaded-->
+  	<aura:if isTrue="{!v.metadataPopUpVar}"> 
+        <ltng:require afterScriptsLoaded="{!c.metaDataPopUp}"/>
+    	<lightning:unsavedChanges aura:id="unsaved" ondiscard="{!c.moveToNewPage}"/>
+  	</aura:if>
+    
+    <!-- loadind the record details -->
+    <force:recordData
+                      aura:id="recordLoader"
+                      fields="Name"
+                      recordId="{!v.recordId}"
+                      targetFields="{!v.acountRecord}"
+                      targetError="{!v.recordError}"
+                      recordUpdated="{!c.handleRecordUpdated}"
+                      />
+    
+    <!-- Display Lightning Data Service errors, if any -->
+    <aura:if isTrue="{!not(empty(v.recordError))}">
+        <div class="recordError"> {!v.recordError}</div>
+    </aura:if>
+    
+    <!-- Defining the structure for the embedded page -->
+    <div class="slds-clearfix">
+        <c:IMC_DSP_QUOTE_LIST srcURL="{!v.srcURL}" srcURLFull="{!v.srcURLFull}" ></c:IMC_DSP_QUOTE_LIST>
+    </div>
+    
+</aura:component>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Save_and_add_Product</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Save and add Product</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>&lt;html&gt; 
+&lt;head&gt; 
+&lt;script src=&quot;/soap/ajax/9.0/connection.js&quot;&gt; 
+&lt;/script&gt; 
+&lt;script&gt; 
+function init() 
+{ 
+// returns the standard Transaction Edit page, but sets the saveURL to point to our component so we can capture the onSave event, and sets the returnURL to whatever it was set to by the standard Salesforce edit button (i.e. Transaction or Opp, depending on where the user clicked edit. GE 15/02/07 
+
+// GE 16/04/07: amended to handle Save and New. 
+
+window.parent.location.href = &quot;{!URLFOR($Action.Evaluation_Form__c.Edit , Evaluation_Form__c.Id , [saveURL=URLFOR(&quot;https://hill-rom--hrctest.cs8.my.salesforce.com/TransactionSaveController.htm&quot;, Evaluation_Form__c.Id ), 
+save_new_url=URLFOR(&quot;https://hill-rom--hrctest.cs8.my.salesforce.com/TransactionSaveController.htm&quot;, Evaluation_Form__c.Id, [newid=Evaluation_Form__c.Id] ), 
+retURL=URLFOR($Request.retURL, null,null,true)] 
+,true)}&quot; 
+
+} 
+&lt;/script&gt; 
+&lt;/head&gt; 
+&lt;body onload=&quot;init()&quot;&gt; 
+&lt;p&gt;&amp;nbsp;&lt;/p&gt; 
+&lt;/body&gt; 
+&lt;/html&gt;</url>
+</WebLink>

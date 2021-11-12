@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Price</fullName>
+        <default>false</default>
+        <label>Budget</label>
+    </customValue>
+    <customValue>
+        <fullName>Specification</fullName>
+        <default>false</default>
+        <label>Product Portfolio</label>
+    </customValue>
+    <customValue>
+        <fullName>Service</fullName>
+        <default>false</default>
+        <label>Service</label>
+    </customValue>
+    <customValue>
+        <fullName>Relationship</fullName>
+        <default>false</default>
+        <label>Relationship</label>
+    </customValue>
+    <customValue>
+        <fullName>Quality</fullName>
+        <default>false</default>
+        <label>Quality</label>
+    </customValue>
+    <customValue>
+        <fullName>Affected by Import Argument Reason</fullName>
+        <default>false</default>
+        <label>Affected by Import Argument Reason</label>
+    </customValue>
+    <description>Used in Strategic Deal Analyses</description>
+    <masterLabel>INT SWOT</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Host_BU__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Please enter Host Budget Unit</inlineHelpText>
+    <label>Host BU</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>PSS</fullName>
+                <default>false</default>
+                <label>PSS</label>
+            </value>
+            <value>
+                <fullName>FLC</fullName>
+                <default>false</default>
+                <label>FLC</label>
+            </value>
+            <value>
+                <fullName>GSS</fullName>
+                <default>false</default>
+                <label>GSS</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

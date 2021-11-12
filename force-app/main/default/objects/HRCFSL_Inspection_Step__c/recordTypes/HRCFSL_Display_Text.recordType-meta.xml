@@ -3,4 +3,15 @@
     <fullName>HRCFSL_Display_Text</fullName>
     <active>true</active>
     <label>Display Text</label>
+    <picklistValues>
+        <picklist>HRCFSL_Is_Visited__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
 </RecordType>

@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>ASEANNA (ASA)</fullName>
+        <default>false</default>
+        <label>ASEANNA (ASA)</label>
+    </customValue>
+    <customValue>
+        <fullName>Asia Pacific (APC)</fullName>
+        <default>false</default>
+        <label>Asia Pacific (APC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Australia &amp; New Zealand (ANZ)</fullName>
+        <default>false</default>
+        <label>Australia &amp; New Zealand (ANZ)</label>
+    </customValue>
+    <customValue>
+        <fullName>Benelux (BLX)</fullName>
+        <default>false</default>
+        <label>Benelux (BLX)</label>
+    </customValue>
+    <customValue>
+        <fullName>Greater China (CHN)</fullName>
+        <default>false</default>
+        <label>Greater China (CHN)</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporate (CRP)</fullName>
+        <default>false</default>
+        <label>Corporate (CRP)</label>
+    </customValue>
+    <customValue>
+        <fullName>DACH (DCH)</fullName>
+        <default>false</default>
+        <label>DACH (DCH)</label>
+    </customValue>
+    <customValue>
+        <fullName>EMEA (EMA)</fullName>
+        <default>false</default>
+        <label>EMEA (EMA)</label>
+    </customValue>
+    <customValue>
+        <fullName>EMEA Emerging Markets (EEM)</fullName>
+        <default>false</default>
+        <label>EMEA Emerging Markets (EEM)</label>
+    </customValue>
+    <customValue>
+        <fullName>France (FRA)</fullName>
+        <default>false</default>
+        <label>France (FRA)</label>
+    </customValue>
+    <customValue>
+        <fullName>FLC Global (FLC)</fullName>
+        <default>false</default>
+        <label>FLC Global (FLC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Iberia (IBR)</fullName>
+        <default>false</default>
+        <label>Iberia (IBR)</label>
+    </customValue>
+    <customValue>
+        <fullName>Indian Subcontinent (INS)</fullName>
+        <default>false</default>
+        <label>Indian Subcontinent (INS)</label>
+    </customValue>
+    <customValue>
+        <fullName>International (ITL)</fullName>
+        <default>false</default>
+        <label>International (ITL)</label>
+    </customValue>
+    <customValue>
+        <fullName>Italy (ITA)</fullName>
+        <default>false</default>
+        <label>Italy (ITA)</label>
+    </customValue>
+    <customValue>
+        <fullName>Japan (JPN)</fullName>
+        <default>false</default>
+        <label>Japan (JPN)</label>
+    </customValue>
+    <customValue>
+        <fullName>Latin America (LAM)</fullName>
+        <default>false</default>
+        <label>Latin America (LAM)</label>
+    </customValue>
+    <customValue>
+        <fullName>Levant Africa Turkey (LAT)</fullName>
+        <default>false</default>
+        <label>Levant Africa Turkey (LAT)</label>
+    </customValue>
+    <customValue>
+        <fullName>Nordics (NOR)</fullName>
+        <default>false</default>
+        <label>Nordics (NOR)</label>
+    </customValue>
+    <customValue>
+        <fullName>PSS Global (PSS)</fullName>
+        <default>false</default>
+        <label>PSS Global (PSS)</label>
+    </customValue>
+    <customValue>
+        <fullName>PSS Care Comm (PSC)</fullName>
+        <default>false</default>
+        <label>PSS Care Comm (PSC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Respiratory Health (RH)</fullName>
+        <default>false</default>
+        <label>Respiratory Health (RH)</label>
+    </customValue>
+    <customValue>
+        <fullName>GSS Global (GSS)</fullName>
+        <default>false</default>
+        <label>GSS Global (GSS)</label>
+    </customValue>
+    <customValue>
+        <fullName>United Kingdom &amp; Ireland (UKI)</fullName>
+        <default>false</default>
+        <label>United Kingdom &amp; Ireland (UKI)</label>
+    </customValue>
+    <customValue>
+        <fullName>Welch Allyn Global (WA)</fullName>
+        <default>false</default>
+        <label>Welch Allyn Global (WA)</label>
+    </customValue>
+    <customValue>
+        <fullName>Aspen Surgical (Total)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Aspen Surgical (Total)</label>
+    </customValue>
+    <customValue>
+        <fullName>Allen Medical (Total)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Allen Medical (Total)</label>
+    </customValue>
+    <customValue>
+        <fullName>Respiratory Care (Total)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Respiratory Care (Total)</label>
+    </customValue>
+    <customValue>
+        <fullName>UK &amp; Ireland</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>UK &amp; Ireland</label>
+    </customValue>
+    <customValue>
+        <fullName>Spain</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Spain</label>
+    </customValue>
+    <customValue>
+        <fullName>Nordics</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Nordics</label>
+    </customValue>
+    <customValue>
+        <fullName>Italy</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Italy</label>
+    </customValue>
+    <customValue>
+        <fullName>France</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>France</label>
+    </customValue>
+    <customValue>
+        <fullName>DACH</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>DACH</label>
+    </customValue>
+    <customValue>
+        <fullName>Benelux</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Benelux</label>
+    </customValue>
+    <customValue>
+        <fullName>Benelux &amp; E. Europe</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Benelux &amp; E. Europe</label>
+    </customValue>
+    <customValue>
+        <fullName>Emerging Asia</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Emerging Asia</label>
+    </customValue>
+    <customValue>
+        <fullName>Japan</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Japan</label>
+    </customValue>
+    <customValue>
+        <fullName>China</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>China</label>
+    </customValue>
+    <customValue>
+        <fullName>Australia</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Australia</label>
+    </customValue>
+    <customValue>
+        <fullName>EMEA</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>EMEA</label>
+    </customValue>
+    <customValue>
+        <fullName>PSS</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>PSS</label>
+    </customValue>
+    <customValue>
+        <fullName>North America</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>North America</label>
+    </customValue>
+    <customValue>
+        <fullName>LATAM</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>LATAM</label>
+    </customValue>
+    <customValue>
+        <fullName>International</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>International</label>
+    </customValue>
+    <customValue>
+        <fullName>GSS</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>GSS</label>
+    </customValue>
+    <customValue>
+        <fullName>FLC</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>FLC</label>
+    </customValue>
+    <customValue>
+        <fullName>Europe</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Europe</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporate</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Corporate</label>
+    </customValue>
+    <customValue>
+        <fullName>APAC</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>APAC</label>
+    </customValue>
+    <customValue>
+        <fullName>MEATI</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>MEATI</label>
+    </customValue>
+    <customValue>
+        <fullName>Canada</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Canada</label>
+    </customValue>
+    <customValue>
+        <fullName>Trumpf</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Trumpf</label>
+    </customValue>
+    <customValue>
+        <fullName>Welch Allyn</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Welch Allyn</label>
+    </customValue>
+    <masterLabel>IC Pool</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

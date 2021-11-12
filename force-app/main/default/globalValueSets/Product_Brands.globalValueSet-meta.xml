@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Allen</fullName>
+        <default>false</default>
+        <label>Allen</label>
+    </customValue>
+    <customValue>
+        <fullName>Hill-Rom</fullName>
+        <default>false</default>
+        <label>Hill-Rom</label>
+    </customValue>
+    <customValue>
+        <fullName>Liko</fullName>
+        <default>false</default>
+        <label>Liko</label>
+    </customValue>
+    <customValue>
+        <fullName>Mortara</fullName>
+        <default>false</default>
+        <label>Mortara</label>
+    </customValue>
+    <customValue>
+        <fullName>N/A</fullName>
+        <default>false</default>
+        <label>N/A</label>
+    </customValue>
+    <customValue>
+        <fullName>Respiratory</fullName>
+        <default>false</default>
+        <label>Respiratory</label>
+    </customValue>
+    <customValue>
+        <fullName>Trumpf</fullName>
+        <default>false</default>
+        <label>Trumpf</label>
+    </customValue>
+    <customValue>
+        <fullName>VideoMed</fullName>
+        <default>false</default>
+        <label>VideoMed</label>
+    </customValue>
+    <customValue>
+        <fullName>Welch Allyn</fullName>
+        <default>false</default>
+        <label>Welch Allyn</label>
+    </customValue>
+    <customValue>
+        <fullName>Operamed</fullName>
+        <default>false</default>
+        <label>Operamed</label>
+    </customValue>
+    <customValue>
+        <fullName>Voalte</fullName>
+        <default>false</default>
+        <label>Voalte</label>
+    </customValue>
+    <customValue>
+        <fullName>Third Party</fullName>
+        <default>false</default>
+        <label>Third Party</label>
+    </customValue>
+    <customValue>
+        <fullName>Trade OR Construction</fullName>
+        <default>false</default>
+        <label>Trade OR Construction</label>
+    </customValue>
+    <customValue>
+        <fullName>Aspen Woundcare</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Aspen Woundcare</label>
+    </customValue>
+    <customValue>
+        <fullName>Völker</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Völker</label>
+    </customValue>
+    <customValue>
+        <fullName>Aspen</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Aspen</label>
+    </customValue>
+    <customValue>
+        <fullName>STILLE</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>STILLE</label>
+    </customValue>
+    <customValue>
+        <fullName>S.CAPE</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>S.CAPE</label>
+    </customValue>
+    <customValue>
+        <fullName>THERAPIXEL</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>THERAPIXEL</label>
+    </customValue>
+    <customValue>
+        <fullName>Ziehm</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Ziehm</label>
+    </customValue>
+    <customValue>
+        <fullName>Aspen Surgical</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Aspen Surgical</label>
+    </customValue>
+    <customValue>
+        <fullName>BALEA</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>BALEA</label>
+    </customValue>
+    <masterLabel>Product Brands</masterLabel>
+    <sorted>true</sorted>
+</GlobalValueSet>

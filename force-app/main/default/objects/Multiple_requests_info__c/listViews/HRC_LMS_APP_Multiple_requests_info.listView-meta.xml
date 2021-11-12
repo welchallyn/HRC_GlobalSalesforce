@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRC_LMS_APP_Multiple_requests_info</fullName>
+    <filterScope>Queue</filterScope>
+    <label>HRC-LMS-APP</label>
+    <queue>HRC_LMS_APP</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

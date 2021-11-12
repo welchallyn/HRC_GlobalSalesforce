@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Product Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Frames</fullName>
+                <default>false</default>
+                <label>Frames</label>
+            </value>
+            <value>
+                <fullName>Furniture</fullName>
+                <default>false</default>
+                <label>Furniture</label>
+            </value>
+            <value>
+                <fullName>LIKO Accessories</fullName>
+                <default>false</default>
+                <label>LIKO Accessories</label>
+            </value>
+            <value>
+                <fullName>LIKO lifts</fullName>
+                <default>false</default>
+                <label>LIKO lifts</label>
+            </value>
+            <value>
+                <fullName>Patient Monitoring/CFCM</fullName>
+                <default>false</default>
+                <label>Patient Monitoring/CFCM</label>
+            </value>
+            <value>
+                <fullName>Surfaces</fullName>
+                <default>false</default>
+                <label>Surfaces</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

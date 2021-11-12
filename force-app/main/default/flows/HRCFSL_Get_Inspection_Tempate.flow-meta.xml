@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
-    <apiVersion>49.0</apiVersion>
+    <apiVersion>53.0</apiVersion>
     <assignments>
         <name>Assign_Default_Template</name>
         <label>Assign Default Template</label>
@@ -51,7 +51,7 @@
             <name>Default_Template_Found</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Get_Default_Inspection_Template</leftValueReference>
+                <leftValueReference>Get_Default_Template</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
@@ -80,7 +80,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Get_Default_Inspection_Template</targetReference>
+                <targetReference>Get_Default_Template</targetReference>
             </connector>
             <label>Template Required</label>
         </rules>
@@ -98,10 +98,17 @@
             <name>Match_Yes</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>For_Each_Default_Template.HRCFSL_Region__c</leftValueReference>
+                <leftValueReference>For_Each_Default_Template.HRCFSL_Inspection_Template__r.HRCFSL_Region__c</leftValueReference>
                 <operator>Contains</operator>
                 <rightValue>
                     <elementReference>region</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>For_Each_Default_Template.HRCFSL_Inspection_Template__r.HRCFSL_Default__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -147,7 +154,7 @@
         <label>For Each Default Template</label>
         <locationX>1356</locationX>
         <locationY>250</locationY>
-        <collectionReference>Get_Default_Inspection_Template</collectionReference>
+        <collectionReference>Get_Default_Template</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
             <targetReference>Matches_Work_Order_Country</targetReference>
@@ -157,7 +164,7 @@
         <name>For_each_Inspection_Template</name>
         <label>For each Inspection Template</label>
         <locationX>559</locationX>
-        <locationY>239</locationY>
+        <locationY>255</locationY>
         <assignNextValueToReference>InspectionTemplateWorkType</assignNextValueToReference>
         <collectionReference>Get_Inspection_template_work_type</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -188,24 +195,24 @@
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <recordLookups>
-        <name>Get_Default_Inspection_Template</name>
-        <label>Get Default Inspection Template</label>
-        <locationX>1013</locationX>
-        <locationY>246</locationY>
+        <name>Get_Default_Template</name>
+        <label>Get Default Template</label>
+        <locationX>1001</locationX>
+        <locationY>250</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Found_Default_Template</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
-            <field>HRCFSL_Default__c</field>
+            <field>HRCFSL_Work_Type__c</field>
             <operator>EqualTo</operator>
             <value>
-                <booleanValue>true</booleanValue>
+                <elementReference>workTypeId</elementReference>
             </value>
         </filters>
         <getFirstRecordOnly>false</getFirstRecordOnly>
-        <object>HRCFSL_Inspection_Template__c</object>
+        <object>HRCFSL_Inspection_Template_Work_Type__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordLookups>

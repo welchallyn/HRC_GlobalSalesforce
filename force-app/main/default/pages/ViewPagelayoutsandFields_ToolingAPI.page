@@ -1,0 +1,98 @@
+<apex:page showHeader="true">
+
+<apex:sectionHeader title="Pagelayouts and Fields"/>
+    <!-- Import Libraries -->
+    <apex:includeScript value="{!URLFOR($Resource.searchToolingAPI, '/js/angular.js')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.searchToolingAPI, '/css/bootstrap.css')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.searchToolingAPI, '/js/jsforce.js')}"/>
+    <!-- End Lib -->
+    
+    <!-- Angular Controller -->
+    <script>
+        var toolingApiApp= angular.module("toolingApiApp", []);
+        toolingApiApp.controller('toolingApiCtrl', function($scope) {
+        $scope.toolingApiJson=[];
+        $scope.sObjectId='';
+                $scope.conn = new jsforce.Connection({ accessToken: '{!$Api.Session_Id}' });
+                console.log($scope.conn.tooling);
+                $scope.showLayoutResults=function()  // used for displaying layout results to user
+                {
+                            // show layout results after getting sojbectId
+                            document.getElementById("search").value='Searching ..';
+                            $scope.conn.tooling.sobject('Layout')
+                               .find({ TableEnumOrId: $scope.sObjectId})
+                               .execute(function(err, records) {
+                                if (err) { return console.error(err); }
+                      
+                                $scope.toolingApiJson=records;
+                                console.log($scope.toolingApiJson);
+                                $scope.$apply();
+                                document.getElementById("search").value='search..';
+                                });            
+                
+                }
+      });
+   </script>
+   <style>
+    .Readonly{
+        color:black;
+        background-color:grey;
+        font-weight:bold;
+    }
+    .Required{
+           color:red!important;
+           font-weight:bold!important;
+    }
+
+</style>
+
+   <!-- end Angular -->
+<div ng-app="toolingApiApp" ng-controller="toolingApiCtrl" class="bs" style="margin-top:20px;">
+    <p> <h4> <u> Instructions </u></h4> </p>
+    <p><u1><li> Enter the <font color="red"><b>Object ID</b></font> in the textbox and click on Search Button </li>
+     <li>To Further drill down based on fields in layout, type the APINAME of field in the second textbox </li>   </u1> </p>
+        <div class="panel panel-primary">
+                          <div class="panel-heading">
+                            <h3 class="panel-title">Search</h3>
+                          </div>
+         <div class="panel-body">   
+          <table class="table table-striped">
+          <tr>
+             <td>             
+             <div class="input-group" style="width:40%;">
+                      <input type="text" class="form-control" ng-model="sObjectId" placeholder="Object ID"/>
+                      <span class="input-group-btn">
+                        <input class="btn btn-primary" value="Search" id="search" type="button" ng-click="showLayoutResults()"/>
+                      </span>
+            </div>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>  
+              <input type="text" class="form-control" ng-model="query" ng-show="toolingApiJson.length>0" placeholder="Field Search .." style="width:40%;"/>
+            </td>
+          </tr>
+          </table>  
+        </div>         
+        </div>     
+        <div class="row" style="margin-top:50px;"> 
+                <div class="col-sm-3" ng-repeat="metadata in toolingApiJson" style="margin-top:30px;">
+                    <div class="panel panel-primary">
+                          <div class="panel-heading">
+                            <h3 class="panel-title">{{ metadata.Name }}</h3>
+                          </div>
+                          <div class="panel-body">
+                             <span ng-repeat="api in metadata.Metadata.layoutSections">
+                             <span ng-repeat="apicol in api.layoutColumns">
+                                 <u1 ng-repeat="apiitem in apicol.layoutItems | filter:query">
+                                     <li class="{{ apiitem.behavior }}">   {{ apiitem.field }} </li>
+                                 </u1>
+                             </span>
+                             </span>
+                          </div>
+                    </div>  
+                  </div>   
+           </div>           
+</div>
+</apex:page>

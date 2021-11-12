@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRC_TELETRACK_ADMIN_ApprovalRoleMapping</fullName>
+    <filterScope>Queue</filterScope>
+    <label>HRC-TELETRACK-ADMIN</label>
+    <queue>HRC_TELETRACK_ADMIN</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

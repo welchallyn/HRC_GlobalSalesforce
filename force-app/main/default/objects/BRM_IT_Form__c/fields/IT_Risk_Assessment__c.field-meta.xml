@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IT_Risk_Assessment__c</fullName>
+    <externalId>false</externalId>
+    <label>IT Risk Assessment</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>0 - No new technology being implemented or is standard process</fullName>
+                <default>false</default>
+                <label>0 - No new technology being implemented or is standard process</label>
+            </value>
+            <value>
+                <fullName>1 - Existing HRC technology, but nonstandard process (configured, not customized)</fullName>
+                <default>false</default>
+                <label>1 - Existing HRC technology, but nonstandard process (configured, not customized)</label>
+            </value>
+            <value>
+                <fullName>2 - Existing HRC technology but requires integration, new toolset, or local customization</fullName>
+                <default>false</default>
+                <label>2 - Existing HRC technology but requires integration, new toolset, or local customization</label>
+            </value>
+            <value>
+                <fullName>3 - Existing HRC technology but a new module, or mature technology that is new to HRC</fullName>
+                <default>false</default>
+                <label>3 - Existing HRC technology but a new module, or mature technology that is new to HRC</label>
+            </value>
+            <value>
+                <fullName>4 - Cutting edge technology that is new to HRC</fullName>
+                <default>false</default>
+                <label>4 - Cutting edge technology that is new to HRC</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

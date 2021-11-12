@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Platform Event that is created when an outbound integration call from Salesforce to JDE is required.</description>
+    <eventType>HighVolume</eventType>
+    <label>Outbound JDE Work Order</label>
+    <pluralLabel>Outbound JDE Work Orders</pluralLabel>
+    <publishBehavior>PublishAfterCommit</publishBehavior>
+</CustomObject>

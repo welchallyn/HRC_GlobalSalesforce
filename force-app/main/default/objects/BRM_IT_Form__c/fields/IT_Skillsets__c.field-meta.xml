@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IT_Skillsets__c</fullName>
+    <externalId>false</externalId>
+    <label>IT Towers</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Project Everest</fullName>
+                <default>false</default>
+                <label>Project Everest</label>
+            </value>
+            <value>
+                <fullName>Digital</fullName>
+                <default>false</default>
+                <label>Digital Commercial &amp; Service</label>
+            </value>
+            <value>
+                <fullName>Custom Apps</fullName>
+                <default>false</default>
+                <label>Custom Apps</label>
+            </value>
+            <value>
+                <fullName>Content Mgmt</fullName>
+                <default>false</default>
+                <label>Digital Web, Commerce &amp; Content Mgmt</label>
+            </value>
+            <value>
+                <fullName>SAP &amp; Boundary Apps</fullName>
+                <default>false</default>
+                <label>SAP &amp; Boundary Apps</label>
+            </value>
+            <value>
+                <fullName>JDE &amp; Boundary Apps</fullName>
+                <default>false</default>
+                <label>JDE &amp; COTS ERP</label>
+            </value>
+            <value>
+                <fullName>PLM (Engg Apps)</fullName>
+                <default>false</default>
+                <label>PLM (Engg Apps)</label>
+            </value>
+            <value>
+                <fullName>HR Cots</fullName>
+                <default>false</default>
+                <label>HR Cots</label>
+            </value>
+            <value>
+                <fullName>Data and Analytics</fullName>
+                <default>false</default>
+                <label>Data and Analytics</label>
+            </value>
+            <value>
+                <fullName>Testing</fullName>
+                <default>false</default>
+                <label>Testing</label>
+            </value>
+            <value>
+                <fullName>Infra – Tech Support (L2/L3)</fullName>
+                <default>false</default>
+                <label>Infra – Tech Support (L2/L3)</label>
+            </value>
+            <value>
+                <fullName>COE Network</fullName>
+                <default>false</default>
+                <label>COE Network</label>
+            </value>
+            <value>
+                <fullName>COE Telecom</fullName>
+                <default>false</default>
+                <label>COE Telecom</label>
+            </value>
+            <value>
+                <fullName>COE Infrastructure</fullName>
+                <default>false</default>
+                <label>COE Infrastructure</label>
+            </value>
+            <value>
+                <fullName>COE Integration</fullName>
+                <default>false</default>
+                <label>COE Integration</label>
+            </value>
+            <value>
+                <fullName>Integrations</fullName>
+                <default>false</default>
+                <label>Integrations</label>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+                <label>Unknown</label>
+            </value>
+            <value>
+                <fullName>Cots ERP &amp; Others</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Cots ERP &amp; Others</label>
+            </value>
+            <value>
+                <fullName>Digital &amp; Field Services</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Digital &amp; Field Services</label>
+            </value>
+            <value>
+                <fullName>Generic - BA CRM</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Generic - BA CRM</label>
+            </value>
+            <value>
+                <fullName>Generic - BA Comm Ops</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Generic - BA Comm Ops</label>
+            </value>
+            <value>
+                <fullName>Generic - BA Engineering</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Generic - BA Engineering</label>
+            </value>
+            <value>
+                <fullName>Generic - BA Finance</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Generic - BA Finance</label>
+            </value>
+            <value>
+                <fullName>Generic - BA Global Operations</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Generic - BA Global Operations</label>
+            </value>
+            <value>
+                <fullName>Generic - BA Human Resources</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Generic - BA Human Resources</label>
+            </value>
+            <value>
+                <fullName>Generic - BA R&amp;D QARA</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Generic - BA R&amp;D QARA</label>
+            </value>
+            <value>
+                <fullName>Generic - BA Security</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Generic - BA Security</label>
+            </value>
+            <value>
+                <fullName>Generic - BRM Eng</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Generic - BRM Eng</label>
+            </value>
+            <value>
+                <fullName>Generic - BRM GSC</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Generic - BRM GSC</label>
+            </value>
+            <value>
+                <fullName>Generic - BRM Int&apos;l</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Generic - BRM Int&apos;l</label>
+            </value>
+            <value>
+                <fullName>Generic - BRM QA</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Generic - BRM QA</label>
+            </value>
+            <value>
+                <fullName>Generic - BRM SGA</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Generic - BRM SGA</label>
+            </value>
+            <value>
+                <fullName>Generic - Business Intelligence Reporting</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Generic - Business Intelligence Reporting</label>
+            </value>
+            <value>
+                <fullName>Generic - Collaboration</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Generic - Collaboration</label>
+            </value>
+            <value>
+                <fullName>Generic - Compliance &amp; Risk Management</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Generic - Compliance &amp; Risk Management</label>
+            </value>
+            <value>
+                <fullName>Generic - DBA</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Generic - DBA</label>
+            </value>
+            <value>
+                <fullName>Generic - Data Integration Services</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Generic - Data Integration Services</label>
+            </value>
+            <value>
+                <fullName>Generic - Enterprise Architect</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Generic - Enterprise Architect</label>
+            </value>
+            <value>
+                <fullName>Generic - External Contracted Resource</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Generic - External Contracted Resource</label>
+            </value>
+            <value>
+                <fullName>Generic - ID Management</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Generic - ID Management</label>
+            </value>
+            <value>
+                <fullName>Generic - Procurement</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Generic - Procurement</label>
+            </value>
+            <value>
+                <fullName>Generic - Project Manager</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Generic - Project Manager</label>
+            </value>
+            <value>
+                <fullName>Generic - RemedyForce</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Generic - RemedyForce</label>
+            </value>
+            <value>
+                <fullName>Generic - Service Delivery</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Generic - Service Delivery</label>
+            </value>
+            <value>
+                <fullName>Generic - Technical Analyst Applications</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Generic - Technical Analyst Applications</label>
+            </value>
+            <value>
+                <fullName>Generic - Technical Analyst Network</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Generic - Technical Analyst Network</label>
+            </value>
+            <value>
+                <fullName>Generic - Technical Analyst Server</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Generic - Technical Analyst Server</label>
+            </value>
+            <value>
+                <fullName>Generic - Voice/Contact Center</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Generic - Voice/Contact Center</label>
+            </value>
+            <value>
+                <fullName>Human Resources</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Human Resources</label>
+            </value>
+            <value>
+                <fullName>Infrastructure L2/L3</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Infrastructure L2/L3</label>
+            </value>
+            <value>
+                <fullName>Integration</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Integration</label>
+            </value>
+            <value>
+                <fullName>JDE</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>JDE</label>
+            </value>
+            <value>
+                <fullName>Other ERP</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Other ERP</label>
+            </value>
+            <value>
+                <fullName>PLM</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>PLM</label>
+            </value>
+            <value>
+                <fullName>Portal and Content</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Portal and Content</label>
+            </value>
+            <value>
+                <fullName>SAP (SAP, Hybris, Concur)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>SAP (SAP, Hybris, Concur)</label>
+            </value>
+            <value>
+                <fullName>SAP Concur</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>SAP Concur</label>
+            </value>
+            <value>
+                <fullName>Web Apps (Custom Apps)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Web Apps (Custom Apps)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

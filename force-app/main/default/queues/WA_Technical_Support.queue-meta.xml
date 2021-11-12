@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>WA Technical Support</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>WA_Technical_Support</publicGroup>
+        </publicGroups>
+        <users>
+            <user>robinsa5@hrc.corp</user>
+            <user>lelioa1@hrc.corp</user>
+            <user>fabianc2@hrc.corp</user>
+            <user>calabrd1@hrc.corp</user>
+            <user>mooreg5@hrc.corp</user>
+            <user>hencej1@hrc.corp</user>
+            <user>gunterj4@hrc.corp</user>
+            <user>lawtonj1@hrc.corp</user>
+            <user>alexanj3@hrc.corp</user>
+            <user>stoutek1@hrc.corp</user>
+            <user>balil1@hrc.corp</user>
+            <user>whitel2@hrc.corp</user>
+            <user>galbism1@hrc.corp</user>
+            <user>wallism1@hrc.corp</user>
+            <user>malfip1@hrc.corp</user>
+            <user>wheeles2@hrc.corp</user>
+            <user>traynot1@hrc.corp</user>
+        </users>
+    </queueMembers>
+    <queueRoutingConfig>Standard_Priority_Cases</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

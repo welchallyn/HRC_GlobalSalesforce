@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Include_Parts_List__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Parts list indicating whether a list of the Liko parts are required</description>
+    <externalId>false</externalId>
+    <label>Include Parts List</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

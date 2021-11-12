@@ -1,0 +1,294 @@
+<apex:page controller="NextStageRemedyConsoleController">
+
+<script type="text/javascript">
+window.onload = function() {
+            
+			var changeType = "{!$CurrentPage.parameters.changeType}"; 
+			console.log("changeType",changeType);
+			var status = "{!URLENCODE($CurrentPage.parameters.status)}"; 
+			var changeId = "{!$CurrentPage.parameters.changeId}"; 
+			var submittedForApproval ={!$CurrentPage.parameters.submittedForApproval}; 
+			var rejected = false;
+			console.log("changeId",changeId);
+			if(changeType === "Normal"){
+			    console.log("status",status);
+                if(status === "INITIATE" && submittedForApproval === false) { 
+    			    console.log("status if ---------", status);
+        			var approverSelection = window.confirm("Please select appropriate Ad-Hoc Approvers \n If you want to continue press Ok or if you want to change approvers, press Cancel"); 
+        			if(approverSelection === true){ 
+            			var answer = window.confirm("This will now be moved to the PLAN & SCHEDULE state. Do you want to continue?"); 
+            			if(answer === true){
+                			//window.open('/apex/NextStage?redirectId=remedyforceconsole&changeType=' + changeType + '&status=' + status + '&changeId=' + changeId, '_self'); 
+                			CRApprovalUpdate();
+            			} else {
+            			    self.close();
+            			}
+        			} else {
+        			    self.close();
+        			} 
+    			} else if(status === "PLAN+SCHEDULE") { 
+        			console.log("status else---------", status);
+        			rejected = {!$CurrentPage.parameters.planRejected};
+        			console.log("rejected",rejected);
+        			console.log("submittedForApproval",submittedForApproval);
+        			if(rejected === true){
+            			alert("Please make necessary changes and re-submit for approval at " + status + " stage"); 
+            			self.close();
+        			} else{ 
+            			if(submittedForApproval === true){
+            			    alert("This record is already submitted for Approval"); 
+            			    self.close();
+            			} else{ 
+                			var approverSelection = window.confirm("Please select appropriate Ad-Hoc Approvers \n If you want to continue press Ok or if you want to change approvers, press Cancel"); 
+                			if(approverSelection === true){ 
+                    			var answer = window.confirm("Do you want to move to next stage?"); 
+                    			if(answer == true) {
+                        			//window.open('/apex/NextStage?redirectId=remedyforceconsole&changeType=' + changeType + '&status=' + status + '&changeId=' + changeId, '_self');
+                        			CRApprovalUpdate();
+                    			} else {
+                    			    self.close();
+                    			}
+                			} else {
+                			    self.close();
+                			}
+            			} 
+        			} 
+        			rejected = false; 
+			} else if(status === "IMPLEMENT") { 
+    			rejected = {!$CurrentPage.parameters.implementRejected}; 
+    			if(rejected === true){ 
+    			    alert("Please make necessary changes and re-submit for approval at " + status + " stage");
+    			    self.close();
+    			}
+    			else{ 
+        			if(submittedForApproval === true) { 
+            			alert("This record is already submitted for Approval");
+            			self.close();
+        			}else{ 
+            			var answer = window.confirm("Do you want to move to next stage?"); 
+            			if(answer === true) { 
+                			//window.open('/apex/NextStage?redirectId=remedyforceconsole&changeType=' + changeType + '&status=' + status + '&changeId=' + changeId, '_self'); 
+                			CRApprovalUpdate();
+            			} else {
+            			    self.close();
+            			}
+        
+        			} 
+    			} 
+    			rejected = false; 
+			} else if(status === "COMPLETED") { 
+    			alert("There are no further stages"); 
+    			//window.open('/apex/NextStage?redirectId=remedyforceconsole&changeType=' + changeType + '&status=' + status + '&changeId=' + changeId, '_self');
+    			CRApprovalUpdate();
+			}
+		} else if(changeType === "Emergency" || changeType === "Standard"){ 
+            if(status == "INITIATE" && submittedForApproval == false) { 
+    			var approverSelection = window.confirm("Please select appropriate Ad-Hoc Approvers \n If you want to continue press Ok or if you want to change approvers, press Cancel"); 
+    			if(approverSelection === true){ 
+        			var answer = window.confirm("Do you want to move to next stage?"); 
+        			if(answer === true){ 
+            			//window.open('/apex/NextStage?redirectId=remedyforceconsole&changeType=' + changeType + '&status=' + status + '&changeId=' + changeId, '_self'); 
+            			CRApprovalUpdate();
+        			} else {
+        			    self.close();
+        			}
+    			} else {
+    			    self.close();
+    			} 
+			} else if(status === "REVIEW+AUTHORIZATION") { 
+    			rejected = {!$CurrentPage.parameters.reviewRejected}; 
+                if(rejected === true) { 
+        			alert("Please make necessary changes and re-submit for approval at " + status + " stage"); 
+        			self.close();
+                } else { 
+        			if(submittedForApproval === true){
+        			    alert("This record is already submitted for Approval"); 
+        			    self.close();
+        			}else{ 
+            			var approverSelection = window.confirm("Please select appropriate Ad-Hoc Approvers \n If you want to continue press Ok or if you want to change approvers, press Cancel"); 
+            			if(approverSelection === true){ 
+                			var answer = window.confirm("Do you want to move to next stage?"); 
+                			if(answer === true){ 
+                    			//window.open('/apex/NextStage?redirectId=remedyforceconsole&changeType=' + changeType + '&status=' + status + '&changeId=' + changeId, '_self'); 
+                    			CRApprovalUpdate();
+                			} else {
+                			    self.close();
+                			}
+            			} else {
+            			    self.close();
+            			} 
+        			} 
+    			} 
+    			rejected = false; 
+			} else if(status === "PLAN+SCHEDULE") { 
+    			rejected = {!$CurrentPage.parameters.planRejected}; 
+                if(rejected === true) {
+        			alert("Please make necessary changes and re-submit for approval at " + status + " stage");
+        			self.close();
+    			} else { 
+        			if(submittedForApproval === true) { 
+            			alert("This record is already submitted for Approval");
+            			self.close();
+        			} else{ 
+            			var approverSelection = window.confirm("Please select appropriate Ad-Hoc Approvers \n If you want to continue press Ok or if you want to change approvers, press Cancel"); 
+            			if(approverSelection === true){ 
+                			var answer = window.confirm("Do you want to move to next stage?"); 
+                			if(answer === true) { 
+                    			//window.open('/apex/NextStage?redirectId=remedyforceconsole&changeType=' + changeType + '&status=' + status + '&changeId=' + changeId, '_self'); 
+                    			CRApprovalUpdate();
+                			} else {
+                			    self.close();
+                			}
+            			} else {
+            			    self.close();
+            			}
+        			} 
+    			} 
+    			rejected = false; 
+			} else if(status === "IMPLEMENT") { 
+    			rejected = {!$CurrentPage.parameters.implementRejected}; 
+    
+    			if(rejected === true) { 
+        			alert("Please make necessary changes and re-submit for approval at " + status + " stage");
+        			self.close();
+    			} else { 
+        			if(submittedForApproval === true) {
+            			alert("This record is already submitted for Approval"); 
+            			self.close();
+        			} else { 
+            			var answer = window.confirm("Do you want to move to next stage?"); 
+            			if(answer === true) { 
+                			//window.open('/apex/NextStage?redirectId=remedyforceconsole&changeType=' + changeType + '&status=' + status + '&changeId=' + changeId, '_self'); 
+                			CRApprovalUpdate();
+            			} else {
+            			    self.close();
+            			}
+        			} 
+    			} 
+    			rejected = false; 
+			} else if(status === "COMPLETED" && changeType === "Emergency"){ 
+			    alert("There are no further stages"); 
+			    self.close();
+			} else if(status === "COMPLETED" && changeType === "Standard"){ 
+    			rejected = {!$CurrentPage.parameters.completeRejected}; 
+    			if(rejected == true) { 
+        			alert("Please make necessary changes and re-submit for approval at " + status + " stage"); 
+        			self.close();
+    			}else { 
+        			if(submittedForApproval === true) { 
+            			alert("This record is already submitted for Approval"); 
+            			self.close();
+        			} else{ 
+            			var answer = window.confirm("Do you want to move to next stage?"); 
+            			if(answer == true) { 
+                			//window.open('/apex/NextStage?redirectId=remedyforceconsole&changeType=' + changeType + '&status=' + status + '&changeId=' + changeId, '_self'); 
+                			CRApprovalUpdate();
+            			} else {
+            			    self.close();
+            			}
+        			} 
+    		    } 
+    			rejected = false; 
+			} else if(status === "CLOSED" && changeType === "Standard"){ 
+    			alert("There are no further stages");
+    			self.close();
+			} 
+        } 
+		if(changeType === "Normal with Close Down"){ 
+    			console.log('After change type ------',changeType);
+                console.log('After status ------',status);
+                console.log('After submittedForApproval ------',submittedForApproval);
+                console.log('-------------',(status === "INITIATE"));
+                console.log('================',(submittedForApproval === false));
+    			if(status === "INITIATE" && submittedForApproval === false) { 
+        			var approverSelection = window.confirm("Please select appropriate Ad-Hoc Approvers \n If you want to continue press Ok or if you want to change approvers, press Cancel"); 
+        			if(approverSelection === true){ 
+            			var answer = window.confirm("This will now be moved to the PLAN & SCHEDULE state. Do you want to continue?"); 
+            			if(answer === true) {
+            			//window.open('/apex/NextStage?redirectId=remedyforceconsole&changeType=' + changeType + '&status=' + status + '&changeId=' + changeId, '_self'); 
+            			CRApprovalUpdate();
+            			} else {
+            			    self.close();
+            			}
+        			} else {
+        			    self.close();
+        			} 
+    			} else if(status === "PLAN+SCHEDULE") { 
+        			rejected = {!$CurrentPage.parameters.planRejected}; 
+        			if(rejected === true) { 
+            			alert("Please make necessary changes and re-submit for approval at " + status + " stage"); 
+            			self.close();
+        			} else { 
+            			if(submittedForApproval === true) { 
+                			alert("This record is already submitted for Approval"); 
+                			self.close();
+            			} else{ 
+                			var approverSelection = window.confirm("Please select appropriate Ad-Hoc Approvers \n If you want to continue press Ok or if you want to change approvers, press Cancel"); 
+                			if(approverSelection === true) { 
+                    			var answer = window.confirm("Do you want to move to next stage?"); 
+                    			if(answer == true) {
+                        			//window.open('/apex/NextStage?redirectId=remedyforceconsole&changeType=' + changeType + '&status=' + status + '&changeId=' + changeId, '_self'); 
+                        			CRApprovalUpdate();
+                    			} else {
+                    			    self.close();
+                    			}
+                			} else {
+                			    self.close();
+                			}
+            			} 
+        			} 
+        			rejected = false; 
+    			} else if(status === "IMPLEMENT") { 
+        			rejected = {!$CurrentPage.parameters.implementRejected}; 
+        			if(rejected === true) {
+            			alert("Please make necessary changes and re-submit for approval at " + status + " stage"); 
+            			self.close();
+        			} else{ 
+            			if(submittedForApproval === true) { 
+                			alert("This record is already submitted for Approval"); 
+                			self.close();
+            			} else{ 
+                			var answer = window.confirm("Do you want to move to next stage?"); 
+                			if(answer === true) { 
+                    			//window.open('/apex/NextStage?redirectId=remedyforceconsole&changeType=' + changeType + '&status=' + status + '&changeId=' + changeId, '_self'); 
+                    			CRApprovalUpdate();
+                			} else {
+                			    self.close();
+                			}
+                        } 
+        			} 
+        			rejected = false; 
+    			} else if(status === "COMPLETED") { 
+        			rejected = {!$CurrentPage.parameters.completeRejected}; 
+        			if(rejected === true) { 
+            			alert("Please make necessary changes and re-submit for approval at " + status + " stage"); 
+            			self.close();
+        			} else { 
+            			if(submittedForApproval === true) {
+                			alert("This record is already submitted for Approval"); 
+                			self.close();
+            			} else{ 
+                			var answer = window.confirm("Do you want to move to next stage?"); 
+                			if(answer === true) {
+                    			//window.open('/apex/NextStage?redirectId=remedyforceconsole&changeType=' + changeType + '&status=' + status + '&changeId=' + changeId, '_self'); 
+                    			CRApprovalUpdate();
+                			} else {
+                			    self.close();
+                			}
+            			} 
+        			} 
+        			rejected = false; 
+    			} 
+    			else if(status === "CLOSED"){ 
+        			alert("There are no further stages"); 
+        			self.close();
+    			} 
+			}
+		}
+        </script>
+		
+		<apex:form >
+            <apex:actionFunction name="CRApprovalUpdate" action="{!ChangeRecordApproval}" onComplete="self.close();"/>
+        </apex:form>
+ 
+</apex:page>

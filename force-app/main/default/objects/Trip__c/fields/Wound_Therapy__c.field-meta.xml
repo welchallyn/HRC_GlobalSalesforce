@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Wound_Therapy__c</fullName>
+    <externalId>false</externalId>
+    <label>Wound &amp; Therapy Surfaces</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Trip_Location__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>300 Wound Surface</fullName>
+                <default>false</default>
+                <label>300 Wound Surface</label>
+            </value>
+            <value>
+                <fullName>Accumax VPC Surface</fullName>
+                <default>false</default>
+                <label>Accumax VPC Surface</label>
+            </value>
+            <value>
+                <fullName>Clinitron Rite Hite</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Clinitron Rite Hite</label>
+            </value>
+            <value>
+                <fullName>Envella™ Air Fluidized</fullName>
+                <default>false</default>
+                <label>Envella™ Air Fluidized</label>
+            </value>
+            <value>
+                <fullName>Envision</fullName>
+                <default>false</default>
+                <label>Envision</label>
+            </value>
+            <value>
+                <fullName>NP100 Prevention Surface</fullName>
+                <default>false</default>
+                <label>NP100 Prevention Surface</label>
+            </value>
+            <value>
+                <fullName>NP50 Prevention Surface</fullName>
+                <default>false</default>
+                <label>NP50 Prevention Surface</label>
+            </value>
+            <value>
+                <fullName>P500 Therapy Surface</fullName>
+                <default>false</default>
+                <label>P500 Therapy Surface</label>
+            </value>
+            <value>
+                <fullName>Pro+</fullName>
+                <default>false</default>
+                <label>Pro+</label>
+            </value>
+            <value>
+                <fullName>Synergy Air Elite</fullName>
+                <default>false</default>
+                <label>Synergy Air Elite</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <valueName>300 Wound Surface</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <valueName>Accumax VPC Surface</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <valueName>Envella™ Air Fluidized</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <valueName>Envision</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <valueName>NP100 Prevention Surface</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <valueName>NP50 Prevention Surface</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <valueName>P500 Therapy Surface</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <valueName>Pro+</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <valueName>Synergy Air Elite</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

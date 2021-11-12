@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DOB__c</fullName>
+    <description>Required for Air Travel Only: Attendee Date of Birth</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Required for Air Travel Only: Attendee Date of Birth</inlineHelpText>
+    <label>DOB (Air Travel Only)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

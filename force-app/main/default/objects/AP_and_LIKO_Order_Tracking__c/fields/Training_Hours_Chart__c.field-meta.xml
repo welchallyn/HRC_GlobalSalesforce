@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Training_Hours_Chart__c</fullName>
+    <externalId>false</externalId>
+    <formula>HYPERLINK(&quot;https://hill-rom--hrctest.my.salesforce.com/sfc/p/#E0000000KMt9/a/4W000000busY/tnJ7irG2.woOmobs5Fj_0Qc9E3O.kJFFcRhcDV_cmuw&quot;,&quot;Click Here&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Training Hours Chart</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Resubmit_for_Approval</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Resubmit for Approval</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/apex.js&quot;)}
+var r = confirm(&quot;Are you sure want to recall the approval process?&quot;);
+if(r == true)
+{
+    
+var s = sforce.apex.execute(&quot;CFRapprovalRecall&quot;,&quot;recallApproval&quot;,{recId:&quot;{!Capital_Requests__c.Id}&quot;});
+alert(&quot;Approval has been recalled&quot;);
+//window.open(&apos;/{!Capital_Requests__c.Id}&apos;);
+}
+else
+{
+alert(&quot;Recall Cancelled&quot;);
+}</url>
+</WebLink>

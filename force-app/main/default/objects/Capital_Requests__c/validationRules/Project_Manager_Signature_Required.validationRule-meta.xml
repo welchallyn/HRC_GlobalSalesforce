@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_Manager_Signature_Required</fullName>
+    <active>true</active>
+    <description>When Submit PCN is checked as Completed, Project Manager Signature is Required.</description>
+    <errorConditionFormula>AND( 
+ISBLANK(Project_Manager_Signature_pcn__c),
+OR(
+Submit_PCN__c=TRUE))</errorConditionFormula>
+    <errorDisplayField>Project_Manager_Signature_pcn__c</errorDisplayField>
+    <errorMessage>When Submit PCN is checked as Completed, Project Manager Signature is Required.</errorMessage>
+</ValidationRule>

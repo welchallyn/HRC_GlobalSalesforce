@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>HRC-JDE-SERVICE-R6</name>
+    <queueMembers>
+        <users>
+            <user>haasena1@hrc.corp</user>
+            <user>meheutc@hrc.corp</user>
+            <user>digianf@hrc.corp</user>
+            <user>postelj1@hrc.corp</user>
+            <user>pettyk@hrc.corp</user>
+            <user>bocchim1@hrc.corp</user>
+            <user>parkerm2@hrc.corp</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>ApprovalRoleMapping__c</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>BMCServiceDesk__Incident__c</sobjectType>
+    </queueSobject>
+</Queue>

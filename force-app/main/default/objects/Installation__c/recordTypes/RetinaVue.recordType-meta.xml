@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RetinaVue</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>Install_compact</compactLayoutAssignment>
+    <description>RetinaVue Network installation, for Ambulatory installs</description>
+    <label>RetinaVue</label>
+    <picklistValues>
+        <picklist>Contract_Type__c</picklist>
+        <values>
+            <fullName>Existing Contract</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pro %2B Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Professional Service Agreement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Software Only Agreement</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>EMR_Software__c</picklist>
+        <values>
+            <fullName>Allscripts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Athena</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cerner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Epic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NextGen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>eCW</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Account Setup</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract Initiation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract Negotiation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Follow up complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Installation pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Installation scheduled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stalled</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_of_Device__c</picklist>
+        <values>
+            <fullName>CenterVue DRS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RV100-B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RV100-B PRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RV700-B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RV700-B PRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TopCon</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Workflow__c</picklist>
+        <values>
+            <fullName>USB connected to EMR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>USB unconnected to EMR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wireless connected to EMR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wireless unconnected to EMR</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

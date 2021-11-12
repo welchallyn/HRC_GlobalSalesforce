@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EVR_S4HANA_HyperCare_Approval_Mapping</fullName>
+    <filterScope>Queue</filterScope>
+    <label>EVR-S4HANA-HyperCare</label>
+    <queue>EVR_S4HANA_HyperCare</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

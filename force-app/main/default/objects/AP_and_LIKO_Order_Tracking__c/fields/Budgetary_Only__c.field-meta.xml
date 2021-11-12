@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Budgetary_Only__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates that only a budgetary proposal is required.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates that only a budgetary proposal is required (no parts list, no drawings).</inlineHelpText>
+    <label>Budgetary Only</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

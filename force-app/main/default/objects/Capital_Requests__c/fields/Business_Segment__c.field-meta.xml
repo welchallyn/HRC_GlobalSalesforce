@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Segment__c</fullName>
+    <externalId>false</externalId>
+    <label>Business Segment</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>DivisionBS__c</controllingField>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Acton</fullName>
+                <default>false</default>
+                <label>Acton</label>
+            </value>
+            <value>
+                <fullName>Allen</fullName>
+                <default>false</default>
+                <label>Allen</label>
+            </value>
+            <value>
+                <fullName>ASEANNA</fullName>
+                <default>false</default>
+                <label>ASEANNA</label>
+            </value>
+            <value>
+                <fullName>Aspen</fullName>
+                <default>false</default>
+                <label>Aspen Surgical</label>
+            </value>
+            <value>
+                <fullName>Australia / NZ</fullName>
+                <default>false</default>
+                <label>Australia / NZ</label>
+            </value>
+            <value>
+                <fullName>Batesville</fullName>
+                <default>false</default>
+                <label>Batesville</label>
+            </value>
+            <value>
+                <fullName>Belgium</fullName>
+                <default>false</default>
+                <label>Belgium</label>
+            </value>
+            <value>
+                <fullName>Benelux</fullName>
+                <default>false</default>
+                <label>Benelux</label>
+            </value>
+            <value>
+                <fullName>Brazil</fullName>
+                <default>false</default>
+                <label>Brazil</label>
+            </value>
+            <value>
+                <fullName>Canada</fullName>
+                <default>false</default>
+                <label>Canada</label>
+            </value>
+            <value>
+                <fullName>Care Comm</fullName>
+                <default>false</default>
+                <label>Care Comm</label>
+            </value>
+            <value>
+                <fullName>Cary</fullName>
+                <default>false</default>
+                <label>Cary</label>
+            </value>
+            <value>
+                <fullName>China</fullName>
+                <default>false</default>
+                <label>China</label>
+            </value>
+            <value>
+                <fullName>CMO</fullName>
+                <default>false</default>
+                <label>CMO</label>
+            </value>
+            <value>
+                <fullName>Columbia</fullName>
+                <default>false</default>
+                <label>Columbia</label>
+            </value>
+            <value>
+                <fullName>CSS</fullName>
+                <default>false</default>
+                <label>CSS</label>
+            </value>
+            <value>
+                <fullName>DACH</fullName>
+                <default>false</default>
+                <label>DACH</label>
+            </value>
+            <value>
+                <fullName>Eastern Europe &amp; CIS</fullName>
+                <default>false</default>
+                <label>Eastern Europe &amp; CIS</label>
+            </value>
+            <value>
+                <fullName>Excelcare</fullName>
+                <default>false</default>
+                <label>Excelcare</label>
+            </value>
+            <value>
+                <fullName>Field Service</fullName>
+                <default>false</default>
+                <label>Field Service</label>
+            </value>
+            <value>
+                <fullName>FLC - RH</fullName>
+                <default>false</default>
+                <label>FLC - RH</label>
+            </value>
+            <value>
+                <fullName>FLC - Welch Allyn</fullName>
+                <default>false</default>
+                <label>FLC - Welch Allyn</label>
+            </value>
+            <value>
+                <fullName>France</fullName>
+                <default>false</default>
+                <label>France</label>
+            </value>
+            <value>
+                <fullName>Germany</fullName>
+                <default>false</default>
+                <label>Germany</label>
+            </value>
+            <value>
+                <fullName>Global Admin</fullName>
+                <default>false</default>
+                <label>Global Admin</label>
+            </value>
+            <value>
+                <fullName>Gulf</fullName>
+                <default>false</default>
+                <label>Gulf</label>
+            </value>
+            <value>
+                <fullName>Iberia</fullName>
+                <default>false</default>
+                <label>Iberia</label>
+            </value>
+            <value>
+                <fullName>India</fullName>
+                <default>false</default>
+                <label>India</label>
+            </value>
+            <value>
+                <fullName>IT</fullName>
+                <default>false</default>
+                <label>IT</label>
+            </value>
+            <value>
+                <fullName>Italy</fullName>
+                <default>false</default>
+                <label>Italy</label>
+            </value>
+            <value>
+                <fullName>Japan</fullName>
+                <default>false</default>
+                <label>JAPAN</label>
+            </value>
+            <value>
+                <fullName>Leased Therapy</fullName>
+                <default>false</default>
+                <label>Leased Therapy</label>
+            </value>
+            <value>
+                <fullName>Levant, Africa &amp; Turkey</fullName>
+                <default>false</default>
+                <label>Levant, Africa &amp; Turkey</label>
+            </value>
+            <value>
+                <fullName>Lulea</fullName>
+                <default>false</default>
+                <label>Lulea</label>
+            </value>
+            <value>
+                <fullName>Mexico</fullName>
+                <default>false</default>
+                <label>Mexico</label>
+            </value>
+            <value>
+                <fullName>Middle East</fullName>
+                <default>false</default>
+                <label>Middle East</label>
+            </value>
+            <value>
+                <fullName>Milwaukee</fullName>
+                <default>false</default>
+                <label>Milwaukee</label>
+            </value>
+            <value>
+                <fullName>Monterrey</fullName>
+                <default>false</default>
+                <label>Monterrey</label>
+            </value>
+            <value>
+                <fullName>Netherlands</fullName>
+                <default>false</default>
+                <label>Netherlands</label>
+            </value>
+            <value>
+                <fullName>Nordics</fullName>
+                <default>false</default>
+                <label>Nordics</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>OUS(Outside United States)</fullName>
+                <default>false</default>
+                <label>OUS(Outside United States)</label>
+            </value>
+            <value>
+                <fullName>Pluvigner</fullName>
+                <default>false</default>
+                <label>Pluvigner</label>
+            </value>
+            <value>
+                <fullName>QA/RA</fullName>
+                <default>false</default>
+                <label>QA/RA</label>
+            </value>
+            <value>
+                <fullName>R&amp;D</fullName>
+                <default>false</default>
+                <label>R&amp;D</label>
+            </value>
+            <value>
+                <fullName>Saalfeld</fullName>
+                <default>false</default>
+                <label>Saalfeld</label>
+            </value>
+            <value>
+                <fullName>Saudi Arabia</fullName>
+                <default>false</default>
+                <label>Saudi Arabia</label>
+            </value>
+            <value>
+                <fullName>SCC Global</fullName>
+                <default>false</default>
+                <label>SCC Global</label>
+            </value>
+            <value>
+                <fullName>Skaneateles</fullName>
+                <default>false</default>
+                <label>Skaneateles</label>
+            </value>
+            <value>
+                <fullName>St. Paul</fullName>
+                <default>false</default>
+                <label>St. Paul</label>
+            </value>
+            <value>
+                <fullName>Suzhou</fullName>
+                <default>false</default>
+                <label>Suzhou</label>
+            </value>
+            <value>
+                <fullName>Sweden</fullName>
+                <default>false</default>
+                <label>Sweden</label>
+            </value>
+            <value>
+                <fullName>Taicang</fullName>
+                <default>false</default>
+                <label>Taicang</label>
+            </value>
+            <value>
+                <fullName>Tijuana</fullName>
+                <default>false</default>
+                <label>Tijuana</label>
+            </value>
+            <value>
+                <fullName>Trumpf</fullName>
+                <default>false</default>
+                <label>Trumpf</label>
+            </value>
+            <value>
+                <fullName>Trumpf - China</fullName>
+                <default>false</default>
+                <label>Trumpf - China</label>
+            </value>
+            <value>
+                <fullName>Trumpf  - Germany</fullName>
+                <default>false</default>
+                <label>Trumpf  - Germany</label>
+            </value>
+            <value>
+                <fullName>Trumpf - US</fullName>
+                <default>false</default>
+                <label>Trumpf - US</label>
+            </value>
+            <value>
+                <fullName>UK &amp; Ireland</fullName>
+                <default>false</default>
+                <label>UK &amp; Ireland</label>
+            </value>
+            <value>
+                <fullName>US(United States)</fullName>
+                <default>false</default>
+                <label>US(United States)</label>
+            </value>
+            <value>
+                <fullName>Voalte</fullName>
+                <default>false</default>
+                <label>Voalte</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>APAC</controllingFieldValue>
+            <valueName>ASEANNA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APAC</controllingFieldValue>
+            <valueName>Australia / NZ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APAC</controllingFieldValue>
+            <valueName>China</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APAC</controllingFieldValue>
+            <valueName>Japan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APAC</controllingFieldValue>
+            <controllingFieldValue>US PSS</controllingFieldValue>
+            <controllingFieldValue>LatAm</controllingFieldValue>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <controllingFieldValue>FLC</controllingFieldValue>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>Leased Therapy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>APAC</controllingFieldValue>
+            <controllingFieldValue>US PSS</controllingFieldValue>
+            <controllingFieldValue>LatAm</controllingFieldValue>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>R&amp;D</controllingFieldValue>
+            <valueName>OUS(Outside United States)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>R&amp;D</controllingFieldValue>
+            <valueName>US(United States)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Functional Areas</controllingFieldValue>
+            <valueName>CMO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Functional Areas</controllingFieldValue>
+            <valueName>CSS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Functional Areas</controllingFieldValue>
+            <valueName>IT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Functional Areas</controllingFieldValue>
+            <valueName>QA/RA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US PSS</controllingFieldValue>
+            <valueName>Care Comm</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US PSS</controllingFieldValue>
+            <valueName>Excelcare</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US PSS</controllingFieldValue>
+            <valueName>Field Service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US PSS</controllingFieldValue>
+            <valueName>R&amp;D</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>US PSS</controllingFieldValue>
+            <valueName>Voalte</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LatAm</controllingFieldValue>
+            <valueName>Brazil</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LatAm</controllingFieldValue>
+            <valueName>Columbia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LatAm</controllingFieldValue>
+            <valueName>Mexico</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <valueName>Canada</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GSS</controllingFieldValue>
+            <valueName>Allen</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GSS</controllingFieldValue>
+            <valueName>Trumpf</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GSS</controllingFieldValue>
+            <valueName>Trumpf - China</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GSS</controllingFieldValue>
+            <valueName>Trumpf  - Germany</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GSS</controllingFieldValue>
+            <valueName>Trumpf - US</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GSC</controllingFieldValue>
+            <valueName>Acton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GSC</controllingFieldValue>
+            <valueName>Batesville</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GSC</controllingFieldValue>
+            <valueName>Cary</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GSC</controllingFieldValue>
+            <valueName>Global Admin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GSC</controllingFieldValue>
+            <valueName>Lulea</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GSC</controllingFieldValue>
+            <valueName>Milwaukee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GSC</controllingFieldValue>
+            <valueName>Monterrey</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GSC</controllingFieldValue>
+            <valueName>Pluvigner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GSC</controllingFieldValue>
+            <valueName>Saalfeld</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GSC</controllingFieldValue>
+            <valueName>SCC Global</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GSC</controllingFieldValue>
+            <valueName>Skaneateles</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GSC</controllingFieldValue>
+            <valueName>St. Paul</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GSC</controllingFieldValue>
+            <valueName>Suzhou</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GSC</controllingFieldValue>
+            <valueName>Taicang</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GSC</controllingFieldValue>
+            <valueName>Tijuana</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FLC</controllingFieldValue>
+            <valueName>FLC - RH</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FLC</controllingFieldValue>
+            <valueName>FLC - Welch Allyn</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>Belgium</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>Benelux</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>DACH</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>Eastern Europe &amp; CIS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>France</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>Germany</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>Gulf</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>Iberia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>India</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>Italy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>Levant, Africa &amp; Turkey</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>Middle East</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>Netherlands</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>Nordics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>Saudi Arabia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>Sweden</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>UK &amp; Ireland</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

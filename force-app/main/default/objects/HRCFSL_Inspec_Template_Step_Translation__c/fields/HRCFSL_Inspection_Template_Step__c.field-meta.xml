@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCFSL_Inspection_Template_Step__c</fullName>
+    <externalId>false</externalId>
+    <label>Inspection Template Step</label>
+    <referenceTo>HRCFSL_Inspection_Template_Step__c</referenceTo>
+    <relationshipLabel>Inspection Template Step Translations</relationshipLabel>
+    <relationshipName>Inspection_Template_Step_Translations</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

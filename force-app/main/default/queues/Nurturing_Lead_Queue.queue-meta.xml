@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Nurturing Lead Queue</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>BMC_test</publicGroup>
+        </publicGroups>
+        <users>
+            <user>dickesj1@hrc.corp</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Lead</sobjectType>
+    </queueSobject>
+</Queue>

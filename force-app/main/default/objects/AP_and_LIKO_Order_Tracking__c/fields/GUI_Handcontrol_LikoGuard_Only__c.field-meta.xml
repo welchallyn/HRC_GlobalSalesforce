@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GUI_Handcontrol_LikoGuard_Only__c</fullName>
+    <description>LikoGuard Only</description>
+    <externalId>false</externalId>
+    <inlineHelpText>LikoGuard Only</inlineHelpText>
+    <label>Handcontrol (LikoGuard Only)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>STD</fullName>
+                <default>false</default>
+                <label>STD</label>
+            </value>
+            <value>
+                <fullName>GUI</fullName>
+                <default>false</default>
+                <label>GUI</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

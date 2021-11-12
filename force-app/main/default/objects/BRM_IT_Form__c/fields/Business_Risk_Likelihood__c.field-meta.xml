@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Risk_Likelihood__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Provide the likelihood of the potential risk assessment</inlineHelpText>
+    <label>Business Risk Likelihood</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>High &gt;75% chance</fullName>
+                <default>false</default>
+                <label>High &gt;75% chance</label>
+            </value>
+            <value>
+                <fullName>Moderate &gt;50% chance</fullName>
+                <default>false</default>
+                <label>Moderate &gt;50% chance</label>
+            </value>
+            <value>
+                <fullName>Low &gt;25% chance</fullName>
+                <default>false</default>
+                <label>Low &gt;25% chance</label>
+            </value>
+            <value>
+                <fullName>Extremely Low &lt;25% chance</fullName>
+                <default>false</default>
+                <label>Extremely Low &lt;25% chance</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRC_CFR_Fixed_Asset_Capital_Requests</fullName>
+    <columns>JDE_CFR_Number__c</columns>
+    <columns>NAME</columns>
+    <columns>Project_Name__c</columns>
+    <columns>Status__c</columns>
+    <columns>Project_Manager__c</columns>
+    <columns>Division__c</columns>
+    <columns>Total_CFR__c</columns>
+    <columns>Total_Budget__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>RECORDTYPE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>UPDATEDBY_USER</field>
+        <operation>contains</operation>
+        <value>Scot,Linda</value>
+    </filters>
+    <label>HRC CFR Fixed Asset Queue</label>
+    <language>en_US</language>
+    <sharedTo>
+        <group>HRC_CFR_Fixed_Asset</group>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRC_SECURITYGROUP_SOURCING_ApprovalRoleMapping</fullName>
+    <filterScope>Queue</filterScope>
+    <label>HRC-SECURITYGROUP-SOURCING</label>
+    <queue>HRC_SECURITYGROUP_SOURCING</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

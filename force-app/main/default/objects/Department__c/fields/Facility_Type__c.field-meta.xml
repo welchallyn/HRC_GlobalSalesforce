@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Facility_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Facility Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ASL</fullName>
+                <default>false</default>
+                <label>ASL</label>
+            </value>
+            <value>
+                <fullName>BE</fullName>
+                <default>false</default>
+                <label>BE</label>
+            </value>
+            <value>
+                <fullName>BIO</fullName>
+                <default>false</default>
+                <label>BIO</label>
+            </value>
+            <value>
+                <fullName>BUP</fullName>
+                <default>false</default>
+                <label>BUP</label>
+            </value>
+            <value>
+                <fullName>Clinics and Health Care Center</fullName>
+                <default>false</default>
+                <label>Clinics and Health Care Center</label>
+            </value>
+            <value>
+                <fullName>CON</fullName>
+                <default>false</default>
+                <label>CON</label>
+            </value>
+            <value>
+                <fullName>Contractor</fullName>
+                <default>false</default>
+                <label>Contractor</label>
+            </value>
+            <value>
+                <fullName>COR</fullName>
+                <default>false</default>
+                <label>COR</label>
+            </value>
+            <value>
+                <fullName>Corporate Headquarters</fullName>
+                <default>false</default>
+                <label>Corporate Headquarters</label>
+            </value>
+            <value>
+                <fullName>CRP</fullName>
+                <default>false</default>
+                <label>CRP</label>
+            </value>
+            <value>
+                <fullName>DE</fullName>
+                <default>false</default>
+                <label>DE</label>
+            </value>
+            <value>
+                <fullName>DESS07</fullName>
+                <default>false</default>
+                <label>DESS07</label>
+            </value>
+            <value>
+                <fullName>DIS</fullName>
+                <default>false</default>
+                <label>DIS</label>
+            </value>
+            <value>
+                <fullName>Distributor</fullName>
+                <default>false</default>
+                <label>Distributor</label>
+            </value>
+            <value>
+                <fullName>DME</fullName>
+                <default>false</default>
+                <label>DME</label>
+            </value>
+            <value>
+                <fullName>Durable Medical Equipment</fullName>
+                <default>false</default>
+                <label>Durable Medical Equipment</label>
+            </value>
+            <value>
+                <fullName>EDU</fullName>
+                <default>false</default>
+                <label>EDU</label>
+            </value>
+            <value>
+                <fullName>ES</fullName>
+                <default>false</default>
+                <label>ES</label>
+            </value>
+            <value>
+                <fullName>EUROPE LIST</fullName>
+                <default>false</default>
+                <label>EUROPE LIST</label>
+            </value>
+            <value>
+                <fullName>FIN</fullName>
+                <default>false</default>
+                <label>FIN</label>
+            </value>
+            <value>
+                <fullName>FR</fullName>
+                <default>false</default>
+                <label>FR</label>
+            </value>
+            <value>
+                <fullName>France</fullName>
+                <default>false</default>
+                <label>France</label>
+            </value>
+            <value>
+                <fullName>FTO/FTTO</fullName>
+                <default>false</default>
+                <label>FTO/FTTO</label>
+            </value>
+            <value>
+                <fullName>Group Practice</fullName>
+                <default>false</default>
+                <label>Group Practice</label>
+            </value>
+            <value>
+                <fullName>HOS</fullName>
+                <default>false</default>
+                <label>HOS</label>
+            </value>
+            <value>
+                <fullName>Hospital</fullName>
+                <default>false</default>
+                <label>Hospital</label>
+            </value>
+            <value>
+                <fullName>HSP</fullName>
+                <default>false</default>
+                <label>HSP</label>
+            </value>
+            <value>
+                <fullName>IND</fullName>
+                <default>false</default>
+                <label>IND</label>
+            </value>
+            <value>
+                <fullName>IT</fullName>
+                <default>false</default>
+                <label>IT</label>
+            </value>
+            <value>
+                <fullName>LTA</fullName>
+                <default>false</default>
+                <label>LTA</label>
+            </value>
+            <value>
+                <fullName>LTN</fullName>
+                <default>false</default>
+                <label>LTN</label>
+            </value>
+            <value>
+                <fullName>Medical Center</fullName>
+                <default>false</default>
+                <label>Medical Center</label>
+            </value>
+            <value>
+                <fullName>Miscellaneous</fullName>
+                <default>false</default>
+                <label>Miscellaneous</label>
+            </value>
+            <value>
+                <fullName>NUR</fullName>
+                <default>false</default>
+                <label>NUR</label>
+            </value>
+            <value>
+                <fullName>Nursing Home</fullName>
+                <default>false</default>
+                <label>Nursing Home</label>
+            </value>
+            <value>
+                <fullName>PHA</fullName>
+                <default>false</default>
+                <label>PHA</label>
+            </value>
+            <value>
+                <fullName>Pharmacy</fullName>
+                <default>false</default>
+                <label>Pharmacy</label>
+            </value>
+            <value>
+                <fullName>PHY</fullName>
+                <default>false</default>
+                <label>PHY</label>
+            </value>
+            <value>
+                <fullName>Physician</fullName>
+                <default>false</default>
+                <label>Physician</label>
+            </value>
+            <value>
+                <fullName>Private Address</fullName>
+                <default>false</default>
+                <label>Private Address</label>
+            </value>
+            <value>
+                <fullName>Private Practice</fullName>
+                <default>false</default>
+                <label>Private Practice</label>
+            </value>
+            <value>
+                <fullName>PSP</fullName>
+                <default>false</default>
+                <label>PSP</label>
+            </value>
+            <value>
+                <fullName>REH</fullName>
+                <default>false</default>
+                <label>REH</label>
+            </value>
+            <value>
+                <fullName>Rehabilitation Facility</fullName>
+                <default>false</default>
+                <label>Rehabilitation Facility</label>
+            </value>
+            <value>
+                <fullName>Schools, Colleges, University</fullName>
+                <default>false</default>
+                <label>Schools, Colleges, University</label>
+            </value>
+            <value>
+                <fullName>Skilled Nursing Facility</fullName>
+                <default>false</default>
+                <label>Skilled Nursing Facility</label>
+            </value>
+            <value>
+                <fullName>SNF</fullName>
+                <default>false</default>
+                <label>SNF</label>
+            </value>
+            <value>
+                <fullName>SUR</fullName>
+                <default>false</default>
+                <label>SUR</label>
+            </value>
+            <value>
+                <fullName>Surg Center / Outpatient</fullName>
+                <default>false</default>
+                <label>Surg Center / Outpatient</label>
+            </value>
+            <value>
+                <fullName>UNC</fullName>
+                <default>false</default>
+                <label>UNC</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

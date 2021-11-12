@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Move_to_Negotiation_contract_sent_date</fullName>
+    <active>true</active>
+    <description>In order to move to negotiation, contract sent date is required.</description>
+    <errorConditionFormula>AND(
+ISBLANK( Contract_Sent_Date__c  ),
+ISCHANGED( Status__c ),
+ISPICKVAL(Status__c, &quot;Contract Negotiation&quot;),
+ RecordType.Name = &quot;RetinaVue&quot;,
+NOT(Device_Only_Install__c) 
+)</errorConditionFormula>
+    <errorDisplayField>Contract_Sent_Date__c</errorDisplayField>
+    <errorMessage>Contract Sent Date is required at this stage.</errorMessage>
+</ValidationRule>

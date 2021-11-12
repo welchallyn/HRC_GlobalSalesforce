@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>HRC CFR Project Manager</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>HRC_CFR_Project_Manager</publicGroup>
+        </publicGroups>
+        <users>
+            <user>smuldea1@hrc.corp</user>
+            <user>thomasb11@hrc.corp</user>
+            <user>cardarj1@hrc.corp</user>
+            <user>naikm1@hrc.corp</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Capital_Requests__c</sobjectType>
+    </queueSobject>
+</Queue>

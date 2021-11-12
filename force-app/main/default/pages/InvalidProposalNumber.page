@@ -1,0 +1,4 @@
+<apex:page >
+  
+  <p><b><font color="red">"Proposal Number entered by you can not be found in the list of Proposal Number. Please enter the correct Proposal Number"</font></b></p>
+</apex:page>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_change_phase</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+
+AND(
+ ISNEW() ,
+ NOT( ISPICKVAL( Phase__c , &quot;Not Started&quot;) ) 
+   ),
+
+AND(
+ ISCHANGED( Phase__c ) ,
+ ISPICKVAL(Phase__c , &quot;Not Started&quot;) 
+),
+
+AND(
+ ISCHANGED( Phase__c ) ,
+ ISPICKVAL(Phase__c , &quot;0 Submitted for Approval&quot;) 
+),
+
+AND(
+ ISCHANGED( Phase__c ) ,
+ ISPICKVAL(Phase__c , &quot;1 Pre-Study&quot;) 
+),
+
+AND(
+ ISCHANGED( Phase__c ) ,
+ ISPICKVAL(Phase__c , &quot;1a Pending Finance Approval&quot;) 
+),
+
+AND(
+ ISCHANGED( Phase__c ) ,
+ ISPICKVAL(Phase__c , &quot;1b Pending Sales Approval&quot;) 
+),
+
+AND(
+ ISCHANGED( Phase__c ) ,
+ ISPICKVAL(Phase__c , &quot;2 Product Design&quot;)
+),
+
+AND(
+ ISCHANGED( Phase__c ) ,
+ ISPICKVAL(Phase__c , &quot;3 Production Preparation&quot;),
+NOT( ISPICKVAL( PRIORVALUE(Phase__c) , &quot;2 Product Design&quot;) )
+),
+
+AND(
+ ISCHANGED( Phase__c ) ,
+ ISPICKVAL(Phase__c , &quot;4 Manufacturing / Delivery&quot;),
+NOT( ISPICKVAL( PRIORVALUE(Phase__c) , &quot;3 Production Preparation&quot;) )
+),
+
+AND(
+ ISCHANGED( Phase__c ) ,
+ ISPICKVAL(Phase__c , &quot;5 Closed&quot;),
+NOT( ISPICKVAL( PRIORVALUE(Phase__c) , &quot;4 Manufacturing / Delivery&quot;) )
+),
+
+AND(
+ ISCHANGED( Phase__c ) ,
+ ISPICKVAL( PRIORVALUE(Phase__c) , &quot;5 Closed&quot;) 
+)
+  )</errorConditionFormula>
+    <errorDisplayField>Phase__c</errorDisplayField>
+    <errorMessage>Invalid status change. Allowed phase manual changes are:
+from any value to Rejected
+from Product Design to Production Preparation
+from Production Preparation to Manufacturing / Delivery
+from Manufacturing / Delivery to Closed</errorMessage>
+</ValidationRule>

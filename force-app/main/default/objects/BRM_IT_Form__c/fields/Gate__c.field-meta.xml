@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Gate__c</fullName>
+    <defaultValue>&quot;Idea&quot;</defaultValue>
+    <externalId>false</externalId>
+    <label>Gate</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Idea</fullName>
+                <default>false</default>
+                <label>Idea</label>
+            </value>
+            <value>
+                <fullName>Opportunity</fullName>
+                <default>false</default>
+                <label>Opportunity</label>
+            </value>
+            <value>
+                <fullName>Value Prioritization</fullName>
+                <default>false</default>
+                <label>Value Prioritization</label>
+            </value>
+            <value>
+                <fullName>Execute</fullName>
+                <default>false</default>
+                <label>Execute</label>
+            </value>
+            <value>
+                <fullName>Value Realization</fullName>
+                <default>false</default>
+                <label>Value Realization</label>
+            </value>
+            <value>
+                <fullName>Business as Usual</fullName>
+                <default>false</default>
+                <label>Business as Usual</label>
+            </value>
+            <value>
+                <fullName>Execute (Build/Test/Implement/Change Mgmt)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Execute (Build/Test/Implement/Change Mgmt)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

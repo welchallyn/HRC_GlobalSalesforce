@@ -1,0 +1,35 @@
+<aura:component  implements="flexipage:availableForRecordHome,force:hasRecordId,force:LightningQuickAction" controller="HRC_CapitalRequestAPI">
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="partiallyConfirm" type="boolean" default="false"/>
+    <aura:set attribute="isAdditionalObject" value="false"></aura:set>
+    <aura:attribute name="Capital_Requests__c" type="Object"/>
+    <aura:attribute name="CapitalRequestRecord" type="Object" default="{'sobjectType':'Capital_Requests__c', 'Status__c' : '','Project_Name__c' : '','Id' : '','SAP_CFR_Number__c' : '','Company_Code__c' : ''}"/>
+    <aura:attribute name="recordSaveError" type="String" description="An error message bound to force:recordData"/>
+    <aura:if isTrue="{!not(empty(v.recordSaveError))}">
+        <br />
+        Error: <ui:outputText value="{!v.recordSaveError}"/>
+    </aura:if>
+    
+    <force:recordData aura:id="cfrRec" 
+    fields="Status__c,Project_Name__c,Company_Code__c,SAP_CFR_Number__c"
+    recordId="{!v.recordId}"  
+    targetError="{!v.recordSaveError}"
+    targetRecord="{!v.Capital_Requests__c}"
+    targetFields="{!v.CapitalRequestRecord}"
+    mode="EDIT"/>
+    
+    <div>
+        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+            <aura:renderIf isTrue="{!v.partiallyConfirm}">
+                <div class="slds-m-bottom_x-large">
+                    <span><lightning:icon iconName="utility:warning" size="small"/></span>
+                </div>
+            </aura:renderIf>
+            <p>'Do you want to Resync to SAP. Are you sure ?'</p>
+        </div>
+        <footer class="slds-modal__footer">
+            <lightning:button class="slds-button_neutral" onclick="{!c.yesResponse}" label="Yes" />
+            <lightning:button class="slds-button_brand" onclick="{!c.noResponse}" label="No"/>
+        </footer>
+    </div>
+</aura:component>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Financial Models</fullName>
+                <default>false</default>
+                <label>Financial Models</label>
+            </value>
+            <value>
+                <fullName>Vendor Quotes</fullName>
+                <default>false</default>
+                <label>Vendor Quotes</label>
+            </value>
+            <value>
+                <fullName>Project Justification</fullName>
+                <default>false</default>
+                <label>Project Justification</label>
+            </value>
+            <value>
+                <fullName>Additional Supporting Documentation</fullName>
+                <default>false</default>
+                <label>Additional Supporting Documentation</label>
+            </value>
+            <value>
+                <fullName>Capital vs Operating Lease</fullName>
+                <default>false</default>
+                <label>Capital vs Operating Lease</label>
+            </value>
+            <value>
+                <fullName>Project Completion Information</fullName>
+                <default>false</default>
+                <label>Project Completion Information</label>
+            </value>
+            <value>
+                <fullName>Other - Please Specify</fullName>
+                <default>false</default>
+                <label>Other - Please Specify</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

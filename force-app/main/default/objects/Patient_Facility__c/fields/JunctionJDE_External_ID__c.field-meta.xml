@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>JunctionJDE_External_ID__c</fullName>
+    <description>Concantenation of the two records from JDE to provide an External Key for Upserts</description>
+    <externalId>true</externalId>
+    <label>JunctionJDE_External_ID</label>
+    <length>40</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

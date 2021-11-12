@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PickStartTime</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(TEXT( Start_Time__c ) = null,
+   ISPICKVAL( Length_of_PTO__c , &apos;4 hr&apos;))</errorConditionFormula>
+    <errorDisplayField>Start_Time__c</errorDisplayField>
+    <errorMessage>Select Start Time for 1/ 2 day</errorMessage>
+</ValidationRule>

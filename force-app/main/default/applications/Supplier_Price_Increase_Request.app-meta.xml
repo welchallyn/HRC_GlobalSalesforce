@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <content>Supplier_Price_Increase_CFR_Home_Page1</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+    </actionOverrides>
+    <brand>
+        <headerColor>#0070D2</headerColor>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <label>Supplier Price Increase Request</label>
+    <navType>Standard</navType>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Price_Increase_Request_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Price_Increase_Request__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Birlasoft System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Price_Increase_Request_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Price_Increase_Request__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Birlasoft System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Price_Increase_Request_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Price_Increase_Request__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Price_Increase_Request_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Price_Increase_Request__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <tabs>standard-home</tabs>
+    <tabs>Part__c</tabs>
+    <tabs>Price_Increase_Request__c</tabs>
+    <tabs>Sourcing_GL_Codes__c</tabs>
+    <tabs>Job_Request_Categories__c</tabs>
+    <tabs>Language_List_RF__c</tabs>
+    <tabs>Pricing_Request__c</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>Price_Increase_Request_UtilityBar</utilityBar>
+</CustomApplication>

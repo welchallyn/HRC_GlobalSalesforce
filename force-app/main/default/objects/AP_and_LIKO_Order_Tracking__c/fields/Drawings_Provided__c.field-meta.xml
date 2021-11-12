@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Drawings_Provided__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the types of drawings available showing the facility and/or system design.</inlineHelpText>
+    <label>Drawings Provided</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>DWG&apos;s</fullName>
+                <default>false</default>
+                <label>DWG&apos;s</label>
+            </value>
+            <value>
+                <fullName>PDF&apos;s</fullName>
+                <default>false</default>
+                <label>PDF&apos;s</label>
+            </value>
+            <value>
+                <fullName>Sketch&apos;s</fullName>
+                <default>false</default>
+                <label>Sketch&apos;s</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

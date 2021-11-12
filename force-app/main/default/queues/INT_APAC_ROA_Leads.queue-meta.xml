@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>INT APAC ROA Leads</name>
+    <queueMembers>
+        <users>
+            <user>soha1@hrc.corp</user>
+            <user>limd@hrc.corp</user>
+            <user>tangd1@hrc.corp</user>
+            <user>limk2@hrc.corp</user>
+            <user>liangm1@hrc.corp</user>
+            <user>balann1@hrc.corp</user>
+            <user>porurir1@hrc.corp</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Lead</sobjectType>
+    </queueSobject>
+</Queue>

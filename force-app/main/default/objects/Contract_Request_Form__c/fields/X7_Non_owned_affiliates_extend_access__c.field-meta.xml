@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X7_Non_owned_affiliates_extend_access__c</fullName>
+    <description>Does customer have non-owned affiliates we intend to extend access to this contract?
+(e.g. other hospitals customer wishes to extend access to the contract)</description>
+    <externalId>false</externalId>
+    <label>8. Non-owned affiliates extend access</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Yes (please provide detailed affiliate listing with form submission)</fullName>
+                <default>false</default>
+                <label>Yes (please provide detailed affiliate listing with form submission)</label>
+            </value>
+            <value>
+                <fullName>No</fullName>
+                <default>false</default>
+                <label>No</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

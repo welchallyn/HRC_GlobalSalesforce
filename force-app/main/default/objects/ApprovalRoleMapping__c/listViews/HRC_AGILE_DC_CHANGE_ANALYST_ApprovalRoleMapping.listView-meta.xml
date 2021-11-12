@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRC_AGILE_DC_CHANGE_ANALYST_ApprovalRoleMapping</fullName>
+    <filterScope>Queue</filterScope>
+    <label>HRC-AGILE-DC-CHANGE-ANALYST</label>
+    <queue>HRC_AGILE_DC_CHANGE_ANALYST</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

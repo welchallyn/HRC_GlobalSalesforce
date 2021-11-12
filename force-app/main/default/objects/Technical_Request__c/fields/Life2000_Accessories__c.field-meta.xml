@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Life2000_Accessories__c</fullName>
+    <externalId>false</externalId>
+    <label>Life2000 Accessories</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Belt Clip</fullName>
+                <default>false</default>
+                <label>Belt Clip</label>
+            </value>
+            <value>
+                <fullName>Compressor Filter Package</fullName>
+                <default>false</default>
+                <label>Compressor Filter Package</label>
+            </value>
+            <value>
+                <fullName>Compressor Power Supply &amp; AC Cord</fullName>
+                <default>false</default>
+                <label>Compressor Power Supply &amp; AC Cord</label>
+            </value>
+            <value>
+                <fullName>O2 Regulator</fullName>
+                <default>false</default>
+                <label>O2 Regulator</label>
+            </value>
+            <value>
+                <fullName>Purge Tube</fullName>
+                <default>false</default>
+                <label>Purge Tube</label>
+            </value>
+            <value>
+                <fullName>Purge Tube Connector</fullName>
+                <default>false</default>
+                <label>Purge Tube Connector</label>
+            </value>
+            <value>
+                <fullName>Universal Circuit Connector</fullName>
+                <default>false</default>
+                <label>Universal Circuit Connector</label>
+            </value>
+            <value>
+                <fullName>Ventilator Battery Charger &amp; AC Cord</fullName>
+                <default>false</default>
+                <label>Ventilator Battery Charger &amp; AC Cord</label>
+            </value>
+            <value>
+                <fullName>Ventilator Carry Case &amp; Belt</fullName>
+                <default>false</default>
+                <label>Ventilator Carry Case &amp; Belt</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

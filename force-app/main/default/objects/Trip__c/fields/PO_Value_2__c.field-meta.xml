@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PO_Value_2__c</fullName>
+    <description>Additional Opportunity PO Value for CEC Trip</description>
+    <externalId>false</externalId>
+    <formula>Opportunity_2__r.Amount</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Additional Opportunity PO Value for CEC Trip</inlineHelpText>
+    <label>PO Value 2</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

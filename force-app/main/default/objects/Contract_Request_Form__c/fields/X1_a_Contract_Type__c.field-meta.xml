@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X1_a_Contract_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>1.a Contract Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>GPO</fullName>
+                <default>false</default>
+                <label>GPO</label>
+            </value>
+            <value>
+                <fullName>IDN/Local Agreement</fullName>
+                <default>false</default>
+                <label>IDN/Local Agreement</label>
+            </value>
+            <value>
+                <fullName>Proposal/Purchase Order &amp; T&amp;Cs</fullName>
+                <default>false</default>
+                <label>Proposal/Purchase Order &amp; T&amp;Cs</label>
+            </value>
+            <value>
+                <fullName>Subcontract</fullName>
+                <default>false</default>
+                <label>Subcontract</label>
+            </value>
+            <value>
+                <fullName>CWS Master Agreement</fullName>
+                <default>false</default>
+                <label>CWS Master Agreement</label>
+            </value>
+            <value>
+                <fullName>Business Associate (BAA)</fullName>
+                <default>false</default>
+                <label>Business Associate (BAA)</label>
+            </value>
+            <value>
+                <fullName>Evaluation</fullName>
+                <default>false</default>
+                <label>Evaluation</label>
+            </value>
+            <value>
+                <fullName>Non-Disclosure (NDA)</fullName>
+                <default>false</default>
+                <label>Non-Disclosure (NDA)</label>
+            </value>
+            <value>
+                <fullName>Distribution Agreement</fullName>
+                <default>false</default>
+                <label>Distribution Agreement</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

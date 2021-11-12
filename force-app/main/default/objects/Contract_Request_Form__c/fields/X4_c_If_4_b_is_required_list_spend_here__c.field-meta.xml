@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X4_c_If_4_b_is_required_list_spend_here__c</fullName>
+    <description>If 4.b is required dollar spend amount, list here</description>
+    <externalId>false</externalId>
+    <label>4.c If 4.b required, list $ spend here</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

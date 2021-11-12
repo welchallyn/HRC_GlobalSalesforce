@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Opportunity</entityName>
+    <fieldName>StageName</fieldName>
+    <masterLabel>INT FCN</masterLabel>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Won opportunities are moved to this stage automatically once win analysis is complete&lt;/p&gt;</info>
+        <picklistValueName>Booked</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Move to Cancelled when the customer cancels the project;&lt;/p&gt;&lt;p&gt;The Probability % for cancelled is 0%&lt;/p&gt;</info>
+        <picklistValueName>Cancelled</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Move to Confirm when all sales activities have been completed &amp;amp; pending customer decision;&lt;/p&gt;&lt;p&gt;Register all your sales activities &amp;amp; attach the quotation ;&lt;/p&gt;&lt;p&gt;Update the product, price, quantity &amp;amp; validate Close Date;&lt;/p&gt;&lt;p&gt;Split the opportunity into Parent &amp;amp; Child opportunities (with dates) if split invoicing is needed;&lt;/p&gt;&lt;p&gt;Set the Probability % to match your confidence level of winning this deal&lt;/p&gt;</info>
+        <picklistValueName>Confirm</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Move to Develop when customer needs are identified; &lt;/p&gt;&lt;p&gt;Register Opportunity Team Members and identify Contact Roles;&lt;/p&gt;&lt;p&gt;Register your sales activities (calls, tasks, events) and assign activities to other team memers; &lt;/p&gt;&lt;p&gt;Update the product details; &lt;/p&gt;&lt;p&gt;Set the Probability % to match your confidence level of winning this deal&lt;/p&gt;</info>
+        <picklistValueName>Develop</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Move to Finalise when the customer has given verbal/email commitment to HRC;&lt;/p&gt;&lt;p&gt;Register/Upload the customer confirmation;&lt;/p&gt;&lt;p&gt;Update the product, price, quantity &amp;amp; validate Close Date; &lt;/p&gt;&lt;p&gt;If you receive a confirmation, upload this document to the opportunity record; &lt;/p&gt;&lt;p&gt;Set the Probability % to match your confidence level of winning this deal&lt;/p&gt;</info>
+        <picklistValueName>Finalize</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Create an opportunity when a qualified lead expresses interest in Hill-Rom;&lt;/p&gt;&lt;p&gt;Use opportunity naming convention: 2-letter country code + Account name + Product/Project name;&lt;/p&gt;&lt;p&gt;Select a product with expected product price and quantity (exact details are not important at this stage);&lt;/p&gt;&lt;p&gt;Set the Probability % to match your confidence level of winning this deal&lt;/p&gt;</info>
+        <picklistValueName>Identify</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Move to Lost when the customer selects another supplier;&lt;/p&gt;&lt;p&gt;Complete your loss analysis;&lt;/p&gt;&lt;p&gt;The Probability % for Lost is 0%&lt;/p&gt;</info>
+        <picklistValueName>Lost</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Move to Won when the agreement has been signed;&lt;/p&gt;&lt;p&gt;Update product, price, quantity, invoiced date;&lt;/p&gt;&lt;p&gt;Complete your win analysis&lt;/p&gt;</info>
+        <picklistValueName>Won</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>INT_FCN</recordTypeName>
+</PathAssistant>

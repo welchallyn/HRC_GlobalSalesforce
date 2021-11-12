@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Complaint_Qualification__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Complaint Qualification</label>
+    <referenceTo>HRCSVC_Complaint_Qualification__c</referenceTo>
+    <relationshipLabel>Platform Event Logs</relationshipLabel>
+    <relationshipName>Platform_Event_Logs</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

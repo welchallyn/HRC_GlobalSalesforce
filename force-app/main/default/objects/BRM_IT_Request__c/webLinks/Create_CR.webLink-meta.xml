@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Create_CR</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Create CR</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/a2Y/e?CF00N5B000000hnBs={!BRM_IT_Request__c.Name}&amp;CF00N5B000000hnBs_lkid={!BRM_IT_Request__c.Id}</url>
+</WebLink>

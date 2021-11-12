@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ContractTypeCWSMasterGeneralInfo</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+       ISPICKVAL( X1_a_Contract_Type__c , &apos;CWS Master Agreement&apos;) ,
+    OR(
+       ISNULL(TEXT(X3_New_Contract_or_Amendment_to_Existing__c)) ,
+       ISNULL(TEXT(X5_a_IDN_Local_Agrmt_Only_GPO_Affiliatio__c)),
+       ISNULL(TEXT(X7_Multiple_Facilities_access_contract__c)),
+       ISNULL(TEXT(X7_Non_owned_affiliates_extend_access__c))
+       )
+)</errorConditionFormula>
+    <errorMessage>New Contract or Amendment to Existing and IDN Local Agrmt Only GPO Affiliation and Multiple Facilities access contract  and Non owned affiliates extend access cannot be blank for CWS Master Agreement</errorMessage>
+</ValidationRule>

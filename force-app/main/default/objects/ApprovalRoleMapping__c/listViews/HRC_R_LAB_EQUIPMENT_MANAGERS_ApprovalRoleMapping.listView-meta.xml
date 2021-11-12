@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRC_R_LAB_EQUIPMENT_MANAGERS_ApprovalRoleMapping</fullName>
+    <filterScope>Queue</filterScope>
+    <label>HRC-AGILE-LAB-EQUIPMENT-MANAGERS</label>
+    <queue>HRC_AGILE_LAB_EQUIPMENT_MANAGERS</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

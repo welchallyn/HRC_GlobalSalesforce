@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Liko_Quote</fullName>
+    <active>true</active>
+    <label>Liko Quote</label>
+    <picklistValues>
+        <picklist>AP_Product_OTP__c</picklist>
+        <values>
+            <fullName>Basis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contour</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Elements</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Flatwall</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gallery Wall</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Horizon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Latitude</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Attachment__c</picklist>
+        <values>
+            <fullName>Ceiling Mount</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ceiling%2FWall Mount Combo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wall Mount</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Ceiling_Structure__c</picklist>
+        <values>
+            <fullName>Concrete Beams</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Concrete Flat Slab</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Concrete w%2F Metal Deck</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Applicable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open Web Joists</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other %28describe in notes%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Steel Beams</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Structural Steel Build - Done by Others</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown At This Time</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Ceiling_Type__c</picklist>
+        <values>
+            <fullName>Acoustic Tile</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hard Lid %2F Gyp Board</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open %28No Ceiling%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other %28explain in notes%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Charging_System__c</picklist>
+        <values>
+            <fullName>In-Rail Charging</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wall Charging</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Clinical_Consulting__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Drawings_Provided__c</picklist>
+        <values>
+            <fullName>DWG%27s</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PDF%27s</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sketch%27s</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Equipment_Training__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GUI_Handcontrol_LikoGuard_Only__c</picklist>
+        <values>
+            <fullName>GUI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STD</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Installation_Sub__c</picklist>
+        <values>
+            <fullName>HRC - Installer TBD %28Non-Union Labor%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HRC - Installer TBD %28Union Labor%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Installed By HRC</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Motor__c</picklist>
+        <values>
+            <fullName>LIkorall %28507lbs%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LikoGuard L %28600 lbs%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LikoGuard XL %28800 lbs%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Likorall %28440lbs%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Likorall %28550lbs%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multirall %28440 lbs%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>New_Construction__c</picklist>
+        <values>
+            <fullName>LIfts Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Construction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Remodel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Order_Stage_Liko__c</picklist>
+        <values>
+            <fullName>0 CRM Rcvd</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1 Shop Dwgs Sent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 Site Conditions Confirmed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 Approvals Rcv%27d</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 Need Adtl Info from MBS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 Order Lines Released</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6 Installation Complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7 Project Closed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Order_Stage__c</picklist>
+        <values>
+            <fullName>1 CRM Rcvd</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 Shop Dwgs Sent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 Approvals Sent to PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 Need Adtl Info From SE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 Drafting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6 PM Pre-Release</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7 Prod Engr</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8 Rlsd to Agile</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PE_Stamp_Type__c</picklist>
+        <values>
+            <fullName>Basic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Standard</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Quick_Release_Carriage__c</picklist>
+        <values>
+            <fullName>QR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Standard</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Quote_Stage__c</picklist>
+        <values>
+            <fullName>1 New Request</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>2 In Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 In Review - Special</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 Need Adtl Info</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4%2E5 Resubmitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 Completed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Quote__c</picklist>
+        <values>
+            <fullName>Quote</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rail_System__c</picklist>
+        <values>
+            <fullName>Bariatric Straight</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bariatric Traverse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Single Rail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Straight Rail w%2F Bathroom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Traverse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Traverse w%2F Bathroom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Traverse w%2F Toilet</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Raised_Trav_Rail_Carrier__c</picklist>
+        <values>
+            <fullName>Lowered</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Raised</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Standard</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SlingBar_Attach_Type__c</picklist>
+        <values>
+            <fullName>Bolt-On</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quick-Release</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Switches__c</picklist>
+        <values>
+            <fullName>Electric</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manual</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Top_Floor__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Typical_Drawing_to_Reference__c</picklist>
+        <values>
+            <fullName>CM_STR_BARI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CM_STR_STD_90</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CM_STR_STD_90_LG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CM_STR_STD_LG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CM_TRV_BARI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CM_TRV_BARI_HYB_SR45_TT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CM_TRV_BARI_UT_BR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CM_TRV_BARI_UT_FR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CM_TRV_STD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CM_TRV_STD_LG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CM_TRV_STD_SR45_TT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CM_TRV_STD_SR90</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FS_STR_BARI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FS_STR_STD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FS_TRV_BARI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FS_TRV_STD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WM_STR_BARI_SL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WM_STR_BARI_WB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WM_STR_STD_SL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WM_STR_STD_SL_LG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WM_STR_STD_WB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WM_TRV_BARI_DSL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WM_TRV_BARI_SUP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WM_TRV_STD_SL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WM_TRV_STD_SL_LG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WM_TRV_STD_WB</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Urgency_Rating__c</picklist>
+        <values>
+            <fullName>Moderate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Standard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Urgent%21</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>White_Rails_default_Natural__c</picklist>
+        <values>
+            <fullName>Natural</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>White</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

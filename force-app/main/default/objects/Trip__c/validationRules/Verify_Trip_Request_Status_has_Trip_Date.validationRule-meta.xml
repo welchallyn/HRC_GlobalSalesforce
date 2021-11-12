@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Verify_Trip_Request_Status_has_Trip_Date</fullName>
+    <active>true</active>
+    <description>Verify Trip has a Start and End Date before making Trip Confirmed.</description>
+    <errorConditionFormula>AND(
+ISBLANK(Trip_Start_Date__c),
+ISBLANK(Trip_End_Date__c),
+ISPICKVAL( Trip_Request_Status__c ,&quot;Confirmed&quot;))</errorConditionFormula>
+    <errorDisplayField>Trip_Start_Date__c</errorDisplayField>
+    <errorMessage>FYI: The Trip Start and End Date must be entered before changing the status to Confirmed.</errorMessage>
+</ValidationRule>

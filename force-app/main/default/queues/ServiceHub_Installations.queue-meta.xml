@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>true</doesSendEmailToMembers>
+    <name>ServiceHub Installations</name>
+    <queueMembers>
+        <users>
+            <user>lawtonj1@hrc.corp</user>
+            <user>wallism1@hrc.corp</user>
+            <user>wheeles2@hrc.corp</user>
+        </users>
+    </queueMembers>
+    <queueRoutingConfig>Standard_Priority_Cases</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

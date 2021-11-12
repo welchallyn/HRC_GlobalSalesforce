@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Act_Workplace_ID__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Act Workplace ID</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Activities IQVIA (Act Workplace ID)</relationshipLabel>
+    <relationshipName>Activities_IQVIA_Workplace</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

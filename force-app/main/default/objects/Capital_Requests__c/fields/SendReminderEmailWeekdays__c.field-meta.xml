@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SendReminderEmailWeekdays__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(FLOOR(MOD( Submit_for_Approval_Date__c - DATETIMEVALUE(DATE(1900, 1, 7)), 7)), 0, Submit_for_Approval_Date__c+3, 1, Submit_for_Approval_Date__c+3, 2, Submit_for_Approval_Date__c+3,3, Submit_for_Approval_Date__c+5, 4, Submit_for_Approval_Date__c+5, 5, Submit_for_Approval_Date__c+5, 6, Submit_for_Approval_Date__c+4,null)</formula>
+    <label>SendReminderEmailWeekdays</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Domain__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Domain</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Hill_Rom_Application_Domain__c.Type__c</field>
+            <operation>equals</operation>
+            <value>Domain</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Hill_Rom_Application_Domain__c</referenceTo>
+    <relationshipLabel>Applications</relationshipLabel>
+    <relationshipName>Application_Domain_Relationships</relationshipName>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

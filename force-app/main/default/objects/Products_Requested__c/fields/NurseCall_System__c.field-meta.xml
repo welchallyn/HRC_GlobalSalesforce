@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NurseCall_System__c</fullName>
+    <externalId>false</externalId>
+    <label>NurseCall System</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Item_Description__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Hill-Rom</fullName>
+                <default>false</default>
+                <label>Hill-Rom</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+                <label>Unknown</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>P7900 Centrella 36&quot;; L:87 W:40 H:33 565 LBS</controllingFieldValue>
+            <controllingFieldValue>P7900 Centrella 40&quot;; L:87 W:43 H:33 565 LBS</controllingFieldValue>
+            <valueName>Hill-Rom</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>P7900 Centrella 36&quot;; L:87 W:40 H:33 565 LBS</controllingFieldValue>
+            <controllingFieldValue>P7900 Centrella 40&quot;; L:87 W:43 H:33 565 LBS</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>P7900 Centrella 36&quot;; L:87 W:40 H:33 565 LBS</controllingFieldValue>
+            <controllingFieldValue>P7900 Centrella 40&quot;; L:87 W:43 H:33 565 LBS</controllingFieldValue>
+            <valueName>Unknown</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

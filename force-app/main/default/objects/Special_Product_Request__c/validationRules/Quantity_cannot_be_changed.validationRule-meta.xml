@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quantity_cannot_be_changed</fullName>
+    <active>true</active>
+    <description>Cannot change Quantity field once the process has started</description>
+    <errorConditionFormula>AND(
+  ISCHANGED( Quantity__c ),
+  NOT(ISPICKVAL( Phase__c , &quot;Not started&quot;)),
+  $User.Id  &lt;&gt;  OwnerId 
+   )</errorConditionFormula>
+    <errorDisplayField>Quantity__c</errorDisplayField>
+    <errorMessage>Quantity cannot be changed once the process has started</errorMessage>
+</ValidationRule>

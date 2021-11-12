@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Items__c</fullName>
+    <externalId>false</externalId>
+    <label>Total Items</label>
+    <summarizedField>Products_Requested__c.Quantity__c</summarizedField>
+    <summaryFilterItems>
+        <field>Products_Requested__c.Product_Type__c</field>
+        <operation>notEqual</operation>
+        <value>Patient Monitoring/CFCM</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Products_Requested__c.Evaluation_Form__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

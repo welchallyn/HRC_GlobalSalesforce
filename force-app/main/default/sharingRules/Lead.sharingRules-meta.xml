@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Homecare_DTC_leads</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Homecare DTC leads</label>
+        <sharedTo>
+            <group>Homecare_DTC_Leads</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>DTC__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Home Care - DTC</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Pardot_Integration_User</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Allow Pardot Integration User (Hillrom Marketing) ability to see Parent Lead record type.</description>
+        <label>Pardot Integration User</label>
+        <sharedTo>
+            <group>Pardot_IntegrationUser</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Parent Lead</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_US_Leads</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share US Leads</label>
+        <sharedTo>
+            <group>US_Lead_Convert</group>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>Country</field>
+            <operation>equals</operation>
+            <value>US</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country</field>
+            <operation>equals</operation>
+            <value>United States</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

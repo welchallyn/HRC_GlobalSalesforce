@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRC_CFR_Finance_Approver_COO_Capital_Requests</fullName>
+    <columns>NAME</columns>
+    <columns>Status__c</columns>
+    <columns>Total_CFR__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CFR_is_Confidential__c</field>
+        <operation>notEqual</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>current_approver_of_CFR__c</field>
+        <operation>equals</operation>
+        <value>Carlyn Solomon</value>
+    </filters>
+    <filters>
+        <field>CREATEDBY_USER</field>
+        <operation>notContain</operation>
+        <value>Data</value>
+    </filters>
+    <label>HRC CFR Finance Approver COO Queue</label>
+    <language>en_US</language>
+    <sharedTo>
+        <group>HRC_CFR_Finance_Approver_COO</group>
+        <group>HRC_CFR_Fixed_Asset</group>
+    </sharedTo>
+</ListView>

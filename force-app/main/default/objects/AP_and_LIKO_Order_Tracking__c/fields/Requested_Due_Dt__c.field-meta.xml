@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Requested_Due_Dt__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Please enter the date by which you would like the quote returned.</inlineHelpText>
+    <label>Requested Due Dt</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

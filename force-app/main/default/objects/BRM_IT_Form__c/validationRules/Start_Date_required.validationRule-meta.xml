@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Start_Date_required</fullName>
+    <active>true</active>
+    <description>Rule created for CR00030892</description>
+    <errorConditionFormula>((ISPICKVAL(Gate__c , &apos;Execute&apos;) &amp;&amp; ISPICKVAL(Status__c, &apos;IN PROGRESS&apos;) ) || ISPICKVAL(Gate__c , &apos;Value Realization&apos;))&amp;&amp; ( ISNULL( Start_Date__c ) || ISBLANK(Start_Date__c ))</errorConditionFormula>
+    <errorDisplayField>Start_Date__c</errorDisplayField>
+    <errorMessage>Required</errorMessage>
+</ValidationRule>

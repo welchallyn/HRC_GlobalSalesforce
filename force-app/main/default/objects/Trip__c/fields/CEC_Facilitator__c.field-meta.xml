@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CEC_Facilitator__c</fullName>
+    <description>Your Regional CEC Coordinator is the main contact and will assist with trip planning and coordination.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Your Regional CEC Coordinator is the main contact and will assist with trip planning and coordination.</inlineHelpText>
+    <label>CEC Coordinator</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Trip_Location__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Anna_Grote</fullName>
+                <default>false</default>
+                <label>Anna Grote</label>
+            </value>
+            <value>
+                <fullName>Pat Ertel</fullName>
+                <default>false</default>
+                <label>Pat Ertel</label>
+            </value>
+            <value>
+                <fullName>Sandy Foster</fullName>
+                <default>false</default>
+                <label>Sandy Foster</label>
+            </value>
+            <value>
+                <fullName>Emily Hood</fullName>
+                <default>false</default>
+                <label>Emily Hood</label>
+            </value>
+            <value>
+                <fullName>Michelle Murphy</fullName>
+                <default>false</default>
+                <label>Michelle Murphy</label>
+            </value>
+            <value>
+                <fullName>Wanda Parkin-Le Coguic</fullName>
+                <default>false</default>
+                <label>Wanda Parkin-Le Coguic</label>
+            </value>
+            <value>
+                <fullName>Sam Butler</fullName>
+                <default>false</default>
+                <label>Sam Butler</label>
+            </value>
+            <value>
+                <fullName>Clementine Pirio</fullName>
+                <default>false</default>
+                <label>Clementine Pirio</label>
+            </value>
+            <value>
+                <fullName>Nicholas Trpezanovski</fullName>
+                <default>false</default>
+                <label>Nicholas Trpezanovski</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Cary</controllingFieldValue>
+            <controllingFieldValue>CWS Site</controllingFieldValue>
+            <valueName>Anna_Grote</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Cary</controllingFieldValue>
+            <controllingFieldValue>CWS Site</controllingFieldValue>
+            <valueName>Pat Ertel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Cary</controllingFieldValue>
+            <controllingFieldValue>CWS Site</controllingFieldValue>
+            <valueName>Sandy Foster</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <valueName>Michelle Murphy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Charleston</controllingFieldValue>
+            <valueName>Emily Hood</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <valueName>Sam Butler</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pluvigner</controllingFieldValue>
+            <valueName>Clementine Pirio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sydney</controllingFieldValue>
+            <valueName>Nicholas Trpezanovski</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

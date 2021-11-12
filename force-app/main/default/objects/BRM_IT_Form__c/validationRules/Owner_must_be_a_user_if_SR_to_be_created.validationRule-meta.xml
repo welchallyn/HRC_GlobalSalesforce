@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Owner_must_be_a_user_if_SR_to_be_created</fullName>
+    <active>true</active>
+    <description>Owner must be an individual user if we need to create a Service Request</description>
+    <errorConditionFormula>AND(
+ LEFT( OwnerId , 3) &lt;&gt; &apos;005&apos;,
+ Create_Service_Request__c = True
+   )</errorConditionFormula>
+    <errorDisplayField>Create_Service_Request__c</errorDisplayField>
+    <errorMessage>You must change the Owner to be an individual user before you can create a Service Request.</errorMessage>
+</ValidationRule>

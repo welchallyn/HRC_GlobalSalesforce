@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SFDC_In_progress_Assigned</fullName>
+    <columns>NAME</columns>
+    <columns>Priority__c</columns>
+    <columns>Request_Description__c</columns>
+    <columns>Assigned_To__c</columns>
+    <columns>Related_To__c</columns>
+    <columns>Reported_By__c</columns>
+    <columns>Request_Status__c</columns>
+    <columns>Request_Summary__c</columns>
+    <columns>Request_Type__c</columns>
+    <columns>Resolution_Comments__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Request_Status__c</field>
+        <operation>equals</operation>
+        <value>Assigned for analysis,In progress,Pending Validation</value>
+    </filters>
+    <filters>
+        <field>Request_Type__c</field>
+        <operation>notEqual</operation>
+        <value>Data,Data - SK&amp;A</value>
+    </filters>
+    <filters>
+        <field>Related_To__c</field>
+        <operation>notEqual</operation>
+        <value>Data</value>
+    </filters>
+    <label>SFDC To Work On - No Data or Data SK&amp;A</label>
+</ListView>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRC_AGILE_IT_SERVICE_DESK_ApprovalRoleMapping</fullName>
+    <filterScope>Queue</filterScope>
+    <label>HRC-AGILE-IT SERVICE DESK</label>
+    <queue>HRC_AGILE_IT_SERVICE_DESK</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

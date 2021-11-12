@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All8</fullName>
+    <columns>NAME</columns>
+    <columns>JDE_CFR_Number__c</columns>
+    <columns>Status__c</columns>
+    <columns>current_approver_of_CFR__c</columns>
+    <columns>Project_Name__c</columns>
+    <columns>Project_Objective__c</columns>
+    <columns>DivisionBS__c</columns>
+    <columns>Business_Segment__c</columns>
+    <columns>Total_CFR__c</columns>
+    <columns>Total_Budget__c</columns>
+    <columns>Project_Manager__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CREATEDBY_USER</field>
+        <operation>equals</operation>
+    </filters>
+    <label>All</label>
+    <language>en_US</language>
+</ListView>

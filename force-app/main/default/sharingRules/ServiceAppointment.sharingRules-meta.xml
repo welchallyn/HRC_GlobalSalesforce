@@ -1,6 +1,240 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
     <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Andorra_WO</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>HRCFSL Share Andorra WO</label>
+        <sharedTo>
+            <group>HRCFSL_AD</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Country</field>
+            <operation>equals</operation>
+            <value>AD</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Australia_WO</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>HRCFSL Share Australia WO</label>
+        <sharedTo>
+            <group>HRCFSL_AU</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Country</field>
+            <operation>equals</operation>
+            <value>AU</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Austria_WO</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>HRCFSL Share Austria WO</label>
+        <sharedTo>
+            <group>HRCFSL_AT</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Country</field>
+            <operation>equals</operation>
+            <value>AT</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Belgium_WO</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>HRCFSL Share Belgium WO</label>
+        <sharedTo>
+            <group>HRCFSL_BE</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Country</field>
+            <operation>equals</operation>
+            <value>BE</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Canada_WO</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>HRCFSL Share Canada WO</label>
+        <sharedTo>
+            <group>HRCFSL_CA</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Country</field>
+            <operation>equals</operation>
+            <value>CA</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Denmark_WO</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>HRCFSL Share Denmark WO</label>
+        <sharedTo>
+            <group>HRCFSL_DK</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Country</field>
+            <operation>equals</operation>
+            <value>DK</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_France_WO</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>HRCFSL Share France WO</label>
+        <sharedTo>
+            <group>HRCFSL_FR</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Country</field>
+            <operation>equals</operation>
+            <value>FR</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Germany_WO</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>HRCFSL Share Germany WO</label>
+        <sharedTo>
+            <group>HRCFSL_DE</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Country</field>
+            <operation>equals</operation>
+            <value>DE</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Ireland_WO</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>HRCFSL Share Ireland WO</label>
+        <sharedTo>
+            <group>HRCFSL_IE</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Country</field>
+            <operation>equals</operation>
+            <value>IE</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Italy_WO</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>HRCFSL Share Italy WO</label>
+        <sharedTo>
+            <group>HRCFSL_IT</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Country</field>
+            <operation>equals</operation>
+            <value>IT</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Luxembourg_WO</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>HRCFSL Share Luxembourg WO</label>
+        <sharedTo>
+            <group>HRCFSL_LU</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Country</field>
+            <operation>equals</operation>
+            <value>LU</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Monaco_WO</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>HRCFSL Share Monaco WO</label>
+        <sharedTo>
+            <group>HRCFSL_MC</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Country</field>
+            <operation>equals</operation>
+            <value>MC</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Netherlands_WO</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>HRCFSL Share Netherlands WO</label>
+        <sharedTo>
+            <group>HRCFSL_NL</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Country</field>
+            <operation>equals</operation>
+            <value>NL</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Norway_WO</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>HRCFSL Share Norway WO</label>
+        <sharedTo>
+            <group>HRCFSL_NO</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Country</field>
+            <operation>equals</operation>
+            <value>NO</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Spain_WO</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>HRCFSL Share Spain WO</label>
+        <sharedTo>
+            <group>HRCFSL_ES</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Country</field>
+            <operation>equals</operation>
+            <value>ES</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Sweden_WO</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>HRCFSL Share Sweden WO</label>
+        <sharedTo>
+            <group>HRCFSL_SE</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Country</field>
+            <operation>equals</operation>
+            <value>SE</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Switzerland_WO</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>HRCFSL Share Switzerland WO</label>
+        <sharedTo>
+            <group>HRCFSL_CH</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Country</field>
+            <operation>equals</operation>
+            <value>CH</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_UK_WO</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>HRCFSL Share UK WO</label>
+        <sharedTo>
+            <group>HRCFSL_GB</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Country</field>
+            <operation>equals</operation>
+            <value>GB</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
         <fullName>HRCFSL_Share_USA_SA</fullName>
         <accessLevel>Edit</accessLevel>
         <label>HRCFSL Share USA SA</label>

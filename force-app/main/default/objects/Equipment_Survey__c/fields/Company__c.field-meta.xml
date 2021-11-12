@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Company__c</fullName>
+    <externalId>false</externalId>
+    <label>Company</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Hill-Rom</fullName>
+                <default>false</default>
+                <label>Hill-Rom</label>
+            </value>
+            <value>
+                <fullName>Völker</fullName>
+                <default>false</default>
+                <label>Völker</label>
+            </value>
+            <value>
+                <fullName>Liko</fullName>
+                <default>false</default>
+                <label>Liko</label>
+            </value>
+            <value>
+                <fullName>Borg Warner</fullName>
+                <default>false</default>
+                <label>Borg Warner</label>
+            </value>
+            <value>
+                <fullName>Linet/Wissner-Bossenhoff</fullName>
+                <default>false</default>
+                <label>Linet/Wissner-Bossenhoff</label>
+            </value>
+            <value>
+                <fullName>Arjo Huntleigh / KCI</fullName>
+                <default>false</default>
+                <label>Arjo Huntleigh / KCI</label>
+            </value>
+            <value>
+                <fullName>Stryker / Gaymar / Air Systems</fullName>
+                <default>false</default>
+                <label>Stryker / Gaymar / Air Systems</label>
+            </value>
+            <value>
+                <fullName>Carroll</fullName>
+                <default>false</default>
+                <label>Carroll</label>
+            </value>
+            <value>
+                <fullName>Joerns</fullName>
+                <default>false</default>
+                <label>Joerns</label>
+            </value>
+            <value>
+                <fullName>Stiegelmeyer</fullName>
+                <default>false</default>
+                <label>Stiegelmeyer</label>
+            </value>
+            <value>
+                <fullName>Malvestio</fullName>
+                <default>false</default>
+                <label>Malvestio</label>
+            </value>
+            <value>
+                <fullName>Parkhouse</fullName>
+                <default>false</default>
+                <label>Parkhouse</label>
+            </value>
+            <value>
+                <fullName>Care of Sweden</fullName>
+                <default>false</default>
+                <label>Care of Sweden</label>
+            </value>
+            <value>
+                <fullName>Smith and Nephew</fullName>
+                <default>false</default>
+                <label>Smith and Nephew</label>
+            </value>
+            <value>
+                <fullName>Talley</fullName>
+                <default>false</default>
+                <label>Talley</label>
+            </value>
+            <value>
+                <fullName>Umano</fullName>
+                <default>false</default>
+                <label>Umano</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

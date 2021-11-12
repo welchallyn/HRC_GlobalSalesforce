@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Guest_Report</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Guest Report</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/00OE0000001yXlD?pv0={!Trip__c.Id}</url>
+</WebLink>

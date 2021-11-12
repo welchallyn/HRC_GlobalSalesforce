@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRC_ARIBA_CONTRACT_MGMT_INTL_COMM_Approval_Mapping</fullName>
+    <filterScope>Queue</filterScope>
+    <label>HRC-ARIBA-CONTRACT-MGMT-INTL-COMM</label>
+    <queue>HRC_ARIBA_CONTRACT_MGMT_INTL_COMM</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

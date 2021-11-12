@@ -1,0 +1,97 @@
+<apex:page standardController="Account">
+<style>
+.matrix{
+    width:100px;
+    margin-bottom:5px;
+}
+.matrix table{
+    width:100%;
+}
+.matrix #matrixTable{
+    background:#f5f5f5;
+    border:1px solid #ccc;
+}
+
+.matrix td,
+.matrix th{
+    vertical-align:middle;
+    height:30px;
+    margin:4px;
+    height:15px;
+}
+.matrix td{
+    border:1px solid #ddd;
+}
+.matrix th{
+    font-weight:normal;
+    text-transform:uppercase;
+    text-align:center;
+    font-size:9px;
+    vertical-align:bottom;
+}
+.matrix .highlight-0 .centralized-inds .defend{
+    background:#003A4B;
+    border:1px solid #003A4B;
+}
+.matrix .highlight-1 .centralized-inds .capture{
+    background: #79222C;
+    border:1px solid #79222C;
+}
+.matrix .highlight-2 .high-potential .defend{
+    background: #6F9AD2;
+    border:1px solid #6F9AD2;
+}
+.matrix .highlight-3 .high-potential .capture{
+    background: #BB9095;
+    border:1px solid #BB9095;
+}
+.matrix .highlight-4 .low-potential .defend{
+    background: #B6CBE8;
+    border:1px solid #B6CBE8;
+}
+.matrix .highlight-5 .low-potential .capture{
+    background: #fff;
+    border:1px dashed #003b4c;
+}
+.matrix .highlight--1{
+    display:none;
+}
+</style>
+<div class="matrix">
+<table class="highlight-{!ROUND(Account.Account_Matrix_Position__c, 0)}">
+    <thead>
+        <tr>
+            <th>Defend</th>
+            <th>Capture</th>
+        </tr>
+    </thead>
+</table>
+<table id="matrixTable" class="highlight-{!ROUND(Account.Account_Matrix_Position__c, 0)}">
+    <tbody>
+        <tr class="centralized-inds">
+            <td class="defend"></td>
+            <td class="capture"></td>
+        </tr>
+        <tr class="high-potential">
+            <td class="defend"></td>
+            <td class="capture"></td>
+        </tr>
+        <tr class="low-potential">
+            <td class="defend"></td>
+            <td class="capture"></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<a target="_parent" href="{!URLFOR($Page.HRC_AccountMatrix)}">Go to Account Matrix</a><br />
+<a target="_parent" href="{!URLFOR($Page.HRC_OpportunityMatrix)}">Go to Opportunity Matrix</a>
+<script>
+var matrix = document.getElementById('matrixTable');
+if(hasClass(matrix , 'highlight--1')){
+    window.parent.postMessage('removeFrame', '*');
+}
+function hasClass(element, cls) {
+    return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
+}
+</script>
+</apex:page>

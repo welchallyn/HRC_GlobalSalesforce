@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomPermission xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Using this to check if user can be allowed to modify or update Parent Asset in Asset records.
+Added to &quot;HRCSVC Edit Asset Permissions&quot; permission set</description>
+    <isLicensed>false</isLicensed>
+    <label>Allow Edit on Parent Asset</label>
+</CustomPermission>

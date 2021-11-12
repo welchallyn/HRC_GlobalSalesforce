@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>xxHRC-DAM-LVL1</name>
+    <queueMembers>
+        <users>
+            <user>paramic1@hrc.corp</user>
+            <user>mullind2@hrc.corp</user>
+            <user>mikesel1@hrc.corp</user>
+            <user>pejcicm1@hrc.corp</user>
+            <user>wangm3@hrc.corp</user>
+            <user>hsiungn1@hrc.corp</user>
+            <user>pejakot1@hrc.corp</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>BMCServiceDesk__Incident__c</sobjectType>
+    </queueSobject>
+</Queue>

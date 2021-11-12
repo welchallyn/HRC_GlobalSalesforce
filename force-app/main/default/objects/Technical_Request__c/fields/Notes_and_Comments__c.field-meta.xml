@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Notes_and_Comments__c</fullName>
+    <description>Free text space to enter notes and comments about the proposal created</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Free text space to enter notes and comments about the proposal created</inlineHelpText>
+    <label>Notes and Comments</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

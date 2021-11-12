@@ -1,0 +1,33 @@
+<apex:page controller="SubmitForApprovalController" showHeader="false" sidebar="false">
+  <apex:form >
+  <apex:pageBlock rendered="{!IF(!(IsSubmittedForApproval) && (!IsProcessComplete), true, false)}">
+      <apex:pageBlockSection columns="1">
+          <apex:outputText value="{!targetObjectLabel}" label="Object Type"/>
+          <apex:pageBlockSectionItem >
+                <apex:outputLabel >Related To</apex:outputLabel>
+                <apex:outputLink value="/{!objectId}">{!name}</apex:outputLink>
+          </apex:pageBlockSectionItem>
+          <apex:inputTextarea value="{!comments}" label="Comments" cols="60" />
+      </apex:pageBlockSection>
+       
+      <apex:pageBlockButtons location="bottom">
+            <apex:commandButton action="{!submitforapproval}" value="Submit for Approval" id="approvalButton"/>
+      </apex:pageBlockButtons>
+
+   </apex:pageBlock>
+  
+      <apex:outputText value="{!successMsg}" rendered="{!isSuccessful}"></apex:outputText>
+      <apex:outputText value="{!errorMsg}" rendered="{!IF(!isSuccessful, true, false)}"></apex:outputText>
+  
+  <apex:pageBlock rendered="{!IF((IsSubmittedForApproval) && (!IsProcessComplete),true, false)}" >
+      <apex:outputText value="The record {!Name} is already in the approval process"></apex:outputText>
+  </apex:pageBlock>
+  
+  <apex:pageBlock rendered="{!IF((IsProcessComplete) && (IsInitiate),true,false)  }" >
+      <apex:outputText value="You are trying to submit the record in INITATE status. Please move the Change to next stage and submit it for approval."></apex:outputText>
+  </apex:pageBlock>
+    
+    
+<!--  <apex:commandButton action="{!submitforapproval}" value="Submit for Approval" id="theButton"/> -->
+  </apex:form>
+</apex:page>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>White_Rails_default_Natural__c</fullName>
+    <description>Check if you require white rails with this design.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Check if you require white rails with this design.</inlineHelpText>
+    <label>Rail Color (default=Natural)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>White</fullName>
+                <default>false</default>
+                <label>White</label>
+            </value>
+            <value>
+                <fullName>Natural</fullName>
+                <default>false</default>
+                <label>Natural</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

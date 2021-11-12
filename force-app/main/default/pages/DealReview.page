@@ -1,0 +1,264 @@
+<!-- Last modified by Jenish Shingala on 19th Jan,2017. -->
+<apex:page standardController="Opportunity">
+    <script type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+   <style>
+      .slds-input{
+      height:75px !important;
+      }
+      .slds-form-element__label{
+      font-weight: bold; 
+      font-family: sans-serif;
+      }
+     ::-webkit-input-placeholder { line-height:normal;  opacity: 0.5 !important; color:red !important;}
+     .slds-input{
+            line-height: normal !important;
+        }
+        label{
+            white-space: nowrap;
+        }
+        .button {
+            display: inline-table;
+            width: 50px;
+            height: 10px;
+            background: #0070d2;
+            padding: 9px;
+            text-align: center;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+        }
+   </style>
+   <script>
+      
+   </script>
+   <h4 style="font-size:150%;font-family: initial;">Opportunity Review for {!Opportunity.name}</h4>
+   <a href="/apex/Dealreviewprint?id={!Opportunity.id}" target="_blank" class="button" style="float:right">Print</a>
+   <br/><br/>
+   <apex:form >
+      <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+         <head>
+            <apex:stylesheet value="{!URLFOR($Resource.LightningUI, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+            <!--<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>-->
+         </head>
+         <div class="slds">
+            <div class="container">
+               <article class="slds-card">
+                  <div class="slds-card__body" id="formdiv">
+                     <div class="slds-grid">
+                        <div class="slds-col" style="margin-left:1%;">
+                           <div class="slds-form-element">
+                              <label class="slds-form-element__label" for="text-input-01">Opportunity Description:</label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputField id="text-input-01" styleclass="slds-input" html-placeholder="30,000 ft view of this opportunity and where are they in the buying process" value="{!Opportunity.Business_Awareness__c}"/>
+                              </div>
+                           </div>
+                        </div>
+                        &nbsp; &nbsp; &nbsp; &nbsp;
+                        <div class="slds-col" style="margin-right:1%;">
+                           <div class="slds-form-element">
+                              <!--<label class="slds-form-element__label" for="text-input-02">Opportunity Description:</label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputField id="text-input-02" styleclass="slds-input"  html-placeholder="30,000 ft view of this opportunity and where are they in the buying process" value="{!Opportunity.OpportunityDescription__c}"/>
+                              </div>-->
+                           </div>
+                        </div>
+                     </div>
+                     <div class="slds-grid" style="margin-top: 0.7%;">
+                        <div class="slds-col" style="margin-left: 1%;">
+                           <div class="slds-form-element">
+                              <label class="slds-form-element__label" for="text-input-03">Compelling Event:</label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputField id="text-input-03" styleclass="slds-input" style="height:6.5rem;" html-placeholder="What happened in the account that brought you into this opportunity or made you think that this would be an opportunity?" value="{!Opportunity.SAVO_Compelling_Event__c}"/>
+                              </div>
+                           </div>
+                        </div>
+                        &nbsp;&nbsp;
+                        <div class="slds-col">
+                           <div class="slds-form-element">
+                              <label class="slds-form-element__label" for="text-input-04">Value Driver(s):</label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputField id="text-input-04" styleclass="slds-input" html-placeholder="Staff Satisfaction, Patient Satisfaction, Financial, Risk Reduction, Manage Consolidation" value="{!Opportunity.Value_Drivers__c}"/>
+                              </div>
+                           </div>
+                        </div>
+                        &nbsp;&nbsp;
+                        <div class="slds-col" style="margin-right: 1%;">
+                           <div class="slds-form-element">
+                              <label class="slds-form-element__label" for="text-input-05">Positive Business Outcomes:</label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputField id="text-input-05" styleclass="slds-input" html-placeholder="What is the end result that the CUSTOMER hopes to see as a result of this purchase?" value="{!Opportunity.Positive_Business_Outcomes__c}"/>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="slds-grid" style="margin-top: 0.7%;">
+                        <div class="slds-col" style="margin-left: 1%;">
+                           <div class="slds-form-element">
+                              <label class="slds-form-element__label" for="text-input-06">Minimum Required Capabilities:</label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputField id="text-input-06" styleclass="slds-input" html-placeholder="What are the basic specification requirements for this opportunity/solution? Can you influence lock out specs into the required capabilities?" value="{!Opportunity.Minimum_Required_Capabilities__c}"/>
+                              </div>
+                           </div>
+                        </div>
+                        &nbsp;&nbsp;
+                        <div class="slds-col">
+                           <div class="slds-form-element">
+                              <label class="slds-form-element__label" for="text-input-07">Metrics:</label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputField id="text-input-07" styleclass="slds-input" html-placeholder="Set with the customer what success will look like? Example: -Number of SKUs maintained, Improving Staff Satisfaction Scores, etc." value="{!Opportunity.Metrics__c}"/>
+                              </div>
+                           </div>
+                        </div>
+                        &nbsp;&nbsp;
+                        <div class="slds-col" style="margin-right: 1%;">
+                           <div class="slds-form-element">
+                              <label class="slds-form-element__label" for="text-input-08">Competitive Situation: </label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputField id="text-input-08" styleclass="slds-input" html-placeholder="Who else are they talking to?" value="{!Opportunity.SAVO_Competitive_Situation__c}"/>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="slds-grid" style="margin-top: 0.7%;">
+                        <div class="slds-col" style="margin-left: 1%;">
+                           <div class="slds-form-element">
+                              <label class="slds-form-element__label" for="text-input-09">Identify the mobilizer(s):</label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputField id="text-input-09" styleclass="slds-input" html-placeholder="What is our plan to coach our mobilizer through the process?" value="{!Opportunity.Identify_the_Mobilizers__c}"/>
+                              </div>
+                           </div>
+                        </div>
+                        &nbsp;&nbsp;
+                        <div class="slds-col">
+                           <div class="slds-form-element">
+                              <label class="slds-form-element__label" for="text-input-10">Identify the blocker(s):</label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputField id="text-input-10" styleclass="slds-input" html-placeholder="How can you identify and mitigate their key concerns?" value="{!Opportunity.Identify_the_Blockers__c}"/>
+                              </div>
+                           </div>
+                        </div>
+                        &nbsp;&nbsp;
+                        <div class="slds-col" style="margin-right: 1%;">
+                           <div class="slds-form-element">
+                              <label class="slds-form-element__label" for="text-input-11">Identify the champion:</label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputField id="text-input-11" styleclass="slds-input" html-placeholder="Why is this person your champion?" value="{!Opportunity.Identify_the_Champion__c}"/>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="slds-grid" style="margin-top:0.7%;">
+                        <div class="slds-col" style="margin-left: 1%;">
+                           <div class="slds-form-element">
+                              <label class="slds-form-element__label" for="text-input-12">Decision Process:</label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputField id="text-input-12" styleclass="slds-input" html-placeholder="What is the process that the facility is going to follow?  Committee? RFP? One point person?" value="{!Opportunity.SAVO_Decision_Process__c}"/>
+                              </div>
+                           </div>
+                        </div>
+                        &nbsp;&nbsp;
+                        <div class="slds-col">
+                           <div class="slds-form-element">
+                              <label class="slds-form-element__label" for="text-input-13">Criteria Favorable to WA:</label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputField id="text-input-13" styleclass="slds-input" html-placeholder="Are there any lockout specs that are in our favor? What other requirements are in our wheel house?  Make sure to be prepared to defend." value="{!Opportunity.SAVO_Criteria_Favorable_to_WA__c}"/>
+                              </div>
+                           </div>
+                        </div>
+                        &nbsp;&nbsp;
+                        <div class="slds-col" style="margin-right: 1%;">
+                           <div class="slds-form-element">
+                              <label class="slds-form-element__label" for="text-input-14">Criteria Unfavorable to WA: </label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputField id="text-input-14" styleclass="slds-input" html-placeholder="What are we going up against?  Are their requirements that we can’t meet?" value="{!Opportunity.SAVO_Criteria_Unfavorable_to_WA__c}"/>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="slds-grid" style="margin-top: 0.7%;">
+                        <div class="slds-col" style="margin-left: 1%;">
+                           <div class="slds-form-element">
+                              <label class="slds-form-element__label" for="text-input-15">How We Do It:</label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputField id="text-input-15" styleclass="slds-input" html-placeholder="How does Welch Allyn fix what they are trying to solve?  Share the relevant features and benefits to help be a part of the solution." value="{!Opportunity.How_we_do_it__c}"/>
+                              </div>
+                           </div>
+                        </div>
+                        &nbsp; &nbsp; &nbsp; &nbsp;
+                        <div class="slds-col" style="margin-right: 1%;">
+                           <div class="slds-form-element">
+                              <label class="slds-form-element__label" for="text-input-16">How We Do It Better:</label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputField id="text-input-16" styleclass="slds-input"  html-placeholder="Focus on differentiating factors of our solution (again tie in to customers specific requirements/focus)  Think: So What? Who Cares? Says Who? (Proof Points)" value="{!Opportunity.How_we_do_it_better__c}"/>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="slds-grid" style="margin-top: 0.7%;">
+                        <div class="slds-col" style="margin-left: 1%;">
+                           <div class="slds-form-element">
+                              <label class="slds-form-element__label" for="text-input-17">Connectivity Information:</label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputField id="text-input-17" styleclass="slds-input" html-placeholder="What EMR does the facility have?  Are there any connectivity concerns or IT restraints we need to worry about?" value="{!Opportunity.Resource_Utilization__c}"/>
+                              </div>
+                           </div>
+                        </div>
+                        &nbsp;&nbsp;
+                        <div class="slds-col">
+                           <div class="slds-form-element">
+                              <label class="slds-form-element__label" for="text-input-18">Purchasing Information:</label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputField id="text-input-18" styleclass="slds-input" html-placeholder="What GPO/Tier is the customer utilizing?  Part of a Regional Purchasing Coalition?  Anything special we need to know for purchasing?" value="{!Opportunity.Connectivity_Information__c}"/>
+                              </div>
+                           </div>
+                        </div>
+                        &nbsp;&nbsp;
+                        <div class="slds-col" style="margin-right: 1%;">
+                           <div class="slds-form-element">
+                              <label class="slds-form-element__label" for="text-input-19">Extra Help Needed:</label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputField id="text-input-19" styleclass="slds-input" html-placeholder="Do you need any other extra help from the greater team?  Analysis Call?  SME? Training? Senior Leadership? Etc." value="{!Opportunity.Contract_Information__c}"/>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="slds-grid" style="margin-top: 0.7%;">
+                        <div class="slds-col">
+                          
+                           <center>   <apex:commandButton value="Save" action="{!save}" styleClass="slds-button slds-button--brand"/> </center>
+                          
+                        </div>
+                       <!-- <div class="slds-col">
+                           
+                              <button value="" onClick="PrintElem(this)" Class="slds-button slds-button--brand">Print this page</button>
+                           
+                        </div>-->
+                     </div>
+                  </div>
+               </article>
+            </div>
+         </div>
+      </html>
+   </apex:form>
+   <script>
+     $(document).ready(function() {
+       var ownerrole = '{!Opportunity.Owner.Role__c}';
+       console.log('ownerrole-->'+ownerrole);
+       var opportunityamount = '{!Opportunity.Amount}';
+        console.log('opportunityamount-->'+opportunityamount);
+        var opportunitysavotag = '{!Opportunity.First_Savo_tag__c}';
+        console.log('opportunitysavotag-->'+opportunitysavotag);
+        /*if(ownerrole.includes("test") || ownerrole.includes("2")){
+            console.log('True');
+        }
+        else
+            console.log('False');*/
+        
+        
+       var vEmptyTextBox = $(".slds-input").filter(function(){
+            return $.trim($(this).val()) == '';
+        }).length;
+        console.log('Length-->'+vEmptyTextBox);
+     });
+   </script>
+</apex:page>

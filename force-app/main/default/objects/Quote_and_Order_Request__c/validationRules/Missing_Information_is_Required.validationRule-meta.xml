@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Missing_Information_is_Required</fullName>
+    <active>true</active>
+    <description>Created as part of CR00029874</description>
+    <errorConditionFormula>AND(
+OR
+( ISPICKVAL( Status__c , &apos;Quote Request Missing Information&apos;),
+ISPICKVAL( Status__c , &apos;Order Request Missing Information&apos;)
+) , ISPICKVAL(Reason_codes_Missing_info__c, &apos;&apos;)
+)</errorConditionFormula>
+    <errorDisplayField>Reason_codes_Missing_info__c</errorDisplayField>
+    <errorMessage>Please select the reason code for Missing information.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Expected_Training_Date__c</fullName>
+    <description>If training date isn&apos;t set, use formula. otherwise, use training date.</description>
+    <externalId>false</externalId>
+    <formula>IF(NOT(ISBLANK(Training_Date__c)),Training_Date__c,
+CASE(TEXT(Status__c),
+&quot;Contract Initiation&quot;, DATEVALUE(CreatedDate) + 63,
+&quot;Contract Negotiation&quot;, DATEVALUE(CreatedDate) + 58,
+&quot;Account Setup&quot;, DATEVALUE(CreatedDate) + 27,
+&quot;Installation pending&quot;, DATEVALUE(CreatedDate) + 18,
+&quot;Installation scheduled&quot;, DATEVALUE(CreatedDate) + 15,
+Training_Date__c )
+)</formula>
+    <label>Expected Training Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

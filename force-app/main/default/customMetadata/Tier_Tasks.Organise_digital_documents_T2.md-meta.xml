@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Organise digital documents</label>
+    <protected>false</protected>
+    <values>
+        <field>Description__c</field>
+        <value xsi:type="xsd:string">Collate any documents, images or videos that you would like to be uploaded to the online conference web page / online booth. If you have issues in finding the assets please reach out to Katie Webster.</value>
+    </values>
+    <values>
+        <field>Dummy_Region__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Dummy_Tier_Category__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Region__c</field>
+        <value xsi:type="xsd:string">EMEA</value>
+    </values>
+    <values>
+        <field>Status__c</field>
+        <value xsi:type="xsd:string">Not started</value>
+    </values>
+    <values>
+        <field>Task_Owner__c</field>
+        <value xsi:type="xsd:string">EMEA_Conference_Country_Marketing</value>
+    </values>
+    <values>
+        <field>Tier_Category__c</field>
+        <value xsi:type="xsd:string">Tier 2</value>
+    </values>
+    <values>
+        <field>Tier_Type__c</field>
+        <value xsi:type="xsd:string">Digital</value>
+    </values>
+</CustomMetadata>

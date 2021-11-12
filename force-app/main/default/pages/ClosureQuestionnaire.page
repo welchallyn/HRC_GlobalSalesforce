@@ -1,0 +1,44 @@
+<apex:page id="pg" standardController="BMCServiceDesk__Change_Request__c" showheader="false" extensions="ClosureQuestionnaireExtension">
+    <script>
+     window.onload = function () {
+         console.log('document.getElementsByClassName("lookupIcon")[0].value'+JSON.stringify(document.getElementsByTagName("img")));
+         	if(document.getElementById("pg:program:block:section:field1").value == 'Yes'){
+            	document.getElementById("pg:program:block:section:field").removeAttribute("style");
+                document.getElementsByTagName("img")[1].style.visibility = 'visible';
+         	}
+         	else{
+            	document.getElementById("pg:program:block:section:field").style.display = 'none';
+                document.getElementsByTagName("img")[1].style.visibility = 'hidden';
+         	}
+         }
+    function getValue(data){
+        if(data.value == 'Yes'){
+            console.log('aaa '+document.getElementById("{!$Component.program.block.section.field}"));
+            document.getElementById("pg:program:block:section:field").removeAttribute("style");
+            document.getElementsByTagName("img")[1].style.visibility = 'visible';
+            }
+        else{
+            document.getElementById("pg:program:block:section:field").style.display = 'none';
+            document.getElementsByTagName("img")[1].style.visibility = 'hidden';
+            document.getElementById("pg:program:block:section:field").value = '';
+            }
+        }
+    </script>
+    <apex:form id="program" >
+        <apex:pageBlock id="block">
+            <apex:pageMessages id="showmsg"></apex:pageMessages>
+            <apex:pageBlockSection title="Closure Questionnaire" columns="2" id="section"> 
+                <apex:inputField id="field1" required="true" value="{!BMCServiceDesk__Change_Request__c.Is_this_issue_caused_due_to_another_CR__c}" onchange="getValue(this)" ></apex:inputField>
+                <apex:inputField id="field" value="{!BMCServiceDesk__Change_Request__c.If_Yes_then_CR_number_to_be_updated__c}"/>
+                <apex:inputField required="true" value="{!BMCServiceDesk__Change_Request__c.Is_this_an_Emergency_Change__c}"/>
+                <apex:inputField required="true" value="{!BMCServiceDesk__Change_Request__c.Is_the_change_Successful__c}"/>
+                <apex:inputField required="true" value="{!BMCServiceDesk__Change_Request__c.Is_this_a_backed_out_change__c}"/>
+                <apex:pageBlockSection columns="2">
+                    <apex:commandButton action="{!saveAndRedirect}" value="Save"/>
+                    <apex:commandButton action="{!cancel}" value="Cancel" />
+                </apex:pageBlockSection>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+    
+</apex:page>

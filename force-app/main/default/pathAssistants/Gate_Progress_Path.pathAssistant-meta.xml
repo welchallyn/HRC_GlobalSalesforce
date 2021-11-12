@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>BRM_IT_Form__c</entityName>
+    <fieldName>Gate__c</fieldName>
+    <masterLabel>Gate Progress Path</masterLabel>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;This phase is used to completely close out the record in the funnel and contains three status​es&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Closed status: Steady state​&lt;/li&gt;&lt;li&gt;Rejected status: BP determined we will not move forward with the item​&lt;/li&gt;&lt;li&gt;Cancelled​: Work began on the item, but BP determined to permanently stop work​&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;a href=&quot;https://myhillrom.sharepoint.com/:p:/r/teams/ITBusinessPartners/_layouts/15/Doc.aspx?sourcedoc=%7B2BD53768-8698-42E1-8EE5-0A8B080A590B%7D&amp;amp;file=Business%20Partner%20Process%20and%20Tool%20Training.pptx&amp;amp;action=edit&amp;amp;mobileredirect=true&quot; target=&quot;_blank&quot; style=&quot;font-size: 13px;&quot;&gt;Click here for process overview &lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</info>
+        <picklistValueName>Business as Usual</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;COE or vendor partner completes work​&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Pending​: Item is ready to be picked up and worked​&lt;/li&gt;&lt;li&gt;In Progress​: COE / External IT Partner is actively working the item​&lt;/li&gt;&lt;li&gt;On Hold​: Work has temporarily stopped on the item​&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;a href=&quot;https://myhillrom.sharepoint.com/:p:/r/teams/ITBusinessPartners/_layouts/15/Doc.aspx?sourcedoc=%7B2BD53768-8698-42E1-8EE5-0A8B080A590B%7D&amp;amp;file=Business%20Partner%20Process%20and%20Tool%20Training.pptx&amp;amp;action=edit&amp;amp;mobileredirect=true&quot; target=&quot;_blank&quot; style=&quot;font-size: 13px;&quot;&gt;Click here for process overview &lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</info>
+        <picklistValueName>Execute</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Item initially entered into the funnel for review​&lt;/p&gt;&lt;p&gt;This phase is used to capture new ideas coming in from the business that need to be vetted, but have not yet been thoroughly reviewed​&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://myhillrom.sharepoint.com/:p:/r/teams/ITBusinessPartners/_layouts/15/Doc.aspx?sourcedoc=%7B2BD53768-8698-42E1-8EE5-0A8B080A590B%7D&amp;amp;file=Business%20Partner%20Process%20and%20Tool%20Training.pptx&amp;amp;action=edit&amp;amp;mobileredirect=true&quot; target=&quot;_blank&quot; style=&quot;font-size: 13px;&quot;&gt;Click here for process overview &lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</info>
+        <picklistValueName>Idea</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;BP completes discovery process on the item​&lt;/p&gt;&lt;ul&gt;&lt;li&gt;This phase is used to complete discovery work, determine if the request will move forward, and scope the request for implementation&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;a href=&quot;https://myhillrom.sharepoint.com/:p:/r/teams/ITBusinessPartners/_layouts/15/Doc.aspx?sourcedoc=%7B2BD53768-8698-42E1-8EE5-0A8B080A590B%7D&amp;amp;file=Business%20Partner%20Process%20and%20Tool%20Training.pptx&amp;amp;action=edit&amp;amp;mobileredirect=true&quot; target=&quot;_blank&quot; style=&quot;font-size: 13px;&quot;&gt;Click here for process overview &lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</info>
+        <picklistValueName>Opportunity</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;BP completes prioritization process on the item​&lt;/p&gt;&lt;p&gt;This phase is used to work with the business to prioritize all the items in queue to be worked​&lt;/p&gt;&lt;p&gt;Prioritization is completed by function, then by application​&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://myhillrom.sharepoint.com/:p:/r/teams/ITBusinessPartners/_layouts/15/Doc.aspx?sourcedoc=%7B2BD53768-8698-42E1-8EE5-0A8B080A590B%7D&amp;amp;file=Business%20Partner%20Process%20and%20Tool%20Training.pptx&amp;amp;action=edit&amp;amp;mobileredirect=true&quot; target=&quot;_blank&quot; style=&quot;font-size: 13px;&quot;&gt;Click here for process overview &lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</info>
+        <picklistValueName>Value Prioritization</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Realize and document the value the item brought to the business​&lt;/p&gt;&lt;p&gt;This phase is used to record the actual value that was realized by the business because the request was implemented​&lt;/p&gt;&lt;p&gt;BP will follow up with the business user after the specified days in the tool to measure the key value or baseline metrics​&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://myhillrom.sharepoint.com/:p:/r/teams/ITBusinessPartners/_layouts/15/Doc.aspx?sourcedoc=%7B2BD53768-8698-42E1-8EE5-0A8B080A590B%7D&amp;amp;file=Business%20Partner%20Process%20and%20Tool%20Training.pptx&amp;amp;action=edit&amp;amp;mobileredirect=true&quot; target=&quot;_blank&quot; style=&quot;font-size: 13px;&quot;&gt;Click here for process overview &lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</info>
+        <picklistValueName>Value Realization</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>__MASTER__</recordTypeName>
+</PathAssistant>

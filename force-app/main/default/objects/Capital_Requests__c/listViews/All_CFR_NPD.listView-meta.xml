@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_CFR_NPD</fullName>
+    <columns>NAME</columns>
+    <columns>JDE_CFR_Number__c</columns>
+    <columns>Status__c</columns>
+    <columns>current_approver_of_CFR__c</columns>
+    <columns>Project_Name__c</columns>
+    <columns>Project_Objective__c</columns>
+    <columns>DivisionBS__c</columns>
+    <columns>Business_Segment__c</columns>
+    <columns>Total_CFR__c</columns>
+    <columns>Total_Budget__c</columns>
+    <columns>Project_Manager__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CREATEDBY_USER</field>
+        <operation>notContain</operation>
+        <value>Data</value>
+    </filters>
+    <filters>
+        <field>CFR_is_Confidential__c</field>
+        <operation>notEqual</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Project_Name_Link__c</field>
+        <operation>notContain</operation>
+        <value>*</value>
+    </filters>
+    <filters>
+        <field>Project_Objective__c</field>
+        <operation>equals</operation>
+        <value>NPD</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Draft,Spend in Progress,Closure in Process,Closed</value>
+    </filters>
+    <filters>
+        <field>DivisionBS__c</field>
+        <operation>equals</operation>
+        <value>NPD (New Product Development),US PSS (Patient Support Systems)</value>
+    </filters>
+    <label>All CFR NPD</label>
+    <language>en_US</language>
+</ListView>

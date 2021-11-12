@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Install_compact</fullName>
+    <fields>Name</fields>
+    <fields>Account__c</fields>
+    <fields>Status__c</fields>
+    <fields>Contract_Number__c</fields>
+    <fields>OwnerId</fields>
+    <fields>Sales_Rep__c</fields>
+    <fields>of_devices__c</fields>
+    <label>Install compact</label>
+</CompactLayout>

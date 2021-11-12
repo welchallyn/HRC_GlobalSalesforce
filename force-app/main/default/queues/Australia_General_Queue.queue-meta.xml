@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Australia: General Queue</name>
+    <queueMembers>
+        <users>
+            <user>grantc2@hrc.corp</user>
+            <user>dekonil1@hrc.corp</user>
+            <user>revades1@hrc.corp</user>
+            <user>mariss1@hrc.corp</user>
+            <user>sooriyu1@hrc.corp</user>
+            <user>kow1@hrc.corp</user>
+            <user>hex1@hrc.corp</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Lead</sobjectType>
+    </queueSobject>
+</Queue>

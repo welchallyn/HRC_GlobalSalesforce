@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Submit_Closure_Documents</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Submit Closure Documents</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/33.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/33.0/apex.js&quot;)} 
+
+var accnt = new sforce.SObject(&quot;Capital_Requests__c&quot;);
+accnt.Id = &apos;{!Capital_Requests__c.Id}&apos;;
+accnt.Status__c = &apos;{!Capital_Requests__c.Status__c}&apos;;
+
+if(accnt.Status__c == &quot;Closure in Process&quot; || accnt.Status__c == &quot;Closure Approval&quot;){
+	var r = confirm(&quot;Do you want the Closure Approval for the CFR. Are you sure ?&quot;);
+	if(r == true){
+		accnt.Status__c = &quot;Closure Approval&quot;;
+		var result = sforce.connection.update([accnt]);
+		if(result[0].getBoolean(&quot;success&quot;)){
+			window.location.reload();
+		}else{
+			alert(&quot;CFR is not Closure Approved. Please contact administrator.&quot;);
+		}
+	}
+}else{
+	alert(&quot;For the Closure Approval of CFR, it should be Closure in Process.&quot;); 
+}</url>
+</WebLink>

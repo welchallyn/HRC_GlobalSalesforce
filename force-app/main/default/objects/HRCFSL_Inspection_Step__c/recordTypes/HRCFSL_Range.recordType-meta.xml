@@ -3,4 +3,15 @@
     <fullName>HRCFSL_Range</fullName>
     <active>true</active>
     <label>Range</label>
+    <picklistValues>
+        <picklist>HRCFSL_Is_Visited__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
 </RecordType>

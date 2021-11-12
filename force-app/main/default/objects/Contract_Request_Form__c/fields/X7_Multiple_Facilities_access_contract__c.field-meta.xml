@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X7_Multiple_Facilities_access_contract__c</fullName>
+    <description>Will multiple facilities be able to access contract?</description>
+    <externalId>false</externalId>
+    <label>7. Multiple Facilities access contract?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Yes (Please provide detailed facility listing with form submission)</fullName>
+                <default>false</default>
+                <label>Yes (Please provide detailed facility listing with form submission)</label>
+            </value>
+            <value>
+                <fullName>No (Indicates only applies to customer name and address listed above)</fullName>
+                <default>false</default>
+                <label>No (Indicates only applies to customer name and address listed above)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

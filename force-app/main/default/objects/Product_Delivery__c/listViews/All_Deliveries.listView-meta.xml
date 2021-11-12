@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Deliveries</fullName>
+    <columns>Delivery_date__c</columns>
+    <columns>Delivery_time__c</columns>
+    <columns>Confirmed_delivery_date_time__c</columns>
+    <columns>Delivery_originating_from__c</columns>
+    <columns>Customer__c</columns>
+    <columns>Service_Technician__c</columns>
+    <columns>External_agent_name__c</columns>
+    <columns>NAME</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Deliveries</label>
+    <language>en_GB</language>
+</ListView>

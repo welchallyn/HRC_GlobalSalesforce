@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_edit_after_submitting</fullName>
+    <active>true</active>
+    <description>Cannot edit requests that have been submitted to the BRM</description>
+    <errorConditionFormula>PRIORVALUE(BRM_IT_Form_Created__c ) = True</errorConditionFormula>
+    <errorMessage>You cannot edit this request because it has already been submitted to the BRM</errorMessage>
+</ValidationRule>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cardiology__c</fullName>
+    <externalId>false</externalId>
+    <label>Cardiology</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ABPM 7100</fullName>
+                <default>false</default>
+                <label>ABPM 7100</label>
+            </value>
+            <value>
+                <fullName>Eli 280</fullName>
+                <default>false</default>
+                <label>Eli 280</label>
+            </value>
+            <value>
+                <fullName>Eli 380 Ergo</fullName>
+                <default>false</default>
+                <label>Eli 380 Ergo</label>
+            </value>
+            <value>
+                <fullName>Holter</fullName>
+                <default>false</default>
+                <label>Holter</label>
+            </value>
+            <value>
+                <fullName>Q-Stress</fullName>
+                <default>false</default>
+                <label>Q-Stress</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

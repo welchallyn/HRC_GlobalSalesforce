@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Regulatory_Privacy_Impact__c</fullName>
+    <externalId>false</externalId>
+    <label>Regulatory/Privacy Impact</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>PHI</fullName>
+                <default>false</default>
+                <label>PHI</label>
+            </value>
+            <value>
+                <fullName>PII</fullName>
+                <default>false</default>
+                <label>PII</label>
+            </value>
+            <value>
+                <fullName>EU PII</fullName>
+                <default>false</default>
+                <label>EU PII</label>
+            </value>
+            <value>
+                <fullName>PCI-DSS</fullName>
+                <default>false</default>
+                <label>PCI-DSS</label>
+            </value>
+            <value>
+                <fullName>SOX</fullName>
+                <default>false</default>
+                <label>SOX</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

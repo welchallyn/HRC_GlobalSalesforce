@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product__c</fullName>
+    <externalId>false</externalId>
+    <label>Product Line</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>840 or 850</fullName>
+                <default>false</default>
+                <label>840 or 850</label>
+            </value>
+            <value>
+                <fullName>Adel</fullName>
+                <default>false</default>
+                <label>Adel</label>
+            </value>
+            <value>
+                <fullName>Advance Series</fullName>
+                <default>false</default>
+                <label>Advance Series</label>
+            </value>
+            <value>
+                <fullName>Advanta 2</fullName>
+                <default>false</default>
+                <label>Advanta 2</label>
+            </value>
+            <value>
+                <fullName>Affinity 2</fullName>
+                <default>false</default>
+                <label>Affinity 2</label>
+            </value>
+            <value>
+                <fullName>Affinity III</fullName>
+                <default>false</default>
+                <label>Affinity III</label>
+            </value>
+            <value>
+                <fullName>Affinity IV</fullName>
+                <default>false</default>
+                <label>Affinity IV</label>
+            </value>
+            <value>
+                <fullName>AVE 2 (L&amp;D)</fullName>
+                <default>false</default>
+                <label>AVE 2 (L&amp;D)</label>
+            </value>
+            <value>
+                <fullName>Basic Care Bed</fullName>
+                <default>false</default>
+                <label>Basic Care Bed</label>
+            </value>
+            <value>
+                <fullName>CareAssist</fullName>
+                <default>false</default>
+                <label>CareAssist</label>
+            </value>
+            <value>
+                <fullName>Centrella</fullName>
+                <default>false</default>
+                <label>Centrella</label>
+            </value>
+            <value>
+                <fullName>Centura Series</fullName>
+                <default>false</default>
+                <label>Centura Series</label>
+            </value>
+            <value>
+                <fullName>Century</fullName>
+                <default>false</default>
+                <label>Century</label>
+            </value>
+            <value>
+                <fullName>Compella</fullName>
+                <default>false</default>
+                <label>Compella</label>
+            </value>
+            <value>
+                <fullName>Eleganza</fullName>
+                <default>false</default>
+                <label>Eleganza</label>
+            </value>
+            <value>
+                <fullName>Epic</fullName>
+                <default>false</default>
+                <label>Epic</label>
+            </value>
+            <value>
+                <fullName>Go Bed</fullName>
+                <default>false</default>
+                <label>Go Bed</label>
+            </value>
+            <value>
+                <fullName>Hill-Rom 80 Bed</fullName>
+                <default>false</default>
+                <label>Hill-Rom 80 Bed</label>
+            </value>
+            <value>
+                <fullName>Intouch</fullName>
+                <default>false</default>
+                <label>Intouch</label>
+            </value>
+            <value>
+                <fullName>LD304</fullName>
+                <default>false</default>
+                <label>LD304</label>
+            </value>
+            <value>
+                <fullName>Low Bed</fullName>
+                <default>false</default>
+                <label>Low Bed</label>
+            </value>
+            <value>
+                <fullName>LTC Platforms</fullName>
+                <default>false</default>
+                <label>LTC Platforms</label>
+            </value>
+            <value>
+                <fullName>MPS</fullName>
+                <default>false</default>
+                <label>MPS</label>
+            </value>
+            <value>
+                <fullName>Multicare</fullName>
+                <default>false</default>
+                <label>Multicare</label>
+            </value>
+            <value>
+                <fullName>Multicare LE</fullName>
+                <default>false</default>
+                <label>Multicare LE</label>
+            </value>
+            <value>
+                <fullName>NPS</fullName>
+                <default>false</default>
+                <label>NPS</label>
+            </value>
+            <value>
+                <fullName>Ook Snow</fullName>
+                <default>false</default>
+                <label>Ook Snow</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Other/Postpartum</fullName>
+                <default>false</default>
+                <label>Other/Postpartum</label>
+            </value>
+            <value>
+                <fullName>Progressa</fullName>
+                <default>false</default>
+                <label>Progressa</label>
+            </value>
+            <value>
+                <fullName>Reconditioned</fullName>
+                <default>false</default>
+                <label>Reconditioned</label>
+            </value>
+            <value>
+                <fullName>Secure I</fullName>
+                <default>false</default>
+                <label>Secure I</label>
+            </value>
+            <value>
+                <fullName>Secure II</fullName>
+                <default>false</default>
+                <label>Secure II</label>
+            </value>
+            <value>
+                <fullName>Secure III</fullName>
+                <default>false</default>
+                <label>Secure III</label>
+            </value>
+            <value>
+                <fullName>TotalCare</fullName>
+                <default>false</default>
+                <label>TotalCare</label>
+            </value>
+            <value>
+                <fullName>TotalCare Bariatric</fullName>
+                <default>false</default>
+                <label>TotalCare Bariatric</label>
+            </value>
+            <value>
+                <fullName>TotalCare Spo2rt</fullName>
+                <default>false</default>
+                <label>TotalCare Spo2rt</label>
+            </value>
+            <value>
+                <fullName>VersaCare</fullName>
+                <default>false</default>
+                <label>VersaCare</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

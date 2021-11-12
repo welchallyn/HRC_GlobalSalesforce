@@ -1,0 +1,51 @@
+<!--
+Requirement: Re-Enter credentials for approval
+a.  Approval manager is prompted to re-enter his credentials before approving the items – Incident, Change Request etc.
+b.  Items are approved only after verification of credentials provided by Approval Manager.
+c.  However, if the approver wants to reject the record, he need not enter his credentials.
+d.  For “Change Request” object records, users should not be able to make any changes to the ChangeRequest record after the approval phase. The user should only be able to change the Status, Status Reason and Work Info
+ItemsToApprove: The page displays the list of all the pending approvals for the logged-in user as well as for the queue/group in which the logged-in user is a member.
+-->
+
+<apex:page controller="ItemsToApproveController" extensions="PaginationController">
+
+<!-- Styling for alternate rows in the pageBlock table-->
+<style>
+.odd{
+background-color: #F2F2F2;
+}
+.even{
+background-color: #FFFFFF;
+}
+</style>
+
+<apex:form id="formPendingApprovals">
+    <apex:pageBlock title="Items To Approve">
+        <apex:pageMessages id="pageError"></apex:pageMessages>
+
+        <apex:pageBlockSection columns="1"> 
+            <apex:selectList value="{!selectedPage}" size="1" id="selectPage" style="display:{!IF(ISNULL(pagePendingApprovals),'NONE','true')}">
+                <label for="selectPage" style="display:{!IF(ISNULL(pagePendingApprovals),'NONE','true')}">Select Page:</label> 
+                <apex:selectOptions value="{!pageOptions}" rendered="true"></apex:selectOptions>
+                <apex:actionSupport event="onchange" action="{!nextPage}" reRender="itemsToApprove"/>
+            </apex:selectList>
+            
+            <apex:pageBlockTable id="itemsToApprove" title="ItemsToApprove" value="{!pagePendingApprovals}" var="item" rowClasses="even,odd">
+                <apex:column headerValue="Date Submitted" value="{!item.piwi.Createddate}"/> 
+                <apex:column headerValue="Related To" value="{!item.piwi.ProcessInstance.TargetObjectId}"/>
+                <apex:column headerValue="Type" value="{!item.TargetObjectLabel}"/>
+                <apex:column headerValue="Approver" value="{!item.piwi.ActorId}"/>
+                <apex:column headerValue="Action">
+                    <apex:outputLink value="/apex/RecordInformation" id="RecordLink"  >
+                        Approve / Reject<apex:param name="objectId" value="{!item.piwi.ProcessInstance.TargetObjectId}"/>
+                        <apex:param name="workitemId" value="{!item.piwi.Id}"/>
+                    </apex:outputLink>
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlockSection>  
+        <apex:pageBlockSection >
+            <apex:outputText style="display:{!IF(ISNULL(pagePendingApprovals),'true','NONE')}" value="No pending Approvals"></apex:outputText>        
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vest_Garments_Select_Five_5__c</fullName>
+    <externalId>false</externalId>
+    <label>Vest Garments</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Chest Vest Extra Large (61-67 inches)</fullName>
+                <default>false</default>
+                <label>Chest Vest Extra Large (61-67 inches)</label>
+            </value>
+            <value>
+                <fullName>Chest Vest Large (46-61 inches)</fullName>
+                <default>false</default>
+                <label>Chest Vest Large (46-61 inches)</label>
+            </value>
+            <value>
+                <fullName>Chest Vest Medium (35-46 inches)</fullName>
+                <default>false</default>
+                <label>Chest Vest Medium (35-46 inches)</label>
+            </value>
+            <value>
+                <fullName>Chest Vest Small (28-35 inches)</fullName>
+                <default>false</default>
+                <label>Chest Vest Small (28-35 inches)</label>
+            </value>
+            <value>
+                <fullName>Full Vest Child Small (19-23 inches)</fullName>
+                <default>false</default>
+                <label>Full Vest Child Small (19-23 inches)</label>
+            </value>
+            <value>
+                <fullName>Full Vest Child Small Short (19-23&quot;)</fullName>
+                <default>false</default>
+                <label>Full Vest Child Small Short (19-23&quot;)</label>
+            </value>
+            <value>
+                <fullName>Full Vest Child Medium (23-27 inches)</fullName>
+                <default>false</default>
+                <label>Full Vest Child Medium (23-27 inches)</label>
+            </value>
+            <value>
+                <fullName>Full Vest Child Large (27-31 inches)</fullName>
+                <default>false</default>
+                <label>Full Vest Child Large (27-31 inches)</label>
+            </value>
+            <value>
+                <fullName>Full Vest Adult X Small Slim (27-31&quot;)</fullName>
+                <default>false</default>
+                <label>Full Vest Adult X Small Slim (27-31&quot;)</label>
+            </value>
+            <value>
+                <fullName>Full Vest Adult Small (31-36 inches)</fullName>
+                <default>false</default>
+                <label>Full Vest Adult Small (31-36 inches)</label>
+            </value>
+            <value>
+                <fullName>Full Vest Adult Medium (36-45 inches)</fullName>
+                <default>false</default>
+                <label>Full Vest Adult Medium (36-45 inches)</label>
+            </value>
+            <value>
+                <fullName>Full Vest Adult Large (45-52 inches)</fullName>
+                <default>false</default>
+                <label>Full Vest Adult Large (45-52 inches)</label>
+            </value>
+            <value>
+                <fullName>Wrap Vest Extra Small (19-23 inches)</fullName>
+                <default>false</default>
+                <label>Wrap Vest Extra Small (19-23 inches)</label>
+            </value>
+            <value>
+                <fullName>Wrap Vest Small (23-33 inches)</fullName>
+                <default>false</default>
+                <label>Wrap Vest Small (23-33 inches)</label>
+            </value>
+            <value>
+                <fullName>Wrap Vest Medium (33-43 inches)</fullName>
+                <default>false</default>
+                <label>Wrap Vest Medium (33-43 inches)</label>
+            </value>
+            <value>
+                <fullName>Wrap Vest Large (43-53 inches)</fullName>
+                <default>false</default>
+                <label>Wrap Vest Large (43-53 inches)</label>
+            </value>
+            <value>
+                <fullName>Wrap Vest Extra Large (53-67 inches)</fullName>
+                <default>false</default>
+                <label>Wrap Vest Extra Large (53-67 inches)</label>
+            </value>
+            <value>
+                <fullName>Wrap Vest XX Large (67-75 inches)</fullName>
+                <default>false</default>
+                <label>Wrap Vest XX Large (67-75 inches)</label>
+            </value>
+            <value>
+                <fullName>Calming Black Child Small (19-23&quot;)</fullName>
+                <default>false</default>
+                <label>Calming Black Child Small (19-23&quot;)</label>
+            </value>
+            <value>
+                <fullName>Coastal Blue Child Small (19-23&quot;)</fullName>
+                <default>false</default>
+                <label>Coastal Blue Child Small (19-23&quot;)</label>
+            </value>
+            <value>
+                <fullName>Cashmere Rose Child Small (19-23&quot;)</fullName>
+                <default>false</default>
+                <label>Cashmere Rose Child Small (19-23&quot;)</label>
+            </value>
+            <value>
+                <fullName>Color Me Purple Child Small (19-23&quot;)</fullName>
+                <default>false</default>
+                <label>Color Me Purple Child Small (19-23&quot;)</label>
+            </value>
+            <value>
+                <fullName>Cool Camo Child Small (19-23&quot;)</fullName>
+                <default>false</default>
+                <label>Cool Camo Child Small (19-23&quot;)</label>
+            </value>
+            <value>
+                <fullName>Calming Black Child Med (23-27&quot;)</fullName>
+                <default>false</default>
+                <label>Calming Black Child Med (23-27&quot;)</label>
+            </value>
+            <value>
+                <fullName>Coastal Blue Child Med (23-27&quot;)</fullName>
+                <default>false</default>
+                <label>Coastal Blue Child Med (23-27&quot;)</label>
+            </value>
+            <value>
+                <fullName>Cashmere Rose Child Med (23-27&quot;)</fullName>
+                <default>false</default>
+                <label>Cashmere Rose Child Med (23-27&quot;)</label>
+            </value>
+            <value>
+                <fullName>Color Me Purple Child Med (23-27&quot;)</fullName>
+                <default>false</default>
+                <label>Color Me Purple Child Med (23-27&quot;)</label>
+            </value>
+            <value>
+                <fullName>Cool Camo Child Med (23-27&quot;)</fullName>
+                <default>false</default>
+                <label>Cool Camo Child Med (23-27&quot;)</label>
+            </value>
+            <value>
+                <fullName>Calming Black Child Large (27-31&quot;)</fullName>
+                <default>false</default>
+                <label>Calming Black Child Large (27-31&quot;)</label>
+            </value>
+            <value>
+                <fullName>Coastal Blue Child Large (27-31”)</fullName>
+                <default>false</default>
+                <label>Coastal Blue Child Large (27-31”)</label>
+            </value>
+            <value>
+                <fullName>Cashmere Rose Child Large (27-31”)</fullName>
+                <default>false</default>
+                <label>Cashmere Rose Child Large (27-31”)</label>
+            </value>
+            <value>
+                <fullName>Color Me Purple Child Large (27-31”)</fullName>
+                <default>false</default>
+                <label>Color Me Purple Child Large (27-31”)</label>
+            </value>
+            <value>
+                <fullName>Cool Camo Child Large (27-31”)</fullName>
+                <default>false</default>
+                <label>Cool Camo Child Large (27-31”)</label>
+            </value>
+            <value>
+                <fullName>Calming Black Adult XS Slim (27-31”)</fullName>
+                <default>false</default>
+                <label>Calming Black Adult XS Slim (27-31”)</label>
+            </value>
+            <value>
+                <fullName>Coastal Blue Adult XS Sliml (27-31”)</fullName>
+                <default>false</default>
+                <label>Coastal Blue Adult XS Sliml (27-31”)</label>
+            </value>
+            <value>
+                <fullName>Cashmere Rose Adult XS Slim (27-31”)</fullName>
+                <default>false</default>
+                <label>Cashmere Rose Adult XS Slim (27-31”)</label>
+            </value>
+            <value>
+                <fullName>Color Me Purple Adult XS Slim (27-31”)</fullName>
+                <default>false</default>
+                <label>Color Me Purple Adult XS Slim (27-31”)</label>
+            </value>
+            <value>
+                <fullName>Cool Camo Adult XS Slim (27-31”)</fullName>
+                <default>false</default>
+                <label>Cool Camo Adult XS Slim (27-31”)</label>
+            </value>
+            <value>
+                <fullName>Calming Black Adult Small (31-36”)</fullName>
+                <default>false</default>
+                <label>Calming Black Adult Small (31-36”)</label>
+            </value>
+            <value>
+                <fullName>Coastal Blue Adult Small (31-36”)</fullName>
+                <default>false</default>
+                <label>Coastal Blue Adult Small (31-36”)</label>
+            </value>
+            <value>
+                <fullName>Cashmere Rose Adult Small (31-36”)</fullName>
+                <default>false</default>
+                <label>Cashmere Rose Adult Small (31-36”)</label>
+            </value>
+            <value>
+                <fullName>Color Me Purple Adult Small (31-36”)</fullName>
+                <default>false</default>
+                <label>Color Me Purple Adult Small (31-36”)</label>
+            </value>
+            <value>
+                <fullName>Cool Camo Adult Small (31-36”)</fullName>
+                <default>false</default>
+                <label>Cool Camo Adult Small (31-36”)</label>
+            </value>
+            <value>
+                <fullName>Calming Black Adult Medium (36-45”)</fullName>
+                <default>false</default>
+                <label>Calming Black Adult Medium (36-45”)</label>
+            </value>
+            <value>
+                <fullName>Coastal Blue Adult Medium (36-45”)</fullName>
+                <default>false</default>
+                <label>Coastal Blue Adult Medium (36-45”)</label>
+            </value>
+            <value>
+                <fullName>Cashmere Rose Adult Medium (36-45”)</fullName>
+                <default>false</default>
+                <label>Cashmere Rose Adult Medium (36-45”)</label>
+            </value>
+            <value>
+                <fullName>Color Me Purple Adult Medium (36-45”)</fullName>
+                <default>false</default>
+                <label>Color Me Purple Adult Medium (36-45”)</label>
+            </value>
+            <value>
+                <fullName>Cool Camo Adult Medium (36-45”)</fullName>
+                <default>false</default>
+                <label>Cool Camo Adult Medium (36-45”)</label>
+            </value>
+            <value>
+                <fullName>Calming Black Adult Large (45-52”)</fullName>
+                <default>false</default>
+                <label>Calming Black Adult Large (45-52”)</label>
+            </value>
+            <value>
+                <fullName>Coastal Blue Adult Large (45-52”)</fullName>
+                <default>false</default>
+                <label>Coastal Blue Adult Large (45-52”)</label>
+            </value>
+            <value>
+                <fullName>Cashmere Rose Adult Large (45-52”)</fullName>
+                <default>false</default>
+                <label>Cashmere Rose Adult Large (45-52”)</label>
+            </value>
+            <value>
+                <fullName>Color Me Purple Adult Large (45-52”)</fullName>
+                <default>false</default>
+                <label>Color Me Purple Adult Large (45-52”)</label>
+            </value>
+            <value>
+                <fullName>Cool Camo Adult Large (45-52”)</fullName>
+                <default>false</default>
+                <label>Cool Camo Adult Large (45-52”)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

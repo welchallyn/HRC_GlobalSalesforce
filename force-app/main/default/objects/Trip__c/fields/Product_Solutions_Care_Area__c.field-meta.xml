@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Solutions_Care_Area__c</fullName>
+    <description>CEC Product Solutions by Care Area.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>CEC Product Solutions by Care Area.</inlineHelpText>
+    <label>Product Solutions Care Area</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Trip_Location__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Allen</fullName>
+                <default>false</default>
+                <label>Allen</label>
+            </value>
+            <value>
+                <fullName>Aspen Surgical</fullName>
+                <default>false</default>
+                <label>Aspen Surgical</label>
+            </value>
+            <value>
+                <fullName>Bariatric Products</fullName>
+                <default>false</default>
+                <label>Bariatric Products</label>
+            </value>
+            <value>
+                <fullName>Care Communications</fullName>
+                <default>false</default>
+                <label>Care Communications</label>
+            </value>
+            <value>
+                <fullName>Connectivity Workflow Solutions</fullName>
+                <default>false</default>
+                <label>Connectivity Workflow Solutions</label>
+            </value>
+            <value>
+                <fullName>Emergency Products</fullName>
+                <default>false</default>
+                <label>Emergency Products</label>
+            </value>
+            <value>
+                <fullName>Emergency Services</fullName>
+                <default>false</default>
+                <label>Emergency Services</label>
+            </value>
+            <value>
+                <fullName>Extended/Home Care</fullName>
+                <default>false</default>
+                <label>Extended/Home Care</label>
+            </value>
+            <value>
+                <fullName>Furniture</fullName>
+                <default>false</default>
+                <label>Furniture</label>
+            </value>
+            <value>
+                <fullName>ICU</fullName>
+                <default>false</default>
+                <label>ICU</label>
+            </value>
+            <value>
+                <fullName>Maternal Products</fullName>
+                <default>false</default>
+                <label>Maternal Products</label>
+            </value>
+            <value>
+                <fullName>Med-Surg</fullName>
+                <default>false</default>
+                <label>Med-Surg</label>
+            </value>
+            <value>
+                <fullName>Modular Wall</fullName>
+                <default>false</default>
+                <label>Modular Wall</label>
+            </value>
+            <value>
+                <fullName>Mortara</fullName>
+                <default>false</default>
+                <label>Mortara</label>
+            </value>
+            <value>
+                <fullName>Perinatal Products</fullName>
+                <default>false</default>
+                <label>Perinatal Products</label>
+            </value>
+            <value>
+                <fullName>R&amp;D</fullName>
+                <default>false</default>
+                <label>R&amp;D</label>
+            </value>
+            <value>
+                <fullName>Radiology C-Arm</fullName>
+                <default>false</default>
+                <label>Radiology C-Arm</label>
+            </value>
+            <value>
+                <fullName>Respiratory</fullName>
+                <default>false</default>
+                <label>Respiratory</label>
+            </value>
+            <value>
+                <fullName>Safe Patient Handling</fullName>
+                <default>false</default>
+                <label>Safe Patient Handling</label>
+            </value>
+            <value>
+                <fullName>Safe Patient Handling Training</fullName>
+                <default>false</default>
+                <label>Safe Patient Handling Training</label>
+            </value>
+            <value>
+                <fullName>Sales Training</fullName>
+                <default>false</default>
+                <label>Sales Training</label>
+            </value>
+            <value>
+                <fullName>Science of Frames Tour</fullName>
+                <default>false</default>
+                <label>Science of Frames Tour</label>
+            </value>
+            <value>
+                <fullName>Science of Surface Lab Tour</fullName>
+                <default>false</default>
+                <label>Science of Surface Lab Tour</label>
+            </value>
+            <value>
+                <fullName>Selke Plant Tour</fullName>
+                <default>false</default>
+                <label>Selke Plant Tour</label>
+            </value>
+            <value>
+                <fullName>Technical Breakdown</fullName>
+                <default>false</default>
+                <label>Technical Breakdown</label>
+            </value>
+            <value>
+                <fullName>Trumpf</fullName>
+                <default>false</default>
+                <label>Trumpf</label>
+            </value>
+            <value>
+                <fullName>Video</fullName>
+                <default>false</default>
+                <label>Video</label>
+            </value>
+            <value>
+                <fullName>Welch Allyn</fullName>
+                <default>false</default>
+                <label>Welch Allyn</label>
+            </value>
+            <value>
+                <fullName>Wound Therapy</fullName>
+                <default>false</default>
+                <label>Wound Therapy</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Cary</controllingFieldValue>
+            <controllingFieldValue>Charleston</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <controllingFieldValue>Pluvigner</controllingFieldValue>
+            <valueName>Bariatric Products</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Cary</controllingFieldValue>
+            <controllingFieldValue>CWS Site</controllingFieldValue>
+            <controllingFieldValue>Charleston</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <controllingFieldValue>Pluvigner</controllingFieldValue>
+            <controllingFieldValue>Sydney</controllingFieldValue>
+            <valueName>Care Communications</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Cary</controllingFieldValue>
+            <controllingFieldValue>Charleston</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <valueName>Emergency Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Cary</controllingFieldValue>
+            <controllingFieldValue>Charleston</controllingFieldValue>
+            <valueName>Extended/Home Care</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Cary</controllingFieldValue>
+            <controllingFieldValue>Charleston</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <controllingFieldValue>Pluvigner</controllingFieldValue>
+            <valueName>Furniture</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Cary</controllingFieldValue>
+            <controllingFieldValue>Charleston</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <controllingFieldValue>Pluvigner</controllingFieldValue>
+            <controllingFieldValue>Sydney</controllingFieldValue>
+            <valueName>ICU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Cary</controllingFieldValue>
+            <controllingFieldValue>Charleston</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <controllingFieldValue>Pluvigner</controllingFieldValue>
+            <controllingFieldValue>Sydney</controllingFieldValue>
+            <valueName>Med-Surg</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Cary</controllingFieldValue>
+            <controllingFieldValue>Charleston</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <controllingFieldValue>Pluvigner</controllingFieldValue>
+            <controllingFieldValue>Sydney</controllingFieldValue>
+            <valueName>Mortara</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Cary</controllingFieldValue>
+            <controllingFieldValue>Charleston</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <valueName>Perinatal Products</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Cary</controllingFieldValue>
+            <controllingFieldValue>Charleston</controllingFieldValue>
+            <controllingFieldValue>Pluvigner</controllingFieldValue>
+            <valueName>R&amp;D</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Cary</controllingFieldValue>
+            <controllingFieldValue>Charleston</controllingFieldValue>
+            <valueName>Respiratory</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Cary</controllingFieldValue>
+            <controllingFieldValue>Charleston</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <controllingFieldValue>Pluvigner</controllingFieldValue>
+            <valueName>Safe Patient Handling</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Cary</controllingFieldValue>
+            <controllingFieldValue>Charleston</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <controllingFieldValue>Pluvigner</controllingFieldValue>
+            <valueName>Safe Patient Handling Training</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Cary</controllingFieldValue>
+            <controllingFieldValue>Charleston</controllingFieldValue>
+            <controllingFieldValue>Pluvigner</controllingFieldValue>
+            <valueName>Sales Training</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <valueName>Science of Frames Tour</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <valueName>Science of Surface Lab Tour</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <valueName>Selke Plant Tour</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <valueName>Technical Breakdown</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Cary</controllingFieldValue>
+            <controllingFieldValue>Charleston</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <controllingFieldValue>Pluvigner</controllingFieldValue>
+            <controllingFieldValue>Sydney</controllingFieldValue>
+            <valueName>Trumpf</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Cary</controllingFieldValue>
+            <controllingFieldValue>Charleston</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <controllingFieldValue>Pluvigner</controllingFieldValue>
+            <controllingFieldValue>Sydney</controllingFieldValue>
+            <valueName>Welch Allyn</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Cary</controllingFieldValue>
+            <controllingFieldValue>Charleston</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <controllingFieldValue>Pluvigner</controllingFieldValue>
+            <valueName>Wound Therapy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pluvigner</controllingFieldValue>
+            <controllingFieldValue>Sydney</controllingFieldValue>
+            <valueName>Allen</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pluvigner</controllingFieldValue>
+            <valueName>Aspen Surgical</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pluvigner</controllingFieldValue>
+            <controllingFieldValue>Sydney</controllingFieldValue>
+            <valueName>Connectivity Workflow Solutions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pluvigner</controllingFieldValue>
+            <valueName>Emergency Products</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pluvigner</controllingFieldValue>
+            <valueName>Maternal Products</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pluvigner</controllingFieldValue>
+            <valueName>Modular Wall</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pluvigner</controllingFieldValue>
+            <valueName>Radiology C-Arm</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pluvigner</controllingFieldValue>
+            <valueName>Video</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>6</visibleLines>
+</CustomField>

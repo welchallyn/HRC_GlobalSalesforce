@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Investment_Detail_Criteria__c</fullName>
+    <defaultValue>&quot;Property is capitalized as a fixed asset when the economic life is more than one year, the property is acquired for continuous business operations, and the gross cost is $5,000 or more.&quot; &amp; BR() &amp;
+&quot;Group asset purchases, each having an original cost less than the minimum dollar capitalization limit, will be capitalized when:&quot; &amp; BR() &amp;
+ &quot;- Similar items are purchased as a group, and the total purchase is greater than $10,000&quot; &amp; BR() &amp;
+&quot; - Each separate unit has an original cost of $2,000 or more&quot; &amp; BR() &amp;
+ &quot;- The economic life is greater than one year and the property is acquired for continuous business use&quot; &amp; BR() &amp;
+&quot;All 3 above criteria must be met.&quot; &amp; BR()</defaultValue>
+    <description>Property is capitalized as a fixed asset when the economic life is more than one year, the property is acquired for continuous business operations, and the gross cost is $5,000 or more. 
+Group asset purchases, each having an original cost less than the minimum dollar capitalization 
+        limit, will be capitalized when:
+ - Similar items are purchased as a group, and the total purchase is greater than $10,000
+ - Each separate unit has an original cost of $2,000 or more
+ - The economic life is greater than one year and the property is acquired for continuous business use
+All 3 above criteria must be met.</description>
+    <externalId>false</externalId>
+    <label>Investment Detail Criteria</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>4</visibleLines>
+</CustomField>

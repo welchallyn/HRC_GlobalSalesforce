@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRC_INFR_CHGMGR_Approval_Mapping</fullName>
+    <filterScope>Queue</filterScope>
+    <label>XXDONOTUSEHRC-INFR-CHGMGR</label>
+    <queue>xxxHRC_INFR_CHGMGR</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

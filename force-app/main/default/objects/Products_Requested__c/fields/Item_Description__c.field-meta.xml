@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Item_Description__c</fullName>
+    <externalId>false</externalId>
+    <label>Item/Description</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Product_Type__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>SABINA II EE 2020003</fullName>
+                <default>false</default>
+                <label>SABINA II EE 2020003</label>
+            </value>
+            <value>
+                <fullName>GOLVO 9000 2000045</fullName>
+                <default>false</default>
+                <label>GOLVO 9000 2000045</label>
+            </value>
+            <value>
+                <fullName>GOLVO 9000 LOW BASE 2000049</fullName>
+                <default>false</default>
+                <label>GOLVO 9000 LOW BASE 2000049</label>
+            </value>
+            <value>
+                <fullName>VIKING M 2040045</fullName>
+                <default>false</default>
+                <label>VIKING M 2040045</label>
+            </value>
+            <value>
+                <fullName>VIKING L 2040044</fullName>
+                <default>false</default>
+                <label>VIKING L 2040044</label>
+            </value>
+            <value>
+                <fullName>P870 Resident L:91 W:42 H:30 275 LBS</fullName>
+                <default>false</default>
+                <label>P870 Resident L:91 W:42 H:30 275 LBS</label>
+            </value>
+            <value>
+                <fullName>P1170 Careassist ES, L:90 W:40 H:16 420 LBS</fullName>
+                <default>false</default>
+                <label>P1170 Careassist ES, L:90 W:40 H:16 420 LBS</label>
+            </value>
+            <value>
+                <fullName>P1190A Advanta2, L:90 W:36 H:33 500 LBS</fullName>
+                <default>false</default>
+                <label>P1190A Advanta2, L:90 W:36 H:33 500 LBS</label>
+            </value>
+            <value>
+                <fullName>P1840 TotalCare Bariatric PT, L:93 W:42 H:45 750 LBS</fullName>
+                <default>false</default>
+                <label>P1840 TotalCare Bariatric PT, L:93 W:42 H:45 750 LBS</label>
+            </value>
+            <value>
+                <fullName>P1900 Sport Connect, L:75.5 W:36 H:18 552 LBS</fullName>
+                <default>false</default>
+                <label>P1900 Sport Connect, L:75.5 W:36 H:18 552 LBS</label>
+            </value>
+            <value>
+                <fullName>P3200 VersaCare, L:94.5 W:37 H:18 500 LBS</fullName>
+                <default>false</default>
+                <label>P3200 VersaCare, L:94.5 W:37 H:18 500 LBS</label>
+            </value>
+            <value>
+                <fullName>HR80, L:91 W:40 H:6 300 LBS</fullName>
+                <default>false</default>
+                <label>HR80, L:91 W:40 H:6 300 LBS</label>
+            </value>
+            <value>
+                <fullName>HR100, L:93.25 W:40 H:26.5 300 LBS</fullName>
+                <default>false</default>
+                <label>HR100, L:93.25 W:40 H:26.5 300 LBS</label>
+            </value>
+            <value>
+                <fullName>HR1000, L:80 W:36 H:32.5 420 LBS</fullName>
+                <default>false</default>
+                <label>HR1000, L:80 W:36 H:32.5 420 LBS</label>
+            </value>
+            <value>
+                <fullName>P3700 Affinity, L:92 W:39 H:39 500 LBS</fullName>
+                <default>false</default>
+                <label>P3700 Affinity, L:92 W:39 H:39 500 LBS</label>
+            </value>
+            <value>
+                <fullName>P8000 Procedural W/Intel, L:86 W:30 H:23 462 LBS</fullName>
+                <default>false</default>
+                <label>P8000 Procedural W/Intel, L:86 W:30 H:23 462 LBS</label>
+            </value>
+            <value>
+                <fullName>P8000 Procedure (30), L:83 W:35.5 H:34.25 265 LBS</fullName>
+                <default>false</default>
+                <label>P8000 Procedure (30), L:83 W:35.5 H:34.25 265 LBS</label>
+            </value>
+            <value>
+                <fullName>P8000 Procedure (26), L:83 W:26.5 H:34.25 265 LBS</fullName>
+                <default>false</default>
+                <label>P8000 Procedure (26), L:83 W:26.5 H:34.25 265 LBS</label>
+            </value>
+            <value>
+                <fullName>P8005 Transport, L:83 W:32 H:37.5 265 LBS</fullName>
+                <default>false</default>
+                <label>P8005 Transport, L:83 W:32 H:37.5 265 LBS</label>
+            </value>
+            <value>
+                <fullName>P8010 Surgical, L:92 W:29.25 H:33.25 285 LBS</fullName>
+                <default>false</default>
+                <label>P8010 Surgical, L:92 W:29.25 H:33.25 285 LBS</label>
+            </value>
+            <value>
+                <fullName>P8020 Electric, L:83 W:30.5 H:34.25 355 LBS</fullName>
+                <default>false</default>
+                <label>P8020 Electric, L:83 W:30.5 H:34.25 355 LBS</label>
+            </value>
+            <value>
+                <fullName>P8040 Trauma, L:83 W:29.25 H:37.5 290 LBS</fullName>
+                <default>false</default>
+                <label>P8040 Trauma, L:83 W:29.25 H:37.5 290 LBS</label>
+            </value>
+            <value>
+                <fullName>P8050 OB/GYN, L:83 W:33 H:37 325 LBS</fullName>
+                <default>false</default>
+                <label>P8050 OB/GYN, L:83 W:33 H:37 325 LBS</label>
+            </value>
+            <value>
+                <fullName>OBT</fullName>
+                <default>false</default>
+                <label>OBT</label>
+            </value>
+            <value>
+                <fullName>BEDSIDE CABINET</fullName>
+                <default>false</default>
+                <label>BEDSIDE CABINET</label>
+            </value>
+            <value>
+                <fullName>VISITOR CHAIR</fullName>
+                <default>false</default>
+                <label>VISITOR CHAIR</label>
+            </value>
+            <value>
+                <fullName>HIGHBACK CHAIR</fullName>
+                <default>false</default>
+                <label>HIGHBACK CHAIR</label>
+            </value>
+            <value>
+                <fullName>RECLINER</fullName>
+                <default>false</default>
+                <label>RECLINER</label>
+            </value>
+            <value>
+                <fullName>4 POSITION RECLINER</fullName>
+                <default>false</default>
+                <label>4 POSITION RECLINER</label>
+            </value>
+            <value>
+                <fullName>PREMIUM LG</fullName>
+                <default>false</default>
+                <label>PREMIUM LG</label>
+            </value>
+            <value>
+                <fullName>PREMIUM HIGHBACK LG CAP 24</fullName>
+                <default>false</default>
+                <label>PREMIUM HIGHBACK LG CAP 24</label>
+            </value>
+            <value>
+                <fullName>SLP CHAIR</fullName>
+                <default>false</default>
+                <label>SLP CHAIR</label>
+            </value>
+            <value>
+                <fullName>DAYBED SLEEPR</fullName>
+                <default>false</default>
+                <label>DAYBED SLEEPR</label>
+            </value>
+            <value>
+                <fullName>TRIM LINE</fullName>
+                <default>false</default>
+                <label>TRIM LINE</label>
+            </value>
+            <value>
+                <fullName>CLUB SLEEPER</fullName>
+                <default>false</default>
+                <label>CLUB SLEEPER</label>
+            </value>
+            <value>
+                <fullName>TEMPUR PEDIC</fullName>
+                <default>false</default>
+                <label>TEMPUR PEDIC</label>
+            </value>
+            <value>
+                <fullName>ACCUMAX</fullName>
+                <default>false</default>
+                <label>ACCUMAX</label>
+            </value>
+            <value>
+                <fullName>NP100</fullName>
+                <default>false</default>
+                <label>NP100</label>
+            </value>
+            <value>
+                <fullName>NP200</fullName>
+                <default>false</default>
+                <label>NP200</label>
+            </value>
+            <value>
+                <fullName>P500 W/CONTROL BOX</fullName>
+                <default>false</default>
+                <label>P500 W/CONTROL BOX</label>
+            </value>
+            <value>
+                <fullName>ACCUMAX CONVTBLE</fullName>
+                <default>false</default>
+                <label>ACCUMAX CONVTBLE</label>
+            </value>
+            <value>
+                <fullName>ACCUMAX COMPLETE</fullName>
+                <default>false</default>
+                <label>ACCUMAX COMPLETE</label>
+            </value>
+            <value>
+                <fullName>CU2 PUMP W/HOSE</fullName>
+                <default>false</default>
+                <label>CU2 PUMP W/HOSE</label>
+            </value>
+            <value>
+                <fullName>CU4 PUMP</fullName>
+                <default>false</default>
+                <label>CU4 PUMP</label>
+            </value>
+            <value>
+                <fullName>CU4 HOSE</fullName>
+                <default>false</default>
+                <label>CU4 HOSE</label>
+            </value>
+            <value>
+                <fullName>3082 STANDARD</fullName>
+                <default>false</default>
+                <label>3082 STANDARD</label>
+            </value>
+            <value>
+                <fullName>3082 OVERSIZE</fullName>
+                <default>false</default>
+                <label>3082 OVERSIZE</label>
+            </value>
+            <value>
+                <fullName>3082 VIA-A-VIS STANDARD</fullName>
+                <default>false</default>
+                <label>3082 VIA-A-VIS STANDARD</label>
+            </value>
+            <value>
+                <fullName>3082 VIS-A-VIS OVERSIZE</fullName>
+                <default>false</default>
+                <label>3082 VIS-A-VIS OVERSIZE</label>
+            </value>
+            <value>
+                <fullName>P7500 Progressa, L:88 W:40.5 H:16.5 800lbs</fullName>
+                <default>false</default>
+                <label>P7500 Progressa, L:88 W:40.5 H:16.5 800lbs</label>
+            </value>
+            <value>
+                <fullName>P7800 Compella</fullName>
+                <default>false</default>
+                <label>P7800 Compella</label>
+            </value>
+            <value>
+                <fullName>P7900 Centrella 36&quot;; L:87 W:40 H:33 565 LBS</fullName>
+                <default>false</default>
+                <label>P7900 Centrella 36&quot;; L:87 W:40 H:33 565 LBS</label>
+            </value>
+            <value>
+                <fullName>P7900 Centrella 40&quot;; L:87 W:43 H:33 565 LBS</fullName>
+                <default>false</default>
+                <label>P7900 Centrella 40&quot;; L:87 W:43 H:33 565 LBS</label>
+            </value>
+            <value>
+                <fullName>VIKING XL 2040043</fullName>
+                <default>false</default>
+                <label>VIKING XL 2040043</label>
+            </value>
+            <value>
+                <fullName>ROLL-ON 6001001</fullName>
+                <default>false</default>
+                <label>ROLL-ON 6001001</label>
+            </value>
+            <value>
+                <fullName>M220 2050010</fullName>
+                <default>false</default>
+                <label>M220 2050010</label>
+            </value>
+            <value>
+                <fullName>M230 2050015</fullName>
+                <default>false</default>
+                <label>M230 2050015</label>
+            </value>
+            <value>
+                <fullName>FREESPAN STANDARD TRAVERSE (ONE LIFT MOTOR)</fullName>
+                <default>false</default>
+                <label>FREESPAN STANDARD TRAVERSE (ONE LIFT MOTOR)</label>
+            </value>
+            <value>
+                <fullName>FREESPAN BARIATRIC TRAVERSE (TWO LIFT MOTORS)</fullName>
+                <default>false</default>
+                <label>FREESPAN BARIATRIC TRAVERSE (TWO LIFT MOTORS)</label>
+            </value>
+            <value>
+                <fullName>FREESPAN STANDARD (ONE STRAIGHT RAIL)</fullName>
+                <default>false</default>
+                <label>FREESPAN STANDARD (ONE STRAIGHT RAIL)</label>
+            </value>
+            <value>
+                <fullName>FREESPAN BARIATRIC (TWO STRAIGHT RAILS)</fullName>
+                <default>false</default>
+                <label>FREESPAN BARIATRIC (TWO STRAIGHT RAILS)</label>
+            </value>
+            <value>
+                <fullName>OVERHEAD</fullName>
+                <default>false</default>
+                <label>OVERHEAD</label>
+            </value>
+            <value>
+                <fullName>CEILING LIFT / PENDANT</fullName>
+                <default>false</default>
+                <label>CEILING LIFT / PENDANT</label>
+            </value>
+            <value>
+                <fullName>CEILING LIFT / SLIMLINE</fullName>
+                <default>false</default>
+                <label>CEILING LIFT / SLIMLINE</label>
+            </value>
+            <value>
+                <fullName>HRRR- with Hill-Rom EVAL bed</fullName>
+                <default>false</default>
+                <label>HRRR- with Hill-Rom EVAL bed</label>
+            </value>
+            <value>
+                <fullName>HRRR- Activation Only with Customer Owned Bed</fullName>
+                <default>false</default>
+                <label>HRRR- Activation Only with Customer Owned Bed</label>
+            </value>
+            <value>
+                <fullName>WatchCare- with Hill-Rom EVAL bed</fullName>
+                <default>false</default>
+                <label>WatchCare- with Hill-Rom EVAL bed</label>
+            </value>
+            <value>
+                <fullName>WatchCare- Activation Only with Customer Owned Bed</fullName>
+                <default>false</default>
+                <label>WatchCare- Activation Only with Customer Owned Bed</label>
+            </value>
+            <value>
+                <fullName>Pro+ VC</fullName>
+                <default>false</default>
+                <label>Pro+ VC</label>
+            </value>
+            <value>
+                <fullName>Pro+ VC w/ XRAY</fullName>
+                <default>false</default>
+                <label>Pro+ VC w/ XRAY</label>
+            </value>
+            <value>
+                <fullName>Pro+ Flat Deck 36&quot;</fullName>
+                <default>false</default>
+                <label>Pro+ Flat Deck 36&quot;</label>
+            </value>
+            <value>
+                <fullName>Pro+ Flat Deck 40&quot;</fullName>
+                <default>false</default>
+                <label>Pro+ Flat Deck 40&quot;</label>
+            </value>
+            <value>
+                <fullName>Pro+ Flat Deck 36&quot; w/ XRAY</fullName>
+                <default>false</default>
+                <label>Pro+ Flat Deck 36&quot; w/ XRAY</label>
+            </value>
+            <value>
+                <fullName>Pro+ Flat Deck 40&quot; w/ XRAY</fullName>
+                <default>false</default>
+                <label>Pro+ Flat Deck 40&quot; w/ XRAY</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Frames</controllingFieldValue>
+            <valueName>P870 Resident L:91 W:42 H:30 275 LBS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Frames</controllingFieldValue>
+            <valueName>P1170 Careassist ES, L:90 W:40 H:16 420 LBS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Frames</controllingFieldValue>
+            <valueName>P1190A Advanta2, L:90 W:36 H:33 500 LBS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Frames</controllingFieldValue>
+            <valueName>P1840 TotalCare Bariatric PT, L:93 W:42 H:45 750 LBS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Frames</controllingFieldValue>
+            <valueName>P1900 Sport Connect, L:75.5 W:36 H:18 552 LBS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Frames</controllingFieldValue>
+            <valueName>P3200 VersaCare, L:94.5 W:37 H:18 500 LBS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Frames</controllingFieldValue>
+            <valueName>HR80, L:91 W:40 H:6 300 LBS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Frames</controllingFieldValue>
+            <valueName>HR100, L:93.25 W:40 H:26.5 300 LBS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Frames</controllingFieldValue>
+            <valueName>HR1000, L:80 W:36 H:32.5 420 LBS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Frames</controllingFieldValue>
+            <valueName>P3700 Affinity, L:92 W:39 H:39 500 LBS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Frames</controllingFieldValue>
+            <valueName>P8000 Procedural W/Intel, L:86 W:30 H:23 462 LBS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Frames</controllingFieldValue>
+            <valueName>P8000 Procedure (30), L:83 W:35.5 H:34.25 265 LBS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Frames</controllingFieldValue>
+            <valueName>P8000 Procedure (26), L:83 W:26.5 H:34.25 265 LBS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Frames</controllingFieldValue>
+            <valueName>P8005 Transport, L:83 W:32 H:37.5 265 LBS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Frames</controllingFieldValue>
+            <valueName>P8010 Surgical, L:92 W:29.25 H:33.25 285 LBS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Frames</controllingFieldValue>
+            <valueName>P8020 Electric, L:83 W:30.5 H:34.25 355 LBS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Frames</controllingFieldValue>
+            <valueName>P8040 Trauma, L:83 W:29.25 H:37.5 290 LBS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Frames</controllingFieldValue>
+            <valueName>P8050 OB/GYN, L:83 W:33 H:37 325 LBS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Frames</controllingFieldValue>
+            <valueName>P7500 Progressa, L:88 W:40.5 H:16.5 800lbs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Frames</controllingFieldValue>
+            <valueName>P7800 Compella</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Frames</controllingFieldValue>
+            <valueName>P7900 Centrella 36&quot;; L:87 W:40 H:33 565 LBS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Frames</controllingFieldValue>
+            <valueName>P7900 Centrella 40&quot;; L:87 W:43 H:33 565 LBS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Furniture</controllingFieldValue>
+            <valueName>OBT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Furniture</controllingFieldValue>
+            <valueName>BEDSIDE CABINET</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Furniture</controllingFieldValue>
+            <valueName>VISITOR CHAIR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Furniture</controllingFieldValue>
+            <valueName>HIGHBACK CHAIR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Furniture</controllingFieldValue>
+            <valueName>RECLINER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Furniture</controllingFieldValue>
+            <valueName>4 POSITION RECLINER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Furniture</controllingFieldValue>
+            <valueName>PREMIUM LG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Furniture</controllingFieldValue>
+            <valueName>PREMIUM HIGHBACK LG CAP 24</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Furniture</controllingFieldValue>
+            <valueName>SLP CHAIR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Furniture</controllingFieldValue>
+            <valueName>DAYBED SLEEPR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Furniture</controllingFieldValue>
+            <valueName>TRIM LINE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Furniture</controllingFieldValue>
+            <valueName>CLUB SLEEPER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LIKO lifts</controllingFieldValue>
+            <valueName>SABINA II EE 2020003</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LIKO lifts</controllingFieldValue>
+            <valueName>GOLVO 9000 2000045</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LIKO lifts</controllingFieldValue>
+            <valueName>GOLVO 9000 LOW BASE 2000049</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LIKO lifts</controllingFieldValue>
+            <valueName>VIKING M 2040045</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LIKO lifts</controllingFieldValue>
+            <valueName>VIKING L 2040044</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LIKO lifts</controllingFieldValue>
+            <valueName>VIKING XL 2040043</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LIKO lifts</controllingFieldValue>
+            <valueName>ROLL-ON 6001001</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LIKO lifts</controllingFieldValue>
+            <valueName>M220 2050010</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LIKO lifts</controllingFieldValue>
+            <valueName>M230 2050015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LIKO lifts</controllingFieldValue>
+            <valueName>FREESPAN STANDARD TRAVERSE (ONE LIFT MOTOR)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LIKO lifts</controllingFieldValue>
+            <valueName>FREESPAN BARIATRIC TRAVERSE (TWO LIFT MOTORS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LIKO lifts</controllingFieldValue>
+            <valueName>FREESPAN STANDARD (ONE STRAIGHT RAIL)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LIKO lifts</controllingFieldValue>
+            <valueName>FREESPAN BARIATRIC (TWO STRAIGHT RAILS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LIKO lifts</controllingFieldValue>
+            <valueName>CEILING LIFT / PENDANT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LIKO lifts</controllingFieldValue>
+            <valueName>CEILING LIFT / SLIMLINE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Surfaces</controllingFieldValue>
+            <valueName>TEMPUR PEDIC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Surfaces</controllingFieldValue>
+            <valueName>ACCUMAX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Surfaces</controllingFieldValue>
+            <valueName>NP100</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Surfaces</controllingFieldValue>
+            <valueName>NP200</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Surfaces</controllingFieldValue>
+            <valueName>P500 W/CONTROL BOX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Surfaces</controllingFieldValue>
+            <valueName>ACCUMAX CONVTBLE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Surfaces</controllingFieldValue>
+            <valueName>ACCUMAX COMPLETE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Surfaces</controllingFieldValue>
+            <valueName>CU2 PUMP W/HOSE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Surfaces</controllingFieldValue>
+            <valueName>CU4 PUMP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Surfaces</controllingFieldValue>
+            <valueName>CU4 HOSE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Surfaces</controllingFieldValue>
+            <valueName>Pro+ VC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Surfaces</controllingFieldValue>
+            <valueName>Pro+ VC w/ XRAY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Surfaces</controllingFieldValue>
+            <valueName>Pro+ Flat Deck 36&quot;</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Surfaces</controllingFieldValue>
+            <valueName>Pro+ Flat Deck 40&quot;</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Surfaces</controllingFieldValue>
+            <valueName>Pro+ Flat Deck 36&quot; w/ XRAY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Surfaces</controllingFieldValue>
+            <valueName>Pro+ Flat Deck 40&quot; w/ XRAY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Patient Monitoring/CFCM</controllingFieldValue>
+            <valueName>HRRR- with Hill-Rom EVAL bed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Patient Monitoring/CFCM</controllingFieldValue>
+            <valueName>HRRR- Activation Only with Customer Owned Bed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Patient Monitoring/CFCM</controllingFieldValue>
+            <valueName>WatchCare- with Hill-Rom EVAL bed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Patient Monitoring/CFCM</controllingFieldValue>
+            <valueName>WatchCare- Activation Only with Customer Owned Bed</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

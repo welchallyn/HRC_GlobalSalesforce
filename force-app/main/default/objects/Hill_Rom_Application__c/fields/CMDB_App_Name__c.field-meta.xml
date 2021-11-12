@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CMDB_App_Name__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>CMDB App Name</label>
+    <referenceTo>BMCServiceDesk__BMC_BaseElement__c</referenceTo>
+    <relationshipLabel>Hill-Rom Applications</relationshipLabel>
+    <relationshipName>Hill_Rom_Applications</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

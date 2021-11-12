@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CRS_Eval_View_Arlene</fullName>
+    <booleanFilter>(1 AND 2 AND 7) OR (3 AND 5 AND 7) OR (4 AND 6 AND 7)</booleanFilter>
+    <columns>CRS__c</columns>
+    <columns>NAME</columns>
+    <columns>Request_Type__c</columns>
+    <columns>Customer__c</columns>
+    <columns>Requested_By__c</columns>
+    <columns>Date__c</columns>
+    <columns>Pickup_Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Approval_Status__c</field>
+        <operation>equals</operation>
+        <value>Approved</value>
+    </filters>
+    <filters>
+        <field>Serial_number_is_not_null__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Request_Type__c</field>
+        <operation>equals</operation>
+        <value>Pick-Up</value>
+    </filters>
+    <filters>
+        <field>Request_Type__c</field>
+        <operation>equals</operation>
+        <value>Delivery</value>
+    </filters>
+    <filters>
+        <field>Schedule_Pickup__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Schedule_Pickup__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Evaluation_Specialist_1__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>CRS Eval View Arlene</label>
+    <language>en_US</language>
+    <sharedTo>
+        <role>JDE_206037</role>
+        <role>JDE_207357</role>
+        <role>JDE_210565</role>
+        <role>JDE_50007676</role>
+    </sharedTo>
+</ListView>

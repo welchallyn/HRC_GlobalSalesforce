@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ContractTypeGPO_IDN_ProposGeneralInfo</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+    OR(
+       ISPICKVAL( X1_a_Contract_Type__c , &apos;GPO&apos;),
+       ISPICKVAL( X1_a_Contract_Type__c , &apos;IDN/Local Agreement&apos;),
+       ISPICKVAL( X1_a_Contract_Type__c , &apos;Proposal/Purchase Order &amp; T&amp;Cs&apos;),
+       ISPICKVAL( X1_a_Contract_Type__c , &apos;Subcontract&apos;),
+       ISPICKVAL( X1_a_Contract_Type__c , &apos;Distribution Agreement&apos;)
+       ) ,
+    OR(
+       ISNULL(TEXT(X2_Annual_Value_of_Contract__c)) ,
+       ISNULL(TEXT(X3_New_Contract_or_Amendment_to_Existing__c)) ,
+       ISNULL(TEXT(X4_Starting_Form_Template__c)) ,
+       ISNULL(TEXT(X5_a_IDN_Local_Agrmt_Only_GPO_Affiliatio__c)) ,
+       ISNULL(TEXT(X6_a_Existing_contracts_with_Hill_Rom__c)) ,
+       ISNULL(TEXT(X7_Multiple_Facilities_access_contract__c)) ,
+       ISNULL(TEXT(X7_Non_owned_affiliates_extend_access__c))
+       )
+)</errorConditionFormula>
+    <errorMessage>Any of the General Information items 2 - 8 cannot be blank for GPO, IDN/Local Agreement, Proposal/PO T&amp;C’s, Subcontract or Distribution Agreement</errorMessage>
+</ValidationRule>

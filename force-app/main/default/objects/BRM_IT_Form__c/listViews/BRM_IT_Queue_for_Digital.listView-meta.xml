@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BRM_IT_Queue_for_Digital</fullName>
+    <columns>BRM_IT_Form_Number__c</columns>
+    <columns>Change_Request__c</columns>
+    <columns>NAME</columns>
+    <columns>Approved_Requestor__c</columns>
+    <columns>HRC_IT_Lead__c</columns>
+    <columns>Priority__c</columns>
+    <columns>Gate__c</columns>
+    <columns>Status__c</columns>
+    <columns>Release__c</columns>
+    <columns>IT_Skillsets__c</columns>
+    <columns>Execution_Track__c</columns>
+    <columns>IT_Time_Estimate_Hours__c</columns>
+    <columns>Impacted_Geo__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>IT_Skillsets__c</field>
+        <operation>includes</operation>
+        <value>Digital</value>
+    </filters>
+    <filters>
+        <field>Gate__c</field>
+        <operation>equals</operation>
+        <value>Execute</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>PENDING,IN PROGRESS,ON HOLD</value>
+    </filters>
+    <filters>
+        <field>Application__c</field>
+        <operation>contains</operation>
+        <value>salesforce,sfdc</value>
+    </filters>
+    <label>BRM IT Queue for Digital (Execute)</label>
+    <sharedTo>
+        <roleAndSubordinates>JDE_2098281</roleAndSubordinates>
+    </sharedTo>
+</ListView>

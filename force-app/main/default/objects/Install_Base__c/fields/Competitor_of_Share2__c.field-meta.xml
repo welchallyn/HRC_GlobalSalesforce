@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Competitor_of_Share2__c</fullName>
+    <externalId>false</externalId>
+    <formula>Amsino_Medical__c + Brooklands_VeraTemp__c + CasMed__c + ClearSpec__c + Covidien__c + Exergen__c + GE__c + IEM__c + iRhythm__c + McKesson_Lumeon__c + Medline__c + MidMark__c + Mindray__c + Mortara__c + NDD__c + OBP_Medical__c + Other__c + Philips__c + Sklar__c + Suntech__c + Thermomedics__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Competitor % of Share</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

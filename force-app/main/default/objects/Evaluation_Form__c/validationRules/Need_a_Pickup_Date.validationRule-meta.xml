@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Need_a_Pickup_Date</fullName>
+    <active>true</active>
+    <description>If type is pickup, need a pickup date
+
+-- Modified as part of CR00029666</description>
+    <errorConditionFormula>AND(
+ ISPICKVAL( Request_Type__c , &apos;Pick-up&apos;) ,
+  ISNULL(  Requested_Pick_Up_Date_Time__c  )
+)</errorConditionFormula>
+    <errorDisplayField>Requested_Pick_Up_Date_Time__c</errorDisplayField>
+    <errorMessage>Please enter a date for the Evaluation Items to be picked up.</errorMessage>
+</ValidationRule>

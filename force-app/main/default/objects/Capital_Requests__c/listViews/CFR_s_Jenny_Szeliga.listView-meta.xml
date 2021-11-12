@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CFR_s_Jenny_Szeliga</fullName>
+    <booleanFilter>1 AND 2</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Project_Name__c</columns>
+    <columns>Status__c</columns>
+    <columns>current_approver_of_CFR__c</columns>
+    <columns>Total_CFR__c</columns>
+    <columns>Divisional_ELT__c</columns>
+    <columns>Op_Comp_CFO__c</columns>
+    <columns>Project_Manager__c</columns>
+    <columns>Financial_Analyst__c</columns>
+    <columns>Division__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>RECORDTYPE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>current_approver_of_CFR__c</field>
+        <operation>equals</operation>
+        <value>Timothy Lawrence</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Routed for Approval</value>
+    </filters>
+    <label>CFR&apos;s Jenny Szeliga</label>
+    <language>en_US</language>
+    <sharedTo>
+        <role>JDE_50009179</role>
+    </sharedTo>
+</ListView>

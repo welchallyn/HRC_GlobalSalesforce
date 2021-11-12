@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SFDC_REQUESTS_TYPE_DATA</fullName>
+    <columns>CREATEDBY_USER</columns>
+    <columns>NAME</columns>
+    <columns>Assigned_To__c</columns>
+    <columns>Priority__c</columns>
+    <columns>Request_Type__c</columns>
+    <columns>Request_Summary__c</columns>
+    <columns>Related_To__c</columns>
+    <columns>Request_Date__c</columns>
+    <columns>Reported_By__c</columns>
+    <columns>Request_Status__c</columns>
+    <columns>Request_Description__c</columns>
+    <columns>Resolution_Next_Steps__c</columns>
+    <columns>Resolution_Date__c</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <columns>OBJECT_ID</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Request_Type__c</field>
+        <operation>equals</operation>
+        <value>Data</value>
+    </filters>
+    <filters>
+        <field>Request_Status__c</field>
+        <operation>notContain</operation>
+        <value>Deployed/Closed</value>
+    </filters>
+    <filters>
+        <field>Request_Status__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>SFDC REQUESTS_TYPE = DATA &amp; OPEN</label>
+    <sharedTo>
+        <group>CRM_Data_Steward</group>
+    </sharedTo>
+</ListView>

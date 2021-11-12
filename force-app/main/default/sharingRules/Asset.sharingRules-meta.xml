@@ -1,6 +1,240 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
     <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Andorra_Assets</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>HRCFSL Share Andorra Assets</label>
+        <sharedTo>
+            <group>HRCFSL_AD</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>HRCFSL_Country__c</field>
+            <operation>equals</operation>
+            <value>Andorra</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Australia_Assets</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>HRCFSL Share Australia Assets</label>
+        <sharedTo>
+            <group>HRCFSL_AU</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>HRCFSL_Country__c</field>
+            <operation>equals</operation>
+            <value>Australia</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Austria_Assets</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>HRCFSL Share Austria Assets</label>
+        <sharedTo>
+            <group>HRCFSL_AT</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>HRCFSL_Country__c</field>
+            <operation>equals</operation>
+            <value>Austria</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Belgium_Assets</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>HRCFSL Share Belgium Assets</label>
+        <sharedTo>
+            <group>HRCFSL_BE</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>HRCFSL_Country__c</field>
+            <operation>equals</operation>
+            <value>Belgium</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Canada_Assets</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>HRCFSL Share Canada Assets</label>
+        <sharedTo>
+            <group>HRCFSL_CA</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>HRCFSL_Country__c</field>
+            <operation>equals</operation>
+            <value>Canada</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Denmark_Assets</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>HRCFSL Share Denmark Assets</label>
+        <sharedTo>
+            <group>HRCFSL_DK</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>HRCFSL_Country__c</field>
+            <operation>equals</operation>
+            <value>Denmark</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_France_Assets</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>HRCFSL Share France Assets</label>
+        <sharedTo>
+            <group>HRCFSL_FR</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>HRCFSL_Country__c</field>
+            <operation>equals</operation>
+            <value>France</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Germany_Assets</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>HRCFSL Share Germany Assets</label>
+        <sharedTo>
+            <group>HRCFSL_DE</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>HRCFSL_Country__c</field>
+            <operation>equals</operation>
+            <value>Germany</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Ireland_Assets</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>HRCFSL Share Ireland Assets</label>
+        <sharedTo>
+            <group>HRCFSL_IE</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>HRCFSL_Country__c</field>
+            <operation>equals</operation>
+            <value>Ireland</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Italy_Assets</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>HRCFSL Share Italy Assets</label>
+        <sharedTo>
+            <group>HRCFSL_IT</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>HRCFSL_Country__c</field>
+            <operation>equals</operation>
+            <value>Italy</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Luxembourg_Assets</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>HRCFSL Share Luxembourg Assets</label>
+        <sharedTo>
+            <group>HRCFSL_LU</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>HRCFSL_Country__c</field>
+            <operation>equals</operation>
+            <value>Luxembourg</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Monaco_Assets</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>HRCFSL Share Monaco Assets</label>
+        <sharedTo>
+            <group>HRCFSL_MC</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>HRCFSL_Country__c</field>
+            <operation>equals</operation>
+            <value>Monaco</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Netherlands_Assets</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>HRCFSL Share Netherlands Assets</label>
+        <sharedTo>
+            <group>HRCFSL_NL</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>HRCFSL_Country__c</field>
+            <operation>equals</operation>
+            <value>Netherlands</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Norway_Assets</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>HRCFSL Share Norway Assets</label>
+        <sharedTo>
+            <group>HRCFSL_NO</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>HRCFSL_Country__c</field>
+            <operation>equals</operation>
+            <value>Norway</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Spain_Assets</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>HRCFSL Share Spain Assets</label>
+        <sharedTo>
+            <group>HRCFSL_ES</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>HRCFSL_Country__c</field>
+            <operation>equals</operation>
+            <value>Spain</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Sweden_Assets</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>HRCFSL Share Sweden Assets</label>
+        <sharedTo>
+            <group>HRCFSL_SE</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>HRCFSL_Country__c</field>
+            <operation>equals</operation>
+            <value>Sweden</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Switzerland_Assets</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>HRCFSL Share Switzerland Assets</label>
+        <sharedTo>
+            <group>HRCFSL_CH</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>HRCFSL_Country__c</field>
+            <operation>equals</operation>
+            <value>Switzerland</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_UK_Assets</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>HRCFSL Share UK Assets</label>
+        <sharedTo>
+            <group>HRCFSL_GB</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>HRCFSL_Country__c</field>
+            <operation>equals</operation>
+            <value>United Kingdom</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
         <fullName>HRCFSL_Share_US_Assets</fullName>
         <accessLevel>Edit</accessLevel>
         <label>HRCFSL Share US Assets</label>
@@ -11,6 +245,34 @@
             <field>HRCFSL_Country__c</field>
             <operation>equals</operation>
             <value>US</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_Assets_with_North_America_Users</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Created this for Sales users to see Service cloud functionality.CR00032329 and Jira ticket SE-2114</description>
+        <label>Share Assets with North America Users</label>
+        <sharedTo>
+            <group>North_America_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>HRCFSL_Country__c</field>
+            <operation>equals</operation>
+            <value>US</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_Demo_Assets</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Sharing rule for INT Demo Asset record type</description>
+        <label>Share Demo Assets</label>
+        <sharedTo>
+            <roleAndSubordinates>JDE_50018919</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>INT Demo Asset</value>
         </criteriaItems>
     </sharingCriteriaRules>
 </SharingRules>

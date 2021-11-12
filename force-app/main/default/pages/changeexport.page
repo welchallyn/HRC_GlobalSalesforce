@@ -1,0 +1,29 @@
+<apex:page controller="ApprovalStatusController" action="{!displayCRApprovers}" readOnly="true" contentType="application/octet-stream#ChangeExport.xls">
+     
+    <apex:pageBlock >
+        <apex:pageBlockTable value="{!CRwrapperList}" var="x">
+           <apex:column headerValue="Change Number">
+            {!x.CRNum}
+            </apex:column>
+            <apex:column headerValue="Change 1">
+                {!x.CRChangeType}
+            </apex:column>
+            <apex:column headerValue="Status">
+                {!x.Statuses}
+            </apex:column>
+           <apex:column headerValue="Assigned 2">
+                {!x.CRassignedApprover}
+            </apex:column>
+             <apex:column headerValue="Actual Approver">
+                {!x.CRactualApprover}
+            </apex:column>
+            <apex:column headerValue="Opened date">
+                {!x.CRopenedDate}
+            </apex:column>
+             <apex:column headerValue="Rejected date">
+                {!x.CRapprovedDate}
+            </apex:column>
+               </apex:pageBlockTable>
+    </apex:pageBlock>  
+ 
+</apex:page>

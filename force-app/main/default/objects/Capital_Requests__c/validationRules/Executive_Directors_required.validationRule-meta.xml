@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Executive_Directors_required</fullName>
+    <active>true</active>
+    <description>Functional and Finance Executive Director is required if Total CFR Amount is greater than $100K.</description>
+    <errorConditionFormula>Total_CFR__c  &gt;= 100000 &amp;&amp;(ISBLANK(Functional_Executive_Director__c ) || ISBLANK(Finance_Executive_Director__c )) &amp;&amp;
+ISPICKVAL(Status__c, &apos;Draft&apos;) &amp;&amp;
+DATEVALUE(CreatedDate) &gt; DATEVALUE(&quot;2019-02-08&quot;)</errorConditionFormula>
+    <errorMessage>Functional and Finance Executive Director is required if Total CFR Amount is greater than $100K. Add an approval for each level.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,208 @@
+<!--
+ *  PageName     : Digital Target
+ *  CreatedOn    : 02/Jun/2021 
+ *  CreatedBy    : Aileen Christina
+ *  Description  : Power BI report embed page.
+ *  ModifiedOn   : 13/Aug/2021 
+ *  ModifiedBy   : Aileen Christina - Added report IDs for new VF tabs: WABI, SDC Target.
+ *  ModifiedOn   : 13/Oct/2021 
+ *  ModifiedBy   : Aileen Christina - Added report IDs for new VF tabs: RTLS Segmentation, Nurse Call Segmentation..
+-->
+
+<apex:page showHeader="true" controller="PowerBIController" action="{!redirectOnCallback}">
+
+<html>
+
+<head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <apex:slds />
+</head>
+
+<apex:includeScript value="{!$Resource.PBIJS}"/>
+
+    <apex:outputPanel rendered="{!NOT(hasToken)}"><a href='{!authUrl}'>Login</a></apex:outputPanel>
+
+<apex:form >
+<apex:actionFunction name="refreshAccessToken" action="{!refreshAccessToken}"/>
+</apex:form>
+<div id="myReport" style="height: 800px;"/>
+
+
+<script>
+
+let accessToken = '{!PBIaccess_token}';
+let refreshToken = '{!PBIrefresh_token}';
+let expires_on = '{!PBIexpires_on}';
+let validateResult = '{!validateResult}';
+let tabName = '{!getTabName}';
+let targetReport = '6d3c02d7-6aea-4a16-b2bb-464131956a93';
+let WABIReport = '0f212371-bded-45bd-bfd3-c59351a351bf';
+let SDCTargetReport = '26565591-9bcf-4596-9802-d2f602fa5a22';
+let NNCReport = '3c8d56bc-6664-425e-b8e8-649872869683';
+let RTLSReport = '19e3ec0d-63ce-489f-8ee0-48d9c4084448';
+
+window.onload = function() {
+
+if(window.location.href.includes('code='))
+{
+    window.close();
+    window.opener.location.reload();
+}
+
+let expiresOn = parseInt(expires_on);
+let currentTime = Date.now()/1000;
+        
+    if(expiresOn <= currentTime || !accessToken)
+    { 
+        var loginWindow = window.open('{!authUrl}','Login','width=250,height=900,0,status=0');
+        
+    } else if((expiresOn - 2000) <= currentTime)
+           {
+                refreshAccessToken();
+           }
+ 
+var filter = {
+      $schema: "http://powerbi.com/product/schema#basic"
+    };
+
+if(tabName == 'Target')
+    {
+    var TargetembedConfiguration = {
+
+    type: 'report',
+    
+    id: targetReport,
+
+    embedUrl: 'https://app.powerbi.com/reportEmbed?',
+
+    settings: {
+
+            filterPaneEnabled: true,
+
+            navContentPaneEnabled: true
+
+        }
+    };
+    
+    powerbi.accessToken = '{!PBIaccess_token}';
+    
+    var element = document.getElementById('myReport');
+    
+    var report = powerbi.embed(element, TargetembedConfiguration);
+    }
+
+else if(tabName == 'WABI')
+    {
+    var WAembedConfiguration = {
+
+    type: 'report',
+    
+    id: WABIReport,
+
+    embedUrl: 'https://app.powerbi.com/reportEmbed?',
+
+    settings: {
+
+            filterPaneEnabled: true,
+
+            navContentPaneEnabled: true
+
+        }
+    };
+    
+    powerbi.accessToken = '{!PBIaccess_token}';
+    
+    var element = document.getElementById('myReport');
+    
+    var report = powerbi.embed(element, WAembedConfiguration);
+    }
+    
+else if(tabName == 'SDC_Target')
+    {
+    var SDCembedConfiguration = {
+
+    type: 'report',
+    
+    id: SDCTargetReport,
+
+    embedUrl: 'https://app.powerbi.com/reportEmbed?',
+
+    settings: {
+
+            filterPaneEnabled: true,
+
+            navContentPaneEnabled: true
+
+        }
+    };
+    
+    powerbi.accessToken = '{!PBIaccess_token}';
+    
+    var element = document.getElementById('myReport');
+    
+    var report = powerbi.embed(element, SDCembedConfiguration);
+    }
+
+else if(tabName == 'Nurse_Call_Segmentation')
+    {
+    var NNCembedConfiguration = {
+
+    type: 'report',
+    
+    id: NNCReport,
+
+    embedUrl: 'https://app.powerbi.com/reportEmbed?',
+
+    settings: {
+
+            filterPaneEnabled: true,
+
+            navContentPaneEnabled: true
+
+        }
+    };
+    
+    powerbi.accessToken = '{!PBIaccess_token}';
+    
+    var element = document.getElementById('myReport');
+    
+    var report = powerbi.embed(element, NNCembedConfiguration);
+    }
+
+else if(tabName == 'RTLS_Segmentation')
+    {
+    var RTLSembedConfiguration = {
+
+    type: 'report',
+    
+    id: RTLSReport,
+
+    embedUrl: 'https://app.powerbi.com/reportEmbed?',
+
+    settings: {
+
+            filterPaneEnabled: true,
+
+            navContentPaneEnabled: true
+
+        }
+    };
+    
+    powerbi.accessToken = '{!PBIaccess_token}';
+    
+    var element = document.getElementById('myReport');
+    
+    var report = powerbi.embed(element, RTLSembedConfiguration);
+    }
+}
+
+window.onbeforeclose = function()
+        {
+            window.opener.update(window.location.href);
+        }
+
+</script>
+</html>
+
+</apex:page>

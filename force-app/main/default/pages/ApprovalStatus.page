@@ -1,0 +1,304 @@
+<apex:page controller="ApprovalStatusController" sidebar="true" showHeader="true" docType="html-5.0" id="pg">
+  <apex:includeScript value="/soap/ajax/24.0/connection.js" />
+    <apex:includeScript value="/soap/ajax/24.0/apex.js" /> 
+    <apex:stylesheet value="{!URLFOR($Resource.JQuery_UI_Custom, 'development-bundle/themes/base/jquery.ui.all.css')}" />
+    <apex:includeScript value="{!URLFOR($Resource.JQuery_UI_Custom, 'js/jquery-1.7.2.min.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.JQuery_UI_Custom, 'development-bundle/jquery-1.7.2.js')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.JqGridResource, 'css/ui.jqgrid.css')}" />
+    <apex:includeScript value="{!URLFOR($Resource.JqGridResource, 'js/i18n/grid.locale-en.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.JqGridResource, 'js/jquery.jqGrid.min.js')}" />
+
+<script Language="JavaScript">
+  var gridURL = '';
+  var gridId = '';
+  var gridSRURL = '';
+  var gridSRId = '';
+   if(window.attachEvent) {
+       window.attachEvent('onload',generateChangeGrid)
+       window.attachEvent('onload',generateServiceGrid)     
+   } else if(window.addEventListener) {
+       window.addEventListener('load',generateChangeGrid,false)
+       window.addEventListener('load',generateServiceGrid,false)
+    }
+  var CRFromDate;
+  var CRToDate;
+  function generateChangeGrid(){ 
+ 
+    gridURL = $("#Change");
+    gridId = '#Change';
+        
+    if(gridURL!=null){
+         jQuery(gridId).jqGrid('GridDestroy');
+        }   
+     gridURL.jqGrid({
+      datatype: "json",
+      colNames:['processId','CRId','Change No','Change Type','CR Status','Status','Assigned Approver','Actual Approver','Opened Date','Approved/Rejected Date'],
+      colModel:[ 
+        {name:'processId',index:'processId', width:55,hidden :true,key:true},    
+        {name:'CRId',index:'CRId', width:55,hidden :true},
+        {name:'changeNumber',index:'changeNumber', width:90},
+        {name:'changeType',index:'changeType', width:100},
+        {name:'CR Status',index:'CR Status', width:90},
+        {name:'statusC',index:'statusC', width:100},
+        {name:'CRassignedApprover',index:'CRassignedApprover', width:100, align:"right"},
+        {name:'CRactualApprover',index:'CRactualApprover', width:100,align:"right"},       
+        {name:'CRopenedDate',index:'CRopenedDate', width:120,formatter: "date", formatoptions: { newformat: "m/d/Y" },sorttype:'date',sortable:true}  ,
+        {name:'CRapprovedDate', index:'CRapprovedDate',width:120,formatter: "date", formatoptions: { newformat: "m/d/Y" },sorttype:'date',sortable:true}        
+     ],  
+     sortable:true,
+     sortname: 'processId',
+     viewrecords: true,
+     rowNum:10,
+     rowList:[10,20,30],
+     pager: '#change2',
+     loadonce:true,                 
+     ignoreCase:true,
+     autowidth:true,
+     shrinkToFit:true,
+     height: "auto",  
+     width: "auto",    
+     headertitles:true,
+     sortorder: "desc",
+     scrollOffset: 0,
+    jsonReader: { 
+         repeatitems : false, 
+         id: "0" 
+    },
+            gridComplete: function(){
+                           
+                         },
+             onCellSelect: function(rowid, icol, cellcontent, e) { 
+              var rowData = $(this).jqGrid("getRowData", rowid) ;
+              window.open('/'+rowData.CRId);                    
+             }
+        });
+     }
+  
+   function reloadCRGrid(){
+         
+      var n = new Date();
+      var changefrom;
+      var changeto;
+      var selectedChangeType;
+      var statusType;
+      selectedChangeType = document.getElementById('pg:listForm:pblock:sl').value;
+      changefrom = document.getElementById('{!$Component.listForm.pblock.CRFromDate}').value;
+      changeto = document.getElementById('{!$Component.listForm.pblock.CRToDate}').value; 
+      statusType = document.getElementById('pg:listForm:pblock:s2').value;
+       
+       if((changefrom == null || changefrom =='' || changefrom == 'undefined' ) && (changeto ==null || changeto =='' || changeto == 'undefined')){
+           alert("Please enter the date Values");
+           return false;
+            } 
+        else if (changefrom != '' && changeto != '' && (new Date(changefrom).getTime() > new Date(changeto).getTime()) ){
+            alert("From date should be less than To date");
+            return false;
+            }
+          else{ 
+            if(( new Date(changefrom).getTime() > (new Date(n).getTime() )) || (new Date(changeto).getTime() > (new Date(n).getTime() ))){
+            alert("From date and To date should be less than Today's date");
+            return false;
+            }   
+         }
+            $('#Change').setGridParam({'postData': {
+                CRFromDate: function() {     
+                    return changefrom;
+                },
+                CRToDate: function(){                  
+                    return changeto;
+                }
+            }});
+          
+        var URL = 'apex/ApprovalStatusCRHelperPage?CRFromDate='+changefrom+'&CRToDate='+changeto+'&changetype='+selectedChangeType+'&Stype='+statusType;           
+            $("#Change").jqGrid('setGridParam',{datatype:'json',url:URL}).trigger('reloadGrid');
+            return true;          
+       }
+            
+            
+  var SRFromDate;
+  var SRToDate;
+
+  function generateServiceGrid(){ 
+ 
+     gridSRURL = $("#Service");
+     gridSRId = '#Service';        
+    
+     if(gridSRURL!=null ){
+          jQuery(gridSRId).jqGrid('GridDestroy');
+        }
+      gridSRURL.jqGrid({
+      datatype: "json",
+      colNames:['processId','SRId','Service Request No','Status','Assigned Approver','Actual Approver','Opened Date','Approved/Rejected Date'],
+      colModel:[
+        {name:'SprocessId',index:'processId', width:55,hidden :true,key:true},
+        {name:'SRId',index:'SRId', width:55,hidden :true},
+        {name:'SRNumber',index:'SRNumber', width:100},
+        {name:'StatusSR',index:'StatusSR', width:100},
+        {name:'SRassignedApprover',index:'SRassignedApprover', width:100, align:"right"},
+        {name:'SRactualApprover',index:'SRactualApprover', width:80,align:"right"},       
+        {name:'SRopenedDate',index:'SRopenedDate', width:150,formatter: "date", formatoptions: { newformat: "m/d/Y" },sorttype:'date',sortable:true}  ,
+        {name:'SRapprovedDate', index:'SRapprovedDate',width:150,formatter: "date", formatoptions: { newformat: "m/d/Y" },sorttype:'date',sortable:true}     
+     ],  
+     sortable:true,
+     sortname: 'processId',
+     viewrecords: true,
+     rowNum:10,
+     rowList:[10,20,30],
+     pager: '#service2',
+     loadonce:true,                 
+     ignoreCase:true,
+     autowidth:true,
+     shrinkToFit:true,
+     height: "auto",  
+     width: "auto",    
+     headertitles:true,
+     sortorder: "desc",
+     scrollOffset: 0,
+     jsonReader: { 
+         repeatitems : false, 
+         id: "0" 
+     },
+            gridComplete: function(){
+                           
+                         },
+            onCellSelect: function(rowid, icol, cellcontent, e) { 
+                         var SRrowData = $(this).jqGrid("getRowData", rowid) ;                          
+                         window.open('/'+SRrowData.SRId);                             
+                        }
+        });
+      }
+     
+    function reloadSRGrid(){     
+          var d= new Date();
+         
+          var me ="Please Select date-ranges.";
+          var servicefrom;
+          var serviceto;
+          var statusTypesSR;
+          statusTypesSR = document.getElementById('pg:listForm:sblock:s3').value; 
+          servicefrom = document.getElementById('{!$Component.listForm.sblock.SRFromDate}').value;
+          serviceto = document.getElementById('{!$Component.listForm.sblock.SRToDate}').value; 
+          
+          if((servicefrom == null || servicefrom =='' || servicefrom == 'undefined' ) && (serviceto ==null || serviceto =='' || serviceto == 'undefined')){
+           alert("Please enter the date Values");
+           return false;
+            }   
+         else if (servicefrom != '' && serviceto != '' && (new Date(servicefrom).getTime()> new Date(serviceto).getTime())  ){
+            alert("From date should be less than To date");
+            return false;
+            }
+            else { 
+            if(( new Date(servicefrom).getTime() > (new Date(d).getTime() )) || (new Date(serviceto).getTime() > (new Date(d).getTime() ))){
+            alert("From date and To date should be less than Today's date");
+           return false;
+            }     
+         }
+        
+            $('#Service').setGridParam({'postData': {
+                SRFromDate: function() {
+                    
+                    return servicefrom;
+                },
+                SRToDate: function(){
+                    
+                    return serviceto;
+                }
+            }});
+        
+            var URL = 'apex/ApprovalStatusSRHelperPage?SRFromDate='+servicefrom+'&SRToDate='+serviceto+'&svtype='+statusTypesSR;
+            $(gridSRId).jqGrid('setGridParam',{datatype:'json',url:URL}).trigger('reloadGrid');
+            return true;                  
+            }    
+</script>
+
+<apex:form id="listForm">
+     <apex:pageblock title="Change Request Approvals" id="pblock" >
+       
+       <p align="right">   
+         <input type="button" value= "Export" onclick="changeexport();" /> 
+      </p>
+
+From Date:<apex:inputText value="{!datename}" size="10" id="CRFromDate" onfocus="DatePicker.pickDate(false, this , false);" />
+To Date: <apex:inputText value="{!datename}" size="10" id="CRToDate" onfocus="DatePicker.pickDate(false, this , false);" />
+
+Change Type:
+      <apex:selectList id="sl" label="Select a Value" value="{!selectedOpt}"  size="1" onchange="setVal()">
+        <apex:selectOption itemvalue="ALL" itemlabel="--ALL--"/>
+          <apex:selectOption itemvalue="Normal"  itemlabel="Normal"/>
+         <apex:selectOption itemvalue="Emergency"  itemlabel="Emergency"/>
+       <apex:selectOption itemvalue="Standard"  itemlabel="Standard"/>
+    </apex:selectList>
+
+Status:
+     <apex:selectList id="s2" label="Select Value" value="{!selectedstatus}"  size="1" >
+      <apex:selectOption itemvalue="All" itemlabel="--ALL--"/>
+       <apex:selectOption itemvalue="Approved"  itemlabel="Approved"/>
+      <apex:selectOption itemvalue="Rejected"  itemlabel="Rejected"/>
+    </apex:selectList>
+
+<input type="button" value="Apply Filter" onclick="reloadCRGrid();" id="CRApply"/>
+
+<script>
+    function changeexport() {    
+        var selectedChangeType = document.getElementById('pg:listForm:pblock:sl').value;
+        var statusType = document.getElementById('pg:listForm:pblock:s2').value;
+        var changefrom = document.getElementById('{!$Component.listForm.pblock.CRFromDate}').value;
+        var changeto = document.getElementById('{!$Component.listForm.pblock.CRToDate}').value;
+       
+        if(changefrom == '' && changeto == ''){  
+        alert("To Export Change Request records, Please enter From-date and To-date");
+        return false;
+        }
+        
+        window.location.href = '/apex/changeexport?CRFromDate='+changefrom+'&CRToDate='+changeto+'&changetype='+selectedChangeType+'&Stype='+statusType;
+   
+        return true;
+    } 
+    </script>
+    
+    <table id="Change" width="100%"></table>
+     <div id="change2"></div>
+  </apex:pageblock>
+
+   <apex:pageblock title="Service Request Approvals" id="sblock">
+  
+     <p align="right">
+         <input type="button" value= "Export" onclick="serviceexport();" /> 
+     </p>
+
+From Date:<apex:inputText value="{!me}" size="10" id="SRFromDate" onfocus="DatePicker.pickDate(false, this , false);" />
+To Date: <apex:inputText value="{!me}" size="10" id="SRToDate" onfocus="DatePicker.pickDate(false, this , false);" />
+
+Status:
+<apex:selectList id="s3" label="Select Value" value="{!selectedstatusSR}"  size="1" >
+<apex:selectOption itemvalue="All" itemlabel="--ALL--"/>
+<apex:selectOption itemvalue="Approved"  itemlabel="Approved"/>
+<apex:selectOption itemvalue="Rejected"  itemlabel="Rejected"/>
+</apex:selectList>
+
+<input type="button" value="Apply Filter" onclick="reloadSRGrid();" id="SRApply"/>
+
+
+<script>
+    function serviceexport() {   
+       var servicefrom = document.getElementById('{!$Component.listForm.sblock.SRFromDate}').value;
+       var serviceto = document.getElementById('{!$Component.listForm.sblock.SRToDate}').value;
+       var statusTypesSR = document.getElementById('pg:listForm:sblock:s3').value; 
+    
+       if(servicefrom == '' && serviceto == ''){
+          alert("To Export Service Request records, Please Enter From-date and To-date");
+          return false;
+          }
+       
+        window.location.href = '/apex/serviceexport?SRFromDate='+servicefrom+'&SRToDate='+serviceto+'&svtype='+statusTypesSR; 
+        return true;
+    }
+  </script>
+  
+<table id="Service" width="100%"></table>
+<div id="service2"></div>
+  
+</apex:pageblock>
+
+</apex:form>
+</apex:page>

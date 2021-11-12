@@ -1,0 +1,665 @@
+<apex:page controller="HRC_AccountMatrixController" showHeader="{!IF(AND(NOT(ISNULL($CurrentPage.parameters.print)),$CurrentPage.parameters.print='1'),false,true)}">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<style>
+    .print-view{
+        float:right;
+        font-size:10px;
+    }
+    .matrix-wrap{
+        max-width:950px;
+    }
+    .matrix-wrap h1 small{
+        font-size: 12px;
+        display: inline-block;
+        vertical-align: middle;
+        border-left: 1px solid #999;
+        padding-left: 20px;
+        margin-left: 10px;
+    }
+    #matrixWidget{
+        width:100px;
+        float:left;
+        margin-right:20px;
+        margin-bottom:20px;
+    }
+    #matrixWidget table{
+        width:100%;
+    }
+    #matrixWidget #matrixWidgetTable{
+        background:#f5f5f5;
+        border:1px solid #ccc;
+    }
+    
+    #matrixWidget td,
+    #matrixWidget th{
+        vertical-align:middle;
+        height:30px;
+        margin:4px;
+        height:14px;
+    }
+    #matrixWidget th{
+        font-weight:normal;
+        text-transform:uppercase;
+        text-align:center;
+        font-size:9px;
+        vertical-align:bottom;
+    }
+    #matrixWidget .centralized-inds .defend{
+        background:#003A4B;
+        border:1px solid #003A4B;
+    }
+    #matrixWidget .centralized-inds .capture{
+        background: #79222C;
+        border:1px solid #79222C;
+    }
+    #matrixWidget .high-potential .defend{
+        background: #6F9AD2;
+        border:1px solid #6F9AD2;
+    }
+    #matrixWidget .high-potential .capture{
+        background: #BB9095;
+        border:1px solid #BB9095;
+    }
+    #matrixWidget .low-potential .defend{
+        background: #B6CBE8;
+        border:1px solid #B6CBE8;
+    }
+    #matrixWidget .low-potential .capture{
+        background: #fff;
+        border:1px dashed #003b4c;
+    }
+    h1{
+        font-size:30px;
+        font-weight:normal;
+    }
+    .outer td.oRight{
+        padding-top:20px;
+    }
+    
+    .matrix-controls {
+        zoom: 1;
+        margin-top:10px;
+        clear:both;
+    }
+    .matrix-controls:after,
+    .matrix-controls:before {
+        content:"";
+        display:block;
+    }
+    .matrix-controls:after {
+        clear:both;
+    }
+    .matrix-controls .control-group {
+        float: left;
+        padding:5px 14px;
+    }
+    .matrix-controls #matrixRole{
+        padding-left:0;
+    }
+    .matrix-controls #matrixEmployee{
+        border-right:1px solid #bbb;
+        padding-right:40px;
+        position:relative;
+        min-height:20px;
+    }
+    .matrix-controls #matrixEmployee.select-hidden label,
+    .matrix-controls #matrixEmployee.select-hidden select,
+    .matrix-controls #matrixEmployee.select-hidden:before{
+        display:none;
+    }
+    .matrix-controls #matrixEmployee:before{
+        border-left:7px solid #9C9C9C;
+        border-top: 7px solid transparent;
+        border-bottom: 7px solid transparent;
+        display:block;
+        content:"";
+        position:absolute;
+        height:0;
+        width:0;
+        padding:0;
+        margin:-7px 0 0 0;
+        top:50%;
+        left:0;
+    }
+    .matrix-controls #matrixTerritory{
+        padding-left:40px;
+    }
+    .matrix-controls .control-group label{
+        font-weight:bold;
+        font-size:12px;
+    }
+    .matrix-controls .control-group select{
+        font-size:12px;
+    }
+    #matrix table{
+        width:100%;
+    }
+    #matrixTable{
+        border:1px solid #98AFB6;
+        padding:5px;
+    }
+    #matrix tbody tr{
+        
+    }
+    #matrix thead th{
+        font-size:1.5em;
+        text-transform:uppercase;
+        padding:6px;
+        padding-bottom: 0;
+        vertical-align: bottom;
+    }
+    #matrix td,
+    #matrix th{
+        vertical-align:top;
+        width:38%;
+        height:30px;
+    }
+    #matrix td:first-child,
+    #matrix th:first-child{
+        width:24%;
+        vertical-align:baseline;
+    }
+    #matrix td:first-child span{
+        display: inline-block;
+        max-width: 140px;
+        vertical-align: middle;
+    }
+    #matrix td:first-child .tooltip:hover > span,
+    #matrix th .tooltip:hover > span{
+        display: block;
+    }
+#matrix tbody .expand-all-row td:first-child, 
+#matrix tbody .expand-all-row td {
+    font-weight: normal;
+    color: inherit;
+    cursor: default;
+    font-size: inherit;
+    height: auto;
+}
+#matrix span.tooltip{
+    position:relative;
+}
+#matrix span.tooltip > span,
+#matrix td:first-child span.tooltip > span {
+color: #888;
+font-weight: normal;
+font-size: .8em;
+position: absolute;
+bottom: 100%;
+left: 20px;
+margin-bottom: 20px;
+width: 320px;
+background: #eee;
+max-width: none;
+padding: 1em;
+border-radius: 5px;
+z-index: 100;
+border: 1px solid #999;
+cursor: default;
+display: none;
+white-space: pre-wrap;
+text-align:left;
+text-transform:none;
+}
+#matrix span.tooltip > span:after, 
+#matrix span.tooltip > span:before {
+content: "";
+display: block;
+height: 0;
+width: 0;
+border-top: 20px solid #eee;
+border-left: 10px solid transparent;
+position: absolute;
+top: 100%;
+left: 60px;
+z-index: 101;
+border-right: 10px solid transparent;
+margin-left: -10px;
+}
+#matrix span.tooltip > span:before {
+z-index: 99;
+border-top-color: #999;
+border-top-width: 22px;
+border-left-width: 11px;
+border-right-width: 11px;
+margin-left: -11px;
+}
+#matrix th span.tooltip > span{
+    left:50%;
+    margin-left:-60px;
+    font-size:.7em;
+}
+    #matrix th{
+        text-align:center;
+        position:relative;
+    }
+    #matrix tbody td:first-child{
+        color:#6C7AB9;
+        font-weight:bold;
+        cursor:pointer;
+        font-size:1.4em;
+        position:relative;
+    }
+    #matrix tbody td div {
+        display: none;
+        overflow: auto;
+        padding: 10px;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+    #matrix tbody td div .no-data-message {
+        text-transform: none;
+        white-space:pre-wrap;
+    }
+    
+    #matrix .centralized-inds .defend{
+        background:#003A4B;
+        color:#fff;
+    }
+    #matrix  .centralized-inds .capture{
+        background: #79222C;
+        color:#fff;
+    }
+    #matrix  .high-potential .defend{
+        background: #6F9AD2;
+        color:#fff;
+    }
+    #matrix  .high-potential .capture{
+        background: #BB9095;
+        color:#fff;
+    }
+    #matrix  .low-potential .defend{
+        background: #B6CBE8;
+    }
+    #matrix  .low-potential .capture{
+        background: #fff;
+        border:3px dashed #094151;
+    }
+    #matrix .centralized-inds .defend a,
+    #matrix  .centralized-inds .capture a,
+    #matrix  .high-potential .defend a,
+    #matrix  .high-potential .capture a{
+        color:#fff;
+    }
+    #matrix .centralized-inds .defend a:hover,
+    #matrix  .centralized-inds .capture a:hover,
+    #matrix  .high-potential .defend a:hover,
+    #matrix  .high-potential .capture a:hover{
+        color:#ddd;
+    }
+    #matrix .icon-open-toggle {
+        background:#E7F0FE;
+        background: -moz-linear-gradient(top,  #f0f5ff 0%, #dce9fe 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f0f5ff), color-stop(100%,#dce9fe));
+        background: -webkit-linear-gradient(top,  #f0f5ff 0%,#dce9fe 100%);
+        background: -o-linear-gradient(top,  #f0f5ff 0%,#dce9fe 100%);
+        background: -ms-linear-gradient(top,  #f0f5ff 0%,#dce9fe 100%);
+        background: linear-gradient(to bottom,  #f0f5ff 0%,#dce9fe 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f5ff', endColorstr='#dce9fe',GradientType=0 );
+        width:30px;
+        height:30px;
+        position:relative;
+        display:inline-block;
+        vertical-align:middle;
+        border:1px solid #6B97D1;
+    }
+    #matrix .icon-open-toggle:before {
+        background: #6694CF;
+        content: "";
+        display: inline-block;
+        width: 3px;
+        height: 15px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -1.5px;
+        margin-top: -7.5px;
+    }
+    #matrix .icon-open-toggle:after {
+        background: #6694CF;
+        content: "";
+        display: inline-block;
+        width: 15px;
+        height: 3px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -1.5px;
+        margin-left: -7.5px;
+    }
+    #matrix .open .icon-open-toggle:before{
+        display:none;
+    }
+    /* Let's get this party started */
+    #matrix ::-webkit-scrollbar {
+        width: 8px;
+    }
+     
+    /* Track */
+    #matrix ::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+    }
+     
+    /* Handle */
+    #matrix ::-webkit-scrollbar-thumb {
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        background: rgba(255,255,255,0.4); 
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2); 
+    }
+    #matrix ::-webkit-scrollbar-thumb:window-inactive {
+        background: rgba(255,255,255,0.4); 
+    }
+</style>
+<apex:outputpanel rendered="{!IF(AND(NOT(ISNULL($CurrentPage.parameters.print)),$CurrentPage.parameters.print='1'),true,false)}" layout="none">
+<style>
+    body{
+        padding:20px;
+    }
+    .print-view{
+        display:none;
+    }
+    .matrix-wrap h1 small {
+        display: none !important;
+    }
+    #matrixWidget {
+        display: none;
+    }
+    h1+p {
+        display: none;
+    }
+#matrix tbody tr.expand-all-row {
+    display: none;
+}
+#matrix .icon-open-toggle {
+    display: none !important;
+}
+#matrix tbody td div {
+    height: auto !important;
+    overflow: visible !important;
+    display: block !important;
+}
+#matrix tbody td:first-child {
+    color: #6C7AB9;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.2em !important;
+    position: relative;
+}
+#matrix  .centralized-inds .capture,
+#matrix  .high-potential .defend,
+#matrix  .high-potential .capture,
+#matrix  .low-potential .defend,
+#matrix  .low-potential .capture
+#matrix .centralized-inds .defend{
+    background:none transparent !important;
+    color:#111 !important;
+}
+#matrix .centralized-inds .defend a, #matrix .centralized-inds .capture a, #matrix .high-potential .defend a, #matrix .high-potential .capture a{
+    color:#333435;
+}
+#matrix .centralized-inds .defend a:hover, #matrix .centralized-inds .capture a:hover, #matrix .high-potential .defend a:hover, #matrix .high-potential .capture a:hover{
+    color:#015ba7;
+}
+#matrix .centralized-inds .defend{
+    border: 3px solid #003A4B;
+    background:none transparent !important;
+    color:#111 !important;
+}
+#matrix  .centralized-inds .capture{
+    border: 3px solid #79222C;
+    color:#fff;
+}
+#matrix  .high-potential .defend{
+    border: 3px solid #6F9AD2;
+    color:#fff;
+}
+#matrix  .high-potential .capture{
+    border: 3px solid #BB9095;
+    color:#fff;
+}
+#matrix  .low-potential .defend{
+    border: 3px solid #B6CBE8;
+}
+@media print{
+    .matrix-controls .control-group select {
+        border: 0 none;
+    }
+    .matrix-controls .control-group select{
+        margin-right:-18px
+    }
+    .matrix-controls .control-group {
+       overflow:hidden;
+       padding: 0 !important;
+       margin:0 !important;
+       border:0 none !important;
+       margin-right:30px !important;
+    }
+    .matrix-controls #matrixEmployee:before {
+        display: none !important;
+    }
+}
+</style>
+</apex:outputpanel>
+<div class="matrix-wrap">
+    <a href="#" class="print-view" onclick="window.open('{!URLFOR($Page.HRC_AccountMatrix)}?print=1','_blank','width=900,height=600,menubar=no,status=no,toolbar=no,titlebar=no,location=no,left=100,top=100');" title="Printable View (New Window)">Printable View</a>
+    <div id="matrixWidget" cellspacing="4px">
+        <table>
+            <thead>
+                <tr>
+                    <th>Defend</th>
+                    <th>Capture</th>
+                </tr>
+            </thead>
+        </table>
+        <table id="matrixWidgetTable" cellspacing="4px">
+            <tbody>
+                <tr class="centralized-inds">
+                    <td class="defend"></td>
+                    <td class="capture"></td>
+                </tr>
+                <tr class="high-potential">
+                    <td class="defend"></td>
+                    <td class="capture"></td>
+                </tr>
+                <tr class="low-potential">
+                    <td class="defend"></td>
+                    <td class="capture"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <h1>
+        Account Matrix
+        <small><apex:outputLink value="{!URLFOR($Action.Account.Tab, $ObjectType.Account)}">Go to Standard Account Tab</apex:outputLink></small>
+    </h1>
+    <p>{!$Setup.Matrix_Scoreboard_Settings__c.General_Description_Text__c}</p>
+    
+    <apex:form styleClass="matrix-controls">
+        <apex:outputPanel id="renderPanel">
+            
+            <apex:outputPanel layout="none" rendered="{!OR(isAVP_DVP_User,isVPUser,isRVPUser,isAVPUser)}">
+                <div class="control-group" id="matrixRole">
+                    <label for="role">View Role</label>
+                    <apex:selectList id="userRole" value="{!userRole}" multiselect="false" size="1" onchange="javascript:this.form.submit();">
+                        <apex:selectOptions value="{!roles}"/>
+                    </apex:selectList>
+                </div>
+                <div id="matrixEmployee" class="control-group{!IF(userRole=='',' select-hidden','')}"> 
+                    <label for="employee">View Employee</label>
+                    <apex:selectList id="aeUser" value="{!aeUser}" multiselect="false" size="1" onchange="javascript:this.form.submit();" rendered="{!userRole!=''}">
+                        <apex:selectOptions value="{!aeUsers}" />
+                    </apex:selectList> 
+                </div>
+    
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!userLevel < 2}" layout="none">
+                <div class="control-group" id="matrixTerritory">
+                    <label for="territory">View Territory</label>
+                    <apex:selectList id="territory" value="{!territory}" multiselect="false" size="1" onchange="javascript:this.form.submit();">
+                        <apex:selectOptions value="{!territories}"/>
+                    </apex:selectList>
+                </div>
+            </apex:outputPanel>
+         </apex:outputPanel>
+    </apex:form>
+    <div id="matrix">
+        <apex:outputPanel id="matrixPanel">
+            <!-- AVP/DVP {!isAVP_DVP_User} Role {!userRole} Emp {!aeUser} Territory {!territory}<br/>-->
+            <apex:outputPanel layout="none" rendered="{!OR(isAEUser,AND(OR(isAVP_DVP_User,isVPUser,isRVPUser,isAVPUser),aeUser!=''))}">
+            
+            <table cellspacing="7px">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th><span class="tooltip">Defend <span><apex:outputText value="{!$Setup.Matrix_Scoreboard_Settings__c.Defend_Tooltip__c}" /></span></span></th>
+                        <th><span class="tooltip">Capture <span><apex:outputText value="{!$Setup.Matrix_Scoreboard_Settings__c.Capture_Tooltip__c}" /></span></span></th>
+                    </tr>
+                </thead>
+            </table>
+            <apex:variable value="{!accounts}" var="accs" />
+            <table id="matrixTable" cellspacing="7px">
+                <tbody>
+                    <tr class="expand-all-row">
+                        <td><a href="#" class="matrix-expand-all">Expand All</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="centralized-inds">
+                        <td><i class="icon-open-toggle"></i> <span class="tooltip">Centralized IDN / Federal Gov't <span><apex:outputText value="{!$Setup.Matrix_Scoreboard_Settings__c.Centralized_IDN_Tooltip__c}" /></span></span></td>
+                        <td class="defend">
+                            <div>
+                                <apex:variable value="{!0}" var="i" />
+                                <apex:repeat value="{!accs}" var="a">
+                                    <apex:outputPanel rendered="{!a.Account_Matrix_Position__c==0}">
+                                        <apex:outputLink value="/{!a.ID}" target="_blank"><apex:outputText value="{!a.Name}" /></apex:outputLink><br/>
+                                        <apex:variable value="{!i + 1}" var="i" />
+                                    </apex:outputPanel>
+                                </apex:repeat>
+                                <apex:outputpanel layout="inline" styleClass="no-data-message" rendered="{!i == 0}">{!$Setup.Matrix_Scoreboard_Settings__c.No_Data_Text__c}</apex:outputpanel>
+                            </div>
+                        </td>
+                        <td class="capture">
+                            <div>
+                                <apex:variable value="{!0}" var="i" />
+                                <apex:repeat value="{!accs}" var="a">
+                                    <apex:outputPanel rendered="{!a.Account_Matrix_Position__c==1}">
+                                        <apex:outputLink value="/{!a.ID}" target="_blank"><apex:outputText value="{!a.Name}" /></apex:outputLink><br/>
+                                        <apex:variable value="{!i + 1}" var="i" />
+                                    </apex:outputPanel>
+                                </apex:repeat>
+                                <apex:outputpanel layout="inline" styleClass="no-data-message" rendered="{!i == 0}">{!$Setup.Matrix_Scoreboard_Settings__c.No_Data_Text__c}</apex:outputpanel>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="high-potential">
+                        <td><i class="icon-open-toggle"></i> <span class="tooltip">High Potential <span>{!$Setup.Matrix_Scoreboard_Settings__c.High_Priority_Tooltip__c}</span></span></td>
+                        <td class="defend">
+                            <div>
+                                <apex:variable value="{!0}" var="i" />
+                                <apex:repeat value="{!accs}" var="a">
+                                    <apex:outputPanel rendered="{!a.Account_Matrix_Position__c==2}">
+                                        <apex:outputLink value="/{!a.ID}" target="_blank"><apex:outputText value="{!a.Name}" /></apex:outputLink><br/>
+                                        <apex:variable value="{!i + 1}" var="i" />
+                                    </apex:outputPanel>
+                                </apex:repeat>
+                                <apex:outputpanel layout="inline" styleClass="no-data-message" rendered="{!i == 0}">{!$Setup.Matrix_Scoreboard_Settings__c.No_Data_Text__c}</apex:outputpanel>
+                            </div>
+                        </td>
+                        <td class="capture">
+                            <div>
+                                <apex:variable value="{!0}" var="i" />
+                                <apex:repeat value="{!accs}" var="a">
+                                    <apex:outputPanel rendered="{!a.Account_Matrix_Position__c==3}">
+                                        <apex:outputLink value="/{!a.ID}" target="_blank"><apex:outputText value="{!a.Name}" /></apex:outputLink><br/>
+                                        <apex:variable value="{!i + 1}" var="i" />
+                                    </apex:outputPanel>
+                                </apex:repeat>
+                                <apex:outputpanel layout="inline" styleClass="no-data-message" rendered="{!i == 0}">{!$Setup.Matrix_Scoreboard_Settings__c.No_Data_Text__c}</apex:outputpanel>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="low-potential">
+                        <td><i class="icon-open-toggle"></i> <span class="tooltip">Low Acuity <span>{!$Setup.Matrix_Scoreboard_Settings__c.Low_Acuity_Tooltip__c}</span></span></td>
+                        <td class="defend">
+                            <div>
+                                <apex:variable value="{!0}" var="i" />
+                                <apex:repeat value="{!accs}" var="a">
+                                    <apex:outputPanel rendered="{!a.Account_Matrix_Position__c==4}">
+                                        <apex:outputLink value="/{!a.ID}" target="_blank"><apex:outputText value="{!a.Name}" /></apex:outputLink><br/>
+                                        <apex:variable value="{!i + 1}" var="i" />
+                                    </apex:outputPanel>
+                                </apex:repeat>
+                                <apex:outputpanel layout="inline" styleClass="no-data-message" rendered="{!i == 0}">{!$Setup.Matrix_Scoreboard_Settings__c.No_Data_Text__c}</apex:outputpanel>
+                            </div>
+                        </td>
+                        <td class="capture">
+                            <span>
+                                <div>
+                                    <apex:variable value="{!0}" var="i" />
+                                    <apex:repeat value="{!accs}" var="a">
+                                        <apex:outputPanel rendered="{!a.Account_Matrix_Position__c==5}">
+                                            <apex:outputLink value="/{!a.ID}" target="_blank"><apex:outputText value="{!a.Name}" /></apex:outputLink><br/>
+                                            <apex:variable value="{!i + 1}" var="i" />
+                                        </apex:outputPanel>
+                                    </apex:repeat>
+                                    <apex:outputpanel layout="inline" styleClass="no-data-message" rendered="{!i == 0}">{!$Setup.Matrix_Scoreboard_Settings__c.No_Data_Text__c}</apex:outputpanel>
+                                </div>
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- <apex:dataList value="{!accounts}" var="a">{!a.id}</apex:dataList>-->
+            </apex:outputPanel>
+        </apex:outputPanel>
+        <apex:outputPanel layout="block" rendered="{!AND(OR(isAVP_DVP_User,isVPUser,isRVPUser,isAVPUser),userRole=='')}">
+            {!$Setup.Matrix_Scoreboard_Settings__c.No_Matrix_Text__c}
+        </apex:outputPanel>
+    </div>
+</div>
+<apex:outputpanel rendered="{!IF(AND(NOT(ISNULL($CurrentPage.parameters.print)),$CurrentPage.parameters.print='1'),false,true)}" layout="none">
+<script>
+    $(function(){
+        $('#matrixTable').on('click', '.matrix-expand-all', function(e){
+            e.preventDefault();
+            var el = $(this);
+            el.toggleClass('open');
+            if(el.hasClass('open')){
+                el.text('Collapse All');
+                $('#matrixTable .icon-open-toggle').not('.open').trigger('click');
+            }else{
+                el.text('Expand All');
+                $('#matrixTable .icon-open-toggle.open').trigger('click');
+            }
+            
+        });
+        $('#matrix tbody td:first-child').click(function(e){
+            $(this).find('.icon-open-toggle').toggleClass('open').parent().parent().toggleClass('open').find('div').slideToggle();
+            var toggles = $('#matrixTable .icon-open-toggle').length;
+            var togglesOpen = $('#matrixTable .icon-open-toggle.open').length;
+            if(toggles == togglesOpen){
+                $('#matrixTable .matrix-expand-all').addClass('open').text('Collapse All');
+            }else{
+                $('#matrixTable .matrix-expand-all').removeClass('open').text('Expand All');
+            }
+        });
+        var matrixTop = $('#matrix').offset().top;
+        var matrixHeight = $('#matrix').height();
+        var windowBottom = $(window).height();
+        var divHeight = (windowBottom - matrixTop - matrixHeight < 200) ? 200 : windowBottom - matrixTop - matrixHeight;
+        $('#matrix td div').css('height', divHeight);
+        $('#matrix tbody tr.centralized-inds td:first-child').trigger('click');
+    });
+    function toggleEmployeeSelect(el){
+        if($(el).val() != ''){
+            $('#matrixEmployee').removeClass('select-hidden');
+        }else{
+            $('#matrixEmployee').addClass('select-hidden');
+        }
+    }
+</script>
+</apex:outputPanel>
+</apex:page>

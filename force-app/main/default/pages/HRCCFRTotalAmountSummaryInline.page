@@ -1,0 +1,51 @@
+<apex:page StandardController="Capital_Requests__c" id="pageIdTotalAmount" showHeader="false" sidebar="false">
+    <style>
+        table, th, td{
+            padding: 1%;
+        }
+        table{
+            border: 1px solid #ccc;
+            border-spacing: 0;
+            margin: 3% 0;
+            border-collapse: collapse;
+            width:100%;
+        }
+        table tr:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
+    </style>
+    <apex:form >
+        <table>
+        <tbody>
+            <tr>
+                <th></th>
+                <th>Budget</th>
+                <th>Request</th>        
+                <th>Variance</th>
+            </tr>
+            <tr>
+                <td>Total capital required</td>
+                <td><apex:outputField value="{!Capital_Requests__c.Total_Capital_Budget__c}"/></td>
+                <td><apex:outputField value="{!Capital_Requests__c.Total_Capital_Requested__c}"/></td>        
+                <td><apex:outputField value="{!Capital_Requests__c.Total_Capital_Variance__c}"/></td>
+            </tr>
+            <tr>
+                <td>Total expense required</td>
+                <td><apex:outputField value="{!Capital_Requests__c.Total_Expense_Budget__c}"/></td>
+                <td><apex:outputField value="{!Capital_Requests__c.Total_Expense_Requested__c}"/></td>        
+                <td><apex:outputField value="{!Capital_Requests__c.Total_Expense_Variance__c}"/></td>
+            </tr>
+            <tr>
+                <td>Total amount required</td>
+                <td><apex:outputField value="{!Capital_Requests__c.Total_Budget__c}"/></td>
+                <td><apex:outputField value="{!Capital_Requests__c.Total_CFR__c}"/></td>      
+               <!-- <td><apex:outputText value="USD {0, number, 0,000.00} " > 
+                        <apex:param value="{!Capital_Requests__c.Total_Capital_Requested__c + Capital_Requests__c.Total_Expense_Requested__c+0.00 }"/>
+                    </apex:outputText> 
+                </td>   -->
+                <td><apex:outputField value="{!Capital_Requests__c.Total_Variance__c}"/></td>
+            </tr>
+        </tbody>
+        </table>
+    </apex:form>
+</apex:page>

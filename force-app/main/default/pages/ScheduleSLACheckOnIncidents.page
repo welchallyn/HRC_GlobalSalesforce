@@ -1,0 +1,7 @@
+<apex:page controller="ScheduleSLACheckOnIncidentsController" action="{!scheduler}">
+    <apex:pageMessages />
+    
+    <apex:pageMessage summary="{!message}" severity="error" rendered="{!IF(!isSuccessful, true, false)}"></apex:pageMessage>
+    
+    <apex:pageMessage summary="{!message}" severity="info" rendered="{!isSuccessful}"></apex:pageMessage>    
+</apex:page>

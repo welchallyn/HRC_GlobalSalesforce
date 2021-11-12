@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>HRC-AGILE-LAB-REQUEST</name>
+    <queueMembers>
+        <users>
+            <user>rodriga14@hrc.corp</user>
+            <user>erikssa@hrc.corp</user>
+            <user>mearsb@hrc.corp</user>
+            <user>jimenec@hrc.corp</user>
+            <user>montesg@hrc.corp</user>
+            <user>lechabh@hrc.corp</user>
+            <user>gopalas@hrc.corp</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>ApprovalRoleMapping__c</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>BMCServiceDesk__Incident__c</sobjectType>
+    </queueSobject>
+</Queue>

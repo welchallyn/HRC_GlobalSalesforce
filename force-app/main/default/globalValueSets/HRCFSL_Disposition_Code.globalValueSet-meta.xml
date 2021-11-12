@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>CAL</fullName>
+        <default>false</default>
+        <label>Calibrated</label>
+    </customValue>
+    <customValue>
+        <fullName>INS</fullName>
+        <default>false</default>
+        <label>Inspected</label>
+    </customValue>
+    <customValue>
+        <fullName>REC</fullName>
+        <default>false</default>
+        <label>Reconnected</label>
+    </customValue>
+    <customValue>
+        <fullName>REP</fullName>
+        <default>false</default>
+        <label>Repaired</label>
+    </customValue>
+    <customValue>
+        <fullName>RPL</fullName>
+        <default>false</default>
+        <label>Replaced</label>
+    </customValue>
+    <customValue>
+        <fullName>RNB</fullName>
+        <default>false</default>
+        <label>Replaced – Do Not Bill</label>
+    </customValue>
+    <description>HF-139</description>
+    <masterLabel>Disposition Code</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

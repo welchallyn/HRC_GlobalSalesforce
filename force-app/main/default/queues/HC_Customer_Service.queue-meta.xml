@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <email>hccsweb@hillrom.com</email>
+    <name>HC Customer Service</name>
+    <queueMembers>
+        <users>
+            <user>bodwayc@hrc.corp</user>
+            <user>wusslej1@hrc.corp</user>
+            <user>nelsenk1@hrc.corp</user>
+            <user>martink2@hrc.corp</user>
+            <user>mouam3@hrc.corp</user>
+            <user>vangs1@hrc.corp</user>
+            <user>gregert1@hrc.corp</user>
+            <user>kongy1@hrc.corp</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Lead</sobjectType>
+    </queueSobject>
+</Queue>

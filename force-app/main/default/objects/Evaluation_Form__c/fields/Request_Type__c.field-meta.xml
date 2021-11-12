@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Request_Type__c</fullName>
+    <description>Same as Request/Return</description>
+    <externalId>false</externalId>
+    <label>Request Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Delivery</fullName>
+                <default>false</default>
+                <label>Delivery</label>
+            </value>
+            <value>
+                <fullName>Pick-Up</fullName>
+                <default>false</default>
+                <label>Pick-Up</label>
+            </value>
+            <value>
+                <fullName>Transfer</fullName>
+                <default>false</default>
+                <label>Transfer</label>
+            </value>
+            <value>
+                <fullName>Demo with patient</fullName>
+                <default>false</default>
+                <label>Demo with patient</label>
+            </value>
+            <value>
+                <fullName>Demo without patient</fullName>
+                <default>false</default>
+                <label>Demo without patient</label>
+            </value>
+            <value>
+                <fullName>Equipment on Loan (with patient)</fullName>
+                <default>false</default>
+                <label>Equipment on Loan (with patient)</label>
+            </value>
+            <value>
+                <fullName>Equipment on Loan (without patient)</fullName>
+                <default>false</default>
+                <label>Equipment on Loan (without patient)</label>
+            </value>
+            <value>
+                <fullName>Tender</fullName>
+                <default>false</default>
+                <label>Tender</label>
+            </value>
+            <value>
+                <fullName>PMP</fullName>
+                <default>false</default>
+                <label>PMP</label>
+            </value>
+            <value>
+                <fullName>Product Evaluation with Patient</fullName>
+                <default>false</default>
+                <label>Product Evaluation with Patient</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

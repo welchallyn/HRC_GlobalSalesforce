@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rail_Supports__c</fullName>
+    <externalId>false</externalId>
+    <formula>HYPERLINK(&quot;https://hill-rom--hrctest.my.salesforce.com/sfc/p/#E0000000KMt9/a/E00000004g57/9h_2G_.UopxEy9MkeTTSjtzzHERs3tzAP8BrAHpIfko&quot;,&quot;Click to view Image&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Rail Supports</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

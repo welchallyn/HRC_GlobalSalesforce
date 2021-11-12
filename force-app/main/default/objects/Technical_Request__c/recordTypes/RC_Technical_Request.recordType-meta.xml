@@ -1,0 +1,866 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RC_Technical_Request</fullName>
+    <active>false</active>
+    <label>RC Technical Request</label>
+    <picklistValues>
+        <picklist>Accessories__c</picklist>
+        <values>
+            <fullName>103 Foot Control</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>103 Hoses</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>104 Foot Control</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>104%2F105 Duffel Bag</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>104%2F105 Hoses</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>105 Remote Control</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contour Foam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hoses</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Power Cord</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Acute_Care_Approval__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Denied</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Adapters1__c</picklist>
+        <values>
+            <fullName>Oxygen Adapter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tracheostromy Adapter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ventilator Adapter</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Adapters__c</picklist>
+        <values>
+            <fullName>Oxygen Adapter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tracheostomy Adapters</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ventilator Adapter</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Agreement_Status__c</picklist>
+        <values>
+            <fullName>Executed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expired</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>C3_Garment_Color__c</picklist>
+        <values>
+            <fullName>Calming Black</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Camo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cashmire Rose</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coastal Blue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Color Me Purple</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pink Camo</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>C3_Garment_Size__c</picklist>
+        <values>
+            <fullName>Adult Large %2845-52 inches%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adult Medium %2836-45 inches%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adult Small %2831-36 inches%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Child Large %2827-31 inches%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Child Medium %2823-27 inches%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Child Small %2819 - 23 inches%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Infant Blue %2816 - 19 inches%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Infant Pink %2816 - 19 inches%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Teen %2827-31 inches and 1 inch longer than child large%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CS_Garment_Color__c</picklist>
+        <values>
+            <fullName>Calming Black</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cashmere Rose</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coastal Blue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Color Me Purple</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cool Camo</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Chest_Vest__c</picklist>
+        <values>
+            <fullName>Chest Vest Large %2846-61 inches%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chest Vest Medium %2835-46 inches%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chest Vest Small %2828-35 inches%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chest Vest X-Large %2861-67 inches%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Circuit_1_Request__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Circuit_Request__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Classic_Garment__c</picklist>
+        <values>
+            <fullName>Adult X-Large %2852-60 inches%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Child Small Short %2819 - 23 inches%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Components__c</picklist>
+        <values>
+            <fullName>Adaptor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bacterial%2FViral Filter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hose</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mouthpiece</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Demo_Equipment_Requested__c</picklist>
+        <values>
+            <fullName>105 Vest System</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MetaNeb 4%2E0 System</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VitalCough System</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Equipment_in_Deal__c</picklist>
+        <values>
+            <fullName>Both</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MetaNeb</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vest</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Facemask1_Size__c</picklist>
+        <values>
+            <fullName>Adult Inflatable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adult Large</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adult Medium</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adult Small</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Child</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Infant</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Facemask_Size__c</picklist>
+        <values>
+            <fullName>Adult Inflatable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adult Large</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adult Medium</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adult Small</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Child</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Infant</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>First_Disposable_Wrap_Size__c</picklist>
+        <values>
+            <fullName>Large %2843-53 inches%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium %2833-43 inches%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Small %2823-33 inches%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Starter Pack %281 Small%2C 2 Medium%2C 1 Large%2C 1 X-Large%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>X-Large %2853-67 inches%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>X-Small %2819-23 inches%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>XX-Large %2867-72 inches%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Hoses__c</picklist>
+        <values>
+            <fullName>COMBO2 Air %26 Oxygen Hose %2820 Feet%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COMBO2 Air %26 Oxygen Hose %2850 Feet%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oxygen Inlet Hose %2820 Feet%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oxygen Inlet Hose %2850 Feet%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oxygen Inlet Hose %286 Feet%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Individual_Face_Mask__c</picklist>
+        <values>
+            <fullName>Adult Large Mask</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adult Medium Mask</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adult Small Mask</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Child Mask</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Infant Mask</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Interface__c</picklist>
+        <values>
+            <fullName>Adult Large Mask%2C Mouthpiece%2C Breathing Hose%2C Adapter%2C Bacterial%2FViral Filter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adult Medium Mask%2C Mouthpiece%2C Breathing Hose%2C Adapter%2C Bacterial%2FViral Filter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adult Small Mask%2C Mouthpiece%2C Breathing Hose%2C Adapter Bacterial%2FViral Filter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Child Mask%2C Mouthpiece%2C Breathing Hose%2C Adapter%2C Bacterial%2FViral Filter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Infant Mask%2C Mouthpiece%2C Breathing Hose%2C Adapter%2CBacterial%2FViral Filter</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Is_this_the_patients_permanent_address__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Life2000_Accessories__c</picklist>
+        <values>
+            <fullName>Belt Clip</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Compressor Filter Package</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Compressor Power Supply %26 AC Cord</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>O2 Regulator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Purge Tube</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Purge Tube Connector</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Universal Circuit Connector</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ventilator Battery Charger %26 AC Cord</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ventilator Carry Case %26 Belt</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Life2000_Interface__c</picklist>
+        <values>
+            <fullName>Large</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Small</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>X Small</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Miscellaneous__c</picklist>
+        <values>
+            <fullName>Calibration Cap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Foot Control</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inlet Filter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Power Cord</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Travel Bag</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Mode_of_Transportation__c</picklist>
+        <values>
+            <fullName>Ground</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Overnight</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Monarch_Accessories__c</picklist>
+        <values>
+            <fullName>Battery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Battery Access Panel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monarch Backpack</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Power Cord%2FCharger</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shell</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Monarch_Accessory_Color_Selection__c</picklist>
+        <values>
+            <fullName>Blue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Green</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Orange</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pink</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Red</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Payment_1_Method__c</picklist>
+        <values>
+            <fullName>Bill to Credit Card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bill to Insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warranty N%2FC</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Payment_Method__c</picklist>
+        <values>
+            <fullName>Bill to Credit Card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bill to Insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warranty N%2FC</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Replacement_Generator__c</picklist>
+        <values>
+            <fullName>Life2000 Compressor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Life2000 Ventilator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Model 105</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monarch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VitalCough</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Request_Type__c</picklist>
+        <values>
+            <fullName>Acute Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Home Care</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Second_Disposable_Wrap_Size__c</picklist>
+        <values>
+            <fullName>Large %2843-53 inches%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium %2833-43 inches%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Small %2823-33 inches%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Starter Pack %281 Small%2C 2 Medium%2C 1 Large%2C 1 X-Large%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>X-Large %2853-67 inches%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>X-Small %2819-23 inches%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>XX-Large %2867-72 inches%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Complete</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Synclara_Accessories__c</picklist>
+        <values>
+            <fullName>Battery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Battery Cover</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carrying Case</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Circuit Cradle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Foam Filter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fuse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Power Cord</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Therapy Port Cap</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Therapy_Your_Way_Decals__c</picklist>
+        <values>
+            <fullName>Aquatic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Beach</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Blank%2FThought Bubbles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dinosaur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Galaxy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Music</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nature</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Princess</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trucks%2FCars</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zoo</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_of_Account__c</picklist>
+        <values>
+            <fullName>HHA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_of_C3_Garment__c</picklist>
+        <values>
+            <fullName>Bladder Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Full Garment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shell Only</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Volara_Accessories__c</picklist>
+        <values>
+            <fullName>Battery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Battery Cover</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carrying Case</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Circuit Cradle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Foam Filter Kit %28Control Unit%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Foam Filter Kit %28Nebulizer%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fuse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Power Cord %2810 feet%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Therapy Port Cap</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Wrap_Vest__c</picklist>
+        <values>
+            <fullName>Large %2843-53 inches%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium %2833-43 inches%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Small %2823-33 inches%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>X Small %2819 -23 inches%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>X-Large %2853-67 inches%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>XX-Large %2867-72 inches%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

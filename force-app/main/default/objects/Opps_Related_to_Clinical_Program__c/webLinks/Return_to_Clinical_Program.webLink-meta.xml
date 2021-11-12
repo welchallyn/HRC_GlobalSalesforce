@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Return_to_Clinical_Program</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Return to Clinical Program</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/{!Opps_Related_to_Clinical_Program__c.Clinical_ProgramId__c}</url>
+</WebLink>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Brand__c</fullName>
+    <externalId>false</externalId>
+    <label>Brand</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Allen</fullName>
+                <default>false</default>
+                <label>Allen</label>
+            </value>
+            <value>
+                <fullName>Aspen</fullName>
+                <default>false</default>
+                <label>Aspen</label>
+            </value>
+            <value>
+                <fullName>Hill-Rom</fullName>
+                <default>false</default>
+                <label>Hill-Rom</label>
+            </value>
+            <value>
+                <fullName>Liko</fullName>
+                <default>false</default>
+                <label>Liko</label>
+            </value>
+            <value>
+                <fullName>Mortara</fullName>
+                <default>false</default>
+                <label>Mortara</label>
+            </value>
+            <value>
+                <fullName>One Hill-Rom</fullName>
+                <default>false</default>
+                <label>One Hill-Rom</label>
+            </value>
+            <value>
+                <fullName>Respiratory</fullName>
+                <default>false</default>
+                <label>Respiratory</label>
+            </value>
+            <value>
+                <fullName>Trumpf</fullName>
+                <default>false</default>
+                <label>Trumpf</label>
+            </value>
+            <value>
+                <fullName>Welch Allyn</fullName>
+                <default>false</default>
+                <label>Welch Allyn</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

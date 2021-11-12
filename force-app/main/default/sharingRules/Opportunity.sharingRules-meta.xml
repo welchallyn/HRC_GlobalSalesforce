@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Architectural_and_LIKO_Opps_to_project_managers</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>LIKO Opps to project managers</label>
+        <sharedTo>
+            <group>Architectural_Project_Managers</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>LIKO</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Global_Service</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Share all US opportunities with Service until Völker divestiture is completed.</description>
+        <label>Global Service</label>
+        <sharedTo>
+            <group>Global_Service</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>INT FCN,INT Sales,INT Run Rate</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>New_Business_Generation</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>New Business Generation</label>
+        <sharedTo>
+            <group>New_Business_Generation</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CC</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Order_Entry_Share</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Order Entry Share</label>
+        <sharedTo>
+            <group>Order_Entry</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>CloseDate</field>
+            <operation>greaterThan</operation>
+            <value>10/1/2011</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>INT FCN,INT Sales,INT Run Rate</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Trumpf_Opportunities_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Gives back office folks ability to edit opportunities</description>
+        <label>Trumpf Opportunities Edit</label>
+        <sharedTo>
+            <group>Trumpf_Back_Office_Edit</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Trumpf</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

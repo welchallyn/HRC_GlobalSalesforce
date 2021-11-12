@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Welch_Allyn__c</fullName>
+    <externalId>false</externalId>
+    <label>Welch Allyn</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Trip_Location__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Braun thermometry</fullName>
+                <default>false</default>
+                <label>Braun thermometry</label>
+            </value>
+            <value>
+                <fullName>CCSS Central Station with etCO2</fullName>
+                <default>false</default>
+                <label>CCSS Central Station with etCO2</label>
+            </value>
+            <value>
+                <fullName>CIWS</fullName>
+                <default>false</default>
+                <label>CIWS</label>
+            </value>
+            <value>
+                <fullName>Configure CSM with HEWS</fullName>
+                <default>false</default>
+                <label>Configure CSM with HEWS</label>
+            </value>
+            <value>
+                <fullName>Configure CSM with MEWS</fullName>
+                <default>false</default>
+                <label>Configure CSM with MEWS</label>
+            </value>
+            <value>
+                <fullName>Configure CSM with NEWS</fullName>
+                <default>false</default>
+                <label>Configure CSM with NEWS</label>
+            </value>
+            <value>
+                <fullName>Configure CSM with PEWS</fullName>
+                <default>false</default>
+                <label>Configure CSM with PEWS</label>
+            </value>
+            <value>
+                <fullName>CSM</fullName>
+                <default>false</default>
+                <label>CSM</label>
+            </value>
+            <value>
+                <fullName>CVSM</fullName>
+                <default>false</default>
+                <label>CVSM</label>
+            </value>
+            <value>
+                <fullName>CVSM with Early Sense</fullName>
+                <default>false</default>
+                <label>CVSM with Early Sense</label>
+            </value>
+            <value>
+                <fullName>CVSM with etCO2</fullName>
+                <default>false</default>
+                <label>CVSM with etCO2</label>
+            </value>
+            <value>
+                <fullName>Disposable FlexiPort Cuffs</fullName>
+                <default>false</default>
+                <label>Disposable FlexiPort Cuffs</label>
+            </value>
+            <value>
+                <fullName>Masimo Pulse Oximetry</fullName>
+                <default>false</default>
+                <label>Masimo Pulse Oximetry</label>
+            </value>
+            <value>
+                <fullName>Nelcor (Covidien/Medtronic) Pulse Oximetry</fullName>
+                <default>false</default>
+                <label>Nelcor (Covidien/Medtronic) Pulse Oximetry</label>
+            </value>
+            <value>
+                <fullName>Reuseable Pediatric FlexiPort Cuff Sizes</fullName>
+                <default>false</default>
+                <label>Reuseable Pediatric FlexiPort Cuff Sizes</label>
+            </value>
+            <value>
+                <fullName>Reuseable Thigh FlexiPort Cuff Size</fullName>
+                <default>false</default>
+                <label>Reuseable Thigh FlexiPort Cuff Size</label>
+            </value>
+            <value>
+                <fullName>Spot</fullName>
+                <default>false</default>
+                <label>Spot</label>
+            </value>
+            <value>
+                <fullName>SureTemp thermometry</fullName>
+                <default>false</default>
+                <label>SureTemp thermometry</label>
+            </value>
+            <value>
+                <fullName>Welch Allyn</fullName>
+                <default>false</default>
+                <label>Welch Allyn</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <valueName>Braun thermometry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <valueName>CCSS Central Station with etCO2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <valueName>CIWS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <valueName>Configure CSM with HEWS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <valueName>Configure CSM with MEWS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <valueName>Configure CSM with NEWS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <valueName>Configure CSM with PEWS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <controllingFieldValue>Sydney</controllingFieldValue>
+            <valueName>CSM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <controllingFieldValue>Sydney</controllingFieldValue>
+            <valueName>CVSM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <valueName>CVSM with Early Sense</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <valueName>CVSM with etCO2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <valueName>Disposable FlexiPort Cuffs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <valueName>Masimo Pulse Oximetry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <valueName>Nelcor (Covidien/Medtronic) Pulse Oximetry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <valueName>Reuseable Pediatric FlexiPort Cuff Sizes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <valueName>Reuseable Thigh FlexiPort Cuff Size</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <valueName>Spot</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <valueName>SureTemp thermometry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <valueName>Welch Allyn</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

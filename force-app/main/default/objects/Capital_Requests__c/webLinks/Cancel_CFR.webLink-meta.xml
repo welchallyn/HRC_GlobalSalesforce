@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancel_CFR</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Cancel CFR</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/33.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/33.0/apex.js&quot;)} 
+
+var accnt = new sforce.SObject(&quot;Capital_Requests__c&quot;); 
+accnt.Id = &apos;{!Capital_Requests__c.Id}&apos;; 
+accnt.Status__c = &apos;{!Capital_Requests__c.Status__c}&apos;; 
+
+if(accnt.Status__c != &quot;Closed&quot;){
+	var r = confirm(&quot;Do you want to cancel the CFR. Are you sure ?&quot;);
+	if(r == true){
+		accnt.Status__c =&quot;Cancelled&quot;;
+		var result = sforce.connection.update([accnt]);
+
+		if(result[0].getBoolean(&quot;success&quot;)){
+			window.location.reload();
+		}else{
+			alert(&quot;CFR is not cancelled. Please contact administrator.&quot;);
+		}
+	}
+}else{
+	alert(&apos;CFR cannot be cancelled as it is closed.&apos;);
+}</url>
+</WebLink>

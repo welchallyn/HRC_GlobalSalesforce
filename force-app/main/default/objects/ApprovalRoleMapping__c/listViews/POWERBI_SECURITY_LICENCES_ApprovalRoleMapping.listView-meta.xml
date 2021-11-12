@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>POWERBI_SECURITY_LICENCES_ApprovalRoleMapping</fullName>
+    <filterScope>Queue</filterScope>
+    <label>POWERBI-SECURITY-LICENCES</label>
+    <queue>POWERBI_SECURITY_LICENCES</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

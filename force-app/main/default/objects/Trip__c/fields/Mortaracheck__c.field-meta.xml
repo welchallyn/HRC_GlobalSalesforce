@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mortaracheck__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Mortara Products</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Mortara Products</inlineHelpText>
+    <label>Mortara</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

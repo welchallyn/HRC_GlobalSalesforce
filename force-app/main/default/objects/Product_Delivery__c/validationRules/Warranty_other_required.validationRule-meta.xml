@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Warranty_other_required</fullName>
+    <active>true</active>
+    <description>Warranty (Other) required if Warranty = &apos;Other (specify)&apos;</description>
+    <errorConditionFormula>AND(
+ISPICKVAL( Warranty__c , &apos;Other (specify)&apos;),
+ISBLANK( Warranty_Other__c ) 
+)</errorConditionFormula>
+    <errorDisplayField>Warranty_Other__c</errorDisplayField>
+    <errorMessage>Please enter warranty</errorMessage>
+</ValidationRule>

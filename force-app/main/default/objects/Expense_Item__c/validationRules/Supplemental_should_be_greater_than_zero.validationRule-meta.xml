@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Supplemental_should_be_greater_than_zero</fullName>
+    <active>true</active>
+    <errorConditionFormula>(Supplemental__c &gt; 0 &amp;&amp; NOT(Is_Supplemental__c)) || (Supplemental__c = 0 &amp;&amp; (Is_Supplemental__c))</errorConditionFormula>
+    <errorDisplayField>Is_Supplemental__c</errorDisplayField>
+    <errorMessage>Is Supplemental Flag should be checked when entering a supplemental dollar amount.</errorMessage>
+</ValidationRule>

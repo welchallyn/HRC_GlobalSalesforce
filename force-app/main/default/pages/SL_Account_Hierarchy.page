@@ -1,0 +1,58 @@
+<apex:page controller="SL_Account_Hierarchy" sidebar="false" readOnly="true">
+    <apex:stylesheet value="{!$Resource.SL_Bootstrap}" />
+    <style>
+        #sl #sl-body .table-hover tbody tr:hover td, .table-hover tbody tr:hover th 
+        {
+            background-color: #C6E2FF;
+        }
+    </style>
+    <apex:form id="formId">
+        <div id="sl">
+            <div id="sl-body">
+                <div class="page-header" style="border-bottom: 0px !important;margin: 0px 0 0px !important;">
+                    <apex:outputPanel rendered="{!IF(AND(lstAccountWrapper!=null,lstAccountWrapper.size > 0), true, false)}">
+                        <h3><small style="font-size: 53% !important;color:#4a4a56 !important;">Account Hierarchy</small>
+                        <br/>{!strAccountName}</h3>
+                    </apex:outputPanel>
+                </div>
+                <apex:outputPanel rendered="{!IF(AND(lstAccountWrapper!=null,lstAccountWrapper.size > 0), true, false)}">
+                    <table class ="table table-striped table-hover table-bordered table-responsive" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <th>Account Name</th>
+                            <th style="text-align:right">Total Amount Open Opps</th>
+                            <th style="text-align:right">Total Number Open Opps</th>
+                            <th style="text-align:right">Market Segment</th>
+                            <th style="text-align:right">Facility City</th>
+                            <th style="text-align:right">Facility State</th>
+                        </tr>
+                        <apex:repeat value="{!lstAccountWrapper}" var="AccountWrapper">
+                            <tr >
+                                <td style="{!IF(AccountWrapper.strUniqueLevel!='0',mapAccountToSpace_indicatingLevel[AccountWrapper.strUniqueLevel],'')};">
+                                    <apex:outputLink id="linkId" value="/{!AccountWrapper.objAccount.id}" target="_top" style="text-decoration: underline;color:black">{!AccountWrapper.objAccount.name}</apex:outputLink>
+                                </td>
+                                <td style="text-align:right">
+                                    {!AccountWrapper.objAccount.Total_Amount_Open_Opps__c}
+                                </td>
+                                <td style="text-align:right">
+                                    {!AccountWrapper.objAccount.Total_Number_Open_Opps__c}
+                                </td>
+                                <td style="text-align:right">
+                                    {!AccountWrapper.objAccount.Market_Segment__c}
+                                </td>
+                                <td style="text-align:right">
+                                    {!AccountWrapper.objAccount.ShippingCity}
+                                </td>
+                                <td style="text-align:right">
+                                    {!AccountWrapper.objAccount.ShippingState}
+                                </td>
+                            </tr>
+                        </apex:repeat>
+                    </table>
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{!IF(OR(lstAccountWrapper==null,lstAccountWrapper.size == 0), true, false)}">
+                    <apex:pageMessages ></apex:pageMessages>
+                </apex:outputPanel>
+            </div>
+        </div>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Name_must_begin_with_zip_code</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT(BEGINS(Name, (HRC_FSL_Service_Territory__r.HRCFSL_External_ID__c  + &quot; - &quot;)))</errorConditionFormula>
+    <errorMessage>Shift Template names must begin with the BU # of the selected Service Territory and &quot; - &quot;. An example would be &quot;12345 - 9:00 AM to 7 PM&quot;.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>IBM-CITRIX-REMOTE-ACCESS</name>
+    <queueMembers>
+        <users>
+            <user>subramm1@hrc.corp</user>
+            <user>willefp1@hrc.corp</user>
+            <user>mbr1@hrc.corp</user>
+            <user>aguilas2@hrc.corp</user>
+            <user>rais1@hrc.corp</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>BMCServiceDesk__Incident__c</sobjectType>
+    </queueSobject>
+</Queue>

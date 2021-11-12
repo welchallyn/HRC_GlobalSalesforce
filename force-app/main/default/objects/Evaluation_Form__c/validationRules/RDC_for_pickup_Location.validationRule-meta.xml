@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RDC_for_pickup_Location</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+Schedule_Delivery__c = True, 
+ISPICKVAL(Pickup_From_Delievery__c , &apos;RDC&apos;),
+ISBLANK(TEXT( RDC_Location__c ))
+)</errorConditionFormula>
+    <errorDisplayField>RDC_Location__c</errorDisplayField>
+    <errorMessage>Please identify the RDC to pickup the items from.</errorMessage>
+</ValidationRule>

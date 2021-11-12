@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Note1__c</fullName>
+    <defaultValue>&quot;For Batesville CEC Please advise Hill-Rom Support Personnel that they are responsible for making their own air/ground transportation and accommodation arrangements through the Hill-Rom travel department. Hill-Rom Support Personnel will be housed at the Hampton Inn in Batesville, however, they may request Farm accommodation which will be assigned if available.&quot;</defaultValue>
+    <description>Participant Details: Hill-Rom Host and Support Personnel Information</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Participant Details: Hill-Rom Host and Support Personnel Information</inlineHelpText>
+    <label>Note</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

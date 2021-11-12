@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This mapping is used in Create Opportunity Lightning Actions from JDE Props and Order object .</description>
+    <label>Profile Recordtype Mapping</label>
+    <pluralLabel>Profile Recordtype Mappings</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

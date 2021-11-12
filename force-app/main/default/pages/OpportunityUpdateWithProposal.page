@@ -1,0 +1,9 @@
+<apex:page standardController="Opportunity" extensions="VfController" action="{!autorun}">
+<apex:pageMessages />
+<apex:sectionHeader title="Updating Opportunity with Proposal" />
+  <apex:outputPanel >
+      You tried calling Apex Code from a button.  If you see this page, something went wrong.  You should have
+      been redirected back to the record you clicked the button from.
+  </apex:outputPanel>
+  
+</apex:page>

@@ -1,0 +1,1206 @@
+<apex:page controller="HRC_OpportunityMatrixController" showHeader="{!IF(AND(NOT(ISNULL($CurrentPage.parameters.print)),$CurrentPage.parameters.print='1'),false,true)}">
+
+<apex:stylesheet value="/EXT/ext-3.0.0/resources/css/ext-all.css" />
+<apex:includeScript value="/EXT/ext-3.0.0/ext.js" />
+
+<script type="text/javascript">
+function showProgress()
+{
+Ext.MessageBox.show({
+           title: 'Loading...',
+           msg: '',
+           progressText: 'Loading...',
+           width:300,
+           wait:true,
+           waitConfig: {interval:200},
+           animEl: 'mb7'
+       });
+}
+function hideProgress()
+{
+    Ext.MessageBox.hide();
+}
+</script>
+<apex:actionStatus startText="" stopText="" id="dataStatus" onstart="showProgress()" onstop="hideProgress()">
+    <apex:facet name="start">
+    </apex:facet>
+    <apex:facet name="stop">
+    </apex:facet>
+</apex:actionStatus>
+ 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<style>
+    .matrix-wrap{
+        max-width:1130px; 
+    }
+    .print-view {
+        float: right;
+        font-size: 10px;
+    }
+    .matrix-wrap h1 small{
+        font-size: 12px;
+        display: inline-block;
+        vertical-align: middle;
+        border-left: 1px solid #999;
+        padding-left: 20px;
+        margin-left: 10px;
+    }
+    #matrixWidget{
+        width:100px;
+        float:left;
+        margin-right:20px;
+        margin-bottom:20px;
+    }
+    #matrixWidget table{
+        width:100%;
+    }
+    #matrixWidget #matrixWidgetTable{
+        background:#f5f5f5;
+        border:1px solid #ccc;
+    }
+    
+    #matrixWidget td,
+    #matrixWidget th{
+        vertical-align:middle;
+        height:30px;
+        margin:4px;
+        height:14px;
+    }
+    #matrixWidget th{
+        font-weight:normal;
+        text-transform:uppercase;
+        text-align:center;
+        font-size:9px;
+        vertical-align:bottom;
+    }
+    #matrixWidget .centralized-idns .defend{
+        background:#003A4B;
+        border:1px solid #003A4B;
+    }
+    #matrixWidget .centralized-idns .capture{
+        background: #79222C;
+        border:1px solid #79222C;
+    }
+    #matrixWidget .high-potential .defend{
+        background: #6F9AD2;
+        border:1px solid #6F9AD2;
+    }
+    #matrixWidget .high-potential .capture{
+        background: #BB9095;
+        border:1px solid #BB9095;
+    }
+    #matrixWidget .low-potential .defend{
+        background: #B6CBE8;
+        border:1px solid #B6CBE8;
+    }
+    #matrixWidget .low-potential .capture{
+        background: #fff;
+        border:1px dashed #003b4c;
+    }
+    h1{
+        font-size:30px;
+        font-weight:normal;
+    }
+    .outer td.oRight{
+        padding-top:20px;
+    }
+    
+    .matrix-controls{
+        zoom: 1;
+        margin-top:10px;
+        clear:both;
+    }
+    .matrix-controls:after,
+    .matrix-controls:before{
+        content:"";
+        display:block;
+    }
+    .matrix-controls:after{
+        clear:both;
+    }
+    .matrix-controls .control-group {
+        float: left;
+        padding:5px 14px;
+    }
+    .matrix-controls #matrixRole,
+    .matrix-controls #matrixCloseDate{
+        padding-left:0;
+        clear:both;
+    }
+    .matrix-controls #matrixEmployee{
+        border-right:1px solid #bbb;
+        padding-right:40px;
+        position:relative;
+        min-height:20px;
+    }
+    .matrix-controls #matrixEmployee.select-hidden label,
+    .matrix-controls #matrixEmployee.select-hidden select,
+    .matrix-controls #matrixEmployee.select-hidden:before{
+        display:none;
+    }
+    .matrix-controls #matrixEmployee:before{
+        border-left:7px solid #9C9C9C;
+        border-top: 7px solid transparent;
+        border-bottom: 7px solid transparent;
+        display:block;
+        content:"";
+        position:absolute;
+        height:0;
+        width:0;
+        padding:0;
+        margin:-7px 0 0 0;
+        top:50%;
+        left:0;
+    }
+    .matrix-controls #matrixTerritory{
+        padding-left:40px;
+    }
+    .matrix-controls .control-group label{
+        font-weight:bold;
+        font-size:12px;
+    }
+    .matrix-controls .control-group select{
+        font-size:12px;
+    }
+    #matrix table{
+        width:100%;
+    }
+    #matrixTable{
+        border:1px solid #98AFB6;
+        padding:5px;
+    }
+    #matrix tbody tr{
+        
+    }
+    #matrix thead th{
+        font-size:1.5em;
+        text-transform:uppercase;
+        padding:6px;
+        padding-bottom: 0;
+        vertical-align: bottom;
+    }
+    #matrix td.defend,
+    #matrix td.capture{
+        vertical-align:top;
+        width:42%;
+        height:30px;
+        overflow:hidden;
+    }
+
+    #matrix th{
+        vertical-align:top;
+        width:42%;
+        height:30px;
+    }
+
+    #matrix td.total-cell{
+        height:30px;
+    }
+    #matrix td.row-header,
+    #matrix th:first-child{
+        width:16%;
+        vertical-align:baseline;
+    }
+    #matrix td.row-header span{
+        display: inline-block;
+        max-width: 135px;
+        vertical-align: middle;
+    }
+    #matrix td.row-header .tooltip:hover > span,
+    #matrix th .tooltip:hover > span{
+        display: block;
+    }
+
+    #matrix span.tooltip{
+        position:relative;
+    }
+    #matrix span.tooltip > span,
+    #matrix td.row-header span.tooltip > span {
+        color: #888;
+        font-weight: normal;
+        font-size: .8em;
+        position: absolute;
+        bottom: 100%;
+        left: 20px;
+        margin-bottom: 20px;
+        width: 320px;
+        background: #eee;
+        max-width: none;
+        padding: 1em;
+        border-radius: 5px;
+        z-index: 100;
+        border: 1px solid #999;
+        cursor: default;
+        display: none;
+        white-space: pre-wrap;
+        text-align:left;
+        text-transform:none;
+    }
+    #matrix span.tooltip > span:after, 
+    #matrix span.tooltip > span:before {
+        content: "";
+        display: block;
+        height: 0;
+        width: 0;
+        border-top: 20px solid #eee;
+        border-left: 10px solid transparent;
+        position: absolute;
+        top: 100%;
+        left: 60px;
+        z-index: 101;
+        border-right: 10px solid transparent;
+        margin-left: -10px;
+    }
+    #matrix span.tooltip > span:before {
+        z-index: 99;
+        border-top-color: #999;
+        border-top-width: 22px;
+        border-left-width: 11px;
+        border-right-width: 11px;
+        margin-left: -11px;
+    }
+    #matrix th span.tooltip > span{
+        left:50%;
+        margin-left:-60px;
+        font-size:.7em;
+    }
+    #matrix th{
+        text-align:center;
+        position:relative;
+    }
+    #matrix tbody .row-header{
+        color:#6C7AB9;
+        font-weight:bold;
+        cursor:pointer;
+        font-size:1.4em;
+        position:relative;
+    }
+    #matrix tbody td div {
+        display: none;
+        overflow: auto;
+        padding: 10px;
+        font-size: 14px;
+    }
+    #matrix .centralized-idns .defend{
+        background:#003A4B;
+        color:#fff;
+    }
+    #matrix  .centralized-idns .capture{
+        background: #79222C;
+        color:#fff;
+    }
+    #matrix  .high-potential .defend{
+        background: #6F9AD2;
+    }
+    #matrix  .high-potential .capture{
+        background: #BB9095;
+    }
+    #matrix  .low-potential .defend{
+        background: #B6CBE8;
+    }
+    #matrix  .low-potential .capture{
+        background: #fff;
+        border:3px dashed #094151;
+    }
+    #matrix .centralized-idns .defend a,
+    #matrix  .centralized-idns .capture a{
+        color:#fff;
+    }
+    #matrix .centralized-idns .defend a:hover,
+    #matrix  .centralized-idns .capture a:hover{
+        color:#ddd;
+    }
+    #matrix .icon-open-toggle {
+        background:#E7F0FE;
+        background: -moz-linear-gradient(top,  #f0f5ff 0%, #dce9fe 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f0f5ff), color-stop(100%,#dce9fe));
+        background: -webkit-linear-gradient(top,  #f0f5ff 0%,#dce9fe 100%);
+        background: -o-linear-gradient(top,  #f0f5ff 0%,#dce9fe 100%);
+        background: -ms-linear-gradient(top,  #f0f5ff 0%,#dce9fe 100%);
+        background: linear-gradient(to bottom,  #f0f5ff 0%,#dce9fe 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f5ff', endColorstr='#dce9fe',GradientType=0 );
+        width:30px;
+        height:30px;
+        position:relative;
+        display:inline-block;
+        vertical-align:middle;
+        border:1px solid #6B97D1;
+    }
+    #matrix .icon-open-toggle:before {
+        background: #6694CF;
+        content: "";
+        display: inline-block;
+        width: 3px;
+        height: 15px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -1.5px;
+        margin-top: -7.5px;
+    }
+    #matrix .icon-open-toggle:after {
+        background: #6694CF;
+        content: "";
+        display: inline-block;
+        width: 15px;
+        height: 3px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -1.5px;
+        margin-left: -7.5px;
+    }
+    #matrix .icon-open-toggle.open:before{
+        display:none;
+    }
+    #matrix ::-webkit-scrollbar {
+        width: 8px;
+    }
+     
+    #matrix ::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+    }
+     
+    #matrix ::-webkit-scrollbar-thumb {
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        background: rgba(255,255,255,0.4); 
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2); 
+    }
+    #matrix ::-webkit-scrollbar-thumb:window-inactive {
+        background: rgba(255,255,255,0.4); 
+    }
+    
+    #matrix .total-cell{
+        border:1px solid #999;
+        vertical-align:middle;
+        text-align:center;
+        font-size:1.6em;
+    }
+    #matrix .total-cell.total-combined{
+        background-color:#F0F7FF;
+    }
+    #matrix .opp-header-row > td{
+        padding:0;
+    }
+    #matrix .opp-header-row div{
+        padding:0 10px;
+        background:#999;
+        display:block;
+        border-radius:5px 5px 0 0;
+        margin-bottom:-5px;
+    }
+    #matrix .opp-table.opp-table-header{
+        border-collapse:collapse;
+        margin:0;
+    }
+    #matrix .opp-table.opp-table-header td{
+        font-size:.9em;
+        vertical-align:middle;
+        border-left:1px solid #fff;
+        text-align:center;
+    }
+    #matrix .opp-table.opp-table-header td:first-child{
+        border-left:0 none;
+        text-align: center;
+    }
+    #matrix .opp-table{
+        border-collapse:collapse;
+        margin:5px 0 20px 0;
+        font-size:.9em;
+    }
+    #matrix .opp-table-header{
+        text-align:center;
+    }
+    #matrix .opp-table td{
+        padding:5px;
+        border-left:1px solid #111;
+        border-left-color:rgba(0,0,0,.3);
+        text-align:right;
+    }
+    #matrix .centralized-idns .opp-table td{
+        padding:5px;
+        border-left:1px solid #fff;
+        border-left-color:rgba(255,255,255,.3);
+    }
+    #matrix .opp-table td:first-child{
+        border-left:0;
+        text-align:left;
+    }
+    #matrix .opp-table .opp-name{
+        width:40%;
+    }
+    #matrix .centralized-idns .opp-table .opp-name{
+        color:#fff;
+    }
+    #matrix .opp-table .opp-amount,
+    #matrix .opp-table .opp-close,
+    #matrix .opp-table .opp-probability{
+        width:20%;
+    }
+    #matrix .centralized-idns .opp-table .opp-amount,
+    #matrix .centralized-idns .opp-table .opp-close,
+    #matrix .centralized-idns .opp-table .opp-probability{
+        color:#fff;
+    }
+    
+#matrix .account-opp-total {
+display: inline-block;
+float: right;
+margin-right: -10px;
+padding: 2px 10px;
+font-size: .85em;
+border-radius: 3px 0 0 3px;
+width: 90px;
+}
+    #matrix .account-opp-total strong{
+        float: right;
+        font-size: 14px;
+    }
+    #matrix .opps-toggle .icon-open-toggle:before,
+    #matrix .opps-toggle .icon-open-toggle:after {
+        background: none #111;
+    }
+    #matrix .centralized-idns .opps-toggle .icon-open-toggle:before,
+    #matrix .centralized-idns .opps-toggle .icon-open-toggle:after {
+        background: none #fff;
+    }
+    #matrix .opps-toggle .icon-open-toggle {
+        background: none transparent;
+        border: 0 none;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+    #matrix tbody td div.account-opps {
+        padding: 0;
+        width: 100%;
+    }
+.opp-account:after {
+clear: both;
+}
+.opp-account:before, .opp-account:after {
+display: block;
+content: "";
+}
+.opp-account {
+display: block;
+clear: both;
+zoom: 1;
+margin-bottom: 10px;
+width: 100%;
+padding: 3px 10px;
+margin-left: -10px;
+box-sizing: content-box;
+}
+.opp-account.odd{
+background-color: rgba(255,255,255,.1);
+}
+#matrix .view-account {
+margin-left: 20px;
+display: inline-block;
+font-size: .75em;
+}
+#matrix .opp-name ul {
+margin: 0;
+padding-left: 10px;
+}
+#matrix .opp-name ul li {
+list-style-type: none;
+position: relative;
+margin-left: 10px;
+}
+#matrix .opp-name ul li:before {
+font-family: "Trebuchet MS", sans-serif;
+content: "\2219";
+font-size: 2.5em;
+line-height: 0;
+position: absolute;
+top: .23em;
+left: -.5em;
+}
+#matrix .group-total {
+background: rgba(255,255,255,.3);
+display: block;
+width: 100%;
+height:100%;
+text-align: center;
+padding: 8px 10px;
+font-size: 14px;
+margin-left: -10px;
+}
+#matrix .expand-all {
+background: rgba(255,255,255,.3);
+display: block;
+width: 100%;
+padding: 4px 10px;
+font-size: 12px;
+margin:-10px 0 10px -10px;
+cursor:pointer;
+}
+#matrix .expand-all .icon-open-toggle:before {
+height: 10px;
+width: 2px;
+left: 50%;
+margin-left: -1px;
+margin-top: -5px;
+}
+#matrix .expand-all .icon-open-toggle:after {
+width: 10px;
+height: 2px;
+margin-left: -5px;
+}
+#matrix .expand-all .icon-open-toggle {
+background: none rgba(0,0,0,.8);
+border: 0 none;
+border-radius: 2px;
+height: 14px;
+width: 14px;
+vertical-align: text-top;
+margin-right: 3px;
+}
+#matrix .centralized-idns .expand-all .icon-open-toggle {
+background: none rgba(255,255,255,.8);
+}
+#matrix .centralized-idns .expand-all .icon-open-toggle:after,
+#matrix .centralized-idns .expand-all .icon-open-toggle:before{
+    background:none #003A4B;
+}
+#matrix .centralized-idns .capture .expand-all .icon-open-toggle:after,
+#matrix .centralized-idns .capture .expand-all .icon-open-toggle:before{
+    background:none #79222C;
+}
+#matrix .high-potential .expand-all .icon-open-toggle:after,
+#matrix .high-potential .expand-all .icon-open-toggle:before{
+    background:none #6F9AD2;
+}
+#matrix .high-potential .capture .expand-all .icon-open-toggle:after,
+#matrix .high-potential .capture .expand-all .icon-open-toggle:before{
+    background:none #BB9095;
+}
+#matrix .low-potential  .expand-all .icon-open-toggle:after,
+#matrix .low-potential  .expand-all .icon-open-toggle:before{
+    background:none #B6CBE8;
+}
+#matrix .low-potential .capture .expand-all .icon-open-toggle:after,
+#matrix .low-potential .capture .expand-all .icon-open-toggle:before{
+    background:none #fff;
+}
+</style>
+<apex:outputpanel rendered="{!IF(AND(NOT(ISNULL($CurrentPage.parameters.print)),$CurrentPage.parameters.print='1'),true,false)}" layout="none">
+<style>
+    body{
+        padding:20px;
+    }
+    .print-view{
+        display:none;
+    }
+    .matrix-wrap h1 small {
+        display: none !important;
+    }
+    #matrixWidget {
+        display: none;
+    }
+    h1+p {
+        display: none;
+    }
+    #matrix .matrix-expand-all,
+    #matrix .expand-all {
+        display: none;
+    }
+    #matrix .icon-open-toggle {
+        display: none !important;
+    }
+    #matrix tbody td div {
+        height: auto !important;
+        overflow: visible !important;
+        display: block !important;
+    }
+    #matrixTable > tbody > tr > td:first-child {
+        color: #6C7AB9;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 1.2em !important;
+        position: relative;
+    }
+    #matrix  .centralized-idns .capture,
+    #matrix  .high-potential .defend,
+    #matrix  .high-potential .capture,
+    #matrix  .low-potential .defend,
+    #matrix  .low-potential .capture
+    #matrix .centralized-idns .defend{
+        background:none transparent !important;
+        color:#111 !important;
+    }
+    #matrix .centralized-idns .defend a, #matrix .centralized-idns .capture a, #matrix .high-potential .defend a, #matrix .high-potential .capture a{
+        color:#333435;
+    }
+    #matrix .centralized-idns .defend a:hover, #matrix .centralized-idns .capture a:hover, #matrix .high-potential .defend a:hover, #matrix .high-potential .capture a:hover{
+        color:#015ba7;
+    }
+    #matrix .centralized-idns .defend{
+        border: 3px solid #003A4B;
+        background:none transparent !important;
+        color:#111 !important;
+    }
+    #matrix  .centralized-idns .capture{
+        border: 3px solid #79222C;
+        color:#fff;
+    }
+    #matrix  .high-potential .defend{
+        border: 3px solid #6F9AD2;
+        color:#fff;
+    }
+    #matrix  .high-potential .capture{
+        border: 3px solid #BB9095;
+        color:#fff;
+    }
+    #matrix  .low-potential .defend{
+        border: 3px solid #B6CBE8;
+    }
+    #matrix .centralized-idns .opp-table .opp-amount, 
+    #matrix .centralized-idns .opp-table .opp-close, 
+    #matrix .centralized-idns .opp-table .opp-probability{
+        color:#111;
+    }
+    #matrix .centralized-idns .opp-table td{
+        border-left-color:#999;
+    }
+    #matrix .view-account{
+        display:none;
+    }
+    #matrixTable a{
+        text-decoration:none !important;
+    }
+    #matrix .opp-header-row div {
+        background: none transparent;
+    }
+    #matrix .opp-table.opp-table-header td {
+        border-left-color:#999;
+        font-weight:bold;
+    }
+    @media print{
+        .matrix-controls .control-group select {
+            border: 0 none;
+        }
+        .matrix-controls .control-group select{
+            margin-right:-18px
+        }
+        .matrix-controls .control-group {
+           overflow:hidden;
+           padding: 0 !important;
+           margin:0 !important;
+           border:0 none !important;
+           margin-right:30px !important;
+        }
+        .matrix-controls #matrixEmployee:before {
+            display: none !important;
+        }
+    }
+</style>
+</apex:outputpanel>
+
+<div class="matrix-wrap">
+    <a class="print-view" href="#" onclick="window.open('{!URLFOR($Page.HRC_OpportunityMatrix)}?print=1','_blank','width=900,height=600,menubar=no,status=no,toolbar=no,titlebar=no,location=no,left=100,top=100');" title="Printable View (New Window)">Printable View</a>
+    <div id="matrixWidget" cellspacing="4px">
+        <table>
+            <thead>
+                <tr>
+                    <th>Defend</th>
+                    <th>Capture</th>
+                </tr>
+            </thead>
+        </table>
+        <table id="matrixWidgetTable" cellspacing="4px">
+            <tbody>
+                <tr class="centralized-idns">
+                    <td class="defend"></td>
+                    <td class="capture"></td>
+                </tr>
+                <tr class="high-potential">
+                    <td class="defend"></td>
+                    <td class="capture"></td>
+                </tr>
+                <tr class="low-potential">
+                    <td class="defend"></td>
+                    <td class="capture"></td>
+                </tr>
+            </tbody> 
+        </table>
+    </div>
+    <h1>
+        Opportunity Matrix
+        <small><apex:outputLink target="_blank" value="{!URLFOR($Action.Opportunity.Tab, $ObjectType.Opportunity)}">Go to Standard Opportunity Tab</apex:outputLink></small>
+    </h1>
+    <p>{!$Setup.Matrix_Scoreboard_Settings__c.Opp_General_Description_Text__c}</p>
+    <apex:form styleClass="matrix-controls"> 
+         <apex:actionFunction name="renderMatrix" action="{!renderMatrix}" rerender="oppDataPanel"  status="dataStatus"/>
+         <apex:actionFunction name="rolePicklistChanged" action="{!picklistChanged}" rerender="empPanel, scriptPanel"  status="dataStatus"/>
+         <apex:outputPanel layout="none">
+             <div class="control-group" id="matrixCloseDate">
+                 <label for="closeDateRange">Close Date Range</label> 
+                 <apex:selectList id="closeDateRange" value="{!closeDateRange}" multiselect="false" size="1" onchange="javascript:renderMatrix();"> 
+                     <apex:selectOptions value="{!closeDateRanges}" />
+                 </apex:selectList>
+             </div>
+             <div class="control-group">
+                 <label for="probabilityRanges">Probability Range</label> 
+                 <apex:selectList id="probabilityRange" value="{!probabilityRange}" multiselect="false" size="1" onchange="javascript:renderMatrix();">
+                     <apex:selectOptions value="{!probabilityRanges}"/>
+                 </apex:selectList>
+             </div>
+             <apex:outputPanel layout="none" rendered="{!showRecordTypes}">
+                 <div class="control-group">
+                     <label for="probabilityRanges">Type of Opportunity</label> 
+                     <apex:selectList id="recordTypeId" value="{!recordTypeId}" multiselect="false" size="1" onchange="javascript:renderMatrix();">
+                         <apex:selectOptions value="{!types}"/>
+                     </apex:selectList>
+                 </div>
+             </apex:outputPanel>
+         </apex:outputPanel>
+         <apex:outputPanel id="empPanel" layout="none"> 
+            <apex:outputPanel layout="none" rendered="{!userLevel > 1}"> 
+             <div class="control-group" id="matrixRole">
+                 <label for="role">View Role</label>
+                 <apex:selectList id="role" value="{!userRole}" multiselect="false" size="1" onchange="javascript:rolePicklistChanged();">
+                     <apex:selectOptions value="{!roles}"/>
+                 </apex:selectList>
+             </div> 
+             <div class="control-group" id="matrixEmployee">  
+                 <label for="employee">View Employee</label>
+                 <apex:selectList id="employee" value="{!aeUser}" multiselect="false" size="1" onchange="javascript:renderMatrix();">
+                     <apex:selectOptions value="{!aeUsers}" />
+                 </apex:selectList> 
+             </div>
+           </apex:outputPanel>
+         </apex:outputPanel>
+         <apex:outputPanel layout="none">
+             <div class="control-group" id="matrixTerritory">
+                 <label for="territory">View Territory</label>
+                 <apex:selectList id="territory" value="{!territory}" multiselect="false" size="1" onchange="javascript:renderMatrix();">
+                     <apex:selectOptions value="{!territories}"/>
+                 </apex:selectList>
+             </div>
+         </apex:outputPanel>
+         <apex:actionFunction action="{!actionOnPageLoad}" name="actionOnPageLoad" rerender="oppDataPanel" oncomplete="javascript:loadData();"/>
+         <apex:actionFunction action="{!loadData}" name="loadData" status="dataStatus" rerender="oppMatrix"/>
+    </apex:form>
+    <apex:outputPanel id="oppDataPanel">
+        <apex:outputPanel rendered="{!showPanel}">
+            <apex:variable value="{!opportunities}" var="opps" /> 
+            <div id="matrix">
+                <apex:outputPanel id="oppMatrix">
+                    <apex:outputPanel id="matrixPanel" rendered="{!showData}">
+                        
+                        <table cellspacing="7px">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th><span class="tooltip">Defend <span><apex:outputText value="{!$Setup.Matrix_Scoreboard_Settings__c.Defend_Tooltip__c}" /></span></span></th>
+                                    <th><span class="tooltip">Capture <span><apex:outputText value="{!$Setup.Matrix_Scoreboard_Settings__c.Capture_Tooltip__c}" /></span></span></th>
+                                </tr>
+                            </thead>
+                        </table>
+                        <table id="matrixTable" cellspacing="7px">
+                            <tbody>
+                                <tr class="opp-header-row">
+                                    <td><a href="#" class="matrix-expand-all">Expand All</a></td>
+                                    <td>
+                                        <div>
+                                            <table class="opp-table opp-table-header">
+                                                <tr>
+                                                    <td class="opp-name">Account / Opportunity</td>
+                                                    <td class="opp-amount">Amount</td>
+                                                    <td class="opp-close">Close Date</td>
+                                                    <td class="opp-probability">Probability</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <table class="opp-table opp-table-header">
+                                                <tr>
+                                                    <td class="opp-name">Account / Opportunity</td>
+                                                    <td class="opp-amount">Amount</td>
+                                                    <td class="opp-close">Close Date</td>
+                                                    <td class="opp-probability">Probability</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tr>
+                                
+                                <tr class="centralized-idns">
+                                    <td class="row-header"><i class="icon-open-toggle"></i> <span class="tooltip"><apex:outputText value="Centralized IDN / Federal Gov't " /> <span><apex:outputText value="{!$Setup.Matrix_Scoreboard_Settings__c.Centralized_IDN_Tooltip__c}" /></span></span></td>
+                                    <td class="defend">
+                                        <div>
+                                            <span class="expand-all"><i class="icon-open-toggle"></i> Expand All</span>
+                                            <apex:variable value="{!0}" var="i" />
+                                            <apex:repeat value="{!opps}" var="a">
+                                                <apex:outputPanel layout="inline" rendered="{!a.account.Account_Matrix_Position__c == 0}" styleClass="opp-account {!IF(MOD(i, 2)==0,'even','odd')}">
+                                                    <a class="opps-toggle" href="#" data-toggle="opps{!a.account.id}">
+                                                        <i class="icon-open-toggle"></i>
+                                                    </a>
+                                                    <a href="#" class="opps-toggle" data-toggle="opps{!a.account.id}">
+                                                        {!IF(LEN(a.account.Name) > 25, TRIM(LEFT(a.account.Name,24)), a.account.Name)}<apex:outputText rendered="{!LEN(a.account.Name) > 24}">&hellip;</apex:outputText>
+                                                    </a>
+                                                    <small class="view-account">
+                                                        <apex:outputLink target="_blank" value="/{!a.account.id}">View Acct.</apex:outputLink>
+                                                    </small> 
+                                                    <span class="account-opp-total">
+                                                        Total 
+                                                        <strong>
+                                                            $<apex:outputText rendered="{!a.accountTotal >= 1000}" value="{!IF(a.accountTotal >= 1000000, TEXT(ROUND(a.accountTotal/1000000,1)) + 'M',IF(a.accountTotal >= 1000, TEXT(ROUND(a.accountTotal/1000,1)) + 'K', ''))}" /><apex:outputText rendered="{!a.accountTotal < 1000}" value="{0, number,##0}"><apex:param value="{!ROUND(a.accountTotal / 100,0)*100}" /></apex:outputText>
+                                                        </strong>
+                                                    </span>
+                                                    <div class="account-opps" id="opps{!a.account.id}">
+                                                        <table class="opp-table">
+                                                        <apex:repeat value="{!a.opportunities}" var="o">
+                                                            <tr>
+                                                                <td class="opp-name"><ul><li><apex:outputLink target="_blank" value="/{!o.id}">{!o.Name}</apex:outputLink></li></ul></td>
+                                                                <td class="opp-amount"><apex:outputText value="{0, number,$###,###,##0}"><apex:param value="{!ROUND(o.Amount / 100,0)*100}" /></apex:outputText></td>
+                                                                <td class="opp-close"><apex:outputText value="{0,date,M'/'dd'/'yy}"><apex:param value="{!o.CloseDate}" /></apex:outputText></td>
+                                                                <td class="opp-probability">{!o.Probability}%</td>
+                                                            </tr>
+                                                        </apex:repeat>  
+                                                        </table>
+                                                    </div>
+                                                    <apex:variable value="{!i + 1}" var="i" />
+                                                </apex:outputPanel>
+                                            </apex:repeat>
+                                            <apex:outputtext rendered="{!i == 0}">{!$Setup.Matrix_Scoreboard_Settings__c.Opps_No_Data_Text__c}</apex:outputtext>
+                                        </div>
+                                        <span class="group-total">Total <strong>$<apex:outputText rendered="{!idnDefendTotal>= 1000}" value="{!IF(idnDefendTotal>= 1000000, TEXT(ROUND(idnDefendTotal/1000000,1)) + 'M',IF(idnDefendTotal>= 1000, TEXT(ROUND(idnDefendTotal/1000,1)) + 'K', ''))}" /><apex:outputText rendered="{!idnDefendTotal< 1000}" value="{0, number,###,###,##0}"><apex:param value="{!idnDefendTotal}" /></apex:outputText></strong></span>
+                                    </td>
+                                    <td class="capture">
+                                        <div>
+                                            <span class="expand-all"><i class="icon-open-toggle"></i> Expand All</span>
+                                            <apex:variable value="{!0}" var="i" />
+                                            <apex:repeat value="{!opps}" var="a">
+                                                <apex:outputPanel layout="inline" rendered="{!a.account.Account_Matrix_Position__c == 1}" styleClass="opp-account {!IF(MOD(i, 2)==0,'even','odd')}">
+                                                    <a class="opps-toggle" href="#" data-toggle="opps{!a.account.id}">
+                                                        <i class="icon-open-toggle"></i>
+                                                    </a>
+                                                    <a href="#" class="opps-toggle" data-toggle="opps{!a.account.id}">
+                                                        {!IF(LEN(a.account.Name) > 25, TRIM(LEFT(a.account.Name,24)), a.account.Name)}<apex:outputText rendered="{!LEN(a.account.Name) > 24}">&hellip;</apex:outputText>
+                                                    </a>
+                                                    <small class="view-account">
+                                                        <apex:outputLink target="_blank" value="/{!a.account.id}">View Acct.</apex:outputLink>
+                                                    </small> 
+                                                    <span class="account-opp-total">
+                                                        Total 
+                                                        <strong>
+                                                            $<apex:outputText rendered="{!a.accountTotal >= 1000}" value="{!IF(a.accountTotal >= 1000000, TEXT(ROUND(a.accountTotal/1000000,1)) + 'M',IF(a.accountTotal >= 1000, TEXT(ROUND(a.accountTotal/1000,1)) + 'K', ''))}" /><apex:outputText rendered="{!a.accountTotal < 1000}" value="{0, number,##0}"><apex:param value="{!ROUND(a.accountTotal / 100,0)*100}" /></apex:outputText>
+                                                        </strong>
+                                                    </span>
+                                                    <div class="account-opps" id="opps{!a.account.id}">
+                                                        <table class="opp-table">
+                                                        <apex:repeat value="{!a.opportunities}" var="o">
+                                                            <tr>
+                                                                <td class="opp-name"><ul><li><apex:outputLink target="_blank" value="/{!o.id}">{!o.Name}</apex:outputLink></li></ul></td>
+                                                                <td class="opp-amount"><apex:outputText value="{0, number,$###,###,##0}"><apex:param value="{!ROUND(o.Amount / 100,0)*100}" /></apex:outputText></td>
+                                                                <td class="opp-close"><apex:outputText value="{0,date,M'/'dd'/'yy}"><apex:param value="{!o.CloseDate}" /></apex:outputText></td>
+                                                                <td class="opp-probability">{!o.Probability}%</td>
+                                                            </tr>
+                                                        </apex:repeat>  
+                                                        </table>
+                                                    </div>
+                                                    <apex:variable value="{!i + 1}" var="i" />
+                                                </apex:outputPanel>
+                                            </apex:repeat>
+                                            <apex:outputtext rendered="{!i == 0}">{!$Setup.Matrix_Scoreboard_Settings__c.Opps_No_Data_Text__c}</apex:outputtext>
+                                        </div>
+                                        <span class="group-total">Total <strong>$<apex:outputText rendered="{!idnCaptureTotal>= 1000}" value="{!IF(idnCaptureTotal>= 1000000, TEXT(ROUND(idnCaptureTotal/1000000,1)) + 'M',IF(idnCaptureTotal>= 1000, TEXT(ROUND(idnCaptureTotal/1000,1)) + 'K', ''))}" /><apex:outputText rendered="{!idnCaptureTotal< 1000}" value="{0, number,###,###,##0}"><apex:param value="{!idnCaptureTotal}" /></apex:outputText></strong></span>
+                                    </td>
+                                </tr>
+                                <tr class="high-potential">
+                                    <td class="row-header"><i class="icon-open-toggle"></i> <span class="tooltip">High Potential <span>{!$Setup.Matrix_Scoreboard_Settings__c.High_Priority_Tooltip__c}</span></span></td>
+                                    <td class="defend">
+                                        <div>
+                                            <span class="expand-all"><i class="icon-open-toggle"></i> Expand All</span>
+                                            <apex:variable value="{!0}" var="i" />
+                                            <apex:repeat value="{!opps}" var="a">
+                                                <apex:outputPanel layout="inline" rendered="{!a.account.Account_Matrix_Position__c == 2}" styleClass="opp-account {!IF(MOD(i, 2)==0,'even','odd')}">
+                                                    <a class="opps-toggle" href="#" data-toggle="opps{!a.account.id}">
+                                                        <i class="icon-open-toggle"></i>
+                                                    </a>
+                                                    <a href="#" class="opps-toggle" data-toggle="opps{!a.account.id}">
+                                                        {!IF(LEN(a.account.Name) > 25, TRIM(LEFT(a.account.Name,24)), a.account.Name)}<apex:outputText rendered="{!LEN(a.account.Name) > 24}">&hellip;</apex:outputText>
+                                                    </a>
+                                                    <small class="view-account">
+                                                        <apex:outputLink target="_blank" value="/{!a.account.id}">View Acct.</apex:outputLink>
+                                                    </small> 
+                                                    <span class="account-opp-total">
+                                                        Total 
+                                                        <strong>
+                                                            $<apex:outputText rendered="{!a.accountTotal >= 1000}" value="{!IF(a.accountTotal >= 1000000, TEXT(ROUND(a.accountTotal/1000000,1)) + 'M',IF(a.accountTotal >= 1000, TEXT(ROUND(a.accountTotal/1000,1)) + 'K', ''))}" /><apex:outputText rendered="{!a.accountTotal < 1000}" value="{0, number,##0}"><apex:param value="{!ROUND(a.accountTotal / 100,0)*100}" /></apex:outputText>
+                                                        </strong>
+                                                    </span>
+                                                    <div class="account-opps" id="opps{!a.account.id}">
+                                                        <table class="opp-table">
+                                                        <apex:repeat value="{!a.opportunities}" var="o">
+                                                            <tr>
+                                                                <td class="opp-name"><ul><li><apex:outputLink target="_blank" value="/{!o.id}">{!o.Name}</apex:outputLink></li></ul></td>
+                                                                <td class="opp-amount"><apex:outputText value="{0, number,$###,###,##0}"><apex:param value="{!ROUND(o.Amount / 100,0)*100}" /></apex:outputText></td>
+                                                                <td class="opp-close"><apex:outputText value="{0,date,M'/'dd'/'yy}"><apex:param value="{!o.CloseDate}" /></apex:outputText></td>
+                                                                <td class="opp-probability">{!o.Probability}%</td>
+                                                            </tr>
+                                                        </apex:repeat>  
+                                                        </table>
+                                                    </div>
+                                                    <apex:variable value="{!i + 1}" var="i" />
+                                                </apex:outputPanel>
+                                            </apex:repeat>
+                                            <apex:outputtext rendered="{!i == 0}">{!$Setup.Matrix_Scoreboard_Settings__c.Opps_No_Data_Text__c}</apex:outputtext>
+                                        </div>
+                                        <span class="group-total">Total <strong>$<apex:outputText rendered="{!highDefendTotal>= 1000}" value="{!IF(highDefendTotal>= 1000000, TEXT(ROUND(highDefendTotal/1000000,1)) + 'M',IF(highDefendTotal>= 1000, TEXT(ROUND(highDefendTotal/1000,1)) + 'K', ''))}" /><apex:outputText rendered="{!highDefendTotal< 1000}" value="{0, number,###,###,##0}"><apex:param value="{!highDefendTotal}" /></apex:outputText></strong></span>
+                                    </td>
+                                    <td class="capture">
+                                        <div>
+                                            <span class="expand-all"><i class="icon-open-toggle"></i> Expand All</span>
+                                            <apex:variable value="{!0}" var="i" />
+                                            <apex:repeat value="{!opps}" var="a">
+                                                <apex:outputPanel layout="inline" rendered="{!a.account.Account_Matrix_Position__c == 3}" styleClass="opp-account {!IF(MOD(i, 2)==0,'even','odd')}">
+                                                    <a class="opps-toggle" href="#" data-toggle="opps{!a.account.id}">
+                                                        <i class="icon-open-toggle"></i>
+                                                    </a>
+                                                    <a href="#" class="opps-toggle" data-toggle="opps{!a.account.id}">
+                                                        {!IF(LEN(a.account.Name) > 25, TRIM(LEFT(a.account.Name,24)), a.account.Name)}<apex:outputText rendered="{!LEN(a.account.Name) > 24}">&hellip;</apex:outputText>
+                                                    </a>
+                                                    <small class="view-account">
+                                                        <apex:outputLink target="_blank" value="/{!a.account.id}">View Acct.</apex:outputLink>
+                                                    </small> 
+                                                    <span class="account-opp-total">
+                                                        Total 
+                                                        <strong>
+                                                            $<apex:outputText rendered="{!a.accountTotal >= 1000}" value="{!IF(a.accountTotal >= 1000000, TEXT(ROUND(a.accountTotal/1000000,1)) + 'M',IF(a.accountTotal >= 1000, TEXT(ROUND(a.accountTotal/1000,1)) + 'K', ''))}" /><apex:outputText rendered="{!a.accountTotal < 1000}" value="{0, number,##0}"><apex:param value="{!ROUND(a.accountTotal / 100,0)*100}" /></apex:outputText>
+                                                        </strong>
+                                                    </span>
+                                                    <div class="account-opps" id="opps{!a.account.id}">
+                                                        <table class="opp-table">
+                                                        <apex:repeat value="{!a.opportunities}" var="o">
+                                                            <tr>
+                                                                <td class="opp-name"><ul><li><apex:outputLink target="_blank" value="/{!o.id}">{!o.Name}</apex:outputLink></li></ul></td>
+                                                                <td class="opp-amount"><apex:outputText value="{0, number,$###,###,##0}"><apex:param value="{!ROUND(o.Amount / 100,0)*100}" /></apex:outputText></td>
+                                                                <td class="opp-close"><apex:outputText value="{0,date,M'/'dd'/'yy}"><apex:param value="{!o.CloseDate}" /></apex:outputText></td>
+                                                                <td class="opp-probability">{!o.Probability}%</td>
+                                                            </tr>
+                                                        </apex:repeat>  
+                                                        </table>
+                                                    </div>
+                                                    <apex:variable value="{!i + 1}" var="i" />
+                                                </apex:outputPanel>
+                                            </apex:repeat>
+                                            <apex:outputtext rendered="{!i == 0}">{!$Setup.Matrix_Scoreboard_Settings__c.Opps_No_Data_Text__c}</apex:outputtext>
+                                        </div>
+                                        <span class="group-total">Total <strong>$<apex:outputText rendered="{!highCaptureTotal>= 1000}" value="{!IF(highCaptureTotal>= 1000000, TEXT(ROUND(highCaptureTotal/1000000,1)) + 'M',IF(highCaptureTotal>= 1000, TEXT(ROUND(highCaptureTotal/1000,1)) + 'K', ''))}" /><apex:outputText rendered="{!highCaptureTotal< 1000}" value="{0, number,###,###,##0}"><apex:param value="{!highCaptureTotal}" /></apex:outputText></strong></span>
+                                    </td>
+                                </tr>
+                                <tr class="low-potential">
+                                    <td class="row-header"><i class="icon-open-toggle"></i> <span class="tooltip">Low Acuity <span>{!$Setup.Matrix_Scoreboard_Settings__c.Low_Acuity_Tooltip__c}</span></span></td>
+                                    <td class="defend">
+                                        <div>
+                                            <span class="expand-all"><i class="icon-open-toggle"></i> Expand All</span>
+                                            <apex:variable value="{!0}" var="i" />
+                                            <apex:repeat value="{!opps}" var="a">
+                                                <apex:outputPanel layout="inline" rendered="{!a.account.Account_Matrix_Position__c == 4}" styleClass="opp-account {!IF(MOD(i, 2)==0,'even','odd')}">
+                                                    <a class="opps-toggle" href="#" data-toggle="opps{!a.account.id}">
+                                                        <i class="icon-open-toggle"></i>
+                                                    </a>
+                                                    <a href="#" class="opps-toggle" data-toggle="opps{!a.account.id}">
+                                                        {!IF(LEN(a.account.Name) > 25, TRIM(LEFT(a.account.Name,24)), a.account.Name)}<apex:outputText rendered="{!LEN(a.account.Name) > 24}">&hellip;</apex:outputText>
+                                                    </a>
+                                                    <small class="view-account">
+                                                        <apex:outputLink target="_blank" value="/{!a.account.id}">View Acct.</apex:outputLink>
+                                                    </small> 
+                                                    <span class="account-opp-total">
+                                                        Total 
+                                                        <strong>
+                                                            $<apex:outputText rendered="{!a.accountTotal >= 1000}" value="{!IF(a.accountTotal >= 1000000, TEXT(ROUND(a.accountTotal/1000000,1)) + 'M',IF(a.accountTotal >= 1000, TEXT(ROUND(a.accountTotal/1000,1)) + 'K', ''))}" /><apex:outputText rendered="{!a.accountTotal < 1000}" value="{0, number,##0}"><apex:param value="{!ROUND(a.accountTotal / 100,0)*100}" /></apex:outputText>
+                                                        </strong>
+                                                    </span>
+                                                    <div class="account-opps" id="opps{!a.account.id}">
+                                                        <table class="opp-table">
+                                                        <apex:repeat value="{!a.opportunities}" var="o">
+                                                            <tr>
+                                                                <td class="opp-name"><ul><li><apex:outputLink target="_blank" value="/{!o.id}">{!o.Name}</apex:outputLink></li></ul></td>
+                                                                <td class="opp-amount"><apex:outputText value="{0, number,$###,###,##0}"><apex:param value="{!ROUND(o.Amount / 100,0)*100}" /></apex:outputText></td>
+                                                                <td class="opp-close"><apex:outputText value="{0,date,M'/'dd'/'yy}"><apex:param value="{!o.CloseDate}" /></apex:outputText></td>
+                                                                <td class="opp-probability">{!o.Probability}%</td>
+                                                            </tr>
+                                                        </apex:repeat>  
+                                                        </table>
+                                                    </div>
+                                                    <apex:variable value="{!i + 1}" var="i" />
+                                                </apex:outputPanel>
+                                            </apex:repeat>
+                                            <apex:outputtext rendered="{!i == 0}">{!$Setup.Matrix_Scoreboard_Settings__c.Opps_No_Data_Text__c}</apex:outputtext>
+                                        </div>
+                                        <span class="group-total">Total <strong>$<apex:outputText rendered="{!lowDefendTotal>= 1000}" value="{!IF(lowDefendTotal>= 1000000, TEXT(ROUND(lowDefendTotal/1000000,1)) + 'M',IF(lowDefendTotal>= 1000, TEXT(ROUND(lowDefendTotal/1000,1)) + 'K', ''))}" /><apex:outputText rendered="{!lowDefendTotal< 1000}" value="{0, number,###,###,##0}"><apex:param value="{!lowDefendTotal}" /></apex:outputText></strong></span>
+                                    </td>
+                                    <td class="capture">
+                                        <div>
+                                            <span class="expand-all"><i class="icon-open-toggle"></i> Expand All</span>
+                                            <apex:variable value="{!0}" var="i" />
+                                            <apex:repeat value="{!opps}" var="a">
+                                                <apex:outputPanel layout="inline" rendered="{!a.account.Account_Matrix_Position__c == 5}" styleClass="opp-account {!IF(MOD(i, 2)==0,'even','odd')}">
+                                                    <a class="opps-toggle" href="#" data-toggle="opps{!a.account.id}">
+                                                        <i class="icon-open-toggle"></i>
+                                                    </a>
+                                                    <a href="#" class="opps-toggle" data-toggle="opps{!a.account.id}">
+                                                        {!IF(LEN(a.account.Name) > 25, TRIM(LEFT(a.account.Name,24)), a.account.Name)}<apex:outputText rendered="{!LEN(a.account.Name) > 24}">&hellip;</apex:outputText>
+                                                    </a>
+                                                    <small class="view-account">
+                                                        <apex:outputLink target="_blank" value="/{!a.account.id}">View Acct.</apex:outputLink>
+                                                    </small> 
+                                                    <span class="account-opp-total">
+                                                        Total 
+                                                        <strong>
+                                                            $<apex:outputText rendered="{!a.accountTotal >= 1000}" value="{!IF(a.accountTotal >= 1000000, TEXT(ROUND(a.accountTotal/1000000,1)) + 'M',IF(a.accountTotal >= 1000, TEXT(ROUND(a.accountTotal/1000,1)) + 'K', ''))}" /><apex:outputText rendered="{!a.accountTotal < 1000}" value="{0, number,##0}"><apex:param value="{!ROUND(a.accountTotal / 100,0)*100}" /></apex:outputText>
+                                                        </strong>
+                                                    </span>
+                                                    <div class="account-opps" id="opps{!a.account.id}">
+                                                        <table class="opp-table"> 
+                                                        <apex:repeat value="{!a.opportunities}" var="o">
+                                                            <tr>
+                                                                <td class="opp-name"><ul><li><apex:outputLink target="_blank" value="/{!o.id}">{!o.Name}</apex:outputLink></li></ul></td>
+                                                                <td class="opp-amount"><apex:outputText value="{0, number,$###,###,##0}"><apex:param value="{!ROUND(o.Amount / 100,0)*100}" /></apex:outputText></td>
+                                                                <td class="opp-close"><apex:outputText value="{0,date,M'/'dd'/'yy}"><apex:param value="{!o.CloseDate}" /></apex:outputText></td>
+                                                                <td class="opp-probability">{!o.Probability}%</td>
+                                                            </tr>
+                                                        </apex:repeat>  
+                                                        </table>
+                                                    </div>
+                                                    <apex:variable value="{!i + 1}" var="i" />
+                                                </apex:outputPanel>
+                                            </apex:repeat>
+                                            <apex:outputtext rendered="{!i == 0}">{!$Setup.Matrix_Scoreboard_Settings__c.Opps_No_Data_Text__c}</apex:outputtext>
+                                        </div>
+                                        <span class="group-total">Total <strong>$<apex:outputText rendered="{!lowCaptureTotal>= 1000}" value="{!IF(lowCaptureTotal>= 1000000, TEXT(ROUND(lowCaptureTotal/1000000,1)) + 'M',IF(lowCaptureTotal>= 1000, TEXT(ROUND(lowCaptureTotal/1000,1)) + 'K', ''))}" /><apex:outputText rendered="{!lowCaptureTotal< 1000}" value="{0, number,###,###,##0}"><apex:param value="{!lowCaptureTotal}" /></apex:outputText></strong></span>
+                                    </td>
+                                </tr> 
+                                <tr>
+                                    <td></td>
+                                    <td class="total-cell">
+                                        TOTAL DEFEND <strong>$<apex:outputText rendered="{!defendGrandTotal>= 1000}" value="{!IF(defendGrandTotal>= 1000000, TEXT(ROUND(defendGrandTotal/1000000,1)) + 'M',IF(defendGrandTotal>= 1000, TEXT(ROUND(defendGrandTotal/1000,1)) + 'K', ''))}" /><apex:outputText rendered="{!defendGrandTotal< 1000}" value="{0, number,###,###,##0}"><apex:param value="{!defendGrandTotal}" /></apex:outputText></strong>
+                                    </td>
+                                    <td class="total-cell">
+                                        TOTAL CAPTURE <strong>$<apex:outputText rendered="{!captureGrandTotal>= 1000}" value="{!IF(captureGrandTotal>= 1000000, TEXT(ROUND(captureGrandTotal/1000000,1)) + 'M',IF(captureGrandTotal>= 1000, TEXT(ROUND(captureGrandTotal/1000,1)) + 'K', ''))}" /><apex:outputText rendered="{!captureGrandTotal< 1000}" value="{0, number,###,###,##0}"><apex:param value="{!captureGrandTotal}" /></apex:outputText></strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td class="total-cell total-combined" colspan="2">
+                                        <apex:variable value="{!defendGrandTotal + captureGrandTotal}" var="grandTotal" />
+                                        TOTAL COMBINED <strong>$<apex:outputText rendered="{!grandTotal>= 1000}" value="{!IF(grandTotal>= 1000000, TEXT(ROUND(grandTotal/1000000,1)) + 'M',IF(grandTotal>= 1000, TEXT(ROUND(grandTotal/1000,1)) + 'K', ''))}" /><apex:outputText rendered="{!grandTotal< 1000}" value="{0, number,###,###,##0}"><apex:param value="{!grandTotal}" /></apex:outputText></strong>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <apex:outputpanel rendered="{!IF(OR(ISNULL($CurrentPage.parameters.print),NOT($CurrentPage.parameters.print='1')),true,false)}" layout="none">
+                        <script>
+                            $(function(){
+                                $('#matrix tbody').on('click', 'td.row-header', function(e){
+                                    $(this).find('.icon-open-toggle').toggleClass('open').find('div').slideToggle();
+                                    $(this).parent().find('td > div').slideToggle();
+                                    var toggles = $('#matrixTable .row-header .icon-open-toggle').length;
+                                    var togglesOpen = $('#matrixTable .row-header .icon-open-toggle.open').length;
+                                    if(toggles == togglesOpen){
+                                        $('#matrixTable .matrix-expand-all').addClass('open').text('Collapse All');
+                                    }else{
+                                        $('#matrixTable .matrix-expand-all').removeClass('open').text('Expand All');
+                                    }
+                                });
+                                $('#matrixTable').on('click', '.opps-toggle', function(e){
+                                    e.preventDefault();
+                                    var aId = $(this).attr('data-toggle');
+                                    $('#' + aId).slideToggle();
+                                    $('[data-toggle="'+aId+'"]').find('.icon-open-toggle').toggleClass('open');
+                                    var cell = $(this).parent().parent();
+                                    var closedOpps = cell.find('.opps-toggle .icon-open-toggle:not(.open)').length;
+                                    console.log(closedOpps);
+                                    if(closedOpps == 0){
+                                        cell.find('.expand-all').addClass('open').html('<i class="icon-open-toggle open"></i> Collapse All');
+                                    }else{
+                                        cell.find('.expand-all').removeClass('open').html('<i class="icon-open-toggle"></i> Expand All');
+                                    }
+                                    
+                                });
+                                $('#matrixTable').on('click', '.expand-all', function(e){
+                                    e.preventDefault();
+                                    var el = $(this);
+                                    el.toggleClass('open');
+                                    if(el.hasClass('open')){
+                                        el.html('<i class="icon-open-toggle open"></i> Collapse All');
+                                        el.siblings('.opp-account').find('.account-opps').slideDown();
+                                        el.siblings('.opp-account').find('.icon-open-toggle').addClass('open');
+                                    }else{
+                                        el.html('<i class="icon-open-toggle"></i> Expand All');
+                                        el.siblings('.opp-account').find('.account-opps').slideUp();
+                                        el.siblings('.opp-account').find('.icon-open-toggle').removeClass('open');
+                                    }
+                                    
+                                });
+                                $('#matrixTable').on('click', '.matrix-expand-all', function(e){
+                                    e.preventDefault();
+                                    var el = $(this);
+                                    el.toggleClass('open');
+                                    if(el.hasClass('open')){
+                                        el.text('Collapse All');
+                                        $('#matrixTable .row-header .icon-open-toggle').not('.open').trigger('click');
+                                    }else{
+                                        el.text('Expand All');
+                                        $('#matrixTable .row-header .icon-open-toggle.open').trigger('click');
+                                    }
+                                    
+                                });
+                                var matrixTop = $('#matrix').offset().top;
+                                var matrixHeight = $('#matrix').height();
+                                var windowBottom = $(window).height();
+                                var divHeight = (windowBottom - matrixTop - matrixHeight < 200) ? 200 : windowBottom - matrixTop - matrixHeight;
+                                $('#matrix tr:not(.opp-header-row) td > div').css('height', divHeight);
+                                $('#matrix .centralized-idns .row-header').trigger('click');
+                            });
+                        </script>
+                        </apex:outputPanel>
+                    </apex:outputPanel>
+                    </apex:outputPanel>
+            </div>
+        </apex:outputPanel>
+    </apex:outputPanel>
+    
+</div>
+
+     <apex:outputPanel id="scriptPanel">
+        <script type="text/javascript">
+            var empDiv = document.getElementById('matrixEmployee');
+            if(empDiv) {
+                var selectObjs = empDiv.getElementsByTagName('SELECT');
+                for(var i = 0; i < selectObjs.length; i++) {
+                    if(selectObjs[i].id.indexOf('employee') >= 0) {
+                        if(selectObjs[i].options.length < 2) {
+                            empDiv.style.display = 'none';
+                        } else {
+                            empDiv.style.display = 'block';
+                        }
+                    }
+                }
+            }
+        </script>
+     </apex:outputPanel>
+     <script type="text/javascript">
+        if (window.attachEvent) 
+            window.attachEvent('onload',function() { 
+                actionOnPageLoad();
+            }); 
+        else if (window.addEventListener) 
+            window.addEventListener('load',function() { 
+                actionOnPageLoad(); 
+            }, false);
+        
+        
+     </script>
+</apex:page>

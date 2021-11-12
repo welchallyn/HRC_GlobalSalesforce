@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRC_PIR_SITE_SOURCING_Leader_Price_Increase_Request</fullName>
+    <filterScope>Queue</filterScope>
+    <label>HRC PIR SITE SOURCING Leader</label>
+    <queue>HRC_PIR_SITE_SOURCING_Leader</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

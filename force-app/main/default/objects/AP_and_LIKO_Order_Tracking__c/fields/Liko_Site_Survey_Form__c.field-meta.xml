@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Liko_Site_Survey_Form__c</fullName>
+    <externalId>false</externalId>
+    <formula>HYPERLINK(&apos;https://hill-rom--hrctest.my.salesforce.com/sfc/p/E0000000KMt9/a/0L000000CrAk/RYTE0y1_GUArHXVtCIJWsXvewnqlaw8xJzgzATz9nIw&apos; , &quot;Click Here&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Liko Site Survey Form</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

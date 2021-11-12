@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Raised_Trav_Rail_Carrier__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Check if this system requires raised traverse rail carriers.</inlineHelpText>
+    <label>Type Trav Rail Carrier</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Standard</fullName>
+                <default>false</default>
+                <label>Standard</label>
+            </value>
+            <value>
+                <fullName>Raised</fullName>
+                <default>false</default>
+                <label>Raised</label>
+            </value>
+            <value>
+                <fullName>Lowered</fullName>
+                <default>false</default>
+                <label>Lowered</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

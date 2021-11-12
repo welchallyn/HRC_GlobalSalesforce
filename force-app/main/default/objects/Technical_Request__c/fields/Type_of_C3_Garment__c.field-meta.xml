@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_of_C3_Garment__c</fullName>
+    <externalId>false</externalId>
+    <label>Type of C3 Garment</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Full Garment</fullName>
+                <default>false</default>
+                <label>Full Garment</label>
+            </value>
+            <value>
+                <fullName>Shell Only</fullName>
+                <default>false</default>
+                <label>Shell Only</label>
+            </value>
+            <value>
+                <fullName>Bladder Only</fullName>
+                <default>false</default>
+                <label>Bladder Only</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

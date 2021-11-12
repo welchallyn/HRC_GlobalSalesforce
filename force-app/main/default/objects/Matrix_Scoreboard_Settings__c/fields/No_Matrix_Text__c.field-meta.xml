@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Matrix_Text__c</fullName>
+    <description>Show this text in place of the matrix when the role/employee filters have not been selected yet. (i.e. &quot;Select a Role and Employee to view the Account Matrix.&quot;)</description>
+    <externalId>false</externalId>
+    <label>No Matrix Text</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

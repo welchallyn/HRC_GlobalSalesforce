@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PO_Num_Required_if_NC_PO_Required</fullName>
+    <active>true</active>
+    <description>PO Number is Required if the N/C PO Required is marked as Yes</description>
+    <errorConditionFormula>ISPICKVAL(N_C_PO_required__c ,&quot;Yes&quot;) &amp;&amp; ISBLANK(  PO__c )</errorConditionFormula>
+    <errorDisplayField>PO__c</errorDisplayField>
+    <errorMessage>Please Enter a PO Number</errorMessage>
+</ValidationRule>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Initiates a Flow which creates tiering tasks based on Tier category in INT Conference Campaigns.
+
+-- Created as part of CR: CR00030177 | BRM IT Form: IT-REQ-1250</description>
+    <flowDefinition>Tier_Task_Creation</flowDefinition>
+    <label>Create Tiering Tasks</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

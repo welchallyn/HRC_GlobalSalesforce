@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Km_Miles__c</fullName>
+    <externalId>false</externalId>
+    <label>Km/Miles</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Km</fullName>
+                <default>false</default>
+                <label>Km</label>
+            </value>
+            <value>
+                <fullName>Miles</fullName>
+                <default>false</default>
+                <label>Miles</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Create_Opportunity</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Create Opportunity</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/006/e?retURL=%2F006%2Fo&amp;RecordType= 
+{!IF( $User.ProfileId =&apos;00eE0000000E0wB&apos;,&apos;012E00000000GzA&apos;, 
+(IF( $User.ProfileId =&apos;00eE0000000E5At&apos;,&apos;012E00000000GzA&apos;,
+(IF( $User.ProfileId =&apos;00eE0000000E5AK&apos;,&apos;012E00000000GzA&apos;,
+(IF( $User.ProfileId =&apos;00eE0000000E5AF&apos;,&apos;012E00000000GzA&apos;,
+(IF( $User.ProfileId =&apos;00eE0000000E5AZ&apos;,&apos;012E00000000GzF&apos;,
+(IF( $User.ProfileId =&apos;00eE0000000E5Ae&apos;,&apos;012E00000000GzK&apos;,
+(IF( $User.ProfileId =&apos;00eE0000000E5AU&apos;,&apos;012E00000000GzP&apos;,
+(IF( $User.ProfileId =&apos;00eE0000000E1ph&apos;,&apos;012M00000008dMR&apos;,&apos;012E00000000GzA&apos;)))))))))))))))
+}&amp;ent=Opportunity&amp;00NE0000000HoID={!JDE_Prop__c.Name}&amp;opp3={!JDE_Prop__c.Ship_To__c}&amp;opp4_lkid={!JDE_Prop__c.Ship_ToId__c}&amp;opp9={!TODAY()}&amp;opp11=Qualified Opportunity&amp;00NM0000000Xc4q={!JDE_Prop__c.Name}&amp;00NE0000003ZWOR=1</url>
+</WebLink>

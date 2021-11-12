@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Name__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>Name of Attending Person. If person does not exist add as a New Contact</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Name of Attending Person. If person does not exist add as a New Contact</inlineHelpText>
+    <label>Contact Name</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Guests</relationshipLabel>
+    <relationshipName>Guests</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

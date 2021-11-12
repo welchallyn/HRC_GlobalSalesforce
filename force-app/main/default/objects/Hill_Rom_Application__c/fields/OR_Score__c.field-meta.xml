@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OR_Score__c</fullName>
+    <description>Score for Operation and Risk</description>
+    <externalId>false</externalId>
+    <formula>VALUE(TEXT(Complexity__c))+ VALUE(TEXT(Reliance_on_Subject_Matter_Expert__c))+ VALUE(TEXT(Maintenance_Change_Factors__c))+ VALUE(TEXT(Supportability__c))+ VALUE(TEXT(Availability_and_Cost_of_Support_Skills__c))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Score for Operation and Risk</inlineHelpText>
+    <label>OR Score</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

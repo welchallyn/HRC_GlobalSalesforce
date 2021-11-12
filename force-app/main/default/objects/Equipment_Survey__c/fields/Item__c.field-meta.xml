@@ -1,0 +1,1588 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Item__c</fullName>
+    <externalId>false</externalId>
+    <label>Item</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Company__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Total Care</fullName>
+                <default>false</default>
+                <label>Total Care</label>
+            </value>
+            <value>
+                <fullName>Total Care with Duo II</fullName>
+                <default>false</default>
+                <label>Total Care with Duo II</label>
+            </value>
+            <value>
+                <fullName>Total Care SpO2rt</fullName>
+                <default>false</default>
+                <label>Total Care SpO2rt</label>
+            </value>
+            <value>
+                <fullName>Total Care P500</fullName>
+                <default>false</default>
+                <label>Total Care P500</label>
+            </value>
+            <value>
+                <fullName>Progressa Dining Chair Accumax</fullName>
+                <default>false</default>
+                <label>Progressa Dining Chair Accumax</label>
+            </value>
+            <value>
+                <fullName>Progressa Chair Egress P500</fullName>
+                <default>false</default>
+                <label>Progressa Chair Egress P500</label>
+            </value>
+            <value>
+                <fullName>Progressa Chair Egress P500 PMMS</fullName>
+                <default>false</default>
+                <label>Progressa Chair Egress P500 PMMS</label>
+            </value>
+            <value>
+                <fullName>Progressa Chair Egress Pulmonary</fullName>
+                <default>false</default>
+                <label>Progressa Chair Egress Pulmonary</label>
+            </value>
+            <value>
+                <fullName>Progressa Chair Egress Pulmonary PMMS</fullName>
+                <default>false</default>
+                <label>Progressa Chair Egress Pulmonary PMMS</label>
+            </value>
+            <value>
+                <fullName>Versacare</fullName>
+                <default>false</default>
+                <label>Versacare</label>
+            </value>
+            <value>
+                <fullName>AvantGuard 800 / 1200 / 1400</fullName>
+                <default>false</default>
+                <label>AvantGuard 800 / 1200 / 1400</label>
+            </value>
+            <value>
+                <fullName>AvantGuard 1600</fullName>
+                <default>false</default>
+                <label>AvantGuard 1600</label>
+            </value>
+            <value>
+                <fullName>Hill-Rom 900</fullName>
+                <default>false</default>
+                <label>Hill-Rom 900</label>
+            </value>
+            <value>
+                <fullName>Hill-Rom 900 SSR</fullName>
+                <default>false</default>
+                <label>Hill-Rom 900 SSR</label>
+            </value>
+            <value>
+                <fullName>Hill-Rom 1000</fullName>
+                <default>false</default>
+                <label>Hill-Rom 1000</label>
+            </value>
+            <value>
+                <fullName>Hill-Rom 405</fullName>
+                <default>false</default>
+                <label>Hill-Rom 405</label>
+            </value>
+            <value>
+                <fullName>Hill-Rom 305</fullName>
+                <default>false</default>
+                <label>Hill-Rom 305</label>
+            </value>
+            <value>
+                <fullName>Centuris</fullName>
+                <default>false</default>
+                <label>Centuris</label>
+            </value>
+            <value>
+                <fullName>Medicraft MedSurg Beds</fullName>
+                <default>false</default>
+                <label>Medicraft MedSurg Beds</label>
+            </value>
+            <value>
+                <fullName>AvantGuard 800 LTC</fullName>
+                <default>false</default>
+                <label>AvantGuard 800 LTC</label>
+            </value>
+            <value>
+                <fullName>Hill-Rom 200</fullName>
+                <default>false</default>
+                <label>Hill-Rom 200</label>
+            </value>
+            <value>
+                <fullName>Trio</fullName>
+                <default>false</default>
+                <label>Trio</label>
+            </value>
+            <value>
+                <fullName>Medicraft LTC Beds</fullName>
+                <default>false</default>
+                <label>Medicraft LTC Beds</label>
+            </value>
+            <value>
+                <fullName>Total Care Bariatric</fullName>
+                <default>false</default>
+                <label>Total Care Bariatric</label>
+            </value>
+            <value>
+                <fullName>Triflex</fullName>
+                <default>false</default>
+                <label>Triflex</label>
+            </value>
+            <value>
+                <fullName>ExcelCare</fullName>
+                <default>false</default>
+                <label>ExcelCare</label>
+            </value>
+            <value>
+                <fullName>Affinity</fullName>
+                <default>false</default>
+                <label>Affinity</label>
+            </value>
+            <value>
+                <fullName>Affinity 2</fullName>
+                <default>false</default>
+                <label>Affinity 2</label>
+            </value>
+            <value>
+                <fullName>Affinity III</fullName>
+                <default>false</default>
+                <label>Affinity III</label>
+            </value>
+            <value>
+                <fullName>Affinity IV</fullName>
+                <default>false</default>
+                <label>Affinity IV</label>
+            </value>
+            <value>
+                <fullName>Transport</fullName>
+                <default>false</default>
+                <label>Transport</label>
+            </value>
+            <value>
+                <fullName>Procedural</fullName>
+                <default>false</default>
+                <label>Procedural</label>
+            </value>
+            <value>
+                <fullName>Other Stretchers</fullName>
+                <default>false</default>
+                <label>Other Stretchers</label>
+            </value>
+            <value>
+                <fullName>Other PLV Beds</fullName>
+                <default>false</default>
+                <label>Other PLV Beds</label>
+            </value>
+            <value>
+                <fullName>Other US Beds</fullName>
+                <default>false</default>
+                <label>Other US Beds</label>
+            </value>
+            <value>
+                <fullName>Other Medicraft Beds</fullName>
+                <default>false</default>
+                <label>Other Medicraft Beds</label>
+            </value>
+            <value>
+                <fullName>Clinitrons</fullName>
+                <default>false</default>
+                <label>Clinitrons</label>
+            </value>
+            <value>
+                <fullName>Duo2</fullName>
+                <default>false</default>
+                <label>Duo2</label>
+            </value>
+            <value>
+                <fullName>Care Assist</fullName>
+                <default>false</default>
+                <label>Care Assist</label>
+            </value>
+            <value>
+                <fullName>Clinactiv</fullName>
+                <default>false</default>
+                <label>Clinactiv</label>
+            </value>
+            <value>
+                <fullName>Primo</fullName>
+                <default>false</default>
+                <label>Primo</label>
+            </value>
+            <value>
+                <fullName>Accumax</fullName>
+                <default>false</default>
+                <label>Accumax</label>
+            </value>
+            <value>
+                <fullName>P280</fullName>
+                <default>false</default>
+                <label>P280</label>
+            </value>
+            <value>
+                <fullName>P330</fullName>
+                <default>false</default>
+                <label>P330</label>
+            </value>
+            <value>
+                <fullName>NP50</fullName>
+                <default>false</default>
+                <label>NP50</label>
+            </value>
+            <value>
+                <fullName>NP100</fullName>
+                <default>false</default>
+                <label>NP100</label>
+            </value>
+            <value>
+                <fullName>NP150</fullName>
+                <default>false</default>
+                <label>NP150</label>
+            </value>
+            <value>
+                <fullName>Other Mattresses</fullName>
+                <default>false</default>
+                <label>Other Mattresses</label>
+            </value>
+            <value>
+                <fullName>Pluvigner Overbed Tables</fullName>
+                <default>false</default>
+                <label>Pluvigner Overbed Tables</label>
+            </value>
+            <value>
+                <fullName>Pluvigner Armchairs</fullName>
+                <default>false</default>
+                <label>Pluvigner Armchairs</label>
+            </value>
+            <value>
+                <fullName>LTC Furniture</fullName>
+                <default>false</default>
+                <label>LTC Furniture</label>
+            </value>
+            <value>
+                <fullName>Pluvigner Acute Furniture</fullName>
+                <default>false</default>
+                <label>Pluvigner Acute Furniture</label>
+            </value>
+            <value>
+                <fullName>Pluvigner Acute Cabinet</fullName>
+                <default>false</default>
+                <label>Pluvigner Acute Cabinet</label>
+            </value>
+            <value>
+                <fullName>Pluvigner Acute Lockers</fullName>
+                <default>false</default>
+                <label>Pluvigner Acute Lockers</label>
+            </value>
+            <value>
+                <fullName>US Overbed Tables</fullName>
+                <default>false</default>
+                <label>US Overbed Tables</label>
+            </value>
+            <value>
+                <fullName>US Bedside Cabinet</fullName>
+                <default>false</default>
+                <label>US Bedside Cabinet</label>
+            </value>
+            <value>
+                <fullName>US Chairs</fullName>
+                <default>false</default>
+                <label>US Chairs</label>
+            </value>
+            <value>
+                <fullName>US Premium &amp; Birthing Furniture</fullName>
+                <default>false</default>
+                <label>US Premium &amp; Birthing Furniture</label>
+            </value>
+            <value>
+                <fullName>Bariatric Accessories &amp; Furniture</fullName>
+                <default>false</default>
+                <label>Bariatric Accessories &amp; Furniture</label>
+            </value>
+            <value>
+                <fullName>Other Furniture</fullName>
+                <default>false</default>
+                <label>Other Furniture</label>
+            </value>
+            <value>
+                <fullName>Vest</fullName>
+                <default>false</default>
+                <label>Vest</label>
+            </value>
+            <value>
+                <fullName>S 962-2</fullName>
+                <default>false</default>
+                <label>S 962-2</label>
+            </value>
+            <value>
+                <fullName>S 962-2 W</fullName>
+                <default>false</default>
+                <label>S 962-2 W</label>
+            </value>
+            <value>
+                <fullName>S 962-2 vis-à-vis</fullName>
+                <default>false</default>
+                <label>S 962-2 vis-à-vis</label>
+            </value>
+            <value>
+                <fullName>S 582</fullName>
+                <default>false</default>
+                <label>S 582</label>
+            </value>
+            <value>
+                <fullName>S 382 VAV / 3082 VAV</fullName>
+                <default>false</default>
+                <label>S 382 VAV / 3082 VAV</label>
+            </value>
+            <value>
+                <fullName>S 282/382</fullName>
+                <default>false</default>
+                <label>S 282/382</label>
+            </value>
+            <value>
+                <fullName>2080</fullName>
+                <default>false</default>
+                <label>2080</label>
+            </value>
+            <value>
+                <fullName>2082</fullName>
+                <default>false</default>
+                <label>2082</label>
+            </value>
+            <value>
+                <fullName>3080</fullName>
+                <default>false</default>
+                <label>3080</label>
+            </value>
+            <value>
+                <fullName>3082</fullName>
+                <default>false</default>
+                <label>3082</label>
+            </value>
+            <value>
+                <fullName>5380</fullName>
+                <default>false</default>
+                <label>5380</label>
+            </value>
+            <value>
+                <fullName>Other LTC Volker</fullName>
+                <default>false</default>
+                <label>Other LTC Volker</label>
+            </value>
+            <value>
+                <fullName>Foam Mattresses</fullName>
+                <default>false</default>
+                <label>Foam Mattresses</label>
+            </value>
+            <value>
+                <fullName>AC Bedside Cabinets</fullName>
+                <default>false</default>
+                <label>AC Bedside Cabinets</label>
+            </value>
+            <value>
+                <fullName>Overbed Table</fullName>
+                <default>false</default>
+                <label>Overbed Table</label>
+            </value>
+            <value>
+                <fullName>LTC Other Furniture</fullName>
+                <default>false</default>
+                <label>LTC Other Furniture</label>
+            </value>
+            <value>
+                <fullName>Golvo</fullName>
+                <default>false</default>
+                <label>Golvo</label>
+            </value>
+            <value>
+                <fullName>Uno</fullName>
+                <default>false</default>
+                <label>Uno</label>
+            </value>
+            <value>
+                <fullName>M220-230</fullName>
+                <default>false</default>
+                <label>M220-230</label>
+            </value>
+            <value>
+                <fullName>Viking</fullName>
+                <default>false</default>
+                <label>Viking</label>
+            </value>
+            <value>
+                <fullName>Accessories Mobile Lifts</fullName>
+                <default>false</default>
+                <label>Accessories Mobile Lifts</label>
+            </value>
+            <value>
+                <fullName>Liko Light</fullName>
+                <default>false</default>
+                <label>Liko Light</label>
+            </value>
+            <value>
+                <fullName>Sabina</fullName>
+                <default>false</default>
+                <label>Sabina</label>
+            </value>
+            <value>
+                <fullName>Roll On</fullName>
+                <default>false</default>
+                <label>Roll On</label>
+            </value>
+            <value>
+                <fullName>Likorall 200 Series</fullName>
+                <default>false</default>
+                <label>Likorall 200 Series</label>
+            </value>
+            <value>
+                <fullName>Accessories Overhead Lifts</fullName>
+                <default>false</default>
+                <label>Accessories Overhead Lifts</label>
+            </value>
+            <value>
+                <fullName>Multirall 200</fullName>
+                <default>false</default>
+                <label>Multirall 200</label>
+            </value>
+            <value>
+                <fullName>LikoGuard 600</fullName>
+                <default>false</default>
+                <label>LikoGuard 600</label>
+            </value>
+            <value>
+                <fullName>840 or 850</fullName>
+                <default>false</default>
+                <label>840 or 850</label>
+            </value>
+            <value>
+                <fullName>Adel</fullName>
+                <default>false</default>
+                <label>Adel</label>
+            </value>
+            <value>
+                <fullName>Advance Series</fullName>
+                <default>false</default>
+                <label>Advance Series</label>
+            </value>
+            <value>
+                <fullName>Advanta 2</fullName>
+                <default>false</default>
+                <label>Advanta 2</label>
+            </value>
+            <value>
+                <fullName>CareAssist</fullName>
+                <default>false</default>
+                <label>CareAssist</label>
+            </value>
+            <value>
+                <fullName>Centura Series</fullName>
+                <default>false</default>
+                <label>Centura Series</label>
+            </value>
+            <value>
+                <fullName>Century</fullName>
+                <default>false</default>
+                <label>Century</label>
+            </value>
+            <value>
+                <fullName>Epic</fullName>
+                <default>false</default>
+                <label>Epic</label>
+            </value>
+            <value>
+                <fullName>Go Bed</fullName>
+                <default>false</default>
+                <label>Go Bed</label>
+            </value>
+            <value>
+                <fullName>Intouch</fullName>
+                <default>false</default>
+                <label>Intouch</label>
+            </value>
+            <value>
+                <fullName>LD304</fullName>
+                <default>false</default>
+                <label>LD304</label>
+            </value>
+            <value>
+                <fullName>MPS</fullName>
+                <default>false</default>
+                <label>MPS</label>
+            </value>
+            <value>
+                <fullName>Eleganza</fullName>
+                <default>false</default>
+                <label>Eleganza</label>
+            </value>
+            <value>
+                <fullName>Multicare</fullName>
+                <default>false</default>
+                <label>Multicare</label>
+            </value>
+            <value>
+                <fullName>Multicare 3</fullName>
+                <default>false</default>
+                <label>Multicare 3</label>
+            </value>
+            <value>
+                <fullName>Multicare LE</fullName>
+                <default>false</default>
+                <label>Multicare LE</label>
+            </value>
+            <value>
+                <fullName>Virtuoso</fullName>
+                <default>false</default>
+                <label>Virtuoso</label>
+            </value>
+            <value>
+                <fullName>Precioso</fullName>
+                <default>false</default>
+                <label>Precioso</label>
+            </value>
+            <value>
+                <fullName>Symbioso</fullName>
+                <default>false</default>
+                <label>Symbioso</label>
+            </value>
+            <value>
+                <fullName>Eleganza 3</fullName>
+                <default>false</default>
+                <label>Eleganza 3</label>
+            </value>
+            <value>
+                <fullName>Eleganza Smart</fullName>
+                <default>false</default>
+                <label>Eleganza Smart</label>
+            </value>
+            <value>
+                <fullName>Eleganza 2</fullName>
+                <default>false</default>
+                <label>Eleganza 2</label>
+            </value>
+            <value>
+                <fullName>Eleganza 1</fullName>
+                <default>false</default>
+                <label>Eleganza 1</label>
+            </value>
+            <value>
+                <fullName>Image 3</fullName>
+                <default>false</default>
+                <label>Image 3</label>
+            </value>
+            <value>
+                <fullName>NPS</fullName>
+                <default>false</default>
+                <label>NPS</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Other/Postpartum</fullName>
+                <default>false</default>
+                <label>Other/Postpartum</label>
+            </value>
+            <value>
+                <fullName>Secure I</fullName>
+                <default>false</default>
+                <label>Secure I</label>
+            </value>
+            <value>
+                <fullName>Secure II</fullName>
+                <default>false</default>
+                <label>Secure II</label>
+            </value>
+            <value>
+                <fullName>Secure III</fullName>
+                <default>false</default>
+                <label>Secure III</label>
+            </value>
+            <value>
+                <fullName>Vertica</fullName>
+                <default>false</default>
+                <label>Vertica</label>
+            </value>
+            <value>
+                <fullName>Sicuro Pesa</fullName>
+                <default>false</default>
+                <label>Sicuro Pesa</label>
+            </value>
+            <value>
+                <fullName>Seta bed</fullName>
+                <default>false</default>
+                <label>Seta bed</label>
+            </value>
+            <value>
+                <fullName>Omega</fullName>
+                <default>false</default>
+                <label>Omega</label>
+            </value>
+            <value>
+                <fullName>Enterprise 3000</fullName>
+                <default>false</default>
+                <label>Enterprise 3000</label>
+            </value>
+            <value>
+                <fullName>Enterprise 5000</fullName>
+                <default>false</default>
+                <label>Enterprise 5000</label>
+            </value>
+            <value>
+                <fullName>Enterprise 8000</fullName>
+                <default>false</default>
+                <label>Enterprise 8000</label>
+            </value>
+            <value>
+                <fullName>Enterprise 9000</fullName>
+                <default>false</default>
+                <label>Enterprise 9000</label>
+            </value>
+            <value>
+                <fullName>Alpha Xcell</fullName>
+                <default>false</default>
+                <label>Alpha Xcell</label>
+            </value>
+            <value>
+                <fullName>Alpha Active</fullName>
+                <default>false</default>
+                <label>Alpha Active</label>
+            </value>
+            <value>
+                <fullName>Alpha Response</fullName>
+                <default>false</default>
+                <label>Alpha Response</label>
+            </value>
+            <value>
+                <fullName>Auto Logic</fullName>
+                <default>false</default>
+                <label>Auto Logic</label>
+            </value>
+            <value>
+                <fullName>Auto Excel</fullName>
+                <default>false</default>
+                <label>Auto Excel</label>
+            </value>
+            <value>
+                <fullName>Nimbus 3</fullName>
+                <default>false</default>
+                <label>Nimbus 3</label>
+            </value>
+            <value>
+                <fullName>Nimbus Prof</fullName>
+                <default>false</default>
+                <label>Nimbus Prof</label>
+            </value>
+            <value>
+                <fullName>Pro Nimbus</fullName>
+                <default>false</default>
+                <label>Pro Nimbus</label>
+            </value>
+            <value>
+                <fullName>Proficare</fullName>
+                <default>false</default>
+                <label>Proficare</label>
+            </value>
+            <value>
+                <fullName>Therakair</fullName>
+                <default>false</default>
+                <label>Therakair</label>
+            </value>
+            <value>
+                <fullName>Therapulse</fullName>
+                <default>false</default>
+                <label>Therapulse</label>
+            </value>
+            <value>
+                <fullName>Innova</fullName>
+                <default>false</default>
+                <label>Innova</label>
+            </value>
+            <value>
+                <fullName>Breeze</fullName>
+                <default>false</default>
+                <label>Breeze</label>
+            </value>
+            <value>
+                <fullName>Bari-Breeze</fullName>
+                <default>false</default>
+                <label>Bari-Breeze</label>
+            </value>
+            <value>
+                <fullName>Atmos Air</fullName>
+                <default>false</default>
+                <label>Atmos Air</label>
+            </value>
+            <value>
+                <fullName>RIK</fullName>
+                <default>false</default>
+                <label>RIK</label>
+            </value>
+            <value>
+                <fullName>Qua4ttro Acute</fullName>
+                <default>false</default>
+                <label>Qua4ttro Acute</label>
+            </value>
+            <value>
+                <fullName>Qua4ttro Autocura</fullName>
+                <default>false</default>
+                <label>Qua4ttro Autocura</label>
+            </value>
+            <value>
+                <fullName>Qua4ttro Plus</fullName>
+                <default>false</default>
+                <label>Qua4ttro Plus</label>
+            </value>
+            <value>
+                <fullName>Qua4ttro Overlay</fullName>
+                <default>false</default>
+                <label>Qua4ttro Overlay</label>
+            </value>
+            <value>
+                <fullName>Puls Air Choice</fullName>
+                <default>false</default>
+                <label>Puls Air Choice</label>
+            </value>
+            <value>
+                <fullName>Phase III</fullName>
+                <default>false</default>
+                <label>Phase III</label>
+            </value>
+            <value>
+                <fullName>Ambience</fullName>
+                <default>false</default>
+                <label>Ambience</label>
+            </value>
+            <value>
+                <fullName>Admiral II</fullName>
+                <default>false</default>
+                <label>Admiral II</label>
+            </value>
+            <value>
+                <fullName>Elite</fullName>
+                <default>false</default>
+                <label>Elite</label>
+            </value>
+            <value>
+                <fullName>Eclipse II</fullName>
+                <default>false</default>
+                <label>Eclipse II</label>
+            </value>
+            <value>
+                <fullName>Prelude</fullName>
+                <default>false</default>
+                <label>Prelude</label>
+            </value>
+            <value>
+                <fullName>Optimal</fullName>
+                <default>false</default>
+                <label>Optimal</label>
+            </value>
+            <value>
+                <fullName>CuroCell</fullName>
+                <default>false</default>
+                <label>CuroCell</label>
+            </value>
+            <value>
+                <fullName>Curera</fullName>
+                <default>false</default>
+                <label>Curera</label>
+            </value>
+            <value>
+                <fullName>Dolfin FIS</fullName>
+                <default>false</default>
+                <label>Dolfin FIS</label>
+            </value>
+            <value>
+                <fullName>Arise APM</fullName>
+                <default>false</default>
+                <label>Arise APM</label>
+            </value>
+            <value>
+                <fullName>Arise LAL</fullName>
+                <default>false</default>
+                <label>Arise LAL</label>
+            </value>
+            <value>
+                <fullName>Arise EX</fullName>
+                <default>false</default>
+                <label>Arise EX</label>
+            </value>
+            <value>
+                <fullName>CBC MR High Cell</fullName>
+                <default>false</default>
+                <label>CBC MR High Cell</label>
+            </value>
+            <value>
+                <fullName>CBC MR Low Cell</fullName>
+                <default>false</default>
+                <label>CBC MR Low Cell</label>
+            </value>
+            <value>
+                <fullName>CBC MR overlay</fullName>
+                <default>false</default>
+                <label>CBC MR overlay</label>
+            </value>
+            <value>
+                <fullName>ProMatt</fullName>
+                <default>false</default>
+                <label>ProMatt</label>
+            </value>
+            <value>
+                <fullName>ProMatt ES</fullName>
+                <default>false</default>
+                <label>ProMatt ES</label>
+            </value>
+            <value>
+                <fullName>ProMatt CBC</fullName>
+                <default>false</default>
+                <label>ProMatt CBC</label>
+            </value>
+            <value>
+                <fullName>Optima Classic</fullName>
+                <default>false</default>
+                <label>Optima Classic</label>
+            </value>
+            <value>
+                <fullName>Optima Prone</fullName>
+                <default>false</default>
+                <label>Optima Prone</label>
+            </value>
+            <value>
+                <fullName>Aero 650</fullName>
+                <default>false</default>
+                <label>Aero 650</label>
+            </value>
+            <value>
+                <fullName>Aero 3050</fullName>
+                <default>false</default>
+                <label>Aero 3050</label>
+            </value>
+            <value>
+                <fullName>Air I</fullName>
+                <default>false</default>
+                <label>Air I</label>
+            </value>
+            <value>
+                <fullName>Air II</fullName>
+                <default>false</default>
+                <label>Air II</label>
+            </value>
+            <value>
+                <fullName>Auto Air Select</fullName>
+                <default>false</default>
+                <label>Auto Air Select</label>
+            </value>
+            <value>
+                <fullName>Auto Sure</fullName>
+                <default>false</default>
+                <label>Auto Sure</label>
+            </value>
+            <value>
+                <fullName>Position Pro</fullName>
+                <default>false</default>
+                <label>Position Pro</label>
+            </value>
+            <value>
+                <fullName>Tru Turn</fullName>
+                <default>false</default>
+                <label>Tru Turn</label>
+            </value>
+            <value>
+                <fullName>Xpert</fullName>
+                <default>false</default>
+                <label>Xpert</label>
+            </value>
+            <value>
+                <fullName>Arise</fullName>
+                <default>false</default>
+                <label>Arise</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Linet/Wissner-Bossenhoff</controllingFieldValue>
+            <valueName>Eleganza</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Linet/Wissner-Bossenhoff</controllingFieldValue>
+            <valueName>Multicare</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Linet/Wissner-Bossenhoff</controllingFieldValue>
+            <valueName>Multicare 3</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Linet/Wissner-Bossenhoff</controllingFieldValue>
+            <valueName>Multicare LE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Linet/Wissner-Bossenhoff</controllingFieldValue>
+            <valueName>Virtuoso</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Linet/Wissner-Bossenhoff</controllingFieldValue>
+            <valueName>Precioso</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Linet/Wissner-Bossenhoff</controllingFieldValue>
+            <valueName>Symbioso</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Linet/Wissner-Bossenhoff</controllingFieldValue>
+            <valueName>Eleganza 3</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Linet/Wissner-Bossenhoff</controllingFieldValue>
+            <valueName>Eleganza Smart</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Linet/Wissner-Bossenhoff</controllingFieldValue>
+            <valueName>Eleganza 2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Linet/Wissner-Bossenhoff</controllingFieldValue>
+            <valueName>Eleganza 1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Linet/Wissner-Bossenhoff</controllingFieldValue>
+            <valueName>Image 3</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Arjo Huntleigh / KCI</controllingFieldValue>
+            <controllingFieldValue>Stryker / Gaymar / Air Systems</controllingFieldValue>
+            <valueName>Intouch</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Arjo Huntleigh / KCI</controllingFieldValue>
+            <valueName>Enterprise 3000</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Arjo Huntleigh / KCI</controllingFieldValue>
+            <valueName>Enterprise 5000</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Arjo Huntleigh / KCI</controllingFieldValue>
+            <valueName>Enterprise 8000</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Arjo Huntleigh / KCI</controllingFieldValue>
+            <valueName>Enterprise 9000</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Arjo Huntleigh / KCI</controllingFieldValue>
+            <valueName>Alpha Xcell</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Arjo Huntleigh / KCI</controllingFieldValue>
+            <valueName>Alpha Active</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Arjo Huntleigh / KCI</controllingFieldValue>
+            <valueName>Alpha Response</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Arjo Huntleigh / KCI</controllingFieldValue>
+            <valueName>Auto Logic</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Arjo Huntleigh / KCI</controllingFieldValue>
+            <valueName>Auto Excel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Arjo Huntleigh / KCI</controllingFieldValue>
+            <valueName>Nimbus 3</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Arjo Huntleigh / KCI</controllingFieldValue>
+            <valueName>Nimbus Prof</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Arjo Huntleigh / KCI</controllingFieldValue>
+            <valueName>Pro Nimbus</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Arjo Huntleigh / KCI</controllingFieldValue>
+            <valueName>Proficare</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Arjo Huntleigh / KCI</controllingFieldValue>
+            <valueName>Therakair</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Arjo Huntleigh / KCI</controllingFieldValue>
+            <valueName>Therapulse</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Arjo Huntleigh / KCI</controllingFieldValue>
+            <valueName>Innova</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Arjo Huntleigh / KCI</controllingFieldValue>
+            <valueName>Breeze</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Arjo Huntleigh / KCI</controllingFieldValue>
+            <valueName>Bari-Breeze</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Arjo Huntleigh / KCI</controllingFieldValue>
+            <valueName>Atmos Air</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Arjo Huntleigh / KCI</controllingFieldValue>
+            <valueName>RIK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Stryker / Gaymar / Air Systems</controllingFieldValue>
+            <valueName>Epic</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Stryker / Gaymar / Air Systems</controllingFieldValue>
+            <valueName>LD304</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Stryker / Gaymar / Air Systems</controllingFieldValue>
+            <valueName>MPS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Stryker / Gaymar / Air Systems</controllingFieldValue>
+            <valueName>Secure I</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Stryker / Gaymar / Air Systems</controllingFieldValue>
+            <valueName>Secure II</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Stryker / Gaymar / Air Systems</controllingFieldValue>
+            <valueName>Secure III</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Stryker / Gaymar / Air Systems</controllingFieldValue>
+            <valueName>Air I</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Stryker / Gaymar / Air Systems</controllingFieldValue>
+            <valueName>Air II</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Stryker / Gaymar / Air Systems</controllingFieldValue>
+            <valueName>Auto Air Select</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Stryker / Gaymar / Air Systems</controllingFieldValue>
+            <valueName>Auto Sure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Stryker / Gaymar / Air Systems</controllingFieldValue>
+            <valueName>Position Pro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Stryker / Gaymar / Air Systems</controllingFieldValue>
+            <valueName>Tru Turn</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Stryker / Gaymar / Air Systems</controllingFieldValue>
+            <valueName>Xpert</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Stryker / Gaymar / Air Systems</controllingFieldValue>
+            <valueName>Arise</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Stiegelmeyer</controllingFieldValue>
+            <valueName>Vertica</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Stiegelmeyer</controllingFieldValue>
+            <valueName>Sicuro Pesa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Stiegelmeyer</controllingFieldValue>
+            <valueName>Seta bed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Malvestio</controllingFieldValue>
+            <valueName>Omega</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Parkhouse</controllingFieldValue>
+            <valueName>Phase III</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Parkhouse</controllingFieldValue>
+            <valueName>Ambience</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Parkhouse</controllingFieldValue>
+            <valueName>Admiral II</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Parkhouse</controllingFieldValue>
+            <valueName>Elite</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Parkhouse</controllingFieldValue>
+            <valueName>Eclipse II</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Parkhouse</controllingFieldValue>
+            <valueName>Prelude</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Care of Sweden</controllingFieldValue>
+            <valueName>Optimal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Care of Sweden</controllingFieldValue>
+            <valueName>CuroCell</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Care of Sweden</controllingFieldValue>
+            <valueName>Curera</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Smith and Nephew</controllingFieldValue>
+            <valueName>Optima Classic</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Smith and Nephew</controllingFieldValue>
+            <valueName>Optima Prone</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Smith and Nephew</controllingFieldValue>
+            <valueName>Aero 650</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Smith and Nephew</controllingFieldValue>
+            <valueName>Aero 3050</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Talley</controllingFieldValue>
+            <valueName>Qua4ttro Acute</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Talley</controllingFieldValue>
+            <valueName>Qua4ttro Autocura</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Talley</controllingFieldValue>
+            <valueName>Qua4ttro Plus</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Talley</controllingFieldValue>
+            <valueName>Qua4ttro Overlay</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Talley</controllingFieldValue>
+            <valueName>Puls Air Choice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Total Care</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Total Care with Duo II</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Total Care SpO2rt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Total Care P500</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Progressa Dining Chair Accumax</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Progressa Chair Egress P500</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Progressa Chair Egress P500 PMMS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Progressa Chair Egress Pulmonary</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Progressa Chair Egress Pulmonary PMMS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Versacare</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>AvantGuard 800 / 1200 / 1400</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>AvantGuard 1600</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Hill-Rom 900</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Hill-Rom 900 SSR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Hill-Rom 1000</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Hill-Rom 405</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Hill-Rom 305</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Centuris</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Medicraft MedSurg Beds</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>AvantGuard 800 LTC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Hill-Rom 200</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Trio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Medicraft LTC Beds</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Total Care Bariatric</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Triflex</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>ExcelCare</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Affinity</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Affinity 2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Affinity III</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Affinity IV</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Transport</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Procedural</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Other Stretchers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Other PLV Beds</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Other US Beds</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Other Medicraft Beds</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Clinitrons</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Duo2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Care Assist</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Clinactiv</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Primo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Accumax</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>P280</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>P330</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>NP50</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>NP100</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>NP150</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Other Mattresses</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Pluvigner Overbed Tables</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Pluvigner Armchairs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>LTC Furniture</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Pluvigner Acute Furniture</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Pluvigner Acute Cabinet</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Pluvigner Acute Lockers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>US Overbed Tables</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>US Bedside Cabinet</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>US Chairs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>US Premium &amp; Birthing Furniture</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Bariatric Accessories &amp; Furniture</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Other Furniture</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>Vest</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hill-Rom</controllingFieldValue>
+            <valueName>CareAssist</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Joerns</controllingFieldValue>
+            <valueName>Dolfin FIS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Joerns</controllingFieldValue>
+            <valueName>Arise APM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Joerns</controllingFieldValue>
+            <valueName>Arise LAL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Joerns</controllingFieldValue>
+            <valueName>Arise EX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Joerns</controllingFieldValue>
+            <valueName>CBC MR High Cell</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Joerns</controllingFieldValue>
+            <valueName>CBC MR Low Cell</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Joerns</controllingFieldValue>
+            <valueName>CBC MR overlay</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Joerns</controllingFieldValue>
+            <valueName>ProMatt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Joerns</controllingFieldValue>
+            <valueName>ProMatt ES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Joerns</controllingFieldValue>
+            <valueName>ProMatt CBC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Völker</controllingFieldValue>
+            <valueName>S 962-2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Völker</controllingFieldValue>
+            <valueName>S 962-2 W</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Völker</controllingFieldValue>
+            <valueName>S 962-2 vis-à-vis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Völker</controllingFieldValue>
+            <valueName>S 582</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Völker</controllingFieldValue>
+            <valueName>S 382 VAV / 3082 VAV</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Völker</controllingFieldValue>
+            <valueName>S 282/382</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Völker</controllingFieldValue>
+            <valueName>2080</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Völker</controllingFieldValue>
+            <valueName>2082</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Völker</controllingFieldValue>
+            <valueName>3080</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Völker</controllingFieldValue>
+            <valueName>3082</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Völker</controllingFieldValue>
+            <valueName>5380</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Völker</controllingFieldValue>
+            <valueName>Other LTC Volker</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Völker</controllingFieldValue>
+            <valueName>Foam Mattresses</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Völker</controllingFieldValue>
+            <valueName>AC Bedside Cabinets</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Völker</controllingFieldValue>
+            <valueName>Overbed Table</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Völker</controllingFieldValue>
+            <valueName>LTC Other Furniture</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Liko</controllingFieldValue>
+            <valueName>Golvo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Liko</controllingFieldValue>
+            <valueName>Uno</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Liko</controllingFieldValue>
+            <valueName>M220-230</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Liko</controllingFieldValue>
+            <valueName>Viking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Liko</controllingFieldValue>
+            <valueName>Accessories Mobile Lifts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Liko</controllingFieldValue>
+            <valueName>Liko Light</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Liko</controllingFieldValue>
+            <valueName>Sabina</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Liko</controllingFieldValue>
+            <valueName>Roll On</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Liko</controllingFieldValue>
+            <valueName>Likorall 200 Series</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Liko</controllingFieldValue>
+            <valueName>Accessories Overhead Lifts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Liko</controllingFieldValue>
+            <valueName>Multirall 200</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Liko</controllingFieldValue>
+            <valueName>LikoGuard 600</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

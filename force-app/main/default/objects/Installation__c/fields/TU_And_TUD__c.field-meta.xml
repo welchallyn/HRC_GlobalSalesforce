@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TU_And_TUD__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>CR00029883 (Requested by Maria Polsinelli)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Show devices that were purchased through Trade-Up Program</inlineHelpText>
+    <label>TU And TUD</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

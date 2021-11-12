@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>License_Number_for_medical_professional</fullName>
+    <active>true</active>
+    <description>Field for the Medical Professional or Nurse License Number</description>
+    <errorConditionFormula>and(text(Attendee_Type__c) = &apos;Medical Professional / Nurse&apos;, License_Number__c = &apos;&apos;)</errorConditionFormula>
+    <errorDisplayField>License_Number__c</errorDisplayField>
+    <errorMessage>Enter the Medical Professional or Nurse License Number.</errorMessage>
+</ValidationRule>

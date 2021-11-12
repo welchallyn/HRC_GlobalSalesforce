@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Step_Name_too_long</fullName>
+    <active>true</active>
+    <description>JDE can accept up to 30 characters</description>
+    <errorConditionFormula>LEN( Name ) &gt; 30</errorConditionFormula>
+    <errorDisplayField>Name</errorDisplayField>
+    <errorMessage>Inspection Step Name cannot be longer than 30 characters</errorMessage>
+</ValidationRule>

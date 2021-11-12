@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Professional Service Agreement</fullName>
+        <default>false</default>
+        <label>Professional Service Agreement</label>
+    </customValue>
+    <customValue>
+        <fullName>Software Only Agreement</fullName>
+        <default>false</default>
+        <label>Software Only Agreement</label>
+    </customValue>
+    <customValue>
+        <fullName>Existing Contract</fullName>
+        <default>false</default>
+        <label>Existing Contract</label>
+    </customValue>
+    <customValue>
+        <fullName>Pro + Training</fullName>
+        <default>false</default>
+        <label>Pro + Training</label>
+    </customValue>
+    <masterLabel>Contract Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

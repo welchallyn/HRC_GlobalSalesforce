@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>777 Wall Systems</fullName>
+        <default>false</default>
+        <label>777 Wall Systems</label>
+    </customValue>
+    <customValue>
+        <fullName>ABPM</fullName>
+        <default>false</default>
+        <label>ABPM</label>
+    </customValue>
+    <customValue>
+        <fullName>Burdick</fullName>
+        <default>false</default>
+        <label>Burdick</label>
+    </customValue>
+    <customValue>
+        <fullName>CCSS C02</fullName>
+        <default>false</default>
+        <label>CCSS C02</label>
+    </customValue>
+    <customValue>
+        <fullName>CCSS Early Sense</fullName>
+        <default>false</default>
+        <label>CCSS Early Sense</label>
+    </customValue>
+    <customValue>
+        <fullName>CCSS RMS</fullName>
+        <default>false</default>
+        <label>CCSS RMS</label>
+    </customValue>
+    <customValue>
+        <fullName>CIWS</fullName>
+        <default>false</default>
+        <label>CIWS</label>
+    </customValue>
+    <customValue>
+        <fullName>Connectivity</fullName>
+        <default>false</default>
+        <label>Connectivity</label>
+    </customValue>
+    <customValue>
+        <fullName>CP150</fullName>
+        <default>false</default>
+        <label>CP150</label>
+    </customValue>
+    <customValue>
+        <fullName>CP50</fullName>
+        <default>false</default>
+        <label>CP50</label>
+    </customValue>
+    <customValue>
+        <fullName>CSM</fullName>
+        <default>false</default>
+        <label>CSM</label>
+    </customValue>
+    <customValue>
+        <fullName>CVSM</fullName>
+        <default>false</default>
+        <label>CVSM</label>
+    </customValue>
+    <customValue>
+        <fullName>Disposable Cuffs</fullName>
+        <default>false</default>
+        <label>Disposable Cuffs</label>
+    </customValue>
+    <customValue>
+        <fullName>Eclipse</fullName>
+        <default>false</default>
+        <label>Eclipse</label>
+    </customValue>
+    <customValue>
+        <fullName>ELI</fullName>
+        <default>false</default>
+        <label>ELI</label>
+    </customValue>
+    <customValue>
+        <fullName>Green Series Lights</fullName>
+        <default>false</default>
+        <label>Green Series Lights</label>
+    </customValue>
+    <customValue>
+        <fullName>HScribe</fullName>
+        <default>false</default>
+        <label>HScribe</label>
+    </customValue>
+    <customValue>
+        <fullName>OAE</fullName>
+        <default>false</default>
+        <label>OAE</label>
+    </customValue>
+    <customValue>
+        <fullName>PC ECG</fullName>
+        <default>false</default>
+        <label>PC ECG</label>
+    </customValue>
+    <customValue>
+        <fullName>PC Spiro</fullName>
+        <default>false</default>
+        <label>PC Spiro</label>
+    </customValue>
+    <customValue>
+        <fullName>PC Stress</fullName>
+        <default>false</default>
+        <label>PC Stress</label>
+    </customValue>
+    <customValue>
+        <fullName>PIC</fullName>
+        <default>false</default>
+        <label>PIC</label>
+    </customValue>
+    <customValue>
+        <fullName>ProBP</fullName>
+        <default>false</default>
+        <label>ProBP</label>
+    </customValue>
+    <customValue>
+        <fullName>QTel</fullName>
+        <default>false</default>
+        <label>QTel</label>
+    </customValue>
+    <customValue>
+        <fullName>Remote Monitoring</fullName>
+        <default>false</default>
+        <label>Remote Monitoring</label>
+    </customValue>
+    <customValue>
+        <fullName>RetinaVue</fullName>
+        <default>false</default>
+        <label>RetinaVue</label>
+    </customValue>
+    <customValue>
+        <fullName>Reuseable Cuffs</fullName>
+        <default>false</default>
+        <label>Reuseable Cuffs</label>
+    </customValue>
+    <customValue>
+        <fullName>RScribe</fullName>
+        <default>false</default>
+        <label>RScribe</label>
+    </customValue>
+    <customValue>
+        <fullName>Scales</fullName>
+        <default>false</default>
+        <label>Scales</label>
+    </customValue>
+    <customValue>
+        <fullName>Spot</fullName>
+        <default>false</default>
+        <label>Spot</label>
+    </customValue>
+    <customValue>
+        <fullName>Spot Lxi</fullName>
+        <default>false</default>
+        <label>Spot Lxi</label>
+    </customValue>
+    <customValue>
+        <fullName>Spot Vision Screener</fullName>
+        <default>false</default>
+        <label>Spot Vision Screener</label>
+    </customValue>
+    <customValue>
+        <fullName>Surveyor</fullName>
+        <default>false</default>
+        <label>Surveyor</label>
+    </customValue>
+    <customValue>
+        <fullName>TAG ECG</fullName>
+        <default>false</default>
+        <label>TAG ECG</label>
+    </customValue>
+    <customValue>
+        <fullName>Thermometry</fullName>
+        <default>false</default>
+        <label>Thermometry</label>
+    </customValue>
+    <customValue>
+        <fullName>Training</fullName>
+        <default>false</default>
+        <label>Training</label>
+    </customValue>
+    <customValue>
+        <fullName>Vag Specs</fullName>
+        <default>false</default>
+        <label>Vag Specs</label>
+    </customValue>
+    <customValue>
+        <fullName>2.5 V POCKET DIAGNOSTIC SETS</fullName>
+        <default>false</default>
+        <label>2.5 V POCKET DIAGNOSTIC SETS</label>
+    </customValue>
+    <customValue>
+        <fullName>3.5 V DESK DIAGNOSTIC SETS</fullName>
+        <default>false</default>
+        <label>3.5 V DESK DIAGNOSTIC SETS</label>
+    </customValue>
+    <customValue>
+        <fullName>3.5 V HANDLES</fullName>
+        <default>false</default>
+        <label>3.5 V HANDLES</label>
+    </customValue>
+    <customValue>
+        <fullName>3.5 V ILLUMINATORS</fullName>
+        <default>false</default>
+        <label>3.5 V ILLUMINATORS</label>
+    </customValue>
+    <customValue>
+        <fullName>3.5 V OPHTHALMOSCOPES</fullName>
+        <default>false</default>
+        <label>3.5 V OPHTHALMOSCOPES</label>
+    </customValue>
+    <customValue>
+        <fullName>3.5 V OTOSCOPES</fullName>
+        <default>false</default>
+        <label>3.5 V OTOSCOPES</label>
+    </customValue>
+    <customValue>
+        <fullName>3.5 V PORTABLE DIAGNOSTIC SETS</fullName>
+        <default>false</default>
+        <label>3.5 V PORTABLE DIAGNOSTIC SETS</label>
+    </customValue>
+    <customValue>
+        <fullName>3.5 V RETINOSCOPE</fullName>
+        <default>false</default>
+        <label>3.5 V RETINOSCOPE</label>
+    </customValue>
+    <customValue>
+        <fullName>ABP7100</fullName>
+        <default>false</default>
+        <label>ABP7100</label>
+    </customValue>
+    <customValue>
+        <fullName>Braun PRO 6000</fullName>
+        <default>false</default>
+        <label>Braun PRO 6000</label>
+    </customValue>
+    <customValue>
+        <fullName>Cardiology</fullName>
+        <default>false</default>
+        <label>Cardiology</label>
+    </customValue>
+    <customValue>
+        <fullName>Clinical Programs</fullName>
+        <default>false</default>
+        <label>Clinical Programs</label>
+    </customValue>
+    <customValue>
+        <fullName>Compella</fullName>
+        <default>false</default>
+        <label>Compella</label>
+    </customValue>
+    <customValue>
+        <fullName>CSM/CVSM</fullName>
+        <default>false</default>
+        <label>CSM/CVSM</label>
+    </customValue>
+    <customValue>
+        <fullName>Early Sense</fullName>
+        <default>false</default>
+        <label>Early Sense</label>
+    </customValue>
+    <customValue>
+        <fullName>ELI150c/250c</fullName>
+        <default>false</default>
+        <label>ELI150c/250c</label>
+    </customValue>
+    <customValue>
+        <fullName>ELI230</fullName>
+        <default>false</default>
+        <label>ELI230</label>
+    </customValue>
+    <customValue>
+        <fullName>ELI280</fullName>
+        <default>false</default>
+        <label>ELI280</label>
+    </customValue>
+    <customValue>
+        <fullName>ELI380</fullName>
+        <default>false</default>
+        <label>ELI380</label>
+    </customValue>
+    <customValue>
+        <fullName>ELILINK/ESCRIBE</fullName>
+        <default>false</default>
+        <label>ELILINK/ESCRIBE</label>
+    </customValue>
+    <customValue>
+        <fullName>EMR/PACS/WEBSCRIBE</fullName>
+        <default>false</default>
+        <label>EMR/PACS/WEBSCRIBE</label>
+    </customValue>
+    <customValue>
+        <fullName>GREEN SERIES 777 WALL DIAGNOSTIC SETS</fullName>
+        <default>false</default>
+        <label>GREEN SERIES 777 WALL DIAGNOSTIC SETS</label>
+    </customValue>
+    <customValue>
+        <fullName>Hand Hygiene</fullName>
+        <default>false</default>
+        <label>Hand Hygiene</label>
+    </customValue>
+    <customValue>
+        <fullName>HOLTER REC.</fullName>
+        <default>false</default>
+        <label>HOLTER REC.</label>
+    </customValue>
+    <customValue>
+        <fullName>HR900</fullName>
+        <default>false</default>
+        <label>HR900</label>
+    </customValue>
+    <customValue>
+        <fullName>HR900 Accella</fullName>
+        <default>false</default>
+        <label>HR900 Accella</label>
+    </customValue>
+    <customValue>
+        <fullName>ILED 3 or 5</fullName>
+        <default>false</default>
+        <label>ILED 3 or 5</label>
+    </customValue>
+    <customValue>
+        <fullName>iLED 7</fullName>
+        <default>false</default>
+        <label>iLED 7</label>
+    </customValue>
+    <customValue>
+        <fullName>Imagiq2</fullName>
+        <default>false</default>
+        <label>Imagiq2</label>
+    </customValue>
+    <customValue>
+        <fullName>INTEGRATED WALL DIAGNOSTIC SETS</fullName>
+        <default>false</default>
+        <label>INTEGRATED WALL DIAGNOSTIC SETS</label>
+    </customValue>
+    <customValue>
+        <fullName>LIKO</fullName>
+        <default>false</default>
+        <label>LIKO</label>
+    </customValue>
+    <customValue>
+        <fullName>Mars</fullName>
+        <default>false</default>
+        <label>Mars</label>
+    </customValue>
+    <customValue>
+        <fullName>Multiconsole D1</fullName>
+        <default>false</default>
+        <label>Multiconsole D1</label>
+    </customValue>
+    <customValue>
+        <fullName>Multiconsole D2</fullName>
+        <default>false</default>
+        <label>Multiconsole D2</label>
+    </customValue>
+    <customValue>
+        <fullName>Nurse Call</fullName>
+        <default>false</default>
+        <label>Nurse Call</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Patient Safety</fullName>
+        <default>false</default>
+        <label>Patient Safety</label>
+    </customValue>
+    <customValue>
+        <fullName>Progressa</fullName>
+        <default>false</default>
+        <label>Progressa</label>
+    </customValue>
+    <customValue>
+        <fullName>PSS (gen&apos;l)</fullName>
+        <default>false</default>
+        <label>PSS (gen&apos;l)</label>
+    </customValue>
+    <customValue>
+        <fullName>Rental</fullName>
+        <default>false</default>
+        <label>Rental</label>
+    </customValue>
+    <customValue>
+        <fullName>Respiratory</fullName>
+        <default>false</default>
+        <label>Respiratory</label>
+    </customValue>
+    <customValue>
+        <fullName>S12/S19</fullName>
+        <default>false</default>
+        <label>S12/S19</label>
+    </customValue>
+    <customValue>
+        <fullName>S4 TELEM.</fullName>
+        <default>false</default>
+        <label>S4 TELEM.</label>
+    </customValue>
+    <customValue>
+        <fullName>Services</fullName>
+        <default>false</default>
+        <label>Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Stretcher</fullName>
+        <default>false</default>
+        <label>Stretcher</label>
+    </customValue>
+    <customValue>
+        <fullName>Surgical Solutions</fullName>
+        <default>false</default>
+        <label>Surgical Solutions</label>
+    </customValue>
+    <customValue>
+        <fullName>Trulight 3000</fullName>
+        <default>false</default>
+        <label>Trulight 3000</label>
+    </customValue>
+    <customValue>
+        <fullName>Trulight 5000</fullName>
+        <default>false</default>
+        <label>Trulight 5000</label>
+    </customValue>
+    <customValue>
+        <fullName>Truport</fullName>
+        <default>false</default>
+        <label>Truport</label>
+    </customValue>
+    <customValue>
+        <fullName>Trusystem 3000</fullName>
+        <default>false</default>
+        <label>Trusystem 3000</label>
+    </customValue>
+    <customValue>
+        <fullName>Trusystem 5000</fullName>
+        <default>false</default>
+        <label>Trusystem 5000</label>
+    </customValue>
+    <customValue>
+        <fullName>Trusystem 7000</fullName>
+        <default>false</default>
+        <label>Trusystem 7000</label>
+    </customValue>
+    <customValue>
+        <fullName>Trusystem 7000 DV</fullName>
+        <default>false</default>
+        <label>Trusystem 7000 DV</label>
+    </customValue>
+    <customValue>
+        <fullName>Trusystem 7500</fullName>
+        <default>false</default>
+        <label>Trusystem 7500</label>
+    </customValue>
+    <customValue>
+        <fullName>Trusystem 7500 Hybrid</fullName>
+        <default>false</default>
+        <label>Trusystem 7500 Hybrid</label>
+    </customValue>
+    <customValue>
+        <fullName>Vital Signs</fullName>
+        <default>false</default>
+        <label>Vital Signs</label>
+    </customValue>
+    <customValue>
+        <fullName>Welch Allyn</fullName>
+        <default>false</default>
+        <label>Welch Allyn</label>
+    </customValue>
+    <customValue>
+        <fullName>XSCRIBE</fullName>
+        <default>false</default>
+        <label>XSCRIBE</label>
+    </customValue>
+    <customValue>
+        <fullName>Ziehm ORTHOSCAN</fullName>
+        <default>false</default>
+        <label>Ziehm ORTHOSCAN</label>
+    </customValue>
+    <customValue>
+        <fullName>Ziehm RFD HE 20x20 Version CMOS</fullName>
+        <default>false</default>
+        <label>Ziehm RFD HE 20x20 Version CMOS</label>
+    </customValue>
+    <customValue>
+        <fullName>Ziehm Solo</fullName>
+        <default>false</default>
+        <label>Ziehm Solo</label>
+    </customValue>
+    <customValue>
+        <fullName>Ziehm Solo FD</fullName>
+        <default>false</default>
+        <label>Ziehm Solo FD</label>
+    </customValue>
+    <customValue>
+        <fullName>Ziehm Vision FD</fullName>
+        <default>false</default>
+        <label>Ziehm Vision FD</label>
+    </customValue>
+    <customValue>
+        <fullName>Ziehm Vision R</fullName>
+        <default>false</default>
+        <label>Ziehm Vision R</label>
+    </customValue>
+    <customValue>
+        <fullName>Ziehm Vision RFD</fullName>
+        <default>false</default>
+        <label>Ziehm Vision RFD</label>
+    </customValue>
+    <customValue>
+        <fullName>Ziehm Vision RFD 3D</fullName>
+        <default>false</default>
+        <label>Ziehm Vision RFD 3D</label>
+    </customValue>
+    <customValue>
+        <fullName>Ziehm Vision RFD Hybrid</fullName>
+        <default>false</default>
+        <label>Ziehm Vision RFD Hybrid</label>
+    </customValue>
+    <description>Welch Allyn Product lines.</description>
+    <masterLabel>WAProduct Categories</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

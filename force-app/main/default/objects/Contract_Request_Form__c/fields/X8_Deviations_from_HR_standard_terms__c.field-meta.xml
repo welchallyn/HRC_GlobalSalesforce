@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X8_Deviations_from_HR_standard_terms__c</fullName>
+    <externalId>false</externalId>
+    <label>8. Deviations from HR standard terms?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Payment Terms</fullName>
+                <default>false</default>
+                <label>Payment Terms</label>
+            </value>
+            <value>
+                <fullName>Delivery/Shipment</fullName>
+                <default>false</default>
+                <label>Delivery/Shipment</label>
+            </value>
+            <value>
+                <fullName>Warranty (Length/Start)</fullName>
+                <default>false</default>
+                <label>Warranty (Length/Start)</label>
+            </value>
+            <value>
+                <fullName>Restocking Fee</fullName>
+                <default>false</default>
+                <label>Restocking Fee</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

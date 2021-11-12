@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC_Duplicate_Account_Protocol</fullName>
+    <active>true</active>
+    <description>SE-2348</description>
+    <errorConditionFormula>HRCSVC_Is_Duplicate__c = True</errorConditionFormula>
+    <errorMessage>Another Account Protocol exists with the same Protocol Category.</errorMessage>
+</ValidationRule>

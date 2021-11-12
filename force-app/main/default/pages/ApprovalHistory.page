@@ -1,0 +1,38 @@
+<apex:page controller="ApprovalHistoryController" sidebar="true" showHeader="true">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8"/>
+
+    <apex:form id="approvalHistoryForm">
+    <apex:pageBlock title="Approval History">
+        <apex:pageBlockButtons location="top"  rendered="{!IF(canRecall && isRecallButtonVisible, true, false)}" id="buttonList">
+            <apex:commandButton id="recallButton" action="{!enableRecallCommentsSection}" value="Recall Approval Request" reRender="approvalHistoryForm"/>
+        </apex:pageBlockButtons>
+        <apex:pageBlock rendered="{!isRecallCommentsSectionEnabled}">
+            <apex:pageBlockSection columns="1">
+                <apex:inputTextarea id="recallComments" value="{!recallComments}" label="Comments" title="Please state your comments" cols="60"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton value="Recall Approval Request" action="{!recallApprovalRequest}" reRender="approvalHistoryForm" />
+                <apex:commandButton value="Cancel" action="{!disableRecallCommentsSection}" reRender="approvalHistoryForm"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+        <apex:pageBlockTable id="ApprovalHistoryBlock" value="{!ApprovalHistoryRecordsList}" var="item" rendered="{!IF((ApprovalHistoryRecordsList.size>0),TRUE,FALSE)}">
+         <apex:column headerValue="OverAll Status" value="{!item.pi.Status}"/>
+         <apex:column >  
+          <apex:pageBlockTable value="{!item.pih}" var="eachpih">      
+            <apex:column headerValue="Date" value="{!eachpih.CreatedDate}" width="15%" />
+            <apex:column headerValue="Status" value="{!eachpih.StepStatus}" width="15%"/>
+            <apex:column headerValue="Assigned To" value="{!eachpih.OriginalActorId}" width="15%"/>
+            <apex:column headerValue="Actual Approver" value="{!eachpih.ActorId}" width="15%"/>
+            <apex:column headerValue="Comments" value="{!eachpih.Comments}" width="25%"/>
+            <apex:column headerValue="RelatedTo" value="{!item.pi.TargetObjectId}" width="15%"/>
+         </apex:pageBlockTable>
+         </apex:column>
+        </apex:pageBlockTable>
+        
+      <apex:pageBlockSection >
+            <apex:outputText rendered="{!IF((ApprovalHistoryRecordsList.size=0),TRUE,FALSE)}" value="No Approval History for this record"></apex:outputText>        
+      </apex:pageBlockSection>
+        
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>

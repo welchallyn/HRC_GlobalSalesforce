@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DOB_Air_Only</fullName>
+    <active>true</active>
+    <description>DOB is only required for Air Travel
+
+and(date($ObjectType.Trip__c.Fields.RecordTypeId) = &apos;Opportunity Based Commercial Air&apos;, DOB_c = &apos;&apos;)</description>
+    <errorConditionFormula>and (or( CEC_Visitation_Planner__r.RecordTypeId  = &apos;012M00000008qlw&apos;, CEC_Visitation_Planner__r.RecordTypeId  = &apos;012M00000008qlt&apos;), isblank(DOB__c))</errorConditionFormula>
+    <errorDisplayField>DOB__c</errorDisplayField>
+    <errorMessage>Enter DOB</errorMessage>
+</ValidationRule>

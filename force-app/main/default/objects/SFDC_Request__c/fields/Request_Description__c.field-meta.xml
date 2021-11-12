@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Request_Description__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Please describe your request, give as much detail as possible ... screenshots are even helpful!  Attach screenshots in the Notes &amp; Attachments Section.</inlineHelpText>
+    <label>Request Description</label>
+    <length>10000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

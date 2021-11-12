@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Missing_approvers</fullName>
+    <active>true</active>
+    <description>Approvers must be entered in sequence. I.e. Approver 4 must be entered if approver 5 is entered.</description>
+    <errorConditionFormula>OR(
+  AND(
+    ISBLANK( Sr_Comp_Ben_Manager__c ) ,
+      NOT( ISBLANK( VP_HR_International__c ) ) 
+      ) ,
+
+AND(
+    ISBLANK( HR_Manager_Director__c ) ,
+    OR(
+      NOT( ISBLANK( Sr_Comp_Ben_Manager__c ) ) , 
+      NOT( ISBLANK( VP_HR_International__c ) ) 
+        )
+      
+     )
+)</errorConditionFormula>
+    <errorMessage>You cannot leave a blank approver if any of the subsequent approvers is selected.</errorMessage>
+</ValidationRule>

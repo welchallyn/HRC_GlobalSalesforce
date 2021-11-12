@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Driver_Goals__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Provide alignment to the company driver goals</inlineHelpText>
+    <label>Driver Goals</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Develop market for connected care</fullName>
+                <default>false</default>
+                <label>Develop market for connected care</label>
+            </value>
+            <value>
+                <fullName>Execute growth-oriented NPD</fullName>
+                <default>false</default>
+                <label>Execute growth-oriented NPD</label>
+            </value>
+            <value>
+                <fullName>Deliver on financial objectives</fullName>
+                <default>false</default>
+                <label>Deliver on financial objectives</label>
+            </value>
+            <value>
+                <fullName>Increase operational efficiency</fullName>
+                <default>false</default>
+                <label>Increase operational efficiency</label>
+            </value>
+            <value>
+                <fullName>Accelerate China growth</fullName>
+                <default>false</default>
+                <label>Accelerate China growth</label>
+            </value>
+            <value>
+                <fullName>Accelerate international growth</fullName>
+                <default>false</default>
+                <label>Accelerate international growth</label>
+            </value>
+            <value>
+                <fullName>Accelerate growth with acquisitions</fullName>
+                <default>false</default>
+                <label>Accelerate growth with acquisitions</label>
+            </value>
+            <value>
+                <fullName>Transform for growth</fullName>
+                <default>false</default>
+                <label>Transform for growth</label>
+            </value>
+            <value>
+                <fullName>Embrace quality matters</fullName>
+                <default>false</default>
+                <label>Embrace quality matters</label>
+            </value>
+            <value>
+                <fullName>Focus on talent</fullName>
+                <default>false</default>
+                <label>Focus on talent</label>
+            </value>
+            <value>
+                <fullName>Mature compliance program</fullName>
+                <default>false</default>
+                <label>Mature compliance program</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

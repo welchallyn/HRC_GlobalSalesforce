@@ -96,12 +96,6 @@
         <label>MG</label>
     </customValue>
     <customValue>
-        <fullName>CS</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>CS</label>
-    </customValue>
-    <customValue>
         <fullName>SSH</fullName>
         <default>false</default>
         <isActive>false</isActive>
@@ -112,6 +106,12 @@
         <default>false</default>
         <isActive>false</isActive>
         <label>MME Service</label>
+    </customValue>
+    <customValue>
+        <fullName>CS</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>CS</label>
     </customValue>
     <description>For maintaining the paging team which would be used fot sending notification related to Work order (HF-26)</description>
     <masterLabel>Paging Team</masterLabel>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_In_Progress_IT_Forms</fullName>
+    <columns>NAME</columns>
+    <columns>Application__c</columns>
+    <columns>Change_Owner__c</columns>
+    <columns>Approved_Requestor__c</columns>
+    <columns>Gate__c</columns>
+    <columns>Impacted_Geo__c</columns>
+    <columns>Primary_IT_Tower__c</columns>
+    <columns>Status__c</columns>
+    <columns>Overall_Status__c</columns>
+    <columns>Priority__c</columns>
+    <columns>Rank__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>Gate__c</field>
+        <operation>equals</operation>
+        <value>Execute</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>PENDING</value>
+    </filters>
+    <filters>
+        <field>Execution_Track__c</field>
+        <operation>equals</operation>
+        <value>Enhancement</value>
+    </filters>
+    <label>My IT Forms in progress with Birla</label>
+</ListView>

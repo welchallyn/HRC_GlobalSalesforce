@@ -1,0 +1,81 @@
+<!-- 
+   *  PageName     : ExportProposalLineItemSummary
+   *  CreatedOn    : 23/Jan/2017
+   *  ModifiedOn   : 14/March/2017
+   *  CreatedBy    : Jenish Shingala
+   *  ModifiedBy   : Jenish Shingala
+   *  Description  : VF page for Export Proposal Line Item Summary. 
+   -->  
+<apex:page standardController="Apttus_Proposal__Proposal__c" showHeader="false" extensions="ProposalLineItemSummaryControllerDJF" contentType="application/vnd.ms-excel#{!Apttus_Proposal__Proposal__c.name}.xls" >
+   <style>
+      td {
+      text-align:center !important;
+      }
+      th {
+      text-align:center !important;
+      }
+      .thclass {
+      background: #F3F3F3; /* Light grey background */
+      font-weight: bold; /* Make sure they're bold */
+      border: 1px solid #CCC; height: 30px; 
+      }
+   </style>
+   <table border="1" style="border-spacing: 0px;" class="tableclass">
+      <thead>
+         <tr>
+            <th style=""></th>
+            <th style=""></th>
+            <th style=""></th>
+            <th style="background-color: #0a9e0a;color: white;border: 0px solid">List Price</th>
+            <th style="background-color: #0a9e0a;color: white;border: 0px solid"></th>
+            <th style=""></th>
+            <th style=""></th>
+            <th style="background-color: #0a9e0a;color: white;border: 0px solid">Difference</th>
+            <th style="background-color: #0a9e0a;color: white;border: 0px solid"></th>
+            <th style=""></th>
+         </tr>
+         <tr>
+            <th class="thclass">Quantity</th>
+            <th class="thclass">Part Number</th>
+            <th class="thclass">Description</th>
+            <th class="thclass">Unit Price</th>
+            <th class="thclass">Extended Price</th>
+            <th class="thclass">Sell Price</th>
+            <th class="thclass">Extended Sell Price</th>
+            <th class="thclass">Per Item</th>
+            <th class="thclass">Extended</th>
+            <th class="thclass">Percent Off</th>
+         </tr>
+      </thead>
+      <tbody>
+         <apex:repeat value="{!mapWrap}" var="item">
+            <tr>
+               <td class="tdclass">{!mapWrap[item].Quantity}</td>
+               <td class="tdclass">{!mapWrap[item].objPLI.APTPS_Product_Code__c}</td>
+               <td class="tdclass">{!mapWrap[item].objPLI.Apttus_Proposal__Description__c}</td>
+               <td class="tdclass">{!mapWrap[item].objPLI.Apttus_QPConfig__ListPrice__c}</td>
+               <td class="tdclass">{!mapWrap[item].ExtendedListPrice}</td>
+               <td class="tdclass">{!mapWrap[item].objPLI.Unit_Net_Price__c}</td>
+               <td class="tdclass">{!mapWrap[item].ExtendedNetPrice}</td>
+               <td class="tdclass">{!mapWrap[item].perItemDifference}</td>
+               <td class="tdclass">{!mapWrap[item].ExtendedListPrice - mapWrap[item].ExtendedNetPrice}</td>
+               <td class="tdclass">{!mapWrap[item].perCentDifference}%</td>
+            </tr>
+         </apex:repeat>
+         <tr>
+            <td class="tdclass">
+               <b>Totals</b>
+            </td>
+            <td class="tdclass"></td>
+            <td class="tdclass"></td>
+            <td class="tdclass"></td>
+            <td class="tdclass"><b>{!totalExtendedListPrice}</b></td>
+            <td class="tdclass"></td>
+            <td class="tdclass"><b>{!totalExtendedNetPrice}</b></td>
+            <td class="tdclass"></td>
+            <td class="tdclass"></td>
+            <td class="tdclass"></td>
+         </tr>
+      </tbody>
+   </table>
+</apex:page>

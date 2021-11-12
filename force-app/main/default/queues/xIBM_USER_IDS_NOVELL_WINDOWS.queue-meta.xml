@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>xIBM-USER IDS-NOVELL &amp; WINDOWS</name>
+    <queueMembers>
+        <users>
+            <user>archana1@hrc.corp</user>
+            <user>dd1@hrc.corp</user>
+            <user>priyadf1@hrc.corp</user>
+            <user>sharmak1@hrc.corp</user>
+            <user>dehankp1@hrc.corp</user>
+            <user>kanchap1@hrc.corp</user>
+            <user>us1@hrc.corp</user>
+            <user>ss4@hrc.corp</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>BMCServiceDesk__Incident__c</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>BMCServiceDesk__Task__c</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>Multiple_requests_info__c</sobjectType>
+    </queueSobject>
+</Queue>

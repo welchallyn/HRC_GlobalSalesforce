@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>INT_Cannot_Cancel_shipped_demos</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( Cancelled__c = True,
+NOT(ISNULL( Shipment_Date__c))
+ 
+)</errorConditionFormula>
+    <errorDisplayField>Cancelled__c</errorDisplayField>
+    <errorMessage>You cannot cancel a demo after products have been shipped!</errorMessage>
+</ValidationRule>

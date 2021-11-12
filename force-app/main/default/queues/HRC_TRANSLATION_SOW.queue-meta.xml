@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>HRC-TRANSLATION-SOW</name>
+    <queueMembers>
+        <users>
+            <user>darrine1@hrc.corp</user>
+            <user>schmidj@hrc.corp</user>
+            <user>huberm@hrc.corp</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>BMCServiceDesk__Incident__c</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>BMCServiceDesk__KM_KnowledgeArticle__c</sobjectType>
+    </queueSobject>
+</Queue>

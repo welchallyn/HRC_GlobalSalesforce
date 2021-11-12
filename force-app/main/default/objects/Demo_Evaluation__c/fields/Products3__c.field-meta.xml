@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Products3__c</fullName>
+    <externalId>false</externalId>
+    <label>Products</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>PST 300 CN</fullName>
+                <default>false</default>
+                <label>PST 300 CN</label>
+            </value>
+            <value>
+                <fullName>PST 300 EU</fullName>
+                <default>false</default>
+                <label>PST 300 EU</label>
+            </value>
+            <value>
+                <fullName>PST 500</fullName>
+                <default>false</default>
+                <label>PST 500</label>
+            </value>
+            <value>
+                <fullName>TruSystem 7000</fullName>
+                <default>false</default>
+                <label>TruSystem 7000</label>
+            </value>
+            <value>
+                <fullName>TruSystem 7000dv</fullName>
+                <default>false</default>
+                <label>TruSystem 7000dv</label>
+            </value>
+            <value>
+                <fullName>TruSystem 7500</fullName>
+                <default>false</default>
+                <label>TruSystem 7500</label>
+            </value>
+            <value>
+                <fullName>TruSystem 7500 hybrid</fullName>
+                <default>false</default>
+                <label>TruSystem 7500 hybrid</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

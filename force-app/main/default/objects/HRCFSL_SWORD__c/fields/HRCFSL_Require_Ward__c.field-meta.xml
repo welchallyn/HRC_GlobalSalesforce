@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCFSL_Require_Ward__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>HF-492 new SWORD rule that requires Ward to be populated for certain work types.</description>
+    <externalId>false</externalId>
+    <label>Require Ward</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

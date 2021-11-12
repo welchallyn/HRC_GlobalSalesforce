@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Divisional_ELT_required</fullName>
+    <active>true</active>
+    <description>Divisional ELT  is required if Total CFR Amount is greater than $500K.</description>
+    <errorConditionFormula>(AND
+(Total_CFR__c  &gt;= 500000 &amp;&amp; 
+(ISBLANK(Divisional_ELT__c)) &amp;&amp; 
+DATEVALUE(CreatedDate) &gt; DATEVALUE(&quot;2019-02-08&quot;)))</errorConditionFormula>
+    <errorDisplayField>Divisional_ELT__c</errorDisplayField>
+    <errorMessage>Divisional ELT is required if Total CFR Amount is greater than $500K. Add an approval for this level.</errorMessage>
+</ValidationRule>

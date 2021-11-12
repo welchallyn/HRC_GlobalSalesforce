@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Service Contract</label>
+    <protected>false</protected>
+    <values>
+        <field>Profiles__c</field>
+        <value xsi:type="xsd:string">HRC Account Executive;HRC Contract Sales Director;HRC Mobility Specialist;HRC AE International;HRC Rental Sales Specialist;Inside Sales-Service;WA Inside Sales User;HRC Service Agent;HRC Service Manager</value>
+    </values>
+</CustomMetadata>

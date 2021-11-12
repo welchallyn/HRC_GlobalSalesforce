@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Alex_s_Open_IT_Forms</fullName>
+    <columns>NAME</columns>
+    <columns>Change_Owner__c</columns>
+    <columns>Gate__c</columns>
+    <columns>Function__c</columns>
+    <columns>Rank__c</columns>
+    <columns>Impacted_Geo__c</columns>
+    <columns>IT_Cost_Estimate__c</columns>
+    <columns>Primary_IT_Tower__c</columns>
+    <columns>IT_Skillsets__c</columns>
+    <columns>Application__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Gate__c</field>
+        <operation>notEqual</operation>
+        <value>Value Realization,Business as Usual</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>CANCELLED,CLOSED,ON HOLD,PENDING,REJECTED</value>
+    </filters>
+    <filters>
+        <field>OWNER.LAST_NAME</field>
+        <operation>equals</operation>
+        <value>Guetlich</value>
+    </filters>
+    <label>Alex&apos;s  Open IT Forms</label>
+    <sharedTo>
+        <role>JDE_50005734</role>
+        <role>JDE_855143</role>
+    </sharedTo>
+</ListView>

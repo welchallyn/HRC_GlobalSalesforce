@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Governance__c</fullName>
+    <externalId>false</externalId>
+    <label>Governance</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Business risk (end user training impact) impacting large business area across multiple locations</fullName>
+                <default>false</default>
+                <label>Business risk (end user training impact) impacting large business area across multiple locations</label>
+            </value>
+            <value>
+                <fullName>New (products or platforms)</fullName>
+                <default>false</default>
+                <label>New (products or platforms)</label>
+            </value>
+            <value>
+                <fullName>Does not fit within current architecture standards</fullName>
+                <default>false</default>
+                <label>Does not fit within current architecture standards</label>
+            </value>
+            <value>
+                <fullName>Upgrades greater than dot level (2.0 to 3.0)</fullName>
+                <default>false</default>
+                <label>Upgrades greater than dot level (2.0 to 3.0)</label>
+            </value>
+            <value>
+                <fullName>Sourcing – licensing/contract changes/extensions</fullName>
+                <default>false</default>
+                <label>Sourcing – licensing/contract changes/extensions</label>
+            </value>
+            <value>
+                <fullName>Security changes (new or changing)</fullName>
+                <default>false</default>
+                <label>Security changes (new or changing)</label>
+            </value>
+            <value>
+                <fullName>Impacts integrations with multiple systems</fullName>
+                <default>false</default>
+                <label>Impacts integrations with multiple systems</label>
+            </value>
+            <value>
+                <fullName>Not applicable</fullName>
+                <default>false</default>
+                <label>Not applicable</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

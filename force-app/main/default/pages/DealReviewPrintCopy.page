@@ -1,0 +1,184 @@
+<!--Created by:Jenish Shingala 
+    Created Date: 19th Jan,2017
+    Visualforce Page to show DealReview. 
+-->
+<apex:page standardController="Opportunity" showHeader="false">
+   <!--<h4 style="font-size:150%;font-family: initial;">Opportunity Review for {!Opportunity.name}</h4>-->
+   <style>
+      .classlabel{
+      font-weight:bold;font-size: medium;color: #1797c0;
+      }
+   </style>
+   <apex:pageBlock title="Opportunity Review for {!Opportunity.name}">
+      <table style="width: 100%;">
+         <tr> 
+            <td>
+               <fieldset>
+                  <label for="text-input-01" class="classlabel">
+                  Business Awareness:
+                  </label>
+                  <p id="text-input-01" style="overflow-wrap: break-word;word-break: break-all;">{!Opportunity.Business_Awareness__c}"</p>
+               </fieldset>
+            </td>
+            <td>
+               <fieldset>
+                  <label for="text-input-02" class="classlabel">
+                  Opportunity Description:
+                  </label>
+                  <p id="text-input-02" style="overflow-wrap: break-word;word-break: break-all;">{!Opportunity.OpportunityDescription__c}"</p>
+               </fieldset>
+            </td>
+            <td>
+               <fieldset>
+                  <label for="text-input-03" class="classlabel">
+                  Compelling Event:
+                  </label>
+                  <p id="text-input-03" style="overflow-wrap: break-word;word-break: break-all;">{!Opportunity.SAVO_Compelling_Event__c}"</p>
+               </fieldset>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <fieldset>
+                  <label for="text-input-04" class="classlabel">
+                  Value Driver(s):
+                  </label>
+                  <p id="text-input-04" style="overflow-wrap: break-word;word-break: break-all;">{!Opportunity.Value_Drivers__c}"</p>
+               </fieldset>
+            </td>
+            <td>
+               <fieldset>
+                  <label for="text-input-05" class="classlabel">
+                  Positive Business Outcomes:
+                  </label>
+                  <p id="text-input-05" style="overflow-wrap: break-word;word-break: break-all;">{!Opportunity.Positive_Business_Outcomes__c}"</p>
+               </fieldset>
+            </td>
+            <td>
+               <fieldset>
+                  <label for="text-input-06" class="classlabel">
+                  Minimum Required Capabilities:
+                  </label>
+                  <p id="text-input-06" style="overflow-wrap: break-word;word-break: break-all;">{!Opportunity.Minimum_Required_Capabilities__c}"</p>
+               </fieldset>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <fieldset>
+                  <label for="text-input-07" class="classlabel">
+                  Metrics:
+                  </label>
+                  <p id="text-input-07" style="overflow-wrap: break-word;word-break: break-all;">{!Opportunity.Metrics__c}"</p>
+               </fieldset>
+            </td>
+            <td>
+               <fieldset>
+                  <label for="text-input-08" class="classlabel">
+                  Competitive Situation:
+                  </label>
+                  <p id="text-input-08" style="overflow-wrap: break-word;word-break: break-all;">{!Opportunity.SAVO_Competitive_Situation__c}"</p>
+               </fieldset>
+            </td>
+            <td>
+               <fieldset>
+                  <label for="text-input-09" class="classlabel">
+                  Identify the mobilizer(s):
+                  </label>
+                  <p id="text-input-09" style="overflow-wrap: break-word;word-break: break-all;">{!Opportunity.Identify_the_Mobilizers__c}"</p>
+               </fieldset>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <fieldset>
+                  <label for="text-input-10" class="classlabel">
+                  Identify the blocker(s):
+                  </label>
+                  <p id="text-input-10" style="overflow-wrap: break-word;word-break: break-all;">{!Opportunity.Identify_the_Blockers__c}"</p>
+               </fieldset>
+            </td>
+            <td>
+               <fieldset>
+                  <label for="text-input-11" class="classlabel">
+                  Identify the champion:
+                  </label>
+                  <p id="text-input-11" style="overflow-wrap: break-word;word-break: break-all;">{!Opportunity.Identify_the_Champion__c}"</p>
+               </fieldset>
+            </td>
+            <td>
+               <fieldset>
+                  <label for="text-input-12" class="classlabel">
+                  Decision Process:
+                  </label>
+                  <p id="text-input-12" style="overflow-wrap: break-word;word-break: break-all;">{!Opportunity.SAVO_Decision_Process__c}"</p>
+               </fieldset>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <fieldset>
+                  <label for="text-input-13" class="classlabel">
+                  Criteria Favorable to WA:
+                  </label>
+                  <p id="text-input-13" style="overflow-wrap: break-word;word-break: break-all;">{!Opportunity.SAVO_Criteria_Favorable_to_WA__c}"</p>
+               </fieldset>
+            </td>
+            <td>
+               <fieldset>
+                  <label for="text-input-14" class="classlabel">
+                  Criteria Unfavorable to WA:
+                  </label>
+                  <p id="text-input-14" style="overflow-wrap: break-word;word-break: break-all;">{!Opportunity.SAVO_Criteria_Unfavorable_to_WA__c}"</p>
+               </fieldset>
+            </td>
+            <td>
+               <fieldset>
+                  <label for="text-input-15" class="classlabel">
+                  How We Do It:
+                  </label>
+                  <p id="text-input-15" style="overflow-wrap: break-word;word-break: break-all;">{!Opportunity.How_we_do_it__c}"</p>
+               </fieldset>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <fieldset>
+                  <label for="text-input-16" class="classlabel">
+                  How We Do It Better:
+                  </label>
+                  <p id="text-input-16" style="overflow-wrap: break-word;word-break: break-all;">{!Opportunity.How_we_do_it_better__c}"</p>
+               </fieldset>
+            </td>
+            <td>
+               <fieldset>
+                  <label for="text-input-17" class="classlabel">
+                  Resource Utilization:
+                  </label>
+                  <p id="text-input-17" style="overflow-wrap: break-word;word-break: break-all;">{!Opportunity.Resource_Utilization__c}"</p>
+               </fieldset>
+            </td>
+            <td>
+               <fieldset>
+                  <label for="text-input-18" class="classlabel">
+                  Connectivity Information:
+                  </label>
+                  <p id="text-input-18" style="overflow-wrap: break-word;word-break: break-all;">{!Opportunity.Connectivity_Information__c}"</p>
+               </fieldset>
+            </td>
+         </tr>
+         <tr>
+           
+               <td>
+                  <fieldset>
+                     <label for="text-input-19" class="classlabel">
+                     Contract Information:
+                     </label>
+                     <p id="text-input-19" style="overflow-wrap: break-word;word-break: break-all;">{!Opportunity.Contract_Information__c}"</p>
+                  </fieldset>
+               </td>
+          
+         </tr>
+      </table>
+   </apex:pageBlock>
+</apex:page>

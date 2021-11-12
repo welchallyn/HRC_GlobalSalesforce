@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Furniture2__c</fullName>
+    <externalId>false</externalId>
+    <label>Furniture</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Trip_Location__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Bedside Cabinet</fullName>
+                <default>false</default>
+                <label>Bedside Cabinet</label>
+            </value>
+            <value>
+                <fullName>Lobby Seating</fullName>
+                <default>false</default>
+                <label>Lobby Seating</label>
+            </value>
+            <value>
+                <fullName>Overbed Table</fullName>
+                <default>false</default>
+                <label>Overbed Table</label>
+            </value>
+            <value>
+                <fullName>Patient/Visitor Seating</fullName>
+                <default>false</default>
+                <label>Patient/Visitor Seating</label>
+            </value>
+            <value>
+                <fullName>Recliner</fullName>
+                <default>false</default>
+                <label>Recliner</label>
+            </value>
+            <value>
+                <fullName>Sleepers-Trimline</fullName>
+                <default>false</default>
+                <label>Sleepers-Trimline</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <valueName>Bedside Cabinet</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <valueName>Lobby Seating</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <valueName>Overbed Table</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <valueName>Patient/Visitor Seating</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <valueName>Recliner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <valueName>Sleepers-Trimline</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

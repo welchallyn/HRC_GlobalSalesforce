@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X9_Where_deviations_exist_please_list__c</fullName>
+    <description>Where deviations exist to Hill-Rom&apos;s standard terms listed in #8, please list:</description>
+    <externalId>false</externalId>
+    <label>9. Where deviations exist, please list:</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

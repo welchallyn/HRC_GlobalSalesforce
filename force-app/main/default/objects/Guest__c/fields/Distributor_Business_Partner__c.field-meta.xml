@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Distributor_Business_Partner__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Participant is a Distributor/Business Partner</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Participant is a Distributor/Business Partner</inlineHelpText>
+    <label>Distributor/Business Partner</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

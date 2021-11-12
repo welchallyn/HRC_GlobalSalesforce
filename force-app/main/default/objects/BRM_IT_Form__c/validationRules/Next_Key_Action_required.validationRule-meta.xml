@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Next_Key_Action_required</fullName>
+    <active>true</active>
+    <description>Rule created for CR00030892</description>
+    <errorConditionFormula>(ISPICKVAL(Gate__c , &apos;Execute&apos;)) &amp;&amp; ISPICKVAL(Status__c, &apos;ON HOLD&apos;)&amp;&amp; (ISBLANK( Additional_Information__c ) )</errorConditionFormula>
+    <errorDisplayField>Additional_Information__c</errorDisplayField>
+    <errorMessage>Required</errorMessage>
+</ValidationRule>

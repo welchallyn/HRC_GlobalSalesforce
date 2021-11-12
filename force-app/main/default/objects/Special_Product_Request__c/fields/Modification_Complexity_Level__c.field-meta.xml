@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Modification_Complexity_Level__c</fullName>
+    <description>This field will be filled by special product team, during phase 1 - pre-study.</description>
+    <externalId>false</externalId>
+    <label>Modification Complexity Level</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1 - No Study</fullName>
+                <default>false</default>
+                <label>1 - No Study</label>
+            </value>
+            <value>
+                <fullName>2 - Already Validated Modification</fullName>
+                <default>false</default>
+                <label>2 - Already Validated Modification</label>
+            </value>
+            <value>
+                <fullName>3 - Requiring Validation Modification</fullName>
+                <default>false</default>
+                <label>3 - Requiring Validation Modification</label>
+            </value>
+            <value>
+                <fullName>4 - New Part Creation</fullName>
+                <default>false</default>
+                <label>4 - New Part Creation</label>
+            </value>
+            <value>
+                <fullName>5 - Others - Projects</fullName>
+                <default>false</default>
+                <label>5 - Others - Projects</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

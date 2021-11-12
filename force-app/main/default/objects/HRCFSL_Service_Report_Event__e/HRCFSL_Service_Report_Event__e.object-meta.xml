@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Platform Event used for alerting mulesoft that a new service report needs to be emailed.</description>
+    <eventType>HighVolume</eventType>
+    <label>Service Report Event</label>
+    <pluralLabel>Service Report Events</pluralLabel>
+    <publishBehavior>PublishAfterCommit</publishBehavior>
+</CustomObject>

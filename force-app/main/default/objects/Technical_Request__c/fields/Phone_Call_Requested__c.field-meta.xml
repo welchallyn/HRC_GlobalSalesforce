@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Phone_Call_Requested__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Field to indicate a call to the RC AE with the resolution to the Sales Support Request is needed.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Check this box if you would like a call from the Sales Support Team with the completion/resolution of your request, in addition to the email response.</inlineHelpText>
+    <label>Phone Call Requested</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

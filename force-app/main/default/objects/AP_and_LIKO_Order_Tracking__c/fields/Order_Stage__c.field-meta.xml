@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Order_Stage__c</fullName>
+    <externalId>false</externalId>
+    <label>Order Stage</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1 CRM Rcvd</fullName>
+                <default>false</default>
+                <label>1 CRM Rcvd</label>
+            </value>
+            <value>
+                <fullName>2 Shop Dwgs Sent</fullName>
+                <default>false</default>
+                <label>2 Shop Dwgs Sent</label>
+            </value>
+            <value>
+                <fullName>3 Approvals Sent to PM</fullName>
+                <default>false</default>
+                <label>3 Approvals Sent to PM</label>
+            </value>
+            <value>
+                <fullName>4 Need Adtl Info From SE</fullName>
+                <default>false</default>
+                <label>4 Need Adtl Info From SE</label>
+            </value>
+            <value>
+                <fullName>5 Drafting</fullName>
+                <default>false</default>
+                <label>5 Drafting</label>
+            </value>
+            <value>
+                <fullName>6 PM Pre-Release</fullName>
+                <default>false</default>
+                <label>6 PM Pre-Release</label>
+            </value>
+            <value>
+                <fullName>7 Prod Engr</fullName>
+                <default>false</default>
+                <label>7 Prod Engr</label>
+            </value>
+            <value>
+                <fullName>8 Rlsd to Agile</fullName>
+                <default>false</default>
+                <label>8 Rlsd to Agile</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Does_project_require_IT_asset_purc__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>For CIO Approval</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Does this project require an IT asset?</inlineHelpText>
+    <label>Does project require IT asset purchase?</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

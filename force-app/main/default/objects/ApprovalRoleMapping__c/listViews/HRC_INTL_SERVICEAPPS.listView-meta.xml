@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRC_INTL_SERVICEAPPS</fullName>
+    <columns>NAME</columns>
+    <columns>Product_Category__c</columns>
+    <filterScope>Queue</filterScope>
+    <label>xHRC-INTL-SERVICEAPPS</label>
+    <language>en_US</language>
+    <queue>xHRC_INTL_SERVICEAPPS</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>true</doesSendEmailToMembers>
+    <name>HRC CFR Cost Accounting Queue</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>HRC_CFR_Cost_Accounting</publicGroup>
+        </publicGroups>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Capital_Requests__c</sobjectType>
+    </queueSobject>
+</Queue>

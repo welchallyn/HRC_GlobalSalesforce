@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BRL_SAP_Concur_ApprovalRoleMapping</fullName>
+    <filterScope>Queue</filterScope>
+    <label>BRL-SAP Concur</label>
+    <queue>BRL_SAP_Concur</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

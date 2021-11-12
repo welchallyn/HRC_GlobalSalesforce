@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Wkp_Hierarchy_Parent_Workplace_ID__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>Wkp_Hierarchy_Parent_Workplace_ID</description>
+    <externalId>false</externalId>
+    <label>Wkp Hierarchy Parent Workplace ID</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Account Hierarchies IQVIA (Wkp Relation Workplace ID)</relationshipLabel>
+    <relationshipName>Wkp_Relation_Workplace_ID</relationshipName>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

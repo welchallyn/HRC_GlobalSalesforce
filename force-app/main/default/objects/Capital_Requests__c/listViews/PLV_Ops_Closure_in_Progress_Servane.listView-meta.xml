@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PLV_Ops_Closure_in_Progress_Servane</fullName>
+    <booleanFilter>1 AND (2 OR 3 OR 4 OR 5 OR 6 OR 7 OR 8 OR 9)</booleanFilter>
+    <columns>Status__c</columns>
+    <columns>Submit_PCN__c</columns>
+    <columns>JDE_CFR_Number__c</columns>
+    <columns>Project_Name_Link__c</columns>
+    <columns>NAME</columns>
+    <columns>Executive_Summary__c</columns>
+    <columns>CURRENCY_ISO_CODE</columns>
+    <columns>Total_Capital_Requested__c</columns>
+    <columns>Total_CFR__c</columns>
+    <columns>Project_Manager__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>Approved__c</columns>
+    <columns>Depreciation_BU__c</columns>
+    <columns>CFR_Class__c</columns>
+    <columns>DivisionBS__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Draft,Routed for Approval,Rejected,Closed,Cancelled</value>
+    </filters>
+    <filters>
+        <field>CREATEDBY_USER</field>
+        <operation>equals</operation>
+        <value>Eric Thefaine</value>
+    </filters>
+    <filters>
+        <field>CREATEDBY_USER</field>
+        <operation>equals</operation>
+        <value>Servane James</value>
+    </filters>
+    <filters>
+        <field>CREATEDBY_USER</field>
+        <operation>equals</operation>
+        <value>Laurent Marrec</value>
+    </filters>
+    <filters>
+        <field>CREATEDBY_USER</field>
+        <operation>equals</operation>
+        <value>Stefan Pestieau</value>
+    </filters>
+    <filters>
+        <field>Financial_Analyst__c</field>
+        <operation>equals</operation>
+        <value>Stefan Pestiau</value>
+    </filters>
+    <filters>
+        <field>Financial_Analyst__c</field>
+        <operation>equals</operation>
+        <value>Eric Thefaine</value>
+    </filters>
+    <filters>
+        <field>Financial_Analyst__c</field>
+        <operation>equals</operation>
+        <value>Servane James</value>
+    </filters>
+    <filters>
+        <field>Financial_Analyst__c</field>
+        <operation>equals</operation>
+        <value>Laurent Marrec</value>
+    </filters>
+    <label>CFR not closed created by ET SJ LM SP</label>
+    <sharedTo>
+        <role>JDE_1975887</role>
+        <role>JDE_50001212</role>
+    </sharedTo>
+</ListView>

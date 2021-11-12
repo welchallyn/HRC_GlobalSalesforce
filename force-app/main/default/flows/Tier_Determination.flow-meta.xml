@@ -1,0 +1,1046 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>51.0</apiVersion>
+    <choices>
+        <name>No</name>
+        <choiceText>No</choiceText>
+        <dataType>Boolean</dataType>
+        <value>
+            <booleanValue>false</booleanValue>
+        </value>
+    </choices>
+    <choices>
+        <name>Yes</name>
+        <choiceText>Yes</choiceText>
+        <dataType>Boolean</dataType>
+        <value>
+            <booleanValue>true</booleanValue>
+        </value>
+    </choices>
+    <decisions>
+        <description>Check if 3rd Party Host screen component is Null</description>
+        <name>Check_3rd_Party_Host_screen_value</name>
+        <label>Check 3rd Party Host screen value</label>
+        <locationX>297</locationX>
+        <locationY>518</locationY>
+        <defaultConnector>
+            <targetReference>Update_3rd_Party_Host</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Is_3rd_Party_Host_Null</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>X3rd_Party_Host</leftValueReference>
+                <operator>EqualTo</operator>
+            </conditions>
+            <connector>
+                <targetReference>X3rd_Party_Host_to_False</targetReference>
+            </connector>
+            <label>Is 3rd Party Host Null?</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Approvals</name>
+        <label>Check Approvals</label>
+        <locationX>833</locationX>
+        <locationY>278</locationY>
+        <defaultConnector>
+            <targetReference>Approvals_Incomplete</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Is_Approval_Received</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Approval_Data.Business_Approval_Received__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Approval_Data.Compliance_Approval_Received__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Process_Questions</targetReference>
+            </connector>
+            <label>Is Approval Received?</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check if Has Hillrom Attended Before screen component is Null</description>
+        <name>Check_Has_Hillrom_Attended_Before_screen_value</name>
+        <label>Check Has Hillrom Attended Before screen value</label>
+        <locationX>297</locationX>
+        <locationY>854</locationY>
+        <defaultConnector>
+            <targetReference>Update_Has_Hillrom_Attended_Before</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Is_Has_Hillrom_Attended_Before_Null</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Has_Hillrom_Attended_before</leftValueReference>
+                <operator>EqualTo</operator>
+            </conditions>
+            <connector>
+                <targetReference>Has_Hillrom_Attended_Before_to_False</targetReference>
+            </connector>
+            <label>Is Has Hillrom Attended Before Null?</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check if Incubator Category screen component is Null</description>
+        <name>Check_Incubator_Category_screen_value</name>
+        <label>Check Incubator Category screen value</label>
+        <locationX>297</locationX>
+        <locationY>1862</locationY>
+        <defaultConnector>
+            <targetReference>Update_Incubator_Category</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Is_Incubator_Category_Null</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Incubator_Category</leftValueReference>
+                <operator>EqualTo</operator>
+            </conditions>
+            <connector>
+                <targetReference>Incubator_Category_to_False</targetReference>
+            </connector>
+            <label>Is Incubator Category Null?</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check if Invest Growth/Defend screen component is Null</description>
+        <name>Check_Invest_Growth_Defend_screen_value</name>
+        <label>Check Invest Growth/Defend screen value</label>
+        <locationX>297</locationX>
+        <locationY>1526</locationY>
+        <defaultConnector>
+            <targetReference>Update_Invest_Growth_Defend</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Is_Invest_Growth_Defend_Null</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Invest_growth_defend</leftValueReference>
+                <operator>EqualTo</operator>
+            </conditions>
+            <connector>
+                <targetReference>Invest_Growth_Defend_to_False</targetReference>
+            </connector>
+            <label>Is Invest Growth/Defend Null?</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check if Local Hospital Event screen component is Null</description>
+        <name>Check_Local_Hospital_Event_screen_value</name>
+        <label>Check Local Hospital Event screen value</label>
+        <locationX>297</locationX>
+        <locationY>2198</locationY>
+        <defaultConnector>
+            <targetReference>Update_Local_Hospital_Event</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Is_Local_Hospital_Event_Null</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Local_Hospital_Event</leftValueReference>
+                <operator>EqualTo</operator>
+            </conditions>
+            <connector>
+                <targetReference>Local_Hospital_Event_to_False</targetReference>
+            </connector>
+            <label>Is Local Hospital Event Null?</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check if Related to Strategic Partner screen component is Null</description>
+        <name>Check_Related_to_Strategic_Partner_screen_value</name>
+        <label>Check Related to Strategic Partner screen value</label>
+        <locationX>297</locationX>
+        <locationY>1190</locationY>
+        <defaultConnector>
+            <targetReference>Update_Related_to_Strategic_Partner</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Is_Related_to_Strategic_Partner_Null</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Related_to_Strategic_Partner</leftValueReference>
+                <operator>EqualTo</operator>
+            </conditions>
+            <connector>
+                <targetReference>Related_to_Strategic_Partner_to_False</targetReference>
+            </connector>
+            <label>Is Related to Strategic Partner Null?</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check if Workshop/Speaker/Webinar Opp screen component is Null</description>
+        <name>Check_Workshop_Speaker_Webinar_Opp_screen_value</name>
+        <label>Check Workshop/Speaker/Webinar Opp screen value</label>
+        <locationX>297</locationX>
+        <locationY>2534</locationY>
+        <defaultConnector>
+            <targetReference>Update_Workshop_Speaker_Webinar_Opp</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Is_Workshop_Speaker_Webinar_Opp_Null</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Workshop_Speaker_Webinar_opp</leftValueReference>
+                <operator>EqualTo</operator>
+            </conditions>
+            <connector>
+                <targetReference>Workshop_Speaker_Webinar_Opp_to_False</targetReference>
+            </connector>
+            <label>Is Workshop/Speaker/Webinar Opp Null?</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check conditions applicable for Tier 1 category</description>
+        <name>Tier_1_Check</name>
+        <label>Tier 1 Check</label>
+        <locationX>297</locationX>
+        <locationY>2870</locationY>
+        <defaultConnector>
+            <targetReference>Tier_2_Check</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Tier_1_Applied</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>X3rd_Party_Host</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>No</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Workshop_Speaker_Webinar_opp</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Yes</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Tier_1_Assignment</targetReference>
+            </connector>
+            <label>Tier 1 Applied?</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check conditions applicable for Tier 2 category</description>
+        <name>Tier_2_Check</name>
+        <label>Tier 2 Check</label>
+        <locationX>545</locationX>
+        <locationY>2990</locationY>
+        <defaultConnector>
+            <targetReference>Tier_3_Check</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Tier_2_Applied</name>
+            <conditionLogic>(1 AND 2) OR 3</conditionLogic>
+            <conditions>
+                <leftValueReference>Incubator_Category</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Yes</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Local_Hospital_Event</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>No</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Workshop_Speaker_Webinar_opp</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>No</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Tier_2_Assignment</targetReference>
+            </connector>
+            <label>Tier 2 Applied?</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check conditions applicable for Tier 3 category</description>
+        <name>Tier_3_Check</name>
+        <label>Tier 3 Check</label>
+        <locationX>776</locationX>
+        <locationY>3110</locationY>
+        <defaultConnector>
+            <targetReference>Tier_4_Check</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Tier_3_Applied</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>Incubator_Category</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Yes</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Local_Hospital_Event</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Yes</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Tier_3_Assignment</targetReference>
+            </connector>
+            <label>Tier 3 Applied?</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check conditions applicable for Tier 4 category</description>
+        <name>Tier_4_Check</name>
+        <label>Tier 4 Check</label>
+        <locationX>974</locationX>
+        <locationY>3230</locationY>
+        <defaultConnector>
+            <targetReference>Reset_Tier_Category</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Tier_4_Applied</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>Related_to_Strategic_Partner</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>No</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Incubator_Category</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>No</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Tier_4_Assignment</targetReference>
+            </connector>
+            <label>Tier 4 Applied?</label>
+        </rules>
+    </decisions>
+    <interviewLabel>Tier Determination {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Tier Determination</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordLookups>
+        <name>Get_Approval_Data</name>
+        <label>Get Approval Data</label>
+        <locationX>833</locationX>
+        <locationY>158</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_Approvals</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Campaign</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>Update Has Hillrom Attended Before field to False</description>
+        <name>Has_Hillrom_Attended_Before_to_False</name>
+        <label>Has Hillrom Attended Before to False</label>
+        <locationX>165</locationX>
+        <locationY>974</locationY>
+        <connector>
+            <targetReference>Check_Related_to_Strategic_Partner_screen_value</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Has_Hillrom_Attended_before__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <object>Campaign</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Update Incubator Category field to False</description>
+        <name>Incubator_Category_to_False</name>
+        <label>Incubator Category to False</label>
+        <locationX>165</locationX>
+        <locationY>1982</locationY>
+        <connector>
+            <targetReference>Check_Local_Hospital_Event_screen_value</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Incubator_Category__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <object>Campaign</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Update Invest Growth/Defend field to False</description>
+        <name>Invest_Growth_Defend_to_False</name>
+        <label>Invest Growth/Defend to False</label>
+        <locationX>165</locationX>
+        <locationY>1646</locationY>
+        <connector>
+            <targetReference>Check_Incubator_Category_screen_value</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Invest_Growth_Defend__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <object>Campaign</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Update Local Hospital Event field to False</description>
+        <name>Local_Hospital_Event_to_False</name>
+        <label>Local Hospital Event to False</label>
+        <locationX>165</locationX>
+        <locationY>2318</locationY>
+        <connector>
+            <targetReference>Check_Workshop_Speaker_Webinar_Opp_screen_value</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Local_Hospital_Event__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <object>Campaign</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Update Related to Strategic Partner field to False</description>
+        <name>Related_to_Strategic_Partner_to_False</name>
+        <label>Related to Strategic Partner to False</label>
+        <locationX>165</locationX>
+        <locationY>1310</locationY>
+        <connector>
+            <targetReference>Check_Invest_Growth_Defend_screen_value</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Related_to_Strategic_Partner__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <object>Campaign</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Reset Tier Category to blank if no conditions apply.</description>
+        <name>Reset_Tier_Category</name>
+        <label>Reset Tier Category</label>
+        <locationX>1106</locationX>
+        <locationY>3350</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Tier_Category__c</field>
+        </inputAssignments>
+        <object>Campaign</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Update Tier Category to Tier 1</description>
+        <name>Tier_1_Assignment</name>
+        <label>Tier 1 Assignment</label>
+        <locationX>50</locationX>
+        <locationY>2990</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Tier_Category__c</field>
+            <value>
+                <stringValue>Tier 1</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Campaign</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Update Tier Category to Tier 2</description>
+        <name>Tier_2_Assignment</name>
+        <label>Tier 2 Assignment</label>
+        <locationX>314</locationX>
+        <locationY>3110</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Tier_Category__c</field>
+            <value>
+                <stringValue>Tier 2</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Campaign</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Update Tier Category to Tier 3</description>
+        <name>Tier_3_Assignment</name>
+        <label>Tier 3 Assignment</label>
+        <locationX>578</locationX>
+        <locationY>3230</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Tier_Category__c</field>
+            <value>
+                <stringValue>Tier 3</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Campaign</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Update Tier Category to Tier 4</description>
+        <name>Tier_4_Assignment</name>
+        <label>Tier 4 Assignment</label>
+        <locationX>842</locationX>
+        <locationY>3350</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Tier_Category__c</field>
+            <value>
+                <stringValue>Tier 4</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Campaign</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Update 3rd Party Host field with screen component selection value</description>
+        <name>Update_3rd_Party_Host</name>
+        <label>Update 3rd Party Host</label>
+        <locationX>429</locationX>
+        <locationY>638</locationY>
+        <connector>
+            <targetReference>Check_Has_Hillrom_Attended_Before_screen_value</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>X3rd_Party_Host__c</field>
+            <value>
+                <elementReference>X3rd_Party_Host</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Campaign</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Update Has Hillrom Attended Before field with screen component selection value</description>
+        <name>Update_Has_Hillrom_Attended_Before</name>
+        <label>Update Has Hillrom Attended Before</label>
+        <locationX>429</locationX>
+        <locationY>974</locationY>
+        <connector>
+            <targetReference>Check_Related_to_Strategic_Partner_screen_value</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Has_Hillrom_Attended_before__c</field>
+            <value>
+                <elementReference>Has_Hillrom_Attended_before</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Campaign</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Update Incubator Category field with screen component selection value</description>
+        <name>Update_Incubator_Category</name>
+        <label>Update Incubator Category</label>
+        <locationX>429</locationX>
+        <locationY>1982</locationY>
+        <connector>
+            <targetReference>Check_Local_Hospital_Event_screen_value</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Incubator_Category__c</field>
+            <value>
+                <elementReference>Incubator_Category</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Campaign</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Update Invest Growth/Defend field with screen component selection value</description>
+        <name>Update_Invest_Growth_Defend</name>
+        <label>Update Invest Growth/Defend</label>
+        <locationX>429</locationX>
+        <locationY>1646</locationY>
+        <connector>
+            <targetReference>Check_Incubator_Category_screen_value</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Invest_Growth_Defend__c</field>
+            <value>
+                <elementReference>Invest_growth_defend</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Campaign</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Update Local Hospital Event field with screen component selection value</description>
+        <name>Update_Local_Hospital_Event</name>
+        <label>Update Local Hospital Event</label>
+        <locationX>429</locationX>
+        <locationY>2318</locationY>
+        <connector>
+            <targetReference>Check_Workshop_Speaker_Webinar_Opp_screen_value</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Local_Hospital_Event__c</field>
+            <value>
+                <elementReference>Local_Hospital_Event</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Campaign</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Update Related to Strategic Partner field with screen component selection value</description>
+        <name>Update_Related_to_Strategic_Partner</name>
+        <label>Update Related to Strategic Partner</label>
+        <locationX>429</locationX>
+        <locationY>1310</locationY>
+        <connector>
+            <targetReference>Check_Invest_Growth_Defend_screen_value</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Related_to_Strategic_Partner__c</field>
+            <value>
+                <elementReference>Related_to_Strategic_Partner</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Campaign</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Update Workshop/Speaker/Webinar Opp field with screen component selection value</description>
+        <name>Update_Workshop_Speaker_Webinar_Opp</name>
+        <label>Update Workshop/Speaker/Webinar Opp</label>
+        <locationX>429</locationX>
+        <locationY>2654</locationY>
+        <connector>
+            <targetReference>Tier_1_Check</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Workshop_Speaker_Webinar_Opp__c</field>
+            <value>
+                <elementReference>Workshop_Speaker_Webinar_opp</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Campaign</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Update Workshop/Speaker/Webinar Opp field to False</description>
+        <name>Workshop_Speaker_Webinar_Opp_to_False</name>
+        <label>Workshop/Speaker/Webinar Opp to False</label>
+        <locationX>165</locationX>
+        <locationY>2654</locationY>
+        <connector>
+            <targetReference>Tier_1_Check</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Workshop_Speaker_Webinar_Opp__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <object>Campaign</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Update 3rd Party Host field to False</description>
+        <name>X3rd_Party_Host_to_False</name>
+        <label>3rd Party Host to False</label>
+        <locationX>165</locationX>
+        <locationY>638</locationY>
+        <connector>
+            <targetReference>Check_Has_Hillrom_Attended_Before_screen_value</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>X3rd_Party_Host__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <object>Campaign</object>
+    </recordUpdates>
+    <screens>
+        <name>Approvals_Incomplete</name>
+        <label>Approvals Incomplete</label>
+        <locationX>1370</locationX>
+        <locationY>398</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>ErrorMessage</name>
+            <fieldText>&lt;p&gt;Business and Compliance approvals are required for Tier selection.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>Process_Questions</name>
+        <label>Process Questions</label>
+        <locationX>297</locationX>
+        <locationY>398</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Check_3rd_Party_Host_screen_value</targetReference>
+        </connector>
+        <fields>
+            <name>Approval_Received</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;color: rgb(102, 99, 99);&quot;&gt;Approval received for:&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>X3rd_Party_Host</name>
+            <choiceReferences>Yes</choiceReferences>
+            <choiceReferences>No</choiceReferences>
+            <dataType>Boolean</dataType>
+            <fieldText>3rd Party Host?</fieldText>
+            <fieldType>RadioButtons</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Has_Hillrom_Attended_before</name>
+            <choiceReferences>Yes</choiceReferences>
+            <choiceReferences>No</choiceReferences>
+            <dataType>Boolean</dataType>
+            <fieldText>Has Hillrom Attended before?</fieldText>
+            <fieldType>RadioButtons</fieldType>
+            <isRequired>false</isRequired>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>X3rd_Party_Host</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <elementReference>Yes</elementReference>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
+        </fields>
+        <fields>
+            <name>Related_to_Strategic_Partner</name>
+            <choiceReferences>Yes</choiceReferences>
+            <choiceReferences>No</choiceReferences>
+            <dataType>Boolean</dataType>
+            <fieldText>Related to Strategic Partner?</fieldText>
+            <fieldType>RadioButtons</fieldType>
+            <isRequired>false</isRequired>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>Has_Hillrom_Attended_before</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <elementReference>No</elementReference>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
+        </fields>
+        <fields>
+            <name>Invest_growth_defend</name>
+            <choiceReferences>Yes</choiceReferences>
+            <choiceReferences>No</choiceReferences>
+            <dataType>Boolean</dataType>
+            <fieldText>Invest growth/defend?</fieldText>
+            <fieldType>RadioButtons</fieldType>
+            <isRequired>false</isRequired>
+            <visibilityRule>
+                <conditionLogic>or</conditionLogic>
+                <conditions>
+                    <leftValueReference>Has_Hillrom_Attended_before</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <elementReference>Yes</elementReference>
+                    </rightValue>
+                </conditions>
+                <conditions>
+                    <leftValueReference>Related_to_Strategic_Partner</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <elementReference>Yes</elementReference>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
+        </fields>
+        <fields>
+            <name>Incubator_Category</name>
+            <choiceReferences>Yes</choiceReferences>
+            <choiceReferences>No</choiceReferences>
+            <dataType>Boolean</dataType>
+            <fieldText>Incubator Category?</fieldText>
+            <fieldType>RadioButtons</fieldType>
+            <isRequired>false</isRequired>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>Invest_growth_defend</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <elementReference>No</elementReference>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
+        </fields>
+        <fields>
+            <name>Local_Hospital_Event</name>
+            <choiceReferences>Yes</choiceReferences>
+            <choiceReferences>No</choiceReferences>
+            <dataType>Boolean</dataType>
+            <fieldText>Local Hospital Event?</fieldText>
+            <fieldType>RadioButtons</fieldType>
+            <isRequired>false</isRequired>
+            <visibilityRule>
+                <conditionLogic>or</conditionLogic>
+                <conditions>
+                    <leftValueReference>Invest_growth_defend</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <elementReference>Yes</elementReference>
+                    </rightValue>
+                </conditions>
+                <conditions>
+                    <leftValueReference>Incubator_Category</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <elementReference>Yes</elementReference>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
+        </fields>
+        <fields>
+            <name>Workshop_Speaker_Webinar_opp</name>
+            <choiceReferences>Yes</choiceReferences>
+            <choiceReferences>No</choiceReferences>
+            <dataType>Boolean</dataType>
+            <fieldText>Workshop/Speaker/Webinar opp?</fieldText>
+            <fieldType>RadioButtons</fieldType>
+            <isRequired>false</isRequired>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>Invest_growth_defend</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <elementReference>Yes</elementReference>
+                    </rightValue>
+                </conditions>
+                <conditions>
+                    <leftValueReference>Local_Hospital_Event</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <elementReference>No</elementReference>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>707</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Approval_Data</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Variable to fetch/store current record ID</description>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Deletes_from_Merges</fullName>
+    <columns>NAME</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Deleted_SFDCID__c</columns>
+    <columns>PARTY_MK__c</columns>
+    <columns>SKA_ID__c</columns>
+    <columns>ShippingStreet__c</columns>
+    <columns>ShippingCity__c</columns>
+    <columns>ShippingStateCode__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Type__c</field>
+        <operation>equals</operation>
+        <value>MERGE</value>
+    </filters>
+    <label>All Deletes from Merges</label>
+</ListView>

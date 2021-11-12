@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_changes_dates_if_SR_exists</fullName>
+    <active>true</active>
+    <description>Cannot change Start Date and End Date if a Service Request is linked, as these datesare pulled from the SR.</description>
+    <errorConditionFormula>AND( 
+OR
+(ISCHANGED( Start_Date__c ),
+ ISCHANGED( Closed_Date__c ) ),
+NOT(  ISBLANK( Service_Request__c ) ) )</errorConditionFormula>
+    <errorMessage>Start Date and Closed Date cannot be changed in this form. They are derived from the related Service Request.</errorMessage>
+</ValidationRule>

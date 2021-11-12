@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>require_use_case_for_defects_WA</fullName>
+    <active>true</active>
+    <description>If the type of request is &quot;Defect&quot;, then Use Case is required.</description>
+    <errorConditionFormula>AND (ISPICKVAL(Request_Type__c,&apos;Defect&apos;), ISBLANK( Use_Case__c))</errorConditionFormula>
+    <errorDisplayField>Request_Type__c</errorDisplayField>
+    <errorMessage>Use Case required for defects.</errorMessage>
+</ValidationRule>

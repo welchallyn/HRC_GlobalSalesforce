@@ -1,0 +1,11 @@
+<!--
+    Name         : APTSCU_productDeepCloning
+    Author       : Sagar Jogi
+    Created Date : 5th May 2015
+    Description  : It will clone product's record with all related object's data.
+-->
+
+
+<apex:page controller="APTSCU_productDeepCloneController" action="{!redirect}">
+
+</apex:page>

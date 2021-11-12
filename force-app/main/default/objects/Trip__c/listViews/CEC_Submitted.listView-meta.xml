@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CEC_Submitted</fullName>
+    <columns>CEC_Facilitator__c</columns>
+    <columns>Account_Name__c</columns>
+    <columns>NAME</columns>
+    <columns>Trip_Request_Status__c</columns>
+    <columns>Trip_Location__c</columns>
+    <columns>Host_Name_1__c</columns>
+    <columns>Host_Cell_Phone_Number__c</columns>
+    <columns>Trip_Start_Date__c</columns>
+    <columns>Trip_End_Date__c</columns>
+    <columns>Help__c</columns>
+    <columns>Primary_Mode_of_Transportation__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Trip_Request_Status__c</field>
+        <operation>equals</operation>
+        <value>Submitted</value>
+    </filters>
+    <label>CEC Trips Submitted</label>
+    <language>en_US</language>
+</ListView>

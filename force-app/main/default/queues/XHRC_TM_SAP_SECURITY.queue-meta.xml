@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>XHRC-TM-SAP-SECURITY</name>
+    <queueMembers>
+        <users>
+            <user>schmida4@hrc.corp</user>
+            <user>schmida3@hrc.corp</user>
+            <user>wagnera3@hrc.corp</user>
+            <user>struppb1@hrc.corp</user>
+            <user>kurzerc1@hrc.corp</user>
+            <user>goeliti1@hrc.corp</user>
+            <user>lingl1@hrc.corp</user>
+            <user>fischem3@hrc.corp</user>
+            <user>schuesm@hrc.corp</user>
+            <user>schulzr2@hrc.corp</user>
+            <user>detiger1@hrc.corp</user>
+            <user>lists1@hrc.corp</user>
+            <user>frohlis1@hrc.corp</user>
+            <user>makis1@hrc.corp</user>
+            <user>roeders1@hrc.corp</user>
+            <user>soelles2@hrc.corp</user>
+            <user>klebert1@hrc.corp</user>
+            <user>brandtu1@hrc.corp</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>BMCServiceDesk__Change_Request__c</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>BMCServiceDesk__Incident__c</sobjectType>
+    </queueSobject>
+</Queue>

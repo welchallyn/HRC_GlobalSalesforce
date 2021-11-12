@@ -1,0 +1,7 @@
+<aura:component controller="CreateOpportunityController" implements="force:hasRecordId,force:lightningQuickActionWithoutHeader" access="global" >
+	 <aura:attribute name="order" type="Order__c"/>
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <div class="exampleHolder">
+    	<lightning:spinner variant="brand"  size="medium" alternativeText="Loading"/>
+    </div>
+</aura:component>

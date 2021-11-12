@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <assignments>
+        <description>Update the List with Main WO Id</description>
+        <name>Update_the_List_with_Main_WO_Id</name>
+        <label>Update the List with Main WO Id</label>
+        <locationX>480</locationX>
+        <locationY>53</locationY>
+        <assignmentItems>
+            <assignToReference>PlatformeventVar.HRCFSL_Work_Order__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>WorkorderId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>PlatformEventListtobeinserted</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>PlatformeventVar</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Create_Platform_Events</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Update the Platform event list</description>
+        <name>Update_the_Platform_event</name>
+        <label>Update the Platform event</label>
+        <locationX>306</locationX>
+        <locationY>245</locationY>
+        <assignmentItems>
+            <assignToReference>PlatformeventVar.HRCFSL_Work_Order__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>WorkOrderVar.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>PlatformEventListtobeinserted</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>PlatformeventVar</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Process_WorkOrderList</targetReference>
+        </connector>
+    </assignments>
+    <description>HF-414  :1. Takes in parameter of Work Order Id
+2. Get all Work Orders such that RootWorkOrderId = id from step #1
+3. For each Work Order returned in step #2, create a Outbound JDE Work Order platform event with the id of the work order.
+4. Insert the platform events in 1 bulk dm</description>
+    <interviewLabel>Auto Sync {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Auto Sync Work Order With JDE</label>
+    <loops>
+        <name>Process_WorkOrderList</name>
+        <label>Process WorkOrderList</label>
+        <locationX>302</locationX>
+        <locationY>50</locationY>
+        <assignNextValueToReference>WorkOrderVar</assignNextValueToReference>
+        <collectionReference>WorkOrderList</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Update_the_Platform_event</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Update_the_List_with_Main_WO_Id</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <description>Create Platform Events for syncing WO with JDE</description>
+        <name>Create_Platform_Events</name>
+        <label>Create Platform Events</label>
+        <locationX>683</locationX>
+        <locationY>53</locationY>
+        <inputReference>PlatformEventListtobeinserted</inputReference>
+    </recordCreates>
+    <recordLookups>
+        <description>Get all Work Orders such that RootWorkOrderId = Received Work Order id</description>
+        <name>Get_WorkOrder</name>
+        <label>Get WorkOrder</label>
+        <locationX>172</locationX>
+        <locationY>50</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Process_WorkOrderList</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>RootWorkOrderId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>WorkorderId</elementReference>
+            </value>
+        </filters>
+        <object>WorkOrder</object>
+        <outputReference>WorkOrderList</outputReference>
+        <queriedFields>Id</queriedFields>
+    </recordLookups>
+    <startElementReference>Get_WorkOrder</startElementReference>
+    <status>Active</status>
+    <variables>
+        <description>PlatformEventListtobeinserted</description>
+        <name>PlatformEventListtobeinserted</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>HRCFSL_Outbound_JDE_Work_Order__e</objectType>
+    </variables>
+    <variables>
+        <name>PlatformeventVar</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>HRCFSL_Outbound_JDE_Work_Order__e</objectType>
+    </variables>
+    <variables>
+        <description>the id of the work order.</description>
+        <name>WorkorderId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>List of the Work order record where rootworkorderid= Workorderid</description>
+        <name>WorkOrderList</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>WorkOrder</objectType>
+    </variables>
+    <variables>
+        <description>WorkOrderVar</description>
+        <name>WorkOrderVar</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>WorkOrder</objectType>
+    </variables>
+</Flow>

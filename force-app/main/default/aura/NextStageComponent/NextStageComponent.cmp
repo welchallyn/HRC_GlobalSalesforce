@@ -1,0 +1,4 @@
+<aura:component controller="NextStageLightningController" implements="force:hasRecordId,force:lightningQuickActionWithoutHeader" access="global" >
+	<aura:attribute name="changerequest" type="BMCServiceDesk__Change_Request__c"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+</aura:component>

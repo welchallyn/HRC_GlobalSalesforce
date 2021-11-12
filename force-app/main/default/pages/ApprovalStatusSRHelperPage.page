@@ -1,0 +1,3 @@
+<apex:page contentType="text/plain" controller="ApprovalStatusController" action="{!displaySRApprovers}">
+  <apex:outputtext value="{!srJSONString}" />
+</apex:page>

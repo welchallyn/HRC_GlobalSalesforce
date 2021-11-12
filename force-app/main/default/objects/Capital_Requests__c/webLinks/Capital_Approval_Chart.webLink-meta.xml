@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Capital_Approval_Chart</fullName>
+    <availability>online</availability>
+    <description>Capital Approval Chart</description>
+    <displayType>link</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <hasMenubar>false</hasMenubar>
+    <hasScrollbars>true</hasScrollbars>
+    <hasToolbar>false</hasToolbar>
+    <isResizable>true</isResizable>
+    <linkType>url</linkType>
+    <masterLabel>Capital Approval Chart</masterLabel>
+    <openType>newWindow</openType>
+    <position>fullScreen</position>
+    <protected>false</protected>
+    <showsLocation>false</showsLocation>
+    <showsStatus>false</showsStatus>
+    <url>https://hill-rom--hrctest.my.salesforce.com/sfc/p/#E0000000KMt9/a/E0000000PZEP/_9uM52eIrMhxWqAWB0rpfvfHuCLIUzCMfMcwzihMxMI</url>
+</WebLink>

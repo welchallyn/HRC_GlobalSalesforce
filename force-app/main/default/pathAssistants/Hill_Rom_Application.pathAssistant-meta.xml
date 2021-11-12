@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Hill_Rom_Application__c</entityName>
+    <fieldName>Status__c</fieldName>
+    <masterLabel>Hill-Rom Application</masterLabel>
+    <pathAssistantSteps>
+        <info>&lt;ul&gt;&lt;li&gt;eliminate this application. &lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Eliminate</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;ul&gt;&lt;li&gt;New application and/or strategic application&lt;/li&gt;&lt;li&gt;Identified as a platform for growth&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Invest</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;ul&gt;&lt;li&gt;Migrate the business processes from this application to another&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Migrate</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;ul&gt;&lt;li&gt;No contract in place yet with vendor&lt;/li&gt;&lt;li&gt;Place in product portfolio identified and confirmed&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Planned</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;ul&gt;&lt;li&gt;no longer actively used&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Retired</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;ul&gt;&lt;li&gt;sustain this application, not necessarily the target for strategic initiatives&lt;/li&gt;&lt;li&gt;generally used for platforms that have been in portfolio for a while&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Tolerate</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>__MASTER__</recordTypeName>
+</PathAssistant>

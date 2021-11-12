@@ -1,0 +1,354 @@
+<apex:page standardcontroller="Opportunity">
+    <style>
+     .button {
+            display: inline-table;
+            width: 50px;
+            height: 10px;
+            background: rgb(0, 95, 178);
+            padding: 9px;
+            text-align: center;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+        }
+     
+      .slds-form-element__label{
+      font-weight: bold; 
+      font-family: sans-serif;
+      }
+      
+       ::-webkit-input-placeholder { opacity: 0.5 !important;color:red !important;} 
+   </style>
+     <a href="/apex/Dealreviewprint?id={!Opportunity.id}" target="_blank" class="button" style="float:right">Print</a>
+    <apex:form >
+        <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+         <head>
+            <apex:stylesheet value="{!URLFOR($Resource.LightningUI, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+         </head>
+            
+            <div class="slds">
+                <div class="container">
+                    <article class="slds-card">
+                        <div class="slds-card__body" >
+                           
+                          <div class="slds-grid">
+                             
+                             <div class="slds-col" style="margin-left: 1%;">
+                                <div class="slds-form-element">
+                                    <label class="slds-form-element__label" for="text-input-01">Account Name:</label>
+                                    <div class="slds-form-element__control">
+                                        <apex:outputField id="text-input-01" styleclass="slds-input" style="width: 90%;" value="{!Opportunity.Account.Name}"/>
+                                    </div>
+                                </div>
+                             </div>
+                              
+                             <div class="slds-col" style="margin-right: 1%;">
+                               <div class="slds-form-element">
+                                 <label class="slds-form-element__label" for="text-input-02">Opportunity Name:</label>
+                                 <div class="slds-form-element__control">
+                                    <apex:outputField id="text-input-02" styleclass="slds-input" style="width: 100%;" value="{!Opportunity.Name}" />
+                                 </div>
+                               </div>
+                            </div>
+                            </div>    
+                              
+                            <div class="slds-grid" style="margin-top:0.7%;">  
+                             <div class="slds-col" style="margin-left: 1%;">
+                                <div class="slds-form-element">
+                                    <label class="slds-form-element__label" for="textarea-3">What is the current issue:</label>
+                                    <div class="slds-form-element__control">
+                                     <apex:inputField id="textarea-3" style="width:60%;height:70px;" styleclass="slds-input" html-placeholder="What is happening? why now?" value="{!Opportunity.What_is_the_current_issue__c}"/>
+                                    </div>
+                                </div>
+                             </div>
+                            </div>
+                                
+                        </div>
+                    </article>
+                    
+                    <article class="slds-card">
+                        <div class="slds-card__body" >
+                           <div class="slds-grid">
+                            <div class="slds-col" style="margin-left: 1%;">
+                               <div class="slds-form-element">
+                                  <label class="slds-form-element__label" for="text-input-4">Size of the Current Opportunity</label>
+                                     <div class="slds-form-element__control">
+                                        <apex:inputField id="text-input-4" styleclass="slds-input" value="{!Opportunity.Size_of_the_Current_Opportunity__c}"/>
+                                     </div>
+                               </div>
+                            </div>
+                            
+                            <div class="slds-col" style="margin-right: 1%;margin-left: 1%;">
+                               <div class="slds-form-element">
+                                  <label class="slds-form-element__label" for="text-input-5">Multi-part Opportunity? Total Size</label>
+                                     <div class="slds-form-element__control">
+                                        <apex:inputField id="text-input-5" styleclass="slds-input"  value="{!Opportunity.Multi_part_Opportunity_Total_Size__c}"/>
+                                     </div>
+                               </div>
+                            </div>
+                            </div>
+                            
+                            <div class="slds-grid" style="margin-top: 0.7%;">
+                             <div class="slds-col" style="margin-left: 1%;">
+                               <div class="slds-form-element">
+                                  <label class="slds-form-element__label" for="text-input-6">Timing for initial purchase</label>
+                                     <div class="slds-form-element__control">
+                                        <apex:inputField id="text-input-6" styleclass="slds-input"  value="{!Opportunity.Timing_for_initial_purchase__c}" style="width:70%;"/>
+                                     </div>
+                               </div>
+                             </div>
+                             
+                             <div class="slds-col" style="margin-right: 1.2%;">
+                               <div class="slds-form-element">
+                                  <label class="slds-form-element__label" for="text-input-7">Timing for initiative</label>
+                                     <div class="slds-form-element__control">
+                                        <apex:inputField id="text-input-7" styleclass="slds-input" value="{!Opportunity.Timing_for_initiative__c}" style="width:70%;"/>
+                                     </div>
+                               </div>
+                             </div>   
+                            </div> 
+                             <div class="slds-grid" style="margin-top: 0.7%;">
+                            <div class="slds-col" style="margin-left: 1%;">
+                               <div class="slds-form-element">
+                                <label class="slds-form-element__label" for="textarea-8">Potential RoadBlocks:</label>
+                                    <div class="slds-form-element__control">
+                                        <apex:inputField id="textarea-8" style="height:70px;"  styleclass="slds-input" value="{!Opportunity.Potential_Roadblocks__c}" html-placeholder="Make sure to include how to get around"/>
+                                    </div>
+                                </div>
+                               </div>
+                                <div class="slds-col" style="margin-left: 1%;margin-right: 1%;">
+                               <div class="slds-form-element">
+                                <label class="slds-form-element__label" for="textarea-9">Next call action Item:</label>
+                                    <div class="slds-form-element__control">
+                                        <apex:inputField id="textarea-9" style="height:70px;" styleclass="slds-input" value="{!Opportunity.Next_Call_Action_Item__c}" html-placeholder="Make it actionable. What are you getting out of the next conversation? what is the next step?"/>
+                                    </div>
+                                </div>
+                               </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="slds-card">
+                        <div class="slds-card__body" >
+                          <div class="slds-grid"> 
+                             <div class="slds-col" style="margin-left: 1%;">
+                                <div class="slds-form-element">
+                                    <label class="slds-form-element__label" for="text-input-10">Opportunity Type:</label>
+                                    <div class="slds-form-element__control">
+                                        <apex:inputField id="text-input-10" styleclass="slds-select" value="{!Opportunity.Type}"/>
+                                    </div>
+                                </div>
+                             </div>
+                              
+                           <div class="slds-col" style="margin-right: 1%;margin-left: 1%;">
+                             <div class="slds-form-element">
+                                <label class="slds-form-element__label" for="select-11">Competitive Landscape</label>
+                                <div class="slds-form-element__control">
+                                        <apex:inputField id="select-11" styleclass="slds-select" value="{!Opportunity.Competitive_Landscape__c}"/>
+                                </div>
+                            </div> 
+                           </div>
+                          </div>
+                           <div class="slds-grid" style="margin-top:1%">
+                               <div class="slds-col" style="margin-right: 1%;margin-left: 1%;">
+                               <table border="1" style="border-color:#54698d;">
+                                   <tr>
+                                       <td> <span class="slds-form-element__label" style="margin-left: 1%;">Welch Allyn</span></td>
+                                       <td> <label class="slds-form-element__label" style="margin-left: 1%;">Competition:</label><apex:inputField styleclass="slds-select" style="width:95%;margin-left:1%;margin-right:1%;margin-bottom:1%" value="{!Opportunity.Competition__c}"/></td>
+                                   </tr>
+                                  <tr>
+                                       <td><label class="slds-form-element__label" style="margin-left: 1%;">Pro:</label><apex:inputField styleClass="slds-input" style="width:95%;margin-left:1%;margin-right:1%;margin-bottom:1%" value="{!Opportunity.Welch_Allyn_Pro__c}"/></td>
+                                       <td><label class="slds-form-element__label" style="margin-left: 1%;">Pro:</label><apex:inputField styleClass="slds-input" style="width:95%;margin-left:1%;margin-right:1%;margin-bottom:1%" value="{!Opportunity.Competition_Pro__c}"/></td>
+                                   </tr>
+                                   <tr>
+                                       <td><label class="slds-form-element__label" style="margin-left: 1%;">Con:</label><apex:inputField styleClass="slds-input" style="width:95%;margin-left:1%;margin-right:1%;margin-bottom:1%" value="{!Opportunity.Welch_Allyn_Con__c}"/></td>
+                                       <td><label class="slds-form-element__label" style="margin-left: 1%;">Con:</label><apex:inputField styleClass="slds-input" style="width:95%;margin-left:1%;margin-right:1%;margin-bottom:1%" value="{!Opportunity.Competition_Con__c}"/></td>
+                                   </tr>
+                               </table>
+                               </div>
+                           </div>
+                            <div class="slds-grid" style="margin-top: 0.7%;">
+                             <div class="slds-col" style="margin-left: 1%;margin-right: 1%;">
+                                <div class="slds-form-element">
+                                  <label class="slds-form-element__label" for="select-12">Decision Making Process:</label>
+                                <div class="slds-form-element__control">
+                                    <div class="slds-select_container">
+                                        <apex:inputField styleClass="slds-select" id="select-12" value="{!Opportunity.Decision_Making_Process__c}"/>
+                                    </div>
+                                </div>
+                              </div>
+                           </div>
+                         </div>
+                          <div class="slds-grid" style="margin-top: 0.7%;">
+                            <div class="slds-col" style="margin-left: 1%;">
+                               <div class="slds-form-element">
+                                <label class="slds-form-element__label" for="textarea-12">Decision Making Notes:</label>
+                                    <div class="slds-form-element__control">
+                                        <apex:inputField id="textarea-12" styleclass="slds-input" style="width:60%;height:70px;" value="{!Opportunity.Decision_Making_Notes__c}"/>
+                                    </div>
+                                </div>
+                               </div>
+                       </div>
+                       </div>
+                    </article>
+                    <article class="slds-card">
+                         <div class="slds-card__body">
+                              <div class="slds-grid">
+                                 <div class="slds-col" style="margin-left: 1%;margin-right: 1%;">
+                                   <table border="1" style="border-color:#54698d;">
+                                       <tr>
+                                           <td><label class="slds-form-element__label" style="margin-left: 1%;">Department</label></td>
+                                           <td><label class="slds-form-element__label" style="margin-left: 1%;">Key Contact</label></td>
+                                           <td><label class="slds-form-element__label" style="margin-left: 1%;">Position to WA</label></td>
+                                           <td><label class="slds-form-element__label" style="margin-left: 1%;">Influence</label></td>
+                                       </tr>
+                                       <tr>
+                                           <td><label class="slds-form-element__label" style="margin-left: 1%;">Executive</label></td>
+                                           <td><apex:inputField styleclass="slds-input" style="width:97%;margin-top:1%;margin-left:1%;margin-right:1%;margin-bottom:1%" value="{!Opportunity.Executive_Key_Contact__c}"/></td>
+                                           <td><apex:inputField styleclass="slds-select" style="width: 97%;margin-top: 2%;margin-left:1%;margin-right:1%;margin-bottom:1%" value="{!Opportunity.Executive_Position_to_WA__c}"/></td>
+                                           <td><apex:inputField styleclass="slds-select" style="width: 97%;margin-top: 2%;margin-left:1%;margin-right:1%;margin-bottom:1%" value="{!Opportunity.Executive_Influence__c}"/></td>
+                                       </tr>
+                                       <tr>
+                                            <td><label class="slds-form-element__label" style="margin-left: 1%;">Finance | Purchasing</label></td>
+                                             <td><apex:inputField styleclass="slds-input" style="width:97%;margin-top:1%;margin-left:1%;margin-right:1%;margin-bottom:1%" value="{!Opportunity.Finance_Purchasing_Key_Contact__c}"/></td>
+                                           <td><apex:inputField styleclass="slds-select" style="width: 97%;margin-top: 2%;margin-left:1%;margin-right:1%;margin-bottom:1%" value="{!Opportunity.Finance_Purchasing_Position_to_WA__c}"/></td>
+                                           <td><apex:inputField styleclass="slds-select" style="width: 97%;margin-top: 2%;margin-left:1%;margin-right:1%;margin-bottom:1%" value="{!Opportunity.Finance_Purchasing_Influence__c}"/></td>
+                                       </tr>
+                                       <tr>
+                                            <td><label class="slds-form-element__label" style="margin-left: 1%;">Supply Chain</label></td>
+                                             <td><apex:inputField styleclass="slds-input" style="width:97%;margin-top:1%;margin-left:1%;margin-right:1%;margin-bottom:1%" value="{!Opportunity.Supply_Chain_Key_Contact__c}"/></td>
+                                           <td><apex:inputField styleclass="slds-select" style="width: 97%;margin-top: 2%;margin-left:1%;margin-right:1%;margin-bottom:1%" value="{!Opportunity.Supply_Chain_Position_to_WA__c}"/></td>
+                                           <td><apex:inputField styleclass="slds-select" style="width: 97%;margin-top: 2%;margin-left:1%;margin-right:1%;margin-bottom:1%" value="{!Opportunity.Supply_Chain_Influence__c}"/></td>
+                                       </tr>
+                                       <tr>
+                                            <td><label class="slds-form-element__label" style="margin-left: 1%;">Clinical</label></td>
+                                             <td><apex:inputField styleclass="slds-input" style="width:97%;margin-top:1%;margin-left:1%;margin-right:1%;margin-bottom:1%" value="{!Opportunity.Clinical_Key_Contact__c}"/></td>
+                                           <td><apex:inputField styleclass="slds-select" style="width: 97%;margin-top: 2%;margin-left:1%;margin-right:1%;margin-bottom:1%" value="{!Opportunity.Clinical_Position_to_WA__c}"/></td>
+                                           <td><apex:inputField styleclass="slds-select" style="width: 97%;margin-top: 2%;margin-left:1%;margin-right:1%;margin-bottom:1%" value="{!Opportunity.Clinical_Influence__c}"/></td>
+                                       </tr>
+                                       <tr>
+                                            <td><label class="slds-form-element__label" style="margin-left: 1%;">Biomed</label></td>
+                                            <td><apex:inputField styleclass="slds-input" style="width:97%;margin-top:1%;margin-left:1%;margin-right:1%;margin-bottom:1%" value="{!Opportunity.Biomed_Key_Contact__c}"/></td>
+                                           <td><apex:inputField styleclass="slds-select" style="width: 97%;margin-top: 2%;margin-left:1%;margin-right:1%;margin-bottom:1%" value="{!Opportunity.Biomed_Position_to_WA__c}"/></td>
+                                           <td><apex:inputField styleclass="slds-select" style="width: 97%;margin-top: 2%;margin-left:1%;margin-right:1%;margin-bottom:1%" value="{!Opportunity.Biomed_Influence__c}"/></td>
+                                           
+                                       </tr>
+                                       <tr>
+                                            <td><label class="slds-form-element__label" style="margin-left: 1%;">IT</label></td>
+                                            <td><apex:inputField styleclass="slds-input" style="width:97%;margin-top:1%;margin-left:1%;margin-right:1%;margin-bottom:1%" value="{!Opportunity.IT_Key_Contact__c}"/></td>
+                                           <td><apex:inputField styleclass="slds-select" style="width: 97%;margin-top: 2%;margin-left:1%;margin-right:1%;margin-bottom:1%" value="{!Opportunity.IT_Position_to_WA__c}"/></td>
+                                           <td><apex:inputField styleclass="slds-select" style="width: 97%;margin-top: 2%;margin-left:1%;margin-right:1%;margin-bottom:1%" value="{!Opportunity.IT_Influence__c}"/></td>
+                                       </tr>
+                                       <tr>
+                                            <td><apex:inputField styleclass="slds-input" style="width:97%;margin-top:1%;margin-left:1%;margin-right:1%;margin-bottom:1%" value="{!Opportunity.Department_1__c}"/></td>
+                                            <td><apex:inputField styleclass="slds-input" style="width:97%;margin-top:1%;margin-left:1%;margin-right:1%;margin-bottom:1%" value="{!Opportunity.Key_Contact_1__c}"/></td>
+                                           <td><apex:inputField styleclass="slds-select" style="width: 97%;margin-top: 2%;margin-left:1%;margin-right:1%;margin-bottom:1%" value="{!Opportunity.Position_to_WA_1__c}"/></td>
+                                           <td><apex:inputField styleclass="slds-select" style="width: 97%;margin-top: 2%;margin-left:1%;margin-right:1%;margin-bottom:1%" value="{!Opportunity.Influence_1__c}"/></td>
+                                       </tr>
+                                       <tr>
+                                            <td><apex:inputField styleclass="slds-input" style="width:97%;margin-top:1%;margin-left:1%;margin-right:1%;margin-bottom:1%" value="{!Opportunity.Department_2__c}"/></td>
+                                            <td><apex:inputField styleclass="slds-input" style="width:97%;margin-top:1%;margin-left:1%;margin-right:1%;margin-bottom:1%" value="{!Opportunity.Key_Contact_2__c}"/></td>
+                                           <td><apex:inputField styleclass="slds-select" style="width: 97%;margin-top: 2%;margin-left:1%;margin-right:1%;margin-bottom:1%" value="{!Opportunity.Position_to_WA_2__c}"/></td>
+                                           <td><apex:inputField styleclass="slds-select" style="width: 97%;margin-top: 2%;margin-left:1%;margin-right:1%;margin-bottom:1%" value="{!Opportunity.Influence_2__c}"/></td>
+                                       </tr>
+                                   </table>
+                                   </div>
+                              </div>
+                              <div class="slds-grid" style="margin-top: 0.7%;">
+                                   <div class="slds-col" style="margin-left: 1%;">
+                                       <div class="slds-form-element">
+                                        <label class="slds-form-element__label" for="textarea-14">Tactic | Action:</label>
+                                            <div class="slds-form-element__control">
+                                                <apex:inputField id="textarea-14" styleclass="slds-input" style="width:60%;height:70px;" value="{!Opportunity.Tactic_Action__c}"/>
+                                            </div>
+                                        </div>
+                                       </div>
+                                    <div class="slds-col" style="margin-left: 1%;">
+                                        <div class="slds-form-element">
+                                        <label class="slds-form-element__label" for="complete-14">Complete:</label>
+                                            <div class="slds-form-element__control">
+                                                <apex:inputField id="complete-14" value="{!Opportunity.Complete__c}"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--<div class="slds-col" style="margin-left: 1%;margin-right: 1%;">
+                                        <div class="slds-form-element">
+                                          <label class="slds-form-element__label" for="help-12">Help Needed?</label>
+                                        <div class="slds-form-element__control">
+                                            <div class="slds-select_container">
+                                                <apex:inputField styleClass="slds-select" id="help-12" value="{!Opportunity.Help_Needed__c}"/>
+                                            </div>
+                                        </div>
+                                      </div>
+                                   </div>-->
+                              </div>
+                              <div class="slds-grid" style="margin-top: 0.7%;">
+                                   <div class="slds-col" style="margin-left: 1%;">
+                                       <div class="slds-form-element">
+                                        <label class="slds-form-element__label" for="textarea-15">Tactic | Action:</label>
+                                            <div class="slds-form-element__control">
+                                                <apex:inputField id="textarea-15" styleclass="slds-input" style="width:60%;height:70px;" value="{!Opportunity.Tactic_Action_2__c}"/>
+                                            </div>
+                                        </div>
+                                       </div>
+                                    <div class="slds-col" style="margin-left: 1%;">
+                                        <div class="slds-form-element">
+                                        <label class="slds-form-element__label" for="complete-15">Complete:</label>
+                                            <div class="slds-form-element__control">
+                                                <apex:inputField id="complete-15" value="{!Opportunity.Complete_2__c}"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--<div class="slds-col" style="margin-left: 1%;margin-right: 1%;">
+                                        <div class="slds-form-element">
+                                          <label class="slds-form-element__label" for="help-12">Help Needed?</label>
+                                        <div class="slds-form-element__control">
+                                            <div class="slds-select_container">
+                                                <apex:inputField styleClass="slds-select" id="help-12" value="{!Opportunity.Help_Needed__c}"/>
+                                            </div>
+                                        </div>
+                                      </div>
+                                   </div>-->
+                              </div>
+                               <div class="slds-grid" style="margin-top: 0.7%;">
+                                   <div class="slds-col" style="margin-left: 1%;">
+                                       <div class="slds-form-element">
+                                        <label class="slds-form-element__label" for="textarea-16">Tactic | Action:</label>
+                                            <div class="slds-form-element__control">
+                                                <apex:inputField id="textarea-16" styleclass="slds-input" style="width:110%;height:70px;" value="{!Opportunity.Tactic_Action_3__c}"/>
+                                            </div>
+                                        </div>
+                                       </div>
+                                    <div class="slds-col" style="margin-left: 27%;">
+                                        <div class="slds-form-element">
+                                        <label class="slds-form-element__label" for="complete-16">Complete:</label>
+                                            <div class="slds-form-element__control">
+                                                <apex:inputField id="complete-16" value="{!Opportunity.Complete_3__c}"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slds-col" style="margin-left: 1%;margin-right: 1%;">
+                                        <div class="slds-form-element">
+                                          <label class="slds-form-element__label" for="help-12">Help Needed?</label>
+                                        <div class="slds-form-element__control">
+                                            <div class="slds-select_container">
+                                                <apex:inputField styleClass="slds-select" id="help-12" value="{!Opportunity.Help_Needed__c}"/>
+                                            </div>
+                                        </div>
+                                      </div>
+                                   </div>
+                              </div>
+                              <div class="slds-grid" style="margin-top: 0.7%;">
+                                    <div class="slds-col">
+                                       <center>   <apex:commandButton value="Save" action="{!save}" styleClass="slds-button slds-button--brand"/> </center>
+                                    </div>
+                                   </div>
+                         </div>
+                    </article>
+                   
+                </div>
+            </div>
+        </html>
+    </apex:form>
+    
+</apex:page>

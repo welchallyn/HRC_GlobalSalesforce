@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_Options__c</fullName>
+    <description>What is the effect of deferring the request one year?
+What are the results if request refused altogether?
+What other options have been considered?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What is the effect of deferring the request one year?
+What are the results if request refused altogether?
+What other options have been considered?</inlineHelpText>
+    <label>Project Options</label>
+    <length>5000</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>4</visibleLines>
+</CustomField>

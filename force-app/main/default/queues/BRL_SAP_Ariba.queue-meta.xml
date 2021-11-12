@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>BRL-SAP Ariba</name>
+    <queueMembers>
+        <users>
+            <user>guptaa10@hrc.corp</user>
+            <user>singhg2@hrc.corp</user>
+            <user>chittus1@hrc.corp</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>BMCServiceDesk__Release__c</sobjectType>
+    </queueSobject>
+</Queue>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Renewals - System Contracts</name>
+    <queueMembers>
+        <users>
+            <user>duforta1@hrc.corp</user>
+            <user>poirieh1@hrc.corp</user>
+            <user>threnor1@hrc.corp</user>
+            <user>paschas1@hrc.corp</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Lead</sobjectType>
+    </queueSobject>
+</Queue>

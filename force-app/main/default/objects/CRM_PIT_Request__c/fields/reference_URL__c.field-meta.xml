@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>reference_URL__c</fullName>
+    <description>if there is more documentation for this request, this is the URL of the associated documentation.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>if there is more documentation for this request, this is the URL of the associated documentation.</inlineHelpText>
+    <label>reference URL</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Url</type>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>INT APAC JP Leads</name>
+    <queueMembers>
+        <users>
+            <user>limd@hrc.corp</user>
+            <user>inaokak1@hrc.corp</user>
+            <user>liangm1@hrc.corp</user>
+            <user>anjon1@hrc.corp</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Lead</sobjectType>
+    </queueSobject>
+</Queue>

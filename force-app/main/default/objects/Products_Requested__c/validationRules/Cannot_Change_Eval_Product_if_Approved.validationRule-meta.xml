@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_Change_Eval_Product_if_Approved</fullName>
+    <active>true</active>
+    <description>Does not let product or quantity change if already approved.</description>
+    <errorConditionFormula>AND (
+     ISPICKVAL( Evaluation_Form__r.Approval_Status__c , &apos;Approved&apos;),
+      OR(
+          ISCHANGED( Item_Description__c ) ,
+          ISCHANGED(  Quantity__c ) 
+     )
+)</errorConditionFormula>
+    <errorMessage>You can not edit an eval request after it has been approved</errorMessage>
+</ValidationRule>

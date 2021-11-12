@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Request_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Request Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Data</fullName>
+                <default>false</default>
+                <label>Data</label>
+            </value>
+            <value>
+                <fullName>Defect</fullName>
+                <default>false</default>
+                <label>Defect</label>
+            </value>
+            <value>
+                <fullName>Enhancement</fullName>
+                <default>false</default>
+                <label>Enhancement</label>
+            </value>
+            <value>
+                <fullName>Screen Layout</fullName>
+                <default>false</default>
+                <label>Screen Layout</label>
+            </value>
+            <value>
+                <fullName>Standard Functionality</fullName>
+                <default>false</default>
+                <label>Standard Functionality</label>
+            </value>
+            <value>
+                <fullName>User Error</fullName>
+                <default>false</default>
+                <label>User Error</label>
+            </value>
+            <value>
+                <fullName>Data - SK&amp;A</fullName>
+                <default>false</default>
+                <label>Data - SK&amp;A</label>
+            </value>
+            <value>
+                <fullName>Data - MDM</fullName>
+                <default>false</default>
+                <label>Data - MDM</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

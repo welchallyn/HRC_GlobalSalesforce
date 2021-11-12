@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Effective_Segmentation__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Choose a value only if you want to overwrite the calculated Market Segmentation value</inlineHelpText>
+    <label>Effective Segmentation</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>INT_Value_Segmentation</valueSetName>
+    </valueSet>
+</CustomField>

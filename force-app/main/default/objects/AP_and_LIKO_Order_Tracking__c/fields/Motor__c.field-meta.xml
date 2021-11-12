@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Motor__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Select the motor to be used in the lift design.</inlineHelpText>
+    <label>Motor</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>LikoGuard L (600 lbs)</fullName>
+                <default>false</default>
+                <label>LikoGuard (600 lbs)</label>
+            </value>
+            <value>
+                <fullName>LikoGuard XL (800 lbs)</fullName>
+                <default>false</default>
+                <label>LikoGuard (800 lbs)</label>
+            </value>
+            <value>
+                <fullName>Multirall (440 lbs)</fullName>
+                <default>false</default>
+                <label>Multirall (440 lbs)</label>
+            </value>
+            <value>
+                <fullName>Likorall (440lbs)</fullName>
+                <default>false</default>
+                <label>Likorall (440lbs)</label>
+            </value>
+            <value>
+                <fullName>LIkorall (507lbs)</fullName>
+                <default>false</default>
+                <label>LIkorall (507lbs)</label>
+            </value>
+            <value>
+                <fullName>Likorall (550lbs)</fullName>
+                <default>false</default>
+                <label>Likorall (550lbs)</label>
+            </value>
+            <value>
+                <fullName>LikoRall 200 (440 lbs)</fullName>
+                <default>false</default>
+                <label>LikoRall 200 (440 lbs)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>6</visibleLines>
+</CustomField>

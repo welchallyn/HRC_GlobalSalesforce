@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IT_Risk_Assessment_required</fullName>
+    <active>true</active>
+    <description>Rule created for CR00030892</description>
+    <errorConditionFormula>(ISPICKVAL(Gate__c , &apos;Value Prioritization&apos;) || (ISPICKVAL(Gate__c ,&apos;Execute&apos;) &amp;&amp; ISPICKVAL(Status__c ,&apos;PENDING&apos;))|| (ISPICKVAL(Gate__c ,&apos;Execute&apos;) &amp;&amp; ISPICKVAL(Status__c ,&apos;IN PROGRESS&apos;)) || ISPICKVAL(Gate__c , &apos;Value Realization&apos;))&amp;&amp; (  ISPICKVAL( IT_Risk_Assessment__c,&apos;&apos; ) )</errorConditionFormula>
+    <errorDisplayField>IT_Risk_Assessment__c</errorDisplayField>
+    <errorMessage>Required</errorMessage>
+</ValidationRule>

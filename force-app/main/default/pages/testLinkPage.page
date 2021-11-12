@@ -1,0 +1,6 @@
+<apex:page >
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>Link to Cognos</h1>
+  <apex:iframe src="http://cogprd/cognos8/cgi-bin/cognos.cgi?b_action=xts.run&m=portal/main.xts&startwel=yes" scrolling="true" id="testCognosLink" width="80%"/>
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

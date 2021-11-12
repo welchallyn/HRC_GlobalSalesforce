@@ -1,0 +1,23 @@
+<apex:page StandardController="Opportunity" tabStyle="Opportunity" >
+   <apex:form >
+        <apex:pageBlock title="Edit Ship Date" mode="edit">
+            <apex:pageBlockButtons location="top">
+                <apex:pageMessages />
+                 <apex:commandButton value="Save" action="{!save}" />
+                 <apex:commandButton value="Cancel" action="{!cancel}"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockTable value="{!Opportunity}" var="li">
+                <apex:column value="{!li.name}"/>
+                <apex:column headerValue="Ship Date">
+                    <apex:inputField value="{!li.Update_Product_Ship_Date__c}" onchange="show_confirm()"/>
+                </apex:column>
+            </apex:pageBlockTable>      
+        </apex:pageBlock>
+<script type="text/javascript">
+    function show_confirm()
+    {
+    var con = confirm("You are about to change the ship dates for all Line Items for this opportunity. Click Save button to continue.");
+    }
+</script>
+    </apex:form>
+</apex:page>

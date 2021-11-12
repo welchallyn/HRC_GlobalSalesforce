@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <email>emeamarcoms@hillrom.com</email>
+    <name>Digital Team</name>
+    <queueMembers>
+        <users>
+            <user>christa4@hrc.corp</user>
+            <user>ponomaa1@hrc.corp</user>
+            <user>dabouta1@hrc.corp</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Task</sobjectType>
+    </queueSobject>
+</Queue>

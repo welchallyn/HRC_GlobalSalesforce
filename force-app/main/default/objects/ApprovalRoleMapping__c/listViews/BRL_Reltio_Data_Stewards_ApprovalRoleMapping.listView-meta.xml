@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BRL_Reltio_Data_Stewards_ApprovalRoleMapping</fullName>
+    <filterScope>Queue</filterScope>
+    <label>BRL-Reltio - Data Stewards</label>
+    <queue>BRL_Reltio_Data_Stewards</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

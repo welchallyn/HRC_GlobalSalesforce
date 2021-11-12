@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Modification_Type__c</fullName>
+    <description>Combination of Bed and Furniture modification types, along with Other Modification Types.
+- (Incident Ticket- 00958838; CR: CR00031574)</description>
+    <externalId>false</externalId>
+    <label>Modification Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Product_Type__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Restraint</fullName>
+                <default>false</default>
+                <label>Restraint</label>
+            </value>
+            <value>
+                <fullName>Stickers</fullName>
+                <default>false</default>
+                <label>Stickers</label>
+            </value>
+            <value>
+                <fullName>Pendant</fullName>
+                <default>false</default>
+                <label>Pendant</label>
+            </value>
+            <value>
+                <fullName>Out of package</fullName>
+                <default>false</default>
+                <label>Out of package</label>
+            </value>
+            <value>
+                <fullName>Casters - bed mover</fullName>
+                <default>false</default>
+                <label>Casters - bed mover</label>
+            </value>
+            <value>
+                <fullName>Casters - others</fullName>
+                <default>false</default>
+                <label>Casters - others</label>
+            </value>
+            <value>
+                <fullName>Accessory</fullName>
+                <default>false</default>
+                <label>Accessory</label>
+            </value>
+            <value>
+                <fullName>Nurse call cable</fullName>
+                <default>false</default>
+                <label>Nurse call cable</label>
+            </value>
+            <value>
+                <fullName>Cable</fullName>
+                <default>false</default>
+                <label>Cable</label>
+            </value>
+            <value>
+                <fullName>Special color</fullName>
+                <default>false</default>
+                <label>Special color</label>
+            </value>
+            <value>
+                <fullName>Sleep deck</fullName>
+                <default>false</default>
+                <label>Sleep deck</label>
+            </value>
+            <value>
+                <fullName>Structure</fullName>
+                <default>false</default>
+                <label>Structure</label>
+            </value>
+            <value>
+                <fullName>To be categorized</fullName>
+                <default>false</default>
+                <label>To be categorized</label>
+            </value>
+            <value>
+                <fullName>Miscellaneous</fullName>
+                <default>false</default>
+                <label>Miscellaneous</label>
+            </value>
+            <value>
+                <fullName>Not Pluvigner Product</fullName>
+                <default>false</default>
+                <label>Not Pluvigner Product</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Bed</controllingFieldValue>
+            <valueName>Restraint</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bed</controllingFieldValue>
+            <valueName>Stickers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bed</controllingFieldValue>
+            <valueName>Pendant</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bed</controllingFieldValue>
+            <controllingFieldValue>Furniture</controllingFieldValue>
+            <valueName>Out of package</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bed</controllingFieldValue>
+            <valueName>Casters - bed mover</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bed</controllingFieldValue>
+            <valueName>Casters - others</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bed</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Accessory</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bed</controllingFieldValue>
+            <valueName>Nurse call cable</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bed</controllingFieldValue>
+            <valueName>Cable</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bed</controllingFieldValue>
+            <controllingFieldValue>Furniture</controllingFieldValue>
+            <valueName>Special color</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bed</controllingFieldValue>
+            <valueName>Sleep deck</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bed</controllingFieldValue>
+            <controllingFieldValue>Furniture</controllingFieldValue>
+            <valueName>Structure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bed</controllingFieldValue>
+            <controllingFieldValue>Furniture</controllingFieldValue>
+            <valueName>To be categorized</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Miscellaneous</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Not Pluvigner Product</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

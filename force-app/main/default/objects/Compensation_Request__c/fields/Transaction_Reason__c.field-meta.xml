@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Transaction_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Transaction Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Allowances (TRP)</fullName>
+                <default>false</default>
+                <label>Allowances (TRP)</label>
+            </value>
+            <value>
+                <fullName>In-Grade Adjustment</fullName>
+                <default>false</default>
+                <label>In-Grade Adjustment</label>
+            </value>
+            <value>
+                <fullName>One-time Awards</fullName>
+                <default>false</default>
+                <label>One-time Awards</label>
+            </value>
+            <value>
+                <fullName>Promotional Increases</fullName>
+                <default>false</default>
+                <label>Promotional Increases</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Submit_PCN__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Check when Project Completion Notice information is Completed.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Check when Project Completion Notice information is Completed.</inlineHelpText>
+    <label>Submit PCN</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

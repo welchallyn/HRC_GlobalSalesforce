@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VP_required</fullName>
+    <active>true</active>
+    <description>Functional and Finance VP is required if Total CFR Amount is greater than $250K.</description>
+    <errorConditionFormula>AND (
+DATEVALUE(CreatedDate) &gt; DATEVALUE(&quot;2019-02-08&quot;)&amp;&amp;
+Total_CFR__c  &gt;= 250000 &amp;&amp;
+(ISBLANK(Functional_Manager__c ) || ISBLANK(Finance_Lead__c )))</errorConditionFormula>
+    <errorMessage>Functional and Finance VP is required if Total CFR Amount is greater than $250K. Add an approval for each level.</errorMessage>
+</ValidationRule>

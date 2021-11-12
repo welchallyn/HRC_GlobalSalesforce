@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Share_Service_Contracts_with_North_America_users</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Created this for Sales users to see Service cloud functionality.CR00032329 and Jira ticket SE-2114</description>
+        <label>Share Service Contracts with North America users</label>
+        <sharedTo>
+            <group>North_America_Users</group>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>Country__c</field>
+            <operation>equals</operation>
+            <value>US</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country__c</field>
+            <operation>equals</operation>
+            <value>United States</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

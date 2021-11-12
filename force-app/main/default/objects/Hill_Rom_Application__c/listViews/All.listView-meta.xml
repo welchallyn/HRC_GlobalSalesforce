@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>Vendor__c</columns>
+    <columns>GBU__c</columns>
+    <columns>Brand__c</columns>
+    <columns>Primary_Business_Area__c</columns>
+    <columns>Business_Owner__c</columns>
+    <columns>Primary_IT_Analyst__c</columns>
+    <columns>IT_BRM__c</columns>
+    <columns>Infrastructure_Supported_By__c</columns>
+    <columns>Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+</ListView>

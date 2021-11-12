@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Days_in_Stage__c</fullName>
+    <description>Number of days in the current stage</description>
+    <externalId>false</externalId>
+    <formula>IF(
+ISBLANK(Last_Status_Change_Date__c),
+TODAY() - DATEVALUE(CreatedDate),
+TODAY() -  Last_Status_Change_Date__c
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Number of days in the current stage</inlineHelpText>
+    <label>Days in Stage (in days)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

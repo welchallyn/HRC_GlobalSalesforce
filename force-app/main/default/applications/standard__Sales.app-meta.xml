@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <defaultLandingTab>standard-home</defaultLandingTab>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <tabs>standard-Chatter</tabs>
+    <tabs>standard-Account</tabs>
+    <tabs>standard-Lead</tabs>
+    <tabs>standard-Contact</tabs>
+    <tabs>standard-Opportunity</tabs>
+    <tabs>standard-report</tabs>
+    <tabs>standard-Dashboard</tabs>
+    <tabs>CS_QC__CommissionStatement</tabs>
+    <tabs>standard-Product2</tabs>
+    <tabs>standard-Forecasting3</tabs>
+    <tabs>standard-ContentSearch</tabs>
+    <tabs>Order__c</tabs>
+    <tabs>JDE_Prop__c</tabs>
+    <tabs>Technical_Request__c</tabs>
+    <tabs>Territory_Info__c</tabs>
+    <tabs>Capital_Requests__c</tabs>
+    <tabs>BMCServiceDesk__CI_Client_Link__c</tabs>
+    <tabs>AP_and_LIKO_Order_Tracking__c</tabs>
+    <tabs>BMCServiceDesk__SYSTemplate__c</tabs>
+    <tabs>Seismic</tabs>
+    <tabs>Sourcing_GL_Codes__c</tabs>
+    <tabs>Job_Request_Categories__c</tabs>
+    <tabs>Language_List_RF__c</tabs>
+    <tabs>Pricing_Request__c</tabs>
+</CustomApplication>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ContractTypeGPO_IDN_ProposSpecificDetail</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+    OR(
+       ISPICKVAL( X1_a_Contract_Type__c , &apos;GPO&apos;),
+       ISPICKVAL( X1_a_Contract_Type__c , &apos;IDN/Local Agreement&apos;),
+       ISPICKVAL( X1_a_Contract_Type__c , &apos;Proposal/Purchase Order &amp; T&amp;Cs&apos;),
+       ISPICKVAL( X1_a_Contract_Type__c , &apos;Subcontract&apos;),
+       ISPICKVAL( X1_a_Contract_Type__c , &apos;Distribution Agreement&apos;)
+       ) ,
+    OR(
+       ISNULL(TEXT(X1_a_Proposed_Agreement_Start_Date__c)) , 
+       ISNULL(X1_b_Reason_for_specific_start_date__c) , 
+       ISNULL(X2_Agreement_Length_e_g_1_2_or_3_Yrs__c), 
+       ISNULL(X3_What_Product_Categories_are_covered__c), 
+       ISNULL(TEXT(X4_a_Award_Status__c)), 
+       ISNULL(TEXT(X4_b_If_Commitment_what_or__c)), 
+       ISNULL(X4_c_If_4_b_is_required_list_spend_here__c),
+       ISNULL(TEXT(X5_How_are_products_being_sold__c)) ,
+       ISNULL(X6_Provide_approved_pricing_discounts__c) ,
+       ISNULL(TEXT(X7_a_Is_pricing_firm__c)) ,
+       ISNULL(X7_b_If_discount_off_list_indicate_year__c) ,
+       ISNULL(X7_c_How_long_is_pricing_firm__c) ,
+       ISNULL(X8_Deviations_from_HR_standard_terms__c) ,
+       ISNULL(X9_Where_deviations_exist_please_list__c) ,
+       ISNULL(X10_a_Contract_include_any_of_following__c) ,
+       ISNULL(X10_b_Items_checked_in_10_prov_details__c) ,
+       ISNULL(TEXT(X11_a_Services_training_or_other_include__c)) ,
+       ISNULL(TEXT(X11_b_Built_in_price_or_purch_separately__c)) ,
+       ISNULL(X11_c_List__c) 
+       )
+)</errorConditionFormula>
+    <errorMessage>Any of the Specific Detail items 1 - 11 cannot be blank for GPO, IDN/Local Agreement, Proposal/PO T&amp;C’s, Subcontract or Distribution Agreement</errorMessage>
+</ValidationRule>

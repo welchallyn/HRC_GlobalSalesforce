@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>HRC-CHGMGR</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>HRC_ID_ADMIN</publicGroup>
+        </publicGroups>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Approval_Mapping__c</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>BMCServiceDesk__Change_Request__c</sobjectType>
+    </queueSobject>
+</Queue>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primary_Mode_of_Transportation__c</fullName>
+    <externalId>false</externalId>
+    <label>Primary Mode of Transportation</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Commercial Air</fullName>
+                <default>false</default>
+                <label>Commercial Air</label>
+            </value>
+            <value>
+                <fullName>Personal Vehicle</fullName>
+                <default>false</default>
+                <label>Personal Vehicle</label>
+            </value>
+            <value>
+                <fullName>Bus/Car/Van</fullName>
+                <default>false</default>
+                <label>Bus/Car/Van</label>
+            </value>
+            <value>
+                <fullName>Rental car</fullName>
+                <default>false</default>
+                <label>Rental car</label>
+            </value>
+            <value>
+                <fullName>Train</fullName>
+                <default>false</default>
+                <label>Train</label>
+            </value>
+            <value>
+                <fullName>Taxi / Minibus</fullName>
+                <default>false</default>
+                <label>Taxi / Minibus</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

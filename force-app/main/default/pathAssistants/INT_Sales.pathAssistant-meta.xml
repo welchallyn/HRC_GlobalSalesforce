@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Opportunity</entityName>
+    <fieldName>StageName</fieldName>
+    <masterLabel>INT Sales</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>CloseDate</fieldNames>
+        <fieldNames>Order_Number__c</fieldNames>
+        <fieldNames>PO_Number__c</fieldNames>
+        <info>&lt;p&gt;Move to Booked once the sales order creation is created in ERP, therefore part of the backlog. &lt;/p&gt;&lt;p&gt;Update all key fields with the latest data, focus on product name, price, quantity, Close Date;&lt;/p&gt;&lt;p&gt;The Probability % for Won is 100% (Closed)&lt;/p&gt;</info>
+        <picklistValueName>Booked</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Move to Cancelled when the customer cancels the project;&lt;/p&gt;&lt;p&gt;The Probability % for cancelled is 0% (Omitted)&lt;/p&gt;</info>
+        <picklistValueName>Cancelled</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Move to Confirm when all sales activities have been completed &amp;amp; pending customer decision&lt;/p&gt;&lt;p&gt;Register all your sales activities &amp;amp; attach the quotation ;&lt;/p&gt;&lt;p&gt;Update the product, price, quantity &amp;amp; validate Close Date &amp;amp; ensure Lead Time is sufficient;&lt;/p&gt;&lt;p&gt;Split the opportunity into Parent &amp;amp; Child opportunities (with dates) if split invoicing is needed;&lt;/p&gt;&lt;p&gt;Set the Probability % to match your confidence level of winning this deal: the default probability for Confirm is 50% (Best Case) &lt;/p&gt;</info>
+        <picklistValueName>Confirm</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Move to Develop when customer needs are identified; &lt;/p&gt;&lt;p&gt;Register Opportunity Team Members and identify Contact Roles;&lt;/p&gt;&lt;p&gt;Register your sales activities (calls, tasks, events) and assign activities to other team memers; &lt;/p&gt;&lt;p&gt;Update the product details; &lt;/p&gt;&lt;p&gt;Set the Probability % to match your confidence level of winning this deal: the default probability for Develop is 30% (Pipeline) &lt;/p&gt;</info>
+        <picklistValueName>Develop</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Move to Finalise when the customer has given verbal/email commitment to HRC (still pending PO document);&lt;/p&gt;&lt;p&gt;Register/Upload the customer confirmation for the proposal/quote offered;&lt;/p&gt;&lt;p&gt;Update the product, price, quantity &amp;amp; validate Close Date &amp;amp; ensure Lead Time is sufficient;&lt;/p&gt;&lt;p&gt;Split the opportunity into Parent &amp;amp; Child opportunities (with dates) if split invoicing is needed;&lt;/p&gt;&lt;p&gt;If you receive a Customer PO, upload this document to the opportunity record; &lt;/p&gt;&lt;p&gt;Set the Probability % to match your confidence level of winning this deal: the default probability for Finalise is 80% (Commit) &lt;/p&gt;</info>
+        <picklistValueName>Finalize</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Create an opportunity when a qualified lead expresses interest in Hill-Rom;&lt;/p&gt;&lt;p&gt;Use opportunity naming convention: 2-letter country code + Account name + Product/Project name;&lt;/p&gt;&lt;p&gt;Select a product with expected product price and quantity (exact details are not important at this stage);&lt;/p&gt;&lt;p&gt;Set the Probability % to match your confidence level of winning this deal: the default probability for Identify is 1% (Omitted)&lt;/p&gt;</info>
+        <picklistValueName>Identify</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Move to Lost when the customer selects another supplier;&lt;/p&gt;&lt;p&gt;Complete your loss analysis;&lt;/p&gt;&lt;p&gt;The Probability % for Lost is 0% (Omitted)&lt;/p&gt;</info>
+        <picklistValueName>Lost</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>PO_Number__c</fieldNames>
+        <info>&lt;p&gt;Move to Won when the PO document has been received (still pending back-office team to process the sales order);&lt;/p&gt;&lt;p&gt;Update product, price, quantity. Critical to ensure total revenue is as close to PO value as possible. This impacts your (sales) closed &amp;amp; quota amount tracking, and facilitates back-office order processing;  &lt;/p&gt;&lt;p&gt;Attach the PO to the opportunity record;&lt;/p&gt;&lt;p&gt;Complete your win analysis;&lt;/p&gt;&lt;p&gt;Notify your back-office team to process the order in ERP: share the unique salesforce Opportunity Ref. No.;&lt;/p&gt;&lt;p&gt;The Probability % for Won ia 100% (Commit)&lt;/p&gt;</info>
+        <picklistValueName>Won</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>INT_Sales</recordTypeName>
+</PathAssistant>

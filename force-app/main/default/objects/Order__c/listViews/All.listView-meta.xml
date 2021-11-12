@@ -12,9 +12,9 @@
     <columns>HRCSVC_ERP_ID__c</columns>
     <filterScope>Everything</filterScope>
     <filters>
-        <field>RECORDTYPE</field>
-        <operation>equals</operation>
-        <value>Order__c.Rental_Orders</value>
+        <field>HRCSVC_Country__c</field>
+        <operation>notEqual</operation>
+        <value>US,CA</value>
     </filters>
     <label>All</label>
 </ListView>

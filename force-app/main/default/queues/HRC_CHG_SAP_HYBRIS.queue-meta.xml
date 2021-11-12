@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>HRC-CHG-SAP-HYBRIS</name>
+    <queueMembers>
+        <users>
+            <user>browna9@hrc.corp</user>
+            <user>heckmac1@hrc.corp</user>
+            <user>kasperd1@hrc.corp</user>
+            <user>mccabek@hrc.corp</user>
+            <user>patelr1@hrc.corp</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Approval_Mapping__c</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>BMCServiceDesk__Change_Request__c</sobjectType>
+    </queueSobject>
+</Queue>

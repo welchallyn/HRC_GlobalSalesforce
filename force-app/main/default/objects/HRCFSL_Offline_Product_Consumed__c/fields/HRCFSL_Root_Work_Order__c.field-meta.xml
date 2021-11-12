@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCFSL_Root_Work_Order__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Root Work Order</label>
+    <referenceTo>WorkOrder</referenceTo>
+    <relationshipLabel>Related Offline Products Consumed (Root Work Order)</relationshipLabel>
+    <relationshipName>Related_Offline_Products_Consumed1</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

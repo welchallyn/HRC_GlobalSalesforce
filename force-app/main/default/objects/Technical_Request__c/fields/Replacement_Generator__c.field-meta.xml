@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Replacement_Generator__c</fullName>
+    <externalId>false</externalId>
+    <label>Replacement Device</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Model 105</fullName>
+                <default>false</default>
+                <label>Vest Model 105</label>
+            </value>
+            <value>
+                <fullName>Monarch</fullName>
+                <default>false</default>
+                <label>Monarch</label>
+            </value>
+            <value>
+                <fullName>Volara</fullName>
+                <default>false</default>
+                <label>Volara</label>
+            </value>
+            <value>
+                <fullName>VitalCough</fullName>
+                <default>false</default>
+                <label>VitalCough</label>
+            </value>
+            <value>
+                <fullName>Life2000 Compressor</fullName>
+                <default>false</default>
+                <label>Life2000 Compressor</label>
+            </value>
+            <value>
+                <fullName>Life2000 Ventilator</fullName>
+                <default>false</default>
+                <label>Life2000 Ventilator</label>
+            </value>
+            <value>
+                <fullName>Synclara</fullName>
+                <default>false</default>
+                <label>Synclara</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

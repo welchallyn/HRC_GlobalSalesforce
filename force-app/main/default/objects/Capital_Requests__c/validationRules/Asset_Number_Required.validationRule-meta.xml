@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Asset_Number_Required</fullName>
+    <active>true</active>
+    <description>When Actual Completion Date is added and Asset Taggable is checked, them Asset Number is Required.</description>
+    <errorConditionFormula>AND( 
+ISBLANK(Asset_Number__c),
+Actual_Completion_Date__c&gt;=TODAY(),
+OR(
+Is_this_Asset_Taggable__c=TRUE))</errorConditionFormula>
+    <errorDisplayField>Asset_Number__c</errorDisplayField>
+    <errorMessage>You must enter the assigned Asset Number.</errorMessage>
+</ValidationRule>

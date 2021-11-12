@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
     <sharingCriteriaRules>
+        <fullName>Global_Service_case_share</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>All of service can see each other&apos;s cases.</description>
+        <label>Global Service case share</label>
+        <sharedTo>
+            <group>Global_Service</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>WA Technical Support,Scaletronix Service</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
         <fullName>HRCSVC_Case_Ownership</fullName>
         <accessLevel>Edit</accessLevel>
         <description>SE-1823</description>
@@ -13,6 +27,33 @@
             <field>RecordTypeId</field>
             <operation>equals</operation>
             <value>Care Comm,Capital Service,Factory Repair Depot</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Scaletronix_Read_Write</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>All of Scaletronix team can edit scaletronix cases.</description>
+        <label>Scaletronix Read Write</label>
+        <sharedTo>
+            <group>ScaleTronix</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Scaletronix Service</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Tech_Support</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Tech Support</label>
+        <sharedTo>
+            <group>WA_Technical_Support</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>WA Technical Support</value>
         </criteriaItems>
     </sharingCriteriaRules>
 </SharingRules>

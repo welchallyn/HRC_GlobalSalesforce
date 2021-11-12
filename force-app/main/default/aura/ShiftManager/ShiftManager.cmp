@@ -1,0 +1,21 @@
+<aura:component implements="flexipage:availableForRecordHome,force:lightningQuickAction,force:hasRecordId,lightning:actionOverride" access="global">
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+    <aura:if isTrue="{!$Browser.formFactor == 'PHONE'}">
+    	<lightning:flow aura:id="flowData" onstatuschange="{!c.handleStatusChange}"/>
+    </aura:if>
+    <aura:if isTrue="{!$Browser.formFactor != 'PHONE'}">
+        <div aura:id="editDialog" role="dialog" tabindex="-1" aria-labelledby="header43" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <lightning:button class="slds-modal__close slds-button_icon-inverse" iconName="utility:close" variant="base" title="Close" label="Close" onclick="{!c.navHome}"/>
+                    <h2 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Shift Manager</h2>
+                    <p class="slds-m-top_x-small">Welcome to shift manager!</p>
+                </header>
+                <div class="slds-modal__content">
+                    <lightning:flow aura:id="flowData" onstatuschange="{!c.handleStatusChange}"/>
+                </div>
+            </div>
+        </div>
+        <div aura:id="overlay" class="slds-backdrop slds-backdrop--open"></div>
+    </aura:if>
+</aura:component>

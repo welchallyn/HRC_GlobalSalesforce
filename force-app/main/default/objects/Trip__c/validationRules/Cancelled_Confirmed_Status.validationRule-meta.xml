@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancelled_Confirmed_Status</fullName>
+    <active>false</active>
+    <description>HRC CEC Coordinator can only change status to Cancelled or Confirmed.</description>
+    <errorConditionFormula>OR ( $Profile.Name = &apos;HRC CEC Specialist&apos;, 
+OR ( $Profile.Name = &apos;INT Back Office v3.0&apos;, 
+OR ( $Profile.Name = &apos;HRC Sales Admin Power&apos;, 
+OR ( $Profile.Name = &apos;System Administrator&apos;, 
+AND (text(Trip_Request_Status__c)=&apos;cancelled&apos;, 
+AND (text(Trip_Request_Status__c)=&apos;confirmed&apos;, 
+AND (text(Trip_Request_Status__c)=&apos;completed&apos;)))))))</errorConditionFormula>
+    <errorMessage>HRC CEC Coordinator can only change status to Cancelled or Confirmed.</errorMessage>
+</ValidationRule>

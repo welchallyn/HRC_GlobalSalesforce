@@ -1,0 +1,123 @@
+<apex:page standardController="Opportunity" extensions="WinLossAnalysisController" lightningStylesheets="true">
+   <style>
+      .button {
+      display: inline-table;
+      width: 60px;
+      height: 38px;
+      background: #224188;
+      text-align: center;
+      border-radius: 5px;
+      color: white; 
+      font-weight: bold;
+      }
+      .dateFormat{
+      visibility:hidden !important;
+      }
+      .emptyDependentLookup{
+      height: 28px !important;
+      }
+      .multiSelectPicklistRow select[multiple], .slds-scope .multiSelectPicklistRow select[multiple]{
+      height:7rem !important;
+      }
+   </style>
+   <script>
+      function savepage(){
+      
+        postreviewpage();
+        
+      }
+   </script>
+   
+   <apex:form >
+      <apex:actionFunction action="{!saveWinLossAnalysis}" name="postreviewpage" rerender="pagemessage" status="SearchIcon"/>
+      <apex:pageMessages id="pagemessage"></apex:pageMessages>
+      <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+         <apex:pageBlock >
+            <table>
+               <tr>
+                  <td>
+                     <label for="input2"> Stage:</label>
+                     <apex:inputField id="input2" style="height: 30px;width: 100px;padding: 3px;margin-right: 25px;" value="{!objOpp.StageName}" />
+                  </td>
+                  <td>
+                     <label for="input3"> Winning Competitor:</label>
+                     <apex:inputField id="input3" value="{!objOpp.Competitor2__c}" style=""/>
+                  </td>
+                  <td>
+                     <label for="input5"> Competitor Price:</label>
+                     <apex:inputField id="input5" style="height: 30px;width:111px;padding: 3px;margin-right:10px" value="{!objOpp.Competitor_Price__c}" />
+                  </td>
+                  <td>
+                     <label for="input4"> Competitor Product:</label>
+                     <apex:inputField id="input4" value="{!objOpp.Competitor_Product__c}"/>
+                  </td>
+               </tr>
+            </table>
+         </apex:pageBlock>
+         <br/>
+         <apex:pageBlock >
+            <apex:pageBlockButtons location="bottom">
+               <apex:actionStatus id="SearchIcon">
+                  <apex:facet name="start">
+                     <apex:outputPanel >
+                        <button disabled="true" class="button">Save</button>
+                        <img style="" src="/img/loading24.gif" />
+                     </apex:outputPanel>
+                  </apex:facet>
+                  <apex:facet name="stop">
+                     <apex:outputPanel >
+                        <button onclick="savepage();return false;" class="button">
+                        Save
+                        </button>
+                     </apex:outputPanel>
+                  </apex:facet>
+               </apex:actionStatus>
+            </apex:pageBlockButtons>
+            <table>
+               <tr>
+                  <td>
+                     <label class="slds-form-element__label" for="input8" style="color: #54698d;">Win/Loss Analysis:</label>
+                     <apex:inputField id="input8" styleclass="" value="{!objOpp.Win_Loss_Analysis__c}"/>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <label class="slds-form-element__label" for="input7" style="color: #54698d;">Budget Reasons :</label>
+                     <apex:inputField id="input7" styleclass="" value="{!objOpp.Price_Reasons__c}"/>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <label class="slds-form-element__label" for="input10" style="color: #54698d;">Service Reasons:</label>
+                     <apex:inputField id="input10" styleclass="" value="{!objOpp.Service_Reasons__c}"/>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <label class="slds-form-element__label" for="input11" style="color: #54698d;">Relationship Reasons:</label>
+                     <apex:inputField id="input11" styleclass="" value="{!objOpp.Relationship_Reasons__c}"/>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <label class="slds-form-element__label" for="input6" style="color: #54698d;">Product Portfolio Reasons :</label>
+                     <apex:inputField id="input6" styleclass="" value="{!objOpp.Specification_Reasons__c}"/>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <label class="slds-form-element__label" for="input9" style="color: #54698d;">Quality Reasons:</label>
+                     <apex:inputField id="input9" styleclass="" value="{!objOpp.Quality_Reasons__c}"/>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <label class="slds-form-element__label" for="input12" style="color: #54698d;">Win/Loss Comments (English):</label> <br/>
+                     <apex:inputField id="input12" styleclass="" value="{!objOpp.Loss_Comment__c}" style="width:400px"/>
+                  </td>
+               </tr>
+            </table>
+         </apex:pageBlock>
+      </html>
+   </apex:form>
+</apex:page>

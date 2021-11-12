@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_for_Submit_For_Approval</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+Sent_For_Approval__c=false,
+
+OR(
+ISPICKVAL(Status__c ,&apos;Pending Approval&apos;),
+ISPICKVAL(Status__c ,&apos;Approved&apos;)
+),
+$RecordType.DeveloperName = &apos;Quote_Order&apos;
+)</errorConditionFormula>
+    <errorMessage>For approval, please click on the &quot;Submit for Approval&quot; button to proceed</errorMessage>
+</ValidationRule>

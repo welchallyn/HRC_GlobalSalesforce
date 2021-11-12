@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Brand__c</fullName>
+    <externalId>false</externalId>
+    <label>Brand</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Business_Unit__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Liko</fullName>
+                <default>false</default>
+                <label>Liko</label>
+            </value>
+            <value>
+                <fullName>Welch Allyn</fullName>
+                <default>false</default>
+                <label>Welch Allyn</label>
+            </value>
+            <value>
+                <fullName>Hill-Rom</fullName>
+                <default>false</default>
+                <label>Hill-Rom</label>
+            </value>
+            <value>
+                <fullName>Mortara</fullName>
+                <default>false</default>
+                <label>Mortara</label>
+            </value>
+            <value>
+                <fullName>Allen Medical</fullName>
+                <default>false</default>
+                <label>Allen Medical</label>
+            </value>
+            <value>
+                <fullName>Aspen Surgical</fullName>
+                <default>false</default>
+                <label>Aspen Surgical</label>
+            </value>
+            <value>
+                <fullName>Trumpf</fullName>
+                <default>false</default>
+                <label>Trumpf</label>
+            </value>
+            <value>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+                <label>Not Applicable</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Patient Support Systems</controllingFieldValue>
+            <valueName>Liko</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Patient Support Systems</controllingFieldValue>
+            <controllingFieldValue>Front Line Care</controllingFieldValue>
+            <valueName>Hill-Rom</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Front Line Care</controllingFieldValue>
+            <valueName>Welch Allyn</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Front Line Care</controllingFieldValue>
+            <valueName>Mortara</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Surgical Solutions</controllingFieldValue>
+            <valueName>Allen Medical</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Surgical Solutions</controllingFieldValue>
+            <valueName>Aspen Surgical</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Surgical Solutions</controllingFieldValue>
+            <valueName>Trumpf</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Corporate Function or working across two or more GBUs</controllingFieldValue>
+            <valueName>Not Applicable</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

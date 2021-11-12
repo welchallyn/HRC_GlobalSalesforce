@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>true</doesSendEmailToMembers>
+    <name>INT EU IT FLC Back Office</name>
+    <queueMembers>
+        <users>
+            <user>carusog1@hrc.corp</user>
+            <user>gambarn1@hrc.corp</user>
+            <user>rossip1@hrc.corp</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Evaluation_Form__c</sobjectType>
+    </queueSobject>
+</Queue>

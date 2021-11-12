@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ceiling_Structure__c</fullName>
+    <externalId>false</externalId>
+    <label>Ceiling Structure</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Concrete Flat Slab</fullName>
+                <default>false</default>
+                <label>Concrete Flat Slab</label>
+            </value>
+            <value>
+                <fullName>Concrete w/ Metal Deck</fullName>
+                <default>false</default>
+                <label>Concrete w/ Metal Deck</label>
+            </value>
+            <value>
+                <fullName>Concrete Beams</fullName>
+                <default>false</default>
+                <label>Concrete Beams</label>
+            </value>
+            <value>
+                <fullName>Open Web Joists</fullName>
+                <default>false</default>
+                <label>Open Web Joists</label>
+            </value>
+            <value>
+                <fullName>Steel Beams</fullName>
+                <default>false</default>
+                <label>Steel Beams</label>
+            </value>
+            <value>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+                <label>Not Applicable</label>
+            </value>
+            <value>
+                <fullName>Unknown At This Time</fullName>
+                <default>false</default>
+                <label>Unknown At This Time</label>
+            </value>
+            <value>
+                <fullName>Other (describe in notes)</fullName>
+                <default>false</default>
+                <label>Other (describe in notes)</label>
+            </value>
+            <value>
+                <fullName>Structural Steel Build - Done by Others</fullName>
+                <default>false</default>
+                <label>Structural Steel Build - Done by Others</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

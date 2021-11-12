@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>52.0</apiVersion>
+    <description>Simple Page Banner</description>
+    <isExposed>true</isExposed>
+    <masterLabel>Page Banner</masterLabel>
+    <targets>
+        <target>lightning__RecordPage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__RecordPage">
+            <property label="Label" name="label" type="String" default="Banner" />
+            <property label="Background Color" name="backgroundColor" type="String" datasource="red,green,blue,white,Hillrom Purple" default="red" />
+            <property label="Color" name="color" type="String" datasource="red,green,blue,white,black,Hillrom Purple" default="white" />
+            <property label="Font Size" name="fontSize" type="String" datasource="xx-small,x-small,small,initial,large,larger,x-large,xx-large" default="larger" />
+            <property label="Font Weight" name="fontWeight" type="String" datasource="normal,bold,bolder,lighter" default="normal" />
+        </targetConfig>
+    </targetConfigs>
+
+</LightningComponentBundle>

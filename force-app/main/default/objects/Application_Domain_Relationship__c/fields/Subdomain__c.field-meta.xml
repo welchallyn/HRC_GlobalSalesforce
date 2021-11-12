@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Subdomain__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Subdomain</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Hill_Rom_Application_Domain__c.Type__c</field>
+            <operation>equals</operation>
+            <value>Subdomain</value>
+        </filterItems>
+        <filterItems>
+            <field>$Source.Domain__c</field>
+            <operation>equals</operation>
+            <valueField>Hill_Rom_Application_Domain__c.Parent_Domain__c</valueField>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Hill_Rom_Application_Domain__c</referenceTo>
+    <relationshipLabel>Application Domain Relationships (Subdomain)</relationshipLabel>
+    <relationshipName>Application_Domain_Relationships1</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

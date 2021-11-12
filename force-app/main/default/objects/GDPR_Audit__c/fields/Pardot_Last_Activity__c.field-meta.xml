@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pardot_Last_Activity__c</fullName>
+    <description>The date and time a prospect last interacted with your Pardot marketing assets. The field updates when a prospect performs activities such as page visits, form submissions, link clicks, and file downloads. Any prospect activity except for an email open updates the Last Activity field.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The date and time a prospect last interacted with your Pardot marketing assets. The field updates when a prospect performs activities such as page visits, form submissions, link clicks, and file downloads. Any prospect activity except for an email open updates the Last Activity field.</inlineHelpText>
+    <label>Pardot Last Activity</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

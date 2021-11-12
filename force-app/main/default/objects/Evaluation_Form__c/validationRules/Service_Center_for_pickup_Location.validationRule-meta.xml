@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service_Center_for_pickup_Location</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISPICKVAL(Pickup_From_Delievery__c , &apos;Service Center&apos;),
+ISBLANK( Service_Center_Name__c )
+)</errorConditionFormula>
+    <errorDisplayField>Service_Center_Name__c</errorDisplayField>
+    <errorMessage>Please identify the Service Center to pickup the items from.</errorMessage>
+</ValidationRule>

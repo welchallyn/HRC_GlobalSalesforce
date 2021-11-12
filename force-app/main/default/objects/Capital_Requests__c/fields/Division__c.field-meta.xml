@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Division__c</fullName>
+    <externalId>false</externalId>
+    <label>Division</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Acute Care</fullName>
+                <default>false</default>
+                <label>Acute Care</label>
+            </value>
+            <value>
+                <fullName>Allen Medical</fullName>
+                <default>false</default>
+                <label>Allen Medical</label>
+            </value>
+            <value>
+                <fullName>CWS</fullName>
+                <default>false</default>
+                <label>CWS</label>
+            </value>
+            <value>
+                <fullName>Extended Care</fullName>
+                <default>false</default>
+                <label>Extended Care</label>
+            </value>
+            <value>
+                <fullName>Functional</fullName>
+                <default>false</default>
+                <label>Functional</label>
+            </value>
+            <value>
+                <fullName>HGS</fullName>
+                <default>false</default>
+                <label>HGS</label>
+            </value>
+            <value>
+                <fullName>Home Care</fullName>
+                <default>false</default>
+                <label>Home Care</label>
+            </value>
+            <value>
+                <fullName>International</fullName>
+                <default>false</default>
+                <label>International</label>
+            </value>
+            <value>
+                <fullName>International-Montpelier-GSC</fullName>
+                <default>false</default>
+                <label>International-Montpelier-GSC</label>
+            </value>
+            <value>
+                <fullName>International-Pluvigner-GSC</fullName>
+                <default>false</default>
+                <label>International-Pluvigner-GSC</label>
+            </value>
+            <value>
+                <fullName>Operations - Manufacturing</fullName>
+                <default>false</default>
+                <label>Operations - Manufacturing</label>
+            </value>
+            <value>
+                <fullName>Operations - PC&amp;L</fullName>
+                <default>false</default>
+                <label>Operations - PC&amp;L</label>
+            </value>
+            <value>
+                <fullName>Operations - PD</fullName>
+                <default>false</default>
+                <label>Operations - PD</label>
+            </value>
+            <value>
+                <fullName>Operations - Shared Service</fullName>
+                <default>false</default>
+                <label>Operations - Shared Service</label>
+            </value>
+            <value>
+                <fullName>Operations - Sourcing</fullName>
+                <default>false</default>
+                <label>Operations - Sourcing</label>
+            </value>
+            <value>
+                <fullName>Vest</fullName>
+                <default>false</default>
+                <label>Vest</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

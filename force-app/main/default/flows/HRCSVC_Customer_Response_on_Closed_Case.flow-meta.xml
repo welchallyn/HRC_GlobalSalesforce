@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Email_Customer</name>
+        <label>Email Customer</label>
+        <locationX>176</locationX>
+        <locationY>198</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>Pause</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>ClosedCaseResponse</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>FromAddress</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>noreply@hillrom.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <elementReference>ClosedCaseSubject</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>49.0</apiVersion>
+    <interviewLabel>HRCSVC Customer Response on Closed Case {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>HRCSVC Customer Response on Closed Case</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordDeletes>
+        <name>Delete_Email</name>
+        <label>Delete Email</label>
+        <locationX>178</locationX>
+        <locationY>459</locationY>
+        <inputReference>Email</inputReference>
+    </recordDeletes>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Email_Customer</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>ClosedCaseResponse</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>This case is no longer open.
+
+If you need immediate assistance, please contact us at the support line (1-800-445-3720 Option 3).
+
+For assistance with non-urgent issues, please send an email request to hrccwssupport@hillrom.com.
+
+Care Communications Technical Support
+1-800-445-3720 Option 3
+hrccwssupport@hill-rom.com | www.hillrom.com</text>
+    </textTemplates>
+    <textTemplates>
+        <name>ClosedCaseSubject</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Re: {!Email.Subject}</text>
+    </textTemplates>
+    <variables>
+        <name>Email</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>EmailMessage</objectType>
+    </variables>
+    <variables>
+        <name>FromAddress</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <waits>
+        <description>Wait before deleting the email so the corresponding Feed item will be properly deleted</description>
+        <name>Pause</name>
+        <label>Pause</label>
+        <locationX>175</locationX>
+        <locationY>321</locationY>
+        <defaultConnectorLabel>Default Path</defaultConnectorLabel>
+        <waitEvents>
+            <name>Wait</name>
+            <conditionLogic>and</conditionLogic>
+            <connector>
+                <targetReference>Delete_Email</targetReference>
+            </connector>
+            <eventType>AlarmEvent</eventType>
+            <inputParameters>
+                <name>AlarmTime</name>
+                <value>
+                    <elementReference>$Flow.InterviewStartTime</elementReference>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>TimeOffset</name>
+                <value>
+                    <numberValue>0.0</numberValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>TimeOffsetUnit</name>
+                <value>
+                    <stringValue>Hours</stringValue>
+                </value>
+            </inputParameters>
+            <label>Wait</label>
+        </waitEvents>
+    </waits>
+</Flow>

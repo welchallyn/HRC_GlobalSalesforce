@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Evaluation_Completed__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Evaluation field to be checked by CRS once evaluation in complete</description>
+    <externalId>false</externalId>
+    <label>Evaluation Completed</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

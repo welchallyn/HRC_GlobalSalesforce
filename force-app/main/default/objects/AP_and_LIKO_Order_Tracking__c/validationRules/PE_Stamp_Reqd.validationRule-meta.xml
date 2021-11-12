@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PE_Stamp_Reqd</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ PE_Stamp_Req_d__c,
+  OR(
+  ISPICKVAL(PE_Stamp_Type__c, &quot;&quot;)
+ )
+)</errorConditionFormula>
+    <errorDisplayField>PE_Stamp_Req_d__c</errorDisplayField>
+    <errorMessage>If  field PE Stamp Req&apos;d is checked, you must pick a PE Stamp Type. Basic, Standard or Custom.</errorMessage>
+</ValidationRule>

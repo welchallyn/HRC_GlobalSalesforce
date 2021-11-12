@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hoses__c</fullName>
+    <externalId>false</externalId>
+    <label>Hoses</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Oxygen Inlet Hose (6 Feet)</fullName>
+                <default>false</default>
+                <label>Oxygen Inlet Hose (6 Feet)</label>
+            </value>
+            <value>
+                <fullName>Oxygen Inlet Hose (20 Feet)</fullName>
+                <default>false</default>
+                <label>Oxygen Inlet Hose (20 Feet)</label>
+            </value>
+            <value>
+                <fullName>Oxygen Inlet Hose (50 Feet)</fullName>
+                <default>false</default>
+                <label>Oxygen Inlet Hose (50 Feet)</label>
+            </value>
+            <value>
+                <fullName>COMBO2 Air &amp; Oxygen Hose (20 Feet)</fullName>
+                <default>false</default>
+                <label>COMBO2 Air &amp; Oxygen Hose (20 Feet)</label>
+            </value>
+            <value>
+                <fullName>COMBO2 Air &amp; Oxygen Hose (50 Feet)</fullName>
+                <default>false</default>
+                <label>COMBO2 Air &amp; Oxygen Hose (50 Feet)</label>
+            </value>
+            <value>
+                <fullName>Oxygen Inlet Hose (10 Feet)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Oxygen Inlet Hose (10 Feet)</label>
+            </value>
+            <value>
+                <fullName>Oxygen Inlet Hose (3 Feet)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Oxygen Inlet Hose (3 Feet)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

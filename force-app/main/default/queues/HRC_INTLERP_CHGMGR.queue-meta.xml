@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>HRC-INTLERP-CHGMGR</name>
+    <queueMembers>
+        <users>
+            <user>adamsd@hrc.corp</user>
+            <user>garriod@hrc.corp</user>
+            <user>leborgj@hrc.corp</user>
+            <user>leonen@hrc.corp</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>ApprovalRoleMapping__c</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>Approval_Mapping__c</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>BMCServiceDesk__Change_Request__c</sobjectType>
+    </queueSobject>
+</Queue>

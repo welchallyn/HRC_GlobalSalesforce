@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Add_parts</name>
+        <label>Add parts</label>
+        <locationX>199</locationX>
+        <locationY>50</locationY>
+        <actionName>WorkOrder.HRCFSL_Consume_Parts</actionName>
+        <actionType>quickAction</actionType>
+        <connector>
+            <targetReference>Choice_screen</targetReference>
+        </connector>
+        <inputParameters>
+            <name>contextId</name>
+            <value>
+                <elementReference>Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>PricebookEntryId</name>
+            <value>
+                <elementReference>const_NULL</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>QuantityConsumed</name>
+        </inputParameters>
+        <inputParameters>
+            <name>HRCFSL_Disposition_Code__c</name>
+            <value>
+                <elementReference>const_NULL_Number</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <constants>
+        <name>const_NULL</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </constants>
+    <constants>
+        <name>const_NULL_Number</name>
+        <dataType>Number</dataType>
+    </constants>
+    <decisions>
+        <name>Decision</name>
+        <label>Decision</label>
+        <locationX>410</locationX>
+        <locationY>211</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Add_more</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Add_more_parts</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Add_parts</targetReference>
+            </connector>
+            <label>Add more</label>
+        </rules>
+    </decisions>
+    <interviewLabel>HRCFSL Add more parts {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>HRCFSL Add more parts</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>FieldServiceMobile</processType>
+    <screens>
+        <name>Choice_screen</name>
+        <label>Choice screen</label>
+        <locationX>419</locationX>
+        <locationY>42</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Decision</targetReference>
+        </connector>
+        <fields>
+            <name>Add_more_parts</name>
+            <dataType>Boolean</dataType>
+            <fieldText>Add more parts</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <startElementReference>Add_parts</startElementReference>
+    <status>Active</status>
+    <variables>
+        <description>Work Order Id</description>
+        <name>Id</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

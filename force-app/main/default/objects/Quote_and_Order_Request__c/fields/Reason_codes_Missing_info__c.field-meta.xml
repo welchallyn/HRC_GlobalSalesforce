@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_codes_Missing_info__c</fullName>
+    <description>Created this field as part of CR00029874</description>
+    <externalId>false</externalId>
+    <label>Reason codes - Missing info</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Quote_Discount missing</fullName>
+                <default>false</default>
+                <label>Quote_Discount missing</label>
+            </value>
+            <value>
+                <fullName>Quote_Item Reference missing</fullName>
+                <default>false</default>
+                <label>Quote_Item Reference missing</label>
+            </value>
+            <value>
+                <fullName>Quote_Awaiting Tender</fullName>
+                <default>false</default>
+                <label>Quote_Awaiting Tender</label>
+            </value>
+            <value>
+                <fullName>Quote_Approval missing</fullName>
+                <default>false</default>
+                <label>Quote_Approval missing</label>
+            </value>
+            <value>
+                <fullName>Quote_Contact missing</fullName>
+                <default>false</default>
+                <label>Quote_Contact missing</label>
+            </value>
+            <value>
+                <fullName>Quote_Configuration not applicable</fullName>
+                <default>false</default>
+                <label>Quote_Configuration not applicable</label>
+            </value>
+            <value>
+                <fullName>Quote_Quantity missing</fullName>
+                <default>false</default>
+                <label>Quote_Quantity missing</label>
+            </value>
+            <value>
+                <fullName>Quote_Attachment missing</fullName>
+                <default>false</default>
+                <label>Quote_Attachment missing</label>
+            </value>
+            <value>
+                <fullName>Quote_Installation missing info</fullName>
+                <default>false</default>
+                <label>Quote_Installation missing info</label>
+            </value>
+            <value>
+                <fullName>Quote_Others</fullName>
+                <default>false</default>
+                <label>Quote_Others</label>
+            </value>
+            <value>
+                <fullName>Order_Awaiting account creation (ERP)</fullName>
+                <default>false</default>
+                <label>Order_Awaiting account creation (ERP)</label>
+            </value>
+            <value>
+                <fullName>Order_Customer PO missing</fullName>
+                <default>false</default>
+                <label>Order_Customer PO missing</label>
+            </value>
+            <value>
+                <fullName>Order_Product pricing - clarification</fullName>
+                <default>false</default>
+                <label>Order_Product pricing - clarification</label>
+            </value>
+            <value>
+                <fullName>Order_Tax Pricing - clarification</fullName>
+                <default>false</default>
+                <label>Order_Tax Pricing - clarification</label>
+            </value>
+            <value>
+                <fullName>Order_Configuration info missing</fullName>
+                <default>false</default>
+                <label>Order_Configuration info missing</label>
+            </value>
+            <value>
+                <fullName>Order_Awaiting PRS creation</fullName>
+                <default>false</default>
+                <label>Order_Awaiting PRS creation</label>
+            </value>
+            <value>
+                <fullName>Order_Awaiting Recalculation</fullName>
+                <default>false</default>
+                <label>Order_Awaiting Recalculation</label>
+            </value>
+            <value>
+                <fullName>Order_Installation missing info</fullName>
+                <default>false</default>
+                <label>Order_Installation missing info</label>
+            </value>
+            <value>
+                <fullName>Order_Others</fullName>
+                <default>false</default>
+                <label>Order_Others</label>
+            </value>
+            <value>
+                <fullName>Quote_Missing Freight quotation</fullName>
+                <default>false</default>
+                <label>Quote_Missing Freight quotation</label>
+            </value>
+            <value>
+                <fullName>Order_Order type missing</fullName>
+                <default>false</default>
+                <label>Order_Order type missing</label>
+            </value>
+            <value>
+                <fullName>Order_Opportunity missing</fullName>
+                <default>false</default>
+                <label>Order_Opportunity missing</label>
+            </value>
+            <value>
+                <fullName>Order_Financial Hold</fullName>
+                <default>false</default>
+                <label>Order_Financial Hold</label>
+            </value>
+            <value>
+                <fullName>Quote_Packing List Missing</fullName>
+                <default>false</default>
+                <label>Quote_Packing List Missing</label>
+            </value>
+            <value>
+                <fullName>Order_Awaiting Credit notes approval</fullName>
+                <default>false</default>
+                <label>Order_Awaiting Credit notes approval</label>
+            </value>
+            <value>
+                <fullName>QR cancelled</fullName>
+                <default>false</default>
+                <label>QR cancelled</label>
+            </value>
+            <value>
+                <fullName>Awaiting product return info</fullName>
+                <default>false</default>
+                <label>Awaiting product return info</label>
+            </value>
+            <value>
+                <fullName>Order_Clarification Bill &amp; Ship to Address</fullName>
+                <default>false</default>
+                <label>Order_Clarification Bill &amp; Ship to Address</label>
+            </value>
+            <value>
+                <fullName>Order_Manufacturing Hold</fullName>
+                <default>false</default>
+                <label>Order_Manufacturing Hold</label>
+            </value>
+            <value>
+                <fullName>Order_Clarification Sales Rep</fullName>
+                <default>false</default>
+                <label>Order_Clarification Sales Rep</label>
+            </value>
+            <value>
+                <fullName>Order_VAT missing</fullName>
+                <default>false</default>
+                <label>Order_VAT missing</label>
+            </value>
+            <value>
+                <fullName>Order_Waiting for allocation</fullName>
+                <default>false</default>
+                <label>Order_Waiting for allocation</label>
+            </value>
+            <value>
+                <fullName>Order_Commissions to be Added</fullName>
+                <default>false</default>
+                <label>Order_Commissions to be Added</label>
+            </value>
+            <value>
+                <fullName>Order_Cash in Advance</fullName>
+                <default>false</default>
+                <label>Order_Cash in Advance</label>
+            </value>
+            <value>
+                <fullName>Order_Waiting for Distributor&apos;s approval</fullName>
+                <default>false</default>
+                <label>Order_Waiting for Distributor&apos;s approval</label>
+            </value>
+            <value>
+                <fullName>Order_Letter of Credit</fullName>
+                <default>false</default>
+                <label>Order_Letter of Credit</label>
+            </value>
+            <value>
+                <fullName>Order_Awaiting Agreement</fullName>
+                <default>false</default>
+                <label>Order_Awaiting Agreement</label>
+            </value>
+            <value>
+                <fullName>Order_Missing discount approval</fullName>
+                <default>false</default>
+                <label>Order_Missing discount approval</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

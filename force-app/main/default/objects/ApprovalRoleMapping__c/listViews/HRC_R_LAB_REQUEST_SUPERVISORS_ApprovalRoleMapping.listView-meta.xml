@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRC_R_LAB_REQUEST_SUPERVISORS_ApprovalRoleMapping</fullName>
+    <filterScope>Queue</filterScope>
+    <label>xHRC-AGILE-LAB-REQUEST-SUPERVISORS</label>
+    <queue>xHRC_AGILE_LAB_REQUEST_SUPERVISORS</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

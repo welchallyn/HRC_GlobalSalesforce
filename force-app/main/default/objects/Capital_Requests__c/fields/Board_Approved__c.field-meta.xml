@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Board_Approved__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Fixed Assets will check to indicate Board Approval for CFR&apos;s over $10 Million</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Fixed Assets will check to indicate Board Approval for CFR&apos;s over $10 Million</inlineHelpText>
+    <label>Board Approved</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

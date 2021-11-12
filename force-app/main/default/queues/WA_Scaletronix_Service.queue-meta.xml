@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>WA Scaletronix Service</name>
+    <queueMembers>
+        <users>
+            <user>leubnec1@hrc.corp</user>
+            <user>stevend2@hrc.corp</user>
+            <user>gillmol1@hrc.corp</user>
+            <user>lowes2@hrc.corp</user>
+            <user>loweryw1@hrc.corp</user>
+        </users>
+    </queueMembers>
+    <queueRoutingConfig>Standard_Priority_Cases</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

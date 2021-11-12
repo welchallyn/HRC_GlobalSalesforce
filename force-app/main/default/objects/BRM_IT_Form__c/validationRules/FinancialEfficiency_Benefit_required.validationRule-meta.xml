@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FinancialEfficiency_Benefit_required</fullName>
+    <active>false</active>
+    <description>Created as part of CR CR00030892</description>
+    <errorConditionFormula>(ISPICKVAL(Gate__c , &apos;Opportunity&apos;) || ISPICKVAL(Gate__c ,&apos;Value Prioritization&apos;) || (ISPICKVAL(Gate__c ,&apos;Execute&apos;) &amp;&amp; ISPICKVAL(Status__c ,&apos;PENDING&apos;))|| (ISPICKVAL(Gate__c ,&apos;Execute&apos;) &amp;&amp; ISPICKVAL(Status__c ,&apos;IN PROGRESS&apos;)) ||
+ISPICKVAL(Gate__c ,&apos;Value Realization&apos;)  )&amp;&amp; ( ISNULL( Financial_Efficiency_Benefit_Type__c) || ISBLANK(Financial_Efficiency_Benefit_Type__c))</errorConditionFormula>
+    <errorDisplayField>Financial_Efficiency_Benefit_Type__c</errorDisplayField>
+    <errorMessage>Required</errorMessage>
+</ValidationRule>

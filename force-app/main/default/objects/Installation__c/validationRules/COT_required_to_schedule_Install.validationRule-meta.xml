@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>COT_required_to_schedule_Install</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISBLANK(  Certified_Opthalmic_Technician__c ),
+ISCHANGED( Status__c ),
+ISPICKVAL(Status__c, &quot;Installation scheduled&quot;),
+RecordType.Name = &quot;RetinaVue&quot;,
+NOT(Device_Only_Install__c)
+)</errorConditionFormula>
+    <errorDisplayField>Certified_Opthalmic_Technician__c</errorDisplayField>
+    <errorMessage>COT required to schedule install.</errorMessage>
+</ValidationRule>

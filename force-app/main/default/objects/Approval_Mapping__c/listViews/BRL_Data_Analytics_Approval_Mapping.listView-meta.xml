@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BRL_Data_Analytics_Approval_Mapping</fullName>
+    <filterScope>Queue</filterScope>
+    <label>BRL-Data &amp; Analytics</label>
+    <queue>BRL_Data_Analytics</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

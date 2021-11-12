@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Clinical_Workflow_CWS__c</fullName>
+    <externalId>false</externalId>
+    <label>Care Communications</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Trip_Location__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Asset Tracking</fullName>
+                <default>false</default>
+                <label>Asset Tracking</label>
+            </value>
+            <value>
+                <fullName>Bed Connectivity</fullName>
+                <default>false</default>
+                <label>Bed Connectivity</label>
+            </value>
+            <value>
+                <fullName>EMR Integration</fullName>
+                <default>false</default>
+                <label>EMR Integration</label>
+            </value>
+            <value>
+                <fullName>Voalte NurseCall</fullName>
+                <default>false</default>
+                <label>Voalte NurseCall</label>
+            </value>
+            <value>
+                <fullName>Navicare Patient Safety</fullName>
+                <default>false</default>
+                <label>Navicare Patient Safety</label>
+            </value>
+            <value>
+                <fullName>Reporting</fullName>
+                <default>false</default>
+                <label>Reporting</label>
+            </value>
+            <value>
+                <fullName>Staff Locating</fullName>
+                <default>false</default>
+                <label>Staff Locating</label>
+            </value>
+            <value>
+                <fullName>Linq</fullName>
+                <default>false</default>
+                <label>Voalte Mobile</label>
+            </value>
+            <value>
+                <fullName>Wireless Integration</fullName>
+                <default>false</default>
+                <label>Wireless Integration</label>
+            </value>
+            <value>
+                <fullName>Voalte Patient Experience</fullName>
+                <default>false</default>
+                <label>Voalte Patient Experience</label>
+            </value>
+            <value>
+                <fullName>CareSign</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>CareSign</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>CWS Site</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <valueName>Asset Tracking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>CWS Site</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <controllingFieldValue>Sydney</controllingFieldValue>
+            <valueName>Bed Connectivity</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>CWS Site</controllingFieldValue>
+            <controllingFieldValue>Sydney</controllingFieldValue>
+            <valueName>EMR Integration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>CWS Site</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <valueName>Voalte NurseCall</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>CWS Site</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <valueName>Navicare Patient Safety</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>CWS Site</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <valueName>Reporting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>CWS Site</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <valueName>Staff Locating</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>CWS Site</controllingFieldValue>
+            <controllingFieldValue>Sydney</controllingFieldValue>
+            <valueName>Linq</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>CWS Site</controllingFieldValue>
+            <controllingFieldValue>Sydney</controllingFieldValue>
+            <valueName>Wireless Integration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>CWS Site</controllingFieldValue>
+            <controllingFieldValue>Sydney</controllingFieldValue>
+            <valueName>Voalte Patient Experience</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

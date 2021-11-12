@@ -1,0 +1,467 @@
+<apex:page controller="HRC_PerformanceScoreboardController">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    
+    <apex:stylesheet value="/EXT/ext-3.0.0/resources/css/ext-all.css" />
+    <apex:includeScript value="/EXT/ext-3.0.0/ext.js" />
+    
+    <script type="text/javascript">
+        function showProgress()
+        {
+        Ext.MessageBox.show({
+                   title: 'Loading...',
+                   msg: '',
+                   progressText: 'Loading...',
+                   width:300,
+                   wait:true,
+                   waitConfig: {interval:200},
+                   animEl: 'mb7'
+               });
+        }
+        function hideProgress()
+        {
+            Ext.MessageBox.hide();
+        }
+    </script>
+
+    <style>
+        .wrap{
+            max-width:880px;
+        }
+        h1 {
+            font-size: 30px;
+            font-weight: normal;
+        }
+        #performanceTable{
+            border-collapse:collapse;
+            width:100%;
+            margin-top:30px;
+        }
+        #performanceTable th{
+            background:#989898;
+            text-align:center;
+            color:#fff;
+            padding:5px;
+            font-weight:normal;
+            border:1px solid #fff;
+        }
+        #performanceTable th.secondary{
+            background:#DFDFDF;
+            color:#5E9DD0;
+            font-weight:bold;
+        }
+        #performanceTable th:first-child{
+            background:#fff;
+        }
+        #performanceTable td {
+            padding: 6px;
+            text-align: right;
+            font-size:14px;
+        }
+        #performanceTable td:first-child,
+        #performanceTable tr.even td:first-child{
+            background:#5E9DD0;
+            text-align:right;
+            color:#fff;
+            font-weight:bold;
+            font-size:16px;
+            border-bottom:1px solid #fff;
+        }
+        #performanceTable td:first-child span{
+            color: #333;
+            font-weight: bold;
+            font-size: 1em;
+        }
+        #performanceTable tr.even td{
+            background:#E9F0F8;
+        }
+
+        #performanceTable tr.has-secondary td,
+        #performanceTable tr.has-secondary.even td{
+            border-bottom:0 none;
+        }
+        #performanceTable tr.secondary{
+            display:none;
+        }
+        #performanceTable tr.secondary + tr td:first-child{
+            border-top: 1px solid #fff;
+        }
+        #performanceTable tr.secondary td,
+        #performanceTable tr.secondary.even td,
+        #performanceTable tr.secondary + tr.secondary td,
+        #performanceTable tr.secondary.even + tr.secondary.even td{
+            font-weight:normal;
+            font-size:12px;
+            border-bottom:0 none;
+            border-top: 0 none;
+        }
+        #performanceTable tr.total-row td{
+            background:#fff;
+            font-weight:bold;
+            font-size:16px;
+            color:#111;
+            border-top:1px solid #999;
+            border-bottom:1px solid #999;
+        }
+        #performanceTable tr.total-row td:first-child{
+            border:0 none;
+        }
+        #performanceTable tr.total-row td.first{
+            border-left:1px solid #999;
+        }
+        #performanceTable tr.total-row td.last{
+            border-right:1px solid #999;
+        }
+        #performanceTable tr.total-row td.red{
+            color:red;
+        }
+        #performanceTable tr.total-row td.green{
+            color:green;
+        }
+        #performanceTable tr.footnotes td:first-child{
+            background: none transparent;
+        }
+        #performanceTable tr.footnotes td{
+            text-align:left;
+        }
+        .icon-open-toggle {
+            width: 30px;
+            height: 30px;
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            border: 1px solid #6B97D1;
+        }
+        .opps-toggle .icon-open-toggle {
+            background: none transparent;
+            border: 0 none;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+        .icon-open-toggle:before {
+            content: "";
+            display: inline-block;
+            width: 3px;
+            height: 15px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -1.5px;
+            margin-top: -7.5px;
+        }
+        .icon-open-toggle:after {
+            content: "";
+            display: inline-block;
+            width: 15px;
+            height: 3px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -1.5px;
+            margin-left: -7.5px;
+        }
+        .opps-toggle .icon-open-toggle:before, 
+        .opps-toggle .icon-open-toggle:after {
+            background: none #fff;
+        }
+        .icon-open-toggle.open:before{
+            display:none;
+        }
+        .matrix-controls{
+            zoom: 1;
+            margin-top:10px;
+            clear:both;
+        }
+        .matrix-controls:after,
+        .matrix-controls:before{
+            content:"";
+            display:block;
+        }
+        .matrix-controls:after{
+            clear:both;
+        }
+        .matrix-controls .control-group {
+            float: left;
+            padding:5px 14px;
+        }
+        .matrix-controls #matrixRole,
+        .matrix-controls #matrixCloseDate{
+            padding-left:0;
+            clear:both;
+        }
+        .matrix-controls #matrixEmployee{
+            border-right:1px solid #bbb;
+            padding-right:40px;
+            position:relative;
+            min-height:20px;
+        }
+        .matrix-controls #matrixEmployee.select-hidden label,
+        .matrix-controls #matrixEmployee.select-hidden select,
+        .matrix-controls #matrixEmployee.select-hidden:before{
+            display:none;
+        }
+        .matrix-controls #matrixEmployee:before{
+            border-left:7px solid #9C9C9C;
+            border-top: 7px solid transparent;
+            border-bottom: 7px solid transparent;
+            display:block;
+            content:"";
+            position:absolute;
+            height:0;
+            width:0;
+            padding:0;
+            margin:-7px 0 0 0;
+            top:50%;
+            left:0;
+        }
+        .matrix-controls #matrixTerritory{
+            padding-left:40px;
+        }
+        .matrix-controls .control-group label{
+            font-weight:bold;
+            font-size:12px;
+        }
+        .matrix-controls .control-group select{
+            font-size:12px;
+        }
+        #performanceTable span.tooltip{
+            position:relative;
+        }
+        #performanceTable span.tooltip > span{
+            color: #888;
+            font-weight: normal;
+            font-size: 12px;
+            position: absolute;
+            bottom: 100%;
+            left: 20px;
+            margin-bottom: 20px;
+            width: 320px;
+            background: #eee;
+            max-width: none;
+            padding: 1em;
+            border-radius: 5px;
+            z-index: 100;
+            border: 1px solid #999;
+            cursor: default;
+            display: none;
+            white-space: pre-wrap;
+            text-align:left;
+            text-transform:none;
+        }
+        #performanceTable span.tooltip:hover > span{
+            display: block;
+        }
+        #performanceTable span.tooltip > span:after, 
+        #performanceTable span.tooltip > span:before {
+            content: "";
+            display: block;
+            height: 0;
+            width: 0;
+            border-top: 20px solid #eee;
+            border-left: 10px solid transparent;
+            position: absolute;
+            top: 100%;
+            left: 60px;
+            z-index: 101;
+            border-right: 10px solid transparent;
+            margin-left: -10px;
+        }
+        #performanceTable span.tooltip > span:before {
+            z-index: 99;
+            border-top-color: #999;
+            border-top-width: 22px;
+            border-left-width: 11px;
+            border-right-width: 11px;
+            margin-left: -11px;
+        }
+        #performanceTable th span.tooltip > span{
+            left:50%;
+            margin-left:-60px;
+        }
+        #performanceTable td.red{
+            color:red;
+        }
+        #performanceTable td.green{
+            color:green;
+        }
+    </style>
+
+    
+    <div class="wrap">
+        <h1>Performance Across Portfolios</h1>
+        <p><apex:outputText value="{!$Setup.Matrix_Scoreboard_Settings__c.Performance_Scoreboard_General_Text__c}" /><br /></p>
+    <apex:form >
+       
+        <apex:actionStatus startText="" stopText="" id="dataStatus" onstart="showProgress()" onstop="hideProgress()">
+            <apex:facet name="start">
+            </apex:facet>
+            <apex:facet name="stop">
+            </apex:facet>
+        </apex:actionStatus>
+       <apex:actionFunction name="roleChanged" action="{!roleChanged}" rerender="employeesPanel, scriptPanel" status="dataStatus" oncomplete="retrieveTerritoryCodes();"/>
+       <apex:actionFunction name="employeeChanged" action="{!employeeChanged}" oncomplete="retrieveTerritoryCodes();" status="dataStatus" />
+       <apex:actionFunction name="timeframeChanged" action="{!timeframeChanged}" oncomplete="retrieveTerritoryCodes();" status="dataStatus" />
+       <apex:actionFunction name="territoryChanged" action="{!territoryChanged}" oncomplete="retrieveTerritoryCodes();" status="dataStatus" />
+       <apex:actionFunction name="retrieveTerritoryCodes" action="{!retrieveTerritoryCodes}" rerender="performanceData" status="dataStatus" />
+     
+    
+       <apex:outputPanel id="frm" styleClass="matrix-controls">
+                <apex:pageMessages />
+                <apex:outputPanel id="empPanel" layout="none" rendered="{!userLevel > 1}">
+                    <div class="control-group" id="matrixRole">
+                        <apex:outputLabel for="vrole">View Role</apex:outputLabel>
+                        <apex:selectList id="vrole" value="{!userRole}" multiselect="false" size="1" onchange="javascript:roleChanged();">
+                            <apex:selectOptions value="{!roles}"/>
+                        </apex:selectList>
+                    </div>
+                    <apex:outputPanel id="employeesPanel" layout="none" >
+                        <div class="control-group" id="matrixEmployee"> 
+                            <apex:outputLabel for="vemployee">View Employee</apex:outputLabel>
+                            <apex:selectList id="vemployee" value="{!employee}" multiselect="false" size="1" onchange="javascript:employeeChanged();">
+                                <apex:selectOptions value="{!employees}" />
+                            </apex:selectList> 
+                        </div>
+                    </apex:outputPanel>
+                </apex:outputPanel>
+                <div class="control-group" id="matrixTerritory">
+                    <apex:outputLabel for="territory">View Territory</apex:outputLabel>
+                    <apex:selectList id="territory" value="{!territory}" multiselect="false" size="1" onchange="javascript:territoryChanged();">
+                        <apex:selectOptions value="{!territories}"/> 
+                    </apex:selectList>
+                </div>
+                <div class="control-group">
+                    <apex:outputLabel for="vtimeFrame">Filter by Time Frame</apex:outputLabel>
+                    <apex:selectList id="vtimeFrame" value="{!timeFrame}" multiselect="false" size="1" onchange="javascript:timeframeChanged();"> 
+                        <apex:selectOptions value="{!timeFrames}"/>
+                    </apex:selectList>
+                </div>
+               
+    
+            </apex:outputPanel>
+        </apex:form>
+        <apex:outputPanel id="performanceData"> 
+          <apex:outputPanel rendered="{!showData}">
+              <table id="performanceTable">
+                <tr>
+                  <th></th>
+                  <th><span class="tooltip">Quota <span><apex:outputText value="{!$Setup.Matrix_Scoreboard_Settings__c.Quota_Tooltip__c}" /></span></span></th>
+                  <th><span class="tooltip">Open/Shipped <span><apex:outputText value="{!$Setup.Matrix_Scoreboard_Settings__c.Open_Shipped_Tooltip__c}" /></span></span></th>
+                  <th><span class="tooltip">Invoiced <span><apex:outputText value="{!$Setup.Matrix_Scoreboard_Settings__c.Invoiced_Tooltip__c}" /></span></span></th>
+                  <th><span class="tooltip">% to Quota <span><apex:outputText value="{!$Setup.Matrix_Scoreboard_Settings__c.Percent_to_Quota_Tooltip__c}" /></span></span></th>
+                  <th><span class="tooltip">$ Over/(Under) Quota <span><apex:outputText value="{!$Setup.Matrix_Scoreboard_Settings__c.Over_Under_Quota_Tooltip__c}" /></span></span></th>
+                  <th><span class="tooltip">Pending <span><apex:outputText value="{!$Setup.Matrix_Scoreboard_Settings__c.Pending_Tooltip__c}" /></span></span></th>
+                  <!-- 20181206 Removing opportunity funnel amounts as they are not being populated at this time<th colspan="3"><span class="tooltip">$ in Opportunity Funnel <span><apex:outputText value="{!$Setup.Matrix_Scoreboard_Settings__c.Opportunity_Funnel_Tooltip__c}" /></span></span></th> -->
+                </tr>
+                <!-- 20181206 Removing opportunity funnel amounts as they are not being populated at this time
+                <tr>
+                  <th></th>
+                  <th class="secondary" colspan="6"></th>
+                  <th class="secondary">0-29%</th>
+                  <th class="secondary">30-59%</th>
+                  <th class="secondary">60%+</th>
+                </tr>
+                -->
+                <apex:variable value="odd" var="oe" />
+               <apex:repeat value="{!salesGoalData}" var="sgd">
+                <tr class="{!oe}{!IF(AND(sgd.subFamilyData.size > 0,OR(LOWER(sgd.productData.summaryForProduct.goalLevel)='poc',LOWER(sgd.productData.summaryForProduct.goalLevel)='poc-cc',LOWER(sgd.productData.summaryForProduct.goalLevel)='service',LOWER(sgd.productData.summaryForProduct.goalLevel)='rental')),' has-secondary','')} row-{!SUBSTITUTE(LOWER(sgd.productData.summaryForProduct.goalLevel),' ','-')}">
+                    <!--  Next line was original, changed 12/27/17 by Doug Lecher to include service contract row as standard row.
+                    <td><apex:outputPanel layout="none" rendered="{!AND(sgd.subFamilyData.size > 0,OR(LOWER(sgd.productData.summaryForProduct.goalLevel)='medsurg',LOWER(sgd.productData.summaryForProduct.goalLevel)='icu'))}"><a class="opps-toggle" data-toggle="opps001c000000SElYyAAL" href="#"><i class="icon-open-toggle"></i></a>&nbsp;</apex:outputPanel>{!sgd.productData.summaryForProduct.goalLevel}<apex:outputText rendered="{!LOWER(sgd.productData.summaryForProduct.goalLevel)='cws orders'}"><sup>*</sup></apex:outputText><apex:outputText rendered="{!LOWER(sgd.productData.summaryForProduct.goalLevel)='service contracts'}"><sup>**</sup></apex:outputText></td> -->
+                    <td><apex:outputPanel layout="none" rendered="{!AND(sgd.subFamilyData.size > 0,OR(LOWER(sgd.productData.summaryForProduct.goalLevel)='poc',LOWER(sgd.productData.summaryForProduct.goalLevel)='poc-cc',LOWER(sgd.productData.summaryForProduct.goalLevel)='service',LOWER(sgd.productData.summaryForProduct.goalLevel)='rental'))}"><a class="opps-toggle" data-toggle="opps001c000000SElYyAAL" href="#"><i class="icon-open-toggle"></i></a>&nbsp;</apex:outputPanel>{!sgd.productData.summaryForProduct.goalLevel}<apex:outputText rendered="{!LOWER(sgd.productData.summaryForProduct.goalLevel)='poc-cc'}"><sup>*</sup></apex:outputText></td>
+                    <td class="{!IF(sgd.productData.summaryForProduct.quota < 0, 'red', '')}"><apex:outputText value="{0, number,###,###,##0}"><apex:param value="{!ROUND(sgd.productData.summaryForProduct.quota,0)}" /></apex:outputText></td>
+                    <td class="{!IF(sgd.productData.summaryForProduct.openShipped< 0, 'red', '')}"><apex:outputText value="{0, number,###,###,##0}"><apex:param value="{!ROUND(sgd.productData.summaryForProduct.openShipped,0)}" /></apex:outputText></td>
+                    <td class="{!IF(sgd.productData.summaryForProduct.invoiced< 0, 'red', '')}"><apex:outputText value="{0, number,###,###,##0}"><apex:param value="{!ROUND(sgd.productData.summaryForProduct.invoiced,0)}" /></apex:outputText></td>
+                    <td class="{!IF(sgd.productData.summaryForProduct.percentToQuota< 0, 'red', '')}"><apex:outputText value="{!ROUND(sgd.productData.summaryForProduct.percentToQuota,0)}" />%</td>
+                    <td class="{!IF(sgd.productData.summaryForProduct.dollarToQuota< 0, 'red', 'green')}"><apex:outputText value="{0, number,###,###,##0}"><apex:param value="{!ROUND(sgd.productData.summaryForProduct.dollarToQuota,0)}" /></apex:outputText></td>
+                    <td class="{!IF(sgd.productData.summaryForProduct.pending< 0, 'red', '')}"><apex:outputText value="{0, number,###,###,##0}"><apex:param value="{!ROUND(sgd.productData.summaryForProduct.pending,0)}" /></apex:outputText></td>
+                    <!-- 20181206 Removing opportunity funnel amounts as they are not being populated at this time
+                    <td class="{!IF(sgd.productData.summaryForProduct.lowOpp< 0, 'red', '')}"><apex:outputText value="{!IF(userLevel > 1, TEXT(ROUND(sgd.productData.summaryForProduct.lowOpp/1000000,1)) + 'M',TEXT(ROUND(sgd.productData.summaryForProduct.lowOpp/1000,1)) + 'K')}" /></td> 
+                    <td class="{!IF(sgd.productData.summaryForProduct.medOpp< 0, 'red', '')}"><apex:outputText value="{!IF(userLevel > 1, TEXT(ROUND(sgd.productData.summaryForProduct.medOpp/1000000,1)) + 'M',TEXT(ROUND(sgd.productData.summaryForProduct.medOpp/1000,1)) + 'K')}" /></td>
+                    <td class="{!IF(sgd.productData.summaryForProduct.highOpp< 0, 'red', '')}"><apex:outputText value="{!IF(userLevel > 1, TEXT(ROUND(sgd.productData.summaryForProduct.highOpp/1000000,1)) + 'M',TEXT(ROUND(sgd.productData.summaryForProduct.highOpp/1000,1)) + 'K')}" /></td> 
+                    -->
+                </tr>
+                    <apex:repeat value="{!sgd.subFamilyData}" var="sfd" rendered="{!AND(sgd.subFamilyData.size > 0,OR(LOWER(sgd.productData.summaryForProduct.goalLevel)='poc',LOWER(sgd.productData.summaryForProduct.goalLevel)='poc-cc',LOWER(sgd.productData.summaryForProduct.goalLevel)='rental',LOWER(sgd.productData.summaryForProduct.goalLevel)='service'))}">
+                <tr class="{!oe} secondary">
+                    <td>{!sfd.summaryForSubFamily.subGoalLevel}</td>
+                    <td class="{!IF(sfd.summaryForSubFamily.quota < 0, 'red', '')}"><apex:outputText value="{0, number,###,###,##0}"><apex:param value="{!ROUND(sfd.summaryForSubFamily.quota,0)}" /></apex:outputText></td>
+                    <td class="{!IF(sfd.summaryForSubFamily.openShipped< 0, 'red', '')}"><apex:outputText value="{0, number,###,###,##0}"><apex:param value="{!ROUND(sfd.summaryForSubFamily.openShipped,0)}" /></apex:outputText></td>
+                    <td class="{!IF(sfd.summaryForSubFamily.invoiced< 0, 'red', '')}"><apex:outputText value="{0, number,###,###,##0}"><apex:param value="{!ROUND(sfd.summaryForSubFamily.invoiced,0)}" /></apex:outputText></td>
+                    <td class="{!IF(sfd.summaryForSubFamily.percentToQuota< 0, 'red', '')}"><apex:outputText value="{!ROUND(sfd.summaryForSubFamily.percentToQuota,0)}" />%</td>
+                    <td class="{!IF(sfd.summaryForSubFamily.dollarToQuota< 0, 'red', 'green')}"><apex:outputText value="{0, number,###,###,##0}"><apex:param value="{!ROUND(sfd.summaryForSubFamily.dollarToQuota,0)}" /></apex:outputText></td>
+                    <td class="{!IF(sfd.summaryForSubFamily.pending< 0, 'red', '')}"><apex:outputText value="{0, number,###,###,##0}"><apex:param value="{!ROUND(sfd.summaryForSubFamily.pending,0)}" /></apex:outputText></td>
+                    <!-- 20181206 Removing opportunity funnel amounts as they are not being populated at this time
+                    <td class="{!IF(sfd.summaryForSubFamily.lowOpp< 0, 'red', '')}"><apex:outputText value="{!IF(userLevel > 1, TEXT(ROUND(sfd.summaryForSubFamily.lowOpp/1000000,1)) + 'M',TEXT(ROUND(sfd.summaryForSubFamily.lowOpp/1000,1)) + 'K')}" /></td>
+                    <td class="{!IF(sfd.summaryForSubFamily.medOpp< 0, 'red', '')}"><apex:outputText value="{!IF(userLevel > 1, TEXT(ROUND(sfd.summaryForSubFamily.medOpp/1000000,1)) + 'M',TEXT(ROUND(sfd.summaryForSubFamily.medOpp/1000,1)) + 'K')}" /></td>
+                    <td class="{!IF(sfd.summaryForSubFamily.highOpp< 0, 'red', '')}"><apex:outputText value="{!IF(userLevel > 1, TEXT(ROUND(sfd.summaryForSubFamily.highOpp/1000000,1)) + 'M',TEXT(ROUND(sfd.summaryForSubFamily.highOpp/1000,1)) + 'K')}" /></td>
+                    -->
+                </tr>
+                    </apex:repeat>  
+                    <apex:variable value="{!IF(oe='odd','even','odd')}" var="oe" />
+               </apex:repeat>
+                <tr class="total-row">
+                  <td>Overall</td>
+                  <td class="first{!IF(overall_quota< 0, ' red', '')}"><apex:outputText value="{0, number,###,###,##0}"><apex:param value="{!ROUND(overall_quota,0)}" /></apex:outputText></td>
+                  <td class="{!IF(overall_openShipped < 0, 'red', '')}"><apex:outputText value="{0, number,###,###,##0}"><apex:param value="{!ROUND(overall_openShipped ,0)}" /></apex:outputText></td>
+                  <td class="{!IF(overall_invoiced < 0, 'red', '')}"><apex:outputText value="{0, number,###,###,##0}"><apex:param value="{!ROUND(overall_invoiced ,0)}" /></apex:outputText></td>
+                  <td class="{!IF(overall_percentToQuota< 0, 'red', '')}"><apex:outputText value="{!ROUND(overall_percentToQuota,0)}" />%</td>
+                  <td class="{!IF(overall_dollarToQuota< 0, 'red', 'green')}"><apex:outputText value="{0, number,###,###,##0}"><apex:param value="{!ROUND(overall_dollarToQuota,0)}" /></apex:outputText></td>
+                  <td class="{!IF(overall_pending< 0, 'red', '')}"><apex:outputText value="{0, number,###,###,##0}"><apex:param value="{!ROUND(overall_pending,0)}" /></apex:outputText></td>
+                  <!-- 20181206 Removing opportunity funnel amounts as they are not being populated at this time
+                  <td class="{!IF(overall_lowOpp< 0, 'red', '')}"><apex:outputText value="{!IF(userLevel > 1, TEXT(ROUND(overall_lowOpp/1000000,1)) + 'M',TEXT(ROUND(overall_lowOpp/1000,1)) + 'K')}" /></td>
+                  <td class="{!IF(overall_medOpp< 0, 'red', '')}"><apex:outputText value="{!IF(userLevel > 1, TEXT(ROUND(overall_medOpp/1000000,1)) + 'M',TEXT(ROUND(overall_medOpp/1000,1)) + 'K')}" /></td>
+                  <td class="last{!IF(overall_highOpp< 0, ' red', '')}"><apex:outputText value="{!IF(userLevel > 1, TEXT(ROUND(overall_highOpp/1000000,1)) + 'M',TEXT(ROUND(overall_highOpp/1000,1)) + 'K')}" /></td>
+                  -->                   
+                </tr>
+                <tr class="footnotes">
+                  <td></td>
+                  <td colspan="9">
+                      <em><sup>* </sup>CC Orders reflect “orders only” and is not invoiced</em>
+                  </td>
+                </tr>
+              </table>
+            <script>
+              $(function(){
+                $('.icon-open-toggle').click(function(e){
+                    e.preventDefault();
+                    $(this).toggleClass('open');
+                    var row = $(this).parent().parent().parent();
+                    row.nextUntil('tr.has-secondary','tr').each(function(){
+                        if($(this).hasClass('secondary')){
+                            $(this).toggle();
+                        }
+                    });
+                });
+              });
+            </script>
+          </apex:outputPanel>
+      </apex:outputPanel>
+    </div>
+    <apex:outputPanel id="scriptPanel">
+        <script type="text/javascript">
+            var empDiv = document.getElementById('matrixEmployee');
+            if(empDiv) {
+                var selectObjs = empDiv.getElementsByTagName('SELECT');
+                for(var i = 0; i < selectObjs.length; i++) {
+                    if(selectObjs[i].id.indexOf('employee') >= 0) {
+                        if(selectObjs[i].options.length < 2) {
+                            empDiv.style.display = 'none';
+                        } else {
+                            empDiv.style.display = 'block';
+                        }
+                    }
+                }
+            }
+        </script>
+     </apex:outputPanel>
+     <script type="text/javascript">
+        if (window.attachEvent) 
+            window.attachEvent('onload',function() { 
+                retrieveTerritoryCodes();
+            }); 
+        else if (window.addEventListener) 
+            window.addEventListener('load',function() { 
+                retrieveTerritoryCodes(); 
+            }, false);
+        
+        
+      </script>
+</apex:page>

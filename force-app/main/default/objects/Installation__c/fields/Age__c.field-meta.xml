@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Age__c</fullName>
+    <description>Number of days since the Opportunity was Won. Stops counting once training has occurred.
+
+
+Old Formula: Training_Date__c - Opportunity__r.CloseDate,</description>
+    <externalId>false</externalId>
+    <formula>IF( Opportunity__r.IsClosed,
+ IF( 
+  OR(
+   ISPICKVAL(Status__c,&apos;Installation complete&apos;),
+   ISPICKVAL(Status__c,&apos;Follow up complete&apos;)
+   ),
+   Training_Date__c - Contract_Sent_Date__c,
+   TODAY() - Opportunity__r.CloseDate
+ ),
+ TODAY() - DATEVALUE(CreatedDate)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Number of days since PO received. Stops counting once training is done.</inlineHelpText>
+    <label>Age (in days)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Additional_Information__c</fullName>
+    <description>Read only field. Auto-populated with values from Feasibility, Extra Cost and Time Limit fields after approval from Finance. Visible to Sales profiles only</description>
+    <externalId>false</externalId>
+    <label>Additional Information</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

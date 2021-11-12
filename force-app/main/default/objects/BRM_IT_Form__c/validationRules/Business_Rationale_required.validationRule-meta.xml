@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Rationale_required</fullName>
+    <active>true</active>
+    <description>Created as part of CR CR00030892</description>
+    <errorConditionFormula>(ISPICKVAL(Gate__c , &apos;Opportunity&apos;) || ISPICKVAL(Gate__c ,&apos;Value Prioritization&apos;) || (ISPICKVAL(Gate__c ,&apos;Execute&apos;) &amp;&amp; ISPICKVAL(Status__c ,&apos;PENDING&apos;))|| (ISPICKVAL(Gate__c ,&apos;Execute&apos;) &amp;&amp; ISPICKVAL(Status__c ,&apos;IN PROGRESS&apos;)) ||
+ISPICKVAL(Gate__c ,&apos;Value Realization&apos;)  )&amp;&amp; ( ISNULL( Business_Rationale__c) || ISBLANK(Business_Rationale__c))</errorConditionFormula>
+    <errorDisplayField>Business_Rationale__c</errorDisplayField>
+    <errorMessage>Required</errorMessage>
+</ValidationRule>

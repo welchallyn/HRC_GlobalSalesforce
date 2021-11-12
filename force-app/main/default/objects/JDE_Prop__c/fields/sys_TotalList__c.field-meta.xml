@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>sys_TotalList__c</fullName>
+    <externalId>false</externalId>
+    <label>Total List Price</label>
+    <summarizedField>JDE_Prop_Ln_Item__c.List_Price__c</summarizedField>
+    <summaryForeignKey>JDE_Prop_Ln_Item__c.Proposal__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

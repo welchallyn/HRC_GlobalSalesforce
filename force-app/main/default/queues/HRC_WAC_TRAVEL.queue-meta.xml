@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>HRC-WAC-TRAVEL</name>
+    <queueMembers>
+        <users>
+            <user>palania1@hrc.corp</user>
+            <user>seigneb1@hrc.corp</user>
+            <user>xuc1@hrc.corp</user>
+            <user>masekg1@hrc.corp</user>
+            <user>nakajih1@hrc.corp</user>
+            <user>vaneiji1@hrc.corp</user>
+            <user>turnerj5@hrc.corp</user>
+            <user>teneycl1@welchallyn.com</user>
+            <user>cossm2@hrc.corp</user>
+            <user>liangm1@hrc.corp</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>BMCServiceDesk__Incident__c</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>BMCServiceDesk__Task__c</sobjectType>
+    </queueSobject>
+</Queue>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Risk_Impact__c</fullName>
+    <externalId>false</externalId>
+    <label>Risk Impact</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>0-Low likelihood of future impact</fullName>
+                <default>false</default>
+                <label>0-Low likelihood of future impact</label>
+            </value>
+            <value>
+                <fullName>1-Possible future impact</fullName>
+                <default>false</default>
+                <label>1-Possible future impact</label>
+            </value>
+            <value>
+                <fullName>2-Likely future impact</fullName>
+                <default>false</default>
+                <label>2-Likely future impact</label>
+            </value>
+            <value>
+                <fullName>3-Certain Impact</fullName>
+                <default>false</default>
+                <label>3-Certain Impact</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

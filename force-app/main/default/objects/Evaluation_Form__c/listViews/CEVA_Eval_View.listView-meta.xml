@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CEVA_Eval_View</fullName>
+    <booleanFilter>(1 AND 2 AND 3 AND 4) OR (5 AND 6)</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Request_Type__c</columns>
+    <columns>Customer_Name__c</columns>
+    <columns>Requested_By__c</columns>
+    <columns>Date__c</columns>
+    <columns>Opportunity__c</columns>
+    <columns>CRS__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Delivery_CEVA__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Approval_Status__c</field>
+        <operation>equals</operation>
+        <value>Approved</value>
+    </filters>
+    <filters>
+        <field>Serial_number_is_not_null__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Schedule_Delivery__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Pickup_CEVA__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Schedule_Pickup__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>CEVA Eval Ready For Scheduling View</label>
+    <language>en_US</language>
+</ListView>

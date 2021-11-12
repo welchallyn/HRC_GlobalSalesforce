@@ -1,0 +1,35 @@
+<apex:page controller="SL_RunBatchController">
+    <apex:form id="form">
+        <apex:pageBlock id="Pb10">
+            <apex:outputPanel id="console">
+                <apex:pageMessages ></apex:pageMessages>
+            </apex:outputPanel>
+            <table width="100%" valign="center" padding="3"> 
+                <tr>
+                    <td>
+                        <b>Run Territory Mapping Batch </b> 
+                    </td>
+                </tr>
+                <tr>
+                    <td id="callBatchID">    
+                        <apex:commandButton id="callBatch" value="Run Batch"  action="{!createTerritoryMappingBatch}" rerender="form" />
+                        <apex:commandButton id="callBatchDisablebutt" value="Run Batch" style="display:none; -webkit-filter: opacity(75%);pointer-events: none;"/>
+                        <script>
+                            if('{!strBatchRunning}' != '')
+                            {
+                                document.getElementById('{!$component.callBatch}').style.display='none';
+                                document.getElementById('{!$component.callBatchDisablebutt}').style.display='block';
+                            }
+                        </script>
+                    </td>
+                </tr>
+            </table>
+            <br></br>
+            <apex:outputLink value="/apexpages/setup/listAsyncApexJobs.apexp" 
+                target="_blank" style="color:blue;font-size:13px;text-decoration: inherit;" rendered="{!IF(strBatchRunning != '', true, false)}">
+                {!strBatchRunning}
+            </apex:outputLink>
+        </apex:pageBlock>
+    </apex:form>
+    
+</apex:page>

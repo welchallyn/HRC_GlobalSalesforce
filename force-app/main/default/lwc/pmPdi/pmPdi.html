@@ -1,0 +1,109 @@
+<template>
+    
+    <div style="height:600px;" onclick={handleDivClick}>
+
+    <lightning-layout>
+    <lightning-layout-item size="6">
+
+    <template if:true={showSearch}>
+        <lightning-card title="Search" icon-name="custom:custom39">  
+
+                <lightning-input
+                    label="Asset Serial Number"
+                    class="slds-text-title_bold slds-m-bottom_small slds-m-left_small"  
+                    style="width:300px" 
+                    name="InstrInput"
+                    value=""
+                    data-search="asset"
+                    oncommit={searchAsset} 
+                >
+                </lightning-input>  
+                
+                <div class="slds-m-bottom_medium"> 
+                </div>
+            
+        </lightning-card>
+    </template>
+
+    <template if:true={showAsset}>
+
+    <div class="slds-is-relative">
+        <lightning-card title="Asset" icon-name="standard:asset_action" class="slds-p-around_x-small">  
+                <div class="slds-grid" style="margin-left: 20px;">
+                    <div class="slds-col slds-size_1-of-3">
+                        <lightning-input label="Serial Number" variant="label-inline" value={asset.SerialNumber} readonly></lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-3">
+                        <lightning-input label="Status" variant="label-inline" value={asset.Status} readonly></lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-3">
+                        <lightning-input label="Next PM Due Date" type="date" date-style="long" variant="label-inline" value={asset.HRCFSL_Next_PM_DT__c} readonly></lightning-input>
+                    </div>
+                </div>  
+                <div class="slds-grid" style="margin-left: 20px;">
+                    <div class="slds-col slds-size_1-of-3">
+                        <lightning-input label="Model Description" variant="label-inline" value={asset.HRCFSL_Model_Description__c} readonly></lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-3"> 
+                        <lightning-input label="Location" variant="label-inline" value={asset.Location.Name} readonly></lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-3">
+                        <lightning-input label="Asset Type" variant="label-inline" value={asset.HRCFSL_Asset_Type__c} readonly></lightning-input>
+                    </div>
+                </div>
+        </lightning-card> 
+        
+        <div style="background-color:white;padding:10px;">
+            <div style="margin-bottom:20px;"> 
+                <h3 class="slds-section__title slds-theme_shade">
+                    <span class="slds-truncate slds-p-horizontal_small" title="Technician Name">Technician Name</span>
+                </h3>
+                
+                <lightning-input type="text" data-name="technicianName"  label="Input" value="" class="step" oncommit={handleCommit} variant="label-hidden">   
+                </lightning-input>
+            </div>
+            <div style="margin-bottom:20px;"> 
+                <h3 class="slds-section__title slds-theme_shade">
+                    <span class="slds-truncate slds-p-horizontal_small" title="Disinfectant Used">Disinfectant Used</span>
+                </h3>
+                                
+                <lightning-input type="text" data-name="disinfectantUsed"  label="Input" value="" class="step" oncommit={handleCommit} variant="label-hidden">   
+                </lightning-input>
+            </div>  
+            <div style="margin-bottom:20px;"> 
+                <h3 class="slds-section__title slds-theme_shade">
+                    <span class="slds-truncate slds-p-horizontal_small" title="Infection Type">Infection Type</span> 
+                </h3>
+                
+                
+                <lightning-input type="text" data-name="infectionType"  label="Input" value="" class="step" oncommit={handleCommit} variant="label-hidden">   
+                </lightning-input>
+            </div>
+            <h3 class="slds-section__title slds-theme_shade">
+                <span class="slds-truncate slds-p-horizontal_small step" title="Action" style="font-weight: bold;">Action</span>
+            </h3>
+
+            <lightning-input type="text" label="Input" value="" data-name="action" class="input" oncommit={handleAction} variant="label-hidden">    
+            </lightning-input>
+
+        </div>
+
+        <template if:true={isLoading}>
+            <lightning-spinner
+                alternative-text="Loading...">
+            </lightning-spinner>
+        </template>
+
+    </div>
+
+    </template>  
+
+    </lightning-layout-item>
+    <lightning-layout-item size="6">
+    </lightning-layout-item>
+    </lightning-layout>
+
+            
+    </div>
+
+</template>

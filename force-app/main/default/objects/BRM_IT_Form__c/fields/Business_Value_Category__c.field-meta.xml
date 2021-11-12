@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Value_Category__c</fullName>
+    <externalId>false</externalId>
+    <label>Magnitude of Business Impact</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Run - Keeps the lights on</fullName>
+                <default>false</default>
+                <label>Run - Keeps the lights on</label>
+            </value>
+            <value>
+                <fullName>Grow - Makes money</fullName>
+                <default>false</default>
+                <label>Grow - Makes money</label>
+            </value>
+            <value>
+                <fullName>Transform - It is revolutionary</fullName>
+                <default>false</default>
+                <label>Transform - It is revolutionary</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

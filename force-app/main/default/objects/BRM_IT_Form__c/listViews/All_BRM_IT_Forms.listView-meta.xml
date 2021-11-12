@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_BRM_IT_Forms</fullName>
+    <columns>BRM_IT_Form_Number__c</columns>
+    <columns>NAME</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Gate__c</columns>
+    <columns>Status__c</columns>
+    <columns>Application__c</columns>
+    <columns>IT_Skillsets__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>CLOSED,CANCELLED,REJECTED</value>
+    </filters>
+    <label>All BRM IT Forms</label>
+</ListView>

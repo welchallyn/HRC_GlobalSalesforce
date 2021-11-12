@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Order_Status_Reason__c</fullName>
+    <description>Options for why the Order Status was chosen in the Support Request Type field.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Choose the option(s) that best explains your Order Status request.</inlineHelpText>
+    <label>Order Status Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>H2H</fullName>
+                <default>false</default>
+                <label>H2H</label>
+            </value>
+            <value>
+                <fullName>Priority Status</fullName>
+                <default>false</default>
+                <label>Priority Status</label>
+            </value>
+            <value>
+                <fullName>Intake</fullName>
+                <default>false</default>
+                <label>Intake</label>
+            </value>
+            <value>
+                <fullName>Prior Auth Required (PAR)</fullName>
+                <default>false</default>
+                <label>Prior Auth Required (PAR)</label>
+            </value>
+            <value>
+                <fullName>VisiVest/VisiView</fullName>
+                <default>false</default>
+                <label>VisiVest/VisiView</label>
+            </value>
+            <value>
+                <fullName>Order Pad</fullName>
+                <default>false</default>
+                <label>Order Pad</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>7</visibleLines>
+</CustomField>

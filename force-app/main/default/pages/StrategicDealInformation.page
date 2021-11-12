@@ -1,0 +1,330 @@
+<!-- PageName: StrategicDealInformation 
+   Created By: Jenish Shingala.
+   Created Date: 16th Feb,2017.
+   LastModified Date: 16th Feb,2017
+   Last Modified By: Jenish Shingala.
+   Description: Visualforce page for strategic deal review information.
+   -->
+<apex:page standardController="Opportunity" extensions="StrategicDealInfoController">
+   <style>
+      .slds-col{
+      width:100% !important;
+      }
+      .slds-icon{
+      fill:#00396b !important;
+      }
+      .slds-checkbox--faux{
+      border:1px solid black !important;
+      }
+      .slds-form-element__label{
+      font-weight: bold; 
+      font-family: sans-serif;
+      }
+      /*::-webkit-input-placeholder { line-height:normal;  opacity: 0.5 !important; color:red !important;}*/
+      .slds-input{
+      line-height: normal !important;
+      }
+      label{
+      white-space: nowrap;
+      }
+      .button {
+      display: inline-table;
+      width: 50px;
+      height: 10px;
+      background: #4bca81;
+      padding: 9px;
+      text-align: center;
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+      }
+      .slds-page-header{
+      padding-top:10px !important;
+      }
+      
+      .dateFormat{
+          visibility: hidden !important;
+      }
+   </style>
+   <script></script>
+   <apex:form >
+      <apex:pageMessages id="pagemessage"></apex:pageMessages>
+      <apex:actionFunction action="{!saveDealReview}" name="postreviewpage" rerender="pagemessage" status="SearchIcon">
+         <apex:param name="date1" value=""/>
+         <apex:param name="date2" value=""/>
+      </apex:actionFunction>
+      <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+         <head>
+            <apex:stylesheet value="{!URLFOR($Resource.LightningUI, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+            <!-- jQuery CDN -->
+            <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+            <!-- MomentJS CDN -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.js"></script>
+            <!-- Important To Include ALJS init File-->
+            <script src="{!URLFOR($Resource.aljs, '/jquery.aljs-init.min.js')}"></script>
+            <!-- ALJS Datepicker Module-->
+            <script src="{!URLFOR($Resource.aljs, '/jquery.aljs-datepicker.min.js')}"></script>
+            <script src="{!URLFOR($Resource.aljs, '/jquery.aljs-popover.min.js')}"></script>
+         </head>
+         <div class="slds">
+            <div class="container">
+               <div class="slds-page-header" role="banner" style="border: 1px solid #d8dde6;border-radius: 4px;">
+                  <div class="slds-media slds-media--center">
+                     <div class="slds-media__figure">
+                        <svg class="slds-icon slds-icon-standard-opportunity" aria-hidden="true" >
+                           <use xlink:href="{!URLFOR($Resource.LightningUI, '/assets/icons/standard-sprite/svg/symbols.svg#opportunity')}" style="fill:white"></use>
+                        </svg>
+                     </div>
+                     <div class="slds-media__body">
+                        <p class="slds-page-header__title slds-truncate" title="Rohde Corp - 80,000 Widgets">Strategic Deal Review for {!Opportunity.name}</p>
+                     </div>
+                     <div class="slds-media__figure slds-media__figure--reverse">
+                        <!--  <button class="slds-button slds-button--neutral">New</button>-->
+                        <a href="/apex/StrategicDealInformationPrint?id={!objOpp.id}" target="_blank" class="slds-button slds-button--neutral" style="float:right">Print</a> 
+                        <a href="/{!objOpp.id}" class="slds-button slds-button--neutral" style="float:right;margin-right: 5px;">Back</a>
+                     </div>
+                  </div>
+               </div>
+               <article class="slds-card" style="margin-top:1%;">
+                  <div class="slds-card__body" id="formdiv">
+                     <div class="slds-grid">
+                        <div class="slds-col" style="margin-left:1%;">
+                           <div class="slds-form-element">
+                              <label class="slds-form-element__label" for="date1">
+                                 Proposal Submission Date:
+                                 <svg aria-hidden="true" class="slds-icon slds-icon--x-small" data-aljs="popover" data-aljs-placement="right" title="The date by when our proposal must be submitted to the customer">
+                                    <use xlink:href="{!URLFOR($Resource.LightningUI, '/assets/icons/utility-sprite/svg/symbols.svg#info')}"></use>
+                                 </svg>
+                              </label>
+                              <div class="slds-form-element__control" style="width:150px;">
+                                 <div class="slds-input-has-icon slds-input-has-icon--right">
+                                    <svg aria-hidden="true" class="slds-input__icon slds-icon-text-default">
+                                       <use xlink:href="{!URLFOR($Resource.LightningUI, '/assets/icons/utility-sprite/svg/symbols.svg#event')}"></use>
+                                    </svg>
+                                    <apex:inputField id="date1" value="{!objOpp.Tender_Due_Date__c}" styleclass="slds-input" />
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="slds-col" style="">
+                           <div class="slds-form-element">
+                              <label class="slds-form-element__label" for="date1">
+                                 Customer Decision Date:
+                                 <svg aria-hidden="true" class="slds-icon slds-icon--x-small" data-aljs="popover" data-aljs-placement="right" title="The date when the customer will make the decision">
+                                    <use xlink:href="{!URLFOR($Resource.LightningUI, '/assets/icons/utility-sprite/svg/symbols.svg#info')}"></use>
+                                 </svg>
+                              </label>
+                              <div class="slds-form-element__control" style="width:150px;">
+                                 <div class="slds-input-has-icon slds-input-has-icon--right">
+                                    <svg aria-hidden="true" class="slds-input__icon slds-icon-text-default">
+                                       <use xlink:href="{!URLFOR($Resource.LightningUI, '/assets/icons/utility-sprite/svg/symbols.svg#event')}"></use>
+                                    </svg>
+                                    <apex:inputField id="date2" value="{!objOpp.Customer_Decision_Date__c}" styleclass="slds-input" />
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="slds-col" style="margin-left: 1%;">
+                           <div class="slds-form-element">
+                              <label class="slds-form-element__label" for="input2">Maximum Tender Price:</label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputField id="input2" styleclass="slds-input" value="{!objOpp.Maximum_Tender_Price__c}"/>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="slds-col" style="margin-left:5%;margin-right: 1%;">
+                           <div class="slds-form-element">
+                              <label class="slds-form-element__label" for="checkbox">Governance Support Needed:</label>
+                              <label class="slds-checkbox" id="checkbox">
+                                 <apex:inputcheckbox styleclass="slds-input" value="{!objOpp.Governance_Support_Needed__c}" />
+                                 <span class="slds-checkbox--faux"></span>
+                              </label>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="slds-grid" style="margin-top: 0.7%;">
+                        <div class="slds-col" style="margin-left: 1%;">
+                           <div class="slds-form-element">
+                              <label class="slds-form-element__label" for="input3">Price: Weight:</label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputField id="input3" styleclass="slds-input" value="{!objOpp.Price_Weight__c}"/>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="slds-col" style="margin-left: 1%;margin-right: 1%">
+                           <div class="slds-form-element">
+                              <label class="slds-form-element__label" for="input4">Price: HRC Rating:</label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputField id="input4" styleclass="slds-input" value="{!objOpp.Price_HRC_Rating__c}"/>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="slds-grid" style="margin-top: 0.7%;">
+                        <div class="slds-col" style="margin-left: 1%">
+                           <div class="slds-form-element">
+                              <label class="slds-form-element__label" for="input5">Specification: Weight:</label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputField id="input5" styleclass="slds-input" value="{!objOpp.Specification_Weight__c}"/>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="slds-col" style="margin-left: 1%;margin-right: 1%">
+                           <div class="slds-form-element">
+                              <label class="slds-form-element__label" for="input6">Specification: HRC Rating:</label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputField id="input6" styleclass="slds-select" value="{!objOpp.Specification_HRC_Rating__c}"/>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="slds-grid" style="margin-top: 0.7%;">
+                        <div class="slds-col" style="margin-left: 1%;">
+                           <div class="slds-form-element">
+                              <label class="slds-form-element__label" for="input7">Service: Weight:</label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputField id="input7" styleclass="slds-select" value="{!objOpp.Service_Weight__c}"/>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="slds-col" style="margin-left: 1%;margin-right:1%">
+                           <div class="slds-form-element">
+                              <label class="slds-form-element__label" for="input8">Service: HRC Rating</label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputField id="input8" styleclass="slds-select" value="{!objOpp.Service_HRC_Rating__c}"/>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="slds-grid" style="margin-top: 0.7%;">
+                        <div class="slds-col" style="margin-left: 1%;">
+                           <div class="slds-form-element">
+                              <label class="slds-form-element__label" for="input9">Relationship: Weight</label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputField id="input9" styleclass="slds-select" value="{!objOpp.Relationship_Weight__c}"/>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="slds-col" style="margin-left: 1%;margin-right:1%">
+                           <div class="slds-form-element">
+                              <label class="slds-form-element__label" for="input15">Relationship: HRC Rating</label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputField id="input15" styleclass="slds-select" value="{!objOpp.Relationship_HRC_Rating__c}"/>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="slds-grid" style="margin-top: 0.7%;">
+                        <div class="slds-col" style="margin-left: 1%;">
+                           <div class="slds-form-element">
+                              <label class="slds-form-element__label" for="input11">Quality: Weight</label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputField id="input11" styleclass="slds-select" value="{!objOpp.Quality_Weight__c}"/>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="slds-col" style="margin-left: 1%;margin-right:1%">
+                           <div class="slds-form-element">
+                              <label class="slds-form-element__label" for="input10">Quality: HRC Rating</label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputField id="input10" styleclass="slds-select" value="{!objOpp.Quality_HRC_Rating__c}"/>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="slds-grid" style="margin-top: 0.7%;">
+                        <div class="slds-col" style="margin-left: 1%;">
+                           <div class="slds-form-element">
+                              <label class="slds-form-element__label" for="input12">SWOT Details (English):</label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputField id="input12" styleclass="slds-textarea" value="{!objOpp.SWOT_Details__c}"/>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="slds-col" style="margin-left: 1%;">
+                           <div class="slds-form-element">
+                              <label class="slds-form-element__label" for="input13">
+                                 Customer Specification (English):
+                                 <svg aria-hidden="true" class="slds-icon slds-icon--x-small" data-aljs="popover" data-aljs-placement="right" title="Enter the requirements as specified by the customer">
+                                    <use xlink:href="{!URLFOR($Resource.LightningUI, '/assets/icons/utility-sprite/svg/symbols.svg#info')}"></use>
+                                 </svg>
+                              </label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputField id="input13" styleclass="slds-textarea" value="{!objOpp.Customer_Specification__c}"/>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="slds-col" style="margin-left: 1%;margin-right:1%">
+                           <div class="slds-form-element">
+                              <label class="slds-form-element__label" for="input14">
+                                 Hill-Rom Proposal (English):
+                                 <svg aria-hidden="true" class="slds-icon slds-icon--x-small" data-aljs="popover" data-aljs-placement="right" title="What Hill-Rom proposes to the customer?">
+                                    <use xlink:href="{!URLFOR($Resource.LightningUI, '/assets/icons/utility-sprite/svg/symbols.svg#info')}"></use>
+                                 </svg>
+                              </label>
+                              <div class="slds-form-element__control">
+                                 <apex:inputField id="input14" styleclass="slds-textarea" value="{!objOpp.Hill_Rom_Proposal__c}"/>
+                                
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                    
+                     <div class="slds-grid" style="margin-top: 0.7%;">
+                        <div class="slds-col">
+                           <center>
+                            
+                              <apex:actionStatus id="SearchIcon">
+                                 <apex:facet name="start">
+                                    <apex:outputPanel >
+                                       <button disabled="true" class="slds-button slds-button--brand">Save</button>
+                                       <img style="" src="/img/loading24.gif" />
+                                    </apex:outputPanel>
+                                 </apex:facet>
+                                 <apex:facet name="stop">
+                                    <apex:outputPanel >
+                                       <button onclick="savepage();return false;" class="slds-button slds-button--brand">
+                                       Save
+                                       </button>
+                                    </apex:outputPanel>
+                                 </apex:facet>
+                              </apex:actionStatus>
+                           </center>
+                        </div>
+                     </div>
+                  </div>
+               </article>
+            </div>
+         </div>
+      </html>
+   </apex:form>
+   <script>
+      var j$ = jQuery.noConflict();
+      //Assigning SLDS Static Resource Path To A Variable To Use It With ALJS Initialization
+      var assetsLoc = '{!URLFOR($Resource.LightningUI)}';
+        
+      //ALJS Initialization   
+             
+      j$.aljsInit({
+        assetsLocation: assetsLoc, //SLDS Static Resource Path
+        scoped: true
+      });
+         
+      j$(document).ready(function() {
+       
+      
+        
+         j$('[data-aljs="popover"]').popover(); 
+        
+         
+        
+      });
+      
+      
+      function savepage(){
+     
+          postreviewpage();
+      }
+      
+   </script>
+</apex:page>

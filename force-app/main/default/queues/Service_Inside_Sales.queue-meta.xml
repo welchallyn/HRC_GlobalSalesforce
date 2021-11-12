@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Service Inside Sales</name>
+    <queueMembers>
+        <users>
+            <user>seifera3@hrc.corp</user>
+            <user>duforta1@hrc.corp</user>
+            <user>werdera1@hrc.corp</user>
+            <user>farrela2@hrc.corp</user>
+            <user>russoc1@hrc.corp</user>
+            <user>malarej1@hrc.corp</user>
+            <user>hughesk2@hrc.corp</user>
+            <user>muirhek1@hrc.corp</user>
+            <user>boykom1@hrc.corp</user>
+            <user>manniop1@hrc.corp</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Lead</sobjectType>
+    </queueSobject>
+</Queue>

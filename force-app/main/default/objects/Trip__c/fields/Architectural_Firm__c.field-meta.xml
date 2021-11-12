@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Architectural_Firm__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Name of Architectural Firm</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Name of Architectural Firm</inlineHelpText>
+    <label>Architectural Firm</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipName>CEC_Visitation_Planner1</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

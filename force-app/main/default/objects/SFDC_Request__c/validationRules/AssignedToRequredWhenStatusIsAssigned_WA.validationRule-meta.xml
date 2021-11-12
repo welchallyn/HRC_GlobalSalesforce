@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AssignedToRequredWhenStatusIsAssigned_WA</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISPICKVAL(Request_Status__c,&quot;Assigned for analysis&quot;)
+,(Assigned_To__c = null))</errorConditionFormula>
+    <errorDisplayField>Assigned_To__c</errorDisplayField>
+    <errorMessage>Assigned user required.</errorMessage>
+</ValidationRule>

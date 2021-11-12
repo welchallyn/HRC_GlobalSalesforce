@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MX_Evaluation_Forms</fullName>
+    <booleanFilter>1 OR 2</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Request_Type__c</columns>
+    <columns>Requested_By__c</columns>
+    <columns>Date__c</columns>
+    <columns>CRS__c</columns>
+    <columns>Customer__c</columns>
+    <columns>Evaluation_Blanket_Agreement_Completed__c</columns>
+    <columns>Approval_Status__c</columns>
+    <columns>Pickup_Status__c</columns>
+    <columns>Opportunity__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Account_Country__c</field>
+        <operation>equals</operation>
+        <value>Mexico</value>
+    </filters>
+    <filters>
+        <field>Account_Country__c</field>
+        <operation>equals</operation>
+        <value>MX</value>
+    </filters>
+    <label>MX Evaluation Forms</label>
+    <language>en_US</language>
+    <sharedTo>
+        <group>INT_LATAM_Back_Office</group>
+        <group>INT_LATAM_Mexico_Back_Office</group>
+        <role>JDE_1802993</role>
+        <roleAndSubordinates>JDE_202686</roleAndSubordinates>
+        <roleAndSubordinates>JDE_207204</roleAndSubordinates>
+    </sharedTo>
+</ListView>

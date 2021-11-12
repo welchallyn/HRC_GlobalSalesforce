@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>HRC-INFRASTRUCTURE</name>
+    <queueMembers>
+        <users>
+            <user>bittlic@hrc.corp</user>
+            <user>lipscog@hrc.corp</user>
+            <user>walshj3@hrc.corp</user>
+            <user>fergusj1@hrc.corp</user>
+            <user>chengk4@hrc.corp</user>
+            <user>eadiek@hrc.corp</user>
+            <user>mollpd@hrc.corp</user>
+            <user>patelr1@hrc.corp</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Approval_Mapping__c</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>BMCServiceDesk__Change_Request__c</sobjectType>
+    </queueSobject>
+</Queue>

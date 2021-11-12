@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>End_Item_Nr_Required</fullName>
+    <active>true</active>
+    <description>End Item Nr required to move to Production Preparation phase</description>
+    <errorConditionFormula>AND(
+ ISPICKVAL(Phase__c, &apos;3 Production Preparation&apos;),
+ ISBLANK( End_Item_Nr__c )   
+)</errorConditionFormula>
+    <errorDisplayField>End_Item_Nr__c</errorDisplayField>
+    <errorMessage>End Item Nr is required to move to the Production Preparation phase</errorMessage>
+</ValidationRule>

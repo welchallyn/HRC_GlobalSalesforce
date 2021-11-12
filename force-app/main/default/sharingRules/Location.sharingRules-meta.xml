@@ -1,11 +1,259 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
     <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Andorra_Locations</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>HRCFSL Share Andorra Locations</label>
+        <sharedTo>
+            <group>HRCFSL_AD</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>HRCFSL_Country__c</field>
+            <operation>equals</operation>
+            <value>Andorra</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Australia_Locations</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>HRCFSL Share Australia Locations</label>
+        <sharedTo>
+            <group>HRCFSL_AU</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>HRCFSL_Country__c</field>
+            <operation>equals</operation>
+            <value>Australia</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Austria_Locations</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>HRCFSL Share Austria Locations</label>
+        <sharedTo>
+            <group>HRCFSL_AT</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>HRCFSL_Country__c</field>
+            <operation>equals</operation>
+            <value>Austria</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Belgium_Locations</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>HRCFSL Share Belgium Locations</label>
+        <sharedTo>
+            <group>HRCFSL_BE</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>HRCFSL_Country__c</field>
+            <operation>equals</operation>
+            <value>Belgium</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Canada_Locations</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>HRCFSL Share Canada Locations</label>
+        <sharedTo>
+            <group>HRCFSL_CA</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>HRCFSL_Country__c</field>
+            <operation>equals</operation>
+            <value>Canada</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Denmark_Locations</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>HRCFSL Share Denmark Locations</label>
+        <sharedTo>
+            <group>HRCFSL_DK</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>HRCFSL_Country__c</field>
+            <operation>equals</operation>
+            <value>Denmark</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_France_Locations</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>HRCFSL Share France Locations</label>
+        <sharedTo>
+            <group>HRCFSL_FR</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>HRCFSL_Country__c</field>
+            <operation>equals</operation>
+            <value>France</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Germany_Locations</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>HRCFSL Share Germany Locations</label>
+        <sharedTo>
+            <group>HRCFSL_DE</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>HRCFSL_Country__c</field>
+            <operation>equals</operation>
+            <value>Germany</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Ireland_Locations</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>HRCFSL Share Ireland Locations</label>
+        <sharedTo>
+            <group>HRCFSL_IE</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>HRCFSL_Country__c</field>
+            <operation>equals</operation>
+            <value>Ireland</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Italy_Locations</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>HRCFSL Share Italy Locations</label>
+        <sharedTo>
+            <group>HRCFSL_IT</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>HRCFSL_Country__c</field>
+            <operation>equals</operation>
+            <value>Italy</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Luxembourg_Locations</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>HRCFSL Share Luxembourg Locations</label>
+        <sharedTo>
+            <group>HRCFSL_LU</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>HRCFSL_Country__c</field>
+            <operation>equals</operation>
+            <value>Luxembourg</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Monaco_Locations</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>HRCFSL Share Monaco Locations</label>
+        <sharedTo>
+            <group>HRCFSL_MC</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>HRCFSL_Country__c</field>
+            <operation>equals</operation>
+            <value>Monaco</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Netherlands_Locations</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>HRCFSL Share Netherlands Locations</label>
+        <sharedTo>
+            <group>HRCFSL_NL</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>HRCFSL_Country__c</field>
+            <operation>equals</operation>
+            <value>Netherlands</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Norway_Locations</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>HRCFSL Share Norway Locations</label>
+        <sharedTo>
+            <group>HRCFSL_NO</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>HRCFSL_Country__c</field>
+            <operation>equals</operation>
+            <value>Norway</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Spain_Locations</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>HRCFSL Share Spain Locations</label>
+        <sharedTo>
+            <group>HRCFSL_ES</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>HRCFSL_Country__c</field>
+            <operation>equals</operation>
+            <value>Spain</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Sweden_Locations</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>HRCFSL Share Sweden Locations</label>
+        <sharedTo>
+            <group>HRCFSL_SE</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>HRCFSL_Country__c</field>
+            <operation>equals</operation>
+            <value>Sweden</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_Switzerland_Locations</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>HRCFSL Share Switzerland Locations</label>
+        <sharedTo>
+            <group>HRCFSL_CH</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>HRCFSL_Country__c</field>
+            <operation>equals</operation>
+            <value>Switzerland</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRCFSL_Share_UK_Locations</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>HRCFSL Share UK Locations</label>
+        <sharedTo>
+            <group>HRCFSL_GB</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>HRCFSL_Country__c</field>
+            <operation>equals</operation>
+            <value>United Kingdom</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
         <fullName>HRCFSL_Share_US_Locations</fullName>
         <accessLevel>Read</accessLevel>
         <label>HRCFSL Share US Locations</label>
         <sharedTo>
             <group>HRCFSL_US</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>HRCFSL_Country__c</field>
+            <operation>equals</operation>
+            <value>US</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_Locations_with_North_America_Users</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Created this for Sales users to see Service cloud functionality.CR00032329 and Jira ticket SE-2114</description>
+        <label>Share Locations with North America Users</label>
+        <sharedTo>
+            <group>North_America_Users</group>
         </sharedTo>
         <criteriaItems>
             <field>HRCFSL_Country__c</field>

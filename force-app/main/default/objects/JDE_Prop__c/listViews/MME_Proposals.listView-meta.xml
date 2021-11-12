@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MME_Proposals</fullName>
+    <columns>Ship_To__c</columns>
+    <columns>NAME</columns>
+    <columns>Main_SRP_Code_1_Description__c</columns>
+    <columns>Proposal_Date__c</columns>
+    <columns>Proposal_Expiration_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Main_SRP_Code_3_Description__c</field>
+        <operation>equals</operation>
+        <value>OME</value>
+    </filters>
+    <label>MME Proposals</label>
+    <language>en_US</language>
+    <sharedTo>
+        <role>JDE_1608351</role>
+        <role>JDE_1608359</role>
+        <role>JDE_1811122</role>
+        <role>JDE_202124</role>
+        <role>JDE_208526</role>
+        <role>JDE_3591609</role>
+        <role>JDE_50004683</role>
+        <role>JDE_828253</role>
+        <roleAndSubordinates>JDE_828031</roleAndSubordinates>
+    </sharedTo>
+</ListView>

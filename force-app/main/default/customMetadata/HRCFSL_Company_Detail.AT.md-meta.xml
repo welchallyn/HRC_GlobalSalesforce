@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>AT</label>
+    <protected>false</protected>
+    <values>
+        <field>Company_Details__c</field>
+        <value xsi:type="xsd:string">Hillrom Austria GmbH
+Inkustrasse 1-7, Haus 6
+3400 Klosterneuburg
+FN 76984m
+DVR-Nr.0025208
+UID-Nr.ATU 24504301</value>
+    </values>
+    <values>
+        <field>Company_Information__c</field>
+        <value xsi:type="xsd:string">Tel: 02243 28550
+Email: service.dach@hillrom.com</value>
+    </values>
+</CustomMetadata>

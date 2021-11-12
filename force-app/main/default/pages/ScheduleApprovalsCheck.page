@@ -1,0 +1,7 @@
+<apex:page controller="ScheduleApprovalsController" action="{!scheduler}">
+    <apex:pageMessages />
+    
+    <apex:pageMessage summary="{!message}" severity="error" rendered="{!IF(!isSuccessful, true, false)}" escape="false"></apex:pageMessage>
+    
+    <apex:pageMessage summary="{!message}" severity="info" rendered="{!isSuccessful}" escape="false"></apex:pageMessage>    
+</apex:page>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Attendee_Name_C__c</fullName>
+    <description>Full Name as it Appears on Government Issued ID</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Full Name as it Appears on Government Issued ID:
+Example:  Thomas Joseph Williams</inlineHelpText>
+    <label>Attendee Legal Name</label>
+    <length>40</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

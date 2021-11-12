@@ -1,0 +1,7 @@
+<aura:component implements="flexipage:availableForAllPageTypes,lightning:isUrlAddressable,flexipage:availableForRecordHome" controller="SharepointAPIIntegration" access="global" >
+	<lightning:workspaceAPI aura:id="workspace"/>
+    <aura:attribute name="accountId" type="String" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <lightning:navigation aura:id="navLink"/>
+    <lightning:spinner alternativeText="Loading" size="large" />
+</aura:component>

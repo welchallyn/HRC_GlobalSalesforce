@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2_Annual_Value_of_Contract__c</fullName>
+    <externalId>false</externalId>
+    <label>2. Annual Value of Contract</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>&lt;$250,000</fullName>
+                <default>false</default>
+                <label>&lt;$250,000</label>
+            </value>
+            <value>
+                <fullName>&gt;$250,000 - $1,000,000</fullName>
+                <default>false</default>
+                <label>&gt;$250,000 - $1,000,000</label>
+            </value>
+            <value>
+                <fullName>&gt;$1,000,000</fullName>
+                <default>false</default>
+                <label>&gt;$1,000,000</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <label>N/A</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

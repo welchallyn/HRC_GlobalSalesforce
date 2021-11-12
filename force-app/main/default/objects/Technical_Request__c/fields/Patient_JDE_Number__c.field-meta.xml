@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Patient_JDE_Number__c</fullName>
+    <description>20161205- Doug Lecher/Cherie Peterson although this is labeled as JDE Number it should now be pulling TIMS</description>
+    <externalId>false</externalId>
+    <formula>IF(Account__c = null, Patient_Name__r.TiMS_ID__c, Account__r.TiMS_ID__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Patient JDE Number</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

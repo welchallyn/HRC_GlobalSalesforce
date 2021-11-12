@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Open_IT_Forms_Digital</fullName>
+    <columns>NAME</columns>
+    <columns>Application__c</columns>
+    <columns>Change_Owner__c</columns>
+    <columns>Gate__c</columns>
+    <columns>Impacted_Geo__c</columns>
+    <columns>IT_Skillsets__c</columns>
+    <columns>Status__c</columns>
+    <columns>Overall_Status__c</columns>
+    <columns>Priority__c</columns>
+    <columns>Rank__c</columns>
+    <columns>Additional_Information__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>Gate__c</field>
+        <operation>equals</operation>
+        <value>Idea,Opportunity,Value Prioritization,Execute,Value Realization</value>
+    </filters>
+    <filters>
+        <field>OWNER.FIRST_NAME</field>
+        <operation>equals</operation>
+        <value>Arlette</value>
+    </filters>
+    <label>My Open IT Forms</label>
+    <sharedTo>
+        <roleAndSubordinates>JDE_2016661</roleAndSubordinates>
+    </sharedTo>
+</ListView>

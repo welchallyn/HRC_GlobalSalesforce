@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service_Contract_Supplier__c</fullName>
+    <externalId>false</externalId>
+    <label>Service Contract Supplier</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Service_Contract_in_Place__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Hill-Rom</fullName>
+                <default>false</default>
+                <label>Hill-Rom</label>
+            </value>
+            <value>
+                <fullName>Borg Warner</fullName>
+                <default>false</default>
+                <label>Borg Warner</label>
+            </value>
+            <value>
+                <fullName>Carroll</fullName>
+                <default>false</default>
+                <label>Carroll</label>
+            </value>
+            <value>
+                <fullName>Huntleigh</fullName>
+                <default>false</default>
+                <label>Huntleigh</label>
+            </value>
+            <value>
+                <fullName>Joerns</fullName>
+                <default>false</default>
+                <label>Joerns</label>
+            </value>
+            <value>
+                <fullName>Linet</fullName>
+                <default>false</default>
+                <label>Linet</label>
+            </value>
+            <value>
+                <fullName>Stryker</fullName>
+                <default>false</default>
+                <label>Stryker</label>
+            </value>
+            <value>
+                <fullName>Völker</fullName>
+                <default>false</default>
+                <label>Völker</label>
+            </value>
+            <value>
+                <fullName>Arjo Huntleigh</fullName>
+                <default>false</default>
+                <label>Arjo Huntleigh</label>
+            </value>
+            <value>
+                <fullName>Wissner-Bossenhoff</fullName>
+                <default>false</default>
+                <label>Wissner-Bossenhoff</label>
+            </value>
+            <value>
+                <fullName>Stiegelmeyer</fullName>
+                <default>false</default>
+                <label>Stiegelmeyer</label>
+            </value>
+            <value>
+                <fullName>Malvestio</fullName>
+                <default>false</default>
+                <label>Malvestio</label>
+            </value>
+            <value>
+                <fullName>Parkhouse</fullName>
+                <default>false</default>
+                <label>Parkhouse</label>
+            </value>
+            <value>
+                <fullName>Care of Sweden</fullName>
+                <default>false</default>
+                <label>Care of Sweden</label>
+            </value>
+            <value>
+                <fullName>Smith and Nephew</fullName>
+                <default>false</default>
+                <label>Smith and Nephew</label>
+            </value>
+            <value>
+                <fullName>Talley</fullName>
+                <default>false</default>
+                <label>Talley</label>
+            </value>
+            <value>
+                <fullName>In House (Bio-engineer)</fullName>
+                <default>false</default>
+                <label>In House (Bio-engineer)</label>
+            </value>
+            <value>
+                <fullName>3rd Party (non-manufacturer)</fullName>
+                <default>false</default>
+                <label>3rd Party (non-manufacturer)</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>No</controllingFieldValue>
+            <valueName>In House (Bio-engineer)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No</controllingFieldValue>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>3rd Party (non-manufacturer)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Hill-Rom</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Borg Warner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Carroll</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Huntleigh</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Joerns</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Linet</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Stryker</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Völker</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Arjo Huntleigh</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Wissner-Bossenhoff</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Stiegelmeyer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Malvestio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Parkhouse</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Care of Sweden</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Smith and Nephew</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Talley</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

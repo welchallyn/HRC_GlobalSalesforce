@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Grouping together custom permissions with standard campaign influence permission set
+
+-- Created it as part of CR00032772</description>
+    <label>HRC Campaign Influence Group</label>
+    <permissionSets>Campaign_Influence</permissionSets>
+    <permissionSets>HRC_Campaign_Influence</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

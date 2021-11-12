@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Request_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Request Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Data</fullName>
+                <default>false</default>
+                <label>Data</label>
+            </value>
+            <value>
+                <fullName>Defect</fullName>
+                <default>false</default>
+                <label>Defect</label>
+            </value>
+            <value>
+                <fullName>Enhancement</fullName>
+                <default>true</default>
+                <label>Enhancement</label>
+            </value>
+            <value>
+                <fullName>Go Live</fullName>
+                <default>false</default>
+                <label>Go Live</label>
+            </value>
+            <value>
+                <fullName>Standard Functionality</fullName>
+                <default>false</default>
+                <label>Standard Functionality</label>
+            </value>
+            <value>
+                <fullName>UI Change</fullName>
+                <default>false</default>
+                <label>UI Change</label>
+            </value>
+            <value>
+                <fullName>Use Case Change</fullName>
+                <default>false</default>
+                <label>Use Case Change</label>
+            </value>
+            <value>
+                <fullName>User Error</fullName>
+                <default>false</default>
+                <label>User Error</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

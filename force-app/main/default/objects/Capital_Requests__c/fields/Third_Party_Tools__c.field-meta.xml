@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Third_Party_Tools__c</fullName>
+    <description>Will Hill-Rom provide, either directly or through a third party, any tools, dies, molds, machinery, equipment, test equipment, and/or fixtures that will be used in the production of merchandise that is sent to the United States from another country?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Will Hill-Rom provide, either directly or through a third party, any tools, dies, molds, machinery, equipment, test equipment, and/or fixtures that will be used in the production of merchandise that is sent to the United States from another country?</inlineHelpText>
+    <label>Third Party Tools?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Yes</fullName>
+                <default>false</default>
+                <label>Yes</label>
+            </value>
+            <value>
+                <fullName>No</fullName>
+                <default>false</default>
+                <label>No</label>
+            </value>
+            <value>
+                <fullName>Undecided</fullName>
+                <default>false</default>
+                <label>Undecided</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

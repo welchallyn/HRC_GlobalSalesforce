@@ -1,0 +1,1382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>PSS_Account_Page_US</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Contact_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>Contact</pageOrSobjectType>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>CEC_Visitation_Planner_Record_Page1</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>Trip__c</pageOrSobjectType>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Contract_Request_Form_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>Contract_Request_Form__c</pageOrSobjectType>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override updated by Lightning App Builder during activation.</comment>
+        <content>PSS_Capital_Opportunity_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>PSS_Evaluation_Form</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>Evaluation_Form__c</pageOrSobjectType>
+    </actionOverrides>
+    <brand>
+        <headerColor>#7BA4DB</headerColor>
+        <logo>Hillrom_Logo_TM_RGB_Hor_Pos_2</logo>
+        <logoVersion>1</logoVersion>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <description>Patient Support Systems in the United States</description>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <label>PSS US</label>
+    <navType>Standard</navType>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>RC_Sales_Home_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>HRC RC Managed Care</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>RC_Sales_Home_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>HRC RC Sales Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>Trumpf_Home_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>HRC Trumpf Sales</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>RC_Sales_Home_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>HRC Respiratory Sales Director</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>RC_Sales_Home_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>HRC Respiratory Sales Specialist</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>RC_Sales_Home_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>HRC RC Sales Admin Power</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>PSS_Therapy_Home_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>HRC Clinical Outcomes Manager</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>PSS_Capital_Home_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>HRC Sales Admin Power</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>SmartCare_Home</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>HRC Rental Sales Specialist</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>PSS_Capital_Home_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>HRC Sales Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>desktopDefault</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>WA Sales Resource User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>INTBackOffice</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>INT Back Office v3.0</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Q_O_Tracking_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>AP_and_LIKO_Order_Tracking__c</pageOrSobjectType>
+        <recordType>AP_and_LIKO_Order_Tracking__c.Liko_Quote</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Sales Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Q_O_Tracking_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>AP_and_LIKO_Order_Tracking__c</pageOrSobjectType>
+        <recordType>AP_and_LIKO_Order_Tracking__c.Liko_Quote</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Sales Admin Power</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Q_O_Tracking_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>AP_and_LIKO_Order_Tracking__c</pageOrSobjectType>
+        <recordType>AP_and_LIKO_Order_Tracking__c.Liko_Quote</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Mobility Specialist</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>SmartCare_Home</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>HRC Contract Sales Director</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>PSS_Capital_Home_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>HRC Account Executive</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>PSS_Capital_Home_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>HRC LIKO Project Manager</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>Care_Communications</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>HRC CCE</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>PSS_Capital_Home_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>HRC Mobility Specialist</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>PSS_Capital_Home_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>HRC Marketing Manager</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>PSS_Capital_Home_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>CEC_Trip_Planner</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>HRC CEC Specialist</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_CWS_Opportunity_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.HITS</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Clinical Outcomes Manager</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_Account_Page_US</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Facility</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Mobility Specialist</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Campaign_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Campaign</pageOrSobjectType>
+        <recordType>Campaign.NA_Marketing</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Sales Admin Power</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_LIKO_Opportunity_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.LIKO</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Marketing Manager</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Q_O_Tracking_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>AP_and_LIKO_Order_Tracking__c</pageOrSobjectType>
+        <recordType>AP_and_LIKO_Order_Tracking__c.Liko_Home_Care_Quote</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Sales Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Campaign_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Campaign</pageOrSobjectType>
+        <recordType>Campaign.NA_Marketing</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Sales Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Q_O_Tracking_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>AP_and_LIKO_Order_Tracking__c</pageOrSobjectType>
+        <recordType>AP_and_LIKO_Order_Tracking__c.Liko_Quote</recordType>
+        <type>Flexipage</type>
+        <profile>HRC CCE</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_LIKO_Opportunity_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.LIKO</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Sales Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Contact_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Contact</pageOrSobjectType>
+        <recordType>Contact.HRC_Contact</recordType>
+        <type>Flexipage</type>
+        <profile>HRC LIKO Project Manager</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Contact_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Contact</pageOrSobjectType>
+        <recordType>Contact.HRC_Contact</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Mobility Specialist</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Contact_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Contact</pageOrSobjectType>
+        <recordType>Contact.HRC_Contact</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Rental Sales Specialist</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Contact_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Contact</pageOrSobjectType>
+        <recordType>Contact.HRC_Contact</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Sales Admin Regional</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_Therapy_Rental_US</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.Rental_NA</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Sales Admin Power</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_Therapy_Rental_US</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.Rental_NA</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Sales Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_Therapy_Rental_US</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.Rental_NA</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>Service_Home</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>WA Service User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>INTSalesManagers</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>INT Account Manager v3.0</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Campaign_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Campaign</pageOrSobjectType>
+        <recordType>Campaign.NA_Marketing</recordType>
+        <type>Flexipage</type>
+        <profile>HRC New Business Generation</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Campaign_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Campaign</pageOrSobjectType>
+        <recordType>Campaign.NA_Marketing</recordType>
+        <type>Flexipage</type>
+        <profile>HRC CCE</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Campaign_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Campaign</pageOrSobjectType>
+        <recordType>Campaign.NA_Marketing</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Marketing Manager</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Campaign_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Campaign</pageOrSobjectType>
+        <recordType>Campaign.NA_Marketing</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Marketing Manager Global</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Campaign_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Campaign</pageOrSobjectType>
+        <recordType>Campaign.NA_Marketing</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Pardot</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Campaign_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Campaign</pageOrSobjectType>
+        <recordType>Campaign.NA_Marketing</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>PSS_Capital_Home_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>HRC SPT North America</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CCV_Contact_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Contact</pageOrSobjectType>
+        <recordType>Contact.HRC_CCV_Contact</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Pardot</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CCV_Contact_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Contact</pageOrSobjectType>
+        <recordType>Contact.HRC_CCV_Contact</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Contact_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Contact</pageOrSobjectType>
+        <recordType>Contact.HRC_Contact</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Marketing Manager</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Contact_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Contact</pageOrSobjectType>
+        <recordType>Contact.HRC_Contact</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Marketing Manager Global</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Contact_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Contact</pageOrSobjectType>
+        <recordType>Contact.HRC_Contact</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Sales Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PTO_Hours_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>PTO_Hours__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>WA Service User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_Therapy_Rental_US</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.Rental_NA</recordType>
+        <type>Flexipage</type>
+        <profile>HRC LIKO Project Manager</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PTO_Hours_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>PTO_Hours__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>HRC Sales Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PTO_Hours_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>PTO_Hours__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>HRC Sales Admin Power</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PTO_Hours_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>PTO_Hours__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_Account_Page_US</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Facility</recordType>
+        <type>Flexipage</type>
+        <profile>HRC CCE</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>desktopDefault</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>WA Operations User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PTO_Hours_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>PTO_Hours__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>HRC Contract Sales Director</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PTO_Hours_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>PTO_Hours__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>HRC DataLoader</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PTO_Hours_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>PTO_Hours__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>HRC CCE</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PTO_Hours_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>PTO_Hours__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>HRC Mobility Specialist</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Q_O_Tracking_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>AP_and_LIKO_Order_Tracking__c</pageOrSobjectType>
+        <recordType>AP_and_LIKO_Order_Tracking__c.Liko_Order</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Sales Admin Power</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Q_O_Tracking_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>AP_and_LIKO_Order_Tracking__c</pageOrSobjectType>
+        <recordType>AP_and_LIKO_Order_Tracking__c.Liko_Order</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Mobility Specialist</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Q_O_Tracking_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>AP_and_LIKO_Order_Tracking__c</pageOrSobjectType>
+        <recordType>AP_and_LIKO_Order_Tracking__c.Liko_Home_Care_Quote</recordType>
+        <type>Flexipage</type>
+        <profile>HRC LIKO Project Manager</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_Therapy_Rental_Task</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Task</pageOrSobjectType>
+        <recordType>Task.PSS_Task</recordType>
+        <type>Flexipage</type>
+        <profile>HRC CCE</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_Therapy_Rental_Task</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Task</pageOrSobjectType>
+        <recordType>Task.PSS_Task</recordType>
+        <type>Flexipage</type>
+        <profile>HRC LIKO Project Manager</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_CWS_Opportunity_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.HITS</recordType>
+        <type>Flexipage</type>
+        <profile>HRC CCE</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_Therapy_Rental_Task</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Task</pageOrSobjectType>
+        <recordType>Task.PSS_Task</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Marketing Manager</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_Therapy_Rental_Task</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Task</pageOrSobjectType>
+        <recordType>Task.PSS_Task</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Mobility Specialist</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Q_O_Tracking_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>AP_and_LIKO_Order_Tracking__c</pageOrSobjectType>
+        <recordType>AP_and_LIKO_Order_Tracking__c.Liko_Home_Care_Quote</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Account Executive</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_Therapy_Rental_Task</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Task</pageOrSobjectType>
+        <recordType>Task.PSS_Task</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Sales Admin Power</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_Therapy_Rental_Task</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Task</pageOrSobjectType>
+        <recordType>Task.PSS_Task</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_Therapy_Rental_Task</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Task</pageOrSobjectType>
+        <recordType>Task.PSS_Task</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Account Executive</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_Therapy_Rental_Task</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Task</pageOrSobjectType>
+        <recordType>Task.PSS_Task</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Clinical Outcomes Manager</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_Therapy_Rental_Task</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Task</pageOrSobjectType>
+        <recordType>Task.PSS_Task</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Sales Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_Capital_Opportunity_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.Capital</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Clinical Outcomes Manager</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_Capital_Opportunity_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.Capital</recordType>
+        <type>Flexipage</type>
+        <profile>HRC CCE</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_Capital_Opportunity_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.Capital</recordType>
+        <type>Flexipage</type>
+        <profile>HRC LIKO Project Manager</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_Capital_Opportunity_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.Capital</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Marketing Manager</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CCV_Contact_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Contact</pageOrSobjectType>
+        <recordType>Contact.HRC_CCV_Contact</recordType>
+        <type>Flexipage</type>
+        <profile>HRC CCE</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>Care_Communications</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>HRC New Business Generation</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Q_O_Tracking_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>AP_and_LIKO_Order_Tracking__c</pageOrSobjectType>
+        <recordType>AP_and_LIKO_Order_Tracking__c.Liko_Quote</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Clinical Outcomes Manager</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_Account_Page_US</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Facility</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Marketing Manager</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_Account_Page_US</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Facility</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Sales Admin Power</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_Therapy_Rental_US</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.Rental_NA</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Clinical Outcomes Manager</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>desktopDefault</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>WA Standard User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>desktopDefault</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>WA Solutions Architect</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_Capital_Opportunity_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.Capital</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_Capital_Opportunity_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.Capital</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Account Executive</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_LIKO_Opportunity_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.LIKO</recordType>
+        <type>Flexipage</type>
+        <profile>HRC CCE</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_LIKO_Opportunity_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.LIKO</recordType>
+        <type>Flexipage</type>
+        <profile>HRC LIKO Project Manager</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>INTSalesManagers</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>INT Sales Manager v3.0</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>INTBackOffice</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>INT Super User v3.0</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Q_O_Tracking_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>AP_and_LIKO_Order_Tracking__c</pageOrSobjectType>
+        <recordType>AP_and_LIKO_Order_Tracking__c.Liko_Order</recordType>
+        <type>Flexipage</type>
+        <profile>HRC LIKO Project Manager</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Q_O_Tracking_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>AP_and_LIKO_Order_Tracking__c</pageOrSobjectType>
+        <recordType>AP_and_LIKO_Order_Tracking__c.Liko_Order</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Clinical Outcomes Manager</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Q_O_Tracking_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>AP_and_LIKO_Order_Tracking__c</pageOrSobjectType>
+        <recordType>AP_and_LIKO_Order_Tracking__c.Liko_Order</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Q_O_Tracking_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>AP_and_LIKO_Order_Tracking__c</pageOrSobjectType>
+        <recordType>AP_and_LIKO_Order_Tracking__c.Liko_Order</recordType>
+        <type>Flexipage</type>
+        <profile>HRC CCE</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Q_O_Tracking_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>AP_and_LIKO_Order_Tracking__c</pageOrSobjectType>
+        <recordType>AP_and_LIKO_Order_Tracking__c.Liko_Order</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Sales Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_CWS_Opportunity_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.HITS</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Marketing Manager</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_CWS_Opportunity_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.HITS</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Sales Admin Power</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_CWS_Opportunity_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.HITS</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Sales Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_CWS_Opportunity_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.HITS</recordType>
+        <type>Flexipage</type>
+        <profile>HRC SPT North America</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_CWS_Opportunity_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.HITS</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_CWS_Opportunity_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.HITS</recordType>
+        <type>Flexipage</type>
+        <profile>HRC LIKO Project Manager</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_CWS_Opportunity_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.HITS</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Mobility Specialist</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_Therapy_Rental_US</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.Rental_NA</recordType>
+        <type>Flexipage</type>
+        <profile>Birlasoft System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_Therapy_Rental_US</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.Rental_NA</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Account Executive</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PTO_Hours_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>PTO_Hours__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>HRC Account Executive</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PTO_Hours_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>PTO_Hours__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>HRC Clinical Outcomes Manager</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Q_O_Tracking_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>AP_and_LIKO_Order_Tracking__c</pageOrSobjectType>
+        <recordType>AP_and_LIKO_Order_Tracking__c.Liko_Order</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Account Executive</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Q_O_Tracking_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>AP_and_LIKO_Order_Tracking__c</pageOrSobjectType>
+        <recordType>AP_and_LIKO_Order_Tracking__c.Liko_Quote</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_Account_Page_US</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Facility</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Account Executive</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_Account_Page_US</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Facility</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Clinical Outcomes Manager</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_Therapy_Rental_US</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.Rental_NA</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Mobility Specialist</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Contact_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Contact</pageOrSobjectType>
+        <recordType>Contact.HRC_Contact</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Account Executive</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Contact_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Contact</pageOrSobjectType>
+        <recordType>Contact.HRC_Contact</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Sales Admin Power</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CCV_Contact_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Contact</pageOrSobjectType>
+        <recordType>Contact.HRC_CCV_Contact</recordType>
+        <type>Flexipage</type>
+        <profile>HRC New Business Generation</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>CCV_Contact_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Contact</pageOrSobjectType>
+        <recordType>Contact.HRC_CCV_Contact</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Account Executive</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_Capital_Opportunity_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.Capital</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Mobility Specialist</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_Capital_Opportunity_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.Capital</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Sales Admin Power</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_Capital_Opportunity_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.Capital</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Sales Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_Capital_Opportunity_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.Capital</recordType>
+        <type>Flexipage</type>
+        <profile>HRC SPT North America</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Q_O_Tracking_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>AP_and_LIKO_Order_Tracking__c</pageOrSobjectType>
+        <recordType>AP_and_LIKO_Order_Tracking__c.Liko_Home_Care_Quote</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Sales Admin Power</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>desktopDefault</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>WA Marketing User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Q_O_Tracking_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>AP_and_LIKO_Order_Tracking__c</pageOrSobjectType>
+        <recordType>AP_and_LIKO_Order_Tracking__c.Liko_Quote</recordType>
+        <type>Flexipage</type>
+        <profile>HRC LIKO Project Manager</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Q_O_Tracking_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>AP_and_LIKO_Order_Tracking__c</pageOrSobjectType>
+        <recordType>AP_and_LIKO_Order_Tracking__c.Liko_Quote</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Account Executive</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Contact_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Contact</pageOrSobjectType>
+        <recordType>Contact.HRC_Contact</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Clinical Outcomes Manager</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Contact_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Contact</pageOrSobjectType>
+        <recordType>Contact.HRC_Contact</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Contract Sales Director</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>desktopDefault</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>WA Inside Sales User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>desktopDefault</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>WA CRM Data Steward</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>desktopDefault</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>WA Customer Support User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>desktopDefault</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>WA Account-Update-All</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>desktopDefault</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>WA Clinical Consultants</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Q_O_Tracking_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>AP_and_LIKO_Order_Tracking__c</pageOrSobjectType>
+        <recordType>AP_and_LIKO_Order_Tracking__c.Liko_Home_Care_Quote</recordType>
+        <type>Flexipage</type>
+        <profile>HRC CCE</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Q_O_Tracking_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>AP_and_LIKO_Order_Tracking__c</pageOrSobjectType>
+        <recordType>AP_and_LIKO_Order_Tracking__c.Liko_Home_Care_Quote</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Mobility Specialist</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Q_O_Tracking_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>AP_and_LIKO_Order_Tracking__c</pageOrSobjectType>
+        <recordType>AP_and_LIKO_Order_Tracking__c.Liko_Home_Care_Quote</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Q_O_Tracking_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>AP_and_LIKO_Order_Tracking__c</pageOrSobjectType>
+        <recordType>AP_and_LIKO_Order_Tracking__c.Liko_Home_Care_Quote</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Clinical Outcomes Manager</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_LIKO_Opportunity_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.LIKO</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Sales Admin Power</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_LIKO_Opportunity_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.LIKO</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Account Executive</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_LIKO_Opportunity_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.LIKO</recordType>
+        <type>Flexipage</type>
+        <profile>HRC SPT North America</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_LIKO_Opportunity_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.LIKO</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Clinical Outcomes Manager</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_LIKO_Opportunity_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.LIKO</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_Capital_Opportunity_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.Capital</recordType>
+        <type>Flexipage</type>
+        <profile>HRC RC Sales Admin Power</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_Capital_Opportunity_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.Capital</recordType>
+        <type>Flexipage</type>
+        <profile>HRC RC Sales Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_Account_Page_US</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Facility</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Sales Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>PSS_CWS_Opportunity_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.HITS</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Account Executive</profile>
+    </profileActionOverrides>
+    <setupExperience>all</setupExperience>
+    <tabs>standard-home</tabs>
+    <tabs>CS_QC__Commission_Statement</tabs>
+    <tabs>Target</tabs>
+    <tabs>SDC_Target</tabs>
+    <tabs>Nurse_Call_Segmentation</tabs>
+    <tabs>RTLS_Segmentation</tabs>
+    <tabs>standard-Account</tabs>
+    <tabs>standard-Contact</tabs>
+    <tabs>standard-Opportunity</tabs>
+    <tabs>Seismic</tabs>
+    <tabs>Performance_Scoreboard</tabs>
+    <tabs>standard-report</tabs>
+    <tabs>standard-Dashboard</tabs>
+    <tabs>standard-File</tabs>
+    <tabs>Order__c</tabs>
+    <tabs>JDE_Prop__c</tabs>
+    <tabs>Trip__c</tabs>
+    <tabs>AP_and_LIKO_Order_Tracking__c</tabs>
+    <tabs>Pureconnect_CIC</tabs>
+    <tabs>standard-Task</tabs>
+    <tabs>PTO_Hours__c</tabs>
+    <tabs>Pricing_Request__c</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>PSS_US_UtilityBar1</utilityBar>
+</CustomApplication>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Required_fields_for_Partners</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( Account_Name__r.RecordType.Name = &quot;INT Partners&quot;,
+ OR(  ISPICKVAL(Strategic_Fit__c , &quot;&quot;),
+      ISPICKVAL(Market_Size__c , &quot;&quot;),
+      ISPICKVAL(Hill_Rom_Revenue__c,&quot;&quot; )  
+     
+)
+)</errorConditionFormula>
+    <errorMessage>Strategic Fit, Market Size and Hill-Rom Revenue are required for Partner segmentation</errorMessage>
+</ValidationRule>

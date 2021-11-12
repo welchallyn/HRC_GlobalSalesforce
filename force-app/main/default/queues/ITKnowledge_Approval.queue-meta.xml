@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>ITKnowledge Approval</name>
+    <queueMembers>
+        <users>
+            <user>goldsmb1@hrc.corp</user>
+            <user>bittlic@hrc.corp</user>
+            <user>newmanh@hrc.corp</user>
+            <user>fergusj1@hrc.corp</user>
+            <user>mccoolj@hrc.corp</user>
+            <user>mcadamk1@hrc.corp</user>
+            <user>bowdenn1@hrc.corp</user>
+            <user>orgeln@hrc.corp</user>
+            <user>reindot@hrc.corp</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>BMCServiceDesk__KM_KnowledgeArticle__c</sobjectType>
+    </queueSobject>
+</Queue>

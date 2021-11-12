@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Starts the Repair Template flow from the WorkOrder</description>
+    <flowDefinition>HRCFSL_Repair_Template</flowDefinition>
+    <label>Repair Template</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

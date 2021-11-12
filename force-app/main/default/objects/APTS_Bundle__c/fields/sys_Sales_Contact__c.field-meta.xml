@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>sys_Sales_Contact__c</fullName>
+    <externalId>false</externalId>
+    <formula>Proposal__r.Owner:User.FirstName + &apos; &apos; + Proposal__r.Owner:User.LastName + &apos;, &apos; + Proposal__r.Owner:User.Title + &apos;, &apos; + Proposal__r.Owner:User.Phone + &apos;, &apos; + Proposal__r.Owner:User.Email</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Sales Contact</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

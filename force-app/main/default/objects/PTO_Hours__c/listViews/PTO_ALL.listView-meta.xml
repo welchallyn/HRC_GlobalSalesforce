@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PTO_ALL</fullName>
+    <columns>OWNER.FIRST_NAME</columns>
+    <columns>OWNER.LAST_NAME</columns>
+    <columns>Hours__c</columns>
+    <columns>Date_of_PTO__c</columns>
+    <columns>Floating_Holiday__c</columns>
+    <columns>NAME</columns>
+    <filterScope>Everything</filterScope>
+    <label>PTO - ALL</label>
+    <language>en_US</language>
+    <sharedTo>
+        <roleAndSubordinates>JDE_1001025</roleAndSubordinates>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ContractTypeBAA_Eval_NDASpecificDetails</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+    OR(
+       ISPICKVAL( X1_a_Contract_Type__c , &apos;Business Associate (BAA)&apos;),
+       ISPICKVAL( X1_a_Contract_Type__c , &apos;Evaluation&apos;),
+       ISPICKVAL( X1_a_Contract_Type__c , &apos;Non-Disclosure (NDA)&apos;)
+       ) ,
+    OR(
+       ISNULL(TEXT(X1_a_Proposed_Agreement_Start_Date__c)) ,
+       ISNULL(X1_b_Reason_for_specific_start_date__c) ,
+       ISNULL(X2_Agreement_Length_e_g_1_2_or_3_Yrs__c)
+       )
+)</errorConditionFormula>
+    <errorMessage>Itema 1 and 2 of Detail Section cannot be blank for BAA, Evaluation or NDA</errorMessage>
+</ValidationRule>

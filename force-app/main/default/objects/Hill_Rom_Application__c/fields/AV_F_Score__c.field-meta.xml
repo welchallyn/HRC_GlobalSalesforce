@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AV_F_Score__c</fullName>
+    <description>Score for Application Value &amp; Fit to Mission or Process.</description>
+    <externalId>false</externalId>
+    <formula>VALUE(TEXT(Application_Robustness__c))+ VALUE(TEXT(Data_Information_Quality_Timeliness__c))+ VALUE(TEXT(Future_Role_of_Application__c))+ VALUE(TEXT(Mission_or_Process_Fit__c))+ VALUE(TEXT(Utilization__c))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Score for Application Value &amp; Fit to Mission or Process.</inlineHelpText>
+    <label>AV&amp;F Score</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

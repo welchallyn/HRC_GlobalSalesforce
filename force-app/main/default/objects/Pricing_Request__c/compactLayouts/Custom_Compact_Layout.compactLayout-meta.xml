@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Custom_Compact_Layout</fullName>
+    <fields>Name</fields>
+    <fields>Main_Category__c</fields>
+    <fields>NMP_Code__c</fields>
+    <fields>Customer_ERP_Sold_to__c</fields>
+    <label>Custom Compact Layout</label>
+</CompactLayout>

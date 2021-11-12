@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Denise_Open_Requests</fullName>
+    <columns>NAME</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <columns>Patient_Name__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Working,Complete,Discard</value>
+    </filters>
+    <filters>
+        <field>X1st_type_of_equipment_to_be_quoted__c</field>
+        <operation>equals</operation>
+        <value>205 Vest</value>
+    </filters>
+    <label>ALL Open Requests</label>
+</ListView>

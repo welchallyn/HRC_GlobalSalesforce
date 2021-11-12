@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primary_Company_Administrator__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Key customer contact who has complete oversight of all of the locations using the RetinaVue Network solution. Company Administrator will complete initial setup of the clinic locations and clinic admins.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Key customer contact who has complete oversight of all of the locations using the RetinaVue Network solution.Company Administrator will complete initial setup of the clinic locations and clinic admins.</inlineHelpText>
+    <label>Primary Company Administrator</label>
+    <lookupFilter>
+        <active>false</active>
+        <filterItems>
+            <field>Contact.AccountId</field>
+            <operation>equals</operation>
+            <valueField>$Source.Account__c</valueField>
+        </filterItems>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Installations (Primary Company Administrator)</relationshipLabel>
+    <relationshipName>Installations1</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

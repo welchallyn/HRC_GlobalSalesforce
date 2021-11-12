@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Demo_Equipment_Requested__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Only use if requesting a new Demo System</inlineHelpText>
+    <label>Demo Equipment Requested</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>105 Vest System</fullName>
+                <default>false</default>
+                <label>105 Vest System</label>
+            </value>
+            <value>
+                <fullName>MetaNeb 4.0 System</fullName>
+                <default>false</default>
+                <label>MetaNeb 4.0 System</label>
+            </value>
+            <value>
+                <fullName>VitalCough System</fullName>
+                <default>false</default>
+                <label>VitalCough System</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

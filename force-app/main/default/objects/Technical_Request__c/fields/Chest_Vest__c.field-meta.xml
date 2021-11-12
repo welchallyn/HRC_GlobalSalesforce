@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Chest_Vest__c</fullName>
+    <externalId>false</externalId>
+    <label>Chest Vest</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Chest Vest Small (28-35 inches)</fullName>
+                <default>false</default>
+                <label>Chest Vest Small (28-35 inches)</label>
+            </value>
+            <value>
+                <fullName>Chest Vest Medium (35-46 inches)</fullName>
+                <default>false</default>
+                <label>Chest Vest Medium (35-46 inches)</label>
+            </value>
+            <value>
+                <fullName>Chest Vest Large (46-61 inches)</fullName>
+                <default>false</default>
+                <label>Chest Vest Large (46-61 inches)</label>
+            </value>
+            <value>
+                <fullName>Chest Vest X-Large (61-67 inches)</fullName>
+                <default>false</default>
+                <label>Chest Vest X-Large (61-67 inches)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

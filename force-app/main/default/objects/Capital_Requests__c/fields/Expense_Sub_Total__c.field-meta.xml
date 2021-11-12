@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Expense_Sub_Total__c</fullName>
+    <externalId>false</externalId>
+    <label>Expense Sub-Total</label>
+    <summarizedField>Expense_Item__c.Total_for_Rollup_without_tax__c</summarizedField>
+    <summaryForeignKey>Expense_Item__c.Capital_Request__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

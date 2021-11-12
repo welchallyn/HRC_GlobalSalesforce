@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primary_IT_Tower__c</fullName>
+    <externalId>false</externalId>
+    <label>Primary IT Tower</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Project Everest</fullName>
+                <default>false</default>
+                <label>Project Everest</label>
+            </value>
+            <value>
+                <fullName>Digital</fullName>
+                <default>false</default>
+                <label>Digital</label>
+            </value>
+            <value>
+                <fullName>Custom Apps</fullName>
+                <default>false</default>
+                <label>Custom Apps</label>
+            </value>
+            <value>
+                <fullName>Content Mgmt</fullName>
+                <default>false</default>
+                <label>Content Mgmt</label>
+            </value>
+            <value>
+                <fullName>SAP &amp; Boundary Apps</fullName>
+                <default>false</default>
+                <label>SAP &amp; Boundary Apps</label>
+            </value>
+            <value>
+                <fullName>JDE &amp; Boundary Apps</fullName>
+                <default>false</default>
+                <label>JDE &amp; Boundary Apps</label>
+            </value>
+            <value>
+                <fullName>Cots ERP &amp; Others</fullName>
+                <default>false</default>
+                <label>Cots ERP &amp; Others</label>
+            </value>
+            <value>
+                <fullName>PLM (Engg Apps)</fullName>
+                <default>false</default>
+                <label>PLM (Engg Apps)</label>
+            </value>
+            <value>
+                <fullName>HR Cots</fullName>
+                <default>false</default>
+                <label>HR Cots</label>
+            </value>
+            <value>
+                <fullName>Data and Analytics</fullName>
+                <default>false</default>
+                <label>Data and Analytics</label>
+            </value>
+            <value>
+                <fullName>Integrations</fullName>
+                <default>false</default>
+                <label>Integrations</label>
+            </value>
+            <value>
+                <fullName>Testing</fullName>
+                <default>false</default>
+                <label>Testing</label>
+            </value>
+            <value>
+                <fullName>Infra – Tech Support (L2/L3)</fullName>
+                <default>false</default>
+                <label>Infra – Tech Support (L2/L3)</label>
+            </value>
+            <value>
+                <fullName>SAP Concur</fullName>
+                <default>false</default>
+                <label>SAP Concur</label>
+            </value>
+            <value>
+                <fullName>Digital &amp; Field Services</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Digital &amp; Field Services</label>
+            </value>
+            <value>
+                <fullName>Human Resources</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Human Resources</label>
+            </value>
+            <value>
+                <fullName>Infrastructure L2/L3</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Infrastructure L2/L3</label>
+            </value>
+            <value>
+                <fullName>Integration</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Integration</label>
+            </value>
+            <value>
+                <fullName>JDE</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>JDE</label>
+            </value>
+            <value>
+                <fullName>Other ERP</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Other ERP</label>
+            </value>
+            <value>
+                <fullName>PLM</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>PLM</label>
+            </value>
+            <value>
+                <fullName>Portal and Content</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Portal and Content</label>
+            </value>
+            <value>
+                <fullName>SAP (SAP, Hybris, Concur)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>SAP (SAP, Hybris, Concur)</label>
+            </value>
+            <value>
+                <fullName>Web Apps (Custom Apps)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Web Apps (Custom Apps)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

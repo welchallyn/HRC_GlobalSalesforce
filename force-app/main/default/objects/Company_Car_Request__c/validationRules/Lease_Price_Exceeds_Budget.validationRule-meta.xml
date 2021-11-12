@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lease_Price_Exceeds_Budget</fullName>
+    <active>true</active>
+    <description>If lease price exceeds lease budget, user must select if employee will compensate extra cost.</description>
+    <errorConditionFormula>AND( Lease_Quote__c  &gt;  Max_car_lease_budget__c ,  ISPICKVAL( Compensate_Excess_Price__c , &quot;&quot;) )</errorConditionFormula>
+    <errorDisplayField>Compensate_Excess_Price__c</errorDisplayField>
+    <errorMessage>Please select a value</errorMessage>
+</ValidationRule>

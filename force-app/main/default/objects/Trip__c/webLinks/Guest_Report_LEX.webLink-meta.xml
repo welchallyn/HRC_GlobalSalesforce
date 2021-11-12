@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Guest_Report_LEX</fullName>
+    <availability>online</availability>
+    <description>Guest Report for Lightning</description>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <hasMenubar>true</hasMenubar>
+    <hasScrollbars>true</hasScrollbars>
+    <hasToolbar>false</hasToolbar>
+    <isResizable>true</isResizable>
+    <linkType>url</linkType>
+    <masterLabel>Guest Report LEX</masterLabel>
+    <openType>newWindow</openType>
+    <position>none</position>
+    <protected>false</protected>
+    <showsLocation>true</showsLocation>
+    <showsStatus>true</showsStatus>
+    <url>https://hill-rom--hrctest.lightning.force.com/lightning/r/Report/00O0L000003ij5zUAA/view?fv0={!Trip__c.Id}</url>
+</WebLink>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Move_to_AcctSetup_Validation_ContractNo</fullName>
+    <active>true</active>
+    <description>In order to move to Account Setup, Contract Number Reqd</description>
+    <errorConditionFormula>AND(
+ISBLANK(  Contract_Number__c  ),
+ISCHANGED( Status__c ),
+ISPICKVAL(Status__c, &quot;Account Setup&quot;),
+ RecordType.Name = &quot;RetinaVue&quot;,
+NOT(Device_Only_Install__c) 
+)</errorConditionFormula>
+    <errorDisplayField>Contract_Number__c</errorDisplayField>
+    <errorMessage>Please Populate Contract Number</errorMessage>
+</ValidationRule>

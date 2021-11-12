@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Country__c</fullName>
+    <externalId>false</externalId>
+    <label>Country</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>France</fullName>
+                <default>false</default>
+                <label>France</label>
+            </value>
+            <value>
+                <fullName>Iberia</fullName>
+                <default>false</default>
+                <label>Iberia</label>
+            </value>
+            <value>
+                <fullName>Benelux</fullName>
+                <default>false</default>
+                <label>Benelux</label>
+            </value>
+            <value>
+                <fullName>Italy</fullName>
+                <default>false</default>
+                <label>Italy</label>
+            </value>
+            <value>
+                <fullName>UKI</fullName>
+                <default>false</default>
+                <label>UKI</label>
+            </value>
+            <value>
+                <fullName>DACH</fullName>
+                <default>false</default>
+                <label>DACH</label>
+            </value>
+            <value>
+                <fullName>Nordics</fullName>
+                <default>false</default>
+                <label>Nordics</label>
+            </value>
+            <value>
+                <fullName>Gulf</fullName>
+                <default>false</default>
+                <label>Gulf</label>
+            </value>
+            <value>
+                <fullName>India Subcontinent</fullName>
+                <default>false</default>
+                <label>India Subcontinent</label>
+            </value>
+            <value>
+                <fullName>Levant, Turkey, Africa</fullName>
+                <default>false</default>
+                <label>Levant, Turkey, Africa</label>
+            </value>
+            <value>
+                <fullName>Southern Africa</fullName>
+                <default>false</default>
+                <label>Southern Africa</label>
+            </value>
+            <value>
+                <fullName>Saudi Arabia</fullName>
+                <default>false</default>
+                <label>Saudi Arabia</label>
+            </value>
+            <value>
+                <fullName>Eastern Europe, CIS</fullName>
+                <default>false</default>
+                <label>Eastern Europe, CIS</label>
+            </value>
+            <value>
+                <fullName>Israel</fullName>
+                <default>false</default>
+                <label>Israel</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

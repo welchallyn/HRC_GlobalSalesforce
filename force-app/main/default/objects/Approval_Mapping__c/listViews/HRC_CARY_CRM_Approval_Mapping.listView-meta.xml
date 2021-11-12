@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRC_CARY_CRM_Approval_Mapping</fullName>
+    <filterScope>Queue</filterScope>
+    <label>xxxxHRC-CARY-CRM</label>
+    <queue>xxxxHRC_CARY_CRM</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

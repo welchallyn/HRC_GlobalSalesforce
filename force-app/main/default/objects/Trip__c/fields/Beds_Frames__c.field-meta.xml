@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Beds_Frames__c</fullName>
+    <externalId>false</externalId>
+    <label>Beds/Frames</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Trip_Location__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Advanta™ 2 Med Surg Bed</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Advanta™ 2 Med Surg Bed</label>
+            </value>
+            <value>
+                <fullName>Affinity® 4 Birthing Bed</fullName>
+                <default>false</default>
+                <label>Affinity® 4 Birthing Bed</label>
+            </value>
+            <value>
+                <fullName>CareAssist® ES Medical Surgical Bed</fullName>
+                <default>false</default>
+                <label>CareAssist® ES Medical Surgical Bed</label>
+            </value>
+            <value>
+                <fullName>Centrella</fullName>
+                <default>false</default>
+                <label>Centrella</label>
+            </value>
+            <value>
+                <fullName>Compella™ Bariatric Bed</fullName>
+                <default>false</default>
+                <label>Compella™ Bariatric Bed</label>
+            </value>
+            <value>
+                <fullName>Envella™ Air Fluidized Therapy Bed</fullName>
+                <default>false</default>
+                <label>Envella™ Air Fluidized Therapy Bed</label>
+            </value>
+            <value>
+                <fullName>Excel Care® ES Bariatric Bed</fullName>
+                <default>false</default>
+                <label>Excel Care® ES Bariatric Bed</label>
+            </value>
+            <value>
+                <fullName>Hill-Rom® 100 Low LTC Bed</fullName>
+                <default>false</default>
+                <label>Hill-Rom® 100 Low LTC Bed</label>
+            </value>
+            <value>
+                <fullName>Hill-Rom® Resident Long Term Care Bed</fullName>
+                <default>false</default>
+                <label>Hill-Rom® Resident Long Term Care Bed</label>
+            </value>
+            <value>
+                <fullName>HR900 Accella</fullName>
+                <default>false</default>
+                <label>HR900 Accella</label>
+            </value>
+            <value>
+                <fullName>Progressa® Bed System</fullName>
+                <default>false</default>
+                <label>Progressa® Bed System</label>
+            </value>
+            <value>
+                <fullName>TotalCare Bariatric Plus</fullName>
+                <default>false</default>
+                <label>TotalCare Bariatric Plus</label>
+            </value>
+            <value>
+                <fullName>VersaCare® Med Surg Bed</fullName>
+                <default>false</default>
+                <label>VersaCare® Med Surg Bed</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <valueName>Affinity® 4 Birthing Bed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <valueName>CareAssist® ES Medical Surgical Bed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <controllingFieldValue>Sydney</controllingFieldValue>
+            <valueName>Centrella</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <controllingFieldValue>Sydney</controllingFieldValue>
+            <valueName>Compella™ Bariatric Bed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <valueName>Envella™ Air Fluidized Therapy Bed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <valueName>Excel Care® ES Bariatric Bed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <valueName>Hill-Rom® 100 Low LTC Bed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <valueName>Hill-Rom® Resident Long Term Care Bed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <controllingFieldValue>Sydney</controllingFieldValue>
+            <valueName>Progressa® Bed System</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <valueName>TotalCare Bariatric Plus</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Batesville</controllingFieldValue>
+            <controllingFieldValue>Irvine</controllingFieldValue>
+            <controllingFieldValue>Mississauga</controllingFieldValue>
+            <valueName>VersaCare® Med Surg Bed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sydney</controllingFieldValue>
+            <valueName>HR900 Accella</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

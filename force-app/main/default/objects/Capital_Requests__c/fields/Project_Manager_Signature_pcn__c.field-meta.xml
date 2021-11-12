@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_Manager_Signature_pcn__c</fullName>
+    <description>Project Manager Signature for Sign Off</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Project Manager Signature for Sign Off</inlineHelpText>
+    <label>Project Manager Signature</label>
+    <length>30</length>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

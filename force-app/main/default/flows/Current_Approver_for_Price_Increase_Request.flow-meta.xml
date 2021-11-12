@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>51.0</apiVersion>
+    <decisions>
+        <description>Checks for approval status of records to update last actor ID or actor ID accordingly.</description>
+        <name>Approval_Status_Check</name>
+        <label>Approval Status Check</label>
+        <locationX>439</locationX>
+        <locationY>137</locationY>
+        <defaultConnector>
+            <targetReference>Process_Instance_Approve_Reject</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Approved/Rejected?</defaultConnectorLabel>
+        <rules>
+            <name>Pending_Approval</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Submitted for Approval</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Process_Instance</targetReference>
+            </connector>
+            <label>Pending Approval?</label>
+        </rules>
+    </decisions>
+    <description>Updates current approver for Supplier Price Increase Requests that are still pending for approval.</description>
+    <formulas>
+        <description>Full name of Actor ID from Process Instance Workitem object</description>
+        <name>FullName_ActorID</name>
+        <dataType>String</dataType>
+        <expression>{!Process_Instance_Workitem.Actor:User.FirstName} &amp; &quot; &quot; &amp; {!Process_Instance_Workitem.Actor:User.LastName}</expression>
+    </formulas>
+    <formulas>
+        <description>Full name of Last Actor ID from process instance object.</description>
+        <name>FullName_LastActorID</name>
+        <dataType>String</dataType>
+        <expression>{!Process_Instance_Approve_Reject.LastActor.FirstName} &amp; &quot; &quot; &amp; {!Process_Instance_Approve_Reject.LastActor.LastName}</expression>
+    </formulas>
+    <interviewLabel>Current Approver for Price Increase Request {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Current Approver for Price Increase Request</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Process_Instance</name>
+        <label>Process Instance</label>
+        <locationX>616</locationX>
+        <locationY>129</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Process_Instance_Workitem</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Status</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Pending</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>TargetObjectId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>ProcessInstance</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Process Instance entries for approved or rejected records.</description>
+        <name>Process_Instance_Approve_Reject</name>
+        <label>Process Instance Approve/Reject</label>
+        <locationX>447</locationX>
+        <locationY>352</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_Last_Approver</targetReference>
+        </connector>
+        <filterLogic>(1 OR 2) AND 3</filterLogic>
+        <filters>
+            <field>Status</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Approved</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Status</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Rejected</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>TargetObjectId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>ProcessInstance</object>
+        <sortField>LastModifiedDate</sortField>
+        <sortOrder>Desc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Process_Instance_Workitem</name>
+        <label>Process Instance Workitem</label>
+        <locationX>739</locationX>
+        <locationY>129</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_Current_Approver</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>ProcessInstanceId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Process_Instance.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>ProcessInstanceWorkitem</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Current_Approver</name>
+        <label>Update Current Approver</label>
+        <locationX>873</locationX>
+        <locationY>129</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Current_Approver__c</field>
+            <value>
+                <elementReference>FullName_ActorID</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Price_Increase_Request__c</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Updates the last approver who approves or rejects</description>
+        <name>Update_Last_Approver</name>
+        <label>Update Last Approver</label>
+        <locationX>595</locationX>
+        <locationY>352</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Current_Approver__c</field>
+            <value>
+                <elementReference>FullName_LastActorID</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Price_Increase_Request__c</object>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>55</locationY>
+        <connector>
+            <targetReference>Approval_Status_Check</targetReference>
+        </connector>
+        <filterLogic>(1 OR 2 OR 3) AND 4</filterLogic>
+        <filters>
+            <field>Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Submitted for Approval</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Approved</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Rejected</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Last_Modified_By_User__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Automated Process</stringValue>
+            </value>
+        </filters>
+        <object>Price_Increase_Request__c</object>
+        <schedule>
+            <frequency>Daily</frequency>
+            <startDate>2021-11-09</startDate>
+            <startTime>06:00:00.000Z</startTime>
+        </schedule>
+        <triggerType>Scheduled</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Sensing</label>
+    <protected>false</protected>
+    <values>
+        <field>Profiles__c</field>
+        <value xsi:type="xsd:string">HRC Account Executive;HRC Respiratory;HRC Homecare;HRC Clinical Outcomes Manager;HRC Marketing Specialist;HRC Marketing Manager;HRC Marketing Inside Sales</value>
+    </values>
+</CustomMetadata>

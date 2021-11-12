@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Name__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>INT Opportunity that&apos;s associated with this Strategic Account.
+
+-- Created as part of CR00032353 | 00994426</description>
+    <externalId>false</externalId>
+    <label>Opportunity Name</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>INT Sales</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Opportunity</referenceTo>
+    <relationshipLabel>Strategic Relationship</relationshipLabel>
+    <relationshipName>Strategic_Accounts</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

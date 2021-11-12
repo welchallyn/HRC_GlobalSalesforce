@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Requesting_Account_Executive__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Entering the Account Executive Name who is the requestor of the Sales Support Request</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Click the box with the magnifying glass to the right of this field to search for and enter the name of the Requesting Account Executive.</inlineHelpText>
+    <label>Requesting Account Executive</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Request_Forms</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

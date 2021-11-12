@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Accessories__c</fullName>
+    <externalId>false</externalId>
+    <label>Accessories</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Hoses</fullName>
+                <default>false</default>
+                <label>Hoses</label>
+            </value>
+            <value>
+                <fullName>103 Foot Control</fullName>
+                <default>false</default>
+                <label>103 Foot Control</label>
+            </value>
+            <value>
+                <fullName>104 Foot Control</fullName>
+                <default>false</default>
+                <label>104 Foot Control</label>
+            </value>
+            <value>
+                <fullName>105 Remote Control</fullName>
+                <default>false</default>
+                <label>105 Remote Control</label>
+            </value>
+            <value>
+                <fullName>103 Hoses</fullName>
+                <default>false</default>
+                <label>103 Hoses</label>
+            </value>
+            <value>
+                <fullName>104/105 Hoses</fullName>
+                <default>false</default>
+                <label>104/105 Hoses</label>
+            </value>
+            <value>
+                <fullName>Power Cord</fullName>
+                <default>false</default>
+                <label>Power Cord</label>
+            </value>
+            <value>
+                <fullName>104/105 Duffel Bag</fullName>
+                <default>false</default>
+                <label>104/105 Duffel Bag</label>
+            </value>
+            <value>
+                <fullName>Contour Foam</fullName>
+                <default>false</default>
+                <label>Contour Foam</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>9</visibleLines>
+</CustomField>

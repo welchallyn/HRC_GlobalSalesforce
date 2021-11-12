@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Need_a_Pickup_Service_Center</fullName>
+    <active>true</active>
+    <description>When field rep sets type to Pickup must specify if the pickup in coming from Customer or Service Center</description>
+    <errorConditionFormula>AND(
+ISPICKVAL( Request_Type__c , &apos;Pick-Up&apos;) ,
+TEXT( Pickup_From__c ) = null
+)</errorConditionFormula>
+    <errorDisplayField>Pickup_From__c</errorDisplayField>
+    <errorMessage>Please indicate where Evaluation Equipment should be picked up from.</errorMessage>
+</ValidationRule>

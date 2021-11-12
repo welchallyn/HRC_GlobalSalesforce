@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BRM_IT_Queue_for_Digital_Value</fullName>
+    <columns>NAME</columns>
+    <columns>Approved_Requestor__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Priority__c</columns>
+    <columns>Gate__c</columns>
+    <columns>Status__c</columns>
+    <columns>Execution_Track__c</columns>
+    <columns>IT_Time_Estimate_Hours__c</columns>
+    <columns>HRC_IT_Lead__c</columns>
+    <columns>Primary_IT_Tower__c</columns>
+    <columns>Impacted_Geo__c</columns>
+    <columns>Application__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Primary_IT_Tower__c</field>
+        <operation>equals</operation>
+        <value>Digital</value>
+    </filters>
+    <filters>
+        <field>Gate__c</field>
+        <operation>equals</operation>
+        <value>Value Prioritization,Value Realization</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>CANCELLED,CLOSED,REJECTED</value>
+    </filters>
+    <filters>
+        <field>Application__c</field>
+        <operation>contains</operation>
+        <value>salesforce</value>
+    </filters>
+    <label>BRM IT Queue for Digital (Value)</label>
+    <sharedTo>
+        <roleAndSubordinates>JDE_2098281</roleAndSubordinates>
+    </sharedTo>
+</ListView>

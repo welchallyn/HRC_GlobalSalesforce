@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Install_Base__c</fullName>
+    <externalId>false</externalId>
+    <label>Install Base</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cardiology</fullName>
+                <default>false</default>
+                <label>Cardiology</label>
+            </value>
+            <value>
+                <fullName>CCSS</fullName>
+                <default>false</default>
+                <label>CCSS</label>
+            </value>
+            <value>
+                <fullName>Cuffs</fullName>
+                <default>false</default>
+                <label>Cuffs</label>
+            </value>
+            <value>
+                <fullName>Lighting</fullName>
+                <default>false</default>
+                <label>Lighting</label>
+            </value>
+            <value>
+                <fullName>Partners in Care</fullName>
+                <default>false</default>
+                <label>Partners in Care</label>
+            </value>
+            <value>
+                <fullName>Physical Assessment</fullName>
+                <default>false</default>
+                <label>Physical Assessment</label>
+            </value>
+            <value>
+                <fullName>Thermometry</fullName>
+                <default>false</default>
+                <label>Thermometry</label>
+            </value>
+            <value>
+                <fullName>Vag Specs</fullName>
+                <default>false</default>
+                <label>Vag Specs</label>
+            </value>
+            <value>
+                <fullName>Vitals</fullName>
+                <default>false</default>
+                <label>Vitals</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Support_Requests</fullName>
+    <columns>CREATED_DATE</columns>
+    <columns>NAME</columns>
+    <columns>Status__c</columns>
+    <columns>Inside_Sales_Email__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>Requesting_Account_Executive__c</columns>
+    <columns>Support_Request_Type__c</columns>
+    <columns>Order_Status_Reason__c</columns>
+    <columns>Request_Details__c</columns>
+    <columns>Patient_Name__c</columns>
+    <columns>Request_Response__c</columns>
+    <columns>Emailed_From__c</columns>
+    <columns>Manager_Email__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Technical_Request__c.Sales_Support_Request</value>
+    </filters>
+    <label>Sales Support Requests</label>
+    <language>en_US</language>
+    <sharedTo>
+        <roleAndSubordinates>JDE_1952710</roleAndSubordinates>
+    </sharedTo>
+</ListView>

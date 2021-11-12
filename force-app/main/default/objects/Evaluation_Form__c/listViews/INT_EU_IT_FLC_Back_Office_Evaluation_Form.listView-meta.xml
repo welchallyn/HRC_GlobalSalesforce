@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>INT_EU_IT_FLC_Back_Office_Evaluation_Form</fullName>
+    <filterScope>Queue</filterScope>
+    <label>INT EU IT FLC Back Office</label>
+    <queue>INT_EU_IT_FLC_Back_Office</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

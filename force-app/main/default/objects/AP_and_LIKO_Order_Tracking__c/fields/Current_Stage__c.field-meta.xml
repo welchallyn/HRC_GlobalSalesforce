@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_Stage__c</fullName>
+    <externalId>false</externalId>
+    <formula>if(  Moving_Through_Agile__c ==True, 8 , 
+
+if(Moving_Through_Agile__c ==False &amp;&amp;  PE_Product_Engineering__c ==True,7,
+
+if ( Moving_Through_Agile__c ==False &amp;&amp;  PE_Product_Engineering__c ==False &amp;&amp;  PM_Pre_Release__c ==True, 6,
+
+if( Moving_Through_Agile__c ==False &amp;&amp;  PE_Product_Engineering__c ==False &amp;&amp;  PM_Pre_Release__c ==False &amp;&amp; PE_Product_Drafting__c == True , 5, 
+
+if(  Moving_Through_Agile__c ==False &amp;&amp;  PE_Product_Engineering__c ==False &amp;&amp;  PM_Pre_Release__c ==False &amp;&amp; PE_Product_Drafting__c == False &amp;&amp;  Need_Add_Info_From_AS__c ==True, 4, 
+
+if(Moving_Through_Agile__c ==False &amp;&amp;  PE_Product_Engineering__c ==False &amp;&amp;  PM_Pre_Release__c ==False &amp;&amp; PE_Product_Drafting__c == False &amp;&amp;  Need_Add_Info_From_AS__c ==False &amp;&amp;  Revised_Shop_Drawings_Sent__c == True, 3, 
+
+if( Moving_Through_Agile__c ==False &amp;&amp;  PE_Product_Engineering__c ==False &amp;&amp;  PM_Pre_Release__c ==False &amp;&amp; PE_Product_Drafting__c == False &amp;&amp;  Need_Add_Info_From_AS__c ==False &amp;&amp;  Revised_Shop_Drawings_Sent__c == False &amp;&amp;  Shop_Drawings_Sent__c == True, 2, 
+
+if( Moving_Through_Agile__c ==False &amp;&amp;  PE_Product_Engineering__c ==False &amp;&amp;  PM_Pre_Release__c ==False &amp;&amp; PE_Product_Drafting__c == False &amp;&amp;  Need_Add_Info_From_AS__c ==False &amp;&amp;  Revised_Shop_Drawings_Sent__c == False &amp;&amp;  Shop_Drawings_Sent__c == False &amp;&amp;  CRM_Received__c == True, 1, null
+
+)
+)
+)
+)
+)
+)
+)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Current Stage</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

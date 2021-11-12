@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PLV_GSC_Special_Product_Request</fullName>
+    <filterScope>Queue</filterScope>
+    <label>PLV GSC</label>
+    <queue>PLV_GSC</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

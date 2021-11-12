@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CFR_Date_Rules</fullName>
+    <active>true</active>
+    <description>Validates that CFR Date fields can&apos;t be back dated before the creation date.</description>
+    <errorConditionFormula>Actual_Completion_Date__c &lt; Date_of_first__c  || 
+Estimated_complet__c &lt; Date_of_first__c  || 
+Post_Analysis_Notification__c &lt; Date_of_first__c   ||  
+Post_Analysis_Due__c &lt; Date_of_first__c  || 
+Post_Analysis_Complete__c &lt; Date_of_first__c</errorConditionFormula>
+    <errorMessage>The Date can&apos;t be back dated, please update.</errorMessage>
+</ValidationRule>

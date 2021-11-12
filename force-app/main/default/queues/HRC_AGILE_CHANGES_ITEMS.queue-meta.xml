@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>HRC-AGILE-CHANGES-ITEMS</name>
+    <queueMembers>
+        <users>
+            <user>erikssa@hrc.corp</user>
+            <user>westerc@hrc.corp</user>
+            <user>schmidj@hrc.corp</user>
+            <user>hussonn1@hrc.corp</user>
+            <user>nairr@hrc.corp</user>
+            <user>backfjs@hrc.corp</user>
+            <user>fraysss@hrc.corp</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>ApprovalRoleMapping__c</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>BMCServiceDesk__Incident__c</sobjectType>
+    </queueSobject>
+</Queue>

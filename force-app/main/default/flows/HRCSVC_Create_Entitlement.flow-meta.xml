@@ -13,15 +13,16 @@
                 <stringValue>HRCSVC Create Maintenance on CLI</stringValue>
             </value>
         </processMetadataValues>
-        <name>myRule_17_A2</name>
+        <name>myRule_15_A2</name>
         <label>Update Maintenance Plan</label>
-        <locationX>1700</locationX>
+        <locationX>1500</locationX>
         <locationY>300</locationY>
         <actionName>HRCSVC_Create_Maintenance_on_CLI</actionName>
         <actionType>flow</actionType>
         <connector>
-            <targetReference>myDecision18</targetReference>
+            <targetReference>myDecision16</targetReference>
         </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <processMetadataValues>
                 <name>dataType</name>
@@ -162,15 +163,100 @@
                 <stringValue>HRCSVC Create Maintenance on CLI</stringValue>
             </value>
         </processMetadataValues>
-        <name>myRule_19_A1</name>
-        <label>Contract Line is canceled</label>
+        <name>myRule_19_A2</name>
+        <label>Update Maintenance Plan</label>
         <locationX>1900</locationX>
-        <locationY>200</locationY>
+        <locationY>300</locationY>
         <actionName>HRCSVC_Create_Maintenance_on_CLI</actionName>
         <actionType>flow</actionType>
         <connector>
-            <targetReference>myDecision21</targetReference>
+            <targetReference>myDecision20</targetReference>
         </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Boolean</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>StartDateUpated</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Boolean</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>StartDateUpated</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Date</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>ChangedStartDate</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>ChangedStartDate</name>
+            <value>
+                <elementReference>myVariable_current.StartDate</elementReference>
+            </value>
+        </inputParameters>
         <inputParameters>
             <processMetadataValues>
                 <name>dataType</name>
@@ -213,48 +299,6 @@
                 <elementReference>myVariable_current</elementReference>
             </value>
         </inputParameters>
-        <inputParameters>
-            <processMetadataValues>
-                <name>dataType</name>
-                <value>
-                    <stringValue>Boolean</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>isRequired</name>
-                <value>
-                    <booleanValue>false</booleanValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideLabel</name>
-                <value>
-                    <stringValue>CLICancelled</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>maxOccurs</name>
-                <value>
-                    <numberValue>1.0</numberValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>objectType</name>
-                <value>
-                    <stringValue></stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>rightHandSideType</name>
-                <value>
-                    <stringValue>Boolean</stringValue>
-                </value>
-            </processMetadataValues>
-            <name>CLICancelled</name>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </inputParameters>
     </actionCalls>
     <actionCalls>
         <processMetadataValues>
@@ -278,6 +322,7 @@
         <connector>
             <targetReference>myRule_1_A3</targetReference>
         </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <processMetadataValues>
                 <name>dataType</name>
@@ -376,15 +421,124 @@
                 <stringValue>HRCSVC Create Maintenance on CLI</stringValue>
             </value>
         </processMetadataValues>
-        <name>myRule_22_A1</name>
-        <label>Contract Line is suspended</label>
-        <locationX>2200</locationX>
+        <name>myRule_21_A1</name>
+        <label>Contract Line is canceled</label>
+        <locationX>2100</locationX>
         <locationY>200</locationY>
         <actionName>HRCSVC_Create_Maintenance_on_CLI</actionName>
         <actionType>flow</actionType>
         <connector>
-            <targetReference>myDecision24</targetReference>
+            <targetReference>myDecision23</targetReference>
         </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>SObject</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>ContractLineItemRecord</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue>ContractLineItem</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>SObject</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>ContractLineItemRecord</name>
+            <value>
+                <elementReference>myVariable_current</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Boolean</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>CLICancelled</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Boolean</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>CLICancelled</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <processMetadataValues>
+            <name>ActionCallType</name>
+            <value>
+                <stringValue>flow</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>flowSelection</name>
+            <value>
+                <stringValue>HRCSVC Create Maintenance on CLI</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_24_A1</name>
+        <label>Contract Line is suspended</label>
+        <locationX>2400</locationX>
+        <locationY>200</locationY>
+        <actionName>HRCSVC_Create_Maintenance_on_CLI</actionName>
+        <actionType>flow</actionType>
+        <connector>
+            <targetReference>myDecision26</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <processMetadataValues>
                 <name>dataType</name>
@@ -483,15 +637,16 @@
                 <stringValue>HRCSVC Create Maintenance on CLI</stringValue>
             </value>
         </processMetadataValues>
-        <name>myRule_25_A1</name>
+        <name>myRule_27_A1</name>
         <label>Extend CLI and MP</label>
-        <locationX>2500</locationX>
+        <locationX>2700</locationX>
         <locationY>200</locationY>
         <actionName>HRCSVC_Create_Maintenance_on_CLI</actionName>
         <actionType>flow</actionType>
         <connector>
-            <targetReference>myDecision26</targetReference>
+            <targetReference>myDecision28</targetReference>
         </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <processMetadataValues>
                 <name>dataType</name>
@@ -590,15 +745,16 @@
                 <stringValue>HRCSVC Create Maintenance on CLI</stringValue>
             </value>
         </processMetadataValues>
-        <name>myRule_27_A1</name>
+        <name>myRule_29_A1</name>
         <label>Update CLI, MP and WO</label>
-        <locationX>2700</locationX>
+        <locationX>2900</locationX>
         <locationY>200</locationY>
         <actionName>HRCSVC_Create_Maintenance_on_CLI</actionName>
         <actionType>flow</actionType>
         <connector>
-            <targetReference>myDecision28</targetReference>
+            <targetReference>myDecision30</targetReference>
         </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <processMetadataValues>
                 <name>dataType</name>
@@ -697,12 +853,13 @@
                 <stringValue>HRCSVC Create Entitlement on CLI</stringValue>
             </value>
         </processMetadataValues>
-        <name>myRule_29_A1</name>
+        <name>myRule_31_A1</name>
         <label>Create Entitlement on CLI</label>
-        <locationX>2900</locationX>
+        <locationX>3100</locationX>
         <locationY>200</locationY>
         <actionName>HRCSVC_Create_Entitlement_on_CLI</actionName>
         <actionType>flow</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <processMetadataValues>
                 <name>dataType</name>
@@ -748,16 +905,16 @@
     </actionCalls>
     <apiVersion>49.0</apiVersion>
     <decisions>
-        <name>isChangedDecision20_myRule_19_HRCSVC_Cancel_Date_c</name>
-        <label>isChangedDecision20_myRule_19_HRCSVC_Cancel_Date_c</label>
+        <name>isChangedDecision22_myRule_21_HRCSVC_Cancel_Date_c</name>
+        <label>isChangedDecision22_myRule_21_HRCSVC_Cancel_Date_c</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>isChangedDecision23_myRule_22_HRCSVC_Suspend_Date_c</targetReference>
+            <targetReference>isChangedDecision25_myRule_24_HRCSVC_Suspend_Date_c</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
-            <name>isChangedRule_20_myRule_19_HRCSVC_Cancel_Date_c</name>
+            <name>isChangedRule_22_myRule_21_HRCSVC_Cancel_Date_c</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>myVariable_old</leftValueReference>
@@ -774,14 +931,14 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>isChangedDecision23_myRule_22_HRCSVC_Suspend_Date_c</targetReference>
+                <targetReference>isChangedDecision25_myRule_24_HRCSVC_Suspend_Date_c</targetReference>
             </connector>
-            <label>isChangedRule_20_myRule_19_HRCSVC_Cancel_Date_c</label>
+            <label>isChangedRule_22_myRule_21_HRCSVC_Cancel_Date_c</label>
         </rules>
     </decisions>
     <decisions>
-        <name>isChangedDecision23_myRule_22_HRCSVC_Suspend_Date_c</name>
-        <label>isChangedDecision23_myRule_22_HRCSVC_Suspend_Date_c</label>
+        <name>isChangedDecision25_myRule_24_HRCSVC_Suspend_Date_c</name>
+        <label>isChangedDecision25_myRule_24_HRCSVC_Suspend_Date_c</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
         <defaultConnector>
@@ -789,7 +946,7 @@
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
-            <name>isChangedRule_23_myRule_22_HRCSVC_Suspend_Date_c</name>
+            <name>isChangedRule_25_myRule_24_HRCSVC_Suspend_Date_c</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>myVariable_old</leftValueReference>
@@ -808,7 +965,7 @@
             <connector>
                 <targetReference>myDecision</targetReference>
             </connector>
-            <label>isChangedRule_23_myRule_22_HRCSVC_Suspend_Date_c</label>
+            <label>isChangedRule_25_myRule_24_HRCSVC_Suspend_Date_c</label>
         </rules>
     </decisions>
     <decisions>
@@ -870,7 +1027,7 @@
             <connector>
                 <targetReference>myRule_15_A1</targetReference>
             </connector>
-            <label>End Date Is Changed</label>
+            <label>Both Dates changed</label>
         </rules>
     </decisions>
     <decisions>
@@ -901,7 +1058,7 @@
             <connector>
                 <targetReference>myRule_17_A1</targetReference>
             </connector>
-            <label>Start Date Is Changed</label>
+            <label>End Date Is Changed</label>
         </rules>
     </decisions>
     <decisions>
@@ -916,11 +1073,42 @@
         <locationX>50</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>myDecision21</targetReference>
+            <targetReference>myDecision20</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
             <name>myRule_19</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_19</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_19_A1</targetReference>
+            </connector>
+            <label>Start Date Is Changed</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>5.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision20</name>
+        <label>myDecision20</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>myDecision23</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_21</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <processMetadataValues>
@@ -947,7 +1135,7 @@
                         <stringValue>Boolean</stringValue>
                     </value>
                 </processMetadataValues>
-                <leftValueReference>isChangedRule_20_myRule_19_HRCSVC_Cancel_Date_c</leftValueReference>
+                <leftValueReference>isChangedRule_22_myRule_21_HRCSVC_Cancel_Date_c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
@@ -1022,7 +1210,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>myRule_19_A1</targetReference>
+                <targetReference>myRule_21_A1</targetReference>
             </connector>
             <label>CLI is Cancelled</label>
         </rules>
@@ -1031,19 +1219,19 @@
         <processMetadataValues>
             <name>index</name>
             <value>
-                <numberValue>5.0</numberValue>
+                <numberValue>6.0</numberValue>
             </value>
         </processMetadataValues>
-        <name>myDecision21</name>
-        <label>myDecision21</label>
+        <name>myDecision23</name>
+        <label>myDecision23</label>
         <locationX>50</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>myDecision24</targetReference>
+            <targetReference>myDecision26</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
-            <name>myRule_22</name>
+            <name>myRule_24</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <processMetadataValues>
@@ -1101,47 +1289,16 @@
                         <stringValue>Boolean</stringValue>
                     </value>
                 </processMetadataValues>
-                <leftValueReference>isChangedRule_23_myRule_22_HRCSVC_Suspend_Date_c</leftValueReference>
+                <leftValueReference>isChangedRule_25_myRule_24_HRCSVC_Suspend_Date_c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>myRule_22_A1</targetReference>
+                <targetReference>myRule_24_A1</targetReference>
             </connector>
             <label>CLI is Suspended</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <processMetadataValues>
-            <name>index</name>
-            <value>
-                <numberValue>6.0</numberValue>
-            </value>
-        </processMetadataValues>
-        <name>myDecision24</name>
-        <label>myDecision24</label>
-        <locationX>50</locationX>
-        <locationY>0</locationY>
-        <defaultConnector>
-            <targetReference>myDecision26</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>default</defaultConnectorLabel>
-        <rules>
-            <name>myRule_25</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>formula_myRule_25</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>myRule_25_A1</targetReference>
-            </connector>
-            <label>End is Extended to Future</label>
         </rules>
     </decisions>
     <decisions>
@@ -1172,7 +1329,7 @@
             <connector>
                 <targetReference>myRule_27_A1</targetReference>
             </connector>
-            <label>End Date Brought Forward</label>
+            <label>End is Extended to Future</label>
         </rules>
     </decisions>
     <decisions>
@@ -1186,6 +1343,9 @@
         <label>myDecision28</label>
         <locationX>50</locationX>
         <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>myDecision30</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
             <name>myRule_29</name>
@@ -1199,6 +1359,34 @@
             </conditions>
             <connector>
                 <targetReference>myRule_29_A1</targetReference>
+            </connector>
+            <label>End Date Brought Forward</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>9.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision30</name>
+        <label>myDecision30</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_31</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_31</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_31_A1</targetReference>
             </connector>
             <label>Check for Missing Entitlement</label>
         </rules>
@@ -1242,7 +1430,7 @@
                 <stringValue>IF(ISBLANK([ContractLineItem].AssetId  ),Null,[ContractLineItem].Asset.Name )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_10_myRule_8_A2_9957352914</name>
+        <name>formula_10_myRule_8_A2_2996010766</name>
         <dataType>String</dataType>
         <expression>IF(ISBLANK({!myVariable_current.AssetId}  ),Null,{!myVariable_current.Asset.Name} )</expression>
     </formulas>
@@ -1253,7 +1441,7 @@
                 <stringValue>IF(ISBLANK([ContractLineItem].ParentContractLineItem.HRCSVC_Service_Package__c ),&apos;#&apos;,  [ContractLineItem].ParentContractLineItem.HRCSVC_Service_Package__r.Name + &apos; &apos;+IF(ISBLANK([ContractLineItem].ParentContractLineItem.AssetId),&apos;&apos;,[ContractLineItem].ParentContractLineItem.Asset.Name))</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_11_myRule_8_A1_4147070180</name>
+        <name>formula_11_myRule_8_A1_8769990485</name>
         <dataType>String</dataType>
         <expression>IF(ISBLANK({!myVariable_current.ParentContractLineItem.HRCSVC_Service_Package__c} ),&apos;#&apos;,  {!myVariable_current.ParentContractLineItem.HRCSVC_Service_Package__r.Name} + &apos; &apos;+IF(ISBLANK({!myVariable_current.ParentContractLineItem.AssetId}),&apos;&apos;,{!myVariable_current.ParentContractLineItem.Asset.Name}))</expression>
     </formulas>
@@ -1264,7 +1452,7 @@
                 <stringValue>IF(ISBLANK([ContractLineItem].ParentContractLineItem.AssetId),Null,[ContractLineItem].ParentContractLineItem.AssetId)</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_12_myRule_8_A1_8619719246</name>
+        <name>formula_12_myRule_8_A1_4168722075</name>
         <dataType>String</dataType>
         <expression>IF(ISBLANK({!myVariable_current.ParentContractLineItem.AssetId}),Null,{!myVariable_current.ParentContractLineItem.AssetId})</expression>
     </formulas>
@@ -1275,7 +1463,7 @@
                 <stringValue>IF(ISBLANK([ContractLineItem].AssetId  ),Null,[ContractLineItem].Asset.Name )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_13_myRule_8_A1_7386540133</name>
+        <name>formula_13_myRule_8_A1_5872132990</name>
         <dataType>String</dataType>
         <expression>IF(ISBLANK({!myVariable_current.AssetId}  ),Null,{!myVariable_current.Asset.Name} )</expression>
     </formulas>
@@ -1286,7 +1474,7 @@
                 <stringValue>IF(ISBLANK([ContractLineItem].AssetId  ),Null,[ContractLineItem].Asset.Name )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_2_myRule_1_A4_7387626796</name>
+        <name>formula_2_myRule_1_A4_5046282427</name>
         <dataType>String</dataType>
         <expression>IF(ISBLANK({!myVariable_current.AssetId}  ),Null,{!myVariable_current.Asset.Name} )</expression>
     </formulas>
@@ -1297,7 +1485,7 @@
                 <stringValue>IF(ISBLANK([ContractLineItem].AssetId  ),Null,[ContractLineItem].Asset.Name )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_3_myRule_1_A3_5315159331</name>
+        <name>formula_3_myRule_1_A3_0262858043</name>
         <dataType>String</dataType>
         <expression>IF(ISBLANK({!myVariable_current.AssetId}  ),Null,{!myVariable_current.Asset.Name} )</expression>
     </formulas>
@@ -1308,7 +1496,7 @@
                 <stringValue>IF(ISBLANK([ContractLineItem].HRCSVC_Service_Package__c),&apos;#&apos;,[ContractLineItem].HRCSVC_Service_Package__r.Name  + &apos; &apos;+IF(ISBLANK([ContractLineItem].AssetId),&apos;&apos;,[ContractLineItem].Asset.Name ))</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_4_myRule_1_A1_3330335604</name>
+        <name>formula_4_myRule_1_A1_8124888543</name>
         <dataType>String</dataType>
         <expression>IF(ISBLANK({!myVariable_current.HRCSVC_Service_Package__c}),&apos;#&apos;,{!myVariable_current.HRCSVC_Service_Package__r.Name}  + &apos; &apos;+IF(ISBLANK({!myVariable_current.AssetId}),&apos;&apos;,{!myVariable_current.Asset.Name} ))</expression>
     </formulas>
@@ -1319,7 +1507,7 @@
                 <stringValue>IF(ISBLANK([ContractLineItem].AssetId ),Null,[ContractLineItem].AssetId)</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_5_myRule_1_A1_1833209397</name>
+        <name>formula_5_myRule_1_A1_3329036891</name>
         <dataType>String</dataType>
         <expression>IF(ISBLANK({!myVariable_current.AssetId} ),Null,{!myVariable_current.AssetId})</expression>
     </formulas>
@@ -1330,7 +1518,7 @@
                 <stringValue>IF(ISBLANK([ContractLineItem].AssetId  ),Null,[ContractLineItem].Asset.Name )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_6_myRule_1_A1_7869596479</name>
+        <name>formula_6_myRule_1_A1_8018373503</name>
         <dataType>String</dataType>
         <expression>IF(ISBLANK({!myVariable_current.AssetId}  ),Null,{!myVariable_current.Asset.Name} )</expression>
     </formulas>
@@ -1341,7 +1529,7 @@
                 <stringValue>IF(ISBLANK([ContractLineItem].AssetId  ),Null,[ContractLineItem].Asset.Name )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_9_myRule_8_A3_9843111736</name>
+        <name>formula_9_myRule_8_A3_9237056842</name>
         <dataType>String</dataType>
         <expression>IF(ISBLANK({!myVariable_current.AssetId}  ),Null,{!myVariable_current.Asset.Name} )</expression>
     </formulas>
@@ -1360,23 +1548,34 @@
         <processMetadataValues>
             <name>originalFormula</name>
             <value>
-                <stringValue>NOT(ISNEW()) &amp;&amp; ISCHANGED([ContractLineItem].EndDate) &amp;&amp; NOT(ISBLANK([ContractLineItem].EndDate))</stringValue>
+                <stringValue>NOT(ISNEW()) &amp;&amp; ISCHANGED([ContractLineItem].EndDate) &amp;&amp; ISCHANGED([ContractLineItem].StartDate) &amp;&amp; NOT(ISBLANK([ContractLineItem].EndDate)) &amp;&amp; NOT(ISBLANK([ContractLineItem].StartDate))</stringValue>
             </value>
         </processMetadataValues>
         <name>formula_myRule_15</name>
         <dataType>Boolean</dataType>
-        <expression>NOT(ISNEW()) &amp;&amp; ISCHANGED({!myVariable_current.EndDate}) &amp;&amp; NOT(ISBLANK({!myVariable_current.EndDate}))</expression>
+        <expression>NOT(ISNEW()) &amp;&amp; ISCHANGED({!myVariable_current.EndDate}) &amp;&amp; ISCHANGED({!myVariable_current.StartDate}) &amp;&amp; NOT(ISBLANK({!myVariable_current.EndDate})) &amp;&amp; NOT(ISBLANK({!myVariable_current.StartDate}))</expression>
     </formulas>
     <formulas>
         <processMetadataValues>
             <name>originalFormula</name>
             <value>
-                <stringValue>NOT(ISNEW()) &amp;&amp; ISCHANGED([ContractLineItem].StartDate) &amp;&amp; NOT(ISBLANK([ContractLineItem].StartDate))</stringValue>
+                <stringValue>NOT(ISNEW()) &amp;&amp; ISCHANGED([ContractLineItem].EndDate) &amp;&amp; NOT(ISBLANK([ContractLineItem].EndDate)) &amp;&amp; NOT(ISCHANGED([ContractLineItem].StartDate))</stringValue>
             </value>
         </processMetadataValues>
         <name>formula_myRule_17</name>
         <dataType>Boolean</dataType>
-        <expression>NOT(ISNEW()) &amp;&amp; ISCHANGED({!myVariable_current.StartDate}) &amp;&amp; NOT(ISBLANK({!myVariable_current.StartDate}))</expression>
+        <expression>NOT(ISNEW()) &amp;&amp; ISCHANGED({!myVariable_current.EndDate}) &amp;&amp; NOT(ISBLANK({!myVariable_current.EndDate})) &amp;&amp; NOT(ISCHANGED({!myVariable_current.StartDate}))</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>NOT(ISNEW()) &amp;&amp; ISCHANGED([ContractLineItem].StartDate) &amp;&amp; NOT(ISBLANK([ContractLineItem].StartDate)) &amp;&amp; NOT(ISCHANGED([ContractLineItem].EndDate))</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_19</name>
+        <dataType>Boolean</dataType>
+        <expression>NOT(ISNEW()) &amp;&amp; ISCHANGED({!myVariable_current.StartDate}) &amp;&amp; NOT(ISBLANK({!myVariable_current.StartDate})) &amp;&amp; NOT(ISCHANGED({!myVariable_current.EndDate}))</expression>
     </formulas>
     <formulas>
         <processMetadataValues>
@@ -1385,7 +1584,7 @@
                 <stringValue>AND((!ISBLANK([ContractLineItem].EndDate)),ISCHANGED([ContractLineItem].EndDate),([ContractLineItem].EndDate &gt; PRIORVALUE([ContractLineItem].EndDate)))</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_myRule_25</name>
+        <name>formula_myRule_27</name>
         <dataType>Boolean</dataType>
         <expression>AND((!ISBLANK({!myVariable_current.EndDate})),ISCHANGED({!myVariable_current.EndDate}),({!myVariable_current.EndDate} &gt; PRIORVALUE({!myVariable_current.EndDate})))</expression>
     </formulas>
@@ -1396,7 +1595,7 @@
                 <stringValue>AND((!ISBLANK([ContractLineItem].EndDate)),ISCHANGED([ContractLineItem].EndDate),([ContractLineItem].EndDate &lt; PRIORVALUE([ContractLineItem].EndDate)))</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_myRule_27</name>
+        <name>formula_myRule_29</name>
         <dataType>Boolean</dataType>
         <expression>AND((!ISBLANK({!myVariable_current.EndDate})),ISCHANGED({!myVariable_current.EndDate}),({!myVariable_current.EndDate} &lt; PRIORVALUE({!myVariable_current.EndDate})))</expression>
     </formulas>
@@ -1413,7 +1612,7 @@ NOT(ISBLANK([ContractLineItem].ServiceContractId ))
 )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_myRule_29</name>
+        <name>formula_myRule_31</name>
         <dataType>Boolean</dataType>
         <expression>AND(
 NOT( ISNEW() ),
@@ -1434,7 +1633,7 @@ NOT(ISBLANK({!myVariable_current.ServiceContractId} ))
         <dataType>Boolean</dataType>
         <expression>AND(NOT(ISNEW()),ISCHANGED({!myVariable_current.ParentContractLineItemId}),NOT(ISBLANK({!myVariable_current.ParentContractLineItemId})),NOT(ISBLANK({!myVariable_current.ParentContractLineItem.ServiceContractId} )))</expression>
     </formulas>
-    <interviewLabel>HRCSVC_Create_Entitlement-8_InterviewLabel</interviewLabel>
+    <interviewLabel>HRCSVC_Create_Entitlement-9_InterviewLabel</interviewLabel>
     <label>HRCSVC Create Entitlement</label>
     <processMetadataValues>
         <name>ObjectType</name>
@@ -1532,7 +1731,7 @@ NOT(ISBLANK({!myVariable_current.ServiceContractId} ))
             </processMetadataValues>
             <field>AssetId</field>
             <value>
-                <elementReference>formula_5_myRule_1_A1_1833209397</elementReference>
+                <elementReference>formula_5_myRule_1_A1_3329036891</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1640,7 +1839,7 @@ NOT(ISBLANK({!myVariable_current.ServiceContractId} ))
             </processMetadataValues>
             <field>HRCFSL_Asset_Name__c</field>
             <value>
-                <elementReference>formula_6_myRule_1_A1_7869596479</elementReference>
+                <elementReference>formula_6_myRule_1_A1_8018373503</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1706,7 +1905,7 @@ NOT(ISBLANK({!myVariable_current.ServiceContractId} ))
             </processMetadataValues>
             <field>Name</field>
             <value>
-                <elementReference>formula_4_myRule_1_A1_3330335604</elementReference>
+                <elementReference>formula_4_myRule_1_A1_8124888543</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1854,7 +2053,7 @@ NOT(ISBLANK({!myVariable_current.ServiceContractId} ))
             </processMetadataValues>
             <field>AssetId</field>
             <value>
-                <elementReference>formula_12_myRule_8_A1_8619719246</elementReference>
+                <elementReference>formula_12_myRule_8_A1_4168722075</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1962,7 +2161,7 @@ NOT(ISBLANK({!myVariable_current.ServiceContractId} ))
             </processMetadataValues>
             <field>HRCFSL_Asset_Name__c</field>
             <value>
-                <elementReference>formula_13_myRule_8_A1_7386540133</elementReference>
+                <elementReference>formula_13_myRule_8_A1_5872132990</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -2028,7 +2227,7 @@ NOT(ISBLANK({!myVariable_current.ServiceContractId} ))
             </processMetadataValues>
             <field>Name</field>
             <value>
-                <elementReference>formula_11_myRule_8_A1_4147070180</elementReference>
+                <elementReference>formula_11_myRule_8_A1_8769990485</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -2135,7 +2334,127 @@ NOT(ISBLANK({!myVariable_current.ServiceContractId} ))
         <locationX>1500</locationX>
         <locationY>200</locationY>
         <connector>
-            <targetReference>myDecision16</targetReference>
+            <targetReference>myRule_15_A2</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <processMetadataValues>
+                <name>implicit</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </processMetadataValues>
+            <field>ContractLineItemId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Date</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>End Date</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>EndDate</field>
+            <value>
+                <elementReference>myVariable_current.EndDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Date</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Start Date</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>StartDate</field>
+            <value>
+                <elementReference>myVariable_current.StartDate</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Entitlement</object>
+    </recordUpdates>
+    <recordUpdates>
+        <processMetadataValues>
+            <name>evaluationType</name>
+            <value>
+                <stringValue>always</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>extraTypeInfo</name>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>isChildRelationship</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>reference</name>
+            <value>
+                <stringValue>[ContractLineItem].Entitlements</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>referenceTargetField</name>
+        </processMetadataValues>
+        <name>myRule_17_A1</name>
+        <label>Update Entitlement</label>
+        <locationX>1700</locationX>
+        <locationY>200</locationY>
+        <connector>
+            <targetReference>myDecision18</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -2214,12 +2533,12 @@ NOT(ISBLANK({!myVariable_current.ServiceContractId} ))
         <processMetadataValues>
             <name>referenceTargetField</name>
         </processMetadataValues>
-        <name>myRule_17_A1</name>
+        <name>myRule_19_A1</name>
         <label>Update Entitlement</label>
-        <locationX>1700</locationX>
+        <locationX>1900</locationX>
         <locationY>200</locationY>
         <connector>
-            <targetReference>myRule_17_A2</targetReference>
+            <targetReference>myRule_19_A2</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -2401,7 +2720,7 @@ NOT(ISBLANK({!myVariable_current.ServiceContractId} ))
             </processMetadataValues>
             <field>HRCSVC_Asset_Name__c</field>
             <value>
-                <elementReference>formula_3_myRule_1_A3_5315159331</elementReference>
+                <elementReference>formula_3_myRule_1_A3_0262858043</elementReference>
             </value>
         </inputAssignments>
         <object>HRCSVC_Asset_Warranty__c</object>
@@ -2534,7 +2853,7 @@ NOT(ISBLANK({!myVariable_current.ServiceContractId} ))
             </processMetadataValues>
             <field>HRCFSL_Asset_Name__c</field>
             <value>
-                <elementReference>formula_2_myRule_1_A4_7387626796</elementReference>
+                <elementReference>formula_2_myRule_1_A4_5046282427</elementReference>
             </value>
         </inputAssignments>
         <object>Entitlement</object>
@@ -2667,7 +2986,7 @@ NOT(ISBLANK({!myVariable_current.ServiceContractId} ))
             </processMetadataValues>
             <field>HRCSVC_Asset_Name__c</field>
             <value>
-                <elementReference>formula_10_myRule_8_A2_9957352914</elementReference>
+                <elementReference>formula_10_myRule_8_A2_2996010766</elementReference>
             </value>
         </inputAssignments>
         <object>HRCSVC_Asset_Warranty__c</object>
@@ -2800,12 +3119,12 @@ NOT(ISBLANK({!myVariable_current.ServiceContractId} ))
             </processMetadataValues>
             <field>HRCFSL_Asset_Name__c</field>
             <value>
-                <elementReference>formula_9_myRule_8_A3_9843111736</elementReference>
+                <elementReference>formula_9_myRule_8_A3_9237056842</elementReference>
             </value>
         </inputAssignments>
         <object>Entitlement</object>
     </recordUpdates>
-    <startElementReference>isChangedDecision20_myRule_19_HRCSVC_Cancel_Date_c</startElementReference>
+    <startElementReference>isChangedDecision22_myRule_21_HRCSVC_Cancel_Date_c</startElementReference>
     <status>Active</status>
     <variables>
         <name>myVariable_current</name>

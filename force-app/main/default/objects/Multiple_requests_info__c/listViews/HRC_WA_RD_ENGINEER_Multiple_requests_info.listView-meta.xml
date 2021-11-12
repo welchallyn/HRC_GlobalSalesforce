@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRC_WA_RD_ENGINEER_Multiple_requests_info</fullName>
+    <filterScope>Queue</filterScope>
+    <label>HRC-WA-RD-ENGINEER</label>
+    <queue>HRC_WA_RD_ENGINEER</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

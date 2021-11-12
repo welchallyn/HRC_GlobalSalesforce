@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BRL_COTS_ERP_Approval_Mapping</fullName>
+    <filterScope>Queue</filterScope>
+    <label>BRL-COTS ERP</label>
+    <queue>BRL_COTS_ERP</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

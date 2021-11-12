@@ -1,0 +1,129 @@
+<!-- 
+   *  PageName     : ProposalLineItemSummary
+   *  CreatedOn    : 23/Jan/2017
+   *  ModifiedOn   : 14/March/2017
+   *  CreatedBy    : Jenish Shingala
+   *  ModifiedBy   : Jenish Shingala
+   *  Description  : VF page for Proposal Line Item Summary.  
+   -->  
+<apex:page standardController="Apttus_Proposal__Proposal__c" standardStylesheets="false" extensions="ProposalLineItemSummaryController" sidebar="false">
+   <style>
+      .slds-card {
+      background-color:white !important;
+      }
+      .slds td {
+      text-align:center !important;
+      }
+      .slds th {
+      text-align:center !important;
+      }
+      .tableclass {
+      color: #333; /* Lighten up font color */
+      font-family: Helvetica, Arial, sans-serif; /* Nicer font */
+      width: 640px;
+      border-collapse:
+      collapse; border-spacing: 0;
+      }
+      .thclass {
+      background: #F3F3F3; /* Light grey background */
+      font-weight: bold; /* Make sure they're bold */
+      border: 1px solid #CCC; height: 30px; 
+      }
+      .tdclass {
+      background: white; /* Lighter grey background */
+      text-align: center; /* Center our text */
+      border: 1px solid #CCC; height: 30px; 
+      }
+   </style>
+   <apex:form >
+      <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+         <head>
+            <apex:stylesheet value="{!URLFOR($Resource.LightningUI, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+         </head>
+         <div class="slds">
+            <div class="container">
+               <article class="slds-card" style="margin-top:1%;">
+                  <div class="slds-card__header slds-grid">
+                     <header class="slds-media slds-media--center slds-has-flexi-truncate">
+                        <div class="slds-media__figure">
+                           <svg class="slds-icon slds-icon-standard-orders" aria-hidden="true">
+                              <use xlink:href="{!URLFOR($Resource.LightningUI, '/assets/icons/standard-sprite/svg/symbols.svg#orders')}"></use>
+                           </svg>
+                        </div>
+                        <div class="slds-media__body">
+                           <h2>
+                              <span class="slds-text-heading--small">Order Entry</span>
+                           </h2>
+                        </div>
+                     </header>
+                     <div class="slds-no-flex">
+                        <apex:commandButton value="Back"  styleclass="slds-button slds-button--neutral" action="{!backToOpportunity}"/>
+                        <apex:commandButton value="Export"  styleclass="slds-button slds-button--neutral" action="{!ExportResults}"/>
+                     </div>
+                  </div>
+                  <div class="slds-card__body" id="formdiv" style="margin-left:10px;margin-right:10px">
+                     <table border="1" style="border-spacing: 0px;" class="tableclass">
+                        <thead>
+                           <tr>
+                              <th style="border: 1px solid #CCC;"></th>
+                              <th style="border: 1px solid #CCC;"></th>
+                              <th style="border: 1px solid #CCC;"></th>
+                              <th style="background-color: #0a9e0a;color: white;border: 0px solid #CCC;">List Price</th>
+                              <th style="background-color: #0a9e0a;color: white;border: 0px solid #CCC;"></th>
+                              <th style="border: 1px solid #CCC;"></th>
+                              <th style="border: 1px solid #CCC;"></th>
+                              <th style="background-color: #0a9e0a;color: white;border: 0px solid #CCC;">Difference</th>
+                              <th style="background-color: #0a9e0a;color: white;border: 0px solid #CCC;"></th>
+                              <th style="border: 1px solid #CCC;"></th>
+                           </tr>
+                           <tr>
+                              <th class="thclass">Quantity</th>
+                              <th class="thclass">Part Number</th>
+                              <th class="thclass">Description</th>
+                              <th class="thclass">Unit Price</th>
+                              <th class="thclass">Extended Price</th>
+                              <th class="thclass">Sell Price</th>
+                              <th class="thclass">Extended Sell Price</th>
+                              <th class="thclass">Per Item</th>
+                              <th class="thclass">Extended</th>
+                              <th class="thclass">Percent Off</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <apex:repeat value="{!mapWrap}" var="item">
+                              <tr>
+                                 <td class="tdclass">{!mapWrap[item].Quantity}</td>
+                                 <td class="tdclass">{!mapWrap[item].objPLI.APTPS_Product_Code__c}</td>
+                                 <td class="tdclass">{!mapWrap[item].objPLI.Apttus_Proposal__Description__c}</td>
+                                 <td class="tdclass">{!mapWrap[item].objPLI.Apttus_QPConfig__ListPrice__c}</td>
+                                 <td class="tdclass">{!mapWrap[item].ExtendedListPrice}</td>
+                                 <td class="tdclass">{!mapWrap[item].objPLI.Unit_Net_Price__c}</td>
+                                 <td class="tdclass">{!mapWrap[item].ExtendedNetPrice}</td>
+                                 <td class="tdclass">{!mapWrap[item].perItemDifference}</td>
+                                 <td class="tdclass">{!mapWrap[item].ExtendedListPrice - mapWrap[item].ExtendedNetPrice}</td>
+                                 <td class="tdclass">{!mapWrap[item].perCentDifference}%</td>
+                              </tr>
+                           </apex:repeat>
+                           <tr>
+                              <td class="tdclass">
+                                 <b>Totals</b>
+                              </td>
+                              <td class="tdclass"></td>
+                              <td class="tdclass"></td>
+                              <td class="tdclass"></td>
+                              <td class="tdclass"><b>{!totalExtendedListPrice}</b></td>
+                              <td class="tdclass"></td>
+                              <td class="tdclass"><b>{!totalExtendedNetPrice}</b></td>
+                              <td class="tdclass"></td>
+                              <td class="tdclass"></td>
+                              <td class="tdclass"></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </article>
+            </div>
+         </div>
+      </html>
+   </apex:form>
+</apex:page>

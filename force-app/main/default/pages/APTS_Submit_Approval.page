@@ -1,0 +1,106 @@
+<apex:page standardController="Apttus_Proposal__Proposal__c" extensions="APTS_SubmitRequest">
+    
+     <script type="text/javascript" src="/soap/ajax/29.0/connection.js"></script>
+  <script type="text/javascript" src="/soap/ajax/29.0/apex.js"></script>
+  
+
+  <apex:stylesheet value="{!URLFOR($Resource.Apttus__YUILibrary, '/yui/build/assets/skins/sam/skin.css')}" />
+
+    <apex:includescript value="{!URLFOR($Resource.Apttus__YUILibrary, '/yui/build/yahoo-dom-event/yahoo-dom-event.js')}" />
+    <apex:includescript value="{!URLFOR($Resource.Apttus__YUILibrary, '/yui/build/dragdrop/dragdrop-min.js')}" />
+    <apex:includescript value="{!URLFOR($Resource.Apttus__YUILibrary, '/yui/build/container/container-min.js')}" />
+    <apex:includescript value="{!URLFOR($Resource.Apttus__YUILibrary, '/yui/build/animation/animation-min.js')}" />
+
+    
+    <apex:form >
+        <apex:outputPanel >
+            <script>
+            var returnURL = '';
+            
+            // Create a namespace for our custom functions
+            YAHOO.namespace("force.com");
+            
+            /**
+             * Initializes the call
+             */
+            function initCall() {
+                try {
+                    sforce.connection.sessionId = "{!$Api.Session_ID}"; //to avoid session timeout
+                } catch(e) {
+                    cp_erroralert(cp_cERROR_UNKNOWN,e);
+                }
+            }
+            // wait panel
+            
+            /**
+             * Builds the wait panel.
+             */
+            YAHOO.force.com.buildWaitPanel = function() {
+                document.body.className = document.body.className + " yui-skin-sam";
+                YAHOO.force.com.waitPanel = new YAHOO.widget.Panel(
+                    "waitPanel",  // The id of our dialog container
+                    { 
+                        width           :   "300px", // You can play with this until it's right
+                        visible         :   false,   // Should be invisible when rendered
+                        draggable       :   false,   // Make the dialog draggable
+                        close           :   false,   // Don't include a close title button
+                        modal           :   true,    // Make it modal
+                        fixedCenter     :   true,    // Keep centered if window is scrolled
+                        zindex          :   40,      // Make sure it's on top of everything
+                        constraintoviewport: true,
+                        
+                        // This line adds the appear/disapper fade effect
+                        effect          :   {effect:YAHOO.widget.ContainerEffect.FADE,duration:0.25}
+                        
+                    }
+                );
+                
+                // header
+              
+                // set image
+                YAHOO.force.com.waitPanel.setBody('<center><img src="{!URLFOR($Resource.Apttus__Image_LoadingPage)}" /></center>');
+                // Render the dialog to the document.body level of the DOM
+                YAHOO.force.com.waitPanel.render(document.body);
+                
+            }
+            
+            // Function called when the DOM is ready to create the dialog,
+            // render the dialog into the document body, add our dialog skin
+            // css to the body tag, and wire up the buttons on our dialog   
+            YAHOO.force.com.onDOMReady = function() {
+                
+                // build the wait panel
+                YAHOO.force.com.buildWaitPanel();                
+            }
+            
+            window.onload = function() {
+
+                // build wait panels
+                YAHOO.force.com.onDOMReady();
+                
+                // refresh uom descriptions
+                invokeRequest();    
+            }       
+
+        </script>
+
+        </apex:outputPanel>
+        <apex:inputHidden value="{!bValidated}" id="isValidated"/>
+        <apex:actionFunction name="invokeRequest" reRender="idMessage,isValidated"
+                             action="{!submitRequest}" />
+         <apex:actionFunction name="redirectToProposal"
+                             action="{!redirectToProposal}" />
+        
+         <apex:outputPanel id="idMessage">
+            <script>
+            var isValidate = document.getElementById('{!$Component.isValidated}').value;
+            
+             if(isValidate == 'true')
+             {
+                 alert('Line Items are submitted for approval.');                    
+                 redirectToProposal();
+             }
+            </script>
+        </apex:outputPanel>
+    </apex:form>
+</apex:page>

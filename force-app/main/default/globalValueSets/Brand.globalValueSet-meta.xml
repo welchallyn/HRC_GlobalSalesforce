@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>All</fullName>
+        <default>false</default>
+        <label>All</label>
+    </customValue>
+    <customValue>
+        <fullName>Allen</fullName>
+        <default>false</default>
+        <label>Allen</label>
+    </customValue>
+    <customValue>
+        <fullName>Aspen</fullName>
+        <default>false</default>
+        <label>Aspen</label>
+    </customValue>
+    <customValue>
+        <fullName>Breathe</fullName>
+        <default>false</default>
+        <label>Breathe</label>
+    </customValue>
+    <customValue>
+        <fullName>CWS</fullName>
+        <default>false</default>
+        <label>CWS</label>
+    </customValue>
+    <customValue>
+        <fullName>Hill-Rom</fullName>
+        <default>false</default>
+        <label>Hill-Rom</label>
+    </customValue>
+    <customValue>
+        <fullName>Liko</fullName>
+        <default>false</default>
+        <label>Liko</label>
+    </customValue>
+    <customValue>
+        <fullName>Mortara</fullName>
+        <default>false</default>
+        <label>Mortara</label>
+    </customValue>
+    <customValue>
+        <fullName>Respiratory Care</fullName>
+        <default>false</default>
+        <label>Respiratory Care</label>
+    </customValue>
+    <customValue>
+        <fullName>Trumpf</fullName>
+        <default>false</default>
+        <label>Trumpf</label>
+    </customValue>
+    <customValue>
+        <fullName>Voalte</fullName>
+        <default>false</default>
+        <label>Voalte</label>
+    </customValue>
+    <customValue>
+        <fullName>Völker</fullName>
+        <default>false</default>
+        <label>Völker</label>
+    </customValue>
+    <customValue>
+        <fullName>Welch Allyn</fullName>
+        <default>false</default>
+        <label>Welch Allyn</label>
+    </customValue>
+    <description>Brands under Hill-Rom.</description>
+    <masterLabel>Brand</masterLabel>
+    <sorted>true</sorted>
+</GlobalValueSet>

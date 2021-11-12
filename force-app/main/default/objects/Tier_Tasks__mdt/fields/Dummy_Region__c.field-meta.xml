@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dummy_Region__c</fullName>
+    <description>Dummy values of tier category&apos;s related region that do not have any set of task records will be mentioned in this field and this will be used in flow for comparison.
+
+Records with this should be removed/altered if tasks records for those categories are created.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Dummy Region</label>
+    <length>25</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

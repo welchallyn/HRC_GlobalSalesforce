@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CFR_Require_vendor_address</fullName>
+    <active>true</active>
+    <description>If Purchasing Tooling for internal or external the vendor Name and Address is required.</description>
+    <errorConditionFormula>AND( 
+ISPICKVAL(Purchasing_tooling_internal_external__c,&quot;Yes&quot;),
+ISBLANK(If_Tooling_add_Vendor_Address__c ))</errorConditionFormula>
+    <errorDisplayField>If_Tooling_add_Vendor_Address__c</errorDisplayField>
+    <errorMessage>If Purchasing Tooling = Yes the vendor Name and Address is required.</errorMessage>
+</ValidationRule>

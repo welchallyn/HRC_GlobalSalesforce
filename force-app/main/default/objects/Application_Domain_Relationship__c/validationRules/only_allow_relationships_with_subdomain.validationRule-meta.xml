@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>only_allow_relationships_with_subdomain</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISBLANK(Subdomain__c)</errorConditionFormula>
+    <errorMessage>Subdomain required to save a new relationship record.</errorMessage>
+</ValidationRule>

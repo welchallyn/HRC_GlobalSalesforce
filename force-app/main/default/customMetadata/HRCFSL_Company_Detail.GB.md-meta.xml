@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>GB</label>
+    <protected>false</protected>
+    <values>
+        <field>Company_Details__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Company_Information__c</field>
+        <value xsi:type="xsd:string">Tel: 01530 41 1000
+Email: UKI.Service@hillrom.com</value>
+    </values>
+</CustomMetadata>

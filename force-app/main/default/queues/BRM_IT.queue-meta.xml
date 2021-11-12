@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>true</doesSendEmailToMembers>
+    <name>BRM IT</name>
+    <queueMembers>
+        <users>
+            <user>wojtowa@hrc.corp</user>
+            <user>smuldea1@hrc.corp</user>
+            <user>dhamala@hrc.corp</user>
+            <user>brightc@hrc.corp</user>
+            <user>duqueyc@hrc.corp</user>
+            <user>corcorc2@hrc.corp</user>
+            <user>garriod@hrc.corp</user>
+            <user>lewisg1@hrc.corp</user>
+            <user>bowersja@hrc.corp</user>
+            <user>morenoj@hrc.corp</user>
+            <user>lohc1@hrc.corp</user>
+            <user>bumgarm1@hrc.corp</user>
+            <user>wangx7@hrc.corp</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>BRM_IT_Form__c</sobjectType>
+    </queueSobject>
+</Queue>

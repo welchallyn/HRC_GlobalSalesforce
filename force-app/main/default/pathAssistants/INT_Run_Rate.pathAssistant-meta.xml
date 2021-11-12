@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Opportunity</entityName>
+    <fieldName>StageName</fieldName>
+    <masterLabel>INT Run Rate</masterLabel>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;All Run Rate opportunities are moved to this stage automatically on the first day of the month following the Close Date.&lt;/p&gt;</info>
+        <picklistValueName>Booked</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Do not leave manually created Run Rate opportunities in this Sales Stage.&lt;/p&gt;</info>
+        <picklistValueName>Confirm</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Do not leave manually created Run Rate opportunities in this Sales Stage.&lt;/p&gt;</info>
+        <picklistValueName>Develop</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Imported Run Rate opportunities are automatically created in this Sales Stage. &lt;/p&gt;&lt;p&gt;Manually created Run Rate opportunities should be saved at this Stage with the Close Date on the last day of the month.&lt;/p&gt;</info>
+        <picklistValueName>Finalize</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Do not leave manually created Run Rate opportunities in this Sales Stage.&lt;/p&gt;</info>
+        <picklistValueName>Identify</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Do not leave manually created Run Rate opportunities in this Sales Stage.&lt;/p&gt;</info>
+        <picklistValueName>Won</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>INT_Run_Rate</recordTypeName>
+</PathAssistant>

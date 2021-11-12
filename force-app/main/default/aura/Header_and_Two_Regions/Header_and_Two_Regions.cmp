@@ -1,0 +1,23 @@
+<aura:component implements="lightning:appHomeTemplate" description="Two Column Header and Single Column Body.">
+    <aura:attribute name="left" type="Aura.Component[]" />
+    <aura:attribute name="right" type="Aura.Component[]" />
+    <aura:attribute name="body" type="Aura.Component[]" />
+ 
+    <div>
+        <lightning:layout>
+            <lightning:layoutItem flexibility="grow"
+                                  class="slds-m-right_small">
+                {!v.left}
+            </lightning:layoutItem>
+            <lightning:layoutItem size="{! $Browser.isDesktop ? '4' : '6' }"
+                                  class="slds-m-left_small">
+                {!v.right}
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="grow"
+                                  class="slds-m-body_large">
+                {!v.body}
+            </lightning:layoutItem>
+        </lightning:layout>
+    </div>
+    
+</aura:component>

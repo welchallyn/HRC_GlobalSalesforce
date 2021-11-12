@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Share_with_BRM_s</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Share with BRM&apos;s</label>
+        <sharedTo>
+            <group>BRM_IT_Group</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Confidential_Project__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

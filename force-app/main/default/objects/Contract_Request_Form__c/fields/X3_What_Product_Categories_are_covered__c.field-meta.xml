@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X3_What_Product_Categories_are_covered__c</fullName>
+    <externalId>false</externalId>
+    <label>3. What Product Categories are covered?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Frames</fullName>
+                <default>false</default>
+                <label>Frames</label>
+            </value>
+            <value>
+                <fullName>Surfaces</fullName>
+                <default>false</default>
+                <label>Surfaces</label>
+            </value>
+            <value>
+                <fullName>Furniture</fullName>
+                <default>false</default>
+                <label>Furniture</label>
+            </value>
+            <value>
+                <fullName>Stretchers</fullName>
+                <default>false</default>
+                <label>Stretchers</label>
+            </value>
+            <value>
+                <fullName>Communications (Nurse Call)</fullName>
+                <default>false</default>
+                <label>Communications (Nurse Call)</label>
+            </value>
+            <value>
+                <fullName>SmartSync</fullName>
+                <default>false</default>
+                <label>SmartSync</label>
+            </value>
+            <value>
+                <fullName>Lifts</fullName>
+                <default>false</default>
+                <label>Lifts</label>
+            </value>
+            <value>
+                <fullName>Trumpf Tables</fullName>
+                <default>false</default>
+                <label>Trumpf Tables</label>
+            </value>
+            <value>
+                <fullName>Trumpf Booms</fullName>
+                <default>false</default>
+                <label>Trumpf Booms</label>
+            </value>
+            <value>
+                <fullName>Trumpf Lights</fullName>
+                <default>false</default>
+                <label>Trumpf Lights</label>
+            </value>
+            <value>
+                <fullName>Welch Allyn</fullName>
+                <default>false</default>
+                <label>Welch Allyn</label>
+            </value>
+            <value>
+                <fullName>Rental Therapy</fullName>
+                <default>false</default>
+                <label>Rental Therapy</label>
+            </value>
+            <value>
+                <fullName>Service</fullName>
+                <default>false</default>
+                <label>Service</label>
+            </value>
+            <value>
+                <fullName>Allen Medical</fullName>
+                <default>false</default>
+                <label>Allen Medical</label>
+            </value>
+            <value>
+                <fullName>Aspen Surgical</fullName>
+                <default>false</default>
+                <label>Aspen Surgical</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>6</visibleLines>
+</CustomField>

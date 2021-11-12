@@ -1,0 +1,132 @@
+<!--
+Requirement: Re-Enter credentials for approval
+a.  Approval manager is prompted to re-enter his credentials before approving the items – Incident, Change Request etc.
+b.  Items are approved only after verification of credentials provided by Approval Manager.
+c.  However, if the approver wants to reject the record, he need not enter his credentials.
+d.  For “Change Request” object records, users should not be able to make any changes to the ChangeRequest record after the approval phase. The user should only be able to change the Status, Status Reason and Work Info
+-->
+<apex:page controller="RecordInformationController">
+    <apex:includeScript value="{!URLFOR($Resource.jqueryjs, 'jquery-1.9.0.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.jqueryjs, 'jquery-ui-1.10.0.custom.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.jqueryjs, 'jquery-ui-1.10.0.custom.min.js')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.jquerycss, 'jquery-ui-1.10.0.custom.css')}" />   
+    <apex:stylesheet value="{!URLFOR($Resource.jquerycss, 'jquery-ui-1.10.0.custom.min.css')}" />   
+
+    <script type="text/javascript">
+        $j = jQuery.noConflict();
+        $j(document).ready(function() {
+        });
+    
+        function showDialog(){
+      
+            $j("#loginpopup").dialog({
+                autoOpen: true,         
+                resizable: false,
+                width:'auto',
+                height:'auto',
+                maxWidth:"400px",
+                resizable: false, 
+                title:'User Authentication Required',
+                modal:true,
+                buttons: [
+                {
+                    text: "Submit",
+                    click: function() { 
+                        var userNameVal=$j('#userNameID').val();
+                        var passwordVal=$j('#passwordID').val();
+                        submitAction(userNameVal,passwordVal); 
+                        jQuery('.ui-dialog button:nth-child(1)').button('disable');
+                        jQuery('.ui-dialog button:nth-child(2)').button('disable');
+                    }
+                },
+                {
+                    text: "Cancel",
+                    click: function() { 
+                            closeAction();
+                            $j(this).dialog("close");
+                    }
+                },],
+                    show: { effect: 'drop', direction: "up" },
+                    open: function() { 
+                        $j('#passwordID').focus();
+                    },
+                    close: function(event, ui) {
+                        closeAction();
+                        $j(this).dialog("close");
+                    }
+                }); 
+             $j('#loginpopup').keypress(function(event) { 
+                 if( event.keyCode == $j.ui.keyCode.ENTER ) { 
+                     $j(this).parent().find('.ui-dialog-buttonpane button:first').click(); 
+                     return false; 
+                 } 
+                 });
+             
+             $j("#loginpopup").dialog("open"); 
+   }
+   
+   function enableSubmitButton() {
+       jQuery('.ui-dialog button:nth-child(1)').button('enable');
+       jQuery('.ui-dialog button:nth-child(2)').button('enable');
+   }
+  
+</script>
+<apex:form >
+  <apex:actionfunction action="{!login}" name="submitAction" rerender="pagemsgid" status="loadingstatus" oncomplete="{enableSubmitButton();}">
+     <apex:param value="" name="userName" assignTo="{!userName}"/>
+      <apex:param value="" name="password" assignTo="{!password}"/>
+  </apex:actionFunction>    
+  <apex:actionFunction action="{!clearPageMessages}" name="closeAction" reRender="pagemsgid,errormsgid"/>
+  
+  <apex:pageBlock title="Record Information">
+   <apex:pagemessages id="errormsgid" escape="false"/>    
+   <apex:pageBlockSection columns="1">
+      <apex:outputText value="{!objectType}" label="Object Type"/>
+      <apex:pageBlockSectionItem >
+        <apex:outputLabel >Related To</apex:outputLabel>
+        <apex:outputLink value="/{!objectId}">{!name}</apex:outputLink>
+      </apex:pageBlockSectionItem>
+      <apex:outputText value="{!description}" label="Description"/>
+      <apex:inputTextarea value="{!comments}" label="Comments" cols="60" />
+      
+   </apex:pageBlockSection>
+   <apex:pageBlockButtons >
+       <apex:commandButton value="Approve" onclick="showDialog()" rerender="errormsgid,pagemsgid"/>
+       <apex:commandButton value="Reject" action="{!reject}" rerender="errormsgid"/>
+   </apex:pageBlockButtons>
+   </apex:pageBlock>
+
+<div class="loginpopup1" id="loginpopup" style="display:none">
+    <apex:pageMessages id="pagemsgid" escape="false"/>
+    <table columns="2" cellspacing="10" >
+        <tr>
+            <td colspan="2"><b>Please enter your Change username and password</b></td>
+        </tr>
+        <tr>
+            <td>Username:</td>
+            <td><input label="Username" type="text" value="{!userName}" id="userNameID"/></td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td><input label="Password" type="password" value="{!password}" id="passwordID"/></td>
+        </tr>
+    </table>
+    <div align="center">
+    <br/>
+    <apex:actionstatus id="loadingstatus" starttext="Please wait..">
+      <apex:facet name="start">
+            <apex:image title="Please wait.." url="{!$Resource.progressbar}"/>                       
+      </apex:facet>
+    </apex:actionstatus>
+    </div>
+</div>
+
+</apex:form>
+
+<style>
+.ui-dialog-buttonset {
+    width: 280px;
+}
+</style>
+
+</apex:page>

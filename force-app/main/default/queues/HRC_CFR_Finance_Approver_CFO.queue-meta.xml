@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>HRC CFR Finance Approver CFO Queue</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>HRC_CFR_Finance_Approver_CFO</publicGroup>
+        </publicGroups>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Capital_Requests__c</sobjectType>
+    </queueSobject>
+</Queue>

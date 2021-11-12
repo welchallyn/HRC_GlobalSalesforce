@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Move_to_Negotiation_Contract_Type</fullName>
+    <active>true</active>
+    <description>In order to move to negotiation, Contract Type is required</description>
+    <errorConditionFormula>AND(
+ISBLANK( TEXT(Contract_Type__c) ),
+ISCHANGED( Status__c ),
+ISPICKVAL(Status__c, &quot;Contract Negotiation&quot;),
+ RecordType.Name = &quot;RetinaVue&quot;
+)</errorConditionFormula>
+    <errorDisplayField>Contract_Type__c</errorDisplayField>
+    <errorMessage>Contract Type is required at this stage.</errorMessage>
+</ValidationRule>

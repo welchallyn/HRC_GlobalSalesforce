@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Classic_Garment__c</fullName>
+    <externalId>false</externalId>
+    <label>Classic Garment</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Child Small Short (19 - 23 inches)</fullName>
+                <default>false</default>
+                <label>Child Small Short (19 - 23 inches)</label>
+            </value>
+            <value>
+                <fullName>Adult X-Large (52-60 inches)</fullName>
+                <default>false</default>
+                <label>Adult X-Large (52-60 inches)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

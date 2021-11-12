@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>52.0</apiVersion>
+    <decisions>
+        <name>Update_Business_Value_Category</name>
+        <label>Update Business Value Category</label>
+        <locationX>156</locationX>
+        <locationY>313</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Update_Business_Value_Category_to_Grow</name>
+            <conditionLogic>(1 OR 2 OR 3 ) AND 4</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Business_Rationale__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>External Customer Impact with Dollar Impact</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Business_Rationale__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>New Product Development/Revenue Increase</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Business_Rationale__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Margin Improvement</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.Business_Rationale__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.Business_Rationale__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Business_Value_Category_to_Grow1</targetReference>
+            </connector>
+            <label>Update Business Value Category to Grow</label>
+        </rules>
+        <rules>
+            <name>Update_Business_Value_Category_to_Run1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record__Prior.Business_Rationale__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.Business_Rationale__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Business_Value_Category_to_Run</targetReference>
+            </connector>
+            <label>Update Business Value Category to Run</label>
+        </rules>
+    </decisions>
+    <interviewLabel>BRM IT Form {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>BRM IT Form Business Value Category Update</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Business_Value_Category_to_Grow1</name>
+        <label>Update Business Value Category to Grow</label>
+        <locationX>468</locationX>
+        <locationY>325</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Business_Rationale__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Business_Value_Category__c</field>
+            <value>
+                <stringValue>Grow</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Business_Value_Category_to_Run</name>
+        <label>Update Business Value Category to Run</label>
+        <locationX>470</locationX>
+        <locationY>516</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Business_Rationale__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Business_Value_Category__c</field>
+            <value>
+                <stringValue>Run</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>49</locationX>
+        <locationY>53</locationY>
+        <connector>
+            <targetReference>Update_Business_Value_Category</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Business_Rationale__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>BRM_IT_Form__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

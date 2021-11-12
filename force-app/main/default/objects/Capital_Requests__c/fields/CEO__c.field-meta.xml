@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CEO__c</fullName>
+    <defaultValue>&quot;John Groetelaars&quot;</defaultValue>
+    <description>CEO Approver</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Capital Approval ($5M - $10M)
+Lease Approval  ($5M - $10M)</inlineHelpText>
+    <label>CEO</label>
+    <length>50</length>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

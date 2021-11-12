@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_3_Requested_Pick_Up</fullName>
+    <columns>NAME</columns>
+    <columns>Customer__c</columns>
+    <columns>Product__c</columns>
+    <columns>Serial_Number_LL__c</columns>
+    <columns>Evaluation_Status__c</columns>
+    <columns>Rqst_Date_of_Delivery_to_Service_Center__c</columns>
+    <columns>Evaluation_End_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Account_Country__c</field>
+        <operation>equals</operation>
+        <value>France</value>
+    </filters>
+    <filters>
+        <field>Evaluation_Status__c</field>
+        <operation>equals</operation>
+        <value>Requested Pick Up</value>
+    </filters>
+    <label>FRA 3. Requested Pick Up</label>
+</ListView>

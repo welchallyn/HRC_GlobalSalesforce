@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Edit_Access_to_Project_Manager</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>All CFRs should be editable by Project Managers</description>
+        <label>Edit Access to Project Manager</label>
+        <sharedTo>
+            <group>HRC_CFR_Project_Manager</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>LastModifiedById</field>
+            <operation>notEqual</operation>
+            <value>null</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRC_CFR_Fixed_Asset</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>HRC CFR Fixed Asset Attachments</description>
+        <label>HRC CFR Fixed Asset</label>
+        <sharedTo>
+            <group>HRC_CFR_Fixed_Asset</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Fixed_Assets_Group__c</field>
+            <operation>contains</operation>
+            <value>Scot,Roberta</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>ReadOnly_On_NonConfidential_CFRs</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>ReadOnly On NonConfidential CFRs</label>
+        <sharedTo>
+            <group>HRC_CRF_Other_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>CFR_is_Confidential__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_CFR_with_Sourcing</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Share non confidential CFRs as Read Only with Sourcing</description>
+        <label>Share CFR with Sourcing</label>
+        <sharedTo>
+            <group>HRC_CFR_Global_Sourcing</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>CFR_is_Confidential__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

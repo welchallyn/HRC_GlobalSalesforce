@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Therapy_Capital_Other</fullName>
+    <columns>NAME</columns>
+    <columns>GOAL_LVL_1__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>GOAL_LVL_1__c</field>
+        <operation>contains</operation>
+        <value>Therapy</value>
+    </filters>
+    <filters>
+        <field>Sales_User__c</field>
+        <operation>contains</operation>
+        <value>Saner</value>
+    </filters>
+    <label>Therapy Capital/Other</label>
+    <language>en_US</language>
+</ListView>

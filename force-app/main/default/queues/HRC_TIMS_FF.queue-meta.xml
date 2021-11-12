@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>HRC-TIMS-FF</name>
+    <queueMembers>
+        <users>
+            <user>sunderk@hrc.corp</user>
+            <user>withror@hrc.corp</user>
+            <user>eggersr1@hrc.corp</user>
+            <user>patelr1@hrc.corp</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>BMCServiceDesk__Change_Request__c</sobjectType>
+    </queueSobject>
+</Queue>

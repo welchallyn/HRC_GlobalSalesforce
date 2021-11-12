@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Department_Classification__c</fullName>
+    <externalId>false</externalId>
+    <label>Department Classification</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Department__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Mixed Medical/Surgical ICU</fullName>
+                <default>false</default>
+                <label>Mixed Medical/Surgical ICU</label>
+            </value>
+            <value>
+                <fullName>High Dependency Unit/Step-down/Intermediate Care</fullName>
+                <default>false</default>
+                <label>High Dependency Unit/Step-down/Intermediate Care</label>
+            </value>
+            <value>
+                <fullName>Surgical ICU</fullName>
+                <default>false</default>
+                <label>Surgical ICU</label>
+            </value>
+            <value>
+                <fullName>Medical ICU</fullName>
+                <default>false</default>
+                <label>Medical ICU</label>
+            </value>
+            <value>
+                <fullName>Neurology ICU</fullName>
+                <default>false</default>
+                <label>Neurology ICU</label>
+            </value>
+            <value>
+                <fullName>Neurosurgery ICU</fullName>
+                <default>false</default>
+                <label>Neurosurgery ICU</label>
+            </value>
+            <value>
+                <fullName>Cardiacsurgery ICU</fullName>
+                <default>false</default>
+                <label>Cardiacsurgery ICU</label>
+            </value>
+            <value>
+                <fullName>Burn ICU</fullName>
+                <default>false</default>
+                <label>Burn ICU</label>
+            </value>
+            <value>
+                <fullName>Pediatric ICU</fullName>
+                <default>false</default>
+                <label>Pediatric ICU</label>
+            </value>
+            <value>
+                <fullName>MedSurg</fullName>
+                <default>false</default>
+                <label>MedSurg</label>
+            </value>
+            <value>
+                <fullName>Cardiac Surgical</fullName>
+                <default>false</default>
+                <label>Cardiac Surgical</label>
+            </value>
+            <value>
+                <fullName>Cardiology</fullName>
+                <default>false</default>
+                <label>Cardiology</label>
+            </value>
+            <value>
+                <fullName>Dialysis</fullName>
+                <default>false</default>
+                <label>Dialysis</label>
+            </value>
+            <value>
+                <fullName>Geriatric Medicine</fullName>
+                <default>false</default>
+                <label>Geriatric Medicine</label>
+            </value>
+            <value>
+                <fullName>Gynaecology</fullName>
+                <default>false</default>
+                <label>Gynaecology</label>
+            </value>
+            <value>
+                <fullName>Infectious Disease Unit</fullName>
+                <default>false</default>
+                <label>Infectious Disease Unit</label>
+            </value>
+            <value>
+                <fullName>Paediatrics</fullName>
+                <default>false</default>
+                <label>Paediatrics</label>
+            </value>
+            <value>
+                <fullName>Palliative Care Unit</fullName>
+                <default>false</default>
+                <label>Palliative Care Unit</label>
+            </value>
+            <value>
+                <fullName>Emergency Dept.</fullName>
+                <default>false</default>
+                <label>Emergency Dept.</label>
+            </value>
+            <value>
+                <fullName>Operating Theatre</fullName>
+                <default>false</default>
+                <label>Operating Theatre</label>
+            </value>
+            <value>
+                <fullName>Discharge Lounge</fullName>
+                <default>false</default>
+                <label>Discharge Lounge</label>
+            </value>
+            <value>
+                <fullName>Day Surgery</fullName>
+                <default>false</default>
+                <label>Day Surgery</label>
+            </value>
+            <value>
+                <fullName>Other (specify)</fullName>
+                <default>false</default>
+                <label>Other (specify)</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>ICU</controllingFieldValue>
+            <valueName>Mixed Medical/Surgical ICU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ICU</controllingFieldValue>
+            <valueName>High Dependency Unit/Step-down/Intermediate Care</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ICU</controllingFieldValue>
+            <valueName>Surgical ICU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ICU</controllingFieldValue>
+            <valueName>Medical ICU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ICU</controllingFieldValue>
+            <valueName>Neurology ICU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ICU</controllingFieldValue>
+            <valueName>Neurosurgery ICU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ICU</controllingFieldValue>
+            <valueName>Cardiacsurgery ICU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ICU</controllingFieldValue>
+            <valueName>Burn ICU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ICU</controllingFieldValue>
+            <valueName>Pediatric ICU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ICU</controllingFieldValue>
+            <controllingFieldValue>Surgical Ward</controllingFieldValue>
+            <controllingFieldValue>Medical Ward</controllingFieldValue>
+            <controllingFieldValue>Ambulatory</controllingFieldValue>
+            <valueName>Other (specify)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Surgical Ward</controllingFieldValue>
+            <controllingFieldValue>Medical Ward</controllingFieldValue>
+            <valueName>MedSurg</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Surgical Ward</controllingFieldValue>
+            <valueName>Cardiac Surgical</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Surgical Ward</controllingFieldValue>
+            <valueName>Cardiology</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Surgical Ward</controllingFieldValue>
+            <valueName>Dialysis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Surgical Ward</controllingFieldValue>
+            <valueName>Geriatric Medicine</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Surgical Ward</controllingFieldValue>
+            <valueName>Gynaecology</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Surgical Ward</controllingFieldValue>
+            <valueName>Infectious Disease Unit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Medical Ward</controllingFieldValue>
+            <valueName>Emergency Dept.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Medical Ward</controllingFieldValue>
+            <valueName>Operating Theatre</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Medical Ward</controllingFieldValue>
+            <valueName>Discharge Lounge</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Medical Ward</controllingFieldValue>
+            <valueName>Day Surgery</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>
