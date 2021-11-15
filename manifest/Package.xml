@@ -876,6 +876,25 @@
 		<members>Additional_Account_Info__c.Account__c</members>
 		<members>Location.Language__c</members>
 		<members>Asset.Status</members>
+		<members>Location.HRCSVC20_GPO__c</members>
+		<members>Location.HRCSVC20_GPO_Capital__c</members>
+		<members>Location.HRCSVC20_GPO_Capital_Desc__c</members>
+		<members>Location.HRCSVC20_GPO_Rental_Therapy__c</members>
+		<members>Location.HRCSVC20_GPO_Rental_Therapy_Desc__c</members>
+		<members>Location.HRCSVC20_IDN_1__c</members>
+		<members>Location.HRCSVC20_IDN_1_Desc__c</members>
+		<members>Location.HRCSVC20_IDN_2__c</members>
+		<members>Location.HRCSVC20_IDN_2_Desc__c</members>
+		<members>Location.HRCSVC20_IDN_3__c</members>
+		<members>Location.HRCSVC20_IDN_3_Desc__c</members>
+		<members>Location.HRCSVC20_IDN_HIERARCHY_IQVIA__c</members>
+		<members>Location.HRCSVC20_IDN_LEVEL_2_IQVIA__c</members>
+		<members>Location.HRCSVC20_IDN_LEVEL_3_IQVIA__c</members>
+		<members>Location.HRCSVC20_IDN_LEVEL1_IQVIA__c</members>
+		<members>Location.HRCSVC20_Primary_Capital_IDN__c</members>
+		<members>Location.HRCSVC20_Primary_Capital_IDN_Desc__c</members>
+		<members>Location.HRCSVC20_Primary_Rental_IDN__c</members>
+		<members>Location.HRCSVC20_Primary_Rental_IDN_Desc__c</members>
 		<name>CustomField</name>
 	</types>
 	<types>
@@ -1060,6 +1079,7 @@
 		<members>HRCSVC_Asset_Status_Mappings.PR</members>
 		<members>HRCSVC_Asset_Status_Mappings.Requires_Service</members>
 		<members>HRCSVC_Asset_Status_Mappings.TA</members>
+		<members>HRCFSL_Organization_Settings__mdt.HRCSVC20_Parts_Order_Types</members>
 		<name>CustomMetadata</name>
 	</types>
 	<types>
@@ -1317,6 +1337,7 @@
 		<members>HRCSVC20_Component_Swap</members>
 		<members>HRCSVC20_Consume_BOM_Item</members>
 		<members>HRCFSL_Check_Entitlement_SF</members>
+		<members>HRCSVC20_Set_Carrier_based_on_Ship_to_Country_on_Parts_Order</members>
 		<name>Flow</name>
 	</types>
 	<types>
@@ -1889,6 +1910,7 @@
 		<members>Case.Prevent_Closing_with_Open_Work_Orders</members>
 		<members>Case.SW_Version_Required_to_Close</members>
         <members>WorkOrder.HRCFSL_Comments_Are_Required</members>
+		<members>Order__c.HRCSVC20_Order_Not_Allowed_For_Customer</members>
 		<name>ValidationRule</name>
 	</types>
 	<types>
