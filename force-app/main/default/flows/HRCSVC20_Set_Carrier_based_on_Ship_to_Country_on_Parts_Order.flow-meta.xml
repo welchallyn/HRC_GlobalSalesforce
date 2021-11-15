@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>53.0</apiVersion>
+    <assignments>
+        <name>Assign_Carrier_to_Canada_Location</name>
+        <label>Assign Carrier to Canada Location</label>
+        <locationX>690</locationX>
+        <locationY>441</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.HRCSVC_Carrier__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Purolator</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Assign_Carrier_to_US_Location</name>
+        <label>Assign Carrier to US Location</label>
+        <locationX>690</locationX>
+        <locationY>123</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.HRCSVC_Carrier__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>FedEx</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>Country_Check</name>
+        <label>Country Check</label>
+        <locationX>542</locationX>
+        <locationY>278</locationY>
+        <defaultConnector>
+            <targetReference>Assign_Carrier_to_Canada_Location</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Country is Canada</defaultConnectorLabel>
+        <rules>
+            <name>Country_is_US</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.HRCSVC_Country__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.HRCSVC_Country__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>US</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Carrier_to_US_Location</targetReference>
+            </connector>
+            <label>Country is US</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Null_Check</name>
+        <label>Null Check</label>
+        <locationX>336</locationX>
+        <locationY>276</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Record_Available</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Custom_Metadata_Record</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Country_Check</targetReference>
+            </connector>
+            <label>Record Available</label>
+        </rules>
+    </decisions>
+    <interviewLabel>HRCSVC20 Set Carrier based on Ship to Country on Parts Order {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>HRCSVC20 Set Carrier based on Ship to Country on Parts Order</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Custom_Metadata_Record</name>
+        <label>Get Custom Metadata Record</label>
+        <locationX>176</locationX>
+        <locationY>273</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Null_Check</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>HRCFSL_Component_Detail__c</field>
+            <operator>Contains</operator>
+            <value>
+                <elementReference>$Record.HRCSVC_Order_Type__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>HRCFSL_Organization_Settings__mdt</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Get_Custom_Metadata_Record</targetReference>
+        </connector>
+        <object>Order__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>
