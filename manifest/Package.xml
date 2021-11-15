@@ -1546,6 +1546,8 @@
 		<members>HRCSVC_Transfer_Cases_Permission</members>
 		<members>HRCSVC_US_CCV_Contact_Access</members>
 		<members>HRCSVC20_Can_cancel_WOs_generated_from_Maintenance_Plans</members>
+		<members>HRCSVC20_Service_Agent_Permissions</members>
+		<members>HRCSVC20_Service_Manager_Permissions</members>
 		<name>PermissionSet</name>
 	</types>
 	<types>
