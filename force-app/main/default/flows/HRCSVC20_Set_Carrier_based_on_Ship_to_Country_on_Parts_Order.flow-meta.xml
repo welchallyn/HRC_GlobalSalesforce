@@ -32,6 +32,9 @@
         <label>Country Check</label>
         <locationX>542</locationX>
         <locationY>278</locationY>
+        <defaultConnector>
+            <targetReference>Other_Countries</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>Other Countries</defaultConnectorLabel>
         <rules>
             <name>Country_is_US</name>
@@ -142,6 +145,19 @@
         <object>HRCFSL_Organization_Settings__mdt</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
+    <recordUpdates>
+        <name>Other_Countries</name>
+        <label>Other Countries</label>
+        <locationX>1010</locationX>
+        <locationY>281</locationY>
+        <inputAssignments>
+            <field>HRCSVC_Carrier__c</field>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
     <start>
         <locationX>50</locationX>
         <locationY>50</locationY>
