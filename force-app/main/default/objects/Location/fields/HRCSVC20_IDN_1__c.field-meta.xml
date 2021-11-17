@@ -3,7 +3,7 @@
     <fullName>HRCSVC20_IDN_1__c</fullName>
     <description>SE-2538-Ability to see GPO and IDN fields in customer details section</description>
     <externalId>false</externalId>
-    <formula>IF (HRCFSL_Account__r.Name  =&quot;FSL Dummy account&quot;, &quot;&quot;,  HRCFSL_Account__r.IDN_1__c)</formula>
+    <formula>IF (HRCFSL_Account__r.Name  =&quot;FSL Dummy Account&quot;, &quot;&quot;,  HRCFSL_Account__r.IDN_1__c)</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>IDN 1</label>
     <required>false</required>
