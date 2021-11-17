@@ -1375,6 +1375,11 @@
             <field>HRCFSL_Inspection_Template_Name__c</field>
             <table>WorkOrder</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Location.HRCFSL_Customer_ID__c</field>
+            <table>WorkOrder</table>
+        </columns>
         <masterLabel>Work Orders</masterLabel>
     </sections>
 </ReportType>

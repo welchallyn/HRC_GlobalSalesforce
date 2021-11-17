@@ -335,10 +335,10 @@
     <decisions>
         <name>Check_Service_Resource_skills</name>
         <label>Check Service Resource skills</label>
-        <locationX>502</locationX>
-        <locationY>908</locationY>
+        <locationX>314</locationX>
+        <locationY>1011</locationY>
         <defaultConnector>
-            <targetReference>Update_Service_Appointment_Status_Missing_Skills</targetReference>
+            <targetReference>Work_Type_SQZ_SQY</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>SR has no required skill</defaultConnectorLabel>
         <rules>
@@ -352,7 +352,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Update_Service_Appointment_Status_from_In_Progress</targetReference>
+                <targetReference>Work_Type_is_SQZ_or_SQY</targetReference>
             </connector>
             <label>SR has Skill</label>
         </rules>
@@ -712,6 +712,72 @@
                 <targetReference>Check_ServiceAppointment_Status</targetReference>
             </connector>
             <label>Ok</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Rental repairs (SQ-Z and SQ-Y)</description>
+        <name>Work_Type_is_SQZ_or_SQY</name>
+        <label>Work Type is SQZ or SQY</label>
+        <locationX>583</locationX>
+        <locationY>873</locationY>
+        <defaultConnector>
+            <targetReference>Update_Service_Appointment_Status_from_In_Progress</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>WorkType is not (SQZ-SQY)</defaultConnectorLabel>
+        <rules>
+            <name>Work_Type_SQZ_or_SQY</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>WorkOrderDetails.HRCFSL_Work_Type_Name__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>SQZ</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>WorkOrderDetails.HRCFSL_Work_Type_Name__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>SQY</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Service_Appointment_Status_based_on_workType</targetReference>
+            </connector>
+            <label>Work Type (SQZ or SQY)</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Rental repairs (SQ-Z and SQ-Y).</description>
+        <name>Work_Type_SQZ_SQY</name>
+        <label>Work Type (SQZ or SQY)</label>
+        <locationX>539</locationX>
+        <locationY>1159</locationY>
+        <defaultConnector>
+            <targetReference>Update_Service_Appointment_Status_Missing_Skills</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Work Type is not (SQZ-SQY)</defaultConnectorLabel>
+        <rules>
+            <name>Work_T_SQZ_SQY</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>WorkOrderDetails.HRCFSL_Work_Type_Name__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>SQZ</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>WorkOrderDetails.HRCFSL_Work_Type_Name__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>SQY</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Service_Appointment_Based_work_type</targetReference>
+            </connector>
+            <label>Work Type (SQZ or SQY)</label>
         </rules>
     </decisions>
     <dynamicChoiceSets>
@@ -1147,6 +1213,58 @@
         <showHeader>true</showHeader>
     </screens>
     <screens>
+        <name>Service_Appointment_Based_work_type</name>
+        <label>Update Service Appointment Status from In Progress</label>
+        <locationX>682</locationX>
+        <locationY>1031</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Selected_Status</targetReference>
+        </connector>
+        <fields>
+            <name>SA_Work_Type</name>
+            <choiceReferences>SA_CannotComplete</choiceReferences>
+            <choiceReferences>SA_CannotComplete_TroubleshootingComplete</choiceReferences>
+            <choiceReferences>SA_Canceled</choiceReferences>
+            <choiceReferences>SA_CannotComplete_AwaitingCustomerResponse</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Change To</fieldText>
+            <fieldType>RadioButtons</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Service_Appointment_Status_based_on_workType</name>
+        <label>Update Service Appointment Status from In Progress</label>
+        <locationX>805</locationX>
+        <locationY>954</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Selected_Status</targetReference>
+        </connector>
+        <fields>
+            <name>ServiceAppointment_Work_Type</name>
+            <choiceReferences>SA_AwaitingSignature</choiceReferences>
+            <choiceReferences>SA_CannotComplete</choiceReferences>
+            <choiceReferences>SA_CannotComplete_TroubleshootingComplete</choiceReferences>
+            <choiceReferences>SA_Canceled</choiceReferences>
+            <choiceReferences>SA_CannotComplete_AwaitingCustomerResponse</choiceReferences>
+            <choiceReferences>SA_Cannot_Complete_FollowUp</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Change To</fieldText>
+            <fieldType>RadioButtons</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
         <name>Start_Time_Selection</name>
         <label>Start Time Selection</label>
         <locationX>1038</locationX>
@@ -1217,8 +1335,8 @@
     <screens>
         <name>Update_Service_Appointment_Status_from_In_Progress</name>
         <label>Update Service Appointment Status from In Progress</label>
-        <locationX>803</locationX>
-        <locationY>814</locationY>
+        <locationX>896</locationX>
+        <locationY>779</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -1245,8 +1363,8 @@
     <screens>
         <name>Update_Service_Appointment_Status_Missing_Skills</name>
         <label>Update Service Appointment Status from In Progress</label>
-        <locationX>779</locationX>
-        <locationY>1020</locationY>
+        <locationX>766</locationX>
+        <locationY>1269</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>

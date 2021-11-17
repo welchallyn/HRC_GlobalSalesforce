@@ -14,37 +14,12 @@
             <value>
                 <fullName>Single Rail</fullName>
                 <default>false</default>
-                <label>Single Straight Rail</label>
+                <label>Straight</label>
             </value>
             <value>
                 <fullName>Traverse</fullName>
                 <default>false</default>
                 <label>Traverse</label>
-            </value>
-            <value>
-                <fullName>Bariatric Straight</fullName>
-                <default>false</default>
-                <label>Bariatric Straight</label>
-            </value>
-            <value>
-                <fullName>Bariatric Traverse</fullName>
-                <default>false</default>
-                <label>Bariatric Traverse</label>
-            </value>
-            <value>
-                <fullName>Traverse w/ Toilet</fullName>
-                <default>false</default>
-                <label>Traverse w/ Toilet</label>
-            </value>
-            <value>
-                <fullName>Traverse w/ Bathroom</fullName>
-                <default>false</default>
-                <label>Traverse w/ Bathroom</label>
-            </value>
-            <value>
-                <fullName>Straight Rail w/ Bathroom</fullName>
-                <default>false</default>
-                <label>Straight Rail w/ Bathroom</label>
             </value>
         </valueSetDefinition>
     </valueSet>

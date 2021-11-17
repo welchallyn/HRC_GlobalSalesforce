@@ -2,8 +2,8 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Floor_to_Floor_Height__c</fullName>
     <externalId>false</externalId>
-    <inlineHelpText>*Measured Distance from the Finished Ceiling to the Building Structure</inlineHelpText>
-    <label>Interstitial Height</label>
+    <inlineHelpText>*Measured Distance from the Finished Ceiling to the floor above.</inlineHelpText>
+    <label>Above Ceiling Measurement</label>
     <length>250</length>
     <required>false</required>
     <trackHistory>false</trackHistory>

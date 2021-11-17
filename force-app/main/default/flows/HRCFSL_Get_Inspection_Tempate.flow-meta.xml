@@ -143,6 +143,12 @@
         </rules>
     </decisions>
     <formulas>
+        <description>Concatenation of product and comma</description>
+        <name>product_cm</name>
+        <dataType>String</dataType>
+        <expression>{!product} + &apos;,&apos;</expression>
+    </formulas>
+    <formulas>
         <name>region</name>
         <dataType>String</dataType>
         <expression>IF({!country} = &apos;US&apos;, &apos;US&apos;, IF({!country} = &apos;CA&apos;, &apos;CA&apos;, &apos;EU&apos;))</expression>
@@ -224,12 +230,12 @@
         <connector>
             <targetReference>For_each_Inspection_Template</targetReference>
         </connector>
-        <filterLogic>and</filterLogic>
+        <filterLogic>(1 OR 4) AND 2 AND 3</filterLogic>
         <filters>
             <field>HRCFSL_Product_Model__c</field>
-            <operator>EqualTo</operator>
+            <operator>Contains</operator>
             <value>
-                <elementReference>product</elementReference>
+                <elementReference>product_cm</elementReference>
             </value>
         </filters>
         <filters>
@@ -244,6 +250,13 @@
             <operator>IsNull</operator>
             <value>
                 <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>HRCFSL_Product_Model__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>product</elementReference>
             </value>
         </filters>
         <getFirstRecordOnly>false</getFirstRecordOnly>

@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>New_Construction__c</fullName>
     <externalId>false</externalId>
-    <label>Required Construction</label>
+    <label>Construction Type</label>
     <required>false</required>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
@@ -13,12 +13,12 @@
             <value>
                 <fullName>LIfts Only</fullName>
                 <default>true</default>
-                <label>LIfts Only</label>
+                <label>Installation into Existing Room</label>
             </value>
             <value>
                 <fullName>Remodel</fullName>
                 <default>false</default>
-                <label>Remodel</label>
+                <label>Remodel/Renovation</label>
             </value>
             <value>
                 <fullName>New Construction</fullName>
@@ -28,7 +28,7 @@
             <value>
                 <fullName>Unknown</fullName>
                 <default>false</default>
-                <label>Unknown</label>
+                <label>Other</label>
             </value>
         </valueSetDefinition>
     </valueSet>

@@ -2,6 +2,7 @@
 <RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Liko_Home_Care_Quote</fullName>
     <active>true</active>
+    <compactLayoutAssignment>Q_O_Tracking_Compact_Layout</compactLayoutAssignment>
     <description>Liko Home Care Quote</description>
     <label>Liko Home Care Quote</label>
     <picklistValues>
@@ -237,19 +238,11 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>LikoRall 200 %28440 lbs%29</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Likorall %28440lbs%29</fullName>
             <default>false</default>
         </values>
         <values>
             <fullName>Likorall %28550lbs%29</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Multirall %28440 lbs%29</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -405,27 +398,11 @@
     <picklistValues>
         <picklist>Rail_System__c</picklist>
         <values>
-            <fullName>Bariatric Straight</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Bariatric Traverse</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Single Rail</fullName>
             <default>false</default>
         </values>
         <values>
             <fullName>Traverse</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Traverse w%2F Bathroom</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Traverse w%2F Toilet</fullName>
             <default>false</default>
         </values>
     </picklistValues>

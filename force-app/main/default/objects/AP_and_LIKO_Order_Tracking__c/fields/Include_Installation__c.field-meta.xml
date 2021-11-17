@@ -2,10 +2,10 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Include_Installation__c</fullName>
     <defaultValue>false</defaultValue>
-    <description>Indicates if the price of installation should be included.</description>
+    <description>Indicates if the price of installation should not be included.</description>
     <externalId>false</externalId>
-    <inlineHelpText>Indicates if the price of installation should be included (select likely installation subcontractor).</inlineHelpText>
-    <label>Include Installation</label>
+    <inlineHelpText>Indicates if the price of installation should not be included.</inlineHelpText>
+    <label>Do Not Include Installation</label>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
     <type>Checkbox</type>

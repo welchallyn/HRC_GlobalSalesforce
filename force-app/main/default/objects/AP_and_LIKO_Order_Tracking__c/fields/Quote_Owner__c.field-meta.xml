@@ -3,7 +3,7 @@
     <fullName>Quote_Owner__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <externalId>false</externalId>
-    <label>Quote Owner</label>
+    <label>Assigned to Project Manager</label>
     <referenceTo>User</referenceTo>
     <relationshipName>AP_and_LIKO_Orders_Tracking</relationshipName>
     <required>false</required>

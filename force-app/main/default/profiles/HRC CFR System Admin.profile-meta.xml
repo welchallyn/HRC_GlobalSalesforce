@@ -547,7 +547,7 @@
     </classAccesses>
     <classAccesses>
         <apexClass>HRCCFR_CapitalRequest_Handler</apexClass>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>HRCCFR_CapitalRequest_Handler_Test</apexClass>
@@ -755,11 +755,11 @@
     </classAccesses>
     <classAccesses>
         <apexClass>HRC_CapitaRequestInvokeAPI</apexClass>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>HRC_CapitalRequestAPI</apexClass>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>HRC_OpportunityMatrixController</apexClass>

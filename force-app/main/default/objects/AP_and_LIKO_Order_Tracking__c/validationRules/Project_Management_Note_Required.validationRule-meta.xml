@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_Management_Note_Required</fullName>
+    <active>true</active>
+    <description>Requires Project_Management_Note__c when Quote_Stage__c is set to “4 Need Adtl Info”</description>
+    <errorConditionFormula>AND(
+ISPICKVAL( Quote_Stage__c , &quot;4 Need Adtl Info&quot;),
+ISBLANK(Project_Management_Note__c) 
+)</errorConditionFormula>
+    <errorDisplayField>Project_Management_Note__c</errorDisplayField>
+    <errorMessage>Please provide information on what information is need in Notes from Project Management.</errorMessage>
+</ValidationRule>

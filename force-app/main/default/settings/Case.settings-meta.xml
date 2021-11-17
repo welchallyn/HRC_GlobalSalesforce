@@ -79,19 +79,6 @@
         <routingAddresses>
             <addressType>EmailToCase</addressType>
             <caseOrigin>Email</caseOrigin>
-            <caseOwner>HRCSVC_Nurse_Call</caseOwner>
-            <caseOwnerType>Queue</caseOwnerType>
-            <casePriority>Medium</casePriority>
-            <createTask>false</createTask>
-            <emailAddress>pietro.delfrati.test@hillrom.com</emailAddress>
-            <emailServicesAddress>test.servicecloud@sfzd43ywurn6jec9lql7vm7b4tba06tfv1h2buepas8gkln9g.6w-4b5oeaq.cs169.case.sandbox.salesforce.com</emailServicesAddress>
-            <isVerified>true</isVerified>
-            <routingName>Nurse Call</routingName>
-            <saveEmailHeaders>false</saveEmailHeaders>
-        </routingAddresses>
-        <routingAddresses>
-            <addressType>EmailToCase</addressType>
-            <caseOrigin>Email</caseOrigin>
             <caseOwner>wyattk@hrc.corp</caseOwner>
             <caseOwnerType>User</caseOwnerType>
             <casePriority>Low</casePriority>

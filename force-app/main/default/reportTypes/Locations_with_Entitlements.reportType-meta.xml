@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>BMCServiceDesk__SRM_Entitlement__c</baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>Locations with Entitlements</description>
+    <label>Locations with Entitlements</label>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Id</field>
+            <table>BMCServiceDesk__SRM_Entitlement__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Name</field>
+            <table>BMCServiceDesk__SRM_Entitlement__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>CurrencyIsoCode</field>
+            <table>BMCServiceDesk__SRM_Entitlement__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>CreatedDate</field>
+            <table>BMCServiceDesk__SRM_Entitlement__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>CreatedBy</field>
+            <table>BMCServiceDesk__SRM_Entitlement__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>LastModifiedDate</field>
+            <table>BMCServiceDesk__SRM_Entitlement__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>LastModifiedBy</field>
+            <table>BMCServiceDesk__SRM_Entitlement__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>BMCServiceDesk__FKRequestDefinition__c</field>
+            <table>BMCServiceDesk__SRM_Entitlement__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>BMCServiceDesk__FKAccount__c</field>
+            <table>BMCServiceDesk__SRM_Entitlement__c</table>
+        </columns>
+        <masterLabel>Entitlements</masterLabel>
+    </sections>
+</ReportType>

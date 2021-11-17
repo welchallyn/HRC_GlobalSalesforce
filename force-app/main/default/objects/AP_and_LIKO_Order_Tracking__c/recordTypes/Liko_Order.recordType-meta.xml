@@ -2,6 +2,7 @@
 <RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Liko_Order</fullName>
     <active>true</active>
+    <compactLayoutAssignment>Q_O_Tracking_Compact_Layout</compactLayoutAssignment>
     <label>Liko Order</label>
     <picklistValues>
         <picklist>AP_Product_OTP__c</picklist>
@@ -149,7 +150,35 @@
     <picklistValues>
         <picklist>Motor__c</picklist>
         <values>
-            <fullName>Multirall %28440 lbs%29</fullName>
+            <fullName>1014 lbs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1100 lbs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>880 lbs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LIkorall %28507lbs%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LikoGuard L %28600 lbs%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LikoGuard XL %28800 lbs%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Likorall %28440lbs%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Likorall %28550lbs%29</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -282,27 +311,11 @@
     <picklistValues>
         <picklist>Rail_System__c</picklist>
         <values>
-            <fullName>Bariatric Straight</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Bariatric Traverse</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Single Rail</fullName>
             <default>false</default>
         </values>
         <values>
             <fullName>Traverse</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Traverse w%2F Bathroom</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Traverse w%2F Toilet</fullName>
             <default>false</default>
         </values>
     </picklistValues>

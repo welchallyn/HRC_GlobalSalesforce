@@ -24,7 +24,7 @@ public with sharing class CaseHandler {
     public void onAfterInsert(List<Case> lstCaseNew)
     {
         
-        defaultEntitlement(lstCaseNew);
+        defaultEntitlement(lstCaseNew); 
         closeResolutionTimeOnComplete(lstCaseNew);
       
     }

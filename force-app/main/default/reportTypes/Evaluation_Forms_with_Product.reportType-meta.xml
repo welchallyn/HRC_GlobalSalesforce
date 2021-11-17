@@ -322,6 +322,11 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <field>has_contract__c</field>
+            <table>Evaluation_Form__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
             <field>Pickup_Service_Center_Zip__c</field>
             <table>Evaluation_Form__c</table>
         </columns>

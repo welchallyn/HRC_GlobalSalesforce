@@ -48,6 +48,33 @@
     <label>Hill Rom FSL</label>
     <navType>Console</navType>
     <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Asset_Record_Page4</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Asset</pageOrSobjectType>
+        <recordType>Asset.HRC_Service_Asset</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Field Service Coordinator</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Asset_Record_Page4</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Asset</pageOrSobjectType>
+        <recordType>Asset.HRC_Service_Asset</recordType>
+        <type>Flexipage</type>
+        <profile>HRC Field Service Engineer</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Asset_Record_Page4</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Asset</pageOrSobjectType>
+        <recordType>Asset.HRC_Service_Asset</recordType>
+        <type>Flexipage</type>
+        <profile>HRC FSL Business System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
         <actionName>Tab</actionName>
         <content>HRCFSL_Technician_Home</content>
         <formFactor>Large</formFactor>

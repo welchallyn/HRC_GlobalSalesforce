@@ -959,6 +959,11 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <field>has_contract__c</field>
+            <table>Opportunity.Evaluation_Forms__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
             <field>Delivery_Date__c</field>
             <table>Opportunity.Evaluation_Forms__r</table>
         </columns>

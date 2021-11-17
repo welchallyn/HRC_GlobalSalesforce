@@ -56,7 +56,7 @@ global with sharing class SL_Batch_TerritoryMapping implements Schedulable, Data
     
      global void execute(SchedulableContext SC) 
      {
-        Database.executeBatch(new SL_Batch_TerritoryMapping(),50);
+        Database.executeBatch(new SL_Batch_TerritoryMapping(),20); 
      }
 
      /*!
