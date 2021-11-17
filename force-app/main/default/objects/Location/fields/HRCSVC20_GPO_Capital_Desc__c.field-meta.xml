@@ -3,7 +3,7 @@
     <fullName>HRCSVC20_GPO_Capital_Desc__c</fullName>
     <description>SE-2538-Ability to see GPO and IDN fields in customer details section</description>
     <externalId>false</externalId>
-    <formula>IF (HRCFSL_Account__r.Name  =&quot;FSL Dummy account&quot;, &quot;&quot;,  HRCFSL_Account__r.GPO_Capital_Desc__c )</formula>
+    <formula>IF (HRCFSL_Account__r.Name  =&quot;FSL Dummy Account&quot;, &quot;&quot;,  HRCFSL_Account__r.GPO_Capital_Desc__c )</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>GPO Capital Desc</label>
     <required>false</required>
