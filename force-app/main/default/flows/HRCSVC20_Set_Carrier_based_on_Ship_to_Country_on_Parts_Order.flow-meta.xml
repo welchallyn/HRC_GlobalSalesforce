@@ -13,6 +13,9 @@
                 <stringValue>Purolator</stringValue>
             </value>
         </assignmentItems>
+        <connector>
+            <targetReference>check_level_of_service</targetReference>
+        </connector>
     </assignments>
     <assignments>
         <name>Assign_Carrier_to_US_Location</name>
@@ -26,7 +29,52 @@
                 <stringValue>FedEx</stringValue>
             </value>
         </assignmentItems>
+        <connector>
+            <targetReference>check_level_of_service</targetReference>
+        </connector>
     </assignments>
+    <assignments>
+        <name>assign_level_of_service</name>
+        <label>assign level of service</label>
+        <locationX>1541</locationX>
+        <locationY>167</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.HRCSVC_Carrier_Level_of_Service__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>None</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>check_level_of_service</name>
+        <label>check level of service</label>
+        <locationX>1317</locationX>
+        <locationY>281</locationY>
+        <defaultConnectorLabel>blank</defaultConnectorLabel>
+        <rules>
+            <name>present</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.HRCSVC_Carrier_Level_of_Service__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.HRCSVC_Carrier__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.HRCSVC_Carrier__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>assign_level_of_service</targetReference>
+            </connector>
+            <label>present</label>
+        </rules>
+    </decisions>
     <decisions>
         <name>Country_Check</name>
         <label>Country Check</label>
@@ -148,8 +196,11 @@
     <recordUpdates>
         <name>Other_Countries</name>
         <label>Other Countries</label>
-        <locationX>1010</locationX>
-        <locationY>281</locationY>
+        <locationX>971</locationX>
+        <locationY>279</locationY>
+        <connector>
+            <targetReference>check_level_of_service</targetReference>
+        </connector>
         <inputAssignments>
             <field>HRCSVC_Carrier__c</field>
             <value>
@@ -168,5 +219,5 @@
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordBeforeSave</triggerType>
     </start>
-    <status>Active</status>
+    <status>Obsolete</status>
 </Flow>
