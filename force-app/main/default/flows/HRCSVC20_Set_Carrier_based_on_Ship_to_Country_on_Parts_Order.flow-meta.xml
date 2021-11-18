@@ -42,7 +42,7 @@
             <assignToReference>$Record.HRCSVC_Carrier_Level_of_Service__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <stringValue>None</stringValue>
+                <stringValue></stringValue>
             </value>
         </assignmentItems>
     </assignments>
@@ -219,5 +219,5 @@
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordBeforeSave</triggerType>
     </start>
-    <status>Obsolete</status>
+    <status>Active</status>
 </Flow>
