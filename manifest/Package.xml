@@ -1640,6 +1640,8 @@
 		<members>WorkOrder.Product_Usage</members>
 		<members>WorkOrder.Track_Product_Usage</members>
 		<members>HRCSVC_BOM_Item__c.Test_List_Button</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Send_to_ETQ</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Translation_Candidate</members>
 		<name>QuickAction</name>
 	</types>
 	<!--
