@@ -45,6 +45,9 @@
 		<members>PassSelectedQuotedPartIdsToVFCntrlr_Test</members>
 		<members>PassSelectedQuotedPartIdsToVFController</members>
 		<!--<members>UpdateChildWorkOrders</members>-->
+		<members>HRCSVC20_CQ_Backup_Values</members>
+		<members>HRCSVC20_CQ_Backup_Values_Test</members>
+		<members>HRCSVC20_Dynamic_Fetch_Field_Values</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
@@ -895,6 +898,14 @@
 		<members>Location.HRCSVC20_Primary_Capital_IDN_Desc__c</members>
 		<members>Location.HRCSVC20_Primary_Rental_IDN__c</members>
 		<members>Location.HRCSVC20_Primary_Rental_IDN_Desc__c</members>
+		<members>Order__c.HRCSVC20_Sold_To_Location__c</members>
+		<members>Order__c.HRCSVC20_Ship_To_Account__c</members>
+		<members>HRCSVC20_CQ_Original_Values__c.HRCSVC20_CQ__c</members>
+		<members>HRCSVC20_CQ_Original_Values__c.HRCSVC20_CQ_Key__c</members>
+		<members>HRCSVC20_CQ_Original_Values__c.HRCSVC20_CQ_Value__c</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Requires_Translation__c</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Send_to_ETQ__c</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Instruction__c</members>
 		<name>CustomField</name>
 	</types>
 	<types>
@@ -902,6 +913,8 @@
 		<members>ZM01_Work_TypeId</members>
 		<members>ZM03_Work_TypeId</members>
 		<members>HRCSVC_Minutes_For_Auto_SA</members>
+		<members>HRCSVC20_CQ_backup_error_message</members>
+		<members>HRCSVC20_CQ_backup_success_message</members>
 		<name>CustomLabel</name>
 	</types>
 	<types>
@@ -1123,6 +1136,7 @@
 		<members>Order_Lines_to_Shipping__c</members>
 		<members>Order__c</members>
 		<members>Override_Codes__c</members>
+		<members>HRCSVC20_CQ_Original_Values__c</members>
 		<name>CustomObject</name>
 	</types>
 	<types>
@@ -1548,6 +1562,7 @@
 		<members>HRCSVC20_Can_cancel_WOs_generated_from_Maintenance_Plans</members>
 		<members>HRCSVC20_Service_Agent_Permissions</members>
 		<members>HRCSVC20_Service_Manager_Permissions</members>
+		<members>HRCSVC20_Manage_CQ_Original_Values</members>
 		<name>PermissionSet</name>
 	</types>
 	<types>
@@ -1781,6 +1796,7 @@
 		<members>HRCSVC_Service_Reporting/HRCSVC_The_percentage_of_on_time_orders_aVa</members>
 		<members>HRCSVC_Service_Reporting/HRCSVC_The_total_no_of_loanersexchange_orders_5sV</members>
 		<members>HRCSVC_Service_Reporting/WOs_associated_to_a_Field_ActionMod_B3T</members>
+		<members>HRCSVC_Service_Reporting/HRCSVC20_CQs_that_Require_Translation_OLy</members>
 		<members>HRC_FSL_Field_Service_Reports</members>
 		<members>IntegrationReports/New_ERP_Orders_with_Order_Line_Report_XeS</members>
 		<name>Report</name>
@@ -1813,6 +1829,7 @@
 		<members>location</members>
 		<members>Return_Orders_with_Return_Order_Line_Items</members>
 		<members>Assets_with_Orders_and_OLI</members>
+		<members>HRCSVC20_Complaint_Qualifications_w_Case_WO</members>
 		<name>ReportType</name>
 	</types>
 	<types>
@@ -1933,6 +1950,10 @@
 		<members>Account.HRCSVC Send Email Notification when Account status changes from Needs Stewarding to Active</members>
 		<members>EmailMessage.ReOpen Closed Case on new email</members>
 		<name>WorkflowRule</name>
+	</types>
+	<types>
+        <members>HRCSVC_Complaint_Qualification__c.HRCSVC20_CQ_Translation</members>
+        <name>FieldSet</name>
 	</types>
 	<version>51.0</version>
 </Package>
