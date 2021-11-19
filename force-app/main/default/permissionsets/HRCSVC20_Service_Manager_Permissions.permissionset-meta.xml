@@ -3,6 +3,16 @@
     <description>SE-2538-Ability to see GPO and IDN fields in customer details section</description>
     <fieldPermissions>
         <editable>false</editable>
+        <field>HRCSVC20_CQ_Original_Values__c.HRCSVC20_CQ_Key__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>HRCSVC20_CQ_Original_Values__c.HRCSVC20_CQ_Value__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Location.HRCSVC20_GPO_Capital_Desc__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -108,4 +118,22 @@
     </fieldPermissions>
     <hasActivationRequired>false</hasActivationRequired>
     <label>HRCSVC20 Service Manager Permissions</label>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>HRCSVC20_CQ_Original_Values__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>HRCSVC_Complaint_Qualification__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
 </PermissionSet>
