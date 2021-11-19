@@ -3,9 +3,12 @@
     <fullName>Demo_Total_Duration__c</fullName>
     <description>Calculates the number of days to track how long is a demo by the customers.
 
--- Created as par of CR: CR00032235 |	00957194</description>
+-- Created as part of CR: CR00032235 | 00957194
+-- Updated the calculation as part of CR00033098 | 01036760</description>
     <externalId>false</externalId>
-    <formula>(Product_Return_Date__c - Shipment_Date__c) + 1</formula>
+    <formula>IF( ISNULL(Product_Return_Date__c),
+((TODAY() - Shipment_Date__c) + 1),
+((Product_Return_Date__c - Shipment_Date__c) + 1) )</formula>
     <label>Demo Total Duration</label>
     <precision>18</precision>
     <required>false</required>

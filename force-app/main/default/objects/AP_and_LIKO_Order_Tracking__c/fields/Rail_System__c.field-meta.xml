@@ -21,6 +21,11 @@
                 <default>false</default>
                 <label>Traverse</label>
             </value>
+            <value>
+                <fullName>With Bathroom Access</fullName>
+                <default>false</default>
+                <label>With Bathroom Access</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
     <visibleLines>6</visibleLines>

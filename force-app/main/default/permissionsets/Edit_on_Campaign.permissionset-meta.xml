@@ -842,6 +842,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>AP_and_LIKO_Order_Tracking__c.Proposal_Contact__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>AP_and_LIKO_Order_Tracking__c.Qty_of_Lift_Systems__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -14632,6 +14637,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Event.Activity_Type__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Event.Brand__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -14883,11 +14893,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Event.Trumpf_Activity__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Event.Voalte_Exec_Joining__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -24902,6 +24907,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>PricebookEntry.Product_Name_Search__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>PricebookEntry.UnitPrice__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -28042,6 +28052,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Task.Activity_Type__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Task.Brand__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -28293,11 +28308,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Task.Trumpf_Activity__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Task.Voalte_Exec_Joining__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>

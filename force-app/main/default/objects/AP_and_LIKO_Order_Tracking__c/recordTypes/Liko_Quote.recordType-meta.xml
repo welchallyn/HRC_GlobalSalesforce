@@ -384,6 +384,10 @@
             <fullName>Traverse</fullName>
             <default>false</default>
         </values>
+        <values>
+            <fullName>With Bathroom Access</fullName>
+            <default>false</default>
+        </values>
     </picklistValues>
     <picklistValues>
         <picklist>Raised_Trav_Rail_Carrier__c</picklist>

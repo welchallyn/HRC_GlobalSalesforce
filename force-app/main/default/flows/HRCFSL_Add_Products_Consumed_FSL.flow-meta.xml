@@ -274,7 +274,7 @@
             <label>Yes (26+)</label>
         </rules>
     </decisions>
-    <description>DB 11/11/21 added fuzzy search (&quot;contains&quot;) and ability to select from multiple matches</description>
+    <description>DB 11/18/21 added fuzzy search on Product Name</description>
     <dynamicChoiceSets>
         <name>Disposition_Code_Picklist</name>
         <dataType>Picklist</dataType>
@@ -304,7 +304,7 @@
             </value>
         </filters>
         <filters>
-            <field>ProductCode</field>
+            <field>Name</field>
             <operator>Contains</operator>
             <value>
                 <elementReference>Part_Number</elementReference>
@@ -443,7 +443,7 @@
             </value>
         </filters>
         <filters>
-            <field>ProductCode</field>
+            <field>Name</field>
             <operator>Contains</operator>
             <value>
                 <elementReference>Part_Number</elementReference>
@@ -489,7 +489,7 @@
             </value>
         </filters>
         <filters>
-            <field>ProductCode</field>
+            <field>Name</field>
             <operator>Contains</operator>
             <value>
                 <elementReference>Part_Number</elementReference>
@@ -498,6 +498,8 @@
         <object>PricebookEntry</object>
         <outputReference>collectionMatchingPBEs</outputReference>
         <queriedFields>Id</queriedFields>
+        <sortField>Name</sortField>
+        <sortOrder>Asc</sortOrder>
     </recordLookups>
     <screens>
         <name>Add_more_parts</name>
@@ -518,6 +520,9 @@
         <fields>
             <name>Add_more_parts_chk</name>
             <dataType>Boolean</dataType>
+            <defaultValue>
+                <booleanValue>true</booleanValue>
+            </defaultValue>
             <fieldText>Search again / Add more parts</fieldText>
             <fieldType>InputField</fieldType>
             <isRequired>true</isRequired>
@@ -538,7 +543,7 @@
         </connector>
         <fields>
             <name>Add_Parts_Screen</name>
-            <fieldText>&lt;p&gt;Part Number searched: &lt;b&gt;{!Part_Number}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Part Name found: &lt;b&gt;{!varPartName}&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;&lt;b&gt;Part Name/Number searched: &lt;/b&gt;{!Part_Number}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Part Name selected:&lt;/b&gt; {!varPartName}&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
@@ -590,7 +595,7 @@
         </connector>
         <fields>
             <name>tmplabel_0</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); color: rgb(62, 62, 60);&quot;&gt;Part Number searched:&lt;/b&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(62, 62, 60);&quot;&gt; {!Part_Number}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Number of matches: &lt;/b&gt;{!iCountMatchingPBEs}&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;color: rgb(62, 62, 60); background-color: rgb(255, 255, 255);&quot;&gt;Part Name/Number searched:&lt;/b&gt;&lt;span style=&quot;color: rgb(62, 62, 60); background-color: rgb(255, 255, 255);&quot;&gt; {!Part_Number}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Number of matches: &lt;/b&gt;{!iCountMatchingPBEs}&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
@@ -617,13 +622,13 @@
         </connector>
         <fields>
             <name>PartNumberTitle</name>
-            <fieldText>&lt;p&gt;&lt;b&gt;Please enter the Part Number below&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;&lt;b&gt;Please enter the Part Name/Number below &lt;/b&gt;(a partial term is ok)&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
             <name>Part_Number</name>
             <dataType>String</dataType>
-            <fieldText>Part Number</fieldText>
+            <fieldText>Part Name/Number</fieldText>
             <fieldType>InputField</fieldType>
             <isRequired>true</isRequired>
         </fields>

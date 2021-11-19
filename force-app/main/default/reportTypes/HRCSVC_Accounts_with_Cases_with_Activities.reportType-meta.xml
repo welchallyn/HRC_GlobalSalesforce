@@ -3427,11 +3427,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Voalte_Exec_Joining__c</field>
-            <table>Account.Cases.Activities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>CEC_Account__c</field>
             <table>Account.Cases.Activities</table>
         </columns>
@@ -4018,6 +4013,11 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>HRCSVC_ETQ_Activity_Number__c</field>
+            <table>Account.Cases.Activities</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Activity_Type__c</field>
             <table>Account.Cases.Activities</table>
         </columns>
         <masterLabel>Activities</masterLabel>

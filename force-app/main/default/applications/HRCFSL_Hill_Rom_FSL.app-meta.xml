@@ -75,19 +75,18 @@
         <profile>HRC FSL Business System Admin</profile>
     </profileActionOverrides>
     <profileActionOverrides>
-        <actionName>Tab</actionName>
-        <content>HRCFSL_Technician_Home</content>
+        <actionName>View</actionName>
+        <content>HRCSVC_Asset_Lightning_Record_Page</content>
         <formFactor>Large</formFactor>
-        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <pageOrSobjectType>Asset</pageOrSobjectType>
         <type>Flexipage</type>
-        <profile>HRC Field Service Engineer</profile>
+        <profile>HRC Field Service Coordinator</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>INT_Eval_Form_Page</content>
+        <content>HRCSVC_Asset_Lightning_Record_Page</content>
         <formFactor>Large</formFactor>
-        <pageOrSobjectType>Evaluation_Form__c</pageOrSobjectType>
-        <recordType>Evaluation_Form__c.International</recordType>
+        <pageOrSobjectType>Asset</pageOrSobjectType>
         <type>Flexipage</type>
         <profile>HRC Field Service Engineer</profile>
     </profileActionOverrides>
@@ -113,23 +112,24 @@
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Asset</pageOrSobjectType>
         <type>Flexipage</type>
-        <profile>HRC Field Service Coordinator</profile>
+        <profile>Admin</profile>
     </profileActionOverrides>
     <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>HRCSVC_Asset_Lightning_Record_Page</content>
+        <actionName>Tab</actionName>
+        <content>HRCFSL_Technician_Home</content>
         <formFactor>Large</formFactor>
-        <pageOrSobjectType>Asset</pageOrSobjectType>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
         <type>Flexipage</type>
         <profile>HRC Field Service Engineer</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>HRCSVC_Asset_Lightning_Record_Page</content>
+        <content>INT_Eval_Form_Page</content>
         <formFactor>Large</formFactor>
-        <pageOrSobjectType>Asset</pageOrSobjectType>
+        <pageOrSobjectType>Evaluation_Form__c</pageOrSobjectType>
+        <recordType>Evaluation_Form__c.International</recordType>
         <type>Flexipage</type>
-        <profile>Admin</profile>
+        <profile>HRC Field Service Engineer</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>

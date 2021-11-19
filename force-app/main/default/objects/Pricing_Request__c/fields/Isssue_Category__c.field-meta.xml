@@ -12,29 +12,54 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>EXT_Missing / Incorrect Price</fullName>
+                <fullName>INT_WRONG SETUP</fullName>
                 <default>false</default>
-                <label>EXT_Missing / Incorrect Price</label>
+                <label>INT_WRONG SETUP</label>
             </value>
             <value>
-                <fullName>EXT_Missing / Incorrect Discount</fullName>
+                <fullName>INT_ERP INCOMPATIBILITY</fullName>
                 <default>false</default>
-                <label>EXT_Missing / Incorrect Discount</label>
+                <label>INT_ERP INCOMPATIBILITY</label>
             </value>
             <value>
-                <fullName>EXT_Configurator issue</fullName>
+                <fullName>EXT_REQUESTUNCLEAR</fullName>
                 <default>false</default>
-                <label>EXT_Configurator issue</label>
+                <label>EXT_REQUESTUNCLEAR</label>
             </value>
             <value>
-                <fullName>INT_Wrong ERP set up</fullName>
+                <fullName>EXT_MISSING INFO</fullName>
                 <default>false</default>
-                <label>INT_Wrong ERP set up</label>
+                <label>EXT_MISSING INFO</label>
             </value>
             <value>
-                <fullName>INT_Incompatibilty system</fullName>
+                <fullName>EXT_INCORRECT INFO</fullName>
                 <default>false</default>
-                <label>INT_Incompatibilty system</label>
+                <label>EXT_INCORRECT INFO</label>
+            </value>
+            <value>
+                <fullName>EXT_NO GENERIC PRICE</fullName>
+                <default>false</default>
+                <label>EXT_NO GENERIC PRICE</label>
+            </value>
+            <value>
+                <fullName>EXT_CONFIG ISSUE</fullName>
+                <default>false</default>
+                <label>EXT_CONFIG ISSUE</label>
+            </value>
+            <value>
+                <fullName>EXT_INCORRECT ORDER ENTRY INPUT</fullName>
+                <default>false</default>
+                <label>EXT_INCORRECT ORDER ENTRY INPUT</label>
+            </value>
+            <value>
+                <fullName>EXT_WRONG CUSTOMER SETTING</fullName>
+                <default>false</default>
+                <label>EXT_WRONG CUSTOMER SETTING</label>
+            </value>
+            <value>
+                <fullName>EXT_WRONG OWNER</fullName>
+                <default>false</default>
+                <label>EXT_WRONG OWNER</label>
             </value>
         </valueSetDefinition>
     </valueSet>

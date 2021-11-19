@@ -77,23 +77,43 @@
     <picklistValues>
         <picklist>Isssue_Category__c</picklist>
         <values>
-            <fullName>EXT_Configurator issue</fullName>
+            <fullName>EXT_CONFIG ISSUE</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>EXT_Missing %2F Incorrect Discount</fullName>
+            <fullName>EXT_INCORRECT INFO</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>EXT_Missing %2F Incorrect Price</fullName>
+            <fullName>EXT_INCORRECT ORDER ENTRY INPUT</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>INT_Incompatibilty system</fullName>
+            <fullName>EXT_MISSING INFO</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>INT_Wrong ERP set up</fullName>
+            <fullName>EXT_NO GENERIC PRICE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EXT_REQUESTUNCLEAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EXT_WRONG CUSTOMER SETTING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EXT_WRONG OWNER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INT_ERP INCOMPATIBILITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INT_WRONG SETUP</fullName>
             <default>false</default>
         </values>
     </picklistValues>

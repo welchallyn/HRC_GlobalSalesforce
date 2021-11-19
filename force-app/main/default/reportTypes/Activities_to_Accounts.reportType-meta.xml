@@ -4000,11 +4000,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Voalte_Exec_Joining__c</field>
-            <table>Account.Activities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>Customer_Facing__c</field>
             <table>Account.Activities</table>
         </columns>
@@ -4046,6 +4041,11 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>HRCSVC_ETQ_Activity_Number__c</field>
+            <table>Account.Activities</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Activity_Type__c</field>
             <table>Account.Activities</table>
         </columns>
         <masterLabel>Activities</masterLabel>

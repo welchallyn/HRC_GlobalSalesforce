@@ -3298,7 +3298,7 @@ public class partnerSoapSforceCom {
         private String[] field_order_type_info = new String[]{};
     }
     public class Soap {
-        public String endpoint_x = 'https://login.salesforce.com/services/Soap/u/48.0';
+        public String endpoint_x = 'https://test.salesforce.com/services/Soap/u/47.0';
         public Map<String,String> inputHttpHeaders_x;
         public Map<String,String> outputHttpHeaders_x;
         public String clientCertName_x;

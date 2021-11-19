@@ -73,10 +73,6 @@
                 <behavior>Edit</behavior>
                 <field>ShowAs</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Voalte_Exec_Joining__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

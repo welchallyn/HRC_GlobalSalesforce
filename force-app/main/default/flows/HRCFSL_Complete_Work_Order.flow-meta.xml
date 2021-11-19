@@ -4,8 +4,8 @@
     <assignments>
         <name>Set_SA_In_Progress</name>
         <label>Set SA In Progress</label>
-        <locationX>666</locationX>
-        <locationY>1694</locationY>
+        <locationX>930</locationX>
+        <locationY>1814</locationY>
         <assignmentItems>
             <assignToReference>Get_Service_Appointment.Status</assignToReference>
             <operator>Assign</operator>
@@ -34,8 +34,8 @@
     <assignments>
         <name>Set_SA_In_Progress_0</name>
         <label>Set SA In Progress</label>
-        <locationX>930</locationX>
-        <locationY>1454</locationY>
+        <locationX>1194</locationX>
+        <locationY>1574</locationY>
         <assignmentItems>
             <assignToReference>Get_Service_Appointment.ActualStartTime</assignToReference>
             <operator>Assign</operator>
@@ -71,8 +71,8 @@
     <assignments>
         <name>Set_SA_Scheduled</name>
         <label>Set SA Scheduled</label>
-        <locationX>666</locationX>
-        <locationY>1454</locationY>
+        <locationX>930</locationX>
+        <locationY>1574</locationY>
         <assignmentItems>
             <assignToReference>Get_Service_Appointment.Status</assignToReference>
             <operator>Assign</operator>
@@ -101,8 +101,8 @@
     <assignments>
         <name>Set_Status_to_AS</name>
         <label>Set Status to AS</label>
-        <locationX>930</locationX>
-        <locationY>3614</locationY>
+        <locationX>1194</locationX>
+        <locationY>3734</locationY>
         <assignmentItems>
             <assignToReference>Get_Service_Appointment.Status</assignToReference>
             <operator>Assign</operator>
@@ -117,8 +117,8 @@
     <assignments>
         <name>Set_Status_to_Completed</name>
         <label>Set Status to Completed</label>
-        <locationX>930</locationX>
-        <locationY>3854</locationY>
+        <locationX>1194</locationX>
+        <locationY>3974</locationY>
         <assignmentItems>
             <assignToReference>Get_Service_Appointment.Status</assignToReference>
             <operator>Assign</operator>
@@ -140,8 +140,8 @@
     <decisions>
         <name>Check_Asset_Status</name>
         <label>Check Asset Status</label>
-        <locationX>803</locationX>
-        <locationY>278</locationY>
+        <locationX>1067</locationX>
+        <locationY>398</locationY>
         <defaultConnector>
             <targetReference>Check_IBOAR</targetReference>
         </defaultConnector>
@@ -207,8 +207,8 @@
     <decisions>
         <name>Exit_Flow</name>
         <label>Exit Flow</label>
-        <locationX>930</locationX>
-        <locationY>2630</locationY>
+        <locationX>1194</locationX>
+        <locationY>2750</locationY>
         <defaultConnector>
             <targetReference>Required_Tools_Needed_0</targetReference>
         </defaultConnector>
@@ -229,8 +229,8 @@
     <decisions>
         <name>Inspection_Steps_Required</name>
         <label>Inspection Steps Required</label>
-        <locationX>1084</locationX>
-        <locationY>2390</locationY>
+        <locationX>1348</locationX>
+        <locationY>2510</locationY>
         <defaultConnector>
             <targetReference>Required_Tools_Needed_0</targetReference>
         </defaultConnector>
@@ -254,8 +254,8 @@
     <decisions>
         <name>Need_Repair_Template</name>
         <label>Need Repair Template</label>
-        <locationX>446</locationX>
-        <locationY>2390</locationY>
+        <locationX>710</locationX>
+        <locationY>2510</locationY>
         <defaultConnector>
             <targetReference>Get_Parts</targetReference>
         </defaultConnector>
@@ -279,8 +279,8 @@
     <decisions>
         <name>Open_SA_Found</name>
         <label>Open SA Found</label>
-        <locationX>1260</locationX>
-        <locationY>1214</locationY>
+        <locationX>1524</locationX>
+        <locationY>1334</locationY>
         <defaultConnector>
             <targetReference>No_Open_SA_s</targetReference>
         </defaultConnector>
@@ -318,8 +318,8 @@
     <decisions>
         <name>Outcome_Ok</name>
         <label>Outcome Ok?</label>
-        <locationX>1557</locationX>
-        <locationY>518</locationY>
+        <locationX>1821</locationX>
+        <locationY>638</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Outcom_Ok_Yes</name>
@@ -340,8 +340,8 @@
     <decisions>
         <name>Parts_Found</name>
         <label>Parts Found</label>
-        <locationX>446</locationX>
-        <locationY>2846</locationY>
+        <locationX>710</locationX>
+        <locationY>2966</locationY>
         <defaultConnector>
             <targetReference>Add_Parts</targetReference>
         </defaultConnector>
@@ -365,8 +365,8 @@
     <decisions>
         <name>PM_PDI_Process</name>
         <label>PM PDI Process</label>
-        <locationX>1260</locationX>
-        <locationY>758</locationY>
+        <locationX>1524</locationX>
+        <locationY>878</locationY>
         <defaultConnector>
             <targetReference>Stop_message_0</targetReference>
         </defaultConnector>
@@ -411,8 +411,8 @@
     <decisions>
         <name>Required_Tools_Needed_0</name>
         <label>Required Tools Needed</label>
-        <locationX>930</locationX>
-        <locationY>3278</locationY>
+        <locationX>1194</locationX>
+        <locationY>3398</locationY>
         <defaultConnector>
             <targetReference>Set_Status_to_AS</targetReference>
         </defaultConnector>
@@ -436,8 +436,8 @@
     <decisions>
         <name>SA_Status</name>
         <label>SA Status</label>
-        <locationX>930</locationX>
-        <locationY>1334</locationY>
+        <locationX>1194</locationX>
+        <locationY>1454</locationY>
         <defaultConnector>
             <targetReference>Invalid_Status</targetReference>
         </defaultConnector>
@@ -476,8 +476,8 @@
     <decisions>
         <name>Work_Type</name>
         <label>Work Type</label>
-        <locationX>930</locationX>
-        <locationY>2270</locationY>
+        <locationX>1194</locationX>
+        <locationY>2390</locationY>
         <defaultConnector>
             <targetReference>Required_Tools_Needed_0</targetReference>
         </defaultConnector>
@@ -520,11 +520,48 @@
             <label>SQP/SQU</label>
         </rules>
     </decisions>
-    <description>v12: added call to IBOAR subflow</description>
+    <decisions>
+        <name>Work_Type_and_PM_date</name>
+        <label>Work Type and PM date</label>
+        <locationX>558</locationX>
+        <locationY>278</locationY>
+        <defaultConnector>
+            <targetReference>Check_Asset_Status</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>PM_due_on_SQP</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Work_Order.HRCFSL_Work_Type_Name__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>SQP</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>IsPMDue</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>PM_Due_Screen</targetReference>
+            </connector>
+            <label>PM due on SQP</label>
+        </rules>
+    </decisions>
+    <description>Added check on PM date for SQP&apos;s</description>
     <formulas>
         <name>IBOAR_SC</name>
         <dataType>String</dataType>
         <expression>LEFT({!Get_Work_Order.HRCFSL_IBOAR_ID__c},5) &amp; &apos;SC&apos; &amp; RIGHT({!Get_Work_Order.HRCFSL_IBOAR_ID__c},LEN({!Get_Work_Order.HRCFSL_IBOAR_ID__c}) - 7)</expression>
+    </formulas>
+    <formulas>
+        <name>IsPMDue</name>
+        <dataType>Boolean</dataType>
+        <expression>IF(({!Get_Work_Order.Asset.HRCFSL_Next_PM_DT__c} - TODAY()) &lt;= 30,True,False )</expression>
     </formulas>
     <formulas>
         <name>SA_Start_Time</name>
@@ -555,8 +592,8 @@
     <recordCreates>
         <name>Create_Assigned_Resource</name>
         <label>Create Assigned Resource</label>
-        <locationX>666</locationX>
-        <locationY>2054</locationY>
+        <locationX>930</locationX>
+        <locationY>2174</locationY>
         <connector>
             <targetReference>Work_Type</targetReference>
         </connector>
@@ -578,8 +615,8 @@
     <recordLookups>
         <name>Get_Enabled_Countries</name>
         <label>Get Enabled Countries</label>
-        <locationX>1260</locationX>
-        <locationY>638</locationY>
+        <locationX>1524</locationX>
+        <locationY>758</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>PM_PDI_Process</targetReference>
@@ -599,8 +636,8 @@
     <recordLookups>
         <name>Get_Parts</name>
         <label>Get Parts</label>
-        <locationX>446</locationX>
-        <locationY>2726</locationY>
+        <locationX>710</locationX>
+        <locationY>2846</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Parts_Found</targetReference>
@@ -620,8 +657,8 @@
     <recordLookups>
         <name>Get_Service_Appointment</name>
         <label>Get Service Appointment</label>
-        <locationX>1260</locationX>
-        <locationY>1094</locationY>
+        <locationX>1524</locationX>
+        <locationY>1214</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Open_SA_Found</targetReference>
@@ -664,8 +701,8 @@
     <recordLookups>
         <name>Get_Service_Resource</name>
         <label>Get Service Resource</label>
-        <locationX>666</locationX>
-        <locationY>1934</locationY>
+        <locationX>930</locationX>
+        <locationY>2054</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Create_Assigned_Resource</targetReference>
@@ -685,11 +722,11 @@
     <recordLookups>
         <name>Get_Work_Order</name>
         <label>Get Work Order</label>
-        <locationX>803</locationX>
+        <locationX>558</locationX>
         <locationY>158</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Check_Asset_Status</targetReference>
+            <targetReference>Work_Type_and_PM_date</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -706,8 +743,8 @@
     <recordUpdates>
         <name>Update_SA</name>
         <label>Update SA</label>
-        <locationX>930</locationX>
-        <locationY>3734</locationY>
+        <locationX>1194</locationX>
+        <locationY>3854</locationY>
         <connector>
             <targetReference>Set_Status_to_Completed</targetReference>
         </connector>
@@ -716,8 +753,8 @@
     <recordUpdates>
         <name>Update_SA_0</name>
         <label>Update SA</label>
-        <locationX>930</locationX>
-        <locationY>3974</locationY>
+        <locationX>1194</locationX>
+        <locationY>4094</locationY>
         <connector>
             <targetReference>Final_screen</targetReference>
         </connector>
@@ -726,8 +763,8 @@
     <recordUpdates>
         <name>Update_SA_1_0</name>
         <label>Update SA</label>
-        <locationX>666</locationX>
-        <locationY>1814</locationY>
+        <locationX>930</locationX>
+        <locationY>1934</locationY>
         <connector>
             <targetReference>Get_Service_Resource</targetReference>
         </connector>
@@ -736,8 +773,8 @@
     <recordUpdates>
         <name>Update_SA_1_0_0</name>
         <label>Update SA</label>
-        <locationX>666</locationX>
-        <locationY>1574</locationY>
+        <locationX>930</locationX>
+        <locationY>1694</locationY>
         <connector>
             <targetReference>Set_SA_In_Progress</targetReference>
         </connector>
@@ -746,8 +783,8 @@
     <recordUpdates>
         <name>Update_SA_1_0_0_0_0</name>
         <label>Update SA</label>
-        <locationX>930</locationX>
-        <locationY>1574</locationY>
+        <locationX>1194</locationX>
+        <locationY>1694</locationY>
         <connector>
             <targetReference>Work_Type</targetReference>
         </connector>
@@ -756,8 +793,8 @@
     <screens>
         <name>Final_screen</name>
         <label>Final screen</label>
-        <locationX>930</locationX>
-        <locationY>4094</locationY>
+        <locationX>1194</locationX>
+        <locationY>4214</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -772,8 +809,8 @@
     <screens>
         <name>Invalid_Status</name>
         <label>Invalid Status</label>
-        <locationX>1194</locationX>
-        <locationY>1454</locationY>
+        <locationX>1458</locationX>
+        <locationY>1574</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -791,8 +828,8 @@
     <screens>
         <name>Invalid_Status_Screen</name>
         <label>Invalid Status</label>
-        <locationX>50</locationX>
-        <locationY>398</locationY>
+        <locationX>314</locationX>
+        <locationY>518</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -807,8 +844,8 @@
     <screens>
         <name>No_Open_SA_s</name>
         <label>No Open SA&apos;s</label>
-        <locationX>1590</locationX>
-        <locationY>1334</locationY>
+        <locationX>1854</locationX>
+        <locationY>1454</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -821,10 +858,26 @@
         <showHeader>true</showHeader>
     </screens>
     <screens>
+        <name>PM_Due_Screen</name>
+        <label>PM Due Screen</label>
+        <locationX>50</locationX>
+        <locationY>398</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>PM_Due_Text</name>
+            <fieldText>&lt;p&gt;You cannot complete this SQP because the next PM date on this serial number is within the next 30 days or it has passed.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Serial Number: &lt;b&gt;{!Get_Work_Order.HRCFSL_Asset_Name__c}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Next PM Date: &lt;b&gt;{!Get_Work_Order.Asset.HRCFSL_Next_PM_DT__c}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;You must create a PM work order (SQU) using the &lt;b style=&quot;font-size: 12px;&quot;&gt;Create PM/Repair&lt;/b&gt; action. This SQP will be automatically cancelled once the PM work order has been created.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
         <name>Stop_message_0</name>
         <label>Stop message</label>
-        <locationX>1348</locationX>
-        <locationY>878</locationY>
+        <locationX>1612</locationX>
+        <locationY>998</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -840,7 +893,7 @@
         <showHeader>false</showHeader>
     </screens>
     <start>
-        <locationX>677</locationX>
+        <locationX>432</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Get_Work_Order</targetReference>
@@ -850,8 +903,8 @@
     <subflows>
         <name>Add_Parts</name>
         <label>Add Parts</label>
-        <locationX>534</locationX>
-        <locationY>2966</locationY>
+        <locationX>798</locationX>
+        <locationY>3086</locationY>
         <connector>
             <targetReference>Required_Tools_Needed_0</targetReference>
         </connector>
@@ -866,8 +919,8 @@
     <subflows>
         <name>Add_tools_0</name>
         <label>Add tools</label>
-        <locationX>798</locationX>
-        <locationY>3398</locationY>
+        <locationX>1062</locationX>
+        <locationY>3518</locationY>
         <connector>
             <targetReference>Set_Status_to_AS</targetReference>
         </connector>
@@ -882,8 +935,8 @@
     <subflows>
         <name>Check_IBOAR</name>
         <label>Check IBOAR</label>
-        <locationX>1557</locationX>
-        <locationY>398</locationY>
+        <locationX>1821</locationX>
+        <locationY>518</locationY>
         <connector>
             <targetReference>Outcome_Ok</targetReference>
         </connector>
@@ -908,8 +961,8 @@
     <subflows>
         <name>Complete_Inspection</name>
         <label>Complete Inspection</label>
-        <locationX>930</locationX>
-        <locationY>2510</locationY>
+        <locationX>1194</locationX>
+        <locationY>2630</locationY>
         <connector>
             <targetReference>Exit_Flow</targetReference>
         </connector>
@@ -928,8 +981,8 @@
     <subflows>
         <name>Repair_Template_Subflow</name>
         <label>Repair Template Subflow</label>
-        <locationX>314</locationX>
-        <locationY>2510</locationY>
+        <locationX>578</locationX>
+        <locationY>2630</locationY>
         <connector>
             <targetReference>Get_Parts</targetReference>
         </connector>

@@ -98,10 +98,6 @@
                 <behavior>Required</behavior>
                 <field>Priority</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Voalte_Exec_Joining__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

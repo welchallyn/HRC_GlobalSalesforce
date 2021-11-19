@@ -835,11 +835,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Voalte_Exec_Joining__c</field>
-            <table>Contact.Activities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>Task_or_Event_Outcome__c</field>
             <table>Contact.Activities</table>
         </columns>

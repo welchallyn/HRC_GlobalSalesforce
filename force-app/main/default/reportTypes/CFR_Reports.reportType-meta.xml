@@ -652,6 +652,11 @@
             <field>HRCSVC_ETQ_Activity_Number__c</field>
             <table>Capital_Requests__c.Capital_Iems__r.Activities</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Activity_Type__c</field>
+            <table>Capital_Requests__c.Capital_Iems__r.Activities</table>
+        </columns>
         <masterLabel>Activities</masterLabel>
     </sections>
 </ReportType>

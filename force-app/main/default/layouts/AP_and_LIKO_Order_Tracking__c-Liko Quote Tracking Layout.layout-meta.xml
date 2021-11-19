@@ -37,6 +37,10 @@
                 <behavior>Readonly</behavior>
                 <field>IDN__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Proposal_Contact__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

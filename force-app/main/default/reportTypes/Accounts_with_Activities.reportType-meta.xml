@@ -1038,6 +1038,11 @@
             <field>HRCSVC_ETQ_Activity_Number__c</field>
             <table>Account.Activities</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Activity_Type__c</field>
+            <table>Account.Activities</table>
+        </columns>
         <masterLabel>Activities</masterLabel>
     </sections>
 </ReportType>

@@ -411,6 +411,11 @@
             <field>HRCSVC_ETQ_Activity_Number__c</field>
             <table>Activity</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Activity_Type__c</field>
+            <table>Activity</table>
+        </columns>
         <masterLabel>Activities</masterLabel>
     </sections>
 </ReportType>

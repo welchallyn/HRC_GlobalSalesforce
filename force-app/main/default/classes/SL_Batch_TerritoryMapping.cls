@@ -11,7 +11,7 @@
 */
 global with sharing class SL_Batch_TerritoryMapping implements Schedulable, Database.Batchable<sObject>, Database.Stateful, Database.AllowsCallouts
 {
-    global List<Account> lstAccountToCallout = new List<Account>();
+    global List<Account> lstAccountToCallout = new List<Account>(); 
     global  Set <Id> setAccId = new Set <Id> ();
     global List<Account> lstMergedAccount = new List<Account>();
     /* Start - Constructor */
@@ -104,7 +104,7 @@ global with sharing class SL_Batch_TerritoryMapping implements Schedulable, Data
         * param      : Database.BatchableContext
         * Description: This is the finish method of this batch process
     */
-     global void finish(Database.BatchableContext BC) 
+     global void finish(Database.BatchableContext BC)
      {
         if(!lstAccountToCallout.isEmpty())
         {

@@ -194,6 +194,102 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
+        <content>HRCSVC_Asset_Lightning_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Asset</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>HRC Field Service Coordinator</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>HRCSVC_Asset_Lightning_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Asset</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>HRC Field Service Coordinator</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>HRCSVC_Asset_Lightning_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Asset</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>HRC Field Service Engineer</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>HRCSVC_Asset_Lightning_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Asset</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>HRC Field Service Engineer</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>HRCSVC_Asset_Lightning_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Asset</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>HRC FSL Business System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>HRCSVC_Asset_Lightning_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Asset</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>HRC FSL Business System Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>HRCSVC_Asset_Lightning_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Asset</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>HRC Service Agent</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>HRCSVC_Asset_Lightning_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Asset</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>HRC Service Agent</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>HRCSVC_Asset_Lightning_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Asset</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>HRC Service Manager</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>HRCSVC_Asset_Lightning_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Asset</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>HRC Service Manager</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>HRCSVC_Asset_Lightning_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Asset</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>HRCSVC_Asset_Lightning_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Asset</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
         <content>Case_Record_PageADMIN</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Case</pageOrSobjectType>
@@ -241,102 +337,6 @@
         <pageOrSobjectType>standard-home</pageOrSobjectType>
         <type>Flexipage</type>
         <profile>HRC CEC Specialist</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>HRCSVC_Asset_Lightning_Record_Page</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Asset</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>HRC FSL Business System Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>HRCSVC_Asset_Lightning_Record_Page</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Asset</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>HRC FSL Business System Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>HRCSVC_Asset_Lightning_Record_Page</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Asset</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>HRC Field Service Engineer</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>HRCSVC_Asset_Lightning_Record_Page</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Asset</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>HRC Field Service Engineer</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>HRCSVC_Asset_Lightning_Record_Page</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Asset</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>HRC Field Service Coordinator</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>HRCSVC_Asset_Lightning_Record_Page</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Asset</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>HRC Field Service Coordinator</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>HRCSVC_Asset_Lightning_Record_Page</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Asset</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>HRC Service Agent</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>HRCSVC_Asset_Lightning_Record_Page</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Asset</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>HRC Service Agent</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>HRCSVC_Asset_Lightning_Record_Page</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Asset</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>HRC Service Manager</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>HRCSVC_Asset_Lightning_Record_Page</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Asset</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>HRC Service Manager</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>HRCSVC_Asset_Lightning_Record_Page</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Asset</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>HRCSVC_Asset_Lightning_Record_Page</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Asset</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Admin</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
