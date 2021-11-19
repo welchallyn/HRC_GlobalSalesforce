@@ -243,4 +243,18 @@
         <shortDescription>ZM03 Work TypeId</shortDescription>
         <value>08q4W000000cEYPQA2</value>
     </labels>
+    <labels>
+        <fullName>HRCSVC20_CQ_backup_error_message</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CQ backup error message</shortDescription>
+        <value>PROBLEM BACKED-UP CQ FIELDS FOR TRANSLATION</value>
+    </labels>
+    <labels>
+        <fullName>HRCSVC20_CQ_backup_success_message</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CQ backup success message</shortDescription>
+        <value>SUCCESSFULLY BACKED-UP CQ FIELDS FOR TRANSLATION&apos;</value>
+    </labels>
 </CustomLabels>
