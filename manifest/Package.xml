@@ -1352,6 +1352,7 @@
 		<members>HRCSVC20_Consume_BOM_Item</members>
 		<members>HRCFSL_Check_Entitlement_SF</members>
 		<members>HRCSVC20_Set_Carrier_based_on_Ship_to_Country_on_Parts_Order</members>
+		<members>HRCSVC20_Back_up_CQ_text_values</members>
 		<name>Flow</name>
 	</types>
 	<types>
