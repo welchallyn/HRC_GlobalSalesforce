@@ -157,7 +157,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>myRule_1_A1</targetReference>
+                <targetReference>myRule_1_pmetdec</targetReference>
             </connector>
             <label>Create Platform Event</label>
         </rules>
@@ -512,7 +512,7 @@
                 <leftValueReference>myVariable_current.HRCSVC_Aware_Date__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <elementReference>formula_8_myRule_7_8082138451</elementReference>
+                    <elementReference>formula_8_myRule_7_1800993363</elementReference>
                 </rightValue>
             </conditions>
             <connector>
@@ -765,7 +765,7 @@
                 <leftValueReference>myVariable_current.HRCSVC_Aware_Date__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <elementReference>formula_8_myRule_7_8082138451</elementReference>
+                    <elementReference>formula_8_myRule_7_1800993363</elementReference>
                 </rightValue>
             </conditions>
             <connector>
@@ -869,6 +869,46 @@
                     <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
+            <label>Previously Met - Prev</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>myRule_1_pmetdec</name>
+        <label>Previously Met Decision</label>
+        <locationX>100</locationX>
+        <locationY>100</locationY>
+        <defaultConnector>
+            <targetReference>myRule_1_A1</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Previously Met</defaultConnectorLabel>
+        <rules>
+            <name>myRule_1_pmetnullrule</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>myVariable_old</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_1_A1</targetReference>
+            </connector>
+            <label>Previously Met - Null</label>
+        </rules>
+        <rules>
+            <name>myRule_1_pmetrule</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_1_pmetrule</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myDecision2</targetReference>
+            </connector>
             <label>Previously Met - Prev</label>
         </rules>
     </decisions>
@@ -1160,7 +1200,7 @@
                 <leftValueReference>myVariable_old.HRCSVC_Aware_Date__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <elementReference>formula_9_myRule_7_pmetrule_9721355285</elementReference>
+                    <elementReference>formula_9_myRule_7_pmetrule_8139432116</elementReference>
                 </rightValue>
             </conditions>
             <label>Previously Met - Prev</label>
@@ -1174,7 +1214,7 @@
                 <stringValue>NOW() </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_12_myWaitEvent_myWait_myRule_11_event_0_SA1_6262907099</name>
+        <name>formula_12_myWaitEvent_myWait_myRule_11_event_0_SA1_2767063844</name>
         <dataType>DateTime</dataType>
         <expression>NOW()</expression>
     </formulas>
@@ -1185,7 +1225,7 @@
                 <stringValue>&quot;Please complete Complaint Qualification now&quot; + &quot; &quot; + [HRCSVC_Complaint_Qualification__c].Name </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_13_myWaitEvent_myWait_myRule_11_event_0_SA1_8666045721</name>
+        <name>formula_13_myWaitEvent_myWait_myRule_11_event_0_SA1_9808521663</name>
         <dataType>String</dataType>
         <expression>&quot;Please complete Complaint Qualification now&quot; + &quot; &quot; + {!myVariable_current.Name}</expression>
     </formulas>
@@ -1196,7 +1236,7 @@
                 <stringValue>TODAY() </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_8_myRule_7_8082138451</name>
+        <name>formula_8_myRule_7_1800993363</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -1207,7 +1247,7 @@
                 <stringValue>TODAY() </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_9_myRule_7_pmetrule_9721355285</name>
+        <name>formula_9_myRule_7_pmetrule_8139432116</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -1222,7 +1262,18 @@
         <dataType>Boolean</dataType>
         <expression>{!myVariable_current.HRCSVC20_Send_to_ETQ__c} = true</expression>
     </formulas>
-    <interviewLabel>HRCSVC_Complaint_Qualification_Actions-3_InterviewLabel</interviewLabel>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>[HRCSVC_Complaint_Qualification__c].HRCSVC20_Send_to_ETQ__c = true</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_1_pmetrule</name>
+        <dataType>Boolean</dataType>
+        <expression>{!myVariable_old.HRCSVC20_Send_to_ETQ__c} = true</expression>
+    </formulas>
+    <interviewLabel>HRCSVC_Complaint_Qualification_Actions-4_InterviewLabel</interviewLabel>
     <label>HRCSVC Complaint Qualification Actions</label>
     <processMetadataValues>
         <name>ObjectType</name>
@@ -1402,7 +1453,7 @@
             </processMetadataValues>
             <field>ReminderDateTime</field>
             <value>
-                <elementReference>formula_12_myWaitEvent_myWait_myRule_11_event_0_SA1_6262907099</elementReference>
+                <elementReference>formula_12_myWaitEvent_myWait_myRule_11_event_0_SA1_2767063844</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1438,7 +1489,7 @@
             </processMetadataValues>
             <field>Subject</field>
             <value>
-                <elementReference>formula_13_myWaitEvent_myWait_myRule_11_event_0_SA1_8666045721</elementReference>
+                <elementReference>formula_13_myWaitEvent_myWait_myRule_11_event_0_SA1_9808521663</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
