@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>HRCSVC_Cannot_edit_after_submission</fullName>
-    <active>false</active>
+    <active>true</active>
     <errorConditionFormula>RecordType.DeveloperName = &quot;HRCSVC_Parts_Order&quot; &amp;&amp; $Profile.Name != &quot;API Profile&quot; &amp;&amp; ISPICKVAL(PRIORVALUE(HRCSVC_Status__c), &quot;Submitted&quot;)</errorConditionFormula>
     <errorMessage>You cannot edit an order in Salesforce after submission or cancellation.</errorMessage>
 </ValidationRule>

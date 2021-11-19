@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>HRCSVC_Contact_Phone_Number__c</fullName>
     <externalId>false</externalId>
-    <label>Contact Phone Number</label>
+    <label>Recipient Phone Number</label>
     <length>35</length>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>

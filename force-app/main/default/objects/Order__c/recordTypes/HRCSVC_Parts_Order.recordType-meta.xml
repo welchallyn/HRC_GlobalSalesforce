@@ -270,22 +270,6 @@
     <picklistValues>
         <picklist>HRCSVC_Order_Type__c</picklist>
         <values>
-            <fullName>S4</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>S5</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>S6</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>SA</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>SH</fullName>
             <default>false</default>
         </values>
@@ -294,19 +278,11 @@
             <default>true</default>
         </values>
         <values>
+            <fullName>SP</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>SW</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>SX</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>SZ</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Y3</fullName>
             <default>false</default>
         </values>
     </picklistValues>

@@ -3,7 +3,7 @@
     <fullName>HRCSVC_Contact__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <externalId>false</externalId>
-    <label>Contact</label>
+    <label>Case Contact</label>
     <referenceTo>Contact</referenceTo>
     <relationshipLabel>Orders</relationshipLabel>
     <relationshipName>Orders</relationshipName>
