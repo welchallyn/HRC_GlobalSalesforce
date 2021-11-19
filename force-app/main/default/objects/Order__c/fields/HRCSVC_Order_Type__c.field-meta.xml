@@ -10,26 +10,11 @@
     <type>Picklist</type>
     <valueSet>
         <valueSetDefinition>
-            <sorted>false</sorted>
+            <sorted>true</sorted>
             <value>
-                <fullName>SA</fullName>
+                <fullName>S5</fullName>
                 <default>false</default>
-                <label>Sales Adjustment</label>
-            </value>
-            <value>
-                <fullName>SH</fullName>
-                <default>false</default>
-                <label>House Order</label>
-            </value>
-            <value>
-                <fullName>SW</fullName>
-                <default>false</default>
-                <label>Service Warranty Order</label>
-            </value>
-            <value>
-                <fullName>SZ</fullName>
-                <default>false</default>
-                <label>Export Markets Warranty  Ord</label>
+                <label>Credit Only</label>
             </value>
             <value>
                 <fullName>Y3</fullName>
@@ -37,19 +22,9 @@
                 <label>Essential Contract Orders</label>
             </value>
             <value>
-                <fullName>Rental Order</fullName>
-                <default>true</default>
-                <label>Rental Order</label>
-            </value>
-            <value>
                 <fullName>Evaluation</fullName>
                 <default>false</default>
                 <label>Evaluation</label>
-            </value>
-            <value>
-                <fullName>Loaner Order</fullName>
-                <default>false</default>
-                <label>Loaner Order</label>
             </value>
             <value>
                 <fullName>Exchange</fullName>
@@ -57,14 +32,9 @@
                 <label>Exchange</label>
             </value>
             <value>
-                <fullName>S4</fullName>
+                <fullName>SZ</fullName>
                 <default>false</default>
-                <label>Sales Order - TBM</label>
-            </value>
-            <value>
-                <fullName>S5</fullName>
-                <default>false</default>
-                <label>Credit Only</label>
+                <label>Export Markets Warranty  Ord</label>
             </value>
             <value>
                 <fullName>S6</fullName>
@@ -72,19 +42,49 @@
                 <label>Invoice Only</label>
             </value>
             <value>
+                <fullName>Loaner Order</fullName>
+                <default>false</default>
+                <label>Loaner Order</label>
+            </value>
+            <value>
+                <fullName>Rental Order</fullName>
+                <default>true</default>
+                <label>Rental Order</label>
+            </value>
+            <value>
+                <fullName>SA</fullName>
+                <default>false</default>
+                <label>Sales Adjustment</label>
+            </value>
+            <value>
                 <fullName>SX</fullName>
                 <default>false</default>
                 <label>Sales Order - Export Markets</label>
             </value>
             <value>
+                <fullName>S4</fullName>
+                <default>false</default>
+                <label>Sales Order - TBM</label>
+            </value>
+            <value>
+                <fullName>SH</fullName>
+                <default>false</default>
+                <label>SH - House Order</label>
+            </value>
+            <value>
                 <fullName>SO</fullName>
                 <default>false</default>
-                <label>Sales Order</label>
+                <label>SO - Sales Order</label>
             </value>
             <value>
                 <fullName>SP</fullName>
                 <default>false</default>
-                <label>Sales Proposal</label>
+                <label>SP - Sales Proposal</label>
+            </value>
+            <value>
+                <fullName>SW</fullName>
+                <default>false</default>
+                <label>SW - Service Warranty Order</label>
             </value>
         </valueSetDefinition>
     </valueSet>
