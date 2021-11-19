@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC20_CQ__c</fullName>
+    <description>SE-2620 - Detail to Complaint Qualifications Master Object (Service Cloud 2.1)</description>
+    <externalId>false</externalId>
+    <label>CQ</label>
+    <referenceTo>HRCSVC_Complaint_Qualification__c</referenceTo>
+    <relationshipLabel>CQ_Original_Values</relationshipLabel>
+    <relationshipName>CQ_Original_Values</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>
