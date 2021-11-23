@@ -113,11 +113,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>HRCSVC_Country__c</field>
-            <table>Order__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>CreatedBy</field>
             <table>Order__c</table>
         </columns>
@@ -584,6 +579,11 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Sold_To__c.Id</field>
+            <table>Order__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>HRCSVC_Country__c</field>
             <table>Order__c</table>
         </columns>
         <masterLabel>Orders</masterLabel>
