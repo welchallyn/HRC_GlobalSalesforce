@@ -23,10 +23,6 @@
                 <behavior>Edit</behavior>
                 <field>HRCSVC_Entitlement__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>HRCSVC20_Ship_To_Location__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -250,19 +246,7 @@
         </platformActionListItems>
     </platformActionList>
     <relatedLists>
-        <customButtons>Get_Pricing</customButtons>
-        <excludeButtons>MassChangeOwner</excludeButtons>
-        <excludeButtons>New</excludeButtons>
         <fields>NAME</fields>
-        <fields>HRCSVC_Item_Description__c</fields>
-        <fields>Quantity__c</fields>
-        <fields>HRCSVC_Actual_Ship_Date__c</fields>
-        <fields>Product__c</fields>
-        <fields>HRCSVC_Requested_Date__c</fields>
-        <fields>HRCSVC_Quantity_Shipped__c</fields>
-        <fields>HRCSVC_Promissed_Ship_Date__c</fields>
-        <fields>HRCSVC_Quantity_Back_Ordered__c</fields>
-        <fields>HRCSVC_Quantity_Canceled__c</fields>
         <relatedList>Order_Line_Item__c.Order__c</relatedList>
     </relatedLists>
     <relatedLists>
