@@ -9,7 +9,7 @@ ISCHANGED(HRCSVC_Status__c),
 ISPICKVAL( HRCSVC_Status__c , &apos;Submitted&apos;),
 OR(ISBLANK(HRCSVC_Ship_To_Attn_Name__c),
 ISBLANK( HRCSVC_Ship_To_Attn_Phone__c ), ISBLANK(HRCSVC_Street__c), ISBLANK(HRCSVC_City__c), ISBLANK(HRCSVC_State_Province__c), ISBLANK(HRCSVC_Zip_Postal_Code__c),
-ISBLANK(HRCSVC_Country__c)
+ISBLANK(HRCSVC_C__c)
 
 ))</errorConditionFormula>
     <errorMessage>These fields(Ship To Attn Name, Ship To Attn Phone, Street, City, State, Zip, Country) are required for parts orders, please fill before submission.</errorMessage>

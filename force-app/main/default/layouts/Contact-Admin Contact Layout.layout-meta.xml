@@ -385,8 +385,11 @@
     </relatedContent>
     <relatedLists>
         <fields>ACCOUNT.NAME</fields>
+        <fields>ACCOUNT.PARENT_NAME</fields>
         <fields>ACCCONRELATION.IS_DIRECT</fields>
         <fields>ACCCONRELATION.ROLES</fields>
+        <fields>ACCOUNT.ADDRESS1_STREET</fields>
+        <fields>ACCOUNT.ADDRESS1_CITY</fields>
         <relatedList>RelatedContactAccountRelationList</relatedList>
     </relatedLists>
     <relatedLists>

@@ -3,8 +3,8 @@
     <actionCalls>
         <name>Navigate_to_Record</name>
         <label>Navigate to Record</label>
-        <locationX>1070</locationX>
-        <locationY>449</locationY>
+        <locationX>1175</locationX>
+        <locationY>555</locationY>
         <actionName>c:navigateToRecord</actionName>
         <actionType>component</actionType>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
@@ -31,8 +31,8 @@
     <actionCalls>
         <name>New_Parts_Order_Line_Item</name>
         <label>New Parts Order Line Item</label>
-        <locationX>913</locationX>
-        <locationY>285</locationY>
+        <locationX>1018</locationX>
+        <locationY>391</locationY>
         <actionName>Order__c.HRCSVC_New_Part_Order_Line_Item</actionName>
         <actionType>quickAction</actionType>
         <connector>
@@ -65,8 +65,8 @@
     <decisions>
         <name>Add_More_Products</name>
         <label>Add More Products</label>
-        <locationX>907</locationX>
-        <locationY>452</locationY>
+        <locationX>1012</locationX>
+        <locationY>558</locationY>
         <defaultConnector>
             <targetReference>Navigate_to_Record</targetReference>
         </defaultConnector>
@@ -83,6 +83,31 @@
             </conditions>
             <connector>
                 <targetReference>Create_Order_Line_Item</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>JDE_ship_to_is_of_type_Entity</name>
+        <label>JDE ship to is of type Entity?</label>
+        <locationX>588</locationX>
+        <locationY>182</locationY>
+        <defaultConnector>
+            <targetReference>Get_Order_RT</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_0</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Ship_to_Location_Record.LocationType</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Entity</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Ship_to_Location_Error</targetReference>
             </connector>
             <label>Yes</label>
         </rules>
@@ -128,8 +153,8 @@
     <recordCreates>
         <name>Create_Order</name>
         <label>Create Order</label>
-        <locationX>728</locationX>
-        <locationY>69</locationY>
+        <locationX>833</locationX>
+        <locationY>175</locationY>
         <connector>
             <targetReference>Create_Order_Line_Item</targetReference>
         </connector>
@@ -208,20 +233,14 @@
                 <elementReference>Get_Order_RT.Id</elementReference>
             </value>
         </inputAssignments>
-        <inputAssignments>
-            <field>Sold_To__c</field>
-            <value>
-                <elementReference>Sold_To.recordId</elementReference>
-            </value>
-        </inputAssignments>
         <object>Order__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordLookups>
         <name>Get_Case</name>
         <label>Get Case</label>
-        <locationX>396</locationX>
-        <locationY>69</locationY>
+        <locationX>175</locationX>
+        <locationY>178</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Create_Order_Screen</targetReference>
@@ -241,8 +260,8 @@
     <recordLookups>
         <name>Get_Order_RT</name>
         <label>Get Order RT</label>
-        <locationX>622</locationX>
-        <locationY>69</locationY>
+        <locationX>717</locationX>
+        <locationY>175</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Create_Order</targetReference>
@@ -259,11 +278,32 @@
         <object>RecordType</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
+    <recordLookups>
+        <name>Get_Ship_to_Location_Record</name>
+        <label>Get Ship-to Location Record</label>
+        <locationX>425</locationX>
+        <locationY>178</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>JDE_ship_to_is_of_type_Entity</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Ship_To.recordId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Location</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
     <screens>
         <name>Create_Order_Line_Item</name>
         <label>Create Order Line Item</label>
-        <locationX>728</locationX>
-        <locationY>285</locationY>
+        <locationX>833</locationX>
+        <locationY>391</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -348,13 +388,13 @@
     <screens>
         <name>Create_Order_Screen</name>
         <label>Create Order Screen</label>
-        <locationX>506</locationX>
-        <locationY>69</locationY>
+        <locationX>292</locationX>
+        <locationY>178</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <connector>
-            <targetReference>Get_Order_RT</targetReference>
+            <targetReference>Get_Ship_to_Location_Record</targetReference>
         </connector>
         <fields>
             <name>Order_Type</name>
@@ -434,32 +474,6 @@
                 <name>required</name>
                 <value>
                     <booleanValue>true</booleanValue>
-                </value>
-            </inputParameters>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-            <isRequired>true</isRequired>
-            <storeOutputAutomatically>true</storeOutputAutomatically>
-        </fields>
-        <fields>
-            <name>Sold_To</name>
-            <extensionName>flowruntime:lookup</extensionName>
-            <fieldType>ComponentInstance</fieldType>
-            <inputParameters>
-                <name>fieldApiName</name>
-                <value>
-                    <stringValue>Sold_To__c</stringValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>label</name>
-                <value>
-                    <stringValue>Sold To</stringValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>objectApiName</name>
-                <value>
-                    <stringValue>Order__c</stringValue>
                 </value>
             </inputParameters>
             <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
@@ -582,8 +596,8 @@
     <screens>
         <name>Error</name>
         <label>Error</label>
-        <locationX>908</locationX>
-        <locationY>70</locationY>
+        <locationX>1013</locationX>
+        <locationY>176</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -599,6 +613,22 @@
         </fields>
         <showFooter>true</showFooter>
         <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>Ship_to_Location_Error</name>
+        <label>Ship-to-Location Error</label>
+        <locationX>597</locationX>
+        <locationY>395</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>Ship_to_Error_Message</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;The account you have selected is not eligible for an order to be placed. JDE ship to is of type Entity.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
     </screens>
     <start>
         <locationX>50</locationX>

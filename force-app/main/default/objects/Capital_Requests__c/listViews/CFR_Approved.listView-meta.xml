@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ListView xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>CFR_Approved</fullName>
+    <columns>NAME</columns>
     <columns>Status__c</columns>
     <columns>Project_Name_Link__c</columns>
     <columns>Project_Manager__c</columns>
@@ -15,7 +16,6 @@
     <columns>UPDATEDBY_USER</columns>
     <columns>CREATEDBY_USER</columns>
     <columns>Supplemental_Check__c</columns>
-    <columns>NAME</columns>
     <filterScope>Everything</filterScope>
     <filters>
         <field>CFR_is_Confidential__c</field>

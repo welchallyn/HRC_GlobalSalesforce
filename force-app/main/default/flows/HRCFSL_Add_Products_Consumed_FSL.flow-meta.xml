@@ -135,50 +135,6 @@
             <targetReference>Add_more_parts</targetReference>
         </connector>
     </assignments>
-    <assignments>
-        <name>Error_Message_too_many_parts_found</name>
-        <label>Error Message (too many parts found)</label>
-        <locationX>653</locationX>
-        <locationY>627</locationY>
-        <assignmentItems>
-            <assignToReference>varErrorMessage</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue>Too many parts (</stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>varErrorMessage</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <elementReference>iCountMatchingPBEs</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>varErrorMessage</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <stringValue>) found based on your part number search &quot;</stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>varErrorMessage</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <elementReference>Part_Number</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>varErrorMessage</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <stringValue>&quot;</stringValue>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>Add_more_parts</targetReference>
-        </connector>
-    </assignments>
     <constants>
         <name>const_NULL</name>
         <dataType>String</dataType>
@@ -237,7 +193,7 @@
             <label>Yes (1)</label>
         </rules>
         <rules>
-            <name>Yes_2_25</name>
+            <name>Yes_2_plus</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>iCountMatchingPBEs</leftValueReference>
@@ -246,35 +202,13 @@
                     <numberValue>1.0</numberValue>
                 </rightValue>
             </conditions>
-            <conditions>
-                <leftValueReference>iCountMatchingPBEs</leftValueReference>
-                <operator>LessThanOrEqualTo</operator>
-                <rightValue>
-                    <numberValue>25.0</numberValue>
-                </rightValue>
-            </conditions>
             <connector>
                 <targetReference>Product_Selection_Screen</targetReference>
             </connector>
-            <label>Yes (2 - 25)</label>
-        </rules>
-        <rules>
-            <name>Yes_26_and_more</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>iCountMatchingPBEs</leftValueReference>
-                <operator>GreaterThanOrEqualTo</operator>
-                <rightValue>
-                    <numberValue>26.0</numberValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Error_Message_too_many_parts_found</targetReference>
-            </connector>
-            <label>Yes (26+)</label>
+            <label>Yes (2+)</label>
         </rules>
     </decisions>
-    <description>DB 11/18/21 added fuzzy search on Product Name</description>
+    <description>DB 11/19/21 took off count filter</description>
     <dynamicChoiceSets>
         <name>Disposition_Code_Picklist</name>
         <dataType>Picklist</dataType>

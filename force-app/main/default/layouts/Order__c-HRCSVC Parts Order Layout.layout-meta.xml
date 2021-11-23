@@ -72,10 +72,6 @@
         <label>Account Information</label>
         <layoutColumns>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Account__c</field>
-            </layoutItems>
-            <layoutItems>
                 <behavior>Required</behavior>
                 <field>HRCSVC_Ship_To_Location__c</field>
             </layoutItems>
@@ -91,10 +87,6 @@
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Sold_To__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>HRCSVC_Sold_To_Email_Address__c</field>
             </layoutItems>
             <layoutItems>
@@ -108,7 +100,7 @@
         <customLabel>true</customLabel>
         <detailHeading>true</detailHeading>
         <editHeading>true</editHeading>
-        <label>Ship To Address</label>
+        <label>Ship To Address Override</label>
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -250,18 +242,7 @@
         </platformActionListItems>
     </platformActionList>
     <relatedLists>
-        <excludeButtons>MassChangeOwner</excludeButtons>
-        <excludeButtons>New</excludeButtons>
         <fields>NAME</fields>
-        <fields>HRCSVC_Item_Description__c</fields>
-        <fields>Quantity__c</fields>
-        <fields>HRCSVC_Actual_Ship_Date__c</fields>
-        <fields>Product__c</fields>
-        <fields>HRCSVC_Requested_Date__c</fields>
-        <fields>HRCSVC_Quantity_Shipped__c</fields>
-        <fields>HRCSVC_Promissed_Ship_Date__c</fields>
-        <fields>HRCSVC_Quantity_Back_Ordered__c</fields>
-        <fields>HRCSVC_Quantity_Canceled__c</fields>
         <relatedList>Order_Line_Item__c.Order__c</relatedList>
     </relatedLists>
     <relatedLists>
@@ -273,7 +254,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h02000000IxUe</masterLabel>
+        <masterLabel>00h4W00000WUUCK</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>
