@@ -1338,7 +1338,8 @@
 		<members>HRCSVC_Work_Order_ERP_ID_Validation</members>
 		<members>HRCSVC_Update_Asset_Software_Version</members>
 		<members>HRCSVC_Account_Protocol_Before_Save</members>
-		<members>HRCSVC_Case_Before_Save_Actions</members>
+		<!--<members>HRCSVC_Case_Before_Save_Actions</members>-->
+		<members>HRCSVC_Case_Before_Save_Actions_New</members>
 		<members>HRCSVC_Case_Comment_Deleted</members>
 		<members>HRCSVC_Case_Merge_Flow</members>
 		<members>HRCSVC_Complaint_Qualification_Before_Save_Actions</members>
