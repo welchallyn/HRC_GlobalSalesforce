@@ -13,14 +13,19 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
+                <fullName>Blank</fullName>
+                <default>true</default>
+                <label>Blank</label>
+            </value>
+            <value>
                 <fullName>No</fullName>
                 <default>false</default>
                 <label>No</label>
             </value>
             <value>
-                <fullName>Injury</fullName>
+                <fullName>Injury/Other Patient Involvement</fullName>
                 <default>false</default>
-                <label>Injury</label>
+                <label>Injury/Other Patient Involvement</label>
             </value>
             <value>
                 <fullName>Death</fullName>

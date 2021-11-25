@@ -9,9 +9,6 @@
         <assignmentItems>
             <assignToReference>myComplaintQualification.HRCSVC_Condition__c</assignToReference>
             <operator>Assign</operator>
-            <value>
-                <stringValue>None</stringValue>
-            </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>myComplaintQualification.HRCSVC_Injury_or_Death__c</assignToReference>
@@ -38,7 +35,7 @@
             <assignToReference>myComplaintQualification.HRCSVC_Device_Message_Alert__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <stringValue>Unknown</stringValue>
+                <stringValue>Yes</stringValue>
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -459,7 +456,7 @@
             <assignToReference>myComplaintQualification.HRCSVC_Cause_of_death_if_known__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>what_was_the_cause_of_death</elementReference>
+                <elementReference>What_was_the_determined_cause_of_death_if_known</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -505,27 +502,6 @@
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>myComplaintQualification.HRC_Functioning_as_designed_post_repair__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>Functioning_as_designed_post_repair</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>myComplaintQualification.HRCSVC_Explain_if_No__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>Explain_If_No</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>myComplaintQualification.HRCSVC_Document_troubleshooting__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>Document_troubleshooting_cause_resolution</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
             <assignToReference>myComplaintQualification.HRCSVC_Specific_Error_Message__c</assignToReference>
             <operator>Assign</operator>
             <value>
@@ -561,31 +537,10 @@
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>myComplaintQualification.HRCSVC_How_did_the_injury_occur__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>How_did_the_injury_occur</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
             <assignToReference>myComplaintQualification.HRCSVC_Is_the_date_of_the_injury_known__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>Is_the_date_of_the_injury_known</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>myComplaintQualification.HRCSVC_medical_treatment_intervention__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>Was_medical_treatment_intervention_provided</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>myComplaintQualification.HRCSVC_Delay_in_Individual_Treatment__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>Was_there_a_delay_in_the_individual_s_treatment_or_procedure_because_of_the_repo</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -607,13 +562,6 @@
             <operator>Assign</operator>
             <value>
                 <elementReference>Weight_Unit_Of_Measure</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>myComplaintQualification.HRCSVC_Is_the_cause_of_the_death_known__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>Is_the_cause_of_the_death_known</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -687,20 +635,6 @@
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>myComplaintQualification.HRCSVC_Events_Occurred_Allegation__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>Indicate_if_any_of_the_following_events_occurred_to_the_individual_as_a_result_o</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>myComplaintQualification.HRCSVC_Event_Allegation_Details__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>Indicate_the_event_in_detail_that_occurred_as_a_result_of_the_allegation</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
             <assignToReference>myComplaintQualification.HRCSVC_Occurrence_Location_Complaint__c</assignToReference>
             <operator>Assign</operator>
             <value>
@@ -711,7 +645,7 @@
             <assignToReference>myComplaintQualification.HRCSVC_Occurrence_Location_Other__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Occurrence_Location_Other</elementReference>
+                <elementReference>Provide_Occurrence_Location</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -740,6 +674,13 @@
             <operator>Assign</operator>
             <value>
                 <elementReference>Contact_Deatils</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>myComplaintQualification.HRCSVC_Describe_Malfunction_Event__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Describe_Malfunction_Event</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -798,13 +739,6 @@
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>myComplaintQualification.HRCSVC_Part_Serial_and_or_Revision__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>Part_Serial_and_or_Revision_if_applicable</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
             <assignToReference>myComplaintQualification.HRCSVC_Occurrence_Location__c</assignToReference>
             <operator>Assign</operator>
             <value>
@@ -846,13 +780,6 @@
                 <elementReference>Additional_Information</elementReference>
             </value>
         </assignmentItems>
-        <assignmentItems>
-            <assignToReference>myComplaintQualification.HRCSVC_Document_troubleshooting__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>Document_troubleshooting_cause_resolution_0</elementReference>
-            </value>
-        </assignmentItems>
         <connector>
             <targetReference>Create_or_Update_QC2</targetReference>
         </connector>
@@ -860,8 +787,8 @@
     <assignments>
         <name>Update_Assignlifenew</name>
         <label>Update Assignlifenew</label>
-        <locationX>459</locationX>
-        <locationY>666</locationY>
+        <locationX>545</locationX>
+        <locationY>668</locationY>
         <assignmentItems>
             <assignToReference>Designedlifenew</assignToReference>
             <operator>Assign</operator>
@@ -923,8 +850,8 @@
     <decisions>
         <name>Check_if_Asset_is_null</name>
         <label>Check if Asset is null</label>
-        <locationX>252</locationX>
-        <locationY>701</locationY>
+        <locationX>335</locationX>
+        <locationY>667</locationY>
         <defaultConnector>
             <targetReference>Update_Assignlifenew</targetReference>
         </defaultConnector>
@@ -943,6 +870,46 @@
                 <targetReference>Qualification_Form</targetReference>
             </connector>
             <label>Asset is null</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_User_s_input</name>
+        <label>Check User&apos;s input</label>
+        <locationX>185</locationX>
+        <locationY>964</locationY>
+        <defaultConnector>
+            <targetReference>Assign_QC_from_Qualification_Screen</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Injury_Death_Blank_Value</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Injury_or_Death</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Blank</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Fault_Screen</targetReference>
+            </connector>
+            <label>Injury Death Blank Value</label>
+        </rules>
+        <rules>
+            <name>Condition_is_Other</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Condition</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Blank</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Fault_Screen</targetReference>
+            </connector>
+            <label>Condition is Other</label>
         </rules>
     </decisions>
     <decisions>
@@ -1335,6 +1302,11 @@
         <expression>{!myComplaintQualification.HRCSVC_Asset__r.HRCSVC_Device_Age__c}</expression>
         <scale>0</scale>
     </formulas>
+    <formulas>
+        <name>Document_troubleshootingcauseresolution</name>
+        <dataType>String</dataType>
+        <expression>{!myComplaintQualification.HRCSVC_Document_troubleshooting__c}</expression>
+    </formulas>
     <interviewLabel>Manage Complaint {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Manage Complaint</label>
     <processMetadataValues>
@@ -1515,6 +1487,47 @@
         <showHeader>true</showHeader>
     </screens>
     <screens>
+        <name>Fault_Screen</name>
+        <label>Fault Screen</label>
+        <locationX>190</locationX>
+        <locationY>1235</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>false</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>Injury_Death_VR_Display</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 11.36px; font-family: Arial, Helvetica, sans-serif; color: rgb(0, 0, 0);&quot;&gt;Complaint cannot be created if the Injury or Death field is set to blank value&lt;/span&gt;&lt;span style=&quot;font-size: 14px; font-family: Arial, Helvetica, sans-serif; color: rgb(0, 0, 0);&quot;&gt;&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>Injury_or_Death</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <stringValue>Blank</stringValue>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
+        </fields>
+        <fields>
+            <name>Condition_VR_display</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 11.36px; font-family: Arial, Helvetica, sans-serif; color: rgb(0, 0, 0);&quot;&gt;Complaint cannot be created if the condition field is set to blank&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>Condition</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <stringValue>Blank</stringValue>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
         <description>Please Check the associated case and fill KB Article field</description>
         <name>KB_Article_Is_Not_There_Please_Check</name>
         <label>KB Article Is Not There Please Check</label>
@@ -1553,13 +1566,13 @@
     <screens>
         <name>Qualification_Form</name>
         <label>Qualification Form</label>
-        <locationX>256</locationX>
-        <locationY>1067</locationY>
+        <locationX>443</locationX>
+        <locationY>868</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
         <connector>
-            <targetReference>Assign_QC_from_Qualification_Screen</targetReference>
+            <targetReference>Check_User_s_input</targetReference>
         </connector>
         <fields>
             <name>Qualification_Form_Section1</name>
@@ -1623,6 +1636,28 @@
                     <isRequired>true</isRequired>
                 </fields>
                 <fields>
+                    <name>Describe_Malfunction_Event</name>
+                    <dataType>String</dataType>
+                    <defaultValue>
+                        <elementReference>myComplaintQualification.HRCSVC_Describe_Malfunction_Event__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Describe Malfunction/Event</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>true</isRequired>
+                </fields>
+                <fields>
+                    <name>Describe_Cause_Troubleshooting</name>
+                    <dataType>String</dataType>
+                    <fieldText>Describe Cause, Troubleshooting</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>false</isRequired>
+                </fields>
+                <fields>
+                    <name>Document_troubleshooting_resolution</name>
+                    <fieldText>&lt;p&gt;Document troubleshooting, cause, resolution: {!Document_troubleshootingcauseresolution}&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
                     <name>Injury_or_Death</name>
                     <choiceReferences>injuryOrDeath</choiceReferences>
                     <dataType>String</dataType>
@@ -1644,41 +1679,18 @@
                     <isRequired>true</isRequired>
                 </fields>
                 <fields>
-                    <name>Document_troubleshooting_cause_resolution</name>
+                    <name>Describe_Other_Condition</name>
                     <dataType>String</dataType>
-                    <defaultValue>
-                        <elementReference>myComplaintQualification.HRCSVC_Document_troubleshooting__c</elementReference>
-                    </defaultValue>
-                    <fieldText>Document troubleshooting, cause, resolution:</fieldText>
+                    <fieldText>Describe Other Condition</fieldText>
                     <fieldType>InputField</fieldType>
-                    <isRequired>false</isRequired>
-                </fields>
-                <fields>
-                    <name>Functioning_as_designed_post_repair</name>
-                    <choiceReferences>functioningAsDesigned</choiceReferences>
-                    <choiceReferences>functioningAsDesignedDefault</choiceReferences>
-                    <dataType>String</dataType>
-                    <defaultSelectedChoiceReference>functioningAsDesignedDefault</defaultSelectedChoiceReference>
-                    <fieldText>Functioning as designed post repair:</fieldText>
-                    <fieldType>RadioButtons</fieldType>
-                    <isRequired>false</isRequired>
-                </fields>
-                <fields>
-                    <name>Explain_If_No</name>
-                    <dataType>String</dataType>
-                    <defaultValue>
-                        <elementReference>myComplaintQualification.HRCSVC_Explain_if_No__c</elementReference>
-                    </defaultValue>
-                    <fieldText>Explain If No:</fieldText>
-                    <fieldType>InputField</fieldType>
-                    <isRequired>false</isRequired>
+                    <isRequired>true</isRequired>
                     <visibilityRule>
                         <conditionLogic>and</conditionLogic>
                         <conditions>
-                            <leftValueReference>Functioning_as_designed_post_repair</leftValueReference>
+                            <leftValueReference>Condition</leftValueReference>
                             <operator>EqualTo</operator>
                             <rightValue>
-                                <stringValue>No</stringValue>
+                                <stringValue>Other</stringValue>
                             </rightValue>
                         </conditions>
                     </visibilityRule>
@@ -1692,9 +1704,9 @@
                     </defaultValue>
                     <fieldText>Did device provide any audible or visual message/ alerts prior to the alleged event?</fieldText>
                     <fieldType>DropdownBox</fieldType>
-                    <isRequired>true</isRequired>
+                    <isRequired>false</isRequired>
                     <visibilityRule>
-                        <conditionLogic>(1 AND 2) OR 3 OR 4</conditionLogic>
+                        <conditionLogic>(1 OR 5) AND (2) OR 3 OR 4</conditionLogic>
                         <conditions>
                             <leftValueReference>Injury_or_Death</leftValueReference>
                             <operator>EqualTo</operator>
@@ -1720,7 +1732,14 @@
                             <leftValueReference>Injury_or_Death</leftValueReference>
                             <operator>EqualTo</operator>
                             <rightValue>
-                                <stringValue>Injury</stringValue>
+                                <stringValue>Injury/Other Patient Involvement</stringValue>
+                            </rightValue>
+                        </conditions>
+                        <conditions>
+                            <leftValueReference>injuryOrDeath</leftValueReference>
+                            <operator>NotEqualTo</operator>
+                            <rightValue>
+                                <stringValue>Asked but not Provided</stringValue>
                             </rightValue>
                         </conditions>
                     </visibilityRule>
@@ -1746,81 +1765,119 @@
                     </visibilityRule>
                 </fields>
                 <fields>
-                    <name>Whatinjury</name>
+                    <name>Occurrence_Location2</name>
+                    <choiceReferences>OccurrenceLocationPicklist</choiceReferences>
                     <dataType>String</dataType>
                     <defaultValue>
-                        <elementReference>myComplaintQualification.HRCSVC_What_was_the_Injury__c</elementReference>
+                        <elementReference>myComplaintQualification.HRCSVC_Occurrence_Location_Complaint__c</elementReference>
                     </defaultValue>
-                    <fieldText>What was the Injury?</fieldText>
-                    <fieldType>InputField</fieldType>
+                    <fieldText>Occurrence Location</fieldText>
+                    <fieldType>DropdownBox</fieldType>
                     <isRequired>false</isRequired>
                     <visibilityRule>
-                        <conditionLogic>and</conditionLogic>
+                        <conditionLogic>(1 OR 5) AND (2) OR 3 OR 4</conditionLogic>
                         <conditions>
                             <leftValueReference>Injury_or_Death</leftValueReference>
                             <operator>EqualTo</operator>
                             <rightValue>
-                                <stringValue>Injury</stringValue>
+                                <stringValue>No</stringValue>
+                            </rightValue>
+                        </conditions>
+                        <conditions>
+                            <leftValueReference>Condition</leftValueReference>
+                            <operator>NotEqualTo</operator>
+                            <rightValue>
+                                <stringValue>None</stringValue>
+                            </rightValue>
+                        </conditions>
+                        <conditions>
+                            <leftValueReference>Injury_or_Death</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <stringValue>Injury/Other Patient Involvement</stringValue>
+                            </rightValue>
+                        </conditions>
+                        <conditions>
+                            <leftValueReference>Injury_or_Death</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <stringValue>Death</stringValue>
+                            </rightValue>
+                        </conditions>
+                        <conditions>
+                            <leftValueReference>injuryOrDeath</leftValueReference>
+                            <operator>NotEqualTo</operator>
+                            <rightValue>
+                                <stringValue>Asked but not Provided</stringValue>
                             </rightValue>
                         </conditions>
                     </visibilityRule>
                 </fields>
                 <fields>
-                    <name>How_did_the_injury_occur</name>
+                    <name>Provide_Occurrence_Location</name>
                     <dataType>String</dataType>
                     <defaultValue>
-                        <elementReference>myComplaintQualification.HRCSVC_How_did_the_injury_occur__c</elementReference>
+                        <elementReference>myComplaintQualification.HRCSVC_Occurrence_Location_Other__c</elementReference>
                     </defaultValue>
-                    <fieldText>How did the injury occur?</fieldText>
+                    <fieldText>Provide Occurrence Location</fieldText>
                     <fieldType>InputField</fieldType>
                     <isRequired>false</isRequired>
                     <visibilityRule>
                         <conditionLogic>and</conditionLogic>
                         <conditions>
-                            <leftValueReference>Injury_or_Death</leftValueReference>
+                            <leftValueReference>Occurrence_Location2</leftValueReference>
                             <operator>EqualTo</operator>
                             <rightValue>
-                                <stringValue>Injury</stringValue>
+                                <stringValue>Other</stringValue>
                             </rightValue>
                         </conditions>
                     </visibilityRule>
                 </fields>
                 <fields>
-                    <name>Is_the_date_of_the_injury_known</name>
-                    <choiceReferences>DateOfInjuryDefault</choiceReferences>
-                    <choiceReferences>Date_of_Injury</choiceReferences>
+                    <name>Was_the_operator_of_the_device_a_healthcare_professional_Dr_Nurse_Therapist</name>
+                    <choiceReferences>HealthcareProfessionalPicklist</choiceReferences>
                     <dataType>String</dataType>
-                    <defaultSelectedChoiceReference>Date_of_Injury</defaultSelectedChoiceReference>
-                    <fieldText>Is the date of the injury known?</fieldText>
+                    <defaultValue>
+                        <elementReference>myComplaintQualification.HRCSVC_Healthcare_Professional__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Was the operator of the device a healthcare professional (Dr/Nurse/Therapist)?</fieldText>
                     <fieldType>DropdownBox</fieldType>
                     <isRequired>true</isRequired>
                     <visibilityRule>
-                        <conditionLogic>and</conditionLogic>
+                        <conditionLogic>(1 OR 5) AND (2)  OR 3 OR 4</conditionLogic>
                         <conditions>
                             <leftValueReference>Injury_or_Death</leftValueReference>
                             <operator>EqualTo</operator>
                             <rightValue>
-                                <stringValue>Injury</stringValue>
+                                <stringValue>No</stringValue>
                             </rightValue>
                         </conditions>
-                    </visibilityRule>
-                </fields>
-                <fields>
-                    <name>Date_of_the_Event1</name>
-                    <dataType>Date</dataType>
-                    <defaultValue>
-                        <elementReference>myComplaintQualification.HRCSVC_Date_of_the_Event__c</elementReference>
-                    </defaultValue>
-                    <fieldText>Date of the Event</fieldText>
-                    <fieldType>InputField</fieldType>
-                    <isRequired>false</isRequired>
-                    <visibilityRule>
-                        <conditionLogic>and</conditionLogic>
                         <conditions>
-                            <leftValueReference>Is_the_date_of_the_injury_known</leftValueReference>
+                            <leftValueReference>Condition</leftValueReference>
+                            <operator>NotEqualTo</operator>
+                            <rightValue>
+                                <stringValue>None</stringValue>
+                            </rightValue>
+                        </conditions>
+                        <conditions>
+                            <leftValueReference>Injury_or_Death</leftValueReference>
                             <operator>EqualTo</operator>
                             <rightValue>
-                                <stringValue>Yes</stringValue>
+                                <stringValue>Injury/Other Patient Involvement</stringValue>
+                            </rightValue>
+                        </conditions>
+                        <conditions>
+                            <leftValueReference>Injury_or_Death</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <stringValue>Death</stringValue>
+                            </rightValue>
+                        </conditions>
+                        <conditions>
+                            <leftValueReference>injuryOrDeath</leftValueReference>
+                            <operator>NotEqualTo</operator>
+                            <rightValue>
+                                <stringValue>Asked but not Provided</stringValue>
                             </rightValue>
                         </conditions>
                     </visibilityRule>
@@ -1836,7 +1893,7 @@
                     <fieldType>DropdownBox</fieldType>
                     <isRequired>true</isRequired>
                     <visibilityRule>
-                        <conditionLogic>and</conditionLogic>
+                        <conditionLogic>1</conditionLogic>
                         <conditions>
                             <leftValueReference>Injury_or_Death</leftValueReference>
                             <operator>EqualTo</operator>
@@ -1847,42 +1904,21 @@
                     </visibilityRule>
                 </fields>
                 <fields>
-                    <name>Is_the_cause_of_the_death_known</name>
-                    <choiceReferences>IsthecauseofthedeathknownDefault</choiceReferences>
-                    <dataType>String</dataType>
-                    <defaultValue>
-                        <elementReference>myComplaintQualification.HRCSVC_Is_the_cause_of_the_death_known__c</elementReference>
-                    </defaultValue>
-                    <fieldText>Is the cause of the death known?</fieldText>
-                    <fieldType>DropdownBox</fieldType>
-                    <isRequired>true</isRequired>
-                    <visibilityRule>
-                        <conditionLogic>and</conditionLogic>
-                        <conditions>
-                            <leftValueReference>Injury_or_Death</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Death</stringValue>
-                            </rightValue>
-                        </conditions>
-                    </visibilityRule>
-                </fields>
-                <fields>
-                    <name>what_was_the_cause_of_death</name>
+                    <name>What_was_the_determined_cause_of_death_if_known</name>
                     <dataType>String</dataType>
                     <defaultValue>
                         <elementReference>myComplaintQualification.HRCSVC_Cause_of_death_if_known__c</elementReference>
                     </defaultValue>
-                    <fieldText>What was the cause of death?</fieldText>
+                    <fieldText>What was the determined cause of death, if known?</fieldText>
                     <fieldType>InputField</fieldType>
                     <isRequired>false</isRequired>
                     <visibilityRule>
-                        <conditionLogic>or</conditionLogic>
+                        <conditionLogic>1</conditionLogic>
                         <conditions>
-                            <leftValueReference>Is_the_cause_of_the_death_known</leftValueReference>
+                            <leftValueReference>Injury_or_Death</leftValueReference>
                             <operator>EqualTo</operator>
                             <rightValue>
-                                <stringValue>Yes</stringValue>
+                                <stringValue>Death</stringValue>
                             </rightValue>
                         </conditions>
                     </visibilityRule>
@@ -1929,680 +1965,6 @@
                     </visibilityRule>
                 </fields>
                 <fields>
-                    <name>Was_medical_treatment_intervention_provided</name>
-                    <choiceReferences>WasMedicalTreatmentProvidedDefault</choiceReferences>
-                    <dataType>String</dataType>
-                    <defaultValue>
-                        <elementReference>myComplaintQualification.HRCSVC_medical_treatment_intervention__c</elementReference>
-                    </defaultValue>
-                    <fieldText>Was medical treatment/intervention provided?</fieldText>
-                    <fieldType>DropdownBox</fieldType>
-                    <isRequired>true</isRequired>
-                    <visibilityRule>
-                        <conditionLogic>((1 OR 2) AND 5) OR ((3 OR 4) AND 6)</conditionLogic>
-                        <conditions>
-                            <leftValueReference>Is_the_date_of_the_injury_known</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Yes</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Is_the_date_of_the_injury_known</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Unknown</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Is_the_cause_of_the_death_known</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Yes</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Is_the_cause_of_the_death_known</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Unknown</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Injury_or_Death</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Injury</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Injury_or_Death</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Death</stringValue>
-                            </rightValue>
-                        </conditions>
-                    </visibilityRule>
-                </fields>
-                <fields>
-                    <name>What_was_the_medical_treatment_or_intervention_provided</name>
-                    <dataType>String</dataType>
-                    <defaultValue>
-                        <elementReference>myComplaintQualification.HRCSVC_Medical_Treatment_or_Intervention__c</elementReference>
-                    </defaultValue>
-                    <fieldText>What was the medical treatment or intervention provided?</fieldText>
-                    <fieldType>InputField</fieldType>
-                    <isRequired>false</isRequired>
-                    <visibilityRule>
-                        <conditionLogic>and</conditionLogic>
-                        <conditions>
-                            <leftValueReference>Was_medical_treatment_intervention_provided</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Yes</stringValue>
-                            </rightValue>
-                        </conditions>
-                    </visibilityRule>
-                </fields>
-                <fields>
-                    <name>Individual_s_Outcome</name>
-                    <choiceReferences>IndividualsOutcomeValues</choiceReferences>
-                    <dataType>String</dataType>
-                    <defaultValue>
-                        <elementReference>myComplaintQualification.HRCSVC_Individual_s_Outcome__c</elementReference>
-                    </defaultValue>
-                    <fieldText>Individual&apos;s Outcome</fieldText>
-                    <fieldType>DropdownBox</fieldType>
-                    <isRequired>true</isRequired>
-                    <visibilityRule>
-                        <conditionLogic>and</conditionLogic>
-                        <conditions>
-                            <leftValueReference>Was_medical_treatment_intervention_provided</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Yes</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Injury_or_Death</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Injury</stringValue>
-                            </rightValue>
-                        </conditions>
-                    </visibilityRule>
-                </fields>
-                <fields>
-                    <name>Was_there_a_delay_in_the_individual_s_treatment_or_procedure_because_of_the_repo</name>
-                    <choiceReferences>MedicalTreatmentProvided</choiceReferences>
-                    <dataType>String</dataType>
-                    <defaultValue>
-                        <elementReference>myComplaintQualification.HRCSVC_Delay_in_Individual_Treatment__c</elementReference>
-                    </defaultValue>
-                    <fieldText>Was there a delay in the individual&apos;s treatment or procedure because of the reported issue?</fieldText>
-                    <fieldType>DropdownBox</fieldType>
-                    <isRequired>true</isRequired>
-                    <visibilityRule>
-                        <conditionLogic>(1 AND (2 OR 3)) OR 4</conditionLogic>
-                        <conditions>
-                            <leftValueReference>Injury_or_Death</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Injury</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Is_the_date_of_the_injury_known</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Yes</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Is_the_date_of_the_injury_known</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Unknown</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Injury_or_Death</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Death</stringValue>
-                            </rightValue>
-                        </conditions>
-                    </visibilityRule>
-                </fields>
-                <fields>
-                    <name>Enter_details_of_the_delayed_treatment_or_procedure</name>
-                    <dataType>String</dataType>
-                    <defaultValue>
-                        <elementReference>myComplaintQualification.HRCSVC_Delay_in_treatment_or_Procedure__c</elementReference>
-                    </defaultValue>
-                    <fieldText>Enter details of the delayed treatment or procedure</fieldText>
-                    <fieldType>InputField</fieldType>
-                    <isRequired>false</isRequired>
-                    <visibilityRule>
-                        <conditionLogic>or</conditionLogic>
-                        <conditions>
-                            <leftValueReference>Was_there_a_delay_in_the_individual_s_treatment_or_procedure_because_of_the_repo</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Yes</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Was_there_a_delay_in_the_individual_s_treatment_or_procedure_because_of_the_repo</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Unknown</stringValue>
-                            </rightValue>
-                        </conditions>
-                    </visibilityRule>
-                </fields>
-                <fields>
-                    <name>What_is_the_individual_s_current_medical_diagnosis_and_medical_history</name>
-                    <dataType>String</dataType>
-                    <defaultValue>
-                        <elementReference>myComplaintQualification.HRCSVC_Individual_s_Medical_Diagnosis__c</elementReference>
-                    </defaultValue>
-                    <fieldText>What is the individual’s current medical diagnosis and medical history?</fieldText>
-                    <fieldType>InputField</fieldType>
-                    <isRequired>false</isRequired>
-                    <visibilityRule>
-                        <conditionLogic>(1 AND (2 OR 3)) OR (4 AND (5 OR 6))</conditionLogic>
-                        <conditions>
-                            <leftValueReference>Injury_or_Death</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Injury</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Is_the_date_of_the_injury_known</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Yes</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Is_the_date_of_the_injury_known</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Unknown</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Injury_or_Death</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Death</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Is_the_cause_of_the_death_known</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Yes</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Is_the_cause_of_the_death_known</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Unknown</stringValue>
-                            </rightValue>
-                        </conditions>
-                    </visibilityRule>
-                </fields>
-                <fields>
-                    <name>What_is_the_individual_s_gender</name>
-                    <choiceReferences>Gender</choiceReferences>
-                    <dataType>String</dataType>
-                    <defaultValue>
-                        <elementReference>myComplaintQualification.HRCSVC_Gender__c</elementReference>
-                    </defaultValue>
-                    <fieldText>What is the individual’s gender?</fieldText>
-                    <fieldType>DropdownBox</fieldType>
-                    <isRequired>true</isRequired>
-                    <visibilityRule>
-                        <conditionLogic>(1 AND (2 OR 3)) OR (4 AND (5 OR 6))</conditionLogic>
-                        <conditions>
-                            <leftValueReference>Injury_or_Death</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Injury</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Is_the_date_of_the_injury_known</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Yes</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Is_the_date_of_the_injury_known</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Unknown</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Injury_or_Death</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Death</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Is_the_cause_of_the_death_known</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Yes</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Is_the_cause_of_the_death_known</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Unknown</stringValue>
-                            </rightValue>
-                        </conditions>
-                    </visibilityRule>
-                </fields>
-                <fields>
-                    <name>What_is_the_individual_s_age</name>
-                    <dataType>Number</dataType>
-                    <defaultValue>
-                        <elementReference>myComplaintQualification.HRCSVC_Age__c</elementReference>
-                    </defaultValue>
-                    <fieldText>What is the individual&apos;s age?</fieldText>
-                    <fieldType>InputField</fieldType>
-                    <isRequired>false</isRequired>
-                    <scale>0</scale>
-                    <visibilityRule>
-                        <conditionLogic>(1 AND (2 OR 3)) OR (4 AND (5 OR 6))</conditionLogic>
-                        <conditions>
-                            <leftValueReference>Injury_or_Death</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Injury</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Is_the_date_of_the_injury_known</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Yes</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Is_the_date_of_the_injury_known</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Unknown</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Injury_or_Death</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Death</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Is_the_cause_of_the_death_known</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Yes</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Is_the_cause_of_the_death_known</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Unknown</stringValue>
-                            </rightValue>
-                        </conditions>
-                    </visibilityRule>
-                </fields>
-                <fields>
-                    <name>Age_Unit_Of_Measure</name>
-                    <choiceReferences>AgeUnitOfMeasureDefault</choiceReferences>
-                    <dataType>String</dataType>
-                    <defaultValue>
-                        <elementReference>myComplaintQualification.HRCSVC_Age_unit_of_measure__c</elementReference>
-                    </defaultValue>
-                    <fieldText>Age Unit Of Measure</fieldText>
-                    <fieldType>DropdownBox</fieldType>
-                    <isRequired>true</isRequired>
-                    <visibilityRule>
-                        <conditionLogic>(1 AND (2 OR 3)) OR (4 AND (5 OR 6))</conditionLogic>
-                        <conditions>
-                            <leftValueReference>Injury_or_Death</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Injury</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Is_the_date_of_the_injury_known</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Yes</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Is_the_date_of_the_injury_known</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Unknown</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Injury_or_Death</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Death</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Is_the_cause_of_the_death_known</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Yes</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Is_the_cause_of_the_death_known</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Unknown</stringValue>
-                            </rightValue>
-                        </conditions>
-                    </visibilityRule>
-                </fields>
-                <fields>
-                    <name>What_is_the_individual_s_weight</name>
-                    <dataType>Number</dataType>
-                    <defaultValue>
-                        <elementReference>myComplaintQualification.HRCSVC_Weight__c</elementReference>
-                    </defaultValue>
-                    <fieldText>What is the individual&apos;s weight?</fieldText>
-                    <fieldType>InputField</fieldType>
-                    <isRequired>false</isRequired>
-                    <scale>0</scale>
-                    <visibilityRule>
-                        <conditionLogic>(1 AND (2 OR 3)) OR (4 AND (5 OR 6))</conditionLogic>
-                        <conditions>
-                            <leftValueReference>Injury_or_Death</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Injury</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Is_the_date_of_the_injury_known</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Yes</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Is_the_date_of_the_injury_known</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Unknown</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Injury_or_Death</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Death</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Is_the_cause_of_the_death_known</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Yes</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Is_the_cause_of_the_death_known</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Unknown</stringValue>
-                            </rightValue>
-                        </conditions>
-                    </visibilityRule>
-                </fields>
-                <fields>
-                    <name>Weight_Unit_Of_Measure</name>
-                    <choiceReferences>WeightUnitOfMeasureDefault</choiceReferences>
-                    <dataType>String</dataType>
-                    <defaultValue>
-                        <elementReference>myComplaintQualification.HRCSVC_Weight_unit_of_measure__c</elementReference>
-                    </defaultValue>
-                    <fieldText>Weight Unit Of Measure</fieldText>
-                    <fieldType>DropdownBox</fieldType>
-                    <isRequired>true</isRequired>
-                    <visibilityRule>
-                        <conditionLogic>(1 AND (2 OR 3)) OR (4 AND (5 OR 6))</conditionLogic>
-                        <conditions>
-                            <leftValueReference>Injury_or_Death</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Injury</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Is_the_date_of_the_injury_known</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Yes</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Is_the_date_of_the_injury_known</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Unknown</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Injury_or_Death</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Death</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Is_the_cause_of_the_death_known</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Yes</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Is_the_cause_of_the_death_known</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Unknown</stringValue>
-                            </rightValue>
-                        </conditions>
-                    </visibilityRule>
-                </fields>
-                <fields>
-                    <name>Indicate_if_any_of_the_following_events_occurred_to_the_individual_as_a_result_o</name>
-                    <choiceReferences>EventOccurredAllegationPicklist</choiceReferences>
-                    <dataType>String</dataType>
-                    <defaultValue>
-                        <elementReference>myComplaintQualification.HRCSVC_Events_Occurred_Allegation__c</elementReference>
-                    </defaultValue>
-                    <fieldText>Indicate if any of the following events occurred to the individual as a result of the allegation</fieldText>
-                    <fieldType>MultiSelectPicklist</fieldType>
-                    <isRequired>true</isRequired>
-                    <visibilityRule>
-                        <conditionLogic>(1 AND 2) OR 3 OR 4</conditionLogic>
-                        <conditions>
-                            <leftValueReference>Injury_or_Death</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>No</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Condition</leftValueReference>
-                            <operator>NotEqualTo</operator>
-                            <rightValue>
-                                <stringValue>None</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Injury_or_Death</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Injury</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Injury_or_Death</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Death</stringValue>
-                            </rightValue>
-                        </conditions>
-                    </visibilityRule>
-                </fields>
-                <fields>
-                    <name>Indicate_the_event_in_detail_that_occurred_as_a_result_of_the_allegation</name>
-                    <dataType>String</dataType>
-                    <defaultValue>
-                        <elementReference>myComplaintQualification.HRCSVC_Event_Allegation_Details__c</elementReference>
-                    </defaultValue>
-                    <fieldText>Indicate the event in detail, that occurred as a result of the allegation</fieldText>
-                    <fieldType>InputField</fieldType>
-                    <isRequired>true</isRequired>
-                    <visibilityRule>
-                        <conditionLogic>and</conditionLogic>
-                        <conditions>
-                            <leftValueReference>Indicate_if_any_of_the_following_events_occurred_to_the_individual_as_a_result_o</leftValueReference>
-                            <operator>Contains</operator>
-                            <rightValue>
-                                <stringValue>Other</stringValue>
-                            </rightValue>
-                        </conditions>
-                    </visibilityRule>
-                </fields>
-                <fields>
-                    <name>Occurrence_Location2</name>
-                    <choiceReferences>OccurrenceLocationPicklist</choiceReferences>
-                    <dataType>String</dataType>
-                    <defaultValue>
-                        <elementReference>myComplaintQualification.HRCSVC_Occurrence_Location_Complaint__c</elementReference>
-                    </defaultValue>
-                    <fieldText>Occurrence Location</fieldText>
-                    <fieldType>DropdownBox</fieldType>
-                    <isRequired>true</isRequired>
-                    <visibilityRule>
-                        <conditionLogic>(1 AND 2) OR 3 OR 4</conditionLogic>
-                        <conditions>
-                            <leftValueReference>Injury_or_Death</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>No</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Condition</leftValueReference>
-                            <operator>NotEqualTo</operator>
-                            <rightValue>
-                                <stringValue>None</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Injury_or_Death</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Injury</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Injury_or_Death</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Death</stringValue>
-                            </rightValue>
-                        </conditions>
-                    </visibilityRule>
-                </fields>
-                <fields>
-                    <name>Occurrence_Location_Other</name>
-                    <dataType>String</dataType>
-                    <defaultValue>
-                        <elementReference>myComplaintQualification.HRCSVC_Occurrence_Location_Other__c</elementReference>
-                    </defaultValue>
-                    <fieldText>Occurrence Location Other</fieldText>
-                    <fieldType>InputField</fieldType>
-                    <isRequired>true</isRequired>
-                    <visibilityRule>
-                        <conditionLogic>and</conditionLogic>
-                        <conditions>
-                            <leftValueReference>Occurrence_Location2</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Other</stringValue>
-                            </rightValue>
-                        </conditions>
-                    </visibilityRule>
-                </fields>
-                <fields>
-                    <name>Was_the_operator_of_the_device_a_healthcare_professional_Dr_Nurse_Therapist</name>
-                    <choiceReferences>HealthcareProfessionalPicklist</choiceReferences>
-                    <dataType>String</dataType>
-                    <defaultValue>
-                        <elementReference>myComplaintQualification.HRCSVC_Healthcare_Professional__c</elementReference>
-                    </defaultValue>
-                    <fieldText>Was the operator of the device a healthcare professional (Dr/Nurse/Therapist)?</fieldText>
-                    <fieldType>DropdownBox</fieldType>
-                    <isRequired>true</isRequired>
-                    <visibilityRule>
-                        <conditionLogic>(1 AND 2)  OR 3 OR 4</conditionLogic>
-                        <conditions>
-                            <leftValueReference>Injury_or_Death</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>No</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Condition</leftValueReference>
-                            <operator>NotEqualTo</operator>
-                            <rightValue>
-                                <stringValue>None</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Injury_or_Death</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Injury</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Injury_or_Death</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Death</stringValue>
-                            </rightValue>
-                        </conditions>
-                    </visibilityRule>
-                </fields>
-                <fields>
                     <name>Is_the_occurrence_date_of_the_event_known</name>
                     <choiceReferences>OccurrenceDateKnownPicklist</choiceReferences>
                     <dataType>String</dataType>
@@ -2613,7 +1975,7 @@
                     <fieldType>DropdownBox</fieldType>
                     <isRequired>true</isRequired>
                     <visibilityRule>
-                        <conditionLogic>and</conditionLogic>
+                        <conditionLogic>1 AND 2</conditionLogic>
                         <conditions>
                             <leftValueReference>Injury_or_Death</leftValueReference>
                             <operator>EqualTo</operator>
@@ -2672,7 +2034,7 @@
                     </defaultValue>
                     <fieldText>Contact Details</fieldText>
                     <fieldType>InputField</fieldType>
-                    <isRequired>true</isRequired>
+                    <isRequired>false</isRequired>
                     <visibilityRule>
                         <conditionLogic>and</conditionLogic>
                         <conditions>
@@ -2687,6 +2049,332 @@
                             <operator>NotEqualTo</operator>
                             <rightValue>
                                 <stringValue>None</stringValue>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <fields>
+                    <name>Whatinjury</name>
+                    <dataType>String</dataType>
+                    <defaultValue>
+                        <elementReference>myComplaintQualification.HRCSVC_What_was_the_Injury__c</elementReference>
+                    </defaultValue>
+                    <fieldText>What was the Injury/Medical Condition/ Other Patient Involvement Reported?</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>false</isRequired>
+                    <visibilityRule>
+                        <conditionLogic>and</conditionLogic>
+                        <conditions>
+                            <leftValueReference>Injury_or_Death</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <stringValue>Injury/Other Patient Involvement</stringValue>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <fields>
+                    <name>Is_the_date_of_the_injury_known</name>
+                    <choiceReferences>DateOfInjuryDefault</choiceReferences>
+                    <choiceReferences>Date_of_Injury</choiceReferences>
+                    <dataType>String</dataType>
+                    <defaultSelectedChoiceReference>Date_of_Injury</defaultSelectedChoiceReference>
+                    <fieldText>Is the Date of Adverse Event/Injury known?</fieldText>
+                    <fieldType>DropdownBox</fieldType>
+                    <isRequired>true</isRequired>
+                    <visibilityRule>
+                        <conditionLogic>and</conditionLogic>
+                        <conditions>
+                            <leftValueReference>Injury_or_Death</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <stringValue>Injury/Other Patient Involvement</stringValue>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <fields>
+                    <name>Date_of_the_Event1</name>
+                    <dataType>Date</dataType>
+                    <defaultValue>
+                        <elementReference>myComplaintQualification.HRCSVC_Date_of_the_Event__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Date of the Event</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>false</isRequired>
+                    <visibilityRule>
+                        <conditionLogic>and</conditionLogic>
+                        <conditions>
+                            <leftValueReference>Is_the_date_of_the_injury_known</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <stringValue>Yes</stringValue>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <fields>
+                    <name>What_was_the_medical_treatment_or_intervention_provided</name>
+                    <dataType>String</dataType>
+                    <defaultValue>
+                        <elementReference>myComplaintQualification.HRCSVC_Medical_Treatment_or_Intervention__c</elementReference>
+                    </defaultValue>
+                    <fieldText>What Medical Treatment/Intervention, if any, was Provided?</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>false</isRequired>
+                    <visibilityRule>
+                        <conditionLogic>1 OR 2</conditionLogic>
+                        <conditions>
+                            <leftValueReference>Injury_or_Death</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <stringValue>Injury/Other Patient Involvement</stringValue>
+                            </rightValue>
+                        </conditions>
+                        <conditions>
+                            <leftValueReference>Injury_or_Death</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <stringValue>Death</stringValue>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <fields>
+                    <name>Individual_s_Outcome</name>
+                    <choiceReferences>IndividualsOutcomeValues</choiceReferences>
+                    <dataType>String</dataType>
+                    <defaultValue>
+                        <elementReference>myComplaintQualification.HRCSVC_Individual_s_Outcome__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Individual&apos;s Outcome</fieldText>
+                    <fieldType>DropdownBox</fieldType>
+                    <isRequired>true</isRequired>
+                    <visibilityRule>
+                        <conditionLogic>1</conditionLogic>
+                        <conditions>
+                            <leftValueReference>Injury_or_Death</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <stringValue>Injury/Other Patient Involvement</stringValue>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <fields>
+                    <name>Enter_details_of_the_delayed_treatment_or_procedure</name>
+                    <dataType>String</dataType>
+                    <defaultValue>
+                        <elementReference>myComplaintQualification.HRCSVC_Delay_in_treatment_or_Procedure__c</elementReference>
+                    </defaultValue>
+                    <fieldText>If any delay in treatment or procedure occurred, enter details</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>false</isRequired>
+                    <visibilityRule>
+                        <conditionLogic>1 OR 2</conditionLogic>
+                        <conditions>
+                            <leftValueReference>Injury_or_Death</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <stringValue>Injury/Other Patient Involvement</stringValue>
+                            </rightValue>
+                        </conditions>
+                        <conditions>
+                            <leftValueReference>Injury_or_Death</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <stringValue>Death</stringValue>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <fields>
+                    <name>What_is_the_individual_s_current_medical_diagnosis_and_medical_history</name>
+                    <dataType>String</dataType>
+                    <defaultValue>
+                        <elementReference>myComplaintQualification.HRCSVC_Individual_s_Medical_Diagnosis__c</elementReference>
+                    </defaultValue>
+                    <fieldText>What is the individual’s current medical diagnosis and medical history?</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>false</isRequired>
+                    <visibilityRule>
+                        <conditionLogic>1 OR 2</conditionLogic>
+                        <conditions>
+                            <leftValueReference>Injury_or_Death</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <stringValue>Injury/Other Patient Involvement</stringValue>
+                            </rightValue>
+                        </conditions>
+                        <conditions>
+                            <leftValueReference>Injury_or_Death</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <stringValue>Death</stringValue>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <fields>
+                    <name>Patient_Identifier_Person_Impacted_first_last_name</name>
+                    <dataType>String</dataType>
+                    <fieldText>Patient Identifier/Person Impacted (first/last name)</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>false</isRequired>
+                    <visibilityRule>
+                        <conditionLogic>or</conditionLogic>
+                        <conditions>
+                            <leftValueReference>Injury_or_Death</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <stringValue>Injury/Other Patient Involvement</stringValue>
+                            </rightValue>
+                        </conditions>
+                        <conditions>
+                            <leftValueReference>Injury_or_Death</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <stringValue>Death</stringValue>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <fields>
+                    <name>What_is_the_individual_s_gender</name>
+                    <choiceReferences>Gender</choiceReferences>
+                    <dataType>String</dataType>
+                    <defaultValue>
+                        <elementReference>myComplaintQualification.HRCSVC_Gender__c</elementReference>
+                    </defaultValue>
+                    <fieldText>What is the individual’s gender?</fieldText>
+                    <fieldType>DropdownBox</fieldType>
+                    <isRequired>true</isRequired>
+                    <visibilityRule>
+                        <conditionLogic>1 OR 2</conditionLogic>
+                        <conditions>
+                            <leftValueReference>Injury_or_Death</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <stringValue>Injury/Other Patient Involvement</stringValue>
+                            </rightValue>
+                        </conditions>
+                        <conditions>
+                            <leftValueReference>Injury_or_Death</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <stringValue>Death</stringValue>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <fields>
+                    <name>What_is_the_individual_s_age</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>myComplaintQualification.HRCSVC_Age__c</elementReference>
+                    </defaultValue>
+                    <fieldText>What is the individual&apos;s age?</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>false</isRequired>
+                    <scale>0</scale>
+                    <visibilityRule>
+                        <conditionLogic>1 OR 2</conditionLogic>
+                        <conditions>
+                            <leftValueReference>Injury_or_Death</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <stringValue>Injury/Other Patient Involvement</stringValue>
+                            </rightValue>
+                        </conditions>
+                        <conditions>
+                            <leftValueReference>Injury_or_Death</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <stringValue>Death</stringValue>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <fields>
+                    <name>Age_Unit_Of_Measure</name>
+                    <choiceReferences>AgeUnitOfMeasureDefault</choiceReferences>
+                    <dataType>String</dataType>
+                    <defaultValue>
+                        <elementReference>myComplaintQualification.HRCSVC_Age_unit_of_measure__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Age Unit Of Measure</fieldText>
+                    <fieldType>DropdownBox</fieldType>
+                    <isRequired>true</isRequired>
+                    <visibilityRule>
+                        <conditionLogic>1 OR 2</conditionLogic>
+                        <conditions>
+                            <leftValueReference>Injury_or_Death</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <stringValue>Injury/Other Patient Involvement</stringValue>
+                            </rightValue>
+                        </conditions>
+                        <conditions>
+                            <leftValueReference>Injury_or_Death</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <stringValue>Death</stringValue>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <fields>
+                    <name>What_is_the_individual_s_weight</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>myComplaintQualification.HRCSVC_Weight__c</elementReference>
+                    </defaultValue>
+                    <fieldText>What is the individual&apos;s weight?</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>false</isRequired>
+                    <scale>0</scale>
+                    <visibilityRule>
+                        <conditionLogic>1 OR 2</conditionLogic>
+                        <conditions>
+                            <leftValueReference>Injury_or_Death</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <stringValue>Injury/Other Patient Involvement</stringValue>
+                            </rightValue>
+                        </conditions>
+                        <conditions>
+                            <leftValueReference>Injury_or_Death</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <stringValue>Death</stringValue>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <fields>
+                    <name>Weight_Unit_Of_Measure</name>
+                    <choiceReferences>WeightUnitOfMeasureDefault</choiceReferences>
+                    <dataType>String</dataType>
+                    <defaultValue>
+                        <elementReference>myComplaintQualification.HRCSVC_Weight_unit_of_measure__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Weight Unit Of Measure</fieldText>
+                    <fieldType>DropdownBox</fieldType>
+                    <isRequired>true</isRequired>
+                    <visibilityRule>
+                        <conditionLogic>1 OR 2</conditionLogic>
+                        <conditions>
+                            <leftValueReference>Injury_or_Death</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <stringValue>Injury/Other Patient Involvement</stringValue>
+                            </rightValue>
+                        </conditions>
+                        <conditions>
+                            <leftValueReference>Injury_or_Death</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <stringValue>Death</stringValue>
                             </rightValue>
                         </conditions>
                     </visibilityRule>
@@ -2711,10 +2399,47 @@
         <locationY>801</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
-        <allowPause>true</allowPause>
+        <allowPause>false</allowPause>
         <connector>
             <targetReference>Resolution_Assignment</targetReference>
         </connector>
+        <fields>
+            <name>Functioning_as_designed_post_repair</name>
+            <choiceReferences>functioningAsDesigned</choiceReferences>
+            <choiceReferences>functioningAsDesignedDefault</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>functioningAsDesignedDefault</defaultSelectedChoiceReference>
+            <fieldText>Functioning as designed post repair:</fieldText>
+            <fieldType>RadioButtons</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Explain_If_No</name>
+            <dataType>String</dataType>
+            <defaultValue>
+                <elementReference>myComplaintQualification.HRCSVC_Explain_if_No__c</elementReference>
+            </defaultValue>
+            <fieldText>Explain If No:</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+            <visibilityRule>
+                <conditionLogic>1</conditionLogic>
+                <conditions>
+                    <leftValueReference>Functioning_as_designed_post_repair</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <stringValue>No</stringValue>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
+        </fields>
+        <fields>
+            <name>Resolution</name>
+            <dataType>String</dataType>
+            <fieldText>Resolution</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
         <fields>
             <name>Test_performed_per_service_manual</name>
             <choiceReferences>TestPerformedPicklist</choiceReferences>
@@ -2727,32 +2452,12 @@
             <isRequired>true</isRequired>
         </fields>
         <fields>
-            <name>Part_Serial_and_or_Revision_if_applicable</name>
-            <dataType>String</dataType>
-            <defaultValue>
-                <elementReference>myComplaintQualification.HRCSVC_Part_Serial_and_or_Revision__c</elementReference>
-            </defaultValue>
-            <fieldText>Part Serial # and/or Revision (if applicable):</fieldText>
-            <fieldType>InputField</fieldType>
-            <isRequired>false</isRequired>
-        </fields>
-        <fields>
             <name>Occurrence_Location</name>
             <dataType>String</dataType>
             <defaultValue>
                 <elementReference>myComplaintQualification.HRCSVC_Occurrence_Location__c</elementReference>
             </defaultValue>
             <fieldText>Occurrence Location</fieldText>
-            <fieldType>InputField</fieldType>
-            <isRequired>false</isRequired>
-        </fields>
-        <fields>
-            <name>Document_troubleshooting_cause_resolution_0</name>
-            <dataType>String</dataType>
-            <defaultValue>
-                <elementReference>myComplaintQualification.HRCSVC_Document_troubleshooting__c</elementReference>
-            </defaultValue>
-            <fieldText>Document troubleshooting, cause, resolution:</fieldText>
             <fieldType>InputField</fieldType>
             <isRequired>false</isRequired>
         </fields>
@@ -2836,7 +2541,7 @@
             <targetReference>Get_Case</targetReference>
         </connector>
     </start>
-    <status>Active</status>
+    <status>Draft</status>
     <variables>
         <description>Value from Related Asset Designed life field.</description>
         <name>Designedlifenew</name>

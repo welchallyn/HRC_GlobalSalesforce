@@ -11,11 +11,26 @@
     <valueSet>
         <restricted>true</restricted>
         <valueSetDefinition>
-            <sorted>true</sorted>
+            <sorted>false</sorted>
             <value>
-                <fullName>Cardio Rehab</fullName>
+                <fullName>Home</fullName>
                 <default>false</default>
-                <label>Cardio Rehab</label>
+                <label>Home</label>
+            </value>
+            <value>
+                <fullName>Nursing Home/Assisted Living</fullName>
+                <default>false</default>
+                <label>Nursing Home/Assisted Living</label>
+            </value>
+            <value>
+                <fullName>Surgical Room</fullName>
+                <default>false</default>
+                <label>Surgical Room</label>
+            </value>
+            <value>
+                <fullName>Patient Room</fullName>
+                <default>false</default>
+                <label>Patient Room</label>
             </value>
             <value>
                 <fullName>Dr. Office/Clinic</fullName>
@@ -28,34 +43,19 @@
                 <label>Emergency Room</label>
             </value>
             <value>
+                <fullName>Cardio Rehab</fullName>
+                <default>false</default>
+                <label>Cardio Rehab</label>
+            </value>
+            <value>
                 <fullName>Emergency Transport</fullName>
                 <default>false</default>
                 <label>Emergency Transport</label>
             </value>
             <value>
-                <fullName>Home</fullName>
-                <default>false</default>
-                <label>Home</label>
-            </value>
-            <value>
-                <fullName>Nursing Home/Assisted Living</fullName>
-                <default>false</default>
-                <label>Nursing Home/Assisted Living</label>
-            </value>
-            <value>
                 <fullName>Other</fullName>
                 <default>false</default>
                 <label>Other</label>
-            </value>
-            <value>
-                <fullName>Patient Room</fullName>
-                <default>false</default>
-                <label>Patient Room</label>
-            </value>
-            <value>
-                <fullName>Surgical Room</fullName>
-                <default>false</default>
-                <label>Surgical Room</label>
             </value>
             <value>
                 <fullName>Unknown</fullName>

@@ -7,7 +7,7 @@
         <locationX>438</locationX>
         <locationY>522</locationY>
         <assignmentItems>
-            <assignToReference>$Record.HRCSVC_Has_CQ_Troubleshooting__c</assignToReference>
+            <assignToReference>$Record.HRCSVC21_CQ_Required_fieldset__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <booleanValue>true</booleanValue>
@@ -62,7 +62,7 @@
         <locationX>254</locationX>
         <locationY>326</locationY>
         <assignmentItems>
-            <assignToReference>$Record.HRCSVC_Has_CQ_Troubleshooting__c</assignToReference>
+            <assignToReference>$Record.HRCSVC21_CQ_Required_fieldset__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <booleanValue>false</booleanValue>
@@ -251,7 +251,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Doc_Troubleshooting_exists</targetReference>
+                <targetReference>CQ_Reqd_fields_exists</targetReference>
             </connector>
             <label>Yes</label>
         </rules>
@@ -282,19 +282,33 @@
         </rules>
     </decisions>
     <decisions>
-        <name>Doc_Troubleshooting_exists</name>
-        <label>Doc Troubleshooting exists?</label>
+        <name>CQ_Reqd_fields_exists</name>
+        <label>CQ Reqd fields exists?</label>
         <locationX>426</locationX>
-        <locationY>333</locationY>
+        <locationY>334</locationY>
         <defaultConnector>
             <targetReference>CQ_Troubleshooting_True</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Yes</defaultConnectorLabel>
         <rules>
             <name>Doc_Troubleshooting_No</name>
-            <conditionLogic>and</conditionLogic>
+            <conditionLogic>or</conditionLogic>
             <conditions>
-                <leftValueReference>Get_Complain_Qualification_Records.HRCSVC_Document_troubleshooting__c</leftValueReference>
+                <leftValueReference>Get_Complain_Qualification_Records.HRCSVC20_Describe_Cause_Troubleshooting__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Complain_Qualification_Records.HRCSVC_Occurrence_Location__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Complain_Qualification_Records.HRCSVC_Resolution__c</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
@@ -309,8 +323,8 @@
     <decisions>
         <name>Open_Work_Orders_Exist</name>
         <label>Open Work Orders Exist</label>
-        <locationX>1101</locationX>
-        <locationY>801</locationY>
+        <locationX>1104</locationX>
+        <locationY>792</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Open_Work_Orders_Exist_Yes</name>

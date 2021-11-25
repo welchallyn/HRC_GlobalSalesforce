@@ -3,7 +3,7 @@
     <assignments>
         <name>Assign_Audible</name>
         <label>Assign Audible</label>
-        <locationX>94</locationX>
+        <locationX>50</locationX>
         <locationY>1094</locationY>
         <assignmentItems>
             <assignToReference>AudibleValue</assignToReference>
@@ -19,8 +19,8 @@
     <assignments>
         <name>Assign_Audible_0</name>
         <label>Assign Audible</label>
-        <locationX>182</locationX>
-        <locationY>3014</locationY>
+        <locationX>534</locationX>
+        <locationY>3134</locationY>
         <assignmentItems>
             <assignToReference>TestsPerfomedValues</assignToReference>
             <operator>Add</operator>
@@ -35,7 +35,7 @@
     <assignments>
         <name>Assign_Complaint_Defaults_0</name>
         <label>Assign Complaint Defaults</label>
-        <locationX>534</locationX>
+        <locationX>490</locationX>
         <locationY>854</locationY>
         <assignmentItems>
             <assignToReference>complaintQualification.HRC_Functioning_as_designed_post_repair__c</assignToReference>
@@ -130,6 +130,20 @@
                 <elementReference>WorkOrder_RepairTemplate_Info.CaseId</elementReference>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>complaintQualification.HRCSVC20_Describe_Cause_Troubleshooting__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>complaintQualification.HRCSVC_Resolution__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </assignmentItems>
         <connector>
             <targetReference>Section_A</targetReference>
         </connector>
@@ -137,8 +151,8 @@
     <assignments>
         <name>Assign_CQ_Inputs</name>
         <label>Assign CQ Inputs</label>
-        <locationX>314</locationX>
-        <locationY>3902</locationY>
+        <locationX>666</locationX>
+        <locationY>4022</locationY>
         <assignmentItems>
             <assignToReference>complaintQualification.HRCSVC_Describe_Malfunction_Event__c</assignToReference>
             <operator>Assign</operator>
@@ -151,13 +165,6 @@
             <operator>Assign</operator>
             <value>
                 <elementReference>X4A_Functioning_as_designed_post_repair</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>complaintQualification.HRCSVC_Document_troubleshooting__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>X3_Document_troubleshooting_cause_resolution</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -175,10 +182,10 @@
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>complaintQualification.HRCSVC_Part_Serial_and_or_Revision__c</assignToReference>
+            <assignToReference>complaintQualification.HRCSVC_Resolution__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>X5_Part_serial_and_or_Revision_if_applicable</elementReference>
+                <elementReference>X6_Resolution</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -216,6 +223,20 @@
                 <elementReference>X9_PM_Sticker_Present</elementReference>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>complaintQualification.HRCSVC20_Describe_Cause_Troubleshooting__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>X3_Describe_Cause_Troubleshooting</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>complaintQualification.HRCSVC_Document_troubleshooting__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Document_troubleshooting_cause_resolution</elementReference>
+            </value>
+        </assignmentItems>
         <connector>
             <targetReference>Has_Existing_CQ</targetReference>
         </connector>
@@ -223,7 +244,7 @@
     <assignments>
         <name>Assign_CQ_Inputs_0</name>
         <label>Assign CQ Inputs</label>
-        <locationX>930</locationX>
+        <locationX>886</locationX>
         <locationY>854</locationY>
         <assignmentItems>
             <assignToReference>complaintQualification.HRCSVC_Describe_Malfunction_Event__c</assignToReference>
@@ -254,7 +275,7 @@
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>complaintQualification.HRCSVC_Part_Serial_and_or_Revision__c</assignToReference>
+            <assignToReference>complaintQualification.HRCSVC_Resolution__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>WorkOrder_RepairTemplate_Info.HRCFSL_Repair_Template_Question_5__c</elementReference>
@@ -316,6 +337,13 @@
                 <elementReference>WorkOrder_RepairTemplate_Info.HRCFSL_Repair_Template_Question_7__c</elementReference>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>complaintQualification.HRCSVC20_Describe_Cause_Troubleshooting__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>WorkOrder_RepairTemplate_Info.HRCSVC20_Repair_Template_Question_3b__c</elementReference>
+            </value>
+        </assignmentItems>
         <connector>
             <targetReference>Injury_or_Death</targetReference>
         </connector>
@@ -323,7 +351,7 @@
     <assignments>
         <name>Assign_Default</name>
         <label>Assign Default</label>
-        <locationX>798</locationX>
+        <locationX>754</locationX>
         <locationY>1094</locationY>
         <assignmentItems>
             <assignToReference>complaintQualification.HRCSVC_Injury_or_Death__c</assignToReference>
@@ -339,7 +367,7 @@
     <assignments>
         <name>Assign_Found</name>
         <label>Assign Found</label>
-        <locationX>226</locationX>
+        <locationX>182</locationX>
         <locationY>854</locationY>
         <assignmentItems>
             <assignToReference>ComplaintFound</assignToReference>
@@ -355,7 +383,7 @@
     <assignments>
         <name>Assign_Functional</name>
         <label>Assign Functional</label>
-        <locationX>94</locationX>
+        <locationX>50</locationX>
         <locationY>1430</locationY>
         <assignmentItems>
             <assignToReference>FunctionalValue</assignToReference>
@@ -371,8 +399,8 @@
     <assignments>
         <name>Assign_Functional_0</name>
         <label>Assign Functional</label>
-        <locationX>182</locationX>
-        <locationY>3350</locationY>
+        <locationX>534</locationX>
+        <locationY>3470</locationY>
         <assignmentItems>
             <assignToReference>TestsPerfomedValues</assignToReference>
             <operator>Add</operator>
@@ -387,7 +415,7 @@
     <assignments>
         <name>Assign_record_Id_0_0</name>
         <label>Assign record Id</label>
-        <locationX>446</locationX>
+        <locationX>402</locationX>
         <locationY>278</locationY>
         <assignmentItems>
             <assignToReference>Id</assignToReference>
@@ -410,7 +438,7 @@
     <assignments>
         <name>Assign_Visual</name>
         <label>Assign Visual</label>
-        <locationX>94</locationX>
+        <locationX>50</locationX>
         <locationY>1766</locationY>
         <assignmentItems>
             <assignToReference>VisualValue</assignToReference>
@@ -426,8 +454,8 @@
     <assignments>
         <name>Assign_Visual_0</name>
         <label>Assign Visual</label>
-        <locationX>182</locationX>
-        <locationY>3686</locationY>
+        <locationX>534</locationX>
+        <locationY>3806</locationY>
         <assignmentItems>
             <assignToReference>TestsPerfomedValues</assignToReference>
             <operator>Add</operator>
@@ -442,15 +470,8 @@
     <assignments>
         <name>Set_Question_Variables</name>
         <label>Set Question Variables</label>
-        <locationX>578</locationX>
-        <locationY>2534</locationY>
-        <assignmentItems>
-            <assignToReference>Q3_Trb_Cause_Resolution</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>X3_Document_troubleshooting_cause_resolution</elementReference>
-            </value>
-        </assignmentItems>
+        <locationX>930</locationX>
+        <locationY>2654</locationY>
         <assignmentItems>
             <assignToReference>Q4_Functioning_As_Designed</assignToReference>
             <operator>Assign</operator>
@@ -498,6 +519,27 @@
             <operator>Assign</operator>
             <value>
                 <elementReference>Visual</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Q5a_Resolution</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>X6_Resolution</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Q3b_Cause_Troubleshooting</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>X3_Describe_Cause_Troubleshooting</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Q3_Trb_Cause_Resolution</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Document_troubleshooting_cause_resolution</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -611,8 +653,8 @@
     <decisions>
         <name>AudibleTrue</name>
         <label>Audible</label>
-        <locationX>314</locationX>
-        <locationY>2894</locationY>
+        <locationX>666</locationX>
+        <locationY>3014</locationY>
         <defaultConnector>
             <targetReference>FunctionalTrue</targetReference>
         </defaultConnector>
@@ -634,9 +676,34 @@
         </rules>
     </decisions>
     <decisions>
+        <name>Check_user_inputs</name>
+        <label>Check user inputs</label>
+        <locationX>534</locationX>
+        <locationY>2198</locationY>
+        <defaultConnector>
+            <targetReference>Go_to_Section_B</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>InjuryDeath_Check</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>X7_Injury_or_Death</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Blank</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Fault_Screen</targetReference>
+            </connector>
+            <label>InjuryDeath Check</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Contains_Audible</name>
         <label>Contains Audible?</label>
-        <locationX>226</locationX>
+        <locationX>182</locationX>
         <locationY>974</locationY>
         <defaultConnector>
             <targetReference>Contains_Functional</targetReference>
@@ -661,7 +728,7 @@
     <decisions>
         <name>Contains_Functional</name>
         <label>Contains Functional?</label>
-        <locationX>226</locationX>
+        <locationX>182</locationX>
         <locationY>1310</locationY>
         <defaultConnector>
             <targetReference>Contains_Visual</targetReference>
@@ -686,7 +753,7 @@
     <decisions>
         <name>Contains_Visual</name>
         <label>Contains Visual?</label>
-        <locationX>226</locationX>
+        <locationX>182</locationX>
         <locationY>1646</locationY>
         <defaultConnector>
             <targetReference>Section_A</targetReference>
@@ -711,7 +778,7 @@
     <decisions>
         <name>Desktop_or_Mobile</name>
         <label>Desktop or Mobile</label>
-        <locationX>578</locationX>
+        <locationX>534</locationX>
         <locationY>158</locationY>
         <defaultConnector>
             <targetReference>WO_Repair_Template_info_0_0_0_0</targetReference>
@@ -736,8 +803,8 @@
     <decisions>
         <name>FunctionalTrue</name>
         <label>Functional</label>
-        <locationX>314</locationX>
-        <locationY>3230</locationY>
+        <locationX>666</locationX>
+        <locationY>3350</locationY>
         <defaultConnector>
             <targetReference>VisualTrue</targetReference>
         </defaultConnector>
@@ -761,8 +828,8 @@
     <decisions>
         <name>Go_to_Section_B</name>
         <label>Go to Section B?</label>
-        <locationX>578</locationX>
-        <locationY>2198</locationY>
+        <locationX>930</locationX>
+        <locationY>2318</locationY>
         <defaultConnector>
             <targetReference>Set_Question_Variables</targetReference>
         </defaultConnector>
@@ -786,8 +853,8 @@
     <decisions>
         <name>Has_Existing_CQ</name>
         <label>Has Existing CQ</label>
-        <locationX>314</locationX>
-        <locationY>4022</locationY>
+        <locationX>666</locationX>
+        <locationY>4142</locationY>
         <defaultConnectorLabel>No CQ or Case</defaultConnectorLabel>
         <rules>
             <name>Existing_CQ</name>
@@ -823,8 +890,8 @@
     <decisions>
         <name>Has_Existing_CQ_0</name>
         <label>Has Existing CQ</label>
-        <locationX>578</locationX>
-        <locationY>2774</locationY>
+        <locationX>930</locationX>
+        <locationY>2894</locationY>
         <defaultConnectorLabel>No CQ or Case</defaultConnectorLabel>
         <rules>
             <name>Existing_CQ_or_Case</name>
@@ -852,7 +919,7 @@
     <decisions>
         <name>Has_Existing_CQ_0_0</name>
         <label>Has Existing CQ</label>
-        <locationX>578</locationX>
+        <locationX>534</locationX>
         <locationY>734</locationY>
         <defaultConnector>
             <targetReference>Assign_CQ_Inputs_0</targetReference>
@@ -892,7 +959,7 @@
     <decisions>
         <name>Injury_or_Death</name>
         <label>Injury or Death</label>
-        <locationX>930</locationX>
+        <locationX>886</locationX>
         <locationY>974</locationY>
         <defaultConnector>
             <targetReference>Section_A</targetReference>
@@ -917,8 +984,8 @@
     <decisions>
         <name>VisualTrue</name>
         <label>Visual</label>
-        <locationX>314</locationX>
-        <locationY>3566</locationY>
+        <locationX>666</locationX>
+        <locationY>3686</locationY>
         <defaultConnector>
             <targetReference>Assign_CQ_Inputs</targetReference>
         </defaultConnector>
@@ -1000,6 +1067,11 @@
         <dataType>String</dataType>
         <expression>{!$User.Id}</expression>
     </formulas>
+    <formulas>
+        <name>Document_Troubleshooting</name>
+        <dataType>String</dataType>
+        <expression>{!WorkOrder_RepairTemplate_Info.HRCFSL_Repair_Template_Question_3__c}</expression>
+    </formulas>
     <interviewLabel>HRCFSL Repair template {!$Flow.CurrentDateTime}</interviewLabel>
     <label>HRCFSL Repair Template</label>
     <processMetadataValues>
@@ -1024,14 +1096,14 @@
     <recordCreates>
         <name>Create_CQ_0_0</name>
         <label>Create CQ</label>
-        <locationX>314</locationX>
-        <locationY>4142</locationY>
+        <locationX>666</locationX>
+        <locationY>4262</locationY>
         <inputReference>complaintQualification</inputReference>
     </recordCreates>
     <recordLookups>
         <name>Complaint_Qualification_0</name>
         <label>Complaint Qualification</label>
-        <locationX>578</locationX>
+        <locationX>534</locationX>
         <locationY>614</locationY>
         <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -1105,7 +1177,7 @@
     <recordLookups>
         <name>WO_Repair_Template_info_0_0_0_0</name>
         <label>WO Repair Template info</label>
-        <locationX>578</locationX>
+        <locationX>534</locationX>
         <locationY>494</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -1139,19 +1211,21 @@
         <queriedFields>HRCFSL_Repair_Template_Question_8B__c</queriedFields>
         <queriedFields>HRCFSL_Repair_Template__c</queriedFields>
         <queriedFields>CaseId</queriedFields>
+        <queriedFields>HRCSVC20_Repair_Template_Question_3b__c</queriedFields>
+        <queriedFields>HRCSVC20_Repair_Template_Question_5a__c</queriedFields>
     </recordLookups>
     <recordUpdates>
         <name>Update_CQ</name>
         <label>Update CQ</label>
-        <locationX>50</locationX>
-        <locationY>4142</locationY>
+        <locationX>402</locationX>
+        <locationY>4262</locationY>
         <inputReference>complaintQualification</inputReference>
     </recordUpdates>
     <recordUpdates>
         <name>Update_Repair_Template_on_WO</name>
         <label>Update Repair Template on WO</label>
-        <locationX>578</locationX>
-        <locationY>2654</locationY>
+        <locationX>930</locationX>
+        <locationY>2774</locationY>
         <connector>
             <targetReference>Has_Existing_CQ_0</targetReference>
         </connector>
@@ -1178,7 +1252,7 @@
         <inputAssignments>
             <field>HRCFSL_Repair_Template_Question_3__c</field>
             <value>
-                <elementReference>X3_Document_troubleshooting_cause_resolution</elementReference>
+                <elementReference>Document_troubleshooting_cause_resolution</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1209,12 +1283,6 @@
             <field>HRCFSL_Repair_Template_Question_4C_Visua__c</field>
             <value>
                 <elementReference>Visual</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>HRCFSL_Repair_Template_Question_5__c</field>
-            <value>
-                <elementReference>X5_Part_serial_and_or_Revision_if_applicable</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1253,18 +1321,46 @@
                 <elementReference>RepairTemplate_TEXT</elementReference>
             </value>
         </inputAssignments>
+        <inputAssignments>
+            <field>HRCSVC20_Repair_Template_Question_3b__c</field>
+            <value>
+                <elementReference>X3_Describe_Cause_Troubleshooting</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>HRCSVC20_Repair_Template_Question_5a__c</field>
+            <value>
+                <elementReference>X6_Resolution</elementReference>
+            </value>
+        </inputAssignments>
         <object>WorkOrder</object>
     </recordUpdates>
     <screens>
+        <name>Fault_Screen</name>
+        <label>Fault Screen</label>
+        <locationX>138</locationX>
+        <locationY>2318</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>false</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>Injury_Death_Check_Screen</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 11.36px; font-family: Arial, Helvetica, sans-serif; color: rgb(0, 0, 0);&quot;&gt;Complaint cannot be created if the Injury or Death field is set to blank value&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
         <name>Section_A</name>
         <label>Section A</label>
-        <locationX>578</locationX>
+        <locationX>534</locationX>
         <locationY>2078</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
-        <allowPause>true</allowPause>
+        <allowPause>false</allowPause>
         <connector>
-            <targetReference>Go_to_Section_B</targetReference>
+            <targetReference>Check_user_inputs</targetReference>
         </connector>
         <fields>
             <name>X1_Issue_covered_by_and_found_during_PM_or_BPI_PDI</name>
@@ -1289,14 +1385,19 @@
             <isRequired>true</isRequired>
         </fields>
         <fields>
-            <name>X3_Document_troubleshooting_cause_resolution</name>
+            <name>X3_Describe_Cause_Troubleshooting</name>
             <dataType>String</dataType>
             <defaultValue>
-                <elementReference>complaintQualification.HRCSVC_Document_troubleshooting__c</elementReference>
+                <elementReference>complaintQualification.HRCSVC20_Describe_Cause_Troubleshooting__c</elementReference>
             </defaultValue>
-            <fieldText>3) Document troubleshooting, cause, resolution:</fieldText>
+            <fieldText>3) Document Troubleshooting</fieldText>
             <fieldType>InputField</fieldType>
             <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Document_troubleshooting_cause_resolution</name>
+            <fieldText>&lt;p&gt;4) Document troubleshooting, cause, resolution: {!Document_Troubleshooting}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
             <name>X4A_Functioning_as_designed_post_repair</name>
@@ -1305,7 +1406,7 @@
             <defaultValue>
                 <elementReference>functioningAsDesignedDefault</elementReference>
             </defaultValue>
-            <fieldText>4) Functioning as designed post repair:</fieldText>
+            <fieldText>5) Functioning as designed post repair:</fieldText>
             <fieldType>RadioButtons</fieldType>
             <isRequired>false</isRequired>
         </fields>
@@ -1325,7 +1426,7 @@
             <choiceReferences>injuryOrDeathDefaultChoice</choiceReferences>
             <dataType>String</dataType>
             <defaultSelectedChoiceReference>injuryOrDeathDefaultChoice</defaultSelectedChoiceReference>
-            <fieldText>5) Injury or Death?</fieldText>
+            <fieldText>6) Injury or Death?</fieldText>
             <fieldType>RadioButtons</fieldType>
             <isRequired>true</isRequired>
         </fields>
@@ -1340,7 +1441,7 @@
             <defaultValue>
                 <elementReference>AudibleValue</elementReference>
             </defaultValue>
-            <fieldText>Audible?</fieldText>
+            <fieldText>Audible</fieldText>
             <fieldType>InputField</fieldType>
             <isRequired>true</isRequired>
         </fields>
@@ -1350,7 +1451,7 @@
             <defaultValue>
                 <elementReference>FunctionalValue</elementReference>
             </defaultValue>
-            <fieldText>Functional?</fieldText>
+            <fieldText>Functional</fieldText>
             <fieldType>InputField</fieldType>
             <isRequired>true</isRequired>
         </fields>
@@ -1360,7 +1461,7 @@
             <defaultValue>
                 <elementReference>VisualValue</elementReference>
             </defaultValue>
-            <fieldText>Visual?</fieldText>
+            <fieldText>Visual</fieldText>
             <fieldType>InputField</fieldType>
             <isRequired>true</isRequired>
         </fields>
@@ -1370,8 +1471,8 @@
     <screens>
         <name>Section_B</name>
         <label>Section B</label>
-        <locationX>446</locationX>
-        <locationY>2318</locationY>
+        <locationX>798</locationX>
+        <locationY>2438</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -1379,12 +1480,12 @@
             <targetReference>Set_Question_Variables</targetReference>
         </connector>
         <fields>
-            <name>X5_Part_serial_and_or_Revision_if_applicable</name>
+            <name>X6_Resolution</name>
             <dataType>String</dataType>
             <defaultValue>
-                <elementReference>complaintQualification.HRCSVC_Part_Serial_and_or_Revision__c</elementReference>
+                <elementReference>complaintQualification.HRCSVC_Resolution__c</elementReference>
             </defaultValue>
-            <fieldText>6) Part serial # and/or Revision (if applicable):</fieldText>
+            <fieldText>7) Resolution:</fieldText>
             <fieldType>InputField</fieldType>
             <isRequired>false</isRequired>
         </fields>
@@ -1394,13 +1495,13 @@
             <defaultValue>
                 <elementReference>complaintQualification.HRCSVC_Occurrence_Location__c</elementReference>
             </defaultValue>
-            <fieldText>7) Occurrence Location?</fieldText>
+            <fieldText>8) Occurrence Location?</fieldText>
             <fieldType>InputField</fieldType>
             <isRequired>false</isRequired>
         </fields>
         <fields>
             <name>X8_Second_device_relationship_ie_surface_sling</name>
-            <fieldText>&lt;p&gt;8) Second device relationship (i.e. surface/sling):&amp;nbsp;&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;9) Second device relationship (i.e. surface/sling):&amp;nbsp;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
@@ -1420,7 +1521,7 @@
             <defaultValue>
                 <elementReference>PM_Sticker_Present_DefaultChoice</elementReference>
             </defaultValue>
-            <fieldText>9) PM Sticker Present</fieldText>
+            <fieldText>10) PM Sticker Present</fieldText>
             <fieldType>RadioButtons</fieldType>
             <isRequired>false</isRequired>
         </fields>
@@ -1442,7 +1543,7 @@
         <showHeader>true</showHeader>
     </screens>
     <start>
-        <locationX>452</locationX>
+        <locationX>408</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Desktop_or_Mobile</targetReference>
@@ -1454,11 +1555,11 @@
         <isViewedAsPlainText>true</isViewedAsPlainText>
         <text>Found at PM/BPI- {!X1_Issue_covered_by_and_found_during_PM_or_BPI_PDI}
 Describe Malfunction- {!X2_Describe_Malfunction_Event}
-Cause/Resolution- {!X3_Document_troubleshooting_cause_resolution}
+Document troubleshooting- {!X3_Describe_Cause_Troubleshooting}
 Functioning as Designed- {!X4A_Functioning_as_designed_post_repair}
 Explain- {!X4B_Explain_if_No}
 Test Performed-
-Part Serial No- {!X5_Part_serial_and_or_Revision_if_applicable}
+Resolution- {!X6_Resolution}
 Occurrence Location- {!X6_Occurrence_Location}
 Injury/Death- {!X7_Injury_or_Death}
 Second Device-
@@ -1517,6 +1618,13 @@ PM Sticker Date- {!X9_PM_sticker_date}</text>
         <isOutput>true</isOutput>
     </variables>
     <variables>
+        <name>Q3b_Cause_Troubleshooting</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
         <name>Q4_Functioning_As_Designed</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>
@@ -1547,6 +1655,13 @@ PM Sticker Date- {!X9_PM_sticker_date}</text>
     <variables>
         <name>Q4C_Visual</name>
         <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>Q5a_Resolution</name>
+        <dataType>String</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>
         <isOutput>true</isOutput>
