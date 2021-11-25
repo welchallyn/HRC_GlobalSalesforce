@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC21_Reqd_fields_on_CQ_check</fullName>
+    <active>true</active>
+    <description>SE-2431- set to False by &apos;Complaint Qualification Check&apos; flow when closing a Case</description>
+    <errorConditionFormula>AND(
+NOT( $Setup.HRCFSL_Org_Exception_Rule__c.HRCFSL_Validation_Rule__c ),
+HRCSVC21_CQ_Required_fieldset__c  = False,
+HRCSVC_Is_Complain_Qualification_Exist__c,
+OR(
+ ISPICKVAL(Status, &apos;Resolved&apos;),
+ ISPICKVAL(Status, &apos;Closed&apos;))
+)</errorConditionFormula>
+    <errorMessage>Please ensure Describe Cause Troubleshooting, Resolution, Occurrence Location on complaint qualification is filled in before closing a case</errorMessage>
+</ValidationRule>
