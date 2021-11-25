@@ -906,6 +906,8 @@
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Requires_Translation__c</members>
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Send_to_ETQ__c</members>
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Instruction__c</members>
+		<members>Case.HRCSVC21_Age__c</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_CQ_Creation_Duration_From_Case__c</members>
 		<name>CustomField</name>
 	</types>
 	<types>
@@ -1739,6 +1741,8 @@
 		<members>HRCSVC_Service_Cloud_Reports/Return_Orders_with_Entitlements_Warran_iyy</members>
 		<members>HRCSVC_Service_Cloud_Reports/Return_Orders_without_Entitlements_War_bXt</members>
 		<members>HRCSVC_Service_Cloud_Reports/Work_Order_Volume_by_Product_Repair_WT_GvQ</members>
+		<members>HRCSVC_Service_Cloud_Reports/HRCSVC21_Open_Cases_without_CQ_JOe</members>
+		<members>HRCSVC_Service_Cloud_Reports/HRCSVC21_New_complaint_creation_cycle_time_zuv</members>
 		<members>HRCSVC_Service_Reporting</members>
 		<members>HRCSVC_Service_Reporting/AccountReports</members>
 		<members>HRCSVC_Service_Reporting/AccountReports/Case_Activities_in_the_past_30_days_ZaV</members>
@@ -1833,6 +1837,7 @@
 		<members>Return_Orders_with_Return_Order_Line_Items</members>
 		<members>Assets_with_Orders_and_OLI</members>
 		<members>HRCSVC20_Complaint_Qualifications_w_Case_WO</members>
+		<members>HRCSVC21_Cases_and_Complaint_Qualification</members>
 		<name>ReportType</name>
 	</types>
 	<types>
