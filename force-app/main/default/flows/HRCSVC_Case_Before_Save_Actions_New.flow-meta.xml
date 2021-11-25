@@ -2,10 +2,42 @@
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>52.0</apiVersion>
     <assignments>
+        <name>Assign_case_language_based_on_Location</name>
+        <label>Assign case language based on Location</label>
+        <locationX>248</locationX>
+        <locationY>1007</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Language</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.HRCSVC_Location__r.Language__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Case_Origin</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_case_language_based_on_Location_update</name>
+        <label>Assign case language based on Location</label>
+        <locationX>974</locationX>
+        <locationY>671</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Language</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.HRCSVC_Location__r.Language__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Check_Asset_s_current_and_prior_value</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>Assign_SV_as_null</name>
         <label>Assign SV as null</label>
         <locationX>1106</locationX>
-        <locationY>671</locationY>
+        <locationY>1007</locationY>
         <assignmentItems>
             <assignToReference>$Record.HRCSVC_Software_Version__c</assignToReference>
             <operator>Assign</operator>
@@ -18,7 +50,7 @@
         <name>Assign_SV_from_Asset</name>
         <label>Assign SV from Asset</label>
         <locationX>842</locationX>
-        <locationY>671</locationY>
+        <locationY>1007</locationY>
         <assignmentItems>
             <assignToReference>$Record.HRCSVC_Software_Version__c</assignToReference>
             <operator>Assign</operator>
@@ -40,14 +72,14 @@
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Case_Origin</targetReference>
+            <targetReference>Location_is_added</targetReference>
         </connector>
     </assignments>
     <assignments>
         <name>Set_Contact_on_Case</name>
         <label>Set Contact on Case</label>
         <locationX>50</locationX>
-        <locationY>1247</locationY>
+        <locationY>1583</locationY>
         <assignmentItems>
             <assignToReference>$Record.ContactId</assignToReference>
             <operator>Assign</operator>
@@ -62,7 +94,7 @@
         <locationX>380</locationX>
         <locationY>431</locationY>
         <defaultConnector>
-            <targetReference>Case_Origin</targetReference>
+            <targetReference>Location_is_added</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -85,7 +117,7 @@
         <name>Case_Origin</name>
         <label>Case Origin</label>
         <locationX>380</locationX>
-        <locationY>887</locationY>
+        <locationY>1223</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Web</name>
@@ -114,7 +146,7 @@
         <name>Check_Asset_s_current_and_prior_value</name>
         <label>Check Asset&apos;s current and prior value</label>
         <locationX>1106</locationX>
-        <locationY>551</locationY>
+        <locationY>887</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Asset_Id_not_null_and_Prior_value_null</name>
@@ -165,7 +197,7 @@
         <name>Contact_Found</name>
         <label>Contact Found</label>
         <locationX>182</locationX>
-        <locationY>1127</locationY>
+        <locationY>1463</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Contact_Found_Yes</name>
@@ -221,6 +253,64 @@
             <label>Updation</label>
         </rules>
     </decisions>
+    <decisions>
+        <name>Location_is_added</name>
+        <label>Location is added?</label>
+        <locationX>380</locationX>
+        <locationY>887</locationY>
+        <defaultConnector>
+            <targetReference>Case_Origin</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Location_is_added</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.HRCSVC_Location__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_case_language_based_on_Location</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Location_is_updated</name>
+        <label>Location is updated?</label>
+        <locationX>1106</locationX>
+        <locationY>551</locationY>
+        <defaultConnector>
+            <targetReference>Check_Asset_s_current_and_prior_value</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_location_is_updated</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record__Prior.HRCSVC_Location__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.HRCSVC_Location__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.HRCSVC_Location__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_case_language_based_on_Location_update</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>Added updates per SE-1345 (Location-based language update to Case)</description>
     <interviewLabel>HRCSVC Case Before-Save Actions New {!$Flow.CurrentDateTime}</interviewLabel>
     <label>HRCSVC Case Before-Save Actions New</label>
     <processMetadataValues>
@@ -246,7 +336,7 @@
         <name>Find_Matching_Contact</name>
         <label>Find Matching Contact</label>
         <locationX>182</locationX>
-        <locationY>1007</locationY>
+        <locationY>1343</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Contact_Found</targetReference>
@@ -294,7 +384,7 @@
         <locationX>1106</locationX>
         <locationY>431</locationY>
         <connector>
-            <targetReference>Check_Asset_s_current_and_prior_value</targetReference>
+            <targetReference>Location_is_updated</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>

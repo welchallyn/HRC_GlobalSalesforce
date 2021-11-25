@@ -39,8 +39,8 @@
     <assignments>
         <name>Assign_Default_WO_Duration</name>
         <label>Assign Default WO Duration</label>
-        <locationX>1203</locationX>
-        <locationY>1028</locationY>
+        <locationX>1267</locationX>
+        <locationY>1052</locationY>
         <assignmentItems>
             <assignToReference>WODuration</assignToReference>
             <operator>Assign</operator>
@@ -126,6 +126,86 @@
         </assignmentItems>
         <connector>
             <targetReference>Start_Time_Selection</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Set_Choice</name>
+        <label>Set Choice</label>
+        <locationX>734</locationX>
+        <locationY>1120</locationY>
+        <assignmentItems>
+            <assignToReference>Selected_SA_Status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Status_InProgress_Selection_Missing_Skills</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Selected_Status</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Set_Choice_0</name>
+        <label>Set Choice</label>
+        <locationX>694</locationX>
+        <locationY>1012</locationY>
+        <assignmentItems>
+            <assignToReference>Selected_SA_Status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>SA_Work_Type</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Selected_Status</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Set_Choice_1</name>
+        <label>Set Choice</label>
+        <locationX>843</locationX>
+        <locationY>925</locationY>
+        <assignmentItems>
+            <assignToReference>Selected_SA_Status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>ServiceAppointment_Work_Type</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Selected_Status</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Set_Choice_2</name>
+        <label>Set Choice</label>
+        <locationX>895</locationX>
+        <locationY>774</locationY>
+        <assignmentItems>
+            <assignToReference>Selected_SA_Status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Status_InProgress_Selection</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Selected_Status</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Set_Choice_3</name>
+        <label>Set Choice</label>
+        <locationX>791</locationX>
+        <locationY>527</locationY>
+        <assignmentItems>
+            <assignToReference>Selected_SA_Status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Status_Scheduled_Selection</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Selected_Status</targetReference>
         </connector>
     </assignments>
     <choices>
@@ -570,7 +650,7 @@
             <name>Selected_Status_Reject</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Status_Scheduled_Selection</leftValueReference>
+                <leftValueReference>Selected_SA_Status</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <elementReference>const_None</elementReference>
@@ -585,14 +665,7 @@
             <name>Selected_Status_Canceled</name>
             <conditionLogic>or</conditionLogic>
             <conditions>
-                <leftValueReference>Status_Scheduled_Selection</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <elementReference>const_Canceled</elementReference>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>Status_InProgress_Selection</leftValueReference>
+                <leftValueReference>Selected_SA_Status</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <elementReference>const_Canceled</elementReference>
@@ -607,7 +680,7 @@
             <name>Selected_Status_Reschedule</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Status_Scheduled_Selection</leftValueReference>
+                <leftValueReference>Selected_SA_Status</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <elementReference>const_Reschedule</elementReference>
@@ -622,7 +695,7 @@
             <name>Selected_Status_In_Progress</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Status_Scheduled_Selection</leftValueReference>
+                <leftValueReference>Selected_SA_Status</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <elementReference>const_In_Progress</elementReference>
@@ -637,35 +710,35 @@
             <name>Selected_Status_End</name>
             <conditionLogic>or</conditionLogic>
             <conditions>
-                <leftValueReference>Status_InProgress_Selection</leftValueReference>
+                <leftValueReference>Selected_SA_Status</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <elementReference>const_Awaiting_Signature</elementReference>
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>Status_InProgress_Selection</leftValueReference>
+                <leftValueReference>Selected_SA_Status</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <elementReference>const_Cannot_Complete</elementReference>
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>Status_InProgress_Selection</leftValueReference>
+                <leftValueReference>Selected_SA_Status</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <elementReference>const_CannotComplete_AwaitingParts</elementReference>
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>Status_InProgress_Selection</leftValueReference>
+                <leftValueReference>Selected_SA_Status</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <elementReference>const_CannotComplete_TroubleshootingComplete</elementReference>
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>Status_InProgress_Selection</leftValueReference>
+                <leftValueReference>Selected_SA_Status</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <elementReference>const_CannotComplete_AwaitingCustomerResponse</elementReference>
@@ -680,7 +753,7 @@
             <name>Cannot_Complete_Schedule_FollowUp</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Status_InProgress_Selection</leftValueReference>
+                <leftValueReference>Selected_SA_Status</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <elementReference>const_Cannot_Complete_FollowUp</elementReference>
@@ -751,8 +824,8 @@
         <description>Rental repairs (SQ-Z and SQ-Y).</description>
         <name>Work_Type_SQZ_SQY</name>
         <label>Work Type (SQZ or SQY)</label>
-        <locationX>539</locationX>
-        <locationY>1159</locationY>
+        <locationX>510</locationX>
+        <locationY>1352</locationY>
         <defaultConnector>
             <targetReference>Update_Service_Appointment_Status_Missing_Skills</targetReference>
         </defaultConnector>
@@ -925,8 +998,8 @@
     <recordLookups>
         <name>Get_Metadata</name>
         <label>Get Metadata</label>
-        <locationX>1117</locationX>
-        <locationY>1031</locationY>
+        <locationX>1125</locationX>
+        <locationY>947</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Assign_Default_WO_Duration</targetReference>
@@ -1215,13 +1288,13 @@
     <screens>
         <name>Service_Appointment_Based_work_type</name>
         <label>Update Service Appointment Status from In Progress</label>
-        <locationX>682</locationX>
-        <locationY>1031</locationY>
+        <locationX>599</locationX>
+        <locationY>1012</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
         <connector>
-            <targetReference>Selected_Status</targetReference>
+            <targetReference>Set_Choice_0</targetReference>
         </connector>
         <fields>
             <name>SA_Work_Type</name>
@@ -1234,19 +1307,24 @@
             <fieldType>RadioButtons</fieldType>
             <isRequired>true</isRequired>
         </fields>
+        <fields>
+            <name>Resource_Missing_Skill</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); color: rgb(62, 62, 60);&quot;&gt;Note&lt;/b&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(62, 62, 60);&quot;&gt;: you cannot move this Service Appointment to Awaiting Signature because you do not have the required certifications to complete this Work Order.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
         <showFooter>true</showFooter>
         <showHeader>true</showHeader>
     </screens>
     <screens>
         <name>Service_Appointment_Status_based_on_workType</name>
         <label>Update Service Appointment Status from In Progress</label>
-        <locationX>805</locationX>
-        <locationY>954</locationY>
+        <locationX>772</locationX>
+        <locationY>928</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
         <connector>
-            <targetReference>Selected_Status</targetReference>
+            <targetReference>Set_Choice_1</targetReference>
         </connector>
         <fields>
             <name>ServiceAppointment_Work_Type</name>
@@ -1316,7 +1394,7 @@
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
         <connector>
-            <targetReference>Selected_Status</targetReference>
+            <targetReference>Set_Choice_3</targetReference>
         </connector>
         <fields>
             <name>Status_Scheduled_Selection</name>
@@ -1335,13 +1413,13 @@
     <screens>
         <name>Update_Service_Appointment_Status_from_In_Progress</name>
         <label>Update Service Appointment Status from In Progress</label>
-        <locationX>896</locationX>
+        <locationX>815</locationX>
         <locationY>779</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
         <connector>
-            <targetReference>Selected_Status</targetReference>
+            <targetReference>Set_Choice_2</targetReference>
         </connector>
         <fields>
             <name>Status_InProgress_Selection</name>
@@ -1363,13 +1441,13 @@
     <screens>
         <name>Update_Service_Appointment_Status_Missing_Skills</name>
         <label>Update Service Appointment Status from In Progress</label>
-        <locationX>766</locationX>
-        <locationY>1269</locationY>
+        <locationX>732</locationX>
+        <locationY>1244</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
         <connector>
-            <targetReference>Selected_Status</targetReference>
+            <targetReference>Set_Choice</targetReference>
         </connector>
         <fields>
             <name>Status_InProgress_Selection_Missing_Skills</name>
@@ -1678,6 +1756,13 @@ o Product: {!WorkOrderDetails.HRCFSL_Model_Description__c}
     <variables>
         <name>ResourceHasSkill</name>
         <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>Selected_SA_Status</name>
+        <dataType>String</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>
         <isOutput>false</isOutput>

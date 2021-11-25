@@ -10000,6 +10000,11 @@ Allow the User to update record owner and sharing-based records with inactive ow
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>BRM_IT_Request__c.Executive_Sponsor__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>BRM_IT_Request__c.Financial_Efficiency_Benefit_Type__c</field>
         <readable>false</readable>
     </fieldPermissions>

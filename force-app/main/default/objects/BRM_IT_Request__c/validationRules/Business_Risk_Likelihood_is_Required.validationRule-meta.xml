@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Risk_Likelihood_is_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISPICKVAL(Business_Risk_Likelihood__c, &apos;&apos;) &amp;&amp; ISPICKVAL(Submit_to_BRM__c, &apos;Yes&apos;)</errorConditionFormula>
+    <errorDisplayField>Business_Risk_Likelihood__c</errorDisplayField>
+    <errorMessage>Required</errorMessage>
+</ValidationRule>

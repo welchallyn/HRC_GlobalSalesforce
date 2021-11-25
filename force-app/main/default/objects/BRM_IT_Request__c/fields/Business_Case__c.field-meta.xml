@@ -3,7 +3,7 @@
     <fullName>Business_Case__c</fullName>
     <externalId>false</externalId>
     <inlineHelpText>Describe the value to Hill-Rom of this request. Identify the value (KPI’s) that should be achieved, including current measurement of those KPI’s. Identify suggested alternatives for implementation.</inlineHelpText>
-    <label>Business Case</label>
+    <label>Problem Statement</label>
     <length>32768</length>
     <trackTrending>false</trackTrending>
     <type>LongTextArea</type>

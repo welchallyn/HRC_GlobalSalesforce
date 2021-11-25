@@ -2,14 +2,14 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Function__c</fullName>
     <externalId>false</externalId>
-    <label>Function</label>
+    <label>ELT Sub-Area</label>
     <required>false</required>
     <trackTrending>false</trackTrending>
     <type>Picklist</type>
     <valueSet>
         <restricted>true</restricted>
         <valueSetDefinition>
-            <sorted>true</sorted>
+            <sorted>false</sorted>
             <value>
                 <fullName>Compliance</fullName>
                 <default>false</default>
@@ -56,12 +56,6 @@
                 <label>Marketing</label>
             </value>
             <value>
-                <fullName>Quality Assurance / Regulatory Affairs (QA/RA)</fullName>
-                <default>false</default>
-                <isActive>false</isActive>
-                <label>Quality Assurance / Regulatory Affairs (QA/RA)</label>
-            </value>
-            <value>
                 <fullName>Quality Assurance(QA)</fullName>
                 <default>false</default>
                 <label>Quality Assurance(QA)</label>
@@ -85,6 +79,12 @@
                 <fullName>Service</fullName>
                 <default>false</default>
                 <label>Service</label>
+            </value>
+            <value>
+                <fullName>Quality Assurance / Regulatory Affairs (QA/RA)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Quality Assurance / Regulatory Affairs (QA/RA)</label>
             </value>
         </valueSetDefinition>
     </valueSet>

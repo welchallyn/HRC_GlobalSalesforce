@@ -4,7 +4,7 @@
     <deleteConstraint>SetNull</deleteConstraint>
     <externalId>false</externalId>
     <inlineHelpText>Business person responsible for providing benefits and scope clarity</inlineHelpText>
-    <label>Business Owner</label>
+    <label>Business Lead</label>
     <referenceTo>User</referenceTo>
     <relationshipName>BRM_IT_Requests</relationshipName>
     <required>false</required>

@@ -106,8 +106,18 @@ global with sharing class SL_Batch_TerritoryMapping implements Schedulable, Data
     */
      global void finish(Database.BatchableContext BC)
      {
+         
         if(!lstAccountToCallout.isEmpty())
         {
+            system.debug('lstAccountToCallout finish method :: '+lstAccountToCallout.size());
+            Messaging.SingleEmailMessage mail = new Messaging.SingleEmailMessage();
+            List<String> toAddresses = new List<String>();
+            toAddresses.add('richa.nanwani@hillrom.com');
+            toAddresses.add('srishti.goyal@hillrom.com');
+            mail.setToAddresses(toAddresses);
+            mail.setSubject('SL Batch Territory Mapping');
+            mail.setPlainTextBody('records processed ' + lstAccountToCallout.size());
+            Messaging.sendEmail(new Messaging.SingleEmailMessage[] { mail });
             // Calling SL_Batch_TerritoryRuleRealignment batch with 200 chunks
             Database.executeBatch(new SL_Batch_TerritoryRuleRealignment(lstAccountToCallout),20);
         }

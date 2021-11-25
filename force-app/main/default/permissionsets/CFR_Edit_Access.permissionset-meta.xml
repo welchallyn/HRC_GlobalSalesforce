@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <classAccesses>
+        <apexClass>HRCCFRApprovalReminderEmails</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>HRCCFR_CapitalRequest_Handler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>HRC_CFR_SupplementalInvokeAPI</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>HRC_CapitaRequestInvokeAPI</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>HRC_CapitalRequestAPI</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ResponseWrapper</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
     <description>CFR Edit Access</description>
     <fieldPermissions>
         <editable>false</editable>
@@ -9994,6 +10018,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>BRM_IT_Request__c.Estimated_Annual_Benefit_Value__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>BRM_IT_Request__c.Executive_Sponsor__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
