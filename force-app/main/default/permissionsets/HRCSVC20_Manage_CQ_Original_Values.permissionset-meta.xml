@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <classAccesses>
+        <apexClass>HRCSV21_CQ_Original_Values_Handler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>HRCSVC20_CQ_Backup_Values</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>HRCSVC20_CQ_Backup_Values_Test</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>HRCSVC20_Dynamic_Fetch_Field_Values</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>HRCSVC21_AdvancedRelatedListController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>HRCSVC21_MyException</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
     <description>SE-2620:Permission set to manage the new object CQ_Original_Values</description>
     <fieldPermissions>
         <editable>false</editable>
@@ -568,6 +592,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Case.HRCSVC21_Age__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.HRCSVC21_CQ_Required_fieldset__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Case.HRCSVC_Account_Protocol__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -1113,12 +1147,22 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>HRCSVC20_CQ_Original_Values__c.HRCSVC20_CQ_API_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>HRCSVC20_CQ_Original_Values__c.HRCSVC20_CQ_Key__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
         <field>HRCSVC20_CQ_Original_Values__c.HRCSVC20_CQ_Value__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>HRCSVC20_CQ_Original_Values__c.HRCSVC21_CQ_Translation__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1238,6 +1282,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>HRCSVC_Complaint_Qualification__c.HRCSVC20_Complaint_Resolution__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>HRCSVC_Complaint_Qualification__c.HRCSVC20_Describe_Cause_Troubleshooting__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -1259,6 +1308,66 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>HRCSVC_Complaint_Qualification__c.HRCSVC20_Send_to_ETQ__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>HRCSVC_Complaint_Qualification__c.HRCSVC21_Assigned_Engineer__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>HRCSVC_Complaint_Qualification__c.HRCSVC21_CQ_Creation_Duration_From_Case__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>HRCSVC_Complaint_Qualification__c.HRCSVC21_Item_Description__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>HRCSVC_Complaint_Qualification__c.HRCSVC21_Item_Number__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>HRCSVC_Complaint_Qualification__c.HRCSVC21_Location__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>HRCSVC_Complaint_Qualification__c.HRCSVC21_Product_Family_Description__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>HRCSVC_Complaint_Qualification__c.HRCSVC21_Product_Model_Description__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>HRCSVC_Complaint_Qualification__c.HRCSVC21_Serial_Number__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>HRCSVC_Complaint_Qualification__c.HRCSVC21_Shipment_Date__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>HRCSVC_Complaint_Qualification__c.HRCSVC21_Software_Version_Case__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>HRCSVC_Complaint_Qualification__c.HRCSVC21_Software_Version__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>HRCSVC_Complaint_Qualification__c.HRCSVC21_URL__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -2323,7 +2432,17 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Order_Line_Item__c.HRCSVC20_Customer_Price__c</field>
+        <field>Order_Line_Item__c.HRCSVC20_Available_Quantity__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Order_Line_Item__c.HRCSVC20_Extended_Price__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Order_Line_Item__c.HRCSVC20_Unit_Price__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -3018,17 +3137,27 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Order__c.HRCSVC20_Business_Unit__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Order__c.HRCSVC20_Pricing_Processing_Version__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Order__c.HRCSVC20_Ship_To_Account__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Order__c.HRCSVC20_Ship_To_Location__c</field>
+        <field>Order__c.HRCSVC20_Sold_To_Location__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Order__c.HRCSVC20_Sold_To_Location__c</field>
+        <field>Order__c.HRCSVC21_Service_Territory__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -4004,6 +4133,16 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>WorkOrder.HRCFSL_Work_Type_Name__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>WorkOrder.HRCSVC20_Repair_Template_Question_3b__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>WorkOrder.HRCSVC20_Repair_Template_Question_5a__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>

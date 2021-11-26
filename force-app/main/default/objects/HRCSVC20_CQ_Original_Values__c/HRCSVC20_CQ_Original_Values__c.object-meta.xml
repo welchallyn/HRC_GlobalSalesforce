@@ -150,14 +150,13 @@
     <enableHistory>false</enableHistory>
     <enableLicensing>false</enableLicensing>
     <enableReports>false</enableReports>
-    <enableSearch>false</enableSearch>
+    <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <label>CQ_Original_Values</label>
     <nameField>
-        <displayFormat>CQ-{00000000}</displayFormat>
         <label>CQ_Original_Values__c Name</label>
-        <type>AutoNumber</type>
+        <type>Text</type>
     </nameField>
     <pluralLabel>CQ_Original_Values</pluralLabel>
     <searchLayouts></searchLayouts>

@@ -8,44 +8,35 @@
 
 public class HRCSVC20_Dynamic_Fetch_Field_Values {
 public static Schema.FieldSet Fset;
-public static List<String> Allfields;
-public static Map<String,String> AllfieldLabels;    
+public static Map<String,Schema.FieldSetMember> Allfieldsdetails;    
     
-public static List<String> ReturnSobjectFieldsetFields(String FieldsetName,Schema.FieldSet Fset)
+public static Map<String,Schema.FieldSetMember> ReturnSobjectFieldsetFields(Schema.FieldSet Fset)
 {
-Allfields = new List<String>();
-AllfieldLabels = new map<string,String>();    
-system.debug('fset=====>'+Fset);
+Allfieldsdetails = new Map<String,Schema.FieldSetMember>();
 for (FieldSetMember fields : Fset.getFields())
 {
-    Allfields.add(fields.getFieldPath());
-    AllfieldLabels.put(fields.getFieldPath(),fields.getLabel());
+    Allfieldsdetails.put(fields.getFieldPath(),fields);
 }
-return Allfields;
+system.debug('Allfieldsdetails =====>'+Allfieldsdetails);    
+return Allfieldsdetails;
 }
 
-    
-public static sobject fetchSobjectValues(Id RecordId,String FieldSetName,Schema.FieldSet Fset) 
+    public static sobject fetchSobjectRecValues(Id RecordId,Schema.FieldSet Fset) 
     {
         String SobjectName = RecordId.getSObjectType().getDescribe().getName();
         String query = 'Select ';
-        for(String s : ReturnSobjectFieldsetFields(FieldsetName,fset))
+        for(FieldSetMember fields : fset.getFields())
         {
-            query += s+', ';
+            query += fields.getFieldPath()+', ';
         }
-        system.debug('Input Record Id '+RecordId);
         query += 'Id FROM '+SobjectName+' WHERE id = :RecordId';
         system.debug('query '+query);
         return Database.query(query);
 }
 
-public static List<String> ReturnFieldsetFields(String FieldsetName,Schema.FieldSet Fset)
+public static Map<String,Schema.FieldSetMember> ReturnFieldsetFields(String FieldsetName,Schema.FieldSet Fset)
 {
-return (Allfields == null) ? ReturnSobjectFieldsetFields(FieldsetName,Fset) : Allfields;
+return (Allfieldsdetails == null) ? ReturnSobjectFieldsetFields(Fset) : Allfieldsdetails;
 }
 
-public static map<string,String> ReturnFieldsetLabels()
-{
-return AllfieldLabels;
-}    
 }
