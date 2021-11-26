@@ -48,6 +48,7 @@
 		<members>HRCSVC20_CQ_Backup_Values</members>
 		<members>HRCSVC20_CQ_Backup_Values_Test</members>
 		<members>HRCSVC20_Dynamic_Fetch_Field_Values</members>
+		<members>HRCSV21_CQ_Original_Values_Handler</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
@@ -58,6 +59,7 @@
 		<members>HRCFSL_Outbound_JDE_Work_Order_Trigger</members>
 		<members>CaseTriggerMain</members>
 		<members>HRCSVC_ContentVersionTrigger</members>
+		<members>HRCSVC21_CQ_Original_Values_Trigger</members>
 		<name>ApexTrigger</name>
 	</types>
 	<types>
@@ -918,6 +920,9 @@
 		<members>WorkOrder.HRCSVC20_Repair_Template_Question_3b__c</members>
 		<members>WorkOrder.HRCSVC20_Repair_Template_Question_5a__c</members>
 		<members>Case.HRCSVC21_CQ_Required_fieldset__c</members>
+		<members>HRCSVC20_CQ_Original_Values__c.HRCSVC20_CQ_API_Name__c</members>
+		<members>HRCSVC20_CQ_Original_Values__c.HRCSVC21_CQ_Translation__c</members>
+		<members>HRCSVC20_CQ_Original_Values__c.CQ_External_Id__c</members>
 		<name>CustomField</name>
 	</types>
 	<types>
@@ -1208,7 +1213,7 @@
 		<members>HRCSVC_Asset_Lightning_Record_Page</members>
 		<members>HRCSVC_Asset_Warranty_Record_Page</members>
 		<members>HRCSVC_Case_Record_Page</members>
-		<members>HRCSVC_Complaint_Qualification_Record_Page</members>
+		<!--<members>HRCSVC_Complaint_Qualification_Record_Page</members>-->
 		<members>HRCSVC_Complaint_Qualification_Record_Page_11</members>
 		<members>HRCSVC_Create_Rental_Order</members>
 		<members>HRCSVC_Entitlement_Record_Page</members>
@@ -1509,6 +1514,7 @@
 		<members>HRCSVC_Problem_Resolution_Code__c-Problem%2FResolution Code Layout</members>
 		<members>HRCSVC_Remote_Access__c-Remote Access Layout</members>
 		<members>HRCSVC_ST_Product_Unavailability__c-Service Territory Product Unavailability Layout</members>
+		<members>HRCSVC20_CQ_Original_Values__c-CQ_Original_Values Layout</members>
 		<name>Layout</name>
 	</types>
 	<types>
@@ -1712,6 +1718,7 @@
 		<members>Contact.HRC_CRC_User</members>
 		<members>Contact.INT_Own_Data</members>
 		<members>Contact.INT_Cegedim</members>
+		<members>HRCSVC20_CQ_Original_Values__c.HRCSVC21_CQ_Original</members>
 		<name>RecordType</name>
 	</types>
 	-->
@@ -1754,6 +1761,7 @@
 		<members>HRCSVC_Service_Cloud_Reports/Work_Order_Volume_by_Product_Repair_WT_GvQ</members>
 		<members>HRCSVC_Service_Cloud_Reports/HRCSVC21_Open_Cases_without_CQ_JOe</members>
 		<members>HRCSVC_Service_Cloud_Reports/HRCSVC21_New_complaint_creation_cycle_time_zuv</members>
+		<members>HRCSVC_Service_Cloud_Reports/HRCSVC21_CQs_that_Require_Translation_HgR</members>
 		<members>HRCSVC_Service_Reporting</members>
 		<members>HRCSVC_Service_Reporting/AccountReports</members>
 		<members>HRCSVC_Service_Reporting/AccountReports/Case_Activities_in_the_past_30_days_ZaV</members>
