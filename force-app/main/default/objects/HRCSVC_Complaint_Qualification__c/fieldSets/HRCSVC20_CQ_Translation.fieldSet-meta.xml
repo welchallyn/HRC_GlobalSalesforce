@@ -148,6 +148,11 @@
         <isRequired>false</isRequired>
     </displayedFields>
     <displayedFields>
+        <field>HRCSVC20_Complaint_Resolution__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <displayedFields>
         <field>HRCSVC_Second_device_relationship_Model__c</field>
         <isFieldManaged>false</isFieldManaged>
         <isRequired>false</isRequired>
