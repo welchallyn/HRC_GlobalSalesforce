@@ -49,6 +49,8 @@
 		<members>HRCSVC20_CQ_Backup_Values_Test</members>
 		<members>HRCSVC20_Dynamic_Fetch_Field_Values</members>
 		<members>HRCSV21_CQ_Original_Values_Handler</members>
+		<members>HRCSVC21_MyException</members>
+		<members>HRCSVC21_AdvancedRelatedListController</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
@@ -70,6 +72,7 @@
 		<members>customLookupResult</members>
 		<members>navigateToRecord</members>
 		<members>selectedsObjectRecordEvent</members>
+		<members>HRCSVC21_AdvancedRelatedList</members>
 		<name>AuraDefinitionBundle</name>
 	</types>
 	<types>
@@ -1822,7 +1825,7 @@
 		<members>HRCSVC_Service_Reporting/HRCSVC_The_percentage_of_on_time_orders_aVa</members>
 		<members>HRCSVC_Service_Reporting/HRCSVC_The_total_no_of_loanersexchange_orders_5sV</members>
 		<members>HRCSVC_Service_Reporting/WOs_associated_to_a_Field_ActionMod_B3T</members>
-		<members>HRCSVC_Service_Reporting/HRCSVC20_CQs_that_Require_Translation_OLy</members>
+		<!--<members>HRCSVC_Service_Reporting/HRCSVC20_CQs_that_Require_Translation_OLy</members>-->
 		<members>HRC_FSL_Field_Service_Reports</members>
 		<members>IntegrationReports/New_ERP_Orders_with_Order_Line_Report_XeS</members>
 		<name>Report</name>
