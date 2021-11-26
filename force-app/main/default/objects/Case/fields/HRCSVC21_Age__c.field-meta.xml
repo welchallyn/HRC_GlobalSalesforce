@@ -3,12 +3,12 @@
     <fullName>HRCSVC21_Age__c</fullName>
     <description>SE-2623: Age of Case field for Report Open Cases without CQ</description>
     <externalId>false</externalId>
-    <formula>TODAY() - DATEVALUE(CreatedDate)</formula>
+    <formula>CEILING(TODAY() - DATEVALUE(CreatedDate))</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Age (Days)</label>
     <precision>18</precision>
     <required>false</required>
-    <scale>0</scale>
+    <scale>2</scale>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
     <type>Number</type>
