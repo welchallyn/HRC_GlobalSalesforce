@@ -2,6 +2,10 @@
 <QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
     <description>SE-2620 - Used to check the checkbox which is used in CQ Process builder to trigger a platform event to ETQ</description>
     <fieldOverrides>
+        <field>HRCSVC20_Requires_Translation__c</field>
+        <formula>false</formula>
+    </fieldOverrides>
+    <fieldOverrides>
         <field>HRCSVC20_Send_to_ETQ__c</field>
         <formula>true</formula>
     </fieldOverrides>

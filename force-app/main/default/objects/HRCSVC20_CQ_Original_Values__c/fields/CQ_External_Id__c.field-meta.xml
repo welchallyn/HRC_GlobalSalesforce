@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CQ_External_Id__c</fullName>
+    <description>SE-2620 - External Id to store combination of Parent CQ Name + Field API Name</description>
+    <externalId>true</externalId>
+    <label>CQ_External_Id</label>
+    <length>255</length>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
