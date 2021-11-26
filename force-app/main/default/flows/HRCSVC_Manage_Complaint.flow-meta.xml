@@ -7,14 +7,10 @@
         <locationX>169</locationX>
         <locationY>600</locationY>
         <assignmentItems>
-            <assignToReference>myComplaintQualification.HRCSVC_Condition__c</assignToReference>
-            <operator>Assign</operator>
-        </assignmentItems>
-        <assignmentItems>
             <assignToReference>myComplaintQualification.HRCSVC_Injury_or_Death__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <stringValue>No</stringValue>
+                <stringValue>Blank</stringValue>
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -252,7 +248,7 @@
             <assignToReference>myComplaintQualification.HRCSVC_Condition__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <stringValue>None</stringValue>
+                <stringValue>Blank</stringValue>
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -1673,7 +1669,9 @@
                     <choiceReferences>ConditionDefault</choiceReferences>
                     <choiceReferences>Condition1</choiceReferences>
                     <dataType>String</dataType>
-                    <defaultSelectedChoiceReference>Condition1</defaultSelectedChoiceReference>
+                    <defaultValue>
+                        <elementReference>myComplaintQualification.HRCSVC_Condition__c</elementReference>
+                    </defaultValue>
                     <fieldText>Condition</fieldText>
                     <fieldType>DropdownBox</fieldType>
                     <isRequired>true</isRequired>
