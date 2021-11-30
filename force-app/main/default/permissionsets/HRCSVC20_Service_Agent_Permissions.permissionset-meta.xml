@@ -42,6 +42,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Account.Region__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.Regional_Level_1__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>AccountContactRelation.HRCSVC_Is_Admin__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -1322,8 +1332,13 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>HRCSVC_Complaint_Qualification__c.HRCSVC21_EtQ_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>HRCSVC_Complaint_Qualification__c.HRCSVC21_Item_Description__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -1333,7 +1348,7 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>HRCSVC_Complaint_Qualification__c.HRCSVC21_Location__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
