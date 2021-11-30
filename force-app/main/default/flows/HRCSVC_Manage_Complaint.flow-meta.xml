@@ -1776,6 +1776,20 @@
                         <conditionLogic>(1 OR 5) AND (2) OR 3 OR 4</conditionLogic>
                         <conditions>
                             <leftValueReference>Injury_or_Death</leftValueReference>
+                            <operator>NotEqualTo</operator>
+                            <rightValue>
+                                <stringValue>Asked but not Provided</stringValue>
+                            </rightValue>
+                        </conditions>
+                        <conditions>
+                            <leftValueReference>Injury_or_Death</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <stringValue>Death</stringValue>
+                            </rightValue>
+                        </conditions>
+                        <conditions>
+                            <leftValueReference>Injury_or_Death</leftValueReference>
                             <operator>EqualTo</operator>
                             <rightValue>
                                 <stringValue>No</stringValue>
@@ -1793,20 +1807,6 @@
                             <operator>EqualTo</operator>
                             <rightValue>
                                 <stringValue>Injury/Other Patient Involvement</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Injury_or_Death</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Death</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>injuryOrDeath</leftValueReference>
-                            <operator>NotEqualTo</operator>
-                            <rightValue>
-                                <stringValue>Asked but not Provided</stringValue>
                             </rightValue>
                         </conditions>
                     </visibilityRule>
