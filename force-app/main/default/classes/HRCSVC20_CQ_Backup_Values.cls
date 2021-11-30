@@ -18,6 +18,7 @@ public static List<HRCSVC20_CQ_Original_Values__c> CQOriginalValues;
 public static List<HRCSVC20_CQ_Original_Values__c> DeleteCQOriginalValues;        
 public static Schema.FieldSet Fset;
 public static Map<String,HRCSVC20_CQ_Original_Values__c> Map_CQ_Backup;          
+    
 global class BackupCQValues
 { 
     
@@ -66,7 +67,8 @@ Map_CQ_Backup.put(bkuprec.HRCSVC20_CQ_API_Name__c,bkuprec);
 for(String s : HRCSVC20_Dynamic_Fetch_Field_Values.ReturnFieldsetFields(FsetName,fset).keyset())
 {    
 HRCSVC20_CQ_Original_Values__c cqorgrec = new HRCSVC20_CQ_Original_Values__c();
-
+if(s != 'Name')
+{
 if(Map_CQ_Backup.containsKey(s) && (string)a.get(s) != null && (Map_CQ_Backup.get(s).HRCSVC20_CQ_Value__c != null || Map_CQ_Backup.get(s).HRCSVC21_CQ_Translation__c != null) && (((string)a.get(s)) != (Map_CQ_Backup.get(s).HRCSVC20_CQ_Value__c)) && ((string)a.get(s) != (Map_CQ_Backup.get(s).HRCSVC21_CQ_Translation__c)))    
 {
 cqorgrec = Map_CQ_Backup.get(s);
@@ -92,7 +94,7 @@ if(Map_CQ_Backup.containsKey(s) && (string)a.get(s) == null)
 cqorgrec = Map_CQ_Backup.get(s);       
 DeleteCQOriginalValues.add(cqorgrec);  
 }
-    
+} // Name field ignore    
 }
    
 if(DeleteCQOriginalValues.size() >0)

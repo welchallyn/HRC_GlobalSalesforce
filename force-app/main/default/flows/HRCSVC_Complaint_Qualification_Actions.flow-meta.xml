@@ -512,7 +512,7 @@
                 <leftValueReference>myVariable_current.HRCSVC_Aware_Date__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <elementReference>formula_8_myRule_7_1800993363</elementReference>
+                    <elementReference>formula_8_myRule_7_0155560156</elementReference>
                 </rightValue>
             </conditions>
             <connector>
@@ -765,7 +765,7 @@
                 <leftValueReference>myVariable_current.HRCSVC_Aware_Date__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <elementReference>formula_8_myRule_7_1800993363</elementReference>
+                    <elementReference>formula_8_myRule_7_0155560156</elementReference>
                 </rightValue>
             </conditions>
             <connector>
@@ -1200,7 +1200,7 @@
                 <leftValueReference>myVariable_old.HRCSVC_Aware_Date__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <elementReference>formula_9_myRule_7_pmetrule_8139432116</elementReference>
+                    <elementReference>formula_9_myRule_7_pmetrule_9952788783</elementReference>
                 </rightValue>
             </conditions>
             <label>Previously Met - Prev</label>
@@ -1214,7 +1214,7 @@
                 <stringValue>NOW() </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_12_myWaitEvent_myWait_myRule_11_event_0_SA1_2767063844</name>
+        <name>formula_12_myWaitEvent_myWait_myRule_11_event_0_SA1_6780536063</name>
         <dataType>DateTime</dataType>
         <expression>NOW()</expression>
     </formulas>
@@ -1225,7 +1225,7 @@
                 <stringValue>&quot;Please complete Complaint Qualification now&quot; + &quot; &quot; + [HRCSVC_Complaint_Qualification__c].Name </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_13_myWaitEvent_myWait_myRule_11_event_0_SA1_9808521663</name>
+        <name>formula_13_myWaitEvent_myWait_myRule_11_event_0_SA1_9383657438</name>
         <dataType>String</dataType>
         <expression>&quot;Please complete Complaint Qualification now&quot; + &quot; &quot; + {!myVariable_current.Name}</expression>
     </formulas>
@@ -1236,7 +1236,7 @@
                 <stringValue>TODAY() </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_8_myRule_7_1800993363</name>
+        <name>formula_8_myRule_7_0155560156</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -1247,7 +1247,7 @@
                 <stringValue>TODAY() </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_9_myRule_7_pmetrule_8139432116</name>
+        <name>formula_9_myRule_7_pmetrule_9952788783</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -1273,7 +1273,7 @@
         <dataType>Boolean</dataType>
         <expression>{!myVariable_old.HRCSVC20_Send_to_ETQ__c} = true</expression>
     </formulas>
-    <interviewLabel>HRCSVC_Complaint_Qualification_Actions-4_InterviewLabel</interviewLabel>
+    <interviewLabel>HRCSVC_Complaint_Qualification_Actions-5_InterviewLabel</interviewLabel>
     <label>HRCSVC Complaint Qualification Actions</label>
     <processMetadataValues>
         <name>ObjectType</name>
@@ -1306,7 +1306,7 @@
         <locationX>100</locationX>
         <locationY>200</locationY>
         <connector>
-            <targetReference>myDecision2</targetReference>
+            <targetReference>myRule_1_A2</targetReference>
         </connector>
         <inputAssignments>
             <processMetadataValues>
@@ -1453,7 +1453,7 @@
             </processMetadataValues>
             <field>ReminderDateTime</field>
             <value>
-                <elementReference>formula_12_myWaitEvent_myWait_myRule_11_event_0_SA1_2767063844</elementReference>
+                <elementReference>formula_12_myWaitEvent_myWait_myRule_11_event_0_SA1_6780536063</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1489,7 +1489,7 @@
             </processMetadataValues>
             <field>Subject</field>
             <value>
-                <elementReference>formula_13_myWaitEvent_myWait_myRule_11_event_0_SA1_9808521663</elementReference>
+                <elementReference>formula_13_myWaitEvent_myWait_myRule_11_event_0_SA1_9383657438</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1530,6 +1530,139 @@
         </inputAssignments>
         <object>Task</object>
     </recordCreates>
+    <recordUpdates>
+        <processMetadataValues>
+            <name>evaluationType</name>
+            <value>
+                <stringValue>criteria</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>extraTypeInfo</name>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>isChildRelationship</name>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>reference</name>
+            <value>
+                <stringValue>[HRCSVC_Complaint_Qualification__c]</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>referenceTargetField</name>
+        </processMetadataValues>
+        <name>myRule_1_A2</name>
+        <label>Update Send To ETQ Checkbox to False</label>
+        <locationX>100</locationX>
+        <locationY>300</locationY>
+        <connector>
+            <targetReference>myDecision2</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <processMetadataValues>
+                <name>implicit</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </processMetadataValues>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <processMetadataValues>
+                <name>implicit</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>inputDataType</name>
+                <value>
+                    <stringValue>Boolean</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Send to ETQ</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideType</name>
+                <value>
+                    <stringValue>Boolean</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>operatorDataType</name>
+                <value>
+                    <stringValue>Boolean</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Boolean</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>HRCSVC20_Send_to_ETQ__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Boolean</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Send to ETQ</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Boolean</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>HRCSVC20_Send_to_ETQ__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <object>HRCSVC_Complaint_Qualification__c</object>
+    </recordUpdates>
     <recordUpdates>
         <processMetadataValues>
             <name>evaluationType</name>
