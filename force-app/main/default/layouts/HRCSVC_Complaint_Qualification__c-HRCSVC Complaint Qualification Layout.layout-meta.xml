@@ -257,10 +257,6 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>HRCSVC20_Complaint_Resolution__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>HRCSVC_Test_performed_per_service_manual__c</field>
             </layoutItems>
             <layoutItems>
