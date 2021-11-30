@@ -63,6 +63,10 @@
                 <field>HRCSVC_ETQ_Complaint_Number__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Edit</behavior>
+                <field>HRCSVC21_EtQ_Status__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>HRCSVC_Resolution_Status__c</field>
             </layoutItems>
@@ -250,10 +254,6 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>HRC_Functioning_as_designed_post_repair__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>HRCSVC20_Complaint_Resolution__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
