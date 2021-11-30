@@ -9,6 +9,10 @@
         <field>HRCSVC20_Send_to_ETQ__c</field>
         <formula>true</formula>
     </fieldOverrides>
+    <fieldOverrides>
+        <field>HRCSVC21_EtQ_Status__c</field>
+        <literalValue>Need to Process</literalValue>
+    </fieldOverrides>
     <label>Send to ETQ</label>
     <optionsCreateFeedItem>false</optionsCreateFeedItem>
     <quickActionLayout>
