@@ -926,6 +926,18 @@
 		<members>HRCSVC20_CQ_Original_Values__c.HRCSVC20_CQ_API_Name__c</members>
 		<members>HRCSVC20_CQ_Original_Values__c.HRCSVC21_CQ_Translation__c</members>
 		<members>HRCSVC20_CQ_Original_Values__c.CQ_External_Id__c</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_EtQ_Status__c</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_Assigned_Engineer__c</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_Item_Description__c</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_Item_Number__c</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_Location__c</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_Product_Family_Description__c</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_Product_Model_Description__c</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_Serial_Number__c</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_Shipment_Date__c</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_Software_Version__c</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_Software_Version_Case__c</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_URL__c</members>
 		<name>CustomField</name>
 	</types>
 	<types>
