@@ -48,6 +48,9 @@
 		<members>HRCSVC20_CQ_Backup_Values</members>
 		<members>HRCSVC20_CQ_Backup_Values_Test</members>
 		<members>HRCSVC20_Dynamic_Fetch_Field_Values</members>
+		<members>HRCSV21_CQ_Original_Values_Handler</members>
+		<members>HRCSVC21_MyException</members>
+		<members>HRCSVC21_AdvancedRelatedListController</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
@@ -58,6 +61,7 @@
 		<members>HRCFSL_Outbound_JDE_Work_Order_Trigger</members>
 		<members>CaseTriggerMain</members>
 		<members>HRCSVC_ContentVersionTrigger</members>
+		<members>HRCSVC21_CQ_Original_Values_Trigger</members>
 		<name>ApexTrigger</name>
 	</types>
 	<types>
@@ -68,6 +72,7 @@
 		<members>customLookupResult</members>
 		<members>navigateToRecord</members>
 		<members>selectedsObjectRecordEvent</members>
+		<members>HRCSVC21_AdvancedRelatedList</members>
 		<name>AuraDefinitionBundle</name>
 	</types>
 	<types>
@@ -906,6 +911,34 @@
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Requires_Translation__c</members>
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Send_to_ETQ__c</members>
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Instruction__c</members>
+		<members>Case.HRCSVC21_Age__c</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_CQ_Creation_Duration_From_Case__c</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Describe_Cause_Troubleshooting__c</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC_Injury_or_Death__c</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC_Condition__c</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Describe_Other_Condition__c    </members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC_Occurrence_Location_Complaint__c</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC_Individual_s_Outcome__c</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC_Patient_Identifier_PersonImpacted__c</members>
+		<members>WorkOrder.HRCSVC20_Repair_Template_Question_3b__c</members>
+		<members>WorkOrder.HRCSVC20_Repair_Template_Question_5a__c</members>
+		<members>Case.HRCSVC21_CQ_Required_fieldset__c</members>
+		<members>HRCSVC20_CQ_Original_Values__c.HRCSVC20_CQ_API_Name__c</members>
+		<members>HRCSVC20_CQ_Original_Values__c.HRCSVC21_CQ_Translation__c</members>
+		<members>HRCSVC20_CQ_Original_Values__c.CQ_External_Id__c</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_EtQ_Status__c</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_Assigned_Engineer__c</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_Item_Description__c</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_Item_Number__c</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_Location__c</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_Product_Family_Description__c</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_Product_Model_Description__c</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_Serial_Number__c</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_Shipment_Date__c</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_Software_Version__c</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_Software_Version_Case__c</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_URL__c</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Complaint_Resolution__c</members>
 		<name>CustomField</name>
 	</types>
 	<types>
@@ -1196,7 +1229,7 @@
 		<members>HRCSVC_Asset_Lightning_Record_Page</members>
 		<members>HRCSVC_Asset_Warranty_Record_Page</members>
 		<members>HRCSVC_Case_Record_Page</members>
-		<members>HRCSVC_Complaint_Qualification_Record_Page</members>
+		<!--<members>HRCSVC_Complaint_Qualification_Record_Page</members>-->
 		<members>HRCSVC_Complaint_Qualification_Record_Page_11</members>
 		<members>HRCSVC_Create_Rental_Order</members>
 		<members>HRCSVC_Entitlement_Record_Page</members>
@@ -1353,6 +1386,7 @@
 		<members>HRCSVC20_Consume_BOM_Item</members>
 		<members>HRCFSL_Check_Entitlement_SF</members>
 		<members>HRCSVC20_Set_Carrier_based_on_Ship_to_Country_on_Parts_Order</members>
+		<members>HRCFSL_Repair_Template_SF</members>
 		<name>Flow</name>
 	</types>
 	<types>
@@ -1496,6 +1530,7 @@
 		<members>HRCSVC_Problem_Resolution_Code__c-Problem%2FResolution Code Layout</members>
 		<members>HRCSVC_Remote_Access__c-Remote Access Layout</members>
 		<members>HRCSVC_ST_Product_Unavailability__c-Service Territory Product Unavailability Layout</members>
+		<members>HRCSVC20_CQ_Original_Values__c-CQ_Original_Values Layout</members>
 		<name>Layout</name>
 	</types>
 	<types>
@@ -1699,6 +1734,7 @@
 		<members>Contact.HRC_CRC_User</members>
 		<members>Contact.INT_Own_Data</members>
 		<members>Contact.INT_Cegedim</members>
+		<members>HRCSVC20_CQ_Original_Values__c.HRCSVC21_CQ_Original</members>
 		<name>RecordType</name>
 	</types>
 	-->
@@ -1739,6 +1775,9 @@
 		<members>HRCSVC_Service_Cloud_Reports/Return_Orders_with_Entitlements_Warran_iyy</members>
 		<members>HRCSVC_Service_Cloud_Reports/Return_Orders_without_Entitlements_War_bXt</members>
 		<members>HRCSVC_Service_Cloud_Reports/Work_Order_Volume_by_Product_Repair_WT_GvQ</members>
+		<members>HRCSVC_Service_Cloud_Reports/HRCSVC21_Open_Cases_without_CQ_JOe</members>
+		<members>HRCSVC_Service_Cloud_Reports/HRCSVC21_New_complaint_creation_cycle_time_zuv</members>
+		<members>HRCSVC_Service_Cloud_Reports/HRCSVC21_CQs_that_Require_Translation_HgR</members>
 		<members>HRCSVC_Service_Reporting</members>
 		<members>HRCSVC_Service_Reporting/AccountReports</members>
 		<members>HRCSVC_Service_Reporting/AccountReports/Case_Activities_in_the_past_30_days_ZaV</members>
@@ -1799,7 +1838,7 @@
 		<members>HRCSVC_Service_Reporting/HRCSVC_The_percentage_of_on_time_orders_aVa</members>
 		<members>HRCSVC_Service_Reporting/HRCSVC_The_total_no_of_loanersexchange_orders_5sV</members>
 		<members>HRCSVC_Service_Reporting/WOs_associated_to_a_Field_ActionMod_B3T</members>
-		<members>HRCSVC_Service_Reporting/HRCSVC20_CQs_that_Require_Translation_OLy</members>
+		<!--<members>HRCSVC_Service_Reporting/HRCSVC20_CQs_that_Require_Translation_OLy</members>-->
 		<members>HRC_FSL_Field_Service_Reports</members>
 		<members>IntegrationReports/New_ERP_Orders_with_Order_Line_Report_XeS</members>
 		<name>Report</name>
@@ -1833,6 +1872,7 @@
 		<members>Return_Orders_with_Return_Order_Line_Items</members>
 		<members>Assets_with_Orders_and_OLI</members>
 		<members>HRCSVC20_Complaint_Qualifications_w_Case_WO</members>
+		<members>HRCSVC21_Cases_and_Complaint_Qualification</members>
 		<name>ReportType</name>
 	</types>
 	<types>
@@ -1933,6 +1973,10 @@
 		<members>Case.SW_Version_Required_to_Close</members>
         <members>WorkOrder.HRCFSL_Comments_Are_Required</members>
 		<members>Order__c.HRCSVC20_Order_Not_Allowed_For_Customer</members>
+		<members>ServiceAppointment.HRCSVC20_Occurence_loc_Reqd_On_Closure</members>
+		<members>ServiceAppointment.HRCSVC21_Describe_Cause_Reqd_On_Closure</members>
+		<members>ServiceAppointment.HRCSVC21_Resolution_Reqd_On_Closure</members>
+		<members>Case.HRCSVC21_Reqd_fields_on_CQ_check </members>
 		<name>ValidationRule</name>
 	</types>
 	<types>
