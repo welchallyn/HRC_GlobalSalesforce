@@ -938,6 +938,7 @@
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_Software_Version__c</members>
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_Software_Version_Case__c</members>
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_URL__c</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Complaint_Resolution__c</members>
 		<name>CustomField</name>
 	</types>
 	<types>
