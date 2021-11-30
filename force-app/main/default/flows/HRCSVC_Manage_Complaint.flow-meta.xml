@@ -1773,7 +1773,7 @@
                     <fieldType>DropdownBox</fieldType>
                     <isRequired>false</isRequired>
                     <visibilityRule>
-                        <conditionLogic>(1 OR 5) AND (2) OR 3 OR 4</conditionLogic>
+                        <conditionLogic>(3 OR 1) AND (4) OR 2 OR 5</conditionLogic>
                         <conditions>
                             <leftValueReference>Injury_or_Death</leftValueReference>
                             <operator>NotEqualTo</operator>
