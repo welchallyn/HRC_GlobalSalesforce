@@ -38,22 +38,27 @@
                 <label>CANCELLED</label>
             </value>
             <value>
-                <fullName>REJECTED</fullName>
-                <default>false</default>
-                <label>REJECTED</label>
+                <fullName>OPEN</fullName>
+                <default>true</default>
+                <label>OPEN</label>
             </value>
         </valueSetDefinition>
         <valueSettings>
-            <controllingFieldValue>Business as Usual</controllingFieldValue>
-            <valueName>CLOSED</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Business as Usual</controllingFieldValue>
+            <controllingFieldValue>Idea</controllingFieldValue>
+            <controllingFieldValue>Opportunity</controllingFieldValue>
+            <controllingFieldValue>Value Prioritization</controllingFieldValue>
+            <controllingFieldValue>Execute</controllingFieldValue>
             <valueName>CANCELLED</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Business as Usual</controllingFieldValue>
-            <valueName>REJECTED</valueName>
+            <controllingFieldValue>Idea</controllingFieldValue>
+            <controllingFieldValue>Opportunity</controllingFieldValue>
+            <controllingFieldValue>Value Prioritization</controllingFieldValue>
+            <valueName>OPEN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Value Realization</controllingFieldValue>
+            <valueName>CLOSED</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Execute</controllingFieldValue>

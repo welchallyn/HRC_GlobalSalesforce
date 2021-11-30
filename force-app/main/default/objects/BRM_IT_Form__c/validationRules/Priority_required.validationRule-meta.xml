@@ -3,7 +3,9 @@
     <fullName>Priority_required</fullName>
     <active>true</active>
     <description>Rule created for CR00030892</description>
-    <errorConditionFormula>((ISPICKVAL(Gate__c , &apos;Execute&apos;) &amp;&amp; ISPICKVAL(Status__c, &apos;PENDING&apos;))|| (ISPICKVAL(Gate__c , &apos;Execute&apos;) &amp;&amp; ISPICKVAL(Status__c, &apos;IN PROGRESS&apos;))||ISPICKVAL(Gate__c , &apos;Value Realization&apos;) )  &amp;&amp;  ( ISPICKVAL(  Priority__c ,&apos;&apos;) )</errorConditionFormula>
+    <errorConditionFormula>ISPICKVAL(Gate__c , &apos;Execute&apos;) &amp;&amp; 
+ISPICKVAL(Status__c, &apos;PENDING&apos;) &amp;&amp; 
+ISPICKVAL(Priority__c ,&apos;&apos;)</errorConditionFormula>
     <errorDisplayField>Priority__c</errorDisplayField>
     <errorMessage>Required</errorMessage>
 </ValidationRule>

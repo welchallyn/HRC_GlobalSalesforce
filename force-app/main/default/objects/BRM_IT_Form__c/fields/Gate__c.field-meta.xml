@@ -15,18 +15,13 @@
             <sorted>false</sorted>
             <value>
                 <fullName>Idea</fullName>
-                <default>false</default>
+                <default>true</default>
                 <label>Idea</label>
             </value>
             <value>
                 <fullName>Opportunity</fullName>
                 <default>false</default>
                 <label>Opportunity</label>
-            </value>
-            <value>
-                <fullName>Value Prioritization</fullName>
-                <default>false</default>
-                <label>Value Prioritization</label>
             </value>
             <value>
                 <fullName>Execute</fullName>
@@ -36,11 +31,17 @@
             <value>
                 <fullName>Value Realization</fullName>
                 <default>false</default>
-                <label>Value Realization</label>
+                <label>Delivered</label>
+            </value>
+            <value>
+                <fullName>Value Prioritization</fullName>
+                <default>false</default>
+                <label>Prioritization</label>
             </value>
             <value>
                 <fullName>Business as Usual</fullName>
                 <default>false</default>
+                <isActive>false</isActive>
                 <label>Business as Usual</label>
             </value>
             <value>

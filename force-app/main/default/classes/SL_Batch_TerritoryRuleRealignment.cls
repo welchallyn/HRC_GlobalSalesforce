@@ -10,10 +10,10 @@ global with sharing class SL_Batch_TerritoryRuleRealignment implements Database.
     //initialised below class
     global partnerSoapSforceCom.Soap objPartnerSoap = new partnerSoapSforceCom.Soap(); 
 
-    global List<Account> lstAccountToCallout = new List<Account>();
+    global Set<Id> lstAccountToCallout = new Set<Id>();
     
     /* Start - Constructor */
-    global SL_Batch_TerritoryRuleRealignment(List<Account> accountLIst) 
+    global SL_Batch_TerritoryRuleRealignment(Set<Id> accountLIst) 
     {
         lstAccountToCallout = accountLIst;
     }
@@ -28,13 +28,13 @@ global with sharing class SL_Batch_TerritoryRuleRealignment implements Database.
     {
         // Calling login method from Start
         loginViaToPartnerWSDLAPI();
-        Set<Id> accIDSet = new Set<Id>();
+        //Set<Id> accIDSet = new Set<Id>();
         
-        for(Account acc : lstAccountToCallout)
+        /*for(Account acc : lstAccountToCallout)
         {
             accIDSet.add(acc.id);
-        }
-        return Database.getQueryLocator([select Id from Account where Id in :accIDSet]);
+        }*/
+        return Database.getQueryLocator([select Id from Account where Id in :lstAccountToCallout]);
     }
     
     /*!

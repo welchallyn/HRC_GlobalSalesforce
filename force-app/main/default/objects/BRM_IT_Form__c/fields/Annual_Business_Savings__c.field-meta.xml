@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Annual_Business_Savings__c</fullName>
+    <description>Anticipated business savings per year
+
+-- Created as part of CR00032940 | IT-REQ-1779</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Anticipated business savings per year</inlineHelpText>
+    <label>Annual Business Savings</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

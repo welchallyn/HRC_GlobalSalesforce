@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>IT_Time_Estimate_Hours__c</fullName>
+    <description>This represents effort time, not lead time to complete the task
+
+-- Modified as part of CR00032940 | IT-REQ-1779</description>
     <externalId>false</externalId>
-    <inlineHelpText>This represents effort time, not lead time to complete the task</inlineHelpText>
+    <inlineHelpText>IT effort required to complete request</inlineHelpText>
     <label>IT Time Estimate (Hours)</label>
-    <precision>8</precision>
+    <precision>3</precision>
     <required>false</required>
     <scale>0</scale>
     <trackFeedHistory>false</trackFeedHistory>

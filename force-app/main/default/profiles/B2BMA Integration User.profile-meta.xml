@@ -10820,6 +10820,16 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>BRM_IT_Form__c.Annual_Baseline_Time_Hours__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>BRM_IT_Form__c.Annual_Business_Savings__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>BRM_IT_Form__c.Annual_Cost_Avoidance__c</field>
         <readable>true</readable>
@@ -10828,6 +10838,16 @@
         <editable>true</editable>
         <field>BRM_IT_Form__c.Annual_IT_Savings__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>BRM_IT_Form__c.Annual_Revenue_Gain__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>BRM_IT_Form__c.Annual_Revenue_Loss_Avoidance__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -10873,6 +10893,11 @@
         <editable>true</editable>
         <field>BRM_IT_Form__c.Business_Risk_Likelihood__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>BRM_IT_Form__c.Business_Risk_Severity__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -10956,6 +10981,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>BRM_IT_Form__c.ELT_Area__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>BRM_IT_Form__c.Estimated_Annual_Benefit_Calculation__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -11026,6 +11056,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>BRM_IT_Form__c.IT_Solution_Lead__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>BRM_IT_Form__c.IT_Time_Estimate_Hours__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -11040,9 +11075,19 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>BRM_IT_Form__c.Magnitude_of_Business_Impact__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>BRM_IT_Form__c.Multiple_CRs__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>BRM_IT_Form__c.Opportunity_Date__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -11053,6 +11098,11 @@
         <editable>true</editable>
         <field>BRM_IT_Form__c.Primary_IT_Tower__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>BRM_IT_Form__c.Prioritization_Date__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -11083,6 +11133,11 @@
         <editable>true</editable>
         <field>BRM_IT_Form__c.Release__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>BRM_IT_Form__c.Requestor__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -11117,6 +11172,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>BRM_IT_Form__c.Status__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>BRM_IT_Form__c.Strategic_Priorities__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -11238,6 +11298,11 @@
         <editable>false</editable>
         <field>BRM_IT_Request__c.Change_Owner__c</field>
         <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>BRM_IT_Request__c.Date_Submitted__c</field>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -18542,6 +18607,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Hill_Rom_Application__c.Mission_or_Process_Fit__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Hill_Rom_Application__c.Number_of_Users__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -30501,6 +30571,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Technical_Request__c.Replacement_Supplies_Needed__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Technical_Request__c.Request_Details__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -30618,6 +30693,11 @@
         <editable>true</editable>
         <field>Technical_Request__c.Therapy_Your_Way_Decals__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Technical_Request__c.Trainer_Name__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -34776,6 +34856,10 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Technical_Request__c-RC Technical Request Layout</layout>
+        <recordType>Technical_Request__c.RH_Trainer_Replacements</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Technical_Request__c-RC Technical Request Layout</layout>
         <recordType>Technical_Request__c.Sales_Support_Request</recordType>
     </layoutAssignments>
     <layoutAssignments>
@@ -36798,6 +36882,11 @@
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>Technical_Request__c.RH_Technical_Request_for_OLE</recordType>
+        <visible>false</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>Technical_Request__c.RH_Trainer_Replacements</recordType>
         <visible>false</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>

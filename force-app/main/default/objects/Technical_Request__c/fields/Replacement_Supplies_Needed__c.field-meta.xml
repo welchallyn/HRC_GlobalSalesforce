@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Replacement_Supplies_Needed__c</fullName>
+    <description>Created as a part of CR00032524</description>
+    <externalId>false</externalId>
+    <label>Replacement Supplies Needed</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Life2000 Compressor</fullName>
+                <default>false</default>
+                <label>Life2000 Compressor</label>
+            </value>
+            <value>
+                <fullName>Life2000 Ventilator</fullName>
+                <default>false</default>
+                <label>Life2000 Ventilator</label>
+            </value>
+            <value>
+                <fullName>Life2000 Interface (list size needed in Additional Comments)</fullName>
+                <default>false</default>
+                <label>Life2000 Interface (list size needed in Additional Comments)</label>
+            </value>
+            <value>
+                <fullName>COMBO2 Air &amp; Oxygen Hose (20 feet)</fullName>
+                <default>false</default>
+                <label>COMBO2 Air &amp; Oxygen Hose (20 feet)</label>
+            </value>
+            <value>
+                <fullName>Oxygen Inlet Hose (6 Feet)</fullName>
+                <default>false</default>
+                <label>Oxygen Inlet Hose (6 Feet)</label>
+            </value>
+            <value>
+                <fullName>Compressor Filter Package</fullName>
+                <default>false</default>
+                <label>Compressor Filter Package</label>
+            </value>
+            <value>
+                <fullName>Universal Circuit Connector</fullName>
+                <default>false</default>
+                <label>Universal Circuit Connector</label>
+            </value>
+            <value>
+                <fullName>Nasal Sizing Guide</fullName>
+                <default>false</default>
+                <label>Nasal Sizing Guide</label>
+            </value>
+            <value>
+                <fullName>O2 Adapter</fullName>
+                <default>false</default>
+                <label>O2 Adapter</label>
+            </value>
+            <value>
+                <fullName>PM Stickers</fullName>
+                <default>false</default>
+                <label>PM Stickers</label>
+            </value>
+            <value>
+                <fullName>Vest Device</fullName>
+                <default>false</default>
+                <label>Vest Device</label>
+            </value>
+            <value>
+                <fullName>Disposable Garment (list size needed in Additional Comments)</fullName>
+                <default>false</default>
+                <label>Disposable Garment (list size needed in Additional Comments)</label>
+            </value>
+            <value>
+                <fullName>Synclara Device</fullName>
+                <default>false</default>
+                <label>Synclara Device</label>
+            </value>
+            <value>
+                <fullName>Synclara Mask (list size needed in Additional Comments)</fullName>
+                <default>false</default>
+                <label>Synclara Mask (list size needed in Additional Comments)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

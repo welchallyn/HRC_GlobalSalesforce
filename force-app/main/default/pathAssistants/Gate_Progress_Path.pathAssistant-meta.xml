@@ -5,10 +5,6 @@
     <fieldName>Gate__c</fieldName>
     <masterLabel>Gate Progress Path</masterLabel>
     <pathAssistantSteps>
-        <info>&lt;p&gt;This phase is used to completely close out the record in the funnel and contains three status​es&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Closed status: Steady state​&lt;/li&gt;&lt;li&gt;Rejected status: BP determined we will not move forward with the item​&lt;/li&gt;&lt;li&gt;Cancelled​: Work began on the item, but BP determined to permanently stop work​&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;a href=&quot;https://myhillrom.sharepoint.com/:p:/r/teams/ITBusinessPartners/_layouts/15/Doc.aspx?sourcedoc=%7B2BD53768-8698-42E1-8EE5-0A8B080A590B%7D&amp;amp;file=Business%20Partner%20Process%20and%20Tool%20Training.pptx&amp;amp;action=edit&amp;amp;mobileredirect=true&quot; target=&quot;_blank&quot; style=&quot;font-size: 13px;&quot;&gt;Click here for process overview &lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</info>
-        <picklistValueName>Business as Usual</picklistValueName>
-    </pathAssistantSteps>
-    <pathAssistantSteps>
         <info>&lt;p&gt;COE or vendor partner completes work​&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Pending​: Item is ready to be picked up and worked​&lt;/li&gt;&lt;li&gt;In Progress​: COE / External IT Partner is actively working the item​&lt;/li&gt;&lt;li&gt;On Hold​: Work has temporarily stopped on the item​&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;a href=&quot;https://myhillrom.sharepoint.com/:p:/r/teams/ITBusinessPartners/_layouts/15/Doc.aspx?sourcedoc=%7B2BD53768-8698-42E1-8EE5-0A8B080A590B%7D&amp;amp;file=Business%20Partner%20Process%20and%20Tool%20Training.pptx&amp;amp;action=edit&amp;amp;mobileredirect=true&quot; target=&quot;_blank&quot; style=&quot;font-size: 13px;&quot;&gt;Click here for process overview &lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</info>
         <picklistValueName>Execute</picklistValueName>
     </pathAssistantSteps>

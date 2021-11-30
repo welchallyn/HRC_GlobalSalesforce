@@ -11,7 +11,7 @@
 */
 global with sharing class SL_Batch_TerritoryMapping implements Schedulable, Database.Batchable<sObject>, Database.Stateful, Database.AllowsCallouts
 {
-    global List<Account> lstAccountToCallout = new List<Account>(); 
+    global Set<Id> lstAccountToCallout = new Set<Id>(); 
     global  Set <Id> setAccId = new Set <Id> ();
     global List<Account> lstMergedAccount = new List<Account>();
     /* Start - Constructor */
@@ -51,7 +51,7 @@ global with sharing class SL_Batch_TerritoryMapping implements Schedulable, Data
         //COMMENTOUT-ERS-09012015-String strQuery = 'SELECT Id, ShippingPostalCode, Market_Segment__c, ShippingCountry, Region__c, Territory__c, Inside_Sales__c, Solution_Architect__c FROM Account WHERE (RecordTypeId =: AccountRecordTypeId AND ShippingPostalCode !=null AND(ShippingCountry IN (\'US\',\'CA\')  AND  Market_Segment__c IN (\'Acute\',\'Ambulatory\')))';
         String strQuery = 'SELECT Id, BillingPostalCode, Market_Segment_WA__c, Market_Segments__c, Type, BillingCountry, Region__c, Territory__c, Inside_Sales__c, Solution_Architect__c, Acute_Mortara_Territory__c FROM Account WHERE (RecordTypeId =: AccountRecordTypeId AND BillingPostalCode !=null AND(BillingCountry IN(\'US\',\'United States\') AND  Market_Segment_WA__c IN (\'Acute\',\'Ambulatory\',\'System\')))';
         
-        return Database.getQueryLocator(strQuery);      
+        return Database.getQueryLocator(strQuery);       
     }
     
      global void execute(SchedulableContext SC) 
@@ -93,7 +93,7 @@ global with sharing class SL_Batch_TerritoryMapping implements Schedulable, Data
             for(Database.SaveResult sr :lstDBSaveResult)
             {
                 if(sr.isSuccess())
-                    lstAccountToCallout.add(new Account(Id = sr.getId()));
+                    lstAccountToCallout.add(sr.getId());
             }
             
         }

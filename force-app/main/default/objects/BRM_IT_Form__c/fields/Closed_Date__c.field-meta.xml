@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Closed_Date__c</fullName>
+    <description>If a Remedy ticket is associated to this request, this will be set to the ticket Closed Date
+
+-- Modified as part of CR00032940 | IT-REQ-1779</description>
     <externalId>false</externalId>
     <inlineHelpText>If a Remedy ticket is associated to this request, this will be set to the ticket Closed Date</inlineHelpText>
     <label>Closed Date</label>

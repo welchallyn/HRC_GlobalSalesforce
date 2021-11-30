@@ -2,6 +2,7 @@
 <ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Strategic_Priorities_is_Required</fullName>
     <active>true</active>
+    <description>Created as part of CR00032940 | IT-REQ-1779</description>
     <errorConditionFormula>ISPICKVAL(Strategic_Priorities__c, &apos;&apos;) &amp;&amp; ISPICKVAL(Submit_to_BRM__c, &apos;Yes&apos;)</errorConditionFormula>
     <errorDisplayField>Strategic_Priorities__c</errorDisplayField>
     <errorMessage>Required</errorMessage>

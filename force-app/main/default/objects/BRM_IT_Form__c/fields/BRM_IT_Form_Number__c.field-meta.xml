@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>BRM_IT_Form_Number__c</fullName>
+    <description>BRM IT Form number.
+
+-- Modified as part of CR00032940 | IT-REQ-1779</description>
     <displayFormat>IT-REQ-{0000}</displayFormat>
     <externalId>false</externalId>
-    <label>BRM IT Form Number</label>
+    <label>Form ID</label>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
     <type>AutoNumber</type>

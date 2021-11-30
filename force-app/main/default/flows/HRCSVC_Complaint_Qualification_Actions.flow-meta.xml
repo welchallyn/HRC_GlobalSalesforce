@@ -1,71 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
-    <actionCalls>
-        <processMetadataValues>
-            <name>ActionCallType</name>
-            <value>
-                <stringValue>flow</stringValue>
-            </value>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>flowSelection</name>
-            <value>
-                <stringValue>Notify Case Owner to complete Milestones</stringValue>
-            </value>
-        </processMetadataValues>
-        <name>myWaitEvent_myWait_myRule_7_event_0_SA1</name>
-        <label>Notify Case Owner to complete Milestones</label>
-        <locationX>700</locationX>
-        <locationY>200</locationY>
-        <actionName>HRCSVC_Notify_Case_Owner_to_complete_Milestones</actionName>
-        <actionType>flow</actionType>
-        <connector>
-            <targetReference>myWaitEvent_myWait_myRule_7_event_0_postWaitExecutionAssignment</targetReference>
-        </connector>
-        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
-        <inputParameters>
-            <processMetadataValues>
-                <name>dataType</name>
-                <value>
-                    <stringValue>String</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>isRequired</name>
-                <value>
-                    <booleanValue>false</booleanValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideLabel</name>
-                <value>
-                    <stringValue>RecordId</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>maxOccurs</name>
-                <value>
-                    <numberValue>1.0</numberValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>objectType</name>
-                <value>
-                    <stringValue></stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>rightHandSideType</name>
-                <value>
-                    <stringValue>Reference</stringValue>
-                </value>
-            </processMetadataValues>
-            <name>RecordId</name>
-            <value>
-                <elementReference>myVariable_current.Id</elementReference>
-            </value>
-        </inputParameters>
-    </actionCalls>
     <apiVersion>49.0</apiVersion>
     <assignments>
         <name>myWaitAssignment_myWait_myRule_11</name>
@@ -77,22 +11,6 @@
             <operator>Add</operator>
             <value>
                 <stringValue>myWait_myRule_11</stringValue>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>myPreWaitDecision_myWait_myRule_7</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>myWaitAssignment_myWait_myRule_7</name>
-        <label>myWaitAssignment_myWait_myRule_7</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <assignmentItems>
-            <assignToReference>cancelWaits</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <stringValue>myWait_myRule_7</stringValue>
             </value>
         </assignmentItems>
         <connector>
@@ -113,22 +31,6 @@
         </assignmentItems>
         <connector>
             <targetReference>myWait_myRule_11</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>myWaitEvent_myWait_myRule_7_event_0_postWaitExecutionAssignment</name>
-        <label>myWaitEvent_myWait_myRule_7_event_0_postWaitExecutionAssignment</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <assignmentItems>
-            <assignToReference>myWaitEvent_myWait_myRule_7_event_0_postActionExecutionVariable</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>myWait_myRule_7</targetReference>
         </connector>
     </assignments>
     <decisions>
@@ -512,7 +414,7 @@
                 <leftValueReference>myVariable_current.HRCSVC_Aware_Date__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <elementReference>formula_8_myRule_7_9927151658</elementReference>
+                    <elementReference>formula_8_myRule_7_2275134685</elementReference>
                 </rightValue>
             </conditions>
             <connector>
@@ -544,31 +446,6 @@
                 <targetReference>myWaitEvent_myWait_myRule_11_event_0_SA1</targetReference>
             </connector>
             <label>myPostWaitRule_myWaitEvent_myWait_myRule_11_event_0</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>myPostWaitDecision_myWaitEvent_myWait_myRule_7_event_0</name>
-        <label>myPostWaitDecision_myWaitEvent_myWait_myRule_7_event_0</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <defaultConnector>
-            <targetReference>myWaitEvent_myWait_myRule_7_event_0_postWaitExecutionAssignment</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>default</defaultConnectorLabel>
-        <rules>
-            <name>myPostWaitRule_myWaitEvent_myWait_myRule_7_event_0</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>myVariable_current.HRCSVC_Aware_Date__c</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>myWaitEvent_myWait_myRule_7_event_0_SA1</targetReference>
-            </connector>
-            <label>myPostWaitRule_myWaitEvent_myWait_myRule_7_event_0</label>
         </rules>
     </decisions>
     <decisions>
@@ -652,126 +529,9 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>myPreWaitDecision_myWait_myRule_7</targetReference>
-            </connector>
-            <label>myPreWaitRule_myWait_myRule_11</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>myPreWaitDecision_myWait_myRule_7</name>
-        <label>myPreWaitDecision_myWait_myRule_7</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <defaultConnector>
-            <targetReference>myWaitAssignment_myWait_myRule_7</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>default</defaultConnectorLabel>
-        <rules>
-            <name>myPreWaitRule_myWait_myRule_7</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <processMetadataValues>
-                    <name>inputDataType</name>
-                    <value>
-                        <stringValue>Boolean</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>leftHandSideReferenceTo</name>
-                    <value>
-                        <stringValue>Case</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>leftHandSideType</name>
-                    <value>
-                        <stringValue>ID</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>operatorDataType</name>
-                    <value>
-                        <stringValue>String</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>rightHandSideType</name>
-                    <value>
-                        <stringValue>Boolean</stringValue>
-                    </value>
-                </processMetadataValues>
-                <leftValueReference>myVariable_current.HRCSVC_Case__c</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <processMetadataValues>
-                    <name>inputDataType</name>
-                    <value>
-                        <stringValue>Boolean</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>leftHandSideType</name>
-                    <value>
-                        <stringValue>Boolean</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>operatorDataType</name>
-                    <value>
-                        <stringValue>Boolean</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>rightHandSideType</name>
-                    <value>
-                        <stringValue>Boolean</stringValue>
-                    </value>
-                </processMetadataValues>
-                <leftValueReference>myVariable_current.HRCSVC_Resolution_Complete__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <processMetadataValues>
-                    <name>inputDataType</name>
-                    <value>
-                        <stringValue>Date</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>leftHandSideType</name>
-                    <value>
-                        <stringValue>Date</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>operatorDataType</name>
-                    <value>
-                        <stringValue>Date</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>rightHandSideType</name>
-                    <value>
-                        <stringValue>Formula</stringValue>
-                    </value>
-                </processMetadataValues>
-                <leftValueReference>myVariable_current.HRCSVC_Aware_Date__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <elementReference>formula_8_myRule_7_9927151658</elementReference>
-                </rightValue>
-            </conditions>
-            <connector>
                 <targetReference>myDecision</targetReference>
             </connector>
-            <label>myPreWaitRule_myWait_myRule_7</label>
+            <label>myPreWaitRule_myWait_myRule_11</label>
         </rules>
     </decisions>
     <decisions>
@@ -1160,7 +920,7 @@
                 <leftValueReference>myVariable_old.HRCSVC_Aware_Date__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <elementReference>formula_9_myRule_7_pmetrule_5498523584</elementReference>
+                    <elementReference>formula_9_myRule_7_pmetrule_3928920285</elementReference>
                 </rightValue>
             </conditions>
             <label>Previously Met - Prev</label>
@@ -1174,7 +934,7 @@
                 <stringValue>NOW() </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_12_myWaitEvent_myWait_myRule_11_event_0_SA1_0201829403</name>
+        <name>formula_12_myWaitEvent_myWait_myRule_11_event_0_SA1_1224729258</name>
         <dataType>DateTime</dataType>
         <expression>NOW()</expression>
     </formulas>
@@ -1185,7 +945,7 @@
                 <stringValue>&quot;Please complete Complaint Qualification now&quot; + &quot; &quot; + [HRCSVC_Complaint_Qualification__c].Name </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_13_myWaitEvent_myWait_myRule_11_event_0_SA1_5527998173</name>
+        <name>formula_13_myWaitEvent_myWait_myRule_11_event_0_SA1_7714668687</name>
         <dataType>String</dataType>
         <expression>&quot;Please complete Complaint Qualification now&quot; + &quot; &quot; + {!myVariable_current.Name}</expression>
     </formulas>
@@ -1196,7 +956,7 @@
                 <stringValue>TODAY() </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_8_myRule_7_9927151658</name>
+        <name>formula_8_myRule_7_2275134685</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -1207,7 +967,7 @@
                 <stringValue>TODAY() </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_9_myRule_7_pmetrule_5498523584</name>
+        <name>formula_9_myRule_7_pmetrule_3928920285</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -1222,7 +982,7 @@
         <dataType>Boolean</dataType>
         <expression>ISNEW()</expression>
     </formulas>
-    <interviewLabel>HRCSVC_Complaint_Qualification_Actions-2_InterviewLabel</interviewLabel>
+    <interviewLabel>HRCSVC_Complaint_Qualification_Actions-3_InterviewLabel</interviewLabel>
     <label>HRCSVC Complaint Qualification Actions</label>
     <processMetadataValues>
         <name>ObjectType</name>
@@ -1402,7 +1162,7 @@
             </processMetadataValues>
             <field>ReminderDateTime</field>
             <value>
-                <elementReference>formula_12_myWaitEvent_myWait_myRule_11_event_0_SA1_0201829403</elementReference>
+                <elementReference>formula_12_myWaitEvent_myWait_myRule_11_event_0_SA1_1224729258</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1438,7 +1198,7 @@
             </processMetadataValues>
             <field>Subject</field>
             <value>
-                <elementReference>formula_13_myWaitEvent_myWait_myRule_11_event_0_SA1_5527998173</elementReference>
+                <elementReference>formula_13_myWaitEvent_myWait_myRule_11_event_0_SA1_7714668687</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1712,9 +1472,6 @@
         <label>Update CQ Resolution Status</label>
         <locationX>700</locationX>
         <locationY>200</locationY>
-        <connector>
-            <targetReference>myWait_myRule_7</targetReference>
-        </connector>
         <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
@@ -1852,7 +1609,7 @@
         <object>Case</object>
     </recordUpdates>
     <startElementReference>myPreWaitDecision_myWait_myRule_11</startElementReference>
-    <status>Active</status>
+    <status>Draft</status>
     <variables>
         <name>cancelWaits</name>
         <dataType>String</dataType>
@@ -1878,16 +1635,6 @@
     </variables>
     <variables>
         <name>myWaitEvent_myWait_myRule_11_event_0_postActionExecutionVariable</name>
-        <dataType>Boolean</dataType>
-        <isCollection>false</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
-        <value>
-            <booleanValue>false</booleanValue>
-        </value>
-    </variables>
-    <variables>
-        <name>myWaitEvent_myWait_myRule_7_event_0_postActionExecutionVariable</name>
         <dataType>Boolean</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>
@@ -1953,65 +1700,6 @@
                 </value>
             </inputParameters>
             <label>myWaitEvent_myWait_myRule_11_event_0</label>
-        </waitEvents>
-    </waits>
-    <waits>
-        <name>myWait_myRule_7</name>
-        <label>myWait_myRule_7</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <defaultConnectorLabel>defaultLabel</defaultConnectorLabel>
-        <waitEvents>
-            <processMetadataValues>
-                <name>inputParameterType</name>
-                <value>
-                    <stringValue>referenced</stringValue>
-                </value>
-            </processMetadataValues>
-            <name>myWaitEvent_myWait_myRule_7_event_0</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>myWaitEvent_myWait_myRule_7_event_0_postActionExecutionVariable</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>myPostWaitDecision_myWaitEvent_myWait_myRule_7_event_0</targetReference>
-            </connector>
-            <eventType>DateRefAlarmEvent</eventType>
-            <inputParameters>
-                <name>TimeTableColumnEnumOrId</name>
-                <value>
-                    <stringValue>HRCSVC_Complaint_Qualification__c</stringValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>EntityObjectId</name>
-                <value>
-                    <elementReference>myVariable_current.Id</elementReference>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>TimeOffsetUnit</name>
-                <value>
-                    <stringValue>Hours</stringValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>TimeOffset</name>
-                <value>
-                    <numberValue>0.0</numberValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>TimeFieldColumnEnumOrId</name>
-                <value>
-                    <stringValue>HRCSVC_Aware_Date__c</stringValue>
-                </value>
-            </inputParameters>
-            <label>myWaitEvent_myWait_myRule_7_event_0</label>
         </waitEvents>
     </waits>
 </Flow>

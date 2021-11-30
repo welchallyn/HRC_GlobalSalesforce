@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Business_Case__c</fullName>
+    <description>Description of the IT solution to the stated problem
+
+-- Modified as part of CR00032940 | IT-REQ-1779</description>
     <externalId>false</externalId>
-    <label>Business Case</label>
+    <inlineHelpText>Description of the IT solution to the stated problem</inlineHelpText>
+    <label>Solution Statement</label>
     <length>32768</length>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

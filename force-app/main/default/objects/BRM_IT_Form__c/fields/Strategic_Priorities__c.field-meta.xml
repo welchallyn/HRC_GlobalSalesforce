@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Strategic_Priorities__c</fullName>
+    <description>Provide alignment to the company strategic priorities
+
+-- Created as part of CR00032940 | IT-REQ-1779</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Provide alignment to the company strategic priorities</inlineHelpText>
+    <label>Strategic Priorities</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Advancing differentiated solutions and innovation</fullName>
+                <default>false</default>
+                <label>Advancing differentiated solutions and innovation</label>
+            </value>
+            <value>
+                <fullName>Driving operational execution and strong financial performance</fullName>
+                <default>false</default>
+                <label>Driving operational execution and strong financial performance</label>
+            </value>
+            <value>
+                <fullName>Expanding internationally and penetrating emerging markets</fullName>
+                <default>false</default>
+                <label>Expanding internationally and penetrating emerging markets</label>
+            </value>
+            <value>
+                <fullName>Transforming the portofolio with select M&amp;A and optimization initiatives</fullName>
+                <default>false</default>
+                <label>Transforming the portofolio with select M&amp;A and optimization initiatives</label>
+            </value>
+            <value>
+                <fullName>Foundational</fullName>
+                <default>false</default>
+                <label>Foundational</label>
+            </value>
+            <value>
+                <fullName>Not applicable</fullName>
+                <default>false</default>
+                <label>Not applicable</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Applications_required</fullName>
-    <active>true</active>
+    <active>false</active>
     <description>Created as part of CR CR00030892</description>
     <errorConditionFormula>(ISPICKVAL(Gate__c , &apos;Opportunity&apos;) || ISPICKVAL(Gate__c ,&apos;Value Prioritization&apos;) || (ISPICKVAL(Gate__c ,&apos;Execute&apos;) &amp;&amp; ISPICKVAL(Status__c ,&apos;PENDING&apos;))|| (ISPICKVAL(Gate__c ,&apos;Execute&apos;) &amp;&amp; ISPICKVAL(Status__c ,&apos;IN PROGRESS&apos;)) ||
 ISPICKVAL(Gate__c ,&apos;Value Realization&apos;) )&amp;&amp; ( ISNULL( Application__c ) || ISBLANK(Application__c ))</errorConditionFormula>

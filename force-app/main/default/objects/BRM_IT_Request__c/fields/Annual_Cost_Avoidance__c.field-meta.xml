@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Annual_Cost_Avoidance__c</fullName>
+    <description>Created as part of CR00032940 | IT-REQ-1779</description>
     <externalId>false</externalId>
     <inlineHelpText>Anticipated cost avoidance per year</inlineHelpText>
     <label>Annual Cost Avoidance</label>

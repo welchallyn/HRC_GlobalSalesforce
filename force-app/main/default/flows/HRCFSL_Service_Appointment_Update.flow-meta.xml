@@ -131,8 +131,8 @@
     <assignments>
         <name>Set_Choice</name>
         <label>Set Choice</label>
-        <locationX>734</locationX>
-        <locationY>1120</locationY>
+        <locationX>219</locationX>
+        <locationY>1169</locationY>
         <assignmentItems>
             <assignToReference>Selected_SA_Status</assignToReference>
             <operator>Assign</operator>
@@ -147,8 +147,8 @@
     <assignments>
         <name>Set_Choice_0</name>
         <label>Set Choice</label>
-        <locationX>694</locationX>
-        <locationY>1012</locationY>
+        <locationX>102</locationX>
+        <locationY>1151</locationY>
         <assignmentItems>
             <assignToReference>Selected_SA_Status</assignToReference>
             <operator>Assign</operator>
@@ -163,8 +163,8 @@
     <assignments>
         <name>Set_Choice_1</name>
         <label>Set Choice</label>
-        <locationX>843</locationX>
-        <locationY>925</locationY>
+        <locationX>313</locationX>
+        <locationY>1199</locationY>
         <assignmentItems>
             <assignToReference>Selected_SA_Status</assignToReference>
             <operator>Assign</operator>
@@ -179,8 +179,8 @@
     <assignments>
         <name>Set_Choice_2</name>
         <label>Set Choice</label>
-        <locationX>895</locationX>
-        <locationY>774</locationY>
+        <locationX>409</locationX>
+        <locationY>1229</locationY>
         <assignmentItems>
             <assignToReference>Selected_SA_Status</assignToReference>
             <operator>Assign</operator>
@@ -195,13 +195,61 @@
     <assignments>
         <name>Set_Choice_3</name>
         <label>Set Choice</label>
-        <locationX>791</locationX>
-        <locationY>527</locationY>
+        <locationX>647</locationX>
+        <locationY>347</locationY>
         <assignmentItems>
             <assignToReference>Selected_SA_Status</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>Status_Scheduled_Selection</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Selected_Status</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Set_Choice_4</name>
+        <label>Set Choice</label>
+        <locationX>513</locationX>
+        <locationY>1268</locationY>
+        <assignmentItems>
+            <assignToReference>Selected_SA_Status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Status_Scheduled_Selection_0</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Selected_Status</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Set_Choice_5</name>
+        <label>Set Choice</label>
+        <locationX>595</locationX>
+        <locationY>1308</locationY>
+        <assignmentItems>
+            <assignToReference>Selected_SA_Status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Status_Scheduled_Selection_1</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Selected_Status</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Set_Choice_6</name>
+        <label>Set Choice</label>
+        <locationX>460</locationX>
+        <locationY>246</locationY>
+        <assignmentItems>
+            <assignToReference>Selected_SA_Status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Status_Scheduled_Selection_2</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -388,6 +436,38 @@
         </value>
     </constants>
     <decisions>
+        <name>Activity_Type</name>
+        <label>Activity Type</label>
+        <locationX>514</locationX>
+        <locationY>445</locationY>
+        <defaultConnector>
+            <targetReference>Update_Service_Appointment_Status</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Repair</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>WorkOrderDetails.HRCFSL_Activity_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Y</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>WorkOrderDetails.HRCFSL_Activity_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Z</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Service_Appointment_Status_2</targetReference>
+            </connector>
+            <label>Repair</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Check_Modlist_is_not_null</name>
         <label>Check Modlist is not null</label>
         <locationX>1199</locationX>
@@ -410,31 +490,6 @@
                 <targetReference>Cannot_Cancel_Screen</targetReference>
             </connector>
             <label>ModList not null</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>Check_Service_Resource_skills</name>
-        <label>Check Service Resource skills</label>
-        <locationX>314</locationX>
-        <locationY>1011</locationY>
-        <defaultConnector>
-            <targetReference>Work_Type_SQZ_SQY</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>SR has no required skill</defaultConnectorLabel>
-        <rules>
-            <name>SR_has_Skill</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>WorkOrderDetails.HRCFSL_Technician_has_Skills__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Work_Type_is_SQZ_or_SQY</targetReference>
-            </connector>
-            <label>SR has Skill</label>
         </rules>
     </decisions>
     <decisions>
@@ -464,7 +519,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Update_Service_Appointment_Status</targetReference>
+                <targetReference>Activity_Type</targetReference>
             </connector>
             <label>Scheduled / Dispatched</label>
         </rules>
@@ -479,7 +534,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Check_Service_Resource_skills</targetReference>
+                <targetReference>Work_Type_and_Skill_Combination</targetReference>
             </connector>
             <label>In Progress</label>
         </rules>
@@ -770,6 +825,9 @@
         <label>Validation Outcome</label>
         <locationX>194</locationX>
         <locationY>875</locationY>
+        <defaultConnector>
+            <targetReference>Work_Type_and_Skill_Combination</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>IBOAR_Outcome_Ok</name>
@@ -788,23 +846,20 @@
         </rules>
     </decisions>
     <decisions>
-        <description>Rental repairs (SQ-Z and SQ-Y)</description>
-        <name>Work_Type_is_SQZ_or_SQY</name>
-        <label>Work Type is SQZ or SQY</label>
-        <locationX>583</locationX>
-        <locationY>873</locationY>
-        <defaultConnector>
-            <targetReference>Update_Service_Appointment_Status_from_In_Progress</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>WorkType is not (SQZ-SQY)</defaultConnectorLabel>
+        <description>Depending on Work Type and Required Skills, different screens are displayed (DSP-370, DSP-372)</description>
+        <name>Work_Type_and_Skill_Combination</name>
+        <label>Work Type and Skill Combination</label>
+        <locationX>405</locationX>
+        <locationY>899</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
-            <name>Work_Type_SQZ_or_SQY</name>
-            <conditionLogic>or</conditionLogic>
+            <name>Skills_and_Rental_Repair</name>
+            <conditionLogic>1 AND (2 OR 3)</conditionLogic>
             <conditions>
-                <leftValueReference>WorkOrderDetails.HRCFSL_Work_Type_Name__c</leftValueReference>
+                <leftValueReference>WorkOrderDetails.HRCFSL_Technician_has_Skills__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>SQZ</stringValue>
+                    <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
             <conditions>
@@ -812,32 +867,93 @@
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>SQY</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>WorkOrderDetails.HRCFSL_Work_Type_Name__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>SQZ</stringValue>
                 </rightValue>
             </conditions>
             <connector>
                 <targetReference>Service_Appointment_Status_based_on_workType</targetReference>
             </connector>
-            <label>Work Type (SQZ or SQY)</label>
+            <label>Skills and Rental Repair</label>
         </rules>
-    </decisions>
-    <decisions>
-        <description>Rental repairs (SQ-Z and SQ-Y).</description>
-        <name>Work_Type_SQZ_SQY</name>
-        <label>Work Type (SQZ or SQY)</label>
-        <locationX>510</locationX>
-        <locationY>1352</locationY>
-        <defaultConnector>
-            <targetReference>Update_Service_Appointment_Status_Missing_Skills</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Work Type is not (SQZ-SQY)</defaultConnectorLabel>
         <rules>
-            <name>Work_T_SQZ_SQY</name>
-            <conditionLogic>or</conditionLogic>
+            <name>Skills_and_Capital_Repair</name>
+            <conditionLogic>1 AND 2 AND (3 OR 4)</conditionLogic>
             <conditions>
-                <leftValueReference>WorkOrderDetails.HRCFSL_Work_Type_Name__c</leftValueReference>
+                <leftValueReference>WorkOrderDetails.HRCFSL_Technician_has_Skills__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>SQZ</stringValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>WorkOrderDetails.HRCFSL_Doc_Type__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>SQ</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>WorkOrderDetails.HRCFSL_Activity_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Y</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>WorkOrderDetails.HRCFSL_Activity_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Z</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Service_Appointment_Status_0</targetReference>
+            </connector>
+            <label>Skills and Capital Repair</label>
+        </rules>
+        <rules>
+            <name>Skills_and_Not_a_Repair</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>WorkOrderDetails.HRCFSL_Technician_has_Skills__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>WorkOrderDetails.HRCFSL_Activity_Type__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Y</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>WorkOrderDetails.HRCFSL_Activity_Type__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Z</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Service_Appointment_Status_from_In_Progress</targetReference>
+            </connector>
+            <label>Skills and Not a Repair</label>
+        </rules>
+        <rules>
+            <name>No_Skills_and_Rental_Repair</name>
+            <conditionLogic>1 AND (2 OR 3)</conditionLogic>
+            <conditions>
+                <leftValueReference>WorkOrderDetails.HRCFSL_Technician_has_Skills__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
             <conditions>
@@ -847,10 +963,82 @@
                     <stringValue>SQY</stringValue>
                 </rightValue>
             </conditions>
+            <conditions>
+                <leftValueReference>WorkOrderDetails.HRCFSL_Work_Type_Name__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>SQZ</stringValue>
+                </rightValue>
+            </conditions>
             <connector>
                 <targetReference>Service_Appointment_Based_work_type</targetReference>
             </connector>
-            <label>Work Type (SQZ or SQY)</label>
+            <label>No Skills and Rental Repair</label>
+        </rules>
+        <rules>
+            <name>No_Skills_and_Capital_Repair</name>
+            <conditionLogic>1 AND 2 AND (3 OR 4)</conditionLogic>
+            <conditions>
+                <leftValueReference>WorkOrderDetails.HRCFSL_Technician_has_Skills__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>WorkOrderDetails.HRCFSL_Doc_Type__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>SQ</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>WorkOrderDetails.HRCFSL_Activity_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Y</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>WorkOrderDetails.HRCFSL_Activity_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Z</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Service_Appointment_Status_1</targetReference>
+            </connector>
+            <label>No Skills and Capital Repair</label>
+        </rules>
+        <rules>
+            <name>No_Skills_and_Not_a_Repair</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>WorkOrderDetails.HRCFSL_Technician_has_Skills__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>WorkOrderDetails.HRCFSL_Activity_Type__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Y</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>WorkOrderDetails.HRCFSL_Activity_Type__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Z</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Service_Appointment_Status_Missing_Skills</targetReference>
+            </connector>
+            <label>No Skills and Not a Repair</label>
         </rules>
     </decisions>
     <dynamicChoiceSets>
@@ -1240,8 +1428,8 @@
     <screens>
         <name>ChangeStatusNotPossible</name>
         <label>Error message</label>
-        <locationX>519</locationX>
-        <locationY>503</locationY>
+        <locationX>424</locationX>
+        <locationY>527</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -1288,8 +1476,8 @@
     <screens>
         <name>Service_Appointment_Based_work_type</name>
         <label>Update Service Appointment Status from In Progress</label>
-        <locationX>599</locationX>
-        <locationY>1012</locationY>
+        <locationX>116</locationX>
+        <locationY>1025</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -1300,8 +1488,8 @@
             <name>SA_Work_Type</name>
             <choiceReferences>SA_CannotComplete</choiceReferences>
             <choiceReferences>SA_CannotComplete_TroubleshootingComplete</choiceReferences>
-            <choiceReferences>SA_Canceled</choiceReferences>
             <choiceReferences>SA_CannotComplete_AwaitingCustomerResponse</choiceReferences>
+            <choiceReferences>SA_Cannot_Complete_FollowUp</choiceReferences>
             <dataType>String</dataType>
             <fieldText>Change To</fieldText>
             <fieldType>RadioButtons</fieldType>
@@ -1318,8 +1506,8 @@
     <screens>
         <name>Service_Appointment_Status_based_on_workType</name>
         <label>Update Service Appointment Status from In Progress</label>
-        <locationX>772</locationX>
-        <locationY>928</locationY>
+        <locationX>308</locationX>
+        <locationY>1027</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -1331,7 +1519,6 @@
             <choiceReferences>SA_AwaitingSignature</choiceReferences>
             <choiceReferences>SA_CannotComplete</choiceReferences>
             <choiceReferences>SA_CannotComplete_TroubleshootingComplete</choiceReferences>
-            <choiceReferences>SA_Canceled</choiceReferences>
             <choiceReferences>SA_CannotComplete_AwaitingCustomerResponse</choiceReferences>
             <choiceReferences>SA_Cannot_Complete_FollowUp</choiceReferences>
             <dataType>String</dataType>
@@ -1388,8 +1575,8 @@
     <screens>
         <name>Update_Service_Appointment_Status</name>
         <label>Update Service Appointment Status</label>
-        <locationX>799</locationX>
-        <locationY>627</locationY>
+        <locationX>559</locationX>
+        <locationY>345</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -1411,10 +1598,92 @@
         <showHeader>true</showHeader>
     </screens>
     <screens>
+        <name>Update_Service_Appointment_Status_0</name>
+        <label>Update Service Appointment Status</label>
+        <locationX>499</locationX>
+        <locationY>1041</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Set_Choice_4</targetReference>
+        </connector>
+        <fields>
+            <name>Status_Scheduled_Selection_0</name>
+            <choiceReferences>SA_AwaitingSignature</choiceReferences>
+            <choiceReferences>SA_CannotComplete</choiceReferences>
+            <choiceReferences>SA_CannotComplete_AwaitingParts</choiceReferences>
+            <choiceReferences>SA_CannotComplete_TroubleshootingComplete</choiceReferences>
+            <choiceReferences>SA_CannotComplete_AwaitingCustomerResponse</choiceReferences>
+            <choiceReferences>SA_Cannot_Complete_FollowUp</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Change to:</fieldText>
+            <fieldType>RadioButtons</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Update_Service_Appointment_Status_1</name>
+        <label>Update Service Appointment Status</label>
+        <locationX>591</locationX>
+        <locationY>1034</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Set_Choice_5</targetReference>
+        </connector>
+        <fields>
+            <name>Status_Scheduled_Selection_1</name>
+            <choiceReferences>SA_CannotComplete</choiceReferences>
+            <choiceReferences>SA_CannotComplete_AwaitingParts</choiceReferences>
+            <choiceReferences>SA_CannotComplete_TroubleshootingComplete</choiceReferences>
+            <choiceReferences>SA_CannotComplete_AwaitingCustomerResponse</choiceReferences>
+            <choiceReferences>SA_Cannot_Complete_FollowUp</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Change to:</fieldText>
+            <fieldType>RadioButtons</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Missing_skills_0</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); color: rgb(62, 62, 60);&quot;&gt;Note&lt;/b&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(62, 62, 60);&quot;&gt;: you cannot move this Service Appointment to Awaiting Signature because you do not have the required certifications to complete this Work Order.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Update_Service_Appointment_Status_2</name>
+        <label>Update Service Appointment Status</label>
+        <locationX>460</locationX>
+        <locationY>343</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Set_Choice_6</targetReference>
+        </connector>
+        <fields>
+            <name>Status_Scheduled_Selection_2</name>
+            <choiceReferences>SA_InProgress</choiceReferences>
+            <choiceReferences>SA_Reschedule</choiceReferences>
+            <choiceReferences>SA_None</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Change to:</fieldText>
+            <fieldType>RadioButtons</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
         <name>Update_Service_Appointment_Status_from_In_Progress</name>
         <label>Update Service Appointment Status from In Progress</label>
-        <locationX>815</locationX>
-        <locationY>779</locationY>
+        <locationX>404</locationX>
+        <locationY>1039</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -1441,8 +1710,8 @@
     <screens>
         <name>Update_Service_Appointment_Status_Missing_Skills</name>
         <label>Update Service Appointment Status from In Progress</label>
-        <locationX>732</locationX>
-        <locationY>1244</locationY>
+        <locationX>218</locationX>
+        <locationY>1024</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -1456,6 +1725,7 @@
             <choiceReferences>SA_CannotComplete_TroubleshootingComplete</choiceReferences>
             <choiceReferences>SA_Canceled</choiceReferences>
             <choiceReferences>SA_CannotComplete_AwaitingCustomerResponse</choiceReferences>
+            <choiceReferences>SA_Cannot_Complete_FollowUp</choiceReferences>
             <dataType>String</dataType>
             <fieldText>Change To</fieldText>
             <fieldType>RadioButtons</fieldType>

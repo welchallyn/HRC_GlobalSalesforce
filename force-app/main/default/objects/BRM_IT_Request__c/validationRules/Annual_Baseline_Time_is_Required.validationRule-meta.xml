@@ -2,6 +2,7 @@
 <ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Annual_Baseline_Time_is_Required</fullName>
     <active>true</active>
+    <description>Created as part of CR00032940 | IT-REQ-1779</description>
     <errorConditionFormula>ISBLANK(Annual_Baseline_Time_Hours__c)  &amp;&amp;  ISPICKVAL(Submit_to_BRM__c, &apos;Yes&apos;)</errorConditionFormula>
     <errorDisplayField>Annual_Baseline_Time_Hours__c</errorDisplayField>
     <errorMessage>Required</errorMessage>

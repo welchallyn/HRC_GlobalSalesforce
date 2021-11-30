@@ -2,8 +2,9 @@
 <ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Change_Request_is_required</fullName>
     <active>true</active>
-    <errorConditionFormula>((ISPICKVAL(Gate__c , &apos;Execute&apos;) &amp;&amp; ISPICKVAL(Status__c, &apos;IN PROGRESS&apos;) ) || ISPICKVAL(Gate__c , &apos;Value Realization&apos;))&amp;&amp; 
-(ISPICKVAL(CR_To_Be_Created__c,&apos;&apos;))</errorConditionFormula>
+    <errorConditionFormula>ISPICKVAL(Gate__c , &apos;Execute&apos;) &amp;&amp; 
+ISPICKVAL(Status__c, &apos;IN PROGRESS&apos;) &amp;&amp; 
+ISPICKVAL(CR_To_Be_Created__c,&apos;&apos;)</errorConditionFormula>
     <errorDisplayField>CR_To_Be_Created__c</errorDisplayField>
-    <errorMessage>Please enter the value for CR to be created.</errorMessage>
+    <errorMessage>Please choose an option for CR To Be Created.</errorMessage>
 </ValidationRule>

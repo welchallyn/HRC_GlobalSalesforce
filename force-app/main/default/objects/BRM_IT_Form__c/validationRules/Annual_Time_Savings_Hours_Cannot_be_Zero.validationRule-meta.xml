@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Annual_Time_Savings_Hours_Cannot_be_Zero</fullName>
+    <active>true</active>
+    <description>Annual Time Savings (Hours) cannot be zero if Business Risk Severity is selected as No Impact and Gate is Opportunity.
+
+-- Created as part of CR00032940 | IT-REQ-1779</description>
+    <errorConditionFormula>ISPICKVAL( Gate__c, &apos;Opportunity&apos;) &amp;&amp;
+ISPICKVAL( Business_Risk_Severity__c , &apos;No impact&apos;) &amp;&amp;
+Annual_Time_Savings_Hours__c = 0</errorConditionFormula>
+    <errorDisplayField>Annual_Time_Savings_Hours__c</errorDisplayField>
+    <errorMessage>Annual Time Savings (Hours) should be more than zero.</errorMessage>
+</ValidationRule>

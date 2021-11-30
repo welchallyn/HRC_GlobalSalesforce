@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Execution_Track__c</fullName>
+    <description>Generally an enhancement is anything that requires less than 200 hours of IT effort
+
+-- Modified as part of CR00032940 | IT-REQ-1779</description>
     <externalId>false</externalId>
-    <inlineHelpText>Generally an enhancement is anything that requires less than 200 hours of IT effort</inlineHelpText>
+    <inlineHelpText>Enhancement = 20-200 hours IT effort, Project = &gt;200 hours IT effort, Everest or Pod = handled outside BP process</inlineHelpText>
     <label>Execution Track</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
@@ -10,6 +13,7 @@
     <trackTrending>false</trackTrending>
     <type>Picklist</type>
     <valueSet>
+        <restricted>true</restricted>
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
@@ -21,6 +25,16 @@
                 <fullName>Enhancement</fullName>
                 <default>false</default>
                 <label>Enhancement</label>
+            </value>
+            <value>
+                <fullName>Everest</fullName>
+                <default>false</default>
+                <label>Everest</label>
+            </value>
+            <value>
+                <fullName>Pod</fullName>
+                <default>false</default>
+                <label>Pod</label>
             </value>
         </valueSetDefinition>
     </valueSet>

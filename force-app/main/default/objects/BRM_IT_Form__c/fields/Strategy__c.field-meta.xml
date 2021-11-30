@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Strategy__c</fullName>
+    <description>Provide alignment to the Operations functional strategy
+
+-- Modified as part of CR00032940 | IT-REQ-1779</description>
     <externalId>false</externalId>
-    <label>Strategy</label>
+    <inlineHelpText>Provide alignment to the Operations functional strategy</inlineHelpText>
+    <label>Functional Strategy</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
-    <type>MultiselectPicklist</type>
+    <type>Picklist</type>
     <valueSet>
+        <controllingField>ELT_Area__c</controllingField>
         <restricted>true</restricted>
         <valueSetDefinition>
             <sorted>false</sorted>
@@ -18,26 +23,56 @@
                 <label>None</label>
             </value>
             <value>
+                <fullName>OMS Other</fullName>
+                <default>false</default>
+                <label>OMS</label>
+            </value>
+            <value>
+                <fullName>OMS VIP</fullName>
+                <default>false</default>
+                <label>VIP</label>
+            </value>
+            <value>
+                <fullName>A3</fullName>
+                <default>false</default>
+                <label>A3</label>
+            </value>
+            <value>
                 <fullName>IT Strategy</fullName>
                 <default>false</default>
+                <isActive>false</isActive>
                 <label>IT Strategy</label>
             </value>
             <value>
                 <fullName>New Product Intro</fullName>
                 <default>false</default>
+                <isActive>false</isActive>
                 <label>New Product Intro</label>
             </value>
-            <value>
-                <fullName>OMS Other</fullName>
-                <default>false</default>
-                <label>OMS Other</label>
-            </value>
-            <value>
-                <fullName>OMS VIP</fullName>
-                <default>false</default>
-                <label>OMS VIP</label>
-            </value>
         </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Quality</controllingFieldValue>
+            <controllingFieldValue>Regulatory</controllingFieldValue>
+            <controllingFieldValue>Operations</controllingFieldValue>
+            <valueName>None</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quality</controllingFieldValue>
+            <controllingFieldValue>Regulatory</controllingFieldValue>
+            <controllingFieldValue>Operations</controllingFieldValue>
+            <valueName>OMS Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quality</controllingFieldValue>
+            <controllingFieldValue>Regulatory</controllingFieldValue>
+            <controllingFieldValue>Operations</controllingFieldValue>
+            <valueName>OMS VIP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quality</controllingFieldValue>
+            <controllingFieldValue>Regulatory</controllingFieldValue>
+            <controllingFieldValue>Operations</controllingFieldValue>
+            <valueName>A3</valueName>
+        </valueSettings>
     </valueSet>
-    <visibleLines>5</visibleLines>
 </CustomField>

@@ -700,6 +700,65 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Replacement_Supplies_Needed__c</picklist>
+        <values>
+            <fullName>COMBO2 Air %26 Oxygen Hose %2820 feet%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Compressor Filter Package</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disposable Garment %28list size needed in Additional Comments%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Life2000 Compressor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Life2000 Interface %28list size needed in Additional Comments%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Life2000 Ventilator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nasal Sizing Guide</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>O2 Adapter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oxygen Inlet Hose %286 Feet%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PM Stickers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Synclara Device</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Synclara Mask %28list size needed in Additional Comments%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Universal Circuit Connector</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vest Device</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Request_Type__c</picklist>
         <values>
             <fullName>Acute Care</fullName>

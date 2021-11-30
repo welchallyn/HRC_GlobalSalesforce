@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cost_and_Time_values</fullName>
+    <active>true</active>
+    <description>Created as part of CR00032940 | IT-REQ-1779</description>
+    <errorConditionFormula>Annual_Revenue_Gain__c  = 0 &amp;&amp;  Annual_Time_Savings_Hours__c = 0 &amp;&amp;  Annual_Business_Savings__c = 0 &amp;&amp;  Annual_IT_Savings__c = 0 &amp;&amp;  Annual_Revenue_Loss_Avoidance__c = 0 &amp;&amp;  Annual_Cost_Avoidance__c = 0 &amp;&amp;  ISPICKVAL(Business_Risk_Severity__c, &apos;No impact&apos;)</errorConditionFormula>
+    <errorMessage>Add any value in these fields</errorMessage>
+</ValidationRule>

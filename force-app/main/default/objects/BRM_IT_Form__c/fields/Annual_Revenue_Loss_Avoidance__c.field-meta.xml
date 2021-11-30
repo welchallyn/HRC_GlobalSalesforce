@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Annual_Revenue_Loss_Avoidance__c</fullName>
+    <description>Anticipated revenue loss avoidance per year
+
+-- Created as part of CR00032940 | IT-REQ-1779</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Anticipated revenue loss avoidance per year</inlineHelpText>
+    <label>Annual Revenue Loss Avoidance</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

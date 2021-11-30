@@ -1,38 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Priority__c</fullName>
+    <description>Provides the relative urgency of the request within the given priority score
+
+-- Modified as part of CR00032940 | IT-REQ-1779</description>
     <externalId>false</externalId>
-    <inlineHelpText>1 = Urgent
-2 = High
-3 = Medium
-4 = Low</inlineHelpText>
-    <label>Priority</label>
+    <inlineHelpText>Provide the relative urgency of the request within the given priority score</inlineHelpText>
+    <label>Urgency</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
     <type>Picklist</type>
     <valueSet>
+        <restricted>true</restricted>
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
+                <fullName>High</fullName>
+                <default>false</default>
+                <label>High</label>
+            </value>
+            <value>
+                <fullName>Medium</fullName>
+                <default>false</default>
+                <label>Medium</label>
+            </value>
+            <value>
+                <fullName>Low</fullName>
+                <default>true</default>
+                <label>Low</label>
+            </value>
+            <value>
                 <fullName>1</fullName>
                 <default>false</default>
+                <isActive>false</isActive>
                 <label>1</label>
             </value>
             <value>
                 <fullName>2</fullName>
                 <default>false</default>
+                <isActive>false</isActive>
                 <label>2</label>
             </value>
             <value>
                 <fullName>3</fullName>
                 <default>false</default>
+                <isActive>false</isActive>
                 <label>3</label>
             </value>
             <value>
                 <fullName>4</fullName>
                 <default>false</default>
+                <isActive>false</isActive>
                 <label>4</label>
             </value>
         </valueSetDefinition>

@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Submit_Date__c</fullName>
+    <description>Original date request was made
+
+-- Created as part of CR00032940 | IT-REQ-1779</description>
     <externalId>false</externalId>
-    <label>Submit Date</label>
+    <inlineHelpText>Original date request was made</inlineHelpText>
+    <label>Date Submitted</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>true</trackHistory>
