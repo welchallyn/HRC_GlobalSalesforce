@@ -29,6 +29,45 @@
         </outputParameters>
     </actionCalls>
     <apiVersion>53.0</apiVersion>
+    <assignments>
+        <name>Set_the_checkboxes_to_true</name>
+        <label>Set the checkboxes to true</label>
+        <locationX>884</locationX>
+        <locationY>67</locationY>
+        <assignmentItems>
+            <assignToReference>Get_CQ_Record.HRCSVC20_Requires_Translation__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Send_to_ETQ_and_Requires_Translation_Checkbox</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <description>To check if either of the checkboxes are true and to make them false</description>
+        <name>Requires_Translation_Checkbox_Not_Checked</name>
+        <label>Requires Translation Checkbox Not Checked?</label>
+        <locationX>735</locationX>
+        <locationY>70</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_CQ_Record.HRCSVC20_Requires_Translation__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_the_checkboxes_to_true</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
     <description>SE-2620: As a Quality Analyst, I want to review the qualified CQs for translation, so that I can ensure only translated information can sync over to EtQ.</description>
     <interviewLabel>HRCSVC20_Backup {!$Flow.CurrentDateTime}</interviewLabel>
     <label>HRCSVC20_Back up CQ text values</label>
@@ -72,6 +111,13 @@
         <object>HRCSVC_Complaint_Qualification__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
+    <recordUpdates>
+        <name>Update_Send_to_ETQ_and_Requires_Translation_Checkbox</name>
+        <label>Update Send to ETQ and Requires Translation Checkbox</label>
+        <locationX>1017</locationX>
+        <locationY>68</locationY>
+        <inputReference>Get_CQ_Record</inputReference>
+    </recordUpdates>
     <screens>
         <name>Success_Message</name>
         <label>Success Message</label>
@@ -80,6 +126,9 @@
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Requires_Translation_Checkbox_Not_Checked</targetReference>
+        </connector>
         <fields>
             <name>Success</name>
             <fieldText>&lt;p&gt;{!SuccessMessage}&lt;/p&gt;</fieldText>

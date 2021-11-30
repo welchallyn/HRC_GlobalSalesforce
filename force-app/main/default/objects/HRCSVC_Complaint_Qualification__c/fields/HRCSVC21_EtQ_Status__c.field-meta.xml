@@ -3,7 +3,7 @@
     <fullName>HRCSVC21_EtQ_Status__c</fullName>
     <description>SE-2620- To acknowledge that the CQ details have been sent to ETQ and are In Process/Processed.</description>
     <externalId>false</externalId>
-    <label>EtQ Status</label>
+    <label>ETQ Status</label>
     <required>false</required>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
