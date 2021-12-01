@@ -4,7 +4,7 @@
     <active>true</active>
     <errorConditionFormula>AND(
 NOT($Setup.HRCFSL_Org_Exception_Rule__c.HRCFSL_Validation_Rule__c),
-ISPICKVAL( HRCFSL_Work_Order__r.Status  , &apos;SC&apos;),
+ISPICKVAL(Status, &apos;Completed&apos;),
 ISBLANK(  HRCFSL_Work_Order__r.HRCSVC20_Repair_Template_Question_5a__c ) )</errorConditionFormula>
     <errorMessage>You cannot close a workorder if the Resolution field on the repair template has not been filled in.</errorMessage>
 </ValidationRule>
