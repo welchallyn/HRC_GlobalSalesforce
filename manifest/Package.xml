@@ -1976,6 +1976,7 @@
 		<members>ServiceAppointment.HRCSVC20_Occurence_loc_Reqd_On_Closure</members>
 		<members>ServiceAppointment.HRCSVC21_Describe_Cause_Reqd_On_Closure</members>
 		<members>ServiceAppointment.HRCSVC21_Resolution_Reqd_On_Closure</members>
+		<members>ServiceAppointment.HRCSVC20_Test_Performed_Reqd_on_Closure</members>
 		<members>Case.HRCSVC21_Reqd_fields_on_CQ_check </members>
 		<name>ValidationRule</name>
 	</types>
