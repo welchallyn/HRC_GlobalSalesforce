@@ -108,6 +108,10 @@
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
+                <field>HRCSVC21_Service_Location__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
                 <field>HRCSVC_Street__c</field>
             </layoutItems>
             <layoutItems>
@@ -248,7 +252,6 @@
     <relatedLists>
         <customButtons>Get_Pricing</customButtons>
         <excludeButtons>MassChangeOwner</excludeButtons>
-        <excludeButtons>New</excludeButtons>
         <fields>NAME</fields>
         <fields>HRCSVC_Item_Description__c</fields>
         <fields>Quantity__c</fields>
