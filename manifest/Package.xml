@@ -51,6 +51,7 @@
 		<members>HRCSV21_CQ_Original_Values_Handler</members>
 		<members>HRCSVC21_MyException</members>
 		<members>HRCSVC21_AdvancedRelatedListController</members>
+		<members>HRCSVC21_SoldToJDEIntegration</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
@@ -939,6 +940,7 @@
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_Software_Version_Case__c</members>
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_URL__c</members>
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Complaint_Resolution__c</members>
+		<members>Order__c.HRCSVC21_Service_Location__c</members>
 		<name>CustomField</name>
 	</types>
 	<types>
@@ -1387,6 +1389,7 @@
 		<members>HRCFSL_Check_Entitlement_SF</members>
 		<members>HRCSVC20_Set_Carrier_based_on_Ship_to_Country_on_Parts_Order</members>
 		<members>HRCFSL_Repair_Template_SF</members>
+		<members>HRCSVC21 Order Before-Save Actions</members>
 		<name>Flow</name>
 	</types>
 	<types>
