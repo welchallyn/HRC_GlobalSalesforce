@@ -63,10 +63,6 @@
                 <field>HRCSVC_ETQ_Complaint_Number__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>HRCSVC21_EtQ_Status__c</field>
-            </layoutItems>
-            <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>HRCSVC_Resolution_Status__c</field>
             </layoutItems>
@@ -152,7 +148,7 @@
         <customLabel>true</customLabel>
         <detailHeading>true</detailHeading>
         <editHeading>true</editHeading>
-        <label>Injury/ Patient Involvement Questions</label>
+        <label>Injury/Patient Involvement Questions</label>
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -254,6 +250,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>HRC_Functioning_as_designed_post_repair__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>HRCSVC20_Complaint_Resolution__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -382,6 +382,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>HRCSVC_Return_Order_Line_Item__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>HRCSVC21_EtQ_Status__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
