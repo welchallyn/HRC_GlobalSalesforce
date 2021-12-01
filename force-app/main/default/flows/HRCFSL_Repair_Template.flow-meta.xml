@@ -1483,7 +1483,7 @@
             <name>X6_Resolution</name>
             <dataType>String</dataType>
             <defaultValue>
-                <elementReference>complaintQualification.HRCSVC_Resolution__c</elementReference>
+                <elementReference>complaintQualification.HRCSVC20_Complaint_Resolution__c</elementReference>
             </defaultValue>
             <fieldText>7) Resolution:</fieldText>
             <fieldType>InputField</fieldType>

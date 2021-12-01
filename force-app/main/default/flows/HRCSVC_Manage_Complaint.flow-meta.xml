@@ -702,8 +702,8 @@
     <assignments>
         <name>Assign_Status_Qualified_Complaint</name>
         <label>Assign Status Qualified Complaint</label>
-        <locationX>897</locationX>
-        <locationY>960</locationY>
+        <locationX>678</locationX>
+        <locationY>802</locationY>
         <assignmentItems>
             <assignToReference>myComplaintQualification.HRCSVC_Status__c</assignToReference>
             <operator>Assign</operator>
@@ -774,6 +774,13 @@
             <operator>Assign</operator>
             <value>
                 <elementReference>Additional_Information</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>myComplaintQualification.HRCSVC20_Complaint_Resolution__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Resolution</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -2434,6 +2441,9 @@
         <fields>
             <name>Resolution</name>
             <dataType>String</dataType>
+            <defaultValue>
+                <elementReference>myComplaintQualification.HRCSVC20_Complaint_Resolution__c</elementReference>
+            </defaultValue>
             <fieldText>Resolution</fieldText>
             <fieldType>InputField</fieldType>
             <isRequired>false</isRequired>
