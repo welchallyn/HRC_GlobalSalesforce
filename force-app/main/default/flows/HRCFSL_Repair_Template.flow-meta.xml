@@ -230,13 +230,6 @@
                 <elementReference>X3_Describe_Cause_Troubleshooting</elementReference>
             </value>
         </assignmentItems>
-        <assignmentItems>
-            <assignToReference>complaintQualification.HRCSVC_Document_troubleshooting__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>Document_troubleshooting_cause_resolution</elementReference>
-            </value>
-        </assignmentItems>
         <connector>
             <targetReference>Has_Existing_CQ</targetReference>
         </connector>
@@ -533,13 +526,6 @@
             <operator>Assign</operator>
             <value>
                 <elementReference>X3_Describe_Cause_Troubleshooting</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Q3_Trb_Cause_Resolution</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>Document_troubleshooting_cause_resolution</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -1070,7 +1056,7 @@
     <formulas>
         <name>Document_Troubleshooting</name>
         <dataType>String</dataType>
-        <expression>{!WorkOrder_RepairTemplate_Info.HRCFSL_Repair_Template_Question_3__c}</expression>
+        <expression>{!complaintQualification.HRCSVC_Document_troubleshooting__c}</expression>
     </formulas>
     <interviewLabel>HRCFSL Repair template {!$Flow.CurrentDateTime}</interviewLabel>
     <label>HRCFSL Repair Template</label>
