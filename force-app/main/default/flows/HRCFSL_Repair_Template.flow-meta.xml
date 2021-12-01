@@ -79,7 +79,7 @@
             <assignToReference>complaintQualification.HRCSVC_Injury_or_Death__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <stringValue>No</stringValue>
+                <stringValue>Blank</stringValue>
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -357,7 +357,7 @@
             <assignToReference>complaintQualification.HRCSVC_Injury_or_Death__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <stringValue>No</stringValue>
+                <stringValue>Blank</stringValue>
             </value>
         </assignmentItems>
         <connector>
@@ -1171,6 +1171,9 @@
         <queriedFields>HRCSVC_Second_Account__c</queriedFields>
         <queriedFields>HRCSVC_Asset__c</queriedFields>
         <queriedFields>HRCSVC_Contact__c</queriedFields>
+        <queriedFields>HRCSVC20_Complaint_Resolution__c</queriedFields>
+        <queriedFields>HRCSVC20_Describe_Cause_Troubleshooting__c</queriedFields>
+        <queriedFields>HRCSVC20_Describe_Other_Condition__c</queriedFields>
         <sortField>CreatedDate</sortField>
         <sortOrder>Desc</sortOrder>
     </recordLookups>

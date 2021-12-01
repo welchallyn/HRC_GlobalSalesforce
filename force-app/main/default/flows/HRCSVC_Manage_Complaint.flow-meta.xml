@@ -679,6 +679,20 @@
                 <elementReference>Describe_Malfunction_Event</elementReference>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>myComplaintQualification.HRCSVC20_Describe_Cause_Troubleshooting__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Describe_Cause_Troubleshooting</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>myComplaintQualification.HRCSVC20_Describe_Other_Condition__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Describe_Other_Condition</elementReference>
+            </value>
+        </assignmentItems>
         <connector>
             <targetReference>Complaint_Qualified</targetReference>
         </connector>

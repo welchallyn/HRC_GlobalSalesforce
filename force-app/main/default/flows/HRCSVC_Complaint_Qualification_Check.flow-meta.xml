@@ -308,7 +308,7 @@
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>Get_Complain_Qualification_Records.HRCSVC_Resolution__c</leftValueReference>
+                <leftValueReference>Get_Complain_Qualification_Records.HRCSVC20_Complaint_Resolution__c</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>

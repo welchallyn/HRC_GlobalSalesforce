@@ -5,7 +5,7 @@
     <description>#SE-2431: &apos;Occurrence Location&apos; field is required to close a WO(with CQ)</description>
     <errorConditionFormula>AND(
 NOT($Setup.HRCFSL_Org_Exception_Rule__c.HRCFSL_Validation_Rule__c),
-ISPICKVAL( HRCFSL_Work_Order__r.Status  , &apos;SC&apos;),
+ISPICKVAL(Status, &apos;Completed&apos;),
 ISBLANK(  HRCFSL_Work_Order__r.HRCFSL_Repair_Template_Question_6__c  ) )</errorConditionFormula>
     <errorMessage>You cannot close a work order until the Occurrence location field on the repair template has been filled in.</errorMessage>
 </ValidationRule>
