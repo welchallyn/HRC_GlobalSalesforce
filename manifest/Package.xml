@@ -909,7 +909,7 @@
 		<members>HRCSVC20_CQ_Original_Values__c.HRCSVC20_CQ_Key__c</members>
 		<members>HRCSVC20_CQ_Original_Values__c.HRCSVC20_CQ_Value__c</members>
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Requires_Translation__c</members>
-		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Send_to_ETQ__c</members>
+		<!--<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Send_to_ETQ__c</members>-->
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Instruction__c</members>
 		<members>Case.HRCSVC21_Age__c</members>
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_CQ_Creation_Duration_From_Case__c</members>
