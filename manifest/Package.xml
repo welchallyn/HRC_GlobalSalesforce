@@ -85,6 +85,7 @@
 		<members>Order__c.Rental_Order_Header</members>
 		<members>ServiceContract.HRCSVC_Service_Contract_Compact_layout</members>
 		<members>WorkOrder.HRCFSL_Work_Order_Compact_Layout</members>
+		<members>HRCSVC_Complaint_Qualification__c.Hillrom_CQ_Compact_Layout</members>
 		<name>CompactLayout</name>
 	</types>
 	<types>
@@ -927,7 +928,7 @@
 		<members>HRCSVC20_CQ_Original_Values__c.HRCSVC20_CQ_API_Name__c</members>
 		<members>HRCSVC20_CQ_Original_Values__c.HRCSVC21_CQ_Translation__c</members>
 		<members>HRCSVC20_CQ_Original_Values__c.CQ_External_Id__c</members>
-		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_EtQ_Status__c</members>
+		<!--<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_EtQ_Status__c</members>-->
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_Assigned_Engineer__c</members>
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_Item_Description__c</members>
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_Item_Number__c</members>
@@ -941,6 +942,7 @@
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_URL__c</members>
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Complaint_Resolution__c</members>
 		<members>Order__c.HRCSVC21_Service_Location__c</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_Translation_Status__c</members>
 		<name>CustomField</name>
 	</types>
 	<types>
@@ -1390,6 +1392,7 @@
 		<members>HRCSVC20_Set_Carrier_based_on_Ship_to_Country_on_Parts_Order</members>
 		<members>HRCFSL_Repair_Template_SF</members>
 		<members>HRCSVC21_Order_Before_Save_Actions</members>
+		<members>HRCSVC21_Complaint_Qualification_Before_Save_Actions</members>
 		<name>Flow</name>
 	</types>
 	<types>
@@ -1679,8 +1682,10 @@
 		<members>WorkOrder.Product_Usage</members>
 		<members>WorkOrder.Track_Product_Usage</members>
 		<members>HRCSVC_BOM_Item__c.Test_List_Button</members>
-		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Send_to_ETQ</members>
-		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Translation_Candidate</members>
+		<!--<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Send_to_ETQ</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Translation_Candidate</members>-->
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Mark_as_Translated</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Requires_Translation</members>
 		<name>QuickAction</name>
 	</types>
 	<!--
