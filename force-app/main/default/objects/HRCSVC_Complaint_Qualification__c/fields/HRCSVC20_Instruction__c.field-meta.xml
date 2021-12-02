@@ -3,7 +3,7 @@
     <fullName>HRCSVC20_Instruction__c</fullName>
     <description>SE-2620: Used in Send to ETQ quick action layout (Service Cloud 2.1)</description>
     <externalId>false</externalId>
-    <formula>&quot;Please click on the Save button to send the Complaint Qualification details to ETQ&quot;</formula>
+    <formula>&quot;Please click the &apos;Save&apos; button to send the Complaint Qualification details to EtQ&quot;</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Instruction</label>
     <required>false</required>

@@ -72,7 +72,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>HRCSVC_ETQ_Workflow__c</field>
+                <field>HRCSVC21_Display_ETQ_Workflow__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -385,7 +385,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>HRCSVC21_EtQ_Status__c</field>
+                <field>HRCSVC21_Translation_Status__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
@@ -423,7 +423,12 @@
                 <field>HRCSVC_Problem__c</field>
             </layoutItems>
         </layoutColumns>
-        <layoutColumns/>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>HRCSVC21_Complaint_Attachment_Info__c</field>
+            </layoutItems>
+        </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
     <layoutSections>
@@ -458,12 +463,12 @@
     <platformActionList>
         <actionListContext>Record</actionListContext>
         <platformActionListItems>
-            <actionName>HRCSVC_Complaint_Qualification__c.HRCSVC20_Translation_Candidate</actionName>
+            <actionName>HRCSVC_Complaint_Qualification__c.HRCSVC20_Requires_Translation</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>0</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>HRCSVC_Complaint_Qualification__c.HRCSVC20_Send_to_ETQ</actionName>
+            <actionName>HRCSVC_Complaint_Qualification__c.HRCSVC20_Mark_as_Translated</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>1</sortOrder>
         </platformActionListItems>
