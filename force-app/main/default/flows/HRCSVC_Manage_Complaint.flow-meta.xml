@@ -402,6 +402,13 @@
                 <stringValue></stringValue>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>myComplaintQualification.HRCSVC20_Complaint_Resolution__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </assignmentItems>
         <connector>
             <targetReference>Check_if_Asset_is_null</targetReference>
         </connector>
@@ -2023,6 +2030,13 @@
                     <visibilityRule>
                         <conditionLogic>and</conditionLogic>
                         <conditions>
+                            <leftValueReference>Condition</leftValueReference>
+                            <operator>NotEqualTo</operator>
+                            <rightValue>
+                                <stringValue>None</stringValue>
+                            </rightValue>
+                        </conditions>
+                        <conditions>
                             <leftValueReference>Is_the_occurrence_date_of_the_event_known</leftValueReference>
                             <operator>EqualTo</operator>
                             <rightValue>
@@ -2034,13 +2048,6 @@
                             <operator>EqualTo</operator>
                             <rightValue>
                                 <stringValue>No</stringValue>
-                            </rightValue>
-                        </conditions>
-                        <conditions>
-                            <leftValueReference>Condition</leftValueReference>
-                            <operator>NotEqualTo</operator>
-                            <rightValue>
-                                <stringValue>None</stringValue>
                             </rightValue>
                         </conditions>
                     </visibilityRule>
