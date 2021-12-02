@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>SE-2620: As a Quality Analyst, I want to review the qualified CQs for translation, so that I can ensure only translated information can sync over to EtQ</description>
+    <flowDefinition>HRCSVC20_Back_up_CQ_text_values</flowDefinition>
+    <label>Requires Translation</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

@@ -1326,9 +1326,14 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
-        <field>HRCSVC_Complaint_Qualification__c.HRCSVC21_EtQ_Status__c</field>
-        <readable>true</readable>
+        <editable>false</editable>
+        <field>HRCSVC_Complaint_Qualification__c.HRCSVC21_Complaint_Attachment_Info__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>HRCSVC_Complaint_Qualification__c.HRCSVC21_Display_ETQ_Workflow__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -1373,6 +1378,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>HRCSVC_Complaint_Qualification__c.HRCSVC21_Software_Version__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>HRCSVC_Complaint_Qualification__c.HRCSVC21_Translation_Status__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
