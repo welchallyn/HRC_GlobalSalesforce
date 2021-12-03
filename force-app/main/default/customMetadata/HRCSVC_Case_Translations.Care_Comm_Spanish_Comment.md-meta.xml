@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Care Comm Spanish Comment</label>
+    <protected>false</protected>
+    <values>
+        <field>HRCSVC_Email_Text__c</field>
+        <value xsi:type="xsd:string">Gracias por elegir a Hillrom como su proveedor de tecnología sanitaria. Esta es una notificación que se ha agregado un nuevo comentario a un caso con nuestro equipo de Customer Care. Encuentre los detalles del caso a continuación.
+
+Caso #: {!Get_Case_Details.CaseNumber}
+Estado: {!Get_Case_Details.Status}
+Fecha Creación: {!Get_Case_Details.CreatedDate}
+Contacto: {!Dynamic_Contact}
+
+Localización: {!Dynamic_Location}
+Nombre del Activo: {!Dynamic_Asset}
+Producto: {!Dynamic_Product}
+Tema: {!Get_Case_Details.Subject}
+Descripción: {!Get_Case_Details.Description}
+Nuevo Comentario: {!CaseCommentCreatedDateTime}
+{!CommentBody}
+
+Si tiene alguna pregunta, por favor, contacte cn nuesto equipo de Customer Care:
+{!Local_Country_Contact_Info}
+
+{!Portal_Case_Signature}</value>
+    </values>
+    <values>
+        <field>HRCSVC_Language__c</field>
+        <value xsi:type="xsd:string">es</value>
+    </values>
+    <values>
+        <field>HRCSVC_Protocol_Category__c</field>
+        <value xsi:type="xsd:string">Care Comm</value>
+    </values>
+    <values>
+        <field>HRCSVC_Subject__c</field>
+        <value xsi:type="xsd:string">Hillrom - Nuevo comentario sobre el caso #: {!Get_Case_Details.CaseNumber}</value>
+    </values>
+    <values>
+        <field>HRCSVC_Type__c</field>
+        <value xsi:type="xsd:string">Comment</value>
+    </values>
+</CustomMetadata>
