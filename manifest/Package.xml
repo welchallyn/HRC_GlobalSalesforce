@@ -1778,7 +1778,6 @@
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Translation_Candidate</members>-->
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Mark_as_Translated</members>
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Requires_Translation</members>
-		<members>Quote.HRCSVC20_Generate_Quote_PDF</members>
 		<name>QuickAction</name>
 	</types>
 	<!--
@@ -2086,6 +2085,7 @@
 		<members>ReturnOrder.Estimate_Form</members>
 		<members>ReturnOrder.RMA_Form</members>
 		<members>WorkOrder.Estimate_Form</members>
+		<members>Quote.HRCSVC20_Generate_Quote_PDF</members>
 		<name>WebLink</name>
 	</types>
 	<types>
