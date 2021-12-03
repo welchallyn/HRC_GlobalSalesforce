@@ -950,11 +950,11 @@
 		<members>HRCSVC21_Parts_Order_Integration_Details__mdt.HRCSVC21_Timeout__c</members>
 		<members>HRCSVC21_Parts_Order_Integration_Details__mdt.HRCSVC21_X_Correlation_ID__c</members>
 		<members>HRCSVC21_Parts_Order_Integration_Details__mdt.HRCSVC21_URL__c</members>
-		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.HRCSVC21_Contact_Information</members>
-		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.HRCSVC21_Country</members>
-		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.HRCSVC21_Language</members>
-		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.HRCSVC21_Protocol_Category</members>
-		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.HRCSVC21_Type</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.HRCSVC21_Contact_Information__c</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.HRCSVC21_Country__c</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.HRCSVC21_Language__c</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.HRCSVC21_Protocol_Category__c</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.HRCSVC21_Type__c</members>
 		<name>CustomField</name>
 	</types>
 	<types>
