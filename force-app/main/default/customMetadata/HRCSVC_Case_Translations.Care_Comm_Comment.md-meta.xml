@@ -21,9 +21,9 @@ New Comment - {!CaseCommentCreatedDateTime}
 {!CommentBody}
 
 If you have questions, please contact our technical support teams.
-- Nurse Call 800-445-3720 (Option 3)
-- Voalte Mobile 844-283-7110
-- Excel Medical 866-573-8807 (Option 1)</value>
+{!Local_Country_Contact_Info}
+
+{!Portal_Case_Signature}</value>
     </values>
     <values>
         <field>HRCSVC_Language__c</field>
