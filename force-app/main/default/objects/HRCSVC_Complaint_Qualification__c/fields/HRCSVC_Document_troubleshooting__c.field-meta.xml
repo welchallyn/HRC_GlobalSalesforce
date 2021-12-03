@@ -3,10 +3,10 @@
     <fullName>HRCSVC_Document_troubleshooting__c</fullName>
     <description>SE-163 - From existing repair template</description>
     <externalId>false</externalId>
-    <label>Document troubleshooting</label>
+    <label>Describe Cause, Troubleshooting</label>
     <length>255</length>
     <required>false</required>
-    <trackHistory>false</trackHistory>
+    <trackHistory>true</trackHistory>
     <trackTrending>false</trackTrending>
     <type>Text</type>
     <unique>false</unique>

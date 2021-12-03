@@ -80,10 +80,6 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>HRCSVC20_Describe_Cause_Troubleshooting__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>HRCSVC_Document_troubleshooting__c</field>
             </layoutItems>
             <layoutItems>
@@ -454,6 +450,11 @@
     <platformActionList>
         <actionListContext>Record</actionListContext>
         <platformActionListItems>
+            <actionName>HRCSVC_Complaint_Qualification__c.HRCSVC20_Requires_Translation</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>0</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
             <actionName>HRCSVC_Complaint_Qualification__c.HRCSVC20_Mark_as_Translated</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>1</sortOrder>
@@ -462,11 +463,6 @@
             <actionName>Submit</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>2</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>HRCSVC_Complaint_Qualification__c.HRCSVC20_Requires_Translation</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>0</sortOrder>
         </platformActionListItems>
     </platformActionList>
     <quickActionList/>

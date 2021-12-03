@@ -294,7 +294,7 @@
             <name>Doc_Troubleshooting_No</name>
             <conditionLogic>or</conditionLogic>
             <conditions>
-                <leftValueReference>Get_Complain_Qualification_Records.HRCSVC20_Describe_Cause_Troubleshooting__c</leftValueReference>
+                <leftValueReference>Get_Complain_Qualification_Records.HRCSVC_Document_troubleshooting__c</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>

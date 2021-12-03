@@ -44,6 +44,9 @@
         <assignmentItems>
             <assignToReference>complaintQualification.HRCSVC_Document_troubleshooting__c</assignToReference>
             <operator>Assign</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>complaintQualification.HRCSVC_Explain_if_No__c</assignToReference>
@@ -128,13 +131,6 @@
             <operator>Assign</operator>
             <value>
                 <elementReference>WorkOrder_RepairTemplate_Info.CaseId</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>complaintQualification.HRCSVC20_Describe_Cause_Troubleshooting__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue></stringValue>
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -224,7 +220,7 @@
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>complaintQualification.HRCSVC20_Describe_Cause_Troubleshooting__c</assignToReference>
+            <assignToReference>complaintQualification.HRCSVC_Document_troubleshooting__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>X3_Describe_Cause_Troubleshooting</elementReference>
@@ -328,13 +324,6 @@
             <operator>Assign</operator>
             <value>
                 <elementReference>WorkOrder_RepairTemplate_Info.HRCFSL_Repair_Template_Question_7__c</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>complaintQualification.HRCSVC20_Describe_Cause_Troubleshooting__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>WorkOrder_RepairTemplate_Info.HRCSVC20_Repair_Template_Question_3b__c</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -522,7 +511,7 @@
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>Q3b_Cause_Troubleshooting</assignToReference>
+            <assignToReference>Q3_Trb_Cause_Resolution</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>X3_Describe_Cause_Troubleshooting</elementReference>
@@ -1200,7 +1189,6 @@
         <queriedFields>HRCFSL_Repair_Template_Question_8B__c</queriedFields>
         <queriedFields>HRCFSL_Repair_Template__c</queriedFields>
         <queriedFields>CaseId</queriedFields>
-        <queriedFields>HRCSVC20_Repair_Template_Question_3b__c</queriedFields>
         <queriedFields>HRCSVC20_Repair_Template_Question_5a__c</queriedFields>
     </recordLookups>
     <recordUpdates>
@@ -1241,7 +1229,7 @@
         <inputAssignments>
             <field>HRCFSL_Repair_Template_Question_3__c</field>
             <value>
-                <elementReference>Document_troubleshooting_cause_resolution</elementReference>
+                <elementReference>X3_Describe_Cause_Troubleshooting</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1311,12 +1299,6 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>HRCSVC20_Repair_Template_Question_3b__c</field>
-            <value>
-                <elementReference>X3_Describe_Cause_Troubleshooting</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
             <field>HRCSVC20_Repair_Template_Question_5a__c</field>
             <value>
                 <elementReference>X6_Resolution</elementReference>
@@ -1364,12 +1346,22 @@
             <isRequired>true</isRequired>
         </fields>
         <fields>
+            <name>X7_Injury_or_Death</name>
+            <choiceReferences>injuryOrDeath</choiceReferences>
+            <choiceReferences>injuryOrDeathDefaultChoice</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>injuryOrDeathDefaultChoice</defaultSelectedChoiceReference>
+            <fieldText>2) Allegation of Injury/Patient Involvement or Death:</fieldText>
+            <fieldType>RadioButtons</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
             <name>X2_Describe_Malfunction_Event</name>
             <dataType>String</dataType>
             <defaultValue>
                 <elementReference>complaintQualification.HRCSVC_Describe_Malfunction_Event__c</elementReference>
             </defaultValue>
-            <fieldText>2) Describe Malfunction/Event:</fieldText>
+            <fieldText>3) Describe Malfunction/Event (please also provide allegation details if question #2 has been answered as “Injury/Patient Involvement&quot; or &quot;Death”):</fieldText>
             <fieldType>InputField</fieldType>
             <isRequired>true</isRequired>
         </fields>
@@ -1377,16 +1369,21 @@
             <name>X3_Describe_Cause_Troubleshooting</name>
             <dataType>String</dataType>
             <defaultValue>
-                <elementReference>complaintQualification.HRCSVC20_Describe_Cause_Troubleshooting__c</elementReference>
+                <elementReference>complaintQualification.HRCSVC_Document_troubleshooting__c</elementReference>
             </defaultValue>
-            <fieldText>3) Document Troubleshooting</fieldText>
+            <fieldText>4) Describe cause, troubleshooting</fieldText>
             <fieldType>InputField</fieldType>
             <isRequired>false</isRequired>
         </fields>
         <fields>
-            <name>Document_troubleshooting_cause_resolution</name>
-            <fieldText>&lt;p&gt;4) Document troubleshooting, cause, resolution: {!Document_Troubleshooting}&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
+            <name>X6_Resolution</name>
+            <dataType>String</dataType>
+            <defaultValue>
+                <elementReference>complaintQualification.HRCSVC20_Complaint_Resolution__c</elementReference>
+            </defaultValue>
+            <fieldText>5) Resolution</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
         </fields>
         <fields>
             <name>X4A_Functioning_as_designed_post_repair</name>
@@ -1395,7 +1392,7 @@
             <defaultValue>
                 <elementReference>functioningAsDesignedDefault</elementReference>
             </defaultValue>
-            <fieldText>5) Functioning as designed post repair:</fieldText>
+            <fieldText>6) Functioning as designed post repair:</fieldText>
             <fieldType>RadioButtons</fieldType>
             <isRequired>false</isRequired>
         </fields>
@@ -1408,16 +1405,6 @@
             <fieldText>Explain if No:</fieldText>
             <fieldType>InputField</fieldType>
             <isRequired>false</isRequired>
-        </fields>
-        <fields>
-            <name>X7_Injury_or_Death</name>
-            <choiceReferences>injuryOrDeath</choiceReferences>
-            <choiceReferences>injuryOrDeathDefaultChoice</choiceReferences>
-            <dataType>String</dataType>
-            <defaultSelectedChoiceReference>injuryOrDeathDefaultChoice</defaultSelectedChoiceReference>
-            <fieldText>6) Injury or Death?</fieldText>
-            <fieldType>RadioButtons</fieldType>
-            <isRequired>true</isRequired>
         </fields>
         <fields>
             <name>Tests_performed_title</name>
@@ -1469,28 +1456,18 @@
             <targetReference>Set_Question_Variables</targetReference>
         </connector>
         <fields>
-            <name>X6_Resolution</name>
-            <dataType>String</dataType>
-            <defaultValue>
-                <elementReference>complaintQualification.HRCSVC20_Complaint_Resolution__c</elementReference>
-            </defaultValue>
-            <fieldText>7) Resolution:</fieldText>
-            <fieldType>InputField</fieldType>
-            <isRequired>false</isRequired>
-        </fields>
-        <fields>
             <name>X6_Occurrence_Location</name>
             <dataType>String</dataType>
             <defaultValue>
                 <elementReference>complaintQualification.HRCSVC_Occurrence_Location__c</elementReference>
             </defaultValue>
-            <fieldText>8) Occurrence Location?</fieldText>
+            <fieldText>7) Occurrence Location?</fieldText>
             <fieldType>InputField</fieldType>
             <isRequired>false</isRequired>
         </fields>
         <fields>
             <name>X8_Second_device_relationship_ie_surface_sling</name>
-            <fieldText>&lt;p&gt;9) Second device relationship (i.e. surface/sling):&amp;nbsp;&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;8) Second device relationship (i.e. surface/sling):&amp;nbsp;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
@@ -1510,7 +1487,7 @@
             <defaultValue>
                 <elementReference>PM_Sticker_Present_DefaultChoice</elementReference>
             </defaultValue>
-            <fieldText>10) PM Sticker Present</fieldText>
+            <fieldText>9) PM Sticker Present</fieldText>
             <fieldType>RadioButtons</fieldType>
             <isRequired>false</isRequired>
         </fields>
@@ -1544,7 +1521,7 @@
         <isViewedAsPlainText>true</isViewedAsPlainText>
         <text>Found at PM/BPI- {!X1_Issue_covered_by_and_found_during_PM_or_BPI_PDI}
 Describe Malfunction- {!X2_Describe_Malfunction_Event}
-Document troubleshooting- {!X3_Describe_Cause_Troubleshooting}
+Describe cause, troubleshooting- {!X3_Describe_Cause_Troubleshooting}
 Functioning as Designed- {!X4A_Functioning_as_designed_post_repair}
 Explain- {!X4B_Explain_if_No}
 Test Performed-
