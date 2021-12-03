@@ -37,8 +37,7 @@ public class HRCSVC20_Quote_Create_PDF_Controller {
         quotedoc.QuoteId = quoteId ;
         insert quotedoc;
     }
-    public PageReference cancel()
-    {return null;}
+   
     public String returnurl {
         get{
             system.debug('id==== '+'/apex/HRCSVC20_Quote_Generate_PDF?id='+quoteId);
