@@ -1137,7 +1137,7 @@
 		<members>HRCSVC_Asset_Status_Mappings.Requires_Service</members>
 		<members>HRCSVC_Asset_Status_Mappings.TA</members>
 		<members>HRCFSL_Organization_Settings__mdt.HRCSVC20_Parts_Order_Types</members>
-		<members>HRCFSL_Organization_Settings__mdt.HRCSVC21_Sold_To_Integration</members>
+		<members>HRCSVC21_Parts_Order_Integration_Details__mdt.HRCSVC21_Sold_To_Integration</members>
 		<name>CustomMetadata</name>
 	</types>
 	<types>
