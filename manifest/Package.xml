@@ -58,6 +58,8 @@
 	</types>
 	<types>
 		<members>HRCSVC_Consume_Quoted_Parts</members>
+		<members>HRCSVC20_Quote_PDF_Generation</members>
+		<members>HRCSVC20_Quote_Generate_PDF</members>
 		<name>ApexPage</name>
 	</types>
 	<types>
@@ -66,11 +68,6 @@
 		<members>HRCSVC_ContentVersionTrigger</members>
 		<members>HRCSVC21_CQ_Original_Values_Trigger</members>
 		<name>ApexTrigger</name>
-	</types>
-	<types>
-		<members>HRCSVC20_Quote_PDF_Generation</members>
-		<members>HRCSVC20_Quote_Generate_PDF</members>
-		<name>ApexComponent</name>
 	</types>
 	<types>
 		<members>CreateOrderAndOrderLineItem</members>
