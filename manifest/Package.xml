@@ -1640,10 +1640,10 @@
 		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.All_Care_Comm_Records_Creation</members>
 		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.All_Records</members>
 		<members>HRCSVC_Case_Translations__mdt.All_CMDTs</members>
-		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.All_Care_Comm</members>
-		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.All_Care_Comm_Records_Comment</members>
-		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.All_Care_Comm_Records_Closure</members>
-		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.All_Care_Comm_Records_Creation</members>
+		<members>HRCSVC_Case_Translations__mdt.All_Care_Comm</members>
+		<members>HRCSVC_Case_Translations__mdt.All_Care_Comm_Records_Comment</members>
+		<members>HRCSVC_Case_Translations__mdt.All_Care_Comm_Records_Closure</members>
+		<members>HRCSVC_Case_Translations__mdt.All_Care_Comm_Records_Creation</members>
 		<name>ListView</name>
 	</types>
 	<!-- <types><members>Contact.HRCSVC_Contact_Email_Matching_Rule</members><members>Contact.HRCSVC_Contact_Matching_Rule</members><members>Contact.HRCSVC_Contact_Matching_Rule_Additional</members><members>Contact.HRCSVC_Contact_Matching_Rule_Old</members><name>MatchingRule</name></types>-->
