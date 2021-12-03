@@ -1248,7 +1248,7 @@
 		<members>Order__c</members>
 		<members>Override_Codes__c</members>
 		<members>HRCSVC20_CQ_Original_Values__c</members>
-		<members>HRCSVC21_Parts_Order_Integration_Details__mdt</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt</members>
 		<name>CustomObject</name>
 	</types>
 	<types>
