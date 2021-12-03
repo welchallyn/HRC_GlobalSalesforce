@@ -83,7 +83,7 @@
                 <field>HRCSVC20_Describe_Cause_Troubleshooting__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Readonly</behavior>
+                <behavior>Edit</behavior>
                 <field>HRCSVC_Document_troubleshooting__c</field>
             </layoutItems>
             <layoutItems>
@@ -214,7 +214,7 @@
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>HRCSVC_Patient_Identifier_PersonImpacted__c</field>
+                <field>HRCSVC_Patient_Identifier__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -299,7 +299,7 @@
         <label>Asset Information</label>
         <layoutColumns>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRCSVC_Asset__c</field>
             </layoutItems>
             <layoutItems>
@@ -383,10 +383,6 @@
                 <behavior>Edit</behavior>
                 <field>HRCSVC_Return_Order_Line_Item__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>HRCSVC21_Translation_Status__c</field>
-            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
@@ -423,12 +419,7 @@
                 <field>HRCSVC_Problem__c</field>
             </layoutItems>
         </layoutColumns>
-        <layoutColumns>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>HRCSVC21_Complaint_Attachment_Info__c</field>
-            </layoutItems>
-        </layoutColumns>
+        <layoutColumns/>
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
     <layoutSections>
@@ -463,11 +454,6 @@
     <platformActionList>
         <actionListContext>Record</actionListContext>
         <platformActionListItems>
-            <actionName>HRCSVC_Complaint_Qualification__c.HRCSVC20_Requires_Translation</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>0</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
             <actionName>HRCSVC_Complaint_Qualification__c.HRCSVC20_Mark_as_Translated</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>1</sortOrder>
@@ -476,6 +462,11 @@
             <actionName>Submit</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>2</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>HRCSVC_Complaint_Qualification__c.HRCSVC20_Requires_Translation</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>0</sortOrder>
         </platformActionListItems>
     </platformActionList>
     <quickActionList/>
