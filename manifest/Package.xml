@@ -51,6 +51,7 @@
 		<members>HRCSV21_CQ_Original_Values_Handler</members>
 		<members>HRCSVC21_MyException</members>
 		<members>HRCSVC21_AdvancedRelatedListController</members>
+		<members>HRCSVC21_SoldToJDEIntegration</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
@@ -84,6 +85,7 @@
 		<members>Order__c.Rental_Order_Header</members>
 		<members>ServiceContract.HRCSVC_Service_Contract_Compact_layout</members>
 		<members>WorkOrder.HRCFSL_Work_Order_Compact_Layout</members>
+		<members>HRCSVC_Complaint_Qualification__c.Hillrom_CQ_Compact_Layout</members>
 		<name>CompactLayout</name>
 	</types>
 	<types>
@@ -926,7 +928,7 @@
 		<members>HRCSVC20_CQ_Original_Values__c.HRCSVC20_CQ_API_Name__c</members>
 		<members>HRCSVC20_CQ_Original_Values__c.HRCSVC21_CQ_Translation__c</members>
 		<members>HRCSVC20_CQ_Original_Values__c.CQ_External_Id__c</members>
-		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_EtQ_Status__c</members>
+		<!--<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_EtQ_Status__c</members>-->
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_Assigned_Engineer__c</members>
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_Item_Description__c</members>
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_Item_Number__c</members>
@@ -939,6 +941,15 @@
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_Software_Version_Case__c</members>
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_URL__c</members>
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Complaint_Resolution__c</members>
+		<members>Order__c.HRCSVC21_Service_Location__c</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_Translation_Status__c</members>
+		<members>HRCSVC21_Parts_Order_Integration_Details__mdt.HRCSVC21_Client_Id__c</members>
+		<members>HRCSVC21_Parts_Order_Integration_Details__mdt.HRCSVC21_Client_Secret__c</members>
+		<members>HRCSVC21_Parts_Order_Integration_Details__mdt.HRCSVC21_Content_Type__c</members>
+		<members>HRCSVC21_Parts_Order_Integration_Details__mdt.HRCSVC21_Method__c</members>
+		<members>HRCSVC21_Parts_Order_Integration_Details__mdt.HRCSVC21_Timeout__c</members>
+		<members>HRCSVC21_Parts_Order_Integration_Details__mdt.HRCSVC21_X_Correlation_ID__c</members>
+		<members>HRCSVC21_Parts_Order_Integration_Details__mdt.HRCSVC21_URL__c</members>
 		<name>CustomField</name>
 	</types>
 	<types>
@@ -1126,6 +1137,7 @@
 		<members>HRCSVC_Asset_Status_Mappings.Requires_Service</members>
 		<members>HRCSVC_Asset_Status_Mappings.TA</members>
 		<members>HRCFSL_Organization_Settings__mdt.HRCSVC20_Parts_Order_Types</members>
+		<members>HRCSVC21_Parts_Order_Integration_Details__mdt.HRCSVC21_Sold_To_Integration</members>
 		<name>CustomMetadata</name>
 	</types>
 	<types>
@@ -1170,6 +1182,7 @@
 		<members>Order__c</members>
 		<members>Override_Codes__c</members>
 		<members>HRCSVC20_CQ_Original_Values__c</members>
+		<members>HRCSVC21_Parts_Order_Integration_Details__mdt</members>
 		<name>CustomObject</name>
 	</types>
 	<types>
@@ -1387,6 +1400,8 @@
 		<members>HRCFSL_Check_Entitlement_SF</members>
 		<members>HRCSVC20_Set_Carrier_based_on_Ship_to_Country_on_Parts_Order</members>
 		<members>HRCFSL_Repair_Template_SF</members>
+		<members>HRCSVC21_Order_Before_Save_Actions</members>
+		<members>HRCSVC21_Complaint_Qualification_Before_Save_Actions</members>
 		<name>Flow</name>
 	</types>
 	<types>
@@ -1531,6 +1546,7 @@
 		<members>HRCSVC_Remote_Access__c-Remote Access Layout</members>
 		<members>HRCSVC_ST_Product_Unavailability__c-Service Territory Product Unavailability Layout</members>
 		<members>HRCSVC20_CQ_Original_Values__c-CQ_Original_Values Layout</members>
+		<members>HRCSVC21_Parts_Order_Integration_Details__mdt-Parts Order Integration Details Layout</members>
 		<name>Layout</name>
 	</types>
 	<types>
@@ -1676,8 +1692,10 @@
 		<members>WorkOrder.Product_Usage</members>
 		<members>WorkOrder.Track_Product_Usage</members>
 		<members>HRCSVC_BOM_Item__c.Test_List_Button</members>
-		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Send_to_ETQ</members>
-		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Translation_Candidate</members>
+		<!--<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Send_to_ETQ</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Translation_Candidate</members>-->
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Mark_as_Translated</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Requires_Translation</members>
 		<name>QuickAction</name>
 	</types>
 	<!--
@@ -1976,6 +1994,7 @@
 		<members>ServiceAppointment.HRCSVC20_Occurence_loc_Reqd_On_Closure</members>
 		<members>ServiceAppointment.HRCSVC21_Describe_Cause_Reqd_On_Closure</members>
 		<members>ServiceAppointment.HRCSVC21_Resolution_Reqd_On_Closure</members>
+		<members>ServiceAppointment.HRCSVC20_Test_Performed_Reqd_on_Closure</members>
 		<members>Case.HRCSVC21_Reqd_fields_on_CQ_check </members>
 		<name>ValidationRule</name>
 	</types>
