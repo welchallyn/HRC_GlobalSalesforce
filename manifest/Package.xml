@@ -943,6 +943,13 @@
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Complaint_Resolution__c</members>
 		<members>Order__c.HRCSVC21_Service_Location__c</members>
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_Translation_Status__c</members>
+		<members>HRCSVC21_Parts_Order_Integration_Details__mdt.HRCSVC21_Client_Id__c</members>
+		<members>HRCSVC21_Parts_Order_Integration_Details__mdt.HRCSVC21_Client_Secret__c</members>
+		<members>HRCSVC21_Parts_Order_Integration_Details__mdt.HRCSVC21_Content_Type__c</members>
+		<members>HRCSVC21_Parts_Order_Integration_Details__mdt.HRCSVC21_Method__c</members>
+		<members>HRCSVC21_Parts_Order_Integration_Details__mdt.HRCSVC21_Timeout__c</members>
+		<members>HRCSVC21_Parts_Order_Integration_Details__mdt.HRCSVC21_X_Correlation_ID__c</members>
+		<members>HRCSVC21_Parts_Order_Integration_Details__mdt.HRCSVC21_URL__c</members>
 		<name>CustomField</name>
 	</types>
 	<types>
@@ -1130,6 +1137,7 @@
 		<members>HRCSVC_Asset_Status_Mappings.Requires_Service</members>
 		<members>HRCSVC_Asset_Status_Mappings.TA</members>
 		<members>HRCFSL_Organization_Settings__mdt.HRCSVC20_Parts_Order_Types</members>
+		<members>HRCFSL_Organization_Settings__mdt.HRCSVC21_Sold_To_Integration</members>
 		<name>CustomMetadata</name>
 	</types>
 	<types>
@@ -1174,6 +1182,7 @@
 		<members>Order__c</members>
 		<members>Override_Codes__c</members>
 		<members>HRCSVC20_CQ_Original_Values__c</members>
+		<members>HRCSVC21_Parts_Order_Integration_Details__mdt</members>
 		<name>CustomObject</name>
 	</types>
 	<types>
@@ -1537,6 +1546,7 @@
 		<members>HRCSVC_Remote_Access__c-Remote Access Layout</members>
 		<members>HRCSVC_ST_Product_Unavailability__c-Service Territory Product Unavailability Layout</members>
 		<members>HRCSVC20_CQ_Original_Values__c-CQ_Original_Values Layout</members>
+		<members>HRCSVC21_Parts_Order_Integration_Details__mdt-Parts Order Integration Details Layout</members>
 		<name>Layout</name>
 	</types>
 	<types>
