@@ -54,6 +54,7 @@
 		<members>HRCSVC21_SoldToJDEIntegration</members>
 		<members>HRCSVC21_Quote_PDF_Extension</members>
 		<members>HRCSVC20_Quote_Create_PDF_Controller</members>
+		<members>HRCSVC20_Quote_Create_PDF_ControllerTest</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
@@ -2088,6 +2089,10 @@
 		<members>Quote.HRCSVC20_Generate_Quote_PDF</members>
 		<name>WebLink</name>
 	</types>
+	<types>
+        <members>businesslogo</members>
+        <name>StaticResource</name>
+    </types>
 	<types>
 		<members>Account.HRCSVC_Email_Alert_for_Account_Status_Change_to_Active</members>
 		<members>Case.HRCSVC_Case_SLA_Escalation_Notifications</members>
