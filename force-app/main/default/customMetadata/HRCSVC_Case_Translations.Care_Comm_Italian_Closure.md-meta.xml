@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Care Comm Italian Closure</label>
+    <protected>false</protected>
+    <values>
+        <field>HRCSVC_Email_Text__c</field>
+        <value xsi:type="xsd:string">Grazie per aver scelto Hillrom. Questa notifica è per informarvi che il nostro team di assistenza clienti ha chiuso la vostra segnalazione. Di seguito potete trovare i dettagli.
+
+Nr. segnalazione: {!Get_Case_Details.CaseNumber}
+Stato: {!Get_Case_Details.Status}
+Data di creazione: {!Get_Case_Details.CreatedDate}
+Contatto: {!Dynamic_Contact}
+
+Cliente: {!Dynamic_Location}
+Numero di serie: {!Dynamic_Asset}
+Prodotto: {!Dynamic_Product}
+Oggetto: {!Get_Case_Details.Subject}
+Descrizione: {!Get_Case_Details.Description}
+
+In caso di necessità, potete contattare il nostro supporto tecnico:
+{!Local_Country_Contact_Info}
+
+{!Portal_Case_Signature}</value>
+    </values>
+    <values>
+        <field>HRCSVC_Language__c</field>
+        <value xsi:type="xsd:string">it</value>
+    </values>
+    <values>
+        <field>HRCSVC_Protocol_Category__c</field>
+        <value xsi:type="xsd:string">Care Comm</value>
+    </values>
+    <values>
+        <field>HRCSVC_Subject__c</field>
+        <value xsi:type="xsd:string">Hillrom – Segnalazione chiusa: {!Get_Case_Details.CaseNumber}</value>
+    </values>
+    <values>
+        <field>HRCSVC_Type__c</field>
+        <value xsi:type="xsd:string">Closure</value>
+    </values>
+</CustomMetadata>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Care Comm French Closure</label>
+    <protected>false</protected>
+    <values>
+        <field>HRCSVC_Email_Text__c</field>
+        <value xsi:type="xsd:string">Merci d&apos;avoir choisi Hillrom comme fournisseur de technologie médicale.   Ceci est une notification qu&apos;un cas a été fermé avec notre équipe Care Communications.  Veuillez trouver les détails du cas ci-dessous.
+
+Cas# {!Get_Case_Details.CaseNumber}
+statut: {!Get_Case_Details.Status}
+: {!Get_Case_Details.HRCSVC_Case_Resolution__c}
+Date de création: {!Get_Case_Details.CreatedDate}
+Contact: {!Dynamic_Contact}
+
+Nom du Departement: {!Dynamic_Location}
+Bien: {!Dynamic_Asset}
+Produit: {!Dynamic_Product}
+Sujet: {!Get_Case_Details.Subject}
+Description: {!Get_Case_Details.Description}
+
+Pour toute question, merci de contacter notre service Customer Care au:
+{!Local_Country_Contact_Info}
+
+{!Portal_Case_Signature}</value>
+    </values>
+    <values>
+        <field>HRCSVC_Language__c</field>
+        <value xsi:type="xsd:string">fr</value>
+    </values>
+    <values>
+        <field>HRCSVC_Protocol_Category__c</field>
+        <value xsi:type="xsd:string">Care Comm</value>
+    </values>
+    <values>
+        <field>HRCSVC_Subject__c</field>
+        <value xsi:type="xsd:string">Hillrom - Cas clôturé: {!Get_Case_Details.CaseNumber}</value>
+    </values>
+    <values>
+        <field>HRCSVC_Type__c</field>
+        <value xsi:type="xsd:string">Closure</value>
+    </values>
+</CustomMetadata>

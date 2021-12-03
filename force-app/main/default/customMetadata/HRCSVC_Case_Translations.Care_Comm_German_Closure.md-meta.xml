@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Care Comm German Closure</label>
+    <protected>false</protected>
+    <values>
+        <field>HRCSVC_Email_Text__c</field>
+        <value xsi:type="xsd:string">Vielen Dank, dass Sie sich für Hillrom als Ihren Gesundheitstechnologie-Anbieter entschieden haben.   Dies ist eine Benachrichtigung, dass Ihr Anliegen unter vorgenannter Vorgangs-Nr. abgeschlossen wurde.  Bitte finden Sie die Details unten
+
+Vorgangs-Nr.: {!Get_Case_Details.CaseNumber}
+Status: {!Get_Case_Details.Status}
+Resolution: {!Get_Case_Details.HRCSVC_Case_Resolution__c}
+Datum: {!Get_Case_Details.CreatedDate}
+Kontakt: {!Dynamic_Contact}
+
+Standort: {!Dynamic_Location}
+Serien-Nr.: {!Dynamic_Asset}
+Produkt: {!Dynamic_Product}
+Thema: {!Get_Case_Details.Subject}
+Beschreibung  {!Get_Case_Details.Description}
+
+Wenn Sie Fragen haben, wenden Sie sich bitte an unseren Kundendienst:
+{!Local_Country_Contact_Info}
+
+{!Portal_Case_Signature}</value>
+    </values>
+    <values>
+        <field>HRCSVC_Language__c</field>
+        <value xsi:type="xsd:string">de</value>
+    </values>
+    <values>
+        <field>HRCSVC_Protocol_Category__c</field>
+        <value xsi:type="xsd:string">Care Comm</value>
+    </values>
+    <values>
+        <field>HRCSVC_Subject__c</field>
+        <value xsi:type="xsd:string">Hillrom - Abschlussmeldung Vogangs-Nr.: {!Get_Case_Details.CaseNumber}</value>
+    </values>
+    <values>
+        <field>HRCSVC_Type__c</field>
+        <value xsi:type="xsd:string">Closure</value>
+    </values>
+</CustomMetadata>
