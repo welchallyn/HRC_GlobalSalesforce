@@ -52,6 +52,8 @@
 		<members>HRCSVC21_MyException</members>
 		<members>HRCSVC21_AdvancedRelatedListController</members>
 		<members>HRCSVC21_SoldToJDEIntegration</members>
+		<members>HRCSVC21_Quote_PDF_Extension</members>
+		<members>HRCSVC20_Quote_Create_PDF_Controller</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
@@ -64,6 +66,11 @@
 		<members>HRCSVC_ContentVersionTrigger</members>
 		<members>HRCSVC21_CQ_Original_Values_Trigger</members>
 		<name>ApexTrigger</name>
+	</types>
+	<types>
+		<members>HRCSVC20_Quote_PDF_Generation</members>
+		<members>HRCSVC20_Quote_Generate_PDF</members>
+		<name>ApexComponent</name>
 	</types>
 	<types>
 		<members>CreateOrderAndOrderLineItem</members>
@@ -1614,6 +1621,7 @@
 		<members>HRCSVC20_CQ_Original_Values__c-CQ_Original_Values Layout</members>
 		<members>HRCSVC21_Parts_Order_Integration_Details__mdt-Parts Order Integration Details Layout</members>
 		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt-HRCSVC21 Case Local Country Contact Info Layout</members>
+		<members>Quote-Quote Layout</members>
 		<name>Layout</name>
 	</types>
 	<types>
@@ -1773,6 +1781,7 @@
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Translation_Candidate</members>-->
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Mark_as_Translated</members>
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Requires_Translation</members>
+		<members>Quote.HRCSVC20_Generate_Quote_PDF</members>
 		<name>QuickAction</name>
 	</types>
 	<!--
