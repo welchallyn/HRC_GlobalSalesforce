@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>SE-2620 - Used for status update for CQ Process builder to trigger a platform event to ETQ</description>
+    <fieldOverrides>
+        <field>HRCSVC20_Requires_Translation__c</field>
+        <formula>false</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>HRCSVC21_Translation_Status__c</field>
+        <literalValue>Translated</literalValue>
+    </fieldOverrides>
+    <label>Mark as Translated</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <quickActionLayout>
+        <layoutSectionStyle>TwoColumnsLeftToRight</layoutSectionStyle>
+        <quickActionLayoutColumns>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>HRCSVC20_Instruction__c</field>
+                <uiBehavior>Readonly</uiBehavior>
+            </quickActionLayoutItems>
+        </quickActionLayoutColumns>
+        <quickActionLayoutColumns/>
+    </quickActionLayout>
+    <type>Update</type>
+</QuickAction>

@@ -5,7 +5,7 @@
         <name>Assign_Workflow</name>
         <label>Assign Workflow</label>
         <locationX>50</locationX>
-        <locationY>671</locationY>
+        <locationY>791</locationY>
         <assignmentItems>
             <assignToReference>$Record.HRCSVC_Found_ETQ_Workflow__c</assignToReference>
             <operator>Assign</operator>
@@ -13,16 +13,72 @@
                 <elementReference>Find_Product_Model.HRCSVC_ETQ_Workflow__c</elementReference>
             </value>
         </assignmentItems>
+        <connector>
+            <targetReference>Location_Check</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Translation Status: Pending; Requires Translation: True</description>
+        <name>Update_Fields</name>
+        <label>Update Fields</label>
+        <locationX>270</locationX>
+        <locationY>1343</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.HRCSVC21_Translation_Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Pending</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.HRCSVC20_Requires_Translation__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
     </assignments>
     <decisions>
-        <name>Populate_Product_Model</name>
-        <label>Populate Product Model</label>
+        <name>Asset_Check</name>
+        <label>Asset Check</label>
         <locationX>336</locationX>
+        <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>Location_Check</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Null</defaultConnectorLabel>
+        <rules>
+            <name>Not_Null</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.HRCSVC_Case__r.AssetId</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.HRCSVC_Work_Order__r.AssetId</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Find_Product_Model</targetReference>
+            </connector>
+            <label>Not Null</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Created_New</name>
+        <label>Created/New?</label>
+        <locationX>567</locationX>
         <locationY>311</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Is_New</name>
-            <conditionLogic>and</conditionLogic>
+            <conditionLogic>1 AND (2 OR 3)</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.Id</leftValueReference>
                 <operator>IsNull</operator>
@@ -30,17 +86,106 @@
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
+            <conditions>
+                <leftValueReference>$Record.HRCSVC_Case__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.HRCSVC_Work_Order__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
             <connector>
-                <targetReference>Find_Product_Model</targetReference>
+                <targetReference>Asset_Check</targetReference>
             </connector>
             <label>Is New</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Language_Check</name>
+        <label>Language Check</label>
+        <locationX>138</locationX>
+        <locationY>1223</locationY>
+        <defaultConnector>
+            <targetReference>Update_Fields</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Other Language</defaultConnectorLabel>
+        <rules>
+            <name>English_English_UK</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.HRCSVC_Case__r.HRCSVC_Location__r.HRCFSL_Language__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>en_US</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.HRCSVC_Case__r.HRCSVC_Location__r.HRCFSL_Language__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>en_GB</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.HRCSVC_Work_Order__r.Location.HRCFSL_Language__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>en_US</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.HRCSVC_Work_Order__r.Location.HRCFSL_Language__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>en_GB</stringValue>
+                </rightValue>
+            </conditions>
+            <label>English/English(UK)</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Location_Check</name>
+        <label>Location Check</label>
+        <locationX>336</locationX>
+        <locationY>1103</locationY>
+        <defaultConnectorLabel>Location in Blank</defaultConnectorLabel>
+        <rules>
+            <name>Location_Exists</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.HRCSVC_Case__r.HRCSVC_Location__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.HRCSVC_Work_Order__r.LocationId</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Language_Check</targetReference>
+            </connector>
+            <label>Location Exists</label>
         </rules>
     </decisions>
     <decisions>
         <name>Workflow_Found</name>
         <label>Workflow Found</label>
         <locationX>182</locationX>
-        <locationY>551</locationY>
+        <locationY>671</locationY>
+        <defaultConnector>
+            <targetReference>Location_Check</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Yes_Workflow_Found</name>
@@ -88,7 +233,7 @@
         <name>Find_Product_Model</name>
         <label>Find Product Model</label>
         <locationX>182</locationX>
-        <locationY>431</locationY>
+        <locationY>551</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Workflow_Found</targetReference>
@@ -106,10 +251,10 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <start>
-        <locationX>210</locationX>
+        <locationX>441</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Populate_Product_Model</targetReference>
+            <targetReference>Created_New</targetReference>
         </connector>
         <object>HRCSVC_Complaint_Qualification__c</object>
         <recordTriggerType>CreateAndUpdate</recordTriggerType>

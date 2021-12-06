@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC20_Instruction__c</fullName>
+    <description>SE-2620: Used in Send to ETQ quick action layout (Service Cloud 2.1)</description>
+    <externalId>false</externalId>
+    <formula>&quot;Please click the &apos;Save&apos; button to send the Complaint Qualification details to EtQ&quot;</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Instruction</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

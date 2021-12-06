@@ -66,7 +66,7 @@
             </value>
         </inputParameters>
     </actionCalls>
-    <apiVersion>49.0</apiVersion>
+    <apiVersion>52.0</apiVersion>
     <assignments>
         <name>myWaitAssignment_myWait_myRule_11</name>
         <label>myWaitAssignment_myWait_myRule_11</label>
@@ -150,10 +150,65 @@
             <name>myRule_1</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>formula_myRule_1</leftValueReference>
-                <operator>EqualTo</operator>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>Boolean</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>Boolean</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_current.HRCSVC_Real_ETQ_Complaint_Number__c</leftValueReference>
+                <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_current.HRCSVC21_Translation_Status__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Pending</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -512,7 +567,7 @@
                 <leftValueReference>myVariable_current.HRCSVC_Aware_Date__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <elementReference>formula_8_myRule_7_9927151658</elementReference>
+                    <elementReference>formula_8_myRule_7_2313801497</elementReference>
                 </rightValue>
             </conditions>
             <connector>
@@ -765,7 +820,7 @@
                 <leftValueReference>myVariable_current.HRCSVC_Aware_Date__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <elementReference>formula_8_myRule_7_9927151658</elementReference>
+                    <elementReference>formula_8_myRule_7_2313801497</elementReference>
                 </rightValue>
             </conditions>
             <connector>
@@ -1160,7 +1215,7 @@
                 <leftValueReference>myVariable_old.HRCSVC_Aware_Date__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <elementReference>formula_9_myRule_7_pmetrule_5498523584</elementReference>
+                    <elementReference>formula_9_myRule_7_pmetrule_3535702088</elementReference>
                 </rightValue>
             </conditions>
             <label>Previously Met - Prev</label>
@@ -1174,7 +1229,7 @@
                 <stringValue>NOW() </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_12_myWaitEvent_myWait_myRule_11_event_0_SA1_0201829403</name>
+        <name>formula_12_myWaitEvent_myWait_myRule_11_event_0_SA1_8068011569</name>
         <dataType>DateTime</dataType>
         <expression>NOW()</expression>
     </formulas>
@@ -1185,7 +1240,7 @@
                 <stringValue>&quot;Please complete Complaint Qualification now&quot; + &quot; &quot; + [HRCSVC_Complaint_Qualification__c].Name </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_13_myWaitEvent_myWait_myRule_11_event_0_SA1_5527998173</name>
+        <name>formula_13_myWaitEvent_myWait_myRule_11_event_0_SA1_9176405273</name>
         <dataType>String</dataType>
         <expression>&quot;Please complete Complaint Qualification now&quot; + &quot; &quot; + {!myVariable_current.Name}</expression>
     </formulas>
@@ -1196,7 +1251,7 @@
                 <stringValue>TODAY() </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_8_myRule_7_9927151658</name>
+        <name>formula_8_myRule_7_2313801497</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -1207,22 +1262,11 @@
                 <stringValue>TODAY() </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_9_myRule_7_pmetrule_5498523584</name>
+        <name>formula_9_myRule_7_pmetrule_3535702088</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
-    <formulas>
-        <processMetadataValues>
-            <name>originalFormula</name>
-            <value>
-                <stringValue>ISNEW()</stringValue>
-            </value>
-        </processMetadataValues>
-        <name>formula_myRule_1</name>
-        <dataType>Boolean</dataType>
-        <expression>ISNEW()</expression>
-    </formulas>
-    <interviewLabel>HRCSVC_Complaint_Qualification_Actions-2_InterviewLabel</interviewLabel>
+    <interviewLabel>HRCSVC_Complaint_Qualification_Actions-8_InterviewLabel</interviewLabel>
     <label>HRCSVC Complaint Qualification Actions</label>
     <processMetadataValues>
         <name>ObjectType</name>
@@ -1402,7 +1446,7 @@
             </processMetadataValues>
             <field>ReminderDateTime</field>
             <value>
-                <elementReference>formula_12_myWaitEvent_myWait_myRule_11_event_0_SA1_0201829403</elementReference>
+                <elementReference>formula_12_myWaitEvent_myWait_myRule_11_event_0_SA1_8068011569</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1438,7 +1482,7 @@
             </processMetadataValues>
             <field>Subject</field>
             <value>
-                <elementReference>formula_13_myWaitEvent_myWait_myRule_11_event_0_SA1_5527998173</elementReference>
+                <elementReference>formula_13_myWaitEvent_myWait_myRule_11_event_0_SA1_9176405273</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
