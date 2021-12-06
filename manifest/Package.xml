@@ -960,6 +960,10 @@
 		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.HRCSVC21_Language__c</members>
 		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.HRCSVC21_Protocol_Category__c</members>
 		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.HRCSVC21_Type__c</members>
+		<members>Quote.HRCSVC21_Comments__c</members>
+		<members>Quote.HRCSVC21_Ship_to_location__c</members>
+		<members>Quote.HRCSVC21_Sold_to_location__c</members>
+		<members>Order__C.HRCSVC21_Error_Message__c</members>
 		<name>CustomField</name>
 	</types>
 	<types>
