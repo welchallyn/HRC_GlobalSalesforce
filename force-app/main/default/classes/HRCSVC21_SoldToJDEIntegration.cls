@@ -22,8 +22,8 @@ public class HRCSVC21_SoldToJDEIntegration{
         {
         System.debug(orderIds);
         Order__c order = new Order__c();
-	    order = [Select id, HRCSVC20_Sold_To_Location__c, HRCSVC_Ship_To_Location__r.HRCFSL_Customer_ID__c from Order__c where id =:orderIds LIMIT 1];
-		
+	    order = [Select id, HRCSVC20_Sold_To_Location__c, HRCSVC_Ship_To_Location__r.HRCFSL_Customer_ID__c, HRCSVC21_Error_Message__c from Order__c where id =:orderIds LIMIT 1];
+		System.debug('customer Id: ' + order.HRCSVC_Ship_To_Location__r.HRCFSL_Customer_ID__c);
 		Map<String, HRCSVC21_Parts_Order_Integration_Details__mdt> mapEd = HRCSVC21_Parts_Order_Integration_Details__mdt.getAll();
         System.debug('MapEd values-->'+Json.serializePretty(mapEd.get('HRCSVC21_Sold_To_Integration')));
         
@@ -38,17 +38,28 @@ public class HRCSVC21_SoldToJDEIntegration{
         request.setEndpoint(endpoint);
         system.debug('endpoint'+endpoint);
 	    request.setMethod(mapEd.get('HRCSVC21_Sold_To_Integration').HRCSVC21_Method__c);
-        request.setTimeout(12000);
+        request.setTimeout(120000);
             
         HttpResponse res = http.send(request);
-        String result=res.getBody();
-        System.debug('Recieved Body Data======>>>'+JSON.serializePretty(result));            
-        Map<String, String> mapOrd = (Map<String, String>) JSON.deserialize(result, Map<String, String>.class); //Deserializing using Map to fetch 'Sold To' value from the response body
-        String soldTo = mapOrd.get('soldToCustomerId');
-        System.debug('SoldToCustomer Response Value===>'+soldTo); 
-        Id SoldToCustomer = [Select Id FROM Location WHERE HRCFSL_Customer_ID__c = :soldTo LIMIT 1].Id; //Sold To customer Id returned from JDE integration needs to be matched on location customer Id
-	    System.debug('SoldToCustomerId======>>>'+soldToCustomer);
-        order.HRCSVC20_Sold_To_Location__c = soldToCustomer;
+            String result=res.getBody();
+            if(res.getStatusCode() == 200){               
+                System.debug('Recieved Body Data======>>>'+JSON.serializePretty(result));            
+                Map<String, String> mapOrd = (Map<String, String>) JSON.deserialize(result, Map<String, String>.class); //Deserializing using Map to fetch 'Sold To' value from the response body
+                String soldTo = mapOrd.get('soldToCustomerId');
+                System.debug('SoldToCustomer Response Value===>'+soldTo); 
+                Id SoldToCustomer = [Select Id FROM Location WHERE HRCFSL_Customer_ID__c = :soldTo LIMIT 1].Id; //Sold To customer Id returned from JDE integration needs to be matched on location customer Id
+                System.debug('SoldToCustomerId======>>>'+soldToCustomer);
+                order.HRCSVC20_Sold_To_Location__c = soldToCustomer;
+                if(order.HRCSVC21_Error_Message__c != ''){
+                    order.HRCSVC21_Error_Message__c = '';
+                }
+            }
+            else{
+                Map<String, String> mapOrd = (Map<String, String>) JSON.deserialize(result, Map<String, String>.class);
+                String errorMessage = mapOrd.get('message');
+                order.HRCSVC21_Error_Message__c = errorMessage;
+            }
+        
             
 	    update order;
         }
