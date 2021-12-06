@@ -51,10 +51,16 @@
 		<members>HRCSV21_CQ_Original_Values_Handler</members>
 		<members>HRCSVC21_MyException</members>
 		<members>HRCSVC21_AdvancedRelatedListController</members>
+		<members>HRCSVC21_SoldToJDEIntegration</members>
+		<members>HRCSVC21_Quote_PDF_Extension</members>
+		<members>HRCSVC20_Quote_Create_PDF_Controller</members>
+		<members>HRCSVC20_Quote_Create_PDF_ControllerTest</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
 		<members>HRCSVC_Consume_Quoted_Parts</members>
+		<members>HRCSVC20_Quote_PDF_Generation</members>
+		<members>HRCSVC20_Quote_Generate_PDF</members>
 		<name>ApexPage</name>
 	</types>
 	<types>
@@ -84,6 +90,7 @@
 		<members>Order__c.Rental_Order_Header</members>
 		<members>ServiceContract.HRCSVC_Service_Contract_Compact_layout</members>
 		<members>WorkOrder.HRCFSL_Work_Order_Compact_Layout</members>
+		<members>HRCSVC_Complaint_Qualification__c.Hillrom_CQ_Compact_Layout</members>
 		<name>CompactLayout</name>
 	</types>
 	<types>
@@ -882,7 +889,7 @@
 		<members>Case.HRCSVC_Open_Work_Orders__c</members>
 		<members>Case.HRCSVC_SW_Version_Missing__c</members>
 		<members>Additional_Account_Info__c.Account__c</members>
-		<members>Location.Language__c</members>
+		<!--<members>Location.Language__c</members>-->
 		<members>Asset.Status</members>
 		<members>Location.HRCSVC20_GPO__c</members>
 		<members>Location.HRCSVC20_GPO_Capital__c</members>
@@ -909,7 +916,7 @@
 		<members>HRCSVC20_CQ_Original_Values__c.HRCSVC20_CQ_Key__c</members>
 		<members>HRCSVC20_CQ_Original_Values__c.HRCSVC20_CQ_Value__c</members>
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Requires_Translation__c</members>
-		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Send_to_ETQ__c</members>
+		<!--<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Send_to_ETQ__c</members>-->
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Instruction__c</members>
 		<members>Case.HRCSVC21_Age__c</members>
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_CQ_Creation_Duration_From_Case__c</members>
@@ -926,7 +933,7 @@
 		<members>HRCSVC20_CQ_Original_Values__c.HRCSVC20_CQ_API_Name__c</members>
 		<members>HRCSVC20_CQ_Original_Values__c.HRCSVC21_CQ_Translation__c</members>
 		<members>HRCSVC20_CQ_Original_Values__c.CQ_External_Id__c</members>
-		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_EtQ_Status__c</members>
+		<!--<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_EtQ_Status__c</members>-->
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_Assigned_Engineer__c</members>
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_Item_Description__c</members>
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_Item_Number__c</members>
@@ -939,6 +946,20 @@
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_Software_Version_Case__c</members>
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_URL__c</members>
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Complaint_Resolution__c</members>
+		<members>Order__c.HRCSVC21_Service_Location__c</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_Translation_Status__c</members>
+		<members>HRCSVC21_Parts_Order_Integration_Details__mdt.HRCSVC21_Client_Id__c</members>
+		<members>HRCSVC21_Parts_Order_Integration_Details__mdt.HRCSVC21_Client_Secret__c</members>
+		<members>HRCSVC21_Parts_Order_Integration_Details__mdt.HRCSVC21_Content_Type__c</members>
+		<members>HRCSVC21_Parts_Order_Integration_Details__mdt.HRCSVC21_Method__c</members>
+		<members>HRCSVC21_Parts_Order_Integration_Details__mdt.HRCSVC21_Timeout__c</members>
+		<members>HRCSVC21_Parts_Order_Integration_Details__mdt.HRCSVC21_X_Correlation_ID__c</members>
+		<members>HRCSVC21_Parts_Order_Integration_Details__mdt.HRCSVC21_URL__c</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.HRCSVC21_Contact_Information__c</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.HRCSVC21_Country__c</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.HRCSVC21_Language__c</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.HRCSVC21_Protocol_Category__c</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.HRCSVC21_Type__c</members>
 		<name>CustomField</name>
 	</types>
 	<types>
@@ -1126,6 +1147,68 @@
 		<members>HRCSVC_Asset_Status_Mappings.Requires_Service</members>
 		<members>HRCSVC_Asset_Status_Mappings.TA</members>
 		<members>HRCFSL_Organization_Settings__mdt.HRCSVC20_Parts_Order_Types</members>
+		<members>HRCSVC21_Parts_Order_Integration_Details__mdt.HRCSVC21_Sold_To_Integration</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.AT_de_Care_Comm_Closure</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.AT_de_Care_Comm_Comment</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.AT_de_Care_Comm_Creation</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.BE_fr_Care_Comm_Closure</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.BE_fr_Care_Comm_Comment</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.BE_fr_Care_Comm_Creation</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.CH_de_Care_Comm_Closure</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.CH_de_Care_Comm_Comment</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.CH_de_Care_Comm_Creation</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.CH_fr_Care_Comm_Closure</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.CH_fr_Care_Comm_Comment</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.CH_fr_Care_Comm_Creation</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.DE_de_Care_Comm_Closure</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.DE_de_Care_Comm_Comment</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.DE_de_Care_Comm_Creation</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.ES_es_Care_Comm_Closure</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.ES_es_Care_Comm_Comment</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.ES_es_Care_Comm_Creation</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.FR_fr_Care_Comm_Closure</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.FR_fr_Care_Comm_Comment</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.FR_fr_Care_Comm_Creation</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.GB_en_GB_Care_Comm_Closure</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.GB_en_GB_Care_Comm_Comment</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.GB_en_GB_Care_Comm_Creation</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.IE_en_GB_Care_Comm_Closure</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.IE_en_GB_Care_Comm_Comment</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.IE_en_GB_Care_Comm_Creation</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.IT_it_Care_Comm_Closure</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.IT_it_Care_Comm_Comment</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.IT_it_Care_Comm_Creation</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.NL_nl_NL_Care_Comm_Closure</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.NL_nl_NL_Care_Comm_Comment</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.NL_nl_NL_Care_Comm_Creation</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.SE_sv_Care_Comm_Closure</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.SE_sv_Care_Comm_Comment</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.SE_sv_Care_Comm_Creation</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.US_en_US_Care_Comm_Closure</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.US_en_US_Care_Comm_Comment</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.US_en_US_Care_Comm_Creation</members>
+		<members>HRCSVC_Case_Translations__mdt.Care_Comm_Dutch_Closure</members>
+		<members>HRCSVC_Case_Translations__mdt.Care_Comm_Dutch_Comment</members>
+		<members>HRCSVC_Case_Translations__mdt.Care_Comm_Dutch_Creation</members>
+		<members>HRCSVC_Case_Translations__mdt.Care_Comm_English_UK_Closure</members>
+		<members>HRCSVC_Case_Translations__mdt.Care_Comm_English_UK_Comment</members>
+		<members>HRCSVC_Case_Translations__mdt.Care_Comm_English_UK_Creation</members>
+		<members>HRCSVC_Case_Translations__mdt.Care_Comm_French_Closure</members>
+		<members>HRCSVC_Case_Translations__mdt.Care_Comm_French_Comment</members>
+		<members>HRCSVC_Case_Translations__mdt.Care_Comm_French_Creation</members>
+		<members>HRCSVC_Case_Translations__mdt.Care_Comm_German_Closure</members>
+		<members>HRCSVC_Case_Translations__mdt.Care_Comm_German_Comment</members>
+		<members>HRCSVC_Case_Translations__mdt.Care_Comm_German_Creation</members>
+		<members>HRCSVC_Case_Translations__mdt.Care_Comm_Italian_Closure</members>
+		<members>HRCSVC_Case_Translations__mdt.Care_Comm_Italian_Comment</members>
+		<members>HRCSVC_Case_Translations__mdt.Care_Comm_Italian_Creation</members>
+		<members>HRCSVC_Case_Translations__mdt.Care_Comm_Spanish_Closure</members>
+		<members>HRCSVC_Case_Translations__mdt.Care_Comm_Spanish_Comment</members>
+		<members>HRCSVC_Case_Translations__mdt.Care_Comm_Spanish_Creation</members>
+		<members>HRCSVC_Case_Translations__mdt.Care_Comm_Swedish_Closure</members>
+		<members>HRCSVC_Case_Translations__mdt.Care_Comm_Swedish_Comment</members>
+		<members>HRCSVC_Case_Translations__mdt.Care_Comm_Swedish_Creation</members>
+		<members>HRCSVC_Case_Translations__mdt.Factory_Repair_Depot_Closure</members>
 		<name>CustomMetadata</name>
 	</types>
 	<types>
@@ -1170,6 +1253,7 @@
 		<members>Order__c</members>
 		<members>Override_Codes__c</members>
 		<members>HRCSVC20_CQ_Original_Values__c</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt</members>
 		<name>CustomObject</name>
 	</types>
 	<types>
@@ -1387,6 +1471,8 @@
 		<members>HRCFSL_Check_Entitlement_SF</members>
 		<members>HRCSVC20_Set_Carrier_based_on_Ship_to_Country_on_Parts_Order</members>
 		<members>HRCFSL_Repair_Template_SF</members>
+		<members>HRCSVC21_Order_Before_Save_Actions</members>
+		<!--<members>HRCSVC21_Complaint_Qualification_Before_Save_Actions</members>-->
 		<name>Flow</name>
 	</types>
 	<types>
@@ -1531,6 +1617,9 @@
 		<members>HRCSVC_Remote_Access__c-Remote Access Layout</members>
 		<members>HRCSVC_ST_Product_Unavailability__c-Service Territory Product Unavailability Layout</members>
 		<members>HRCSVC20_CQ_Original_Values__c-CQ_Original_Values Layout</members>
+		<members>HRCSVC21_Parts_Order_Integration_Details__mdt-Parts Order Integration Details Layout</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt-HRCSVC21 Case Local Country Contact Info Layout</members>
+		<members>Quote-Quote Layout</members>
 		<name>Layout</name>
 	</types>
 	<types>
@@ -1551,6 +1640,16 @@
 		<members>WorkOrder.Coming_Due_RISSW_IW_FIW</members>
 		<members>WorkOrder.HRCSVC_All_Open_Factory_Repair_WO</members>
 		<members>WorkOrder.Past_Due_RISSW_IW_FIW</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.All_Care_Comm_Records_Comment</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.All_Care_Comm_Records</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.All_Care_Comm_Records_Closure</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.All_Care_Comm_Records_Creation</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.All_Records</members>
+		<members>HRCSVC_Case_Translations__mdt.All_CMDTs</members>
+		<members>HRCSVC_Case_Translations__mdt.All_Care_Comm</members>
+		<members>HRCSVC_Case_Translations__mdt.All_Care_Comm_Records_Comment</members>
+		<members>HRCSVC_Case_Translations__mdt.All_Care_Comm_Records_Closure</members>
+		<members>HRCSVC_Case_Translations__mdt.All_Care_Comm_Records_Creation</members>
 		<name>ListView</name>
 	</types>
 	<!-- <types><members>Contact.HRCSVC_Contact_Email_Matching_Rule</members><members>Contact.HRCSVC_Contact_Matching_Rule</members><members>Contact.HRCSVC_Contact_Matching_Rule_Additional</members><members>Contact.HRCSVC_Contact_Matching_Rule_Old</members><name>MatchingRule</name></types>-->
@@ -1676,8 +1775,10 @@
 		<members>WorkOrder.Product_Usage</members>
 		<members>WorkOrder.Track_Product_Usage</members>
 		<members>HRCSVC_BOM_Item__c.Test_List_Button</members>
-		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Send_to_ETQ</members>
-		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Translation_Candidate</members>
+		<!--<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Send_to_ETQ</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Translation_Candidate</members>-->
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Mark_as_Translated</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Requires_Translation</members>
 		<name>QuickAction</name>
 	</types>
 	<!--
@@ -1976,6 +2077,7 @@
 		<members>ServiceAppointment.HRCSVC20_Occurence_loc_Reqd_On_Closure</members>
 		<members>ServiceAppointment.HRCSVC21_Describe_Cause_Reqd_On_Closure</members>
 		<members>ServiceAppointment.HRCSVC21_Resolution_Reqd_On_Closure</members>
+		<members>ServiceAppointment.HRCSVC20_Test_Performed_Reqd_on_Closure</members>
 		<members>Case.HRCSVC21_Reqd_fields_on_CQ_check </members>
 		<name>ValidationRule</name>
 	</types>
@@ -1984,8 +2086,13 @@
 		<members>ReturnOrder.Estimate_Form</members>
 		<members>ReturnOrder.RMA_Form</members>
 		<members>WorkOrder.Estimate_Form</members>
+		<members>Quote.HRCSVC20_Generate_Quote_PDF</members>
 		<name>WebLink</name>
 	</types>
+	<types>
+        <members>businesslogo</members>
+        <name>StaticResource</name>
+    </types>
 	<types>
 		<members>Account.HRCSVC_Email_Alert_for_Account_Status_Change_to_Active</members>
 		<members>Case.HRCSVC_Case_SLA_Escalation_Notifications</members>
