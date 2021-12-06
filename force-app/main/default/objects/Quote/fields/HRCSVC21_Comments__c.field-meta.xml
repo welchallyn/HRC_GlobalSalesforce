@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC21_Comments__c</fullName>
+    <description>SE-868: As an agent, I need to create quotes for parts orders and select from pre-defined quote templates</description>
+    <externalId>false</externalId>
+    <label>Comments</label>
+    <required>false</required>
+    <type>TextArea</type>
+</CustomField>
