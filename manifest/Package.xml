@@ -889,7 +889,7 @@
 		<members>Case.HRCSVC_Open_Work_Orders__c</members>
 		<members>Case.HRCSVC_SW_Version_Missing__c</members>
 		<members>Additional_Account_Info__c.Account__c</members>
-		<members>Location.Language__c</members>
+		<!--<members>Location.Language__c</members>-->
 		<members>Asset.Status</members>
 		<members>Location.HRCSVC20_GPO__c</members>
 		<members>Location.HRCSVC20_GPO_Capital__c</members>
@@ -1472,7 +1472,7 @@
 		<members>HRCSVC20_Set_Carrier_based_on_Ship_to_Country_on_Parts_Order</members>
 		<members>HRCFSL_Repair_Template_SF</members>
 		<members>HRCSVC21_Order_Before_Save_Actions</members>
-		<members>HRCSVC21_Complaint_Qualification_Before_Save_Actions</members>
+		<!--<members>HRCSVC21_Complaint_Qualification_Before_Save_Actions</members>-->
 		<name>Flow</name>
 	</types>
 	<types>
