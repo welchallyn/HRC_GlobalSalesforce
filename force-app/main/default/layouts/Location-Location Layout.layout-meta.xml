@@ -67,7 +67,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Language__c</field>
+                <field>HRCFSL_Language__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
@@ -419,6 +419,42 @@
         <fields>HRCSVC_Server_Name_Type__c</fields>
         <fields>HRCSVC_Server_IP__c</fields>
         <relatedList>HRCSVC_Remote_Access__c.HRCSVC_Location__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <fields>Proposal_Date__c</fields>
+        <fields>Account__c</fields>
+        <fields>Sold_To__c</fields>
+        <fields>PO_Number__c</fields>
+        <fields>Main_SRP_Code_2_Description__c</fields>
+        <relatedList>Order__c.HRCSVC20_Sold_To_Location__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <fields>Proposal_Date__c</fields>
+        <fields>Account__c</fields>
+        <fields>Sold_To__c</fields>
+        <fields>PO_Number__c</fields>
+        <fields>Main_SRP_Code_2_Description__c</fields>
+        <relatedList>Order__c.HRCSVC21_Service_Location__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>QUOTE.NAME</fields>
+        <fields>OPPORTUNITY.NAME</fields>
+        <fields>QUOTE.ISSYNCING</fields>
+        <fields>QUOTE.EXPIRATIONDATE</fields>
+        <fields>QUOTE.SUBTOTAL</fields>
+        <fields>QUOTE.TOTALPRICE</fields>
+        <relatedList>Quote.HRCSVC21_Sold_to_location__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>QUOTE.NAME</fields>
+        <fields>OPPORTUNITY.NAME</fields>
+        <fields>QUOTE.ISSYNCING</fields>
+        <fields>QUOTE.EXPIRATIONDATE</fields>
+        <fields>QUOTE.SUBTOTAL</fields>
+        <fields>QUOTE.TOTALPRICE</fields>
+        <relatedList>Quote.HRCSVC21_Ship_to_location__c</relatedList>
     </relatedLists>
     <relatedObjects>ParentLocationId</relatedObjects>
     <showEmailCheckbox>false</showEmailCheckbox>
