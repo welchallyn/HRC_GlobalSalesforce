@@ -52,10 +52,15 @@
 		<members>HRCSVC21_MyException</members>
 		<members>HRCSVC21_AdvancedRelatedListController</members>
 		<members>HRCSVC21_SoldToJDEIntegration</members>
+		<members>HRCSVC21_Quote_PDF_Extension</members>
+		<members>HRCSVC20_Quote_Create_PDF_Controller</members>
+		<members>HRCSVC20_Quote_Create_PDF_ControllerTest</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
 		<members>HRCSVC_Consume_Quoted_Parts</members>
+		<members>HRCSVC20_Quote_PDF_Generation</members>
+		<members>HRCSVC20_Quote_Generate_PDF</members>
 		<name>ApexPage</name>
 	</types>
 	<types>
@@ -884,7 +889,7 @@
 		<members>Case.HRCSVC_Open_Work_Orders__c</members>
 		<members>Case.HRCSVC_SW_Version_Missing__c</members>
 		<members>Additional_Account_Info__c.Account__c</members>
-		<members>Location.Language__c</members>
+		<!--<members>Location.Language__c</members>-->
 		<members>Asset.Status</members>
 		<members>Location.HRCSVC20_GPO__c</members>
 		<members>Location.HRCSVC20_GPO_Capital__c</members>
@@ -1467,7 +1472,7 @@
 		<members>HRCSVC20_Set_Carrier_based_on_Ship_to_Country_on_Parts_Order</members>
 		<members>HRCFSL_Repair_Template_SF</members>
 		<members>HRCSVC21_Order_Before_Save_Actions</members>
-		<members>HRCSVC21_Complaint_Qualification_Before_Save_Actions</members>
+		<!--<members>HRCSVC21_Complaint_Qualification_Before_Save_Actions</members>-->
 		<name>Flow</name>
 	</types>
 	<types>
@@ -1614,6 +1619,7 @@
 		<members>HRCSVC20_CQ_Original_Values__c-CQ_Original_Values Layout</members>
 		<members>HRCSVC21_Parts_Order_Integration_Details__mdt-Parts Order Integration Details Layout</members>
 		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt-HRCSVC21 Case Local Country Contact Info Layout</members>
+		<members>Quote-Quote Layout</members>
 		<name>Layout</name>
 	</types>
 	<types>
@@ -2080,8 +2086,13 @@
 		<members>ReturnOrder.Estimate_Form</members>
 		<members>ReturnOrder.RMA_Form</members>
 		<members>WorkOrder.Estimate_Form</members>
+		<members>Quote.HRCSVC20_Generate_Quote_PDF</members>
 		<name>WebLink</name>
 	</types>
+	<types>
+        <members>businesslogo</members>
+        <name>StaticResource</name>
+    </types>
 	<types>
 		<members>Account.HRCSVC_Email_Alert_for_Account_Status_Change_to_Active</members>
 		<members>Case.HRCSVC_Case_SLA_Escalation_Notifications</members>
