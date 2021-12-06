@@ -72,7 +72,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>HRCSVC21_Display_ETQ_Workflow__c</field>
+                <field>HRCSVC_ETQ_Workflow__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
