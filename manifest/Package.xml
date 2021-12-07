@@ -56,6 +56,8 @@
 		<members>HRCSVC20_Quote_Create_PDF_Controller</members>
 		<members>HRCSVC20_Quote_Create_PDF_ControllerTest</members>
 		<members>HRCSVC21_InventoryCheckHandler</members>
+		<members>ContentNoteHandler</members>
+		<members>ContentNoteHandlerTest</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
@@ -69,6 +71,7 @@
 		<members>CaseTriggerMain</members>
 		<members>HRCSVC_ContentVersionTrigger</members>
 		<members>HRCSVC21_CQ_Original_Values_Trigger</members>
+		<members>contentnotetrigger</members>
 		<name>ApexTrigger</name>
 	</types>
 	<types>
@@ -976,6 +979,7 @@
 		<members>Order_Line_Item__c.HRCSVC20_Extended_Price__c</members>
 		<members>Order_Line_Item__c.HRCSVC20_Unit_Price__c</members>
 		<members>Order_Line_Item__c.HRCSVC21_Error_Message__c</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_Complaint_Attachment_Info__c</members>
 		<name>CustomField</name>
 	</types>
 	<types>
@@ -987,6 +991,7 @@
 		<members>HRCSVC20_CQ_backup_success_message</members>
 		<members>HRCSVC20_product_availability_success_message</members>
 		<members>HRCSVC20_product_nonavailability_error_message</members>
+		<members>HRCSVC_Complaint_Qual_Attachments_URL</members>
 		<name>CustomLabel</name>
 	</types>
 	<types>
