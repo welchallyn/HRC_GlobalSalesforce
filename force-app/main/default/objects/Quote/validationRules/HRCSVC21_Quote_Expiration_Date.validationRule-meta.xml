@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC21_Quote_Expiration_Date</fullName>
+    <active>true</active>
+    <description>This validation rule evaluates that the Quote cannot be edited after 60 days of the creation and new quote must be created.</description>
+    <errorConditionFormula>AND
+(NOT($Setup.HRCFSL_Org_Exception_Rule__c.HRCFSL_Validation_Rule__c ),
+ExpirationDate&lt;TODAY()+60, ISCHANGED(LastModifiedDate))</errorConditionFormula>
+    <errorMessage>The quote is expired and you can no longer update the header or line items. If additional changes are needed you must create a new quote</errorMessage>
+</ValidationRule>

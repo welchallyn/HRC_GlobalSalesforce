@@ -370,6 +370,31 @@
     <platformActionList>
         <actionListContext>Record</actionListContext>
         <platformActionListItems>
+            <actionName>Case.HRCSVC_Manage_Complaint</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>1</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>FeedItem.ContentPost</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>2</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>FeedItem.TextPost</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>0</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>Case.HRCSVC_Create_Work_Order</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>3</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>Case.HRCSVC_Create_Return_Order</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>4</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
             <actionName>Case.HRCSVC_Create_Parts_Order</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>5</sortOrder>
@@ -388,31 +413,6 @@
             <actionName>Log_a_call_WA</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>8</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>FeedItem.TextPost</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>0</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>Case.HRCSVC_Manage_Complaint</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>1</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>FeedItem.ContentPost</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>2</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>Case.HRCSVC_Create_Work_Order</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>3</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>Case.HRCSVC_Create_Return_Order</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>4</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>New_Task_Standard</actionName>
@@ -465,54 +465,9 @@
             <sortOrder>18</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>Delete</actionName>
-            <actionType>StandardButton</actionType>
-            <sortOrder>26</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>ChangeOwnerOne</actionName>
-            <actionType>StandardButton</actionType>
-            <sortOrder>27</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>Case.HRCSVC_Create_Cases_for_Child_Assets</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>29</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>Case.HRCSVC_Add_Labor_Lines</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>30</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>New_Task_Master</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>31</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>Clone</actionName>
-            <actionType>StandardButton</actionType>
-            <sortOrder>32</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>Case.HRCSVC_New_Reference</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>33</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
             <actionName>PrintableView</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>19</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>Case.HRCSVC_Create_Order_and_Order_Line_Item</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>34</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>Case.HRCSVC_Create_Temporary_Account</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>35</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>ChangeRecordType</actionName>
@@ -545,9 +500,59 @@
             <sortOrder>25</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
+            <actionName>Delete</actionName>
+            <actionType>StandardButton</actionType>
+            <sortOrder>26</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>ChangeOwnerOne</actionName>
+            <actionType>StandardButton</actionType>
+            <sortOrder>27</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
             <actionName>Share</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>28</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>Case.HRCSVC_Create_Cases_for_Child_Assets</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>29</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>Case.HRCSVC_Add_Labor_Lines</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>30</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>New_Task_Master</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>31</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>Clone</actionName>
+            <actionType>StandardButton</actionType>
+            <sortOrder>32</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>Case.HRCSVC_New_Reference</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>33</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>Case.HRCSVC_Create_Order_and_Order_Line_Item</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>34</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>Case.HRCSVC_Create_Temporary_Account</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>35</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>Case.Create_Quote</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>36</sortOrder>
         </platformActionListItems>
     </platformActionList>
     <quickActionList>
