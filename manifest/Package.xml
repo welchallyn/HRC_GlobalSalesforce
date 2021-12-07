@@ -970,6 +970,10 @@
 		<members>Quote.HRCSVC21_Order_Type__c</members>
 		<members>Quote.HRCSVC21_Quote_Type__c</members>
 		<members>Order__c.HRCSVC21_Quote__c</members>
+		<members>Order__c.HRCSVC20_Business_Unit__c</members>
+		<members>Order__c.HRCSVC20_Pricing_Processing_Version__c</members>
+		<members>Order_Line_Item__c.HRCSVC20_Customer_Price__c</members>
+		<members>Order_Line_Item__c.HRCSVC20_Extended_Price__c</members>
 		<name>CustomField</name>
 	</types>
 	<types>
