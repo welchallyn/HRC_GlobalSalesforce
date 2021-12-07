@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC21_Quote_Type__c</fullName>
+    <description>Created as part of story SE-2798 for Quote creation</description>
+    <externalId>false</externalId>
+    <label>Quote Type</label>
+    <required>true</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Parts Quote</fullName>
+                <default>false</default>
+                <label>Parts Quote</label>
+            </value>
+            <value>
+                <fullName>Work Order Quote</fullName>
+                <default>false</default>
+                <label>Work Order Quote</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

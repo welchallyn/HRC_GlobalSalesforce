@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quote</fullName>
+    <active>true</active>
+    <businessProcess>Allen</businessProcess>
+    <label>Quote</label>
+    <picklistValues>
+        <picklist>ForecastCategoryName</picklist>
+        <values>
+            <fullName>Best Case</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Omitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pipeline</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LeadSource</picklist>
+        <values>
+            <fullName>Customer Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exhibits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Google Display%2FRetargeting%2FGeofencing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Google Search %28Ad Words%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inside Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SOM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technician</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>HCT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patient</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>
