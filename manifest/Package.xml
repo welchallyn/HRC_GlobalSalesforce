@@ -967,6 +967,9 @@
 		<members>Order__C.HRCSVC21_Error_Message__c</members>
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_Display_ETQ_Workflow__c</members>
 		<members>Order_Line_Item__c.HRCSVC20_Available_Quantity__c</members>
+		<members>Quote.HRCSVC21_Order_Type__c</members>
+		<members>Quote.HRCSVC21_Quote_Type__c</members>
+		<members>Order__c.HRCSVC21_Quote</members>
 		<name>CustomField</name>
 	</types>
 	<types>
@@ -1483,6 +1486,8 @@
 		<members>HRCSVC21_Order_Before_Save_Actions</members>
 		<!--<members>HRCSVC21_Complaint_Qualification_Before_Save_Actions</members>-->
 		<members>HRCSVC21_Get_Line_Item_quantity_from_Inventory</members>
+		<members>HRCSVC21_Create Quote From Case</members>
+		<members>HRCSVC21 Create Parts Order From Quote</members>
 		<name>Flow</name>
 	</types>
 	<types>
@@ -1630,6 +1635,7 @@
 		<members>HRCSVC21_Parts_Order_Integration_Details__mdt-Parts Order Integration Details Layout</members>
 		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt-HRCSVC21 Case Local Country Contact Info Layout</members>
 		<members>Quote-Quote Layout</members>
+		<members>QuoteLineItem-Quote Line Item Layout</members>
 		<name>Layout</name>
 	</types>
 	<types>
@@ -1789,6 +1795,8 @@
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Translation_Candidate</members>-->
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Mark_as_Translated</members>
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Requires_Translation</members>
+		<members>Quote.Create_Parts_Order</members>
+		<members>Case.Create_Quote</members>
 		<name>QuickAction</name>
 	</types>
 	<!--
@@ -1846,6 +1854,7 @@
 		<members>Contact.INT_Own_Data</members>
 		<members>Contact.INT_Cegedim</members>
 		<members>HRCSVC20_CQ_Original_Values__c.HRCSVC21_CQ_Original</members>
+		<members>Opportunity.Quote</members>
 		<name>RecordType</name>
 	</types>
 	-->
@@ -2089,6 +2098,9 @@
 		<members>ServiceAppointment.HRCSVC21_Resolution_Reqd_On_Closure</members>
 		<members>ServiceAppointment.HRCSVC20_Test_Performed_Reqd_on_Closure</members>
 		<members>Case.HRCSVC21_Reqd_fields_on_CQ_check </members>
+		<members>Quote.HRCSVC21_Quote_Expiration_Date </members>
+		<members>Quote.HRCSVC21_Quote_Status_Accepted </members>
+		<members>QuoteLineItem.HRCSVC21_QuoteLineItem_ExpirationDate </members>
 		<name>ValidationRule</name>
 	</types>
 	<types>
