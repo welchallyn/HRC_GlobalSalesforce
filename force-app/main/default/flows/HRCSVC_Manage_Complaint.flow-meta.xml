@@ -2576,7 +2576,7 @@
             <targetReference>Get_Case</targetReference>
         </connector>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <variables>
         <description>Value from Related Asset Designed life field.</description>
         <name>Designedlifenew</name>

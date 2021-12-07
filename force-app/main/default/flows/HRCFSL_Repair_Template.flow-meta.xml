@@ -1147,7 +1147,6 @@
         <queriedFields>HRCSVC_Asset__c</queriedFields>
         <queriedFields>HRCSVC_Contact__c</queriedFields>
         <queriedFields>HRCSVC20_Complaint_Resolution__c</queriedFields>
-        <queriedFields>HRCSVC20_Describe_Cause_Troubleshooting__c</queriedFields>
         <queriedFields>HRCSVC20_Describe_Other_Condition__c</queriedFields>
         <sortField>CreatedDate</sortField>
         <sortOrder>Desc</sortOrder>
