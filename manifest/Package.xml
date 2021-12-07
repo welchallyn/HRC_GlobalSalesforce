@@ -921,14 +921,14 @@
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Instruction__c</members>
 		<members>Case.HRCSVC21_Age__c</members>
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_CQ_Creation_Duration_From_Case__c</members>
-		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Describe_Cause_Troubleshooting__c</members>
+		<!--<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Describe_Cause_Troubleshooting__c</members>-->
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC_Injury_or_Death__c</members>
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC_Condition__c</members>
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Describe_Other_Condition__c    </members>
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC_Occurrence_Location_Complaint__c</members>
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC_Individual_s_Outcome__c</members>
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC_Patient_Identifier_PersonImpacted__c</members>
-		<members>WorkOrder.HRCSVC20_Repair_Template_Question_3b__c</members>
+		<!--<members>WorkOrder.HRCSVC20_Repair_Template_Question_3b__c</members>-->
 		<members>WorkOrder.HRCSVC20_Repair_Template_Question_5a__c</members>
 		<members>Case.HRCSVC21_CQ_Required_fieldset__c</members>
 		<members>HRCSVC20_CQ_Original_Values__c.HRCSVC20_CQ_API_Name__c</members>
