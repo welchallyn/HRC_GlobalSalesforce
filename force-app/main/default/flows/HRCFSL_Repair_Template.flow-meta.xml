@@ -82,7 +82,7 @@
             <assignToReference>complaintQualification.HRCSVC_Injury_or_Death__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <stringValue>Blank</stringValue>
+                <stringValue>None</stringValue>
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -134,7 +134,7 @@
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>complaintQualification.HRCSVC_Resolution__c</assignToReference>
+            <assignToReference>complaintQualification.HRCSVC20_Complaint_Resolution__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <stringValue></stringValue>
@@ -264,7 +264,7 @@
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>complaintQualification.HRCSVC_Resolution__c</assignToReference>
+            <assignToReference>complaintQualification.HRCSVC20_Complaint_Resolution__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>WorkOrder_RepairTemplate_Info.HRCFSL_Repair_Template_Question_5__c</elementReference>
@@ -1337,10 +1337,9 @@
             <name>X1_Issue_covered_by_and_found_during_PM_or_BPI_PDI</name>
             <choiceReferences>Choice_Yes</choiceReferences>
             <choiceReferences>Choice_No</choiceReferences>
+            <choiceReferences>Choice_Question1_DefaultValue</choiceReferences>
             <dataType>String</dataType>
-            <defaultValue>
-                <elementReference>Choice_Question1_DefaultValue</elementReference>
-            </defaultValue>
+            <defaultSelectedChoiceReference>Choice_Question1_DefaultValue</defaultSelectedChoiceReference>
             <fieldText>1) Issue covered by and found during PM or BPI/PDI?</fieldText>
             <fieldType>RadioButtons</fieldType>
             <isRequired>true</isRequired>
