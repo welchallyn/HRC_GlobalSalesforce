@@ -55,6 +55,7 @@
 		<members>HRCSVC21_Quote_PDF_Extension</members>
 		<members>HRCSVC20_Quote_Create_PDF_Controller</members>
 		<members>HRCSVC20_Quote_Create_PDF_ControllerTest</members>
+		<members>HRCSVC21_InventoryCheckHandler</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
@@ -964,6 +965,8 @@
 		<members>Quote.HRCSVC21_Ship_to_location__c</members>
 		<members>Quote.HRCSVC21_Sold_to_location__c</members>
 		<members>Order__C.HRCSVC21_Error_Message__c</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_Display_ETQ_Workflow__c</members>
+		<members>Order_Line_Item__c.HRCSVC20_Available_Quantity__c</members>
 		<name>CustomField</name>
 	</types>
 	<types>
@@ -973,6 +976,8 @@
 		<members>HRCSVC_Minutes_For_Auto_SA</members>
 		<members>HRCSVC20_CQ_backup_error_message</members>
 		<members>HRCSVC20_CQ_backup_success_message</members>
+		<members>HRCSVC20_product_availability_success_message</members>
+		<members>HRCSVC20_product_nonavailability_error_message</members>
 		<name>CustomLabel</name>
 	</types>
 	<types>
@@ -1477,6 +1482,7 @@
 		<members>HRCFSL_Repair_Template_SF</members>
 		<members>HRCSVC21_Order_Before_Save_Actions</members>
 		<!--<members>HRCSVC21_Complaint_Qualification_Before_Save_Actions</members>-->
+		<members>HRCSVC21_Get_Line_Item_quantity_from_Inventory</members>
 		<name>Flow</name>
 	</types>
 	<types>
