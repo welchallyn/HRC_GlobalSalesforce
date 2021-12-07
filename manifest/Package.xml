@@ -2116,6 +2116,7 @@
 		<members>Quote.HRCSVC21_Quote_Expiration_Date </members>
 		<members>Quote.HRCSVC21_Quote_Status_Accepted </members>
 		<members>QuoteLineItem.HRCSVC21_QuoteLineItem_ExpirationDate </members>
+		<members>WorkOrder.HRCSVC20_fnc_on_post_rep_Reqd_On_Closure </members>
 		<name>ValidationRule</name>
 	</types>
 	<types>
