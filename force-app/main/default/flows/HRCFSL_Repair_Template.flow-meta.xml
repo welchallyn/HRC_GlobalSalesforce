@@ -178,7 +178,7 @@
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>complaintQualification.HRCSVC_Resolution__c</assignToReference>
+            <assignToReference>complaintQualification.HRCSVC20_Complaint_Resolution__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>X6_Resolution</elementReference>

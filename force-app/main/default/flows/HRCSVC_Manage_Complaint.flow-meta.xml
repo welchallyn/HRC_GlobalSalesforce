@@ -687,7 +687,7 @@
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>myComplaintQualification.HRCSVC20_Describe_Cause_Troubleshooting__c</assignToReference>
+            <assignToReference>myComplaintQualification.HRCSVC_Document_troubleshooting__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>Describe_Cause_Troubleshooting</elementReference>
@@ -2576,7 +2576,7 @@
             <targetReference>Get_Case</targetReference>
         </connector>
     </start>
-    <status>Active</status>
+    <status>Draft</status>
     <variables>
         <description>Value from Related Asset Designed life field.</description>
         <name>Designedlifenew</name>
