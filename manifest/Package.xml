@@ -969,7 +969,7 @@
 		<members>Order_Line_Item__c.HRCSVC20_Available_Quantity__c</members>
 		<members>Quote.HRCSVC21_Order_Type__c</members>
 		<members>Quote.HRCSVC21_Quote_Type__c</members>
-		<members>Order__c.HRCSVC21_Quote</members>
+		<members>Order__c.HRCSVC21_Quote__c</members>
 		<name>CustomField</name>
 	</types>
 	<types>
@@ -1486,8 +1486,8 @@
 		<members>HRCSVC21_Order_Before_Save_Actions</members>
 		<!--<members>HRCSVC21_Complaint_Qualification_Before_Save_Actions</members>-->
 		<members>HRCSVC21_Get_Line_Item_quantity_from_Inventory</members>
-		<members>HRCSVC21_Create Quote From Case</members>
-		<members>HRCSVC21 Create Parts Order From Quote</members>
+		<members>HRCSVC21_Create_Quote_From_Case</members>
+		<members>HRCSVC21_Create_Parts_Order_From_Quote</members>
 		<name>Flow</name>
 	</types>
 	<types>
