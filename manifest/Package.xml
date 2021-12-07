@@ -1859,6 +1859,10 @@
 	</types>
 	-->
 	<types>
+		<members>Opportunity.Quote</members>
+		<name>RecordType</name>
+	</types>
+	<types>
 		<!--<members>CongaReports/Distinct_Quoted_Parts_9pa</members>-->
 		<members>CongaReports/Location_1MK</members>
 		<members>CongaReports/Quoted_Parts_For_Work_Orders_Multiple_P9V</members>
