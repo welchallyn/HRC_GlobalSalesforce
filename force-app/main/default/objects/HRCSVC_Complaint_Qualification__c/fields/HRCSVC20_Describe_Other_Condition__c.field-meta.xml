@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>HRCSVC_Document_troubleshooting__c</fullName>
-    <description>SE-163 - From existing repair template</description>
+    <fullName>HRCSVC20_Describe_Other_Condition__c</fullName>
     <externalId>false</externalId>
-    <label>Describe Cause, Troubleshooting</label>
+    <label>Describe Other Condition</label>
     <length>255</length>
     <required>false</required>
-    <trackHistory>true</trackHistory>
+    <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
     <type>Text</type>
     <unique>false</unique>

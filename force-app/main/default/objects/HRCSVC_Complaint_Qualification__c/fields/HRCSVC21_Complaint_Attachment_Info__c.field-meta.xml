@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>HRCSVC_Document_troubleshooting__c</fullName>
-    <description>SE-163 - From existing repair template</description>
+    <fullName>HRCSVC21_Complaint_Attachment_Info__c</fullName>
+    <description>This field will hold a concatenated list of CQ attachments which will be read by Mulesoft and push into ETQ.</description>
     <externalId>false</externalId>
-    <label>Describe Cause, Troubleshooting</label>
+    <label>Complaint Attachment Info</label>
     <length>255</length>
     <required>false</required>
-    <trackHistory>true</trackHistory>
+    <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
     <type>Text</type>
     <unique>false</unique>
