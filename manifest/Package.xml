@@ -58,6 +58,9 @@
 		<members>HRCSVC21_InventoryCheckHandler</members>
 		<members>ContentNoteHandler</members>
 		<members>ContentNoteHandlerTest</members>
+		<members>HRCSVC21_Get_Pricing</members>
+		<members>HRCSVC21_OLI_Handler</members>
+		<members>HRCSVC21_OLI_Handler_Test</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
@@ -72,6 +75,7 @@
 		<members>HRCSVC_ContentVersionTrigger</members>
 		<members>HRCSVC21_CQ_Original_Values_Trigger</members>
 		<members>contentnotetrigger</members>
+		<members>HRCSVC21_OLI_Trigger</members>
 		<name>ApexTrigger</name>
 	</types>
 	<types>
@@ -992,6 +996,7 @@
 		<members>HRCSVC20_product_availability_success_message</members>
 		<members>HRCSVC20_product_nonavailability_error_message</members>
 		<members>HRCSVC_Complaint_Qual_Attachments_URL</members>
+		<members>Org_url</members>
 		<name>CustomLabel</name>
 	</types>
 	<types>
@@ -1499,6 +1504,7 @@
 		<members>HRCSVC21_Get_Line_Item_quantity_from_Inventory</members>
 		<members>HRCSVC21_Create_Quote_From_Case</members>
 		<members>HRCSVC21_Create_Parts_Order_From_Quote</members>
+		<members>HRCSVC21_Get_UnitPrice</members>
 		<name>Flow</name>
 	</types>
 	<types>
@@ -1808,6 +1814,7 @@
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Requires_Translation</members>
 		<members>Quote.Create_Parts_Order</members>
 		<members>Case.Create_Quote</members>
+		<members>Order_Line_Item__c.HRCSVC21_Get_Unit_Price</members>
 		<name>QuickAction</name>
 	</types>
 	<!--
