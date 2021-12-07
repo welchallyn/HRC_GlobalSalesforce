@@ -975,6 +975,7 @@
 		<!--<members>Order_Line_Item__c.HRCSVC20_Customer_Price__c</members>-->
 		<members>Order_Line_Item__c.HRCSVC20_Extended_Price__c</members>
 		<members>Order_Line_Item__c.HRCSVC20_Unit_Price__c</members>
+		<members>Order_Line_Item__c.HRCSVC21_Error_Message__c</members>
 		<name>CustomField</name>
 	</types>
 	<types>
