@@ -964,6 +964,7 @@
 		<members>Quote.HRCSVC21_Ship_to_location__c</members>
 		<members>Quote.HRCSVC21_Sold_to_location__c</members>
 		<members>Order__C.HRCSVC21_Error_Message__c</members>
+		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_Display_ETQ_Workflow__c</members>
 		<name>CustomField</name>
 	</types>
 	<types>
