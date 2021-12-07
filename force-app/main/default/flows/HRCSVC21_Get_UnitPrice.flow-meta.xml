@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Get_OLI_IDs</name>
+        <label>Get OLI IDs</label>
+        <locationX>317</locationX>
+        <locationY>9</locationY>
+        <actionName>HRCSVC21_OLI_Handler</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Record_Size</targetReference>
+        </connector>
+        <flowTransactionModel>Automatic</flowTransactionModel>
+        <inputParameters>
+            <name>oliId</name>
+            <value>
+                <elementReference>ids</elementReference>
+            </value>
+        </inputParameters>
+        <outputParameters>
+            <assignToReference>Message</assignToReference>
+            <name>output</name>
+        </outputParameters>
+    </actionCalls>
+    <apiVersion>53.0</apiVersion>
+    <decisions>
+        <name>Record_Size</name>
+        <label>Record Size</label>
+        <locationX>776</locationX>
+        <locationY>161</locationY>
+        <defaultConnector>
+            <targetReference>Get_OLI</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>no_Record_Selected</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Message</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Please select at least one record</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>choose_record</targetReference>
+            </connector>
+            <label>no Record Selected</label>
+        </rules>
+        <rules>
+            <name>Record_Processed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Message</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>a0J</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>screen_Navigate</targetReference>
+            </connector>
+            <label>Record Processed</label>
+        </rules>
+        <rules>
+            <name>more_Records</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Message</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Please select 50 or less records</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>too_much_record</targetReference>
+            </connector>
+            <label>more Records</label>
+        </rules>
+    </decisions>
+    <interviewLabel>getUnitPrice {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>GetUnitPrice</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordLookups>
+        <name>Get_OLI</name>
+        <label>Get OLI</label>
+        <locationX>659</locationX>
+        <locationY>264</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Error_Screen</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Message</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Order_Line_Item__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <screens>
+        <name>choose_record</name>
+        <label>choose record</label>
+        <locationX>767</locationX>
+        <locationY>367</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>onerecords</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;color: rgb(237, 34, 34);&quot;&gt;Please select at least one record.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;Click &lt;/span&gt;&lt;a href=&quot;https://hill-rom--capgemini.lightning.force.com/lightning/r/Order__c/{!OrderId}/view&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;color: rgb(0, 47, 255);&quot;&gt;here&lt;/a&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt; to return to the Order.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Error_Screen</name>
+        <label>Error Screen</label>
+        <locationX>622</locationX>
+        <locationY>426</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>WentWrong</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;color: rgb(202, 25, 25);&quot;&gt;One or more products failed to get price. Check the integration message on the Line Item for more details.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Click &lt;a href=&quot;{!$Label.Org_url}r/Order__c/{!Get_OLI.Order__c}/view&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt; to return to the Order.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>false</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>screen_Navigate</name>
+        <label>screen Navigate</label>
+        <locationX>396</locationX>
+        <locationY>311</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>navigation</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;color: rgb(57, 202, 78);&quot;&gt;Records are Processed.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Click &lt;a href=&quot;{!$Label.Org_url}r/Order__c/{!Message}/view&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt; to return to the Order.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>false</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>too_much_record</name>
+        <label>too much record</label>
+        <locationX>407</locationX>
+        <locationY>173</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>moreRecords</name>
+            <fieldText>&lt;p&gt;Please select 50 or less records!&lt;/p&gt;&lt;p&gt;Click &lt;a href=&quot;https://hill-rom--capgemini.lightning.force.com/lightning/r/Order__c/{!OrderId}/view&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt; to return to the Order.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>15</locationX>
+        <locationY>203</locationY>
+        <connector>
+            <targetReference>Get_OLI_IDs</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>collection of all selected Order Line Items</description>
+        <name>ids</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>ids1</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Order_Line_Item__c</objectType>
+    </variables>
+    <variables>
+        <name>Message</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>OrderId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

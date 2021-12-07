@@ -36,6 +36,36 @@
         <value>SUCCESSFULLY BACKED-UP CQ FIELDS FOR TRANSLATION</value>
     </labels>
     <labels>
+        <fullName>HRCSVC20_product_availability_success_message</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Product availability success message</shortDescription>
+        <value>Quantity is retrieved from JDE</value>
+    </labels>
+    <labels>
+        <fullName>HRCSVC20_product_nonavailability_error_message</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Product availability error message</shortDescription>
+        <value>Error!</value>
+    </labels>
+    <labels>
+        <fullName>HRCSVC21_Max_Order_Line_Count_for_selection</fullName>
+        <categories>Limit</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Max Order Line Count for selection</shortDescription>
+        <value>50</value>
+    </labels>
+    <labels>
+        <fullName>HRCSVC_Complaint_Qual_Attachments_URL</fullName>
+        <categories>URL</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HRCSVC Complaint Qual Attachments URL</shortDescription>
+        <value>https://hill-rom--capgemini.lightning.force.com/lightning/r/CombinedAttachment/COMPLAINT_QUALIFICATION_ID/related/CombinedAttachments/view</value>
+    </labels>
+    <labels>
         <fullName>HRCSVC_Minutes_For_Auto_SA</fullName>
         <language>en_US</language>
         <protected>false</protected>
@@ -190,6 +220,13 @@
         <protected>false</protected>
         <shortDescription>OpportunityNaming</shortDescription>
         <value>HRC Account Executive,HRC CCE,HRC Mobility Specialist,HRC Architectural Specialist,HRC Watchchild,HRC Contract Sales Director,HRC Mobility</value>
+    </labels>
+    <labels>
+        <fullName>Org_url</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Org url</shortDescription>
+        <value>https://hill-rom--capgemini.lightning.force.com/lightning/</value>
     </labels>
     <labels>
         <fullName>ProbabilityStartRanges</fullName>
@@ -590,42 +627,5 @@
         <protected>true</protected>
         <shortDescription>Value Label</shortDescription>
         <value>Value</value>
-    </labels>
-    <labels>
-        <fullName>HRCSVC20_product_availability_success_message</fullName>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>Product availability success message</shortDescription>
-        <value>Quantity is retrieved from JDE</value>
-    </labels>
-    <labels>
-        <fullName>HRCSVC20_product_nonavailability_error_message</fullName>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>Product availability error message</shortDescription>
-        <value>Error!</value>
-    </labels>
-    <labels>
-        <fullName>HRCSVC21_Max_Order_Line_Count_for_selection</fullName>
-        <categories>Limit</categories>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>Max Order Line Count for selection</shortDescription>
-        <value>50</value>
-    </labels>
-    <labels>
-        <fullName>HRCSVC_Complaint_Qual_Attachments_URL</fullName>
-        <categories>URL</categories>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>HRCSVC Complaint Qual Attachments URL</shortDescription>
-        <value>https://hill-rom--capgemini.lightning.force.com/lightning/r/CombinedAttachment/COMPLAINT_QUALIFICATION_ID/related/CombinedAttachments/view</value>
-    </labels>
-    <labels>
-        <fullName>Org_url</fullName>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>Org url</shortDescription>
-        <value>https://hill-rom--capgemini.lightning.force.com/lightning/</value>
     </labels>
 </CustomLabels>

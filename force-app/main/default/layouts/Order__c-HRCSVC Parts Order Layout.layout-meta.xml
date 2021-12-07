@@ -23,6 +23,10 @@
                 <behavior>Edit</behavior>
                 <field>HRCSVC_Entitlement__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>HRCSVC21_Quote__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -198,6 +202,10 @@
                 <behavior>Edit</behavior>
                 <field>HRCSVC_ERP_ID__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>HRCSVC21_Error_Message__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -216,7 +224,11 @@
         <detailHeading>true</detailHeading>
         <editHeading>false</editHeading>
         <label>Custom Links</label>
-        <layoutColumns/>
+        <layoutColumns>
+            <layoutItems>
+                <customLink>Get_SoldTo</customLink>
+            </layoutItems>
+        </layoutColumns>
         <layoutColumns/>
         <layoutColumns/>
         <style>CustomLinks</style>
@@ -250,18 +262,19 @@
         </platformActionListItems>
     </platformActionList>
     <relatedLists>
-        <customButtons>Get_Pricing</customButtons>
+        <customButtons>HRCSVC21_Get_Unit_Price</customButtons>
         <excludeButtons>MassChangeOwner</excludeButtons>
+        <excludeButtons>New</excludeButtons>
         <fields>NAME</fields>
         <fields>HRCSVC_Item_Description__c</fields>
-        <fields>Quantity__c</fields>
-        <fields>HRCSVC_Actual_Ship_Date__c</fields>
         <fields>Product__c</fields>
+        <fields>Quantity__c</fields>
+        <fields>HRCSVC20_Unit_Price__c</fields>
+        <fields>HRCSVC20_Available_Quantity__c</fields>
+        <fields>HRCSVC_Actual_Ship_Date__c</fields>
         <fields>HRCSVC_Requested_Date__c</fields>
-        <fields>HRCSVC_Quantity_Shipped__c</fields>
         <fields>HRCSVC_Promissed_Ship_Date__c</fields>
-        <fields>HRCSVC_Quantity_Back_Ordered__c</fields>
-        <fields>HRCSVC_Quantity_Canceled__c</fields>
+        <fields>HRCSVC21_Error_Message__c</fields>
         <relatedList>Order_Line_Item__c.Order__c</relatedList>
     </relatedLists>
     <relatedLists>
