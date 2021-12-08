@@ -1176,6 +1176,8 @@
 		<members>HRCSVC_Asset_Status_Mappings.TA</members>
 		<members>HRCFSL_Organization_Settings__mdt.HRCSVC20_Parts_Order_Types</members>
 		<members>HRCSVC21_Parts_Order_Integration_Details__mdt.HRCSVC21_Sold_To_Integration</members>
+		<members>HRCSVC21_Parts_Order_Integration_Details__mdt.HRCSVC21_Get_Unit_Price</members>
+		<members>HRCSVC21_Parts_Order_Integration_Details__mdt.HRCSVC21_Inventory</members>
 		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.AT_de_Care_Comm_Closure</members>
 		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.AT_de_Care_Comm_Comment</members>
 		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.AT_de_Care_Comm_Creation</members>
@@ -1494,8 +1496,8 @@
 		<members>HRCSVC_Incoming_Email_Actions</members>
 		<members>HRCSVC_Re_Open_Case_on_EtQ_Task_Received</members>
 		<members>HRCSVC_Update_Historical_Comments</members>
-		<members>HRCSVC20_Component_Swap</members>
-		<members>HRCSVC20_Consume_BOM_Item</members>
+		<!--<members>HRCSVC20_Component_Swap</members>
+		<members>HRCSVC20_Consume_BOM_Item</members>-->
 		<members>HRCFSL_Check_Entitlement_SF</members>
 		<members>HRCSVC20_Set_Carrier_based_on_Ship_to_Country_on_Parts_Order</members>
 		<members>HRCFSL_Repair_Template_SF</members>
@@ -1694,10 +1696,10 @@
 		<members>Remote_IE_Software_Support</members>
 		<name>PathAssistant</name>
 	</types>
-	<types>
+	<!--<types>
       <members>HRCSVC20_Can_cancel_WOs_generated_from_Maintenance_Plans</members>
       <name>CustomPermission</name>
-    </types>
+    </types>-->
 	<types>
 		<members>HRCFSL_Permissions</members>
 		<members>HRCFSL_Record_Type_Permission</members>
@@ -1814,7 +1816,6 @@
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Requires_Translation</members>
 		<members>Quote.Create_Parts_Order</members>
 		<members>Case.Create_Quote</members>
-		<members>Order_Line_Item__c.HRCSVC21_Get_Unit_Price</members>
 		<name>QuickAction</name>
 	</types>
 	<!--
@@ -2132,6 +2133,7 @@
 		<members>ReturnOrder.RMA_Form</members>
 		<members>WorkOrder.Estimate_Form</members>
 		<members>Quote.HRCSVC20_Generate_Quote_PDF</members>
+		<members>Order_Line_Item__c.HRCSVC21_Get_Unit_Price</members>
 		<name>WebLink</name>
 	</types>
 	<types>
