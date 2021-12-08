@@ -29,7 +29,6 @@ public class HRCSVC21_SoldToJDEIntegration{
         
 		Http http = new Http();
         HttpRequest request = new HttpRequest();
-        System.debug('----->'+mapEd.get('HRCSVC21_Sold_To_Integration').HRCSVC21_Client_Id__c);
         request.setHeader('clientid',(String) mapEd.get('HRCSVC21_Sold_To_Integration').HRCSVC21_Client_Id__c);
         request.setHeader('clientsecret', mapEd.get('HRCSVC21_Sold_To_Integration').HRCSVC21_Client_Secret__c);
         request.setHeader('X-Correlation-ID', mapEd.get('HRCSVC21_Sold_To_Integration').HRCSVC21_X_Correlation_ID__c);
@@ -42,21 +41,22 @@ public class HRCSVC21_SoldToJDEIntegration{
             
         HttpResponse res = http.send(request);
             String result=res.getBody();
+            system.debug(result);
             if(res.getStatusCode() == 200){               
                 System.debug('Recieved Body Data======>>>'+JSON.serializePretty(result));            
                 Map<String, String> mapOrd = (Map<String, String>) JSON.deserialize(result, Map<String, String>.class); //Deserializing using Map to fetch 'Sold To' value from the response body
                 String soldTo = mapOrd.get('soldToCustomerId');
-                System.debug('SoldToCustomer Response Value===>'+soldTo); 
                 Id SoldToCustomer = [Select Id FROM Location WHERE HRCFSL_Customer_ID__c = :soldTo LIMIT 1].Id; //Sold To customer Id returned from JDE integration needs to be matched on location customer Id
                 System.debug('SoldToCustomerId======>>>'+soldToCustomer);
                 order.HRCSVC20_Sold_To_Location__c = soldToCustomer;
-                if(order.HRCSVC21_Error_Message__c != ''){
-                    order.HRCSVC21_Error_Message__c = '';
+                if(order.HRCSVC21_Error_Message__c != Null){
+                    order.HRCSVC21_Error_Message__c = Null;
                 }
             }
             else{
-                Map<String, String> mapOrd = (Map<String, String>) JSON.deserialize(result, Map<String, String>.class);
-                String errorMessage = mapOrd.get('message');
+                Map<String, Object> mapJSON = (Map<String, Object>) JSON.deserializeUntyped(result);
+                Map<String, Object> errors = (Map<String, Object>)mapJSON.get('error');
+                String errorMessage = String.valueOf(errors.get('message'));
                 order.HRCSVC21_Error_Message__c = errorMessage;
             }
         
@@ -65,7 +65,11 @@ public class HRCSVC21_SoldToJDEIntegration{
         }
         Catch(exception e)
         {
-          System.debug('Error In Line'+e.getLineNumber()+'Cause-'+e.getCause()+e.getStackTraceString()); 
+           	Order__c order = new Order__c();
+            order = [Select Id, HRCSVC21_Error_Message__c FROM Order__c where Id = :OrderIds];
+            order.HRCSVC21_Error_Message__c = e.getMessage();
+          System.debug('Error In Line'+e.getLineNumber()+'Cause-'+e.getCause()+e.getStackTraceString());
+            update order;
         }
      }
 }
