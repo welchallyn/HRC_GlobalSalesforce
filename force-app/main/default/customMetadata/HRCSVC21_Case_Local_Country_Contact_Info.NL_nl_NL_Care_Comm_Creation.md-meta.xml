@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>NL nl_NL Care Comm (Creation)</label>
+    <protected>false</protected>
+    <values>
+        <field>HRCSVC21_Contact_Information__c</field>
+        <value xsi:type="xsd:string">(0031) 0347 32 35 32</value>
+    </values>
+    <values>
+        <field>HRCSVC21_Country__c</field>
+        <value xsi:type="xsd:string">NL</value>
+    </values>
+    <values>
+        <field>HRCSVC21_Language__c</field>
+        <value xsi:type="xsd:string">nl_NL</value>
+    </values>
+    <values>
+        <field>HRCSVC21_Protocol_Category__c</field>
+        <value xsi:type="xsd:string">Care Comm</value>
+    </values>
+    <values>
+        <field>HRCSVC21_Type__c</field>
+        <value xsi:type="xsd:string">Creation</value>
+    </values>
+</CustomMetadata>

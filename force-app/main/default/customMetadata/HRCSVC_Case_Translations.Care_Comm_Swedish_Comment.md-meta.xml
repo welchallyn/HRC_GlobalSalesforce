@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Care Comm Swedish Comment</label>
+    <protected>false</protected>
+    <values>
+        <field>HRCSVC_Email_Text__c</field>
+        <value xsi:type="xsd:string">Tack för att ni valt Hillrom som leverantör av sjukvårdsteknik. Det här är ett meddelande om att en ny kommentar har lagts till i ett ärende hos vårt kundtjänstteam. Vänligen se detaljer nedan.
+
+Ärende #: {!Get_Case_Details.CaseNumber}
+Status: {!Get_Case_Details.Status}
+Ärende Start datum: {!Get_Case_Details.CreatedDate}
+Kontakt: {!Dynamic_Contact}
+
+Platsnamn: {!Dynamic_Location}
+Serie nummer: {!Dynamic_Asset}
+Produkt: {!Dynamic_Product}
+Ämne: {!Get_Case_Details.Subject}
+Beskrivning: {!Get_Case_Details.Description}
+Ny kommentar - {!CaseCommentCreatedDateTime}
+{!CommentBody}
+
+Om ni har frågor, vänligen kontakta vårt kundtjänstteam:
+{!Local_Country_Contact_Info}
+
+{!Portal_Case_Signature}</value>
+    </values>
+    <values>
+        <field>HRCSVC_Language__c</field>
+        <value xsi:type="xsd:string">sv</value>
+    </values>
+    <values>
+        <field>HRCSVC_Protocol_Category__c</field>
+        <value xsi:type="xsd:string">Care Comm</value>
+    </values>
+    <values>
+        <field>HRCSVC_Subject__c</field>
+        <value xsi:type="xsd:string">Hillrom - Ny kommentar på Ärende #: {!Get_Case_Details.CaseNumber}</value>
+    </values>
+    <values>
+        <field>HRCSVC_Type__c</field>
+        <value xsi:type="xsd:string">Comment</value>
+    </values>
+</CustomMetadata>

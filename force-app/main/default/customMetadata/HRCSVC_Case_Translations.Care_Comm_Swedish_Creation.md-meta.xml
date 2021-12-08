@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <label>Care Comm Creation</label>
+    <label>Care Comm Swedish Creation</label>
     <protected>false</protected>
     <values>
         <field>HRCSVC_Email_Text__c</field>
-        <value xsi:type="xsd:string">Thank you for choosing Hillrom as your healthcare technology provider.   This is a notification that a case has been created with our Care Communications team.  Please find the case details below.
+        <value xsi:type="xsd:string">Tack för att ni valt Hillrom som leverantör av sjukvårdsteknik. Detta är ett meddelande om att ett ärende har skapats hos vårt kundtjänstteam. Vänligen se detaljer nedan.
 
-Case #: {!Get_Case_Details.CaseNumber}
+Ärende #: {!Get_Case_Details.CaseNumber}
 Status: {!Get_Case_Details.Status}
-Create Date: {!Get_Case_Details.CreatedDate}
-Contact: {!Dynamic_Contact}
+Ärende Start datum: {!Get_Case_Details.CreatedDate}
+Kontakt: {!Dynamic_Contact}
 
-Location Name: {!Dynamic_Location}
-Asset Name: {!Dynamic_Asset}
-Product: {!Dynamic_Product}
-Subject: {!Get_Case_Details.Subject}
-Description: {!Get_Case_Details.Description}
+Platsnamn: {!Dynamic_Location}
+Serie nummer: {!Dynamic_Asset}
+Produkt: {!Dynamic_Product}
+Ämne: {!Get_Case_Details.Subject}
+Beskrivning: {!Get_Case_Details.Description}
 
-If you have questions, please contact our technical support teams.
+Om ni har frågor, vänligen kontakta vårt kundtjänstteam:
 {!Local_Country_Contact_Info}
 
 {!Portal_Case_Signature}</value>
     </values>
     <values>
         <field>HRCSVC_Language__c</field>
-        <value xsi:type="xsd:string">en_US</value>
+        <value xsi:type="xsd:string">sv</value>
     </values>
     <values>
         <field>HRCSVC_Protocol_Category__c</field>
@@ -32,7 +32,7 @@ If you have questions, please contact our technical support teams.
     </values>
     <values>
         <field>HRCSVC_Subject__c</field>
-        <value xsi:type="xsd:string">Hillrom - New Case #: {!Get_Case_Details.CaseNumber}</value>
+        <value xsi:type="xsd:string">Hillrom – Nytt Ärende #: {!Get_Case_Details.CaseNumber}</value>
     </values>
     <values>
         <field>HRCSVC_Type__c</field>

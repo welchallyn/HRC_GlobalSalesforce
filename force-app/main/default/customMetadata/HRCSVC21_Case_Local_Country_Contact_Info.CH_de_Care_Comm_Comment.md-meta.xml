@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>CH de Care Comm (Comment)</label>
+    <protected>false</protected>
+    <values>
+        <field>HRCSVC21_Contact_Information__c</field>
+        <value xsi:type="xsd:string">+41 848 811530</value>
+    </values>
+    <values>
+        <field>HRCSVC21_Country__c</field>
+        <value xsi:type="xsd:string">CH</value>
+    </values>
+    <values>
+        <field>HRCSVC21_Language__c</field>
+        <value xsi:type="xsd:string">de</value>
+    </values>
+    <values>
+        <field>HRCSVC21_Protocol_Category__c</field>
+        <value xsi:type="xsd:string">Care Comm</value>
+    </values>
+    <values>
+        <field>HRCSVC21_Type__c</field>
+        <value xsi:type="xsd:string">Comment</value>
+    </values>
+</CustomMetadata>
