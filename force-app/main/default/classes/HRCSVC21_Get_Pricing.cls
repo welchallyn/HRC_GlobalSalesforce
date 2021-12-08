@@ -26,7 +26,7 @@ public class HRCSVC21_Get_Pricing {
             }  if(!OliList.isEmpty()){
                 update OliList;
                 // Order_Line_Item__c oli=[select Order__c from Order_Line_Item__c where id=]
-                if(Message.size() == 0){
+                if(Message.size() == 0){ //Only pass the order Id if there were no errors
                     Message.add(orderID);
                 }            
                 system.debug('Message'+Message);   
@@ -74,11 +74,12 @@ public class HRCSVC21_Get_Pricing {
                 }              
             }
             else{
+                system.debug('Error Payload: ' + result);
                 Map<String, Object> mapJSON = (Map<String, Object>) JSON.deserializeUntyped(result);
                 Map<String, Object> errors = (Map<String, Object>)mapJSON.get('error');
                 String errorMessage = String.valueOf(errors.get('message'));
                 oli.HRCSVC21_Error_Message__c = errorMessage;
-                Message.add(oli.Id);
+                Message.add(oli.Id); //For errors add the line item Id to grab the order Id in pricing flow.
             }
             return oli;
             // oli.HRCSVC20_Unit_Price__c=decimal.valueOf('200');
@@ -87,7 +88,8 @@ public class HRCSVC21_Get_Pricing {
                 }*/
         }catch(Exception e){
             system.debug('error'+e.getMessage()+e.getLineNumber()+e.getStackTraceString());
-            oli=null;
+            oli = [Select Id, HRCSVC21_Error_Message__c FROM Order_Line_Item__c WHERE id = :oliId];
+        	oli.HRCSVC21_Error_Message__c = e.getMessage(); //update error message field with exception message
             return oli;
         } 
         
