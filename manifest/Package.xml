@@ -1650,7 +1650,7 @@
 		<members>HRCSVC_ST_Product_Unavailability__c-Service Territory Product Unavailability Layout</members>
 		<members>HRCSVC20_CQ_Original_Values__c-CQ_Original_Values Layout</members>
 		<members>HRCSVC21_Parts_Order_Integration_Details__mdt-Parts Order Integration Details Layout</members>
-		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt-HRCSVC21 Case Local Country Contact Info Layout</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt-HRCSVC Case Local Country Contact Info Layout</members>
 		<members>Quote-Quote Layout</members>
 		<members>QuoteLineItem-Quote Line Item Layout</members>
 		<name>Layout</name>
@@ -1814,7 +1814,6 @@
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC20_Requires_Translation</members>
 		<members>Quote.Create_Parts_Order</members>
 		<members>Case.Create_Quote</members>
-		<members>Order_Line_Item__c.HRCSVC21_Get_Unit_Price</members>
 		<name>QuickAction</name>
 	</types>
 	<!--
@@ -2132,6 +2131,7 @@
 		<members>ReturnOrder.RMA_Form</members>
 		<members>WorkOrder.Estimate_Form</members>
 		<members>Quote.HRCSVC20_Generate_Quote_PDF</members>
+		<members>Order_Line_Item__c.HRCSVC21_Get_Unit_Price</members>
 		<name>WebLink</name>
 	</types>
 	<types>
