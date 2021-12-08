@@ -984,6 +984,7 @@
 		<members>Order_Line_Item__c.HRCSVC20_Unit_Price__c</members>
 		<members>Order_Line_Item__c.HRCSVC21_Error_Message__c</members>
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_Complaint_Attachment_Info__c</members>
+		<members>Workorder.HRCSVC21_Has_CQ__c</members>
 		<name>CustomField</name>
 	</types>
 	<types>
@@ -1507,6 +1508,7 @@
 		<members>HRCSVC21_Create_Quote_From_Case</members>
 		<members>HRCSVC21_Create_Parts_Order_From_Quote</members>
 		<members>HRCSVC21_Get_UnitPrice</members>
+		<members>HRCFSL_Capture_Signature</members>
 		<name>Flow</name>
 	</types>
 	<types>
@@ -1655,6 +1657,7 @@
 		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt-HRCSVC21 Case Local Country Contact Info Layout</members>
 		<members>Quote-Quote Layout</members>
 		<members>QuoteLineItem-Quote Line Item Layout</members>
+		<members>Opportunity-Opportunity created from Case</members>
 		<name>Layout</name>
 	</types>
 	<types>
@@ -2140,6 +2143,10 @@
         <members>businesslogo</members>
         <name>StaticResource</name>
     </types>
+	<types>
+    <members>Opportunity.Quote</members>
+    <name>BusinessProcess</name>
+	</types>
 	<types>
 		<members>Account.HRCSVC_Email_Alert_for_Account_Status_Change_to_Active</members>
 		<members>Case.HRCSVC_Case_SLA_Escalation_Notifications</members>
