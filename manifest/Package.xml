@@ -1496,8 +1496,8 @@
 		<members>HRCSVC_Incoming_Email_Actions</members>
 		<members>HRCSVC_Re_Open_Case_on_EtQ_Task_Received</members>
 		<members>HRCSVC_Update_Historical_Comments</members>
-		<members>HRCSVC20_Component_Swap</members>
-		<members>HRCSVC20_Consume_BOM_Item</members>
+		<!--<members>HRCSVC20_Component_Swap</members>
+		<members>HRCSVC20_Consume_BOM_Item</members>-->
 		<members>HRCFSL_Check_Entitlement_SF</members>
 		<members>HRCSVC20_Set_Carrier_based_on_Ship_to_Country_on_Parts_Order</members>
 		<members>HRCFSL_Repair_Template_SF</members>
@@ -1696,10 +1696,10 @@
 		<members>Remote_IE_Software_Support</members>
 		<name>PathAssistant</name>
 	</types>
-	<types>
+	<!--<types>
       <members>HRCSVC20_Can_cancel_WOs_generated_from_Maintenance_Plans</members>
       <name>CustomPermission</name>
-    </types>
+    </types>-->
 	<types>
 		<members>HRCFSL_Permissions</members>
 		<members>HRCFSL_Record_Type_Permission</members>
