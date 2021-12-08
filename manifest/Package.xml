@@ -1176,6 +1176,8 @@
 		<members>HRCSVC_Asset_Status_Mappings.TA</members>
 		<members>HRCFSL_Organization_Settings__mdt.HRCSVC20_Parts_Order_Types</members>
 		<members>HRCSVC21_Parts_Order_Integration_Details__mdt.HRCSVC21_Sold_To_Integration</members>
+		<members>HRCSVC21_Parts_Order_Integration_Details__mdt.HRCSVC21_Get_Unit_Price</members>
+		<members>HRCSVC21_Parts_Order_Integration_Details__mdt.HRCSVC21_Inventory</members>
 		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.AT_de_Care_Comm_Closure</members>
 		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.AT_de_Care_Comm_Comment</members>
 		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.AT_de_Care_Comm_Creation</members>
