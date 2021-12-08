@@ -250,21 +250,6 @@
         </platformActionListItems>
     </platformActionList>
     <relatedLists>
-        <customButtons>Get_Pricing</customButtons>
-        <excludeButtons>MassChangeOwner</excludeButtons>
-        <fields>NAME</fields>
-        <fields>HRCSVC_Item_Description__c</fields>
-        <fields>Quantity__c</fields>
-        <fields>HRCSVC_Actual_Ship_Date__c</fields>
-        <fields>Product__c</fields>
-        <fields>HRCSVC_Requested_Date__c</fields>
-        <fields>HRCSVC_Quantity_Shipped__c</fields>
-        <fields>HRCSVC_Promissed_Ship_Date__c</fields>
-        <fields>HRCSVC_Quantity_Back_Ordered__c</fields>
-        <fields>HRCSVC_Quantity_Canceled__c</fields>
-        <relatedList>Order_Line_Item__c.Order__c</relatedList>
-    </relatedLists>
-    <relatedLists>
         <relatedList>RelatedEntityHistoryList</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
