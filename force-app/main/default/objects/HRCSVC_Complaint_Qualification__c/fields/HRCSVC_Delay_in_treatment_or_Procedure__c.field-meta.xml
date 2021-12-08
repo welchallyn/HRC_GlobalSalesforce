@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>HRCSVC_Delay_in_treatment_or_Procedure__c</fullName>
     <externalId>false</externalId>
+    <inlineHelpText>If any delay in treatment or procedure occurred, enter details</inlineHelpText>
     <label>Delay in treatment or Procedure</label>
     <length>255</length>
     <required>false</required>
