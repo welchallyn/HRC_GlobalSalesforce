@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quote</fullName>
+    <isActive>true</isActive>
+    <values>
+        <fullName>1- Prospect</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>2- Qualify</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>3- Develop %26 Execute</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>4- Negotiate</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>5- Decision</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Active</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Assess</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Best Few</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Booked</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Building Awareness</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Cancelled</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Clinical Evaluation</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Close the Call</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Closed Lost</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Closed Won</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Closed Won %26 Optimize</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Commit</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Complete</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Confirm</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Confirmed Opportunity</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Contract Discussion</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Deal Won - Waiting for PO</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Decision</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Deliver %26 Respond</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Demonstrate Value</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Develop</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Develop %26 Execute</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Developing Opportunity</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Developing Opportunity %28RC%29</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Discovery</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Elevate SPH Importance</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Engineering %2F Quality</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Establish Need</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Evaluation Complete - Decision Pending</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Field</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Finalize</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Finalizing Close</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Finalizing Closure</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Full Contact</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Gaining Commitment</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Go Live and Optimize</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Identify</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Implement</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Lead</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Loss</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Lost</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Make the Sales Call</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Measure</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Negotiate</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Negotiate %26 Close</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Obtain Referral</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>On Hold</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Pipeline</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Planning</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Prepare for Sales Call</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Pricing Negotiation</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Product Evaluation</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Prospect</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Qualified Opportunity</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Qualified Prospect</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Qualify</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Qualifying</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Red Zone</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Schedule Sales Call</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Scheduled Evaluation</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Sell</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Strategy %26 Execution</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Strategy Development</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Strategy Execution</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Target</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Targeting</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Targets</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Unqualified Prospect</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Upside</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Won</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>
