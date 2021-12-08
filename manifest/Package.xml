@@ -1655,6 +1655,7 @@
 		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt-HRCSVC21 Case Local Country Contact Info Layout</members>
 		<members>Quote-Quote Layout</members>
 		<members>QuoteLineItem-Quote Line Item Layout</members>
+		<members>Opportunity-Opportunity created from Case</members>
 		<name>Layout</name>
 	</types>
 	<types>
