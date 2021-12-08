@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>HRCSVC_Medical_Treatment_or_Intervention__c</fullName>
     <externalId>false</externalId>
+    <inlineHelpText>What Medical Treatment/Intervention, if any, was Provided?</inlineHelpText>
     <label>Medical Treatment or Intervention</label>
     <length>255</length>
     <required>false</required>
