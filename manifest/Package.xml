@@ -1650,7 +1650,7 @@
 		<members>HRCSVC_ST_Product_Unavailability__c-Service Territory Product Unavailability Layout</members>
 		<members>HRCSVC20_CQ_Original_Values__c-CQ_Original_Values Layout</members>
 		<members>HRCSVC21_Parts_Order_Integration_Details__mdt-Parts Order Integration Details Layout</members>
-		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt-HRCSVC Case Local Country Contact Info Layout</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt-HRCSVC21 Case Local Country Contact Info Layout</members>
 		<members>Quote-Quote Layout</members>
 		<members>QuoteLineItem-Quote Line Item Layout</members>
 		<name>Layout</name>
