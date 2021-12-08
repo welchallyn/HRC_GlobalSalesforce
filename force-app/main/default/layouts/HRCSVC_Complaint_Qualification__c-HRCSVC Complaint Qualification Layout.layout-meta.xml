@@ -48,10 +48,6 @@
                 <behavior>Required</behavior>
                 <field>HRCSVC_Injury_or_Death__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Required</behavior>
-                <field>HRCSVC_Condition__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -81,6 +77,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>HRCSVC_Document_troubleshooting__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Required</behavior>
+                <field>HRCSVC_Condition__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -128,10 +128,6 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>HRCSVC_Occurrence_Date__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>HRCSVC_Contact_Details__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>

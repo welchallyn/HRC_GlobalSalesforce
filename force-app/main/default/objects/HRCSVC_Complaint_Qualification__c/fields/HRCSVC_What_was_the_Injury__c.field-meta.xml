@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>HRCSVC_What_was_the_Injury__c</fullName>
     <externalId>false</externalId>
+    <inlineHelpText>What was the Injury/Medical Condition/Patient Involvement Reported?</inlineHelpText>
     <label>What was the Injury</label>
     <length>255</length>
     <required>false</required>
