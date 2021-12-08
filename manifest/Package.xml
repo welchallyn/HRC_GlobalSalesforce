@@ -2144,6 +2144,10 @@
         <name>StaticResource</name>
     </types>
 	<types>
+    <members>Opportunity.Quote</members>
+    <name>BusinessProcess</name>
+	</types>
+	<types>
 		<members>Account.HRCSVC_Email_Alert_for_Account_Status_Change_to_Active</members>
 		<members>Case.HRCSVC_Case_SLA_Escalation_Notifications</members>
 		<members>ServiceAppointment.Email_Alert_To_Escalation_Manager</members>
