@@ -50,7 +50,7 @@ tr.border_bottom td {
 <div class="footer">
  <div>
     <hr/>
-       <p align="center"><font face="Arial">800-445-3720 (Option 3, Option 1) &nbsp;&nbsp;&nbsp;&nbsp;www.hillrom.com &nbsp;&nbsp;&nbsp;&nbsp; carecommunicationssupport@hillrom.com
+       <p align="center"><font face="Arial">800-445-3720 &nbsp;&nbsp;&nbsp;&nbsp;www.hillrom.com &nbsp;&nbsp;&nbsp;&nbsp; carecommunicationssupport@hillrom.com
       </font></p>
     <hr/>
     <hr style="height:2px; border-width:0; color:black; background-color:black"/>
@@ -127,7 +127,7 @@ tr.border_bottom td {
         <td width="33%">
            <font face="Arial">
            For Questions / Correspondence Please Contact: <br/>
-           Hillrom Customer Service @ 800-445-3720, Option 3, Option 1<br/>
+           Hillrom Customer Service @ 800-445-3720<br/>
          <!--  Fax: 812-934-8189 <br/> -->
            Email:  carecommunicationssupport@hillrom.com
            </font>
@@ -203,7 +203,7 @@ tr.border_bottom td {
 <br/>
 
 <table border="0" width="100%" id="table7">
-    <tr> <td><font face="Arial">Applicable taxes will be calculated and billed at the time of invoicing</font></td></tr>
+    <tr> <td><font face="Arial">Applicable taxes will be calculated and billed at the time of invoicing.</font></td></tr>
 <tr>
  <!--<td><font face="Arial">
 Case# C#{Proposal no}-Proposal <br/>

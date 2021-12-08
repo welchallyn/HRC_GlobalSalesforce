@@ -236,6 +236,11 @@
     <platformActionList>
         <actionListContext>Record</actionListContext>
         <platformActionListItems>
+            <actionName>Order__c.HRCSVC_New_Part_Order_Line_Item</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>4</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
             <actionName>Edit</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>0</sortOrder>
@@ -255,14 +260,10 @@
             <actionType>StandardButton</actionType>
             <sortOrder>3</sortOrder>
         </platformActionListItems>
-        <platformActionListItems>
-            <actionName>Order__c.HRCSVC_New_Part_Order_Line_Item</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>4</sortOrder>
-        </platformActionListItems>
     </platformActionList>
     <relatedLists>
         <customButtons>HRCSVC21_Get_Unit_Price</customButtons>
+        <customButtons>Retrieve</customButtons>
         <excludeButtons>MassChangeOwner</excludeButtons>
         <excludeButtons>New</excludeButtons>
         <fields>NAME</fields>

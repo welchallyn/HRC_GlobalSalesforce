@@ -31,6 +31,12 @@
                 <default>false</default>
                 <label>Deceased</label>
             </value>
+            <value>
+                <fullName>Ongoing</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Ongoing</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

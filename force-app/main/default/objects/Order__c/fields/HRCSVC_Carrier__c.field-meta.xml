@@ -17,6 +17,11 @@
                 <default>false</default>
                 <label>FedEx</label>
             </value>
+            <value>
+                <fullName>Purolator</fullName>
+                <default>false</default>
+                <label>Purolator</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

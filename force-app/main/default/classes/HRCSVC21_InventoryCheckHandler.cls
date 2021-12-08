@@ -114,9 +114,9 @@ global class HRCSVC21_InventoryCheckHandler {
         request.setHeader('X-Correlation-ID', mapEd.get('HRCSVC21_Inventory').HRCSVC21_X_Correlation_ID__c);
         request.setHeader('Content-Type',mapEd.get('HRCSVC21_Inventory').HRCSVC21_Content_Type__c);
         String endpoint = mapEd.get('HRCSVC21_Inventory').HRCSVC21_URL__c+'?businessUnit=99635&processingVersion=HRC0005A&shipToEntityId=3200864&partsNumber=159964';
-  //      String endpoint = mapEd.get('HRCSVC21_Inventory').HRCSVC21_URL__c+'?shipToEntityId='+oli.Order__r.HRCSVC_Ship_To_Location__r.HRCFSL_Customer_ID__c+'&businessUnit='+oli.Order__r.HRCSVC20_Business_Unit__c+'&processingVersion='+oli.Order__r.HRCSVC20_Pricing_Processing_Version__c+'&partsNumber='+oli.Product__r.HRCFSL_Parts_Number__c+'';
+      //  String endpoint = mapEd.get('HRCSVC21_Inventory').HRCSVC21_URL__c+'?shipToEntityId='+oli.Order__r.HRCSVC_Ship_To_Location__r.HRCFSL_Customer_ID__c+'&businessUnit='+oli.Order__r.HRCSVC20_Business_Unit__c+'&processingVersion='+oli.Order__r.HRCSVC20_Pricing_Processing_Version__c+'&partsNumber='+oli.Product__r.HRCFSL_Parts_Number__c+'';
         request.setEndpoint(endpoint);
-            system.debug('Endpoint' +endpoint);
+            system.debug('Endpoint-->'  +endpoint);
         request.setMethod(mapEd.get('HRCSVC21_Inventory').HRCSVC21_Method__c);
         request.setTimeout(120000); 
         
@@ -131,7 +131,11 @@ global class HRCSVC21_InventoryCheckHandler {
                 String AvailableQuantity = mapOrd.get('quantityAvailable');
                 System.debug('quantity available: ' + AvailableQuantity); 
                 System.debug('resultresult'+result);
-                oli.HRCSVC20_Available_Quantity__c = decimal.valueOf(AvailableQuantity);
+                Integer AvailQuantity = Integer.valueOf(AvailableQuantity);
+                if(AvailQuantity < 0){
+                    AvailQuantity = 0;
+                }
+                oli.HRCSVC20_Available_Quantity__c = AvailQuantity;
                 if(oli.HRCSVC21_Error_Message__c != NULL){
                     oli.HRCSVC21_Error_Message__c = NULL;
                 }
@@ -148,7 +152,9 @@ global class HRCSVC21_InventoryCheckHandler {
     catch(exception e)
     {
         system.debug('error- '+e.getMessage()+e.getStackTraceString());
-        return null;
+        oli = [Select Id, HRCSVC21_Error_Message__c FROM Order_Line_Item__c WHERE id = :oliIdnew];
+        oli.HRCSVC21_Error_Message__c = e.getMessage();
+        return oli;
     }
        
     } 

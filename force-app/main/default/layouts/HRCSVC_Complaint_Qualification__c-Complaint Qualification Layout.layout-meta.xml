@@ -13,10 +13,6 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>HRCSVC20_Describe_Cause_Troubleshooting__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>HRCSVC20_Describe_Other_Condition__c</field>
             </layoutItems>
             <layoutItems>

@@ -43,11 +43,6 @@
         <isRequired>false</isRequired>
     </displayedFields>
     <displayedFields>
-        <field>HRCSVC20_Describe_Cause_Troubleshooting__c</field>
-        <isFieldManaged>false</isFieldManaged>
-        <isRequired>false</isRequired>
-    </displayedFields>
-    <displayedFields>
         <field>HRCSVC_Describe_Malfunction_Event__c</field>
         <isFieldManaged>false</isFieldManaged>
         <isRequired>false</isRequired>

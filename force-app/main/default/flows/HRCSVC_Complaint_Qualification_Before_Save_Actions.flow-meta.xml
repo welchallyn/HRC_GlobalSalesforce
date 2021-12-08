@@ -203,6 +203,7 @@
             <label>Yes, Workflow Found</label>
         </rules>
     </decisions>
+    <description>Merged SE-2620 Changes.</description>
     <formulas>
         <name>AssetProductModel</name>
         <dataType>String</dataType>

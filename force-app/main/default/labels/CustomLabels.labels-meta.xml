@@ -63,7 +63,7 @@
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>HRCSVC Complaint Qual Attachments URL</shortDescription>
-        <value>https://hill-rom--capgemini.lightning.force.com/lightning/r/CombinedAttachment/COMPLAINT_QUALIFICATION_ID/related/CombinedAttachments/view</value>
+        <value>https://hill-rom--partial.lightning.force.com/lightning/r/CombinedAttachment/COMPLAINT_QUALIFICATION_ID/related/CombinedAttachments/view</value>
     </labels>
     <labels>
         <fullName>HRCSVC_Minutes_For_Auto_SA</fullName>

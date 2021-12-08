@@ -48,10 +48,6 @@
                 <behavior>Required</behavior>
                 <field>HRCSVC_Injury_or_Death__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Required</behavior>
-                <field>HRCSVC_Condition__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -72,7 +68,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>HRCSVC_ETQ_Workflow__c</field>
+                <field>HRCSVC21_Display_ETQ_Workflow__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -81,6 +77,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>HRCSVC_Document_troubleshooting__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Required</behavior>
+                <field>HRCSVC_Condition__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -131,10 +131,6 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>HRCSVC_Contact_Details__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>HRCSVC_Delay_in_treatment_or_Procedure__c</field>
             </layoutItems>
         </layoutColumns>
@@ -156,7 +152,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>HRCSVC_Date_of_the_Event__c</field>
+                <field>HRCSVC_Individual_s_Outcome__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -166,7 +162,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>HRCSVC_Individual_s_Outcome__c</field>
+                <field>HRCSVC_Date_of_the_Event__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
@@ -183,11 +179,11 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>HRCSVC_Cause_of_death_if_known__c</field>
+                <field>HRCSVC_Is_the_date_of_the_death_known__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>HRCSVC_Is_the_date_of_the_death_known__c</field>
+                <field>HRCSVC_Cause_of_death_if_known__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -218,7 +214,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>HRCSVC_Weight_unit_of_measure__c</field>
+                <field>HRCSVC_Weight__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -232,7 +228,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>HRCSVC_Weight__c</field>
+                <field>HRCSVC_Weight_unit_of_measure__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
@@ -249,11 +245,11 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>HRCSVC20_Complaint_Resolution__c</field>
+                <field>HRCSVC_Test_performed_per_service_manual__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>HRCSVC_Test_performed_per_service_manual__c</field>
+                <field>HRCSVC20_Complaint_Resolution__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -415,7 +411,12 @@
                 <field>HRCSVC_Problem__c</field>
             </layoutItems>
         </layoutColumns>
-        <layoutColumns/>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>HRCSVC21_Complaint_Attachment_Info__c</field>
+            </layoutItems>
+        </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
     <layoutSections>

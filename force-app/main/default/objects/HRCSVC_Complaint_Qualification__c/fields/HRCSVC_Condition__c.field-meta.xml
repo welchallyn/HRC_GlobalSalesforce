@@ -68,6 +68,32 @@
                 <label>QA/RA Use Only</label>
             </value>
             <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Emergency Code/ Patient Deterioration/ Adverse Event</fullName>
+                <default>false</default>
+                <label>Emergency Code/ Patient Deterioration/ Adverse Event</label>
+            </value>
+            <value>
+                <fullName>Falling of Patient or Caregiver</fullName>
+                <default>false</default>
+                <label>Falling of Patient or Caregiver</label>
+            </value>
+            <value>
+                <fullName>Unintended Movement of Patient During Use of the Device</fullName>
+                <default>false</default>
+                <label>Unintended Movement of Patient During Use of the Device</label>
+            </value>
+            <value>
+                <fullName>Blank</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Blank</label>
+            </value>
+            <value>
                 <fullName>Delayed Prolonged Diagnosis/ Treatment/ Hospitalization</fullName>
                 <default>false</default>
                 <isActive>false</isActive>
