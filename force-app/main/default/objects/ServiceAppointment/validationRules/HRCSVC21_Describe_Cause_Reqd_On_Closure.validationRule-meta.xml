@@ -5,6 +5,7 @@
     <errorConditionFormula>AND(
 NOT($Setup.HRCFSL_Org_Exception_Rule__c.HRCFSL_Validation_Rule__c),
 ISPICKVAL(Status, &apos;Completed&apos;),
+HRCFSL_Work_Order__r.HRCSVC21_Has_CQ__c =true,
 ISBLANK(  HRCFSL_Work_Order__r.HRCFSL_Repair_Template_Question_3__c ) )</errorConditionFormula>
     <errorMessage>You cannot close a workorder until the Document Troubleshooting field on the repair template has been filled in.</errorMessage>
 </ValidationRule>

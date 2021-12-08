@@ -4,6 +4,7 @@
     <active>true</active>
     <errorConditionFormula>AND(
 NOT($Setup.HRCFSL_Org_Exception_Rule__c.HRCFSL_Validation_Rule__c),
+HRCFSL_Work_Order__r.HRCSVC21_Has_CQ__c =true,
 ISPICKVAL(Status, &apos;Completed&apos;),
 ISPICKVAL(HRCFSL_Work_Order__r.HRCFSL_Repair_Template_Question_4A__c , &apos;&apos;)  
 )</errorConditionFormula>
