@@ -14,10 +14,10 @@
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>OLIVar.HRCSVC_Item_Description__c</assignToReference>
+            <assignToReference>OLIVar.Item_Description__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Loop.Product2.Description</elementReference>
+                <elementReference>Loop.Description</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -112,6 +112,13 @@
                     <stringValue>Accepted</stringValue>
                 </rightValue>
             </conditions>
+            <conditions>
+                <leftValueReference>ExpirationDateValidation</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
             <connector>
                 <targetReference>Get_Quote_line_Item_records</targetReference>
             </connector>
@@ -140,6 +147,11 @@
         <picklistField>Status</picklistField>
         <picklistObject>Quote</picklistObject>
     </dynamicChoiceSets>
+    <formulas>
+        <name>ExpirationDateValidation</name>
+        <dataType>Boolean</dataType>
+        <expression>IF({!CheckQuoteStatus.ExpirationDate}&gt;{!$Flow.CurrentDate}+60,true,false)</expression>
+    </formulas>
     <interviewLabel>HRCSVC21 Create Parts Order From Quote {!$Flow.CurrentDateTime}</interviewLabel>
     <label>HRCSVC21 Create Parts Order From Quote</label>
     <loops>
@@ -367,6 +379,31 @@
             <name>Fault_Screen</name>
             <fieldText>&lt;p&gt;&lt;b&gt;Please check the quote status&lt;/b&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>CheckQuoteStatus.Status</leftValueReference>
+                    <operator>NotEqualTo</operator>
+                    <rightValue>
+                        <stringValue>Accepted</stringValue>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
+        </fields>
+        <fields>
+            <name>ExpirationDatecheck</name>
+            <fieldText>&lt;p&gt;The Quote was expired. &lt;/p&gt;&lt;p&gt;You cannot create Parts Order&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>ExpirationDateValidation</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <booleanValue>true</booleanValue>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>true</showHeader>

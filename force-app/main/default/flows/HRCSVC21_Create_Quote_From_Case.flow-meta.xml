@@ -4,8 +4,8 @@
     <decisions>
         <name>CheckPricebook</name>
         <label>CheckPricebook</label>
-        <locationX>575</locationX>
-        <locationY>458</locationY>
+        <locationX>182</locationX>
+        <locationY>398</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>PricebookNotNull</name>
@@ -18,7 +18,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Create_Opportunity</targetReference>
+                <targetReference>RecordType</targetReference>
             </connector>
             <label>PricebookNotNull</label>
         </rules>
@@ -104,7 +104,7 @@ TEXT({!GetCaserecords.HRCSVC_Location__r.HRCFSL_Country__c}) +&apos; &apos; +{!$
     <processMetadataValues>
         <name>CanvasMode</name>
         <value>
-            <stringValue>FREE_FORM_CANVAS</stringValue>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
         </value>
     </processMetadataValues>
     <processMetadataValues>
@@ -117,8 +117,8 @@ TEXT({!GetCaserecords.HRCSVC_Location__r.HRCFSL_Country__c}) +&apos; &apos; +{!$
     <recordCreates>
         <name>Create_Opportunity</name>
         <label>Create Opportunity</label>
-        <locationX>584</locationX>
-        <locationY>662</locationY>
+        <locationX>50</locationX>
+        <locationY>638</locationY>
         <connector>
             <targetReference>Create_Quote_Fields</targetReference>
         </connector>
@@ -153,6 +153,12 @@ TEXT({!GetCaserecords.HRCSVC_Location__r.HRCFSL_Country__c}) +&apos; &apos; +{!$
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <elementReference>Quoterecordtype</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>StageName</field>
             <value>
                 <elementReference>Stage_Name</elementReference>
@@ -164,8 +170,8 @@ TEXT({!GetCaserecords.HRCSVC_Location__r.HRCFSL_Country__c}) +&apos; &apos; +{!$
     <recordCreates>
         <name>Create_Quote_Fields</name>
         <label>Create Quote Fields</label>
-        <locationX>584</locationX>
-        <locationY>782</locationY>
+        <locationX>50</locationX>
+        <locationY>758</locationY>
         <assignRecordIdToReference>Quote</assignRecordIdToReference>
         <connector>
             <targetReference>Redirect_to_Quote_Detail_Page</targetReference>
@@ -223,8 +229,8 @@ TEXT({!GetCaserecords.HRCSVC_Location__r.HRCFSL_Country__c}) +&apos; &apos; +{!$
     <recordLookups>
         <name>GetCaserecords</name>
         <label>GetCaserecords</label>
-        <locationX>584</locationX>
-        <locationY>206</locationY>
+        <locationX>182</locationX>
+        <locationY>158</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>GetPricebook</targetReference>
@@ -244,8 +250,8 @@ TEXT({!GetCaserecords.HRCSVC_Location__r.HRCFSL_Country__c}) +&apos; &apos; +{!$
     <recordLookups>
         <name>GetPricebook</name>
         <label>GetPricebook</label>
-        <locationX>584</locationX>
-        <locationY>326</locationY>
+        <locationX>182</locationX>
+        <locationY>278</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>CheckPricebook</targetReference>
@@ -262,11 +268,34 @@ TEXT({!GetCaserecords.HRCSVC_Location__r.HRCFSL_Country__c}) +&apos; &apos; +{!$
         <outputReference>PricebookrecordId</outputReference>
         <queriedFields>Id</queriedFields>
     </recordLookups>
+    <recordLookups>
+        <name>RecordType</name>
+        <label>RecordType</label>
+        <locationX>50</locationX>
+        <locationY>518</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Create_Opportunity</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Quote</stringValue>
+            </value>
+        </filters>
+        <object>RecordType</object>
+        <outputAssignments>
+            <assignToReference>Quoterecordtype</assignToReference>
+            <field>Id</field>
+        </outputAssignments>
+    </recordLookups>
     <screens>
         <name>Redirect_to_Quote_Detail_Page</name>
         <label>Redirect to Quote Detail Page</label>
-        <locationX>584</locationX>
-        <locationY>902</locationY>
+        <locationX>50</locationX>
+        <locationY>878</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -279,8 +308,8 @@ TEXT({!GetCaserecords.HRCSVC_Location__r.HRCFSL_Country__c}) +&apos; &apos; +{!$
         <showHeader>true</showHeader>
     </screens>
     <start>
-        <locationX>458</locationX>
-        <locationY>48</locationY>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>GetCaserecords</targetReference>
         </connector>
@@ -442,6 +471,13 @@ TEXT({!GetCaserecords.HRCSVC_Location__r.HRCFSL_Country__c}) +&apos; &apos; +{!$
         <value>
             <elementReference>Case_Id.HRCSVC_Location__c</elementReference>
         </value>
+    </variables>
+    <variables>
+        <name>Quoterecordtype</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
     </variables>
     <variables>
         <name>recordId</name>
