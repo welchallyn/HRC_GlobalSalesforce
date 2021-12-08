@@ -1459,7 +1459,7 @@
             <defaultValue>
                 <elementReference>complaintQualification.HRCSVC_Occurrence_Location__c</elementReference>
             </defaultValue>
-            <fieldText>7) Occurrence Location?</fieldText>
+            <fieldText>7) Occurrence Location</fieldText>
             <fieldType>InputField</fieldType>
             <isRequired>false</isRequired>
         </fields>
