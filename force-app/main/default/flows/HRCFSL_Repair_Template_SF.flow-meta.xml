@@ -456,7 +456,7 @@
             <defaultValue>
                 <elementReference>WorkOrder_RepairTemplate_Info.HRCFSL_Repair_Template_Question_6__c</elementReference>
             </defaultValue>
-            <fieldText>7) Occurrence Location?</fieldText>
+            <fieldText>7) Occurrence Location</fieldText>
             <fieldType>InputField</fieldType>
             <isRequired>false</isRequired>
         </fields>

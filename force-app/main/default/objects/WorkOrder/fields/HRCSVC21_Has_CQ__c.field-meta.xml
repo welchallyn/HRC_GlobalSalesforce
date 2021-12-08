@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC21_Has_CQ__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>#SE-2431: checkbox to check if a WO has a CQ or not</description>
+    <externalId>false</externalId>
+    <label>Has CQ?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>
