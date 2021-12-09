@@ -35,9 +35,10 @@ public class HRCSVC20_Quote_Create_PDF_ControllerTest {
     @isTest
     public static void QuoteCreatePDFControllerTest() {
         try{
+            Schema.Location loc =[select id from Location limit 1];  
             Opportunity opp =[select id from Opportunity Limit 1];
             Case c =[Select id from case Limit 1];
-            Quote q =new Quote(Name='Quote',HRCSVC21_Quote_Type__c='Parts Quote',HRCSVC21_Ship_to_location__c=c.id,OpportunityId=Opp.id);
+            Quote q =new Quote(Name='Quote',HRCSVC21_Quote_Type__c='Parts Quote',OpportunityId=Opp.id,HRCSVC21_Ship_to_location__c=loc.id);
           insert q;
          system.debug('qnhumtum'+q);    
            ApexPages.StandardController sc =  new ApexPages.StandardController(q);
