@@ -54,7 +54,7 @@ public class HRCSVC21_Get_Pricing {
             request.setHeader('Content-Type',mapEd.get('HRCSVC21_Get_Unit_Price').HRCSVC21_Content_Type__c);
             String endpoint = mapEd.get('HRCSVC21_Get_Unit_Price').HRCSVC21_URL__c+'?soldToEntityId='+oli.Order__r.HRCSVC20_Sold_To_Location__r.HRCFSL_Customer_ID__c+'&businessUnit='+oli.Order__r.HRCSVC20_Business_Unit__c+'&processingVersion='+oli.Order__r.HRCSVC20_Pricing_Processing_Version__c+'&shipToEntityId='+oli.Order__r.HRCSVC_Ship_To_Location__r.HRCFSL_Customer_ID__c+'&partsNumber='+oli.Product__r.HRCFSL_Parts_Number__c+'';
             //system.debug('endpoint1'+endpoint);
-           // String endpoint = mapEd.get('HRCSVC21_Get_Unit_Price').HRCSVC21_URL__c+'?soldToEntityId=600077&businessUnit=99635&processingVersion=HRC0005A&shipToEntityId=600077&partsNumber=P2217A';
+            //String endpoint = mapEd.get('HRCSVC21_Get_Unit_Price').HRCSVC21_URL__c+'?soldToEntityId=600077&businessUnit=99635&processingVersion=HRC0005A&shipToEntityId=600077&partsNumber=P2217A';
             system.debug('endpoint'+endpoint);
             request.setEndpoint(endpoint);
             request.setMethod(mapEd.get('HRCSVC21_Get_Unit_Price').HRCSVC21_Method__c);
