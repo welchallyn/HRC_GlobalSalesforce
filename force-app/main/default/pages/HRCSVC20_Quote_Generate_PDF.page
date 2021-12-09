@@ -107,22 +107,22 @@ tr.border_bottom td {
 <tr>
        <td width="33%">          
            <font face="Arial">Sold To:<br/>    
-                {!Quote.HRCSVC21_Sold_to_location__r.Name},<br/>
-               {!Quote.HRCSVC21_Sold_to_location__r.HRCFSL_Street__c},<br/>
-               {!Quote.HRCSVC21_Sold_to_location__r.HRCFSL_City__c},<br/>
-               {!Quote.HRCSVC21_Sold_to_location__r.HRCFSL_State__c}, <br/>
-               {!Quote.HRCSVC21_Sold_to_location__r.HRCFSL_Postal_CD__c},<br/>
+                {!Quote.HRCSVC21_Sold_to_location__r.Name}<br/>
+               {!Quote.HRCSVC21_Sold_to_location__r.HRCFSL_Street__c}<br/>
+               {!Quote.HRCSVC21_Sold_to_location__r.HRCFSL_City__c}<br/>
+               {!Quote.HRCSVC21_Sold_to_location__r.HRCFSL_State__c}<br/>
+               {!Quote.HRCSVC21_Sold_to_location__r.HRCFSL_Postal_CD__c}<br/>
                {!Quote.HRCSVC21_Sold_to_location__r.HRCFSL_Country__c}
                
            </font>
         </td>
         <td width="33%">
            <font face="Arial">Ship To:<br/> 
-               {!Quote.HRCSVC21_Ship_to_location__r.Name},<br/>
-               {!Quote.HRCSVC21_Ship_to_location__r.HRCFSL_Street__c},<br/>
-               {!Quote.HRCSVC21_Ship_to_location__r.HRCFSL_City__c},<br/>
-               {!Quote.HRCSVC21_Ship_to_location__r.HRCFSL_State__c}, <br/>
-               {!Quote.HRCSVC21_Ship_to_location__r.HRCFSL_Postal_CD__c},<br/>
+               {!Quote.HRCSVC21_Ship_to_location__r.Name}<br/>
+               {!Quote.HRCSVC21_Ship_to_location__r.HRCFSL_Street__c}<br/>
+               {!Quote.HRCSVC21_Ship_to_location__r.HRCFSL_City__c}<br/>
+               {!Quote.HRCSVC21_Ship_to_location__r.HRCFSL_State__c}<br/>
+               {!Quote.HRCSVC21_Ship_to_location__r.HRCFSL_Postal_CD__c}<br/>
                {!Quote.HRCSVC21_Ship_to_location__r.HRCFSL_Country__c}
                            
            </font>
