@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <actionCalls>
+        <name>Navigate_to_Quote</name>
+        <label>Navigate to Quote</label>
+        <locationX>50</locationX>
+        <locationY>998</locationY>
+        <actionName>c:navigateToRecord</actionName>
+        <actionType>component</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>sObject</name>
+            <value>
+                <stringValue>Quote</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>Quote</elementReference>
+            </value>
+        </inputParameters>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
     <apiVersion>53.0</apiVersion>
     <decisions>
         <name>CheckPricebook</name>
@@ -23,7 +45,15 @@
             <label>PricebookNotNull</label>
         </rules>
     </decisions>
-    <description>This flow was created as part of the story SE-2798 and this flow creates Opportunity and Quote from Case</description>
+    <description>Added navigation to Quote record. This flow was created as part of the story SE-2798 and this flow creates Opportunity and Quote from Case</description>
+    <dynamicChoiceSets>
+        <name>OrderType</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>HRCSVC21_Order_Type__c</picklistField>
+        <picklistObject>Quote</picklistObject>
+    </dynamicChoiceSets>
     <dynamicChoiceSets>
         <name>StageName</name>
         <dataType>Picklist</dataType>
@@ -65,7 +95,7 @@
     <formulas>
         <name>Opprtunity_Name</name>
         <dataType>String</dataType>
-        <expression>&apos;ServiceQuote&apos;&amp;&apos; &apos;&amp;{!GetCaserecords.HRCSVC_Location__r.Name}&amp;&apos; &apos;&amp;text({!OrderDate})</expression>
+        <expression>&apos;ServiceOppty&apos;&amp;&apos; &apos;&amp;{!GetCaserecords.HRCSVC_Location__r.Name}&amp;&apos; &apos;&amp;text({!OrderDateTime})</expression>
     </formulas>
     <formulas>
         <name>Pricebookname</name>
@@ -76,7 +106,7 @@ TEXT({!GetCaserecords.HRCSVC_Location__r.HRCFSL_Country__c}) +&apos; &apos; +{!$
     <formulas>
         <name>Quote_Name</name>
         <dataType>String</dataType>
-        <expression>&apos;ServiceQuote&apos;&amp;&apos; &apos;&amp;{!GetCaserecords.HRCSVC_Location__r.Name}&amp;&apos; &apos;&amp;text({!OrderDate})</expression>
+        <expression>&apos;ServiceQuote&apos;&amp;&apos; &apos;&amp;{!GetCaserecords.HRCSVC_Location__r.Name}&amp;&apos; &apos;&amp;text({!OrderDateTime})</expression>
     </formulas>
     <formulas>
         <name>Quote_Type</name>
@@ -120,7 +150,7 @@ TEXT({!GetCaserecords.HRCSVC_Location__r.HRCFSL_Country__c}) +&apos; &apos; +{!$
         <locationX>50</locationX>
         <locationY>638</locationY>
         <connector>
-            <targetReference>Create_Quote_Fields</targetReference>
+            <targetReference>Check_the_Order_Type_Status</targetReference>
         </connector>
         <inputAssignments>
             <field>AccountId</field>
@@ -171,10 +201,10 @@ TEXT({!GetCaserecords.HRCSVC_Location__r.HRCFSL_Country__c}) +&apos; &apos; +{!$
         <name>Create_Quote_Fields</name>
         <label>Create Quote Fields</label>
         <locationX>50</locationX>
-        <locationY>758</locationY>
+        <locationY>878</locationY>
         <assignRecordIdToReference>Quote</assignRecordIdToReference>
         <connector>
-            <targetReference>Redirect_to_Quote_Detail_Page</targetReference>
+            <targetReference>Navigate_to_Quote</targetReference>
         </connector>
         <inputAssignments>
             <field>ContactId</field>
@@ -192,6 +222,12 @@ TEXT({!GetCaserecords.HRCSVC_Location__r.HRCFSL_Country__c}) +&apos; &apos; +{!$
             <field>ExpirationDate</field>
             <value>
                 <elementReference>Closed_Date</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>HRCSVC21_Order_Type__c</field>
+            <value>
+                <elementReference>Order_Type</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -292,17 +328,28 @@ TEXT({!GetCaserecords.HRCSVC_Location__r.HRCFSL_Country__c}) +&apos; &apos; +{!$
         </outputAssignments>
     </recordLookups>
     <screens>
-        <name>Redirect_to_Quote_Detail_Page</name>
-        <label>Redirect to Quote Detail Page</label>
+        <name>Check_the_Order_Type_Status</name>
+        <label>Check the Order Type Status</label>
         <locationX>50</locationX>
-        <locationY>878</locationY>
+        <locationY>758</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Create_Quote_Fields</targetReference>
+        </connector>
         <fields>
-            <name>redirectViaURL</name>
-            <fieldText>&lt;p&gt;Click &lt;a href=&quot;/{!Quote}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;here &lt;/a&gt;to view the record&lt;/p&gt;</fieldText>
+            <name>Please_select_the_Order_Type</name>
+            <fieldText>&lt;p&gt;Please Select Order Type&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Order_Type</name>
+            <choiceReferences>OrderType</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Order Type</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>false</isRequired>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>true</showHeader>
@@ -380,6 +427,16 @@ TEXT({!GetCaserecords.HRCSVC_Location__r.HRCFSL_Country__c}) +&apos; &apos; +{!$
         <isOutput>false</isOutput>
         <value>
             <elementReference>$Flow.CurrentDate</elementReference>
+        </value>
+    </variables>
+    <variables>
+        <name>OrderDateTime</name>
+        <dataType>DateTime</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <elementReference>$Flow.CurrentDateTime</elementReference>
         </value>
     </variables>
     <variables>

@@ -1,5 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <actionCalls>
+        <name>Navigate_to_Parts_Order</name>
+        <label>Navigate to Parts Order</label>
+        <locationX>50</locationX>
+        <locationY>1454</locationY>
+        <actionName>c:navigateToRecord</actionName>
+        <actionType>component</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>sObject</name>
+            <value>
+                <stringValue>Order__c</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>Order</elementReference>
+            </value>
+        </inputParameters>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <actionCalls>
+        <name>Navigate_to_Parts_Order_0</name>
+        <label>Navigate to Parts Order</label>
+        <locationX>314</locationX>
+        <locationY>998</locationY>
+        <actionName>c:navigateToRecord</actionName>
+        <actionType>component</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>sObject</name>
+            <value>
+                <stringValue>Order__c</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>Order</elementReference>
+            </value>
+        </inputParameters>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <actionCalls>
+        <name>Navigate_to_Quote</name>
+        <label>Navigate to Quote</label>
+        <locationX>578</locationX>
+        <locationY>518</locationY>
+        <actionName>c:navigateToRecord</actionName>
+        <actionType>component</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>sObject</name>
+            <value>
+                <stringValue>Quote</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </inputParameters>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
     <apiVersion>53.0</apiVersion>
     <assignments>
         <name>Create_0_0_0</name>
@@ -119,12 +185,20 @@
                     <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
+            <conditions>
+                <leftValueReference>CheckQuoteStatus.HRCSVC21_Order_Type__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
             <connector>
                 <targetReference>Get_Quote_line_Item_records</targetReference>
             </connector>
             <label>Status is Accepted</label>
         </rules>
     </decisions>
+    <description>DB 8-Dec 2021: added navigation to Parts Order</description>
     <dynamicChoiceSets>
         <name>OrderId</name>
         <dataType>String</dataType>
@@ -246,7 +320,7 @@
         <locationX>50</locationX>
         <locationY>1334</locationY>
         <connector>
-            <targetReference>Successful_0</targetReference>
+            <targetReference>Navigate_to_Parts_Order</targetReference>
         </connector>
         <inputReference>OliCollection</inputReference>
     </recordCreates>
@@ -257,7 +331,7 @@
         <locationY>878</locationY>
         <assignRecordIdToReference>OrderLineItem</assignRecordIdToReference>
         <connector>
-            <targetReference>Successful_0_0</targetReference>
+            <targetReference>Navigate_to_Parts_Order_0</targetReference>
         </connector>
         <inputAssignments>
             <field>HRCSVC20_Extended_Price__c</field>
@@ -375,6 +449,9 @@
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Navigate_to_Quote</targetReference>
+        </connector>
         <fields>
             <name>Fault_Screen</name>
             <fieldText>&lt;p&gt;&lt;b&gt;Please check the quote status&lt;/b&gt;&lt;/p&gt;</fieldText>
@@ -392,7 +469,7 @@
         </fields>
         <fields>
             <name>ExpirationDatecheck</name>
-            <fieldText>&lt;p&gt;The Quote was expired. &lt;/p&gt;&lt;p&gt;You cannot create Parts Order&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;The Quote has expired or hasn&apos;t been accepted yet.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(250, 1, 1);&quot;&gt;You cannot create a Parts Order at this time&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Please click &quot;&lt;b&gt;Finish&lt;/b&gt;&quot; to return to the Quote.&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
             <visibilityRule>
                 <conditionLogic>and</conditionLogic>
@@ -405,36 +482,9 @@
                 </conditions>
             </visibilityRule>
         </fields>
-        <showFooter>true</showFooter>
-        <showHeader>true</showHeader>
-    </screens>
-    <screens>
-        <name>Successful_0</name>
-        <label>Successful</label>
-        <locationX>50</locationX>
-        <locationY>1454</locationY>
-        <allowBack>true</allowBack>
-        <allowFinish>true</allowFinish>
-        <allowPause>true</allowPause>
         <fields>
-            <name>redirectViaURL_0</name>
-            <fieldText>&lt;p&gt;Click &lt;a href=&quot;/{!Order}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;here &lt;/a&gt;to view this record&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <showFooter>true</showFooter>
-        <showHeader>true</showHeader>
-    </screens>
-    <screens>
-        <name>Successful_0_0</name>
-        <label>Successful</label>
-        <locationX>314</locationX>
-        <locationY>998</locationY>
-        <allowBack>true</allowBack>
-        <allowFinish>true</allowFinish>
-        <allowPause>true</allowPause>
-        <fields>
-            <name>redirectViaURL_0_0</name>
-            <fieldText>&lt;p&gt;Click &lt;a href=&quot;/{!Order}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;here &lt;/a&gt;to view this record&lt;/p&gt;</fieldText>
+            <name>Order_Type</name>
+            <fieldText>&lt;p&gt;&lt;b&gt;The Order Type is blank&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Please select a value to create a Parts Order&lt;/b&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>
@@ -447,7 +497,7 @@
             <targetReference>CheckQuoteStatus</targetReference>
         </connector>
     </start>
-    <status>Active</status>
+    <status>Draft</status>
     <variables>
         <name>AcceptedStatus</name>
         <dataType>Picklist</dataType>

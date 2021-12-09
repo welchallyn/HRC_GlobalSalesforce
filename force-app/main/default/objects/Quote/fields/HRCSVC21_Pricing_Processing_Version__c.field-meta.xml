@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC21_Pricing_Processing_Version__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE( TEXT(HRCSVC21_Ship_to_location__r.HRCFSL_Country__c   ), &apos;US&apos;, &apos;HRC0005A&apos;, &apos;CA&apos;, &apos;HRC0038A&apos;, &apos;HRC0005A&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Pricing Processing Version</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
