@@ -13,9 +13,9 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>Blank</fullName>
+                <fullName>None</fullName>
                 <default>true</default>
-                <label>Blank</label>
+                <label>None</label>
             </value>
             <value>
                 <fullName>No</fullName>
@@ -23,9 +23,9 @@
                 <label>No</label>
             </value>
             <value>
-                <fullName>Injury/Other Patient Involvement</fullName>
+                <fullName>Injury/Patient Involvement</fullName>
                 <default>false</default>
-                <label>Injury/Other Patient Involvement</label>
+                <label>Injury/Patient Involvement</label>
             </value>
             <value>
                 <fullName>Death</fullName>

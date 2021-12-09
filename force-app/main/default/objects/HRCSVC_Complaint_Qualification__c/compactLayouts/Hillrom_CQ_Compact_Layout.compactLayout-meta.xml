@@ -4,6 +4,5 @@
     <fields>Name</fields>
     <fields>HRCSVC20_Requires_Translation__c</fields>
     <fields>HRCSVC21_Translation_Status__c</fields>
-    <fields>HRCSVC_Real_ETQ_Complaint_Number__c</fields>
     <label>Hillrom CQ Compact Layout</label>
 </CompactLayout>

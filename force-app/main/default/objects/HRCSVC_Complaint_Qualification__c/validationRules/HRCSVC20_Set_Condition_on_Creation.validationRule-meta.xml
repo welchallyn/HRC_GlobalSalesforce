@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC20_Set_Condition_on_Creation</fullName>
+    <active>false</active>
+    <description>#SE-2431: validation rule not allowing complaint to be created with Blank value</description>
+    <errorConditionFormula>AND(
+ NOT( $Setup.HRCFSL_Org_Exception_Rule__c.HRCFSL_Validation_Rule__c ),
+ ISNEW(),
+  ISPICKVAL( HRCSVC_Condition__c , &apos;Blank&apos;) 
+
+)</errorConditionFormula>
+    <errorDisplayField>HRCSVC_Condition__c</errorDisplayField>
+    <errorMessage>Complaint cannot be created if the condition field is set to blank</errorMessage>
+</ValidationRule>

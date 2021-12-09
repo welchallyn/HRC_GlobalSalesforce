@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC20_Describe_Other_Condition_Reqd</fullName>
+    <active>false</active>
+    <description>#SE:2785 &amp; SE-2431: Describe Other condition field is required if condition field value is set to Other</description>
+    <errorConditionFormula>AND(
+ NOT($Setup.HRCFSL_Org_Exception_Rule__c.HRCFSL_Validation_Rule__c),
+ ISNEW(),
+ ISPICKVAL( HRCSVC_Condition__c , &apos;Other&apos;) ,
+ ISBLANK( HRCSVC20_Describe_Other_Condition__c )  
+
+)</errorConditionFormula>
+    <errorDisplayField>HRCSVC20_Describe_Other_Condition__c</errorDisplayField>
+    <errorMessage>Describe Other Condition field is required if condition is selected as Other on Complaint Qualification</errorMessage>
+</ValidationRule>

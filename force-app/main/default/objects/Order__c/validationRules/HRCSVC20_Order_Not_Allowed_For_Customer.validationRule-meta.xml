@@ -13,4 +13,4 @@ ISPICKVAL(HRCSVC_Ship_To_Location__r.LocationType, &quot;Entity&quot;)
 
 RecordType.DeveloperName = &quot;HRCSVC_Parts_Order&quot;</errorConditionFormula>
     <errorMessage>The account you have selected is not eligible for an order to be placed. JDE ship to is of type Entity.</errorMessage>
-</ValidationRule> 
+</ValidationRule>

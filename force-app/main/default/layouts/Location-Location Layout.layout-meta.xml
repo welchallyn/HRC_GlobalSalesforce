@@ -246,6 +246,12 @@
         <layoutColumns/>
         <style>CustomLinks</style>
     </layoutSections>
+    <miniLayout>
+        <fields>LocationType</fields>
+        <fields>Name</fields>
+        <fields>ParentLocationId</fields>
+        <fields>HRCFSL_Customer_ID__c</fields>
+    </miniLayout>
     <relatedLists>
         <fields>Name</fields>
         <fields>AddressType</fields>

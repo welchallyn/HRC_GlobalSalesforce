@@ -3,8 +3,8 @@
     <actionCalls>
         <name>Navigate_to_Record</name>
         <label>Navigate to Record</label>
-        <locationX>1175</locationX>
-        <locationY>555</locationY>
+        <locationX>1189</locationX>
+        <locationY>686</locationY>
         <actionName>c:navigateToRecord</actionName>
         <actionType>component</actionType>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
@@ -17,7 +17,7 @@
         <inputParameters>
             <name>recordId</name>
             <value>
-                <elementReference>Create_Order</elementReference>
+                <elementReference>NewOrderRecord.Id</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
@@ -31,8 +31,8 @@
     <actionCalls>
         <name>New_Parts_Order_Line_Item</name>
         <label>New Parts Order Line Item</label>
-        <locationX>1018</locationX>
-        <locationY>391</locationY>
+        <locationX>1049</locationX>
+        <locationY>558</locationY>
         <actionName>Order__c.HRCSVC_New_Part_Order_Line_Item</actionName>
         <actionType>quickAction</actionType>
         <connector>
@@ -57,11 +57,113 @@
         <inputParameters>
             <name>contextId</name>
             <value>
-                <elementReference>Create_Order</elementReference>
+                <elementReference>NewOrderRecord.Id</elementReference>
             </value>
         </inputParameters>
     </actionCalls>
     <apiVersion>50.0</apiVersion>
+    <assignments>
+        <name>New_Order_Record</name>
+        <label>New Order Record</label>
+        <locationX>724</locationX>
+        <locationY>187</locationY>
+        <assignmentItems>
+            <assignToReference>NewOrderRecord.HRCSVC_Carrier__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>carrier</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>NewOrderRecord.HRCSVC_Case__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>NewOrderRecord.HRCSVC_Contact__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Contact.recordId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>NewOrderRecord.HRCSVC_Delivery_Instruction__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Delivery_Instructions_Special_Instructions</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>NewOrderRecord.HRCSVC_Entitlement__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Entitlement.recordId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>NewOrderRecord.HRCSVC_Internal_Order_Notes__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Internal_Order_Notes</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>NewOrderRecord.HRCSVC_Order_Type__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Order_Type</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>NewOrderRecord.HRCSVC_PO_Number__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>PO_Number</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>NewOrderRecord.HRCSVC_Proposal_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>NewOrderRecord.HRCSVC_Ship_To_Location__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Ship_To.recordId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>NewOrderRecord.RecordTypeId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Order_RT.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Create_Order_0</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Set_Carrier_Level_of_Service</name>
+        <label>Set Carrier Level of Service</label>
+        <locationX>751</locationX>
+        <locationY>355</locationY>
+        <assignmentItems>
+            <assignToReference>NewOrderRecord.HRCSVC_Carrier_Level_of_Service__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>carrierlevelservice</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Order</targetReference>
+        </connector>
+    </assignments>
     <choices>
         <name>choiceSH_HouseOrder</name>
         <choiceText>SH - House Order</choiceText>
@@ -97,8 +199,8 @@
     <decisions>
         <name>Add_More_Products</name>
         <label>Add More Products</label>
-        <locationX>1012</locationX>
-        <locationY>558</locationY>
+        <locationX>768</locationX>
+        <locationY>671</locationY>
         <defaultConnector>
             <targetReference>Navigate_to_Record</targetReference>
         </defaultConnector>
@@ -125,7 +227,7 @@
         <locationX>588</locationX>
         <locationY>182</locationY>
         <defaultConnector>
-            <targetReference>Create_Order</targetReference>
+            <targetReference>New_Order_Record</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>No</defaultConnectorLabel>
         <rules>
@@ -216,90 +318,17 @@
     </processMetadataValues>
     <processType>Flow</processType>
     <recordCreates>
-        <name>Create_Order</name>
+        <name>Create_Order_0</name>
         <label>Create Order</label>
         <locationX>833</locationX>
-        <locationY>175</locationY>
+        <locationY>185</locationY>
         <connector>
-            <targetReference>Create_Order_Line_Item</targetReference>
+            <targetReference>Set_Carrier_Level_of_Service</targetReference>
         </connector>
         <faultConnector>
             <targetReference>Error</targetReference>
         </faultConnector>
-        <inputAssignments>
-            <field>HRCSVC_Carrier_Level_of_Service__c</field>
-            <value>
-                <elementReference>CarrierPicklists.middleValue</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>HRCSVC_Carrier__c</field>
-            <value>
-                <elementReference>CarrierPicklists.topValue</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>HRCSVC_Case__c</field>
-            <value>
-                <elementReference>recordId</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>HRCSVC_Contact__c</field>
-            <value>
-                <elementReference>Contact.recordId</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>HRCSVC_Delivery_Instruction__c</field>
-            <value>
-                <elementReference>Delivery_Instructions_Special_Instructions</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>HRCSVC_Entitlement__c</field>
-            <value>
-                <elementReference>Entitlement.recordId</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>HRCSVC_Internal_Order_Notes__c</field>
-            <value>
-                <elementReference>Internal_Order_Notes</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>HRCSVC_Order_Type__c</field>
-            <value>
-                <elementReference>Order_Type</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>HRCSVC_PO_Number__c</field>
-            <value>
-                <elementReference>PO_Number</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>HRCSVC_Proposal_Date__c</field>
-            <value>
-                <elementReference>$Flow.CurrentDate</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>HRCSVC_Ship_To_Location__c</field>
-            <value>
-                <elementReference>Ship_To.recordId</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>RecordTypeId</field>
-            <value>
-                <elementReference>Get_Order_RT.Id</elementReference>
-            </value>
-        </inputAssignments>
-        <object>Order__c</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
+        <inputReference>NewOrderRecord</inputReference>
     </recordCreates>
     <recordLookups>
         <name>Get_Case</name>
@@ -364,11 +393,21 @@
         <object>Location</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
+    <recordUpdates>
+        <name>Update_Order</name>
+        <label>Update Order</label>
+        <locationX>894</locationX>
+        <locationY>353</locationY>
+        <connector>
+            <targetReference>Create_Order_Line_Item</targetReference>
+        </connector>
+        <inputReference>NewOrderRecord</inputReference>
+    </recordUpdates>
     <screens>
         <name>Create_Order_Line_Item</name>
         <label>Create Order Line Item</label>
-        <locationX>833</locationX>
-        <locationY>391</locationY>
+        <locationX>776</locationX>
+        <locationY>513</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -643,7 +682,14 @@
             </inputParameters>
             <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
-            <storeOutputAutomatically>true</storeOutputAutomatically>
+            <outputParameters>
+                <assignToReference>carrierlevelservice</assignToReference>
+                <name>middleValue</name>
+            </outputParameters>
+            <outputParameters>
+                <assignToReference>carrier</assignToReference>
+                <name>topValue</name>
+            </outputParameters>
         </fields>
         <fields>
             <name>Delivery_Instructions_Special_Instructions</name>
@@ -666,7 +712,7 @@
         <name>Error</name>
         <label>Error</label>
         <locationX>1013</locationX>
-        <locationY>176</locationY>
+        <locationY>179</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -707,6 +753,28 @@
         </connector>
     </start>
     <status>Active</status>
+    <variables>
+        <name>carrier</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>carrierlevelservice</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>NewOrderRecord</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Order__c</objectType>
+    </variables>
     <variables>
         <name>recordId</name>
         <dataType>String</dataType>

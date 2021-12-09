@@ -13,7 +13,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>HRCSVC20_Describe_Cause_Troubleshooting__c</field>
+                <field>HRCSVC_Document_troubleshooting__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>

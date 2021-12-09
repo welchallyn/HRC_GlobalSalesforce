@@ -14,7 +14,7 @@
             <sorted>false</sorted>
             <value>
                 <fullName>None</fullName>
-                <default>false</default>
+                <default>true</default>
                 <label>None</label>
             </value>
             <value>
@@ -89,7 +89,8 @@
             </value>
             <value>
                 <fullName>Blank</fullName>
-                <default>true</default>
+                <default>false</default>
+                <isActive>false</isActive>
                 <label>Blank</label>
             </value>
             <value>

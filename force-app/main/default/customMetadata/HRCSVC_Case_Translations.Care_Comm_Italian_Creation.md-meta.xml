@@ -32,7 +32,7 @@ In caso di necessità, potete contattare il nostro supporto tecnico:
     </values>
     <values>
         <field>HRCSVC_Subject__c</field>
-        <value xsi:type="xsd:string">Hillrom - Hillrom – Segnalazione chiusa: {!Get_Case_Details.CaseNumber}r</value>
+        <value xsi:type="xsd:string">Hillrom – Segnalazione chiusa: {!Get_Case_Details.CaseNumber}</value>
     </values>
     <values>
         <field>HRCSVC_Type__c</field>

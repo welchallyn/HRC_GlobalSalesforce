@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC20_Set_Injury_Death_on_Creation</fullName>
+    <active>false</active>
+    <description>#SE-2431: VR not allowing complaint to be created with Blank value on CQ creation</description>
+    <errorConditionFormula>AND(
+ NOT( $Setup.HRCFSL_Org_Exception_Rule__c.HRCFSL_Validation_Rule__c ),
+ ISNEW(),
+ ISPICKVAL( HRCSVC_Injury_or_Death__c , &apos;Blank&apos;) 
+
+
+)</errorConditionFormula>
+    <errorDisplayField>HRCSVC_Injury_or_Death__c</errorDisplayField>
+    <errorMessage>Complaint cannot be created if Injury or Death field is set to blank value</errorMessage>
+</ValidationRule>

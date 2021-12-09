@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC20_Occurance_loc_Reqd_On_Closure</fullName>
+    <active>false</active>
+    <description>#SE-2431: Occurance location field is reqd on closure</description>
+    <errorConditionFormula>AND(
+ NOT( $Setup.HRCFSL_Org_Exception_Rule__c.HRCFSL_Validation_Rule__c ),
+ OR( ISPICKVAL(HRCSVC_Case__r.Status,&apos;Resolved&apos; ), 
+               ISPICKVAL( HRCSVC_Case__r.Status , &apos;Closed&apos;)  ),
+ ISBLANK( HRCSVC_Occurrence_Location__c ) 
+)</errorConditionFormula>
+    <errorMessage>Occurrence location on complaint is required on case closure</errorMessage>
+</ValidationRule>
