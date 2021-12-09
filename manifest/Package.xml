@@ -994,8 +994,8 @@
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_Complaint_Attachment_Info__c</members>
 		<members>Workorder.HRCSVC21_Has_CQ__c</members>
 		<members>Quote.HRCSVC21_Business_Unit__c</members>
-		<members>Quote.HRCSVC21_Pricing_Processing_Version__</members>
-		<members>Quote.HRCSVC21_Error_Message</members>
+		<members>Quote.HRCSVC21_Pricing_Processing_Version__c</members>
+		<members>Quote.HRCSVC21_Error_Message__c</members>
 		<members>QuoteLineItem.HRCSVC21_Error_Message__c</members>
 		<name>CustomField</name>
 	</types>
