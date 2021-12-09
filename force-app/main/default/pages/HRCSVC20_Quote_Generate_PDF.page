@@ -1,0 +1,367 @@
+<apex:page standardController="Quote" extensions="HRCSVC21_Quote_PDF_Extension" showHeader="false" renderas="pdf" applyHtmlTag="false" standardStylesheets="false">
+<html>
+<head>
+ <Style type="text/css">
+             @page {
+            @top-center {
+                 content: element(header);
+                 }
+            @bottom-left {
+                content: element(footer);
+               }
+            margin-top: 80px;
+            margin-bottom: 120px;
+            }
+             
+         div.header {
+            padding: 10px;
+            position: running(header);
+           
+          }
+
+           div.footer {
+               display: block;
+               padding: 5px;
+               position: running(footer);
+            
+          }            
+                           
+          .table-bordered {
+                border: 1px solid #000;
+               
+            }
+         
+       .pagenumber:before {
+                             content: counter(page);
+                        }
+                        
+       .pagecount:before {     
+                          content: counter(pages);
+                        }
+     #table4 {
+    -fs-table-paginate: paginate;
+     }
+tr.border_bottom td {
+  border-bottom: 1px solid black;
+}        
+  </Style>
+</head>
+<body>
+<div class="footer">
+ <div>
+    <hr/>
+       <p align="center"><font face="Arial">800-445-3720 (Option 3, Option 1) &nbsp;&nbsp;&nbsp;&nbsp;www.hillrom.com &nbsp;&nbsp;&nbsp;&nbsp; carecommunicationssupport@hillrom.com
+      </font></p>
+    <hr/>
+    <hr style="height:2px; border-width:0; color:black; background-color:black"/>
+    <p align="center"><font face="Arial">Page <span class="pagenumber"/> of <span class="pagecount"/></font></p>
+ </div>
+</div>
+<div class="content"> 
+<table border="0" cellspacing="0" cellpadding="5" width="100%" height="200%" id="table1">
+<tr height="310%">
+        <th width="50%">
+            
+ <!-- Your logo pulls the static resource here -->       
+                    
+                    <img src='{!URLFOR($Resource.businesslogo)}' title="logo" width="250" height="100"/>
+        </th>
+  
+ <!-- Template Header -->
+    
+        <th align="center" width="50%"><font face="Arial" >  
+                    <table class="table-bordered" cellspacing="0" cellpadding="5" width="100%" height="200%" id="table6">
+                    <tr>
+                    <td>PROPOSAL#:</td>   
+                    <td>{!Quote.QuoteNumber}</td>  
+                    </tr>
+                    <tr>
+                    <td>Proposal Date:</td>  
+                       <td> <apex:outputText value="{0, date,  dd MMM, YYYY}">
+                            <apex:param value="{!TODAY()}" />
+                             </apex:outputText>
+                        </td>
+                    <!--<td>{!today()}</td>-->  
+                    </tr>
+                    <tr>
+                    <td>Expiration Date:</td> 
+                        <td> <apex:outputText value="{0, date,  dd MMM, YYYY}">
+                            <apex:param value="{!Quote.ExpirationDate}" />
+                           <!-- <apex:param value="{!Quote.CreatedDate + 60}" />-->
+                             </apex:outputText>
+                        </td>
+                    <!--<td>{!Quote.ExpirationDate}</td>  -->
+                    </tr>
+                    </table>
+                    </font>
+        </th>
+</tr>     
+   
+    </table>    
+
+ <!-- Second section -->  
+<hr/>  
+<hr style="height:2px; border-width:0; color:black; background-color:black"/>
+
+<table border="0" width="100%" id="table2">
+<tr>
+       <td width="33%">          
+           <font face="Arial">Sold To:<br/>    
+                {!Quote.HRCSVC21_Sold_to_location__r.Name}<br/>
+               {!Quote.HRCSVC21_Sold_to_location__r.HRCFSL_Street__c}<br/>
+               {!Quote.HRCSVC21_Sold_to_location__r.HRCFSL_City__c}<br/>
+               {!Quote.HRCSVC21_Sold_to_location__r.HRCFSL_State__c} <br/>
+               {!Quote.HRCSVC21_Sold_to_location__r.HRCFSL_Postal_CD__c}<br/>
+               {!Quote.HRCSVC21_Sold_to_location__r.HRCFSL_Country__c}
+               
+           </font>
+        </td>
+        <td width="33%">
+           <font face="Arial">Ship To:<br/> 
+               {!Quote.HRCSVC21_Ship_to_location__r.Name}<br/>
+               {!Quote.HRCSVC21_Ship_to_location__r.HRCFSL_Street__c}<br/>
+               {!Quote.HRCSVC21_Ship_to_location__r.HRCFSL_City__c}<br/>
+               {!Quote.HRCSVC21_Ship_to_location__r.HRCFSL_State__c} <br/>
+               {!Quote.HRCSVC21_Ship_to_location__r.HRCFSL_Postal_CD__c}<br/>
+               {!Quote.HRCSVC21_Ship_to_location__r.HRCFSL_Country__c}
+                           
+           </font>
+        </td>
+        
+        <td width="33%">
+           <font face="Arial">
+           For Questions / Correspondence Please Contact: <br/>
+           Hillrom Customer Service @ 800-445-3720, Option 3, Option 1<br/>
+         <!--  Fax: 812-934-8189 <br/> -->
+           Email:  carecommunicationssupport@hillrom.com
+           </font>
+        </td>
+
+</tr>  
+    <tr></tr>
+<tr>
+     <td width="30%">
+     <font face="Arial">Bill To Customer #: {!Quote.HRCSVC21_Sold_to_location__r.HRCFSL_Customer_ID__c}</font>
+     </td>
+     <td width="30%">
+     <font face="Arial">Ship To Customer #: {!Quote.HRCSVC21_Ship_to_location__r.HRCFSL_Customer_ID__c}</font>
+     </td>
+    <td width="30%">
+        
+        <apex:outputPanel rendered="{!(ListofAccountTeamRole.size>0)}">  
+					   <div class="columnnull">
+						    <font face="Arial">Your Account Rep: {!ListofAccountTeamRole[0].UserId__r.Name}</font><br/>
+                           <font face="Arial">Mobile Phone #:  {!ListofAccountTeamRole[0].UserId__r.MobilePhone}</font><br/>
+                           <font face="Arial">Email: {!ListofAccountTeamRole[0].UserId__r.Email}</font>
+						</div> 
+					</apex:outputPanel>	
+					 <apex:outputPanel rendered="{!(ListofAccountTeamRole.size==0)}">  
+					  <div class="column">                           
+						  <font face="Arial">Your Account Rep: </font><br/>
+                          <font face="Arial">Mobile Phone #:  </font><br/>
+                          <font face="Arial">Email:</font>
+					  </div>
+					</apex:outputPanel>
+    </td>
+</tr>  
+</table>
+<br/>
+<hr/>
+    
+ <!-- Product section -->
+<table border="0" width="100%" id="table4">
+<thead>
+<tr>
+       <th bgcolor="#C0C0C0"><font face="Arial">Part Name</font></th>
+       <th bgcolor="#C0C0C0"><font face="Arial">Part Number</font></th>
+       <th bgcolor="#C0C0C0"><font face="Arial">Quantity</font></th>
+       <th bgcolor="#C0C0C0"><font face="Arial">Unit Price</font></th>
+       <th bgcolor="#C0C0C0"><font face="Arial">Extended Price</font></th>
+</tr> 
+</thead>
+    <apex:repeat value="{!Quote.QuoteLineItems}" var="line">
+        <tbody>
+          <tr class="border_bottom">
+             <td>{!line.Product2.Description}</td>
+             <td>{!line.Product2.ProductCode}</td>            
+             <td>{!line.Quantity}</td>
+             <td align="center"><apex:outputText value="{0, number, $#,###.##}">
+                 <apex:param value="{!line.UnitPrice}"/>
+                 </apex:outputText>
+              </td>
+                 <!--<apex:OutputField value="{!line.UnitPrice}"/></td>-->
+             <td align="center">
+                 <apex:outputText value="{0, number, $#,###.##}">
+                 <apex:param value="{!line.TotalPrice}"/>
+                 </apex:outputText>
+              </td>
+                <!-- </apex:outputText><apex:OutputField value="{!line.TotalPrice}"/></td>-->
+          </tr>
+         </tbody>
+       </apex:repeat>  
+<tr>
+       <td bgcolor="#C0C0C0" align="right" colspan="6">
+       <font face="Arial"><b>Total Order&nbsp;(USD) Excluding Tax:</b>&nbsp;<apex:OutputField value="{!Quote.TotalPrice}"/></font></td>
+</tr>
+</table>
+<br/>
+
+<table border="0" width="100%" id="table7">
+    <tr> <td><font face="Arial">Applicable taxes will be calculated and billed at the time of invoicing.</font></td></tr>
+<tr>
+ <!--<td><font face="Arial">
+Case# C#{Proposal no}-Proposal <br/>
+NCM or NNC:  {NNC} <br/>
+Sold To Account#: {!Quote.BillingName} <br/>
+Ship To Account#: {!Quote.ShippingName} <br/>
+Ordered By: {ordered by name} <br/>
+Qty {(quantity)} <br/>
+Part: { part } <!--P2521B02 UPS RKMT 2U 1440VA NON-SEISMIC --><!--<br/>
+Reason:  {Reason like Replacement }<br/>
+Proposal to be emaild to: {kenneth.burris@lpnt.net} <br/>
+This proposal is an estimate for a Hill-Rom IT Solutions’ Fee For Service Work Order. <br/>
+Actual labor and travel hours incurred, parts, and hourly rate based on software version <br/>
+installed may vary
+</font>
+</td>-->
+     <td >
+     <font face="Arial"> {!Quote.HRCSVC21_Comments__c}</font>
+     </td>
+</tr>
+</table>
+
+
+ <!-- Notes section -->
+ <div style="page-break-after:always;"> 
+ </div>
+
+<table border="0" cellspacing="0" cellpadding="5" width="100%" height="200%" id="table9">
+<tr height="310%">
+        <th width="50%">
+            
+ <!-- Your logo pulls the static resource here -->       
+                    
+                    <img src='{!URLFOR($Resource.businesslogo)}' title="logo" width="250" height="100"/>
+        </th>
+  
+ <!-- Template Header -->
+    
+        <th align="center" width="50%"><font face="Arial">  
+                    <h1 style="font-size: 30px;"> Terms and Conditions</h1></font>
+        </th>
+</tr> 
+</table>
+<div><font face="Arial">
+<b>Prices:</b> Prices on Hillrom&#39;s proposal are subject to change, unless the proposal states that pricing is firm through the expiration date, as noted on the proposal. 
+If delivery is requested after the expiration date, the price in effect at the time of the requested delivery will apply. 
+Customer shall be billed for all applicable sales and other taxes until such time as Customer provides a tax-exempt certificate (resale certificate) to Hillrom with respect to such taxes.  
+Applicable taxes will be calculated and billed at time of invoicing.
+<br/>
+<br/>
+<b>Cancellation:</b> This contract when signed is an agreement of performance by both parties. In the event either party requests a termination of the contract, the other party must agree.
+<br/>
+<br/>
+<b>Payment Terms:</b> Invoices are payable net thirty (30) days from date of invoice.  Unless waived by Hillrom in writing, overdue invoices shall be subject to a late payment charge equal 
+to the lesser of (i) one and one-half percent (1-1/2%) per month or (ii) the maximum rate allowed by law.  Customer agrees to pay Hillrom for any and all costs and expenses (including 
+without limitation reasonable attorneys’ fees) incurred by Hillrom to collect any amounts owed to it, enforce any of its rights or seek any of its remedies hereunder.  In the event Customer 
+has directed that the charges hereunder be billed to another person or organization, and payment is not made by such person or organization within ten (10) day after invoice date, Customer 
+shall still remain liable hereunder.  Customer is advised that the Customer may be obligated to properly reflect and/or report any discount, rebate or reduction in price in its costs claimed or 
+charges made to federal (e.g. Medicare) or state (e.g. Medicaid) health care programs requiring such disclosure.  The invoices provided by Hillrom to Customer may not reflect the net cost to the 
+Customer. Customer shall make written request to Hillrom in the event Customer requires additional information in order to meet applicable reporting or disclosure obligations.
+ <br/><br/>
+<b>Installation:</b> Unless otherwise agreed in writing, Customer shall perform any installation of products sold hereunder at Customer&#39;s expense. 
+Hillrom agrees to furnish appropriate instructions and information to assist with the installation and/or first operation of the products.
+<br/><br/>
+<b>Limited Warranty:</b> For specific warranty information on Hill-Rom products and parts, please see owner&#39;s manual or review manuals on line at our website, www.hillrom.com. 
+THE FOREGOING WARRANTY CONSTITUTES THE SOLE WARRANTY MADE BY HILLROM AND IS IN LIEU OF ALL OTHER REPRESENTATIONS OR WARRANTIES EXPRESS OR IMPLIED OR STATUTORY, 
+INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE, AND ALL OTHER REMEDIES.  IN NO CASE SHALL HILLROM BE LIABLE 
+TO CUSTOMER OR ANY THIRD PARTY FOR INDIRECT, SPECIAL, CONSEQUENTIAL OR INCIDENTAL DAMAGES OR DELAYS. NO EMPLOYEE OR REPRESENTATIVE OF HILLROM IS AUTHORIZED TO CHANGE THIS 
+WARRANTY IN ANY WAY OR GRANT ANY OTHER WARRANTY.
+<br/><br/>
+<b>Product Interface:</b> Customer shall be responsible for ensuring to Customer&#39;s satisfaction that any equipment and accessories not supplied by Hillrom that are used with 
+Hillrom products properly interface or operate with Hillrom products. Hillrom shall not be liable to Customer or any third person for personal injury or property damage arising 
+from the use of third party equipment and accessories with Hillrom products.
+<br/><br/>
+<b>Limitation of Liability:</b> Hillrom shall not be liable for loss or damages due to delay in manufacture or shipment resulting from any cause beyond the Hillrom&#39;s control. 
+Delays resulting from any such cause shall extend shipment date correspondingly. IN NO EVENT SHALL HILLROM BE LIABLE FOR SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL 
+DAMAGES, EVEN IF IT HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. THIS CONTRACT IS BETWEEN CUSTOMER AND HILLROM. Customer must make claims for shortages or errors 
+within a reasonable time after receipt of the products. Hillrom reserves the right to use remanufactured or used components that meet new component specifications and are warranted as new.
+<br/><br/>
+<b>Security Interest, Default and Insurance:</b> Hillrom shall retain a security interest in the products until Hillrom has received full payment including taxes. 
+Customer agrees to sign and deliver to Hillrom any additional documents required by Hillrom to protect its security interest. If Customer defaults or Hillrom deems itself insecure of 
+the products in danger of confiscation, the full amount unpaid shall immediately become due and payable at the option of the Hillrom and on proper notice to the Customer, the Hillrom may 
+retake possession of the products wherever located without court order and can resell or retain according to the laws of the state where products are located. The products shall not be 
+considered a fixture if attached to any realty. Customer shall assume all loss relating from damage to the products occurring after the products leave Hillrom&#39;s control and shall provide 
+adequate insurance therefore at all times until the purchase price shall have been fully paid. Hillrom reserves the right to request proof of such insurance at any time prior to full payment 
+along with a statement from such insurer limiting cancellation or changes to said policy within ten (10) days after written notice of same to Hillrom.
+<br/><br/>
+<b>Specifications:</b> Specifications and drawings and any other information shall remain the property of Hillrom and are subject to recall at any time. Such information shall not be disclosed 
+or used for manufacture of any products. In accordance with Hillrom&#39;s established policy of constant improvement, Hillrom reserves the right to amend its specifications at any time without notice.
+<br/><br/>
+<b>Merger:</b> These terms and conditions supersede any inconsistent agreements and understandings, oral or written, between the parties, including any terms and conditions in any documentation 
+submitted by Customer to Hillrom, unless agreed to in writing by an authorized representative of Hillrom. Customer agrees and acknowledges that if Customer issues any further purchase orders, 
+Hillrom will have no obligation to accept or otherwise honor any such purchase order.
+<br/><br/>
+<b>Acceptance:</b> This contract is subject to Hillrom&#39;s approval of Customer&#39;s credit. Written notice shall be given to Customer within 60-days of the date hereof if Customer&#39;s credit is deemed, 
+in the sole discretion of the Hillrom, to be unsatisfactory. This contract of purchase and sale between the Customer and Hillrom relating to the products identified herein shall be subject to and 
+shall include the terms and conditions hereof.
+<br/><br/>
+<b>Choice of Law:</b> This contract shall be governed by, and construed in accordance with, the laws of the State of Indiana.
+<br/><br/>
+<b>Delivery and Shipment:</b>  Date of delivery shall be determined by mutual written agreement of the parties.  No delivery date set forth in a Purchase Order shall be binding on Hillrom unless 
+Hillrom explicitly agrees to such delivery date in a writing signed by an authorized representative of Hillrom. Shipment of all products shall be Net Freight on Board (FOB) Customer, with all costs 
+of transportation and related insurance being the responsibility of Hillrom with the exception of costs of transportation and insurance for (i) service parts, (ii) shipments to points outside the 
+contiguous U.S., or (iii) special delivery and/or air shipments requested by Customer.  Unless otherwise explicitly agreed to by Hillrom in a writing signed by an authorized representative of 
+Hillrom, Hillrom will prepay and add to the invoice for reimbursement by Customer any and all costs of transportation and insurance for delivery of service parts, shipments to points outside the 
+contiguous U.S., and any special delivery and/or air shipments requested by Customer. Terms for shipping to Alaska and Hawaii shall be F.O.B. port of embarkment, prepaid and add from port of 
+embarkment to destination.
+<br/><br/>
+<b>Return Goods Policy:</b>  Should Hillrom ship products in error, Hillrom shall arrange and pay for return shipment of the products without applying a restocking fee provided that (i) 
+Customer notifies Hillrom of the error within thirty (30) days of shipment, and (ii) the products are returned in “as shipped” condition.  If Customer orders products in error and notifies 
+Hillrom of the error within thirty (30) days of shipment, Customer may return the products in “as shipped” condition at Customer’s cost and expense; however, Customer agrees to pay Hillrom a 
+restocking fee of 15% of the net price for the returned products.  Notwithstanding the previous sentence, returns will not be accepted on architectural products, workflow solutions and other 
+communications products, and any customized products or special orders, except if mutually agreed on terms acceptable by both parties on a case by case basis.
+<br/><br/>
+<b>Order Cancellation Policy:</b>  Customer may only cancel a purchase order if Customer provides written notice to Hillrom at least fourteen (14) days prior to the scheduled shipment date, and 
+if Customer cancels an order, Customer agrees to pay Hillrom a cancellation fee of 15% of the net price for the cancelled products.  No purchase orders may be cancelled after fourteen (14) days 
+prior to the scheduled shipment date.  Notwithstanding the above, cancellations will be not be accepted on architectural products, workflow solutions and other communications products, and any 
+customized products or special orders, except if mutually agreed on terms acceptable by both parties on a case by case basis.
+<br/><br/>
+<b>Delivery Change/Refusal Policy:</b>  Customer may request to reschedule a scheduled delivery date to a later date by providing Hillrom with written notice at least fourteen (14) days prior to 
+the scheduled delivery date.  If Customer requests at any time to reschedule the delivery date to a new date that is more than thirty (30) days later than the original scheduled deliver date, 
+Customer agrees to pay Hillrom a rescheduling fee of 15% of the net price for the affected products.  If Customer refuses to accept a delivery without having provided Hillrom with a written 
+request to reschedule at least fourteen (14) days in advance, Customer agrees to pay Hillrom a rescheduling fee of 15% of the net price for the affected products.
+<br/><br/>
+<b>Ordering:</b>  All Purchase Orders may be placed by mail, telephone or facsimile at the following:
+<br/><br/>
+<table border="0" width="100%" id="Table9">
+<tr>
+<td> <font face="Arial">   
+<b style="font-size:20px">Hill-Rom Company, Inc.</b>
+<br/><br/>
+Attn: Customer Service<br/>
+1069 State Route 46 East<br/>
+Batesville, Indiana 47006<br/>
+Phone: 800/445-3730<br/>
+Fax: 812/934-8189
+<br/><br/>
+</font></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td><font face="Arial"> 
+<b style="font-size:20px">Hill-Rom Company, Inc.</b>
+<br/><br/>
+Attn: Customer Service<br/>
+1705 Tech Avenue, Unit 3<br/>
+Mississauga, Ontario L4W 0A2<br/>
+Phone: 800/267-2337<br/>
+TeleFax: 905/206-0561
+<br/>
+</font></td></tr>
+</table>
+</font>
+</div>
+</div>
+</body>
+</html>
+</apex:page>
