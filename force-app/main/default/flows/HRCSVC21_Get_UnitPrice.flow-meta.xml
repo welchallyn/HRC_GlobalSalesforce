@@ -130,7 +130,7 @@
         <allowPause>false</allowPause>
         <fields>
             <name>onerecords</name>
-            <fieldText>&lt;p&gt;&lt;span style=&quot;color: rgb(237, 34, 34);&quot;&gt;Please select at least one record.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;Click &lt;/span&gt;&lt;a href=&quot;https://hill-rom--capgemini.lightning.force.com/lightning/r/Order__c/{!OrderId}/view&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;color: rgb(0, 47, 255);&quot;&gt;here&lt;/a&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt; to return to the Order.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;color: rgb(237, 34, 34);&quot;&gt;Please select at least one record.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>
@@ -178,7 +178,7 @@
         <allowPause>false</allowPause>
         <fields>
             <name>moreRecords</name>
-            <fieldText>&lt;p&gt;Please select 50 or less records!&lt;/p&gt;&lt;p&gt;Click &lt;a href=&quot;https://hill-rom--capgemini.lightning.force.com/lightning/r/Order__c/{!OrderId}/view&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt; to return to the Order.&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;Please select 50 or less records!&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>
