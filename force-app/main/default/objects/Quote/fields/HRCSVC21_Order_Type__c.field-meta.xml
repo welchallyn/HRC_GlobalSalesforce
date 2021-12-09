@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCSVC21_Order_Type__c</fullName>
+    <description>Created as part of story SE-2798 for Quote creation.</description>
+    <externalId>false</externalId>
+    <label>Order Type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>SH</fullName>
+                <default>false</default>
+                <label>SH - House Order</label>
+            </value>
+            <value>
+                <fullName>SO</fullName>
+                <default>false</default>
+                <label>SO - Sales Order</label>
+            </value>
+            <value>
+                <fullName>SP</fullName>
+                <default>false</default>
+                <label>SP - Sales Proposal</label>
+            </value>
+            <value>
+                <fullName>SW</fullName>
+                <default>false</default>
+                <label>SW - Service Warranty Order</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
