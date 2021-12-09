@@ -1,0 +1,9 @@
+<apex:page standardController="Quote" extensions="HRCSVC20_Quote_Create_PDF_Controller" lightningStylesheets="true">
+<apex:form >
+ <apex:commandButton action="{!savePDF}" value="Save Quote"/>
+  <apex:pageBlock title="View Quote PDF">
+  <apex:iframe src="{!returnurl}" width="100%" height="700px" />
+</apex:pageBlock>
+</apex:form>
+<apex:pageMessages id="Messages"></apex:pageMessages>
+ </apex:page>
