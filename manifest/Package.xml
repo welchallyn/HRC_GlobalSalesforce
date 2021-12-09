@@ -53,6 +53,7 @@
 		<members>HRCSVC21_AdvancedRelatedListController</members>
 		<members>HRCSVC21_SoldToJDEIntegration</members>
 		<members>HRCSVC21_Quote_PDF_Extension</members>
+		<members>HRCSVC21_Quote_PDF_ExtensionTest</members>
 		<members>HRCSVC20_Quote_Create_PDF_Controller</members>
 		<members>HRCSVC20_Quote_Create_PDF_ControllerTest</members>
 		<members>HRCSVC21_InventoryCheckHandler</members>
