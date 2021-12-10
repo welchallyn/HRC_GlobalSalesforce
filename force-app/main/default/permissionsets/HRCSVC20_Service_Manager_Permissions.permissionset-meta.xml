@@ -28,10 +28,10 @@
         <apexClass>HRCSVC21_AdvancedRelatedListController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
-    <classAccesses>
+    <!--<classAccesses>
         <apexClass>HRCSVC21_CQ_TriggerHandler</apexClass>
         <enabled>true</enabled>
-    </classAccesses>
+    </classAccesses>-->
     <classAccesses>
         <apexClass>HRCSVC21_Get_Pricing</apexClass>
         <enabled>true</enabled>
