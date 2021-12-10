@@ -52,7 +52,9 @@
 		<members>HRCSVC21_MyException</members>
 		<members>HRCSVC21_AdvancedRelatedListController</members>
 		<members>HRCSVC21_SoldToJDEIntegration</members>
+		<members>HRCSVC21_SoldToJDEIntegrationTest</members>
 		<members>HRCSVC21_Quote_PDF_Extension</members>
+		<members>HRCSVC21_Quote_PDF_ExtensionTest</members>
 		<members>HRCSVC20_Quote_Create_PDF_Controller</members>
 		<members>HRCSVC20_Quote_Create_PDF_ControllerTest</members>
 		<members>HRCSVC21_InventoryCheckHandler</members>
@@ -61,6 +63,12 @@
 		<members>HRCSVC21_Get_Pricing</members>
 		<members>HRCSVC21_OLI_Handler</members>
 		<members>HRCSVC21_OLI_Handler_Test</members>
+		<members>HRCSVC21_QuoteLineItemHandler</members>
+		<members>HRCSVC21_QuoteGetPricing</members>
+		<members>HRCSVC21_QuoteLineItemHandlerTest</members>
+		<members>HRCSVC21_QuoteSoldToJDEIntegration</members>
+		<members>HRCSVC21_QuoteSoldToJDEIntegrationTest</members>
+		<members>HRCSVC21_InventoryCheckHandler_Test</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
@@ -76,6 +84,7 @@
 		<members>HRCSVC21_CQ_Original_Values_Trigger</members>
 		<members>contentnotetrigger</members>
 		<members>HRCSVC21_OLI_Trigger</members>
+		<members>HRCSVC21_QuoteLineTrigger</members>
 		<name>ApexTrigger</name>
 	</types>
 	<types>
@@ -985,6 +994,10 @@
 		<members>Order_Line_Item__c.HRCSVC21_Error_Message__c</members>
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_Complaint_Attachment_Info__c</members>
 		<members>Workorder.HRCSVC21_Has_CQ__c</members>
+		<members>Quote.HRCSVC21_Business_Unit__c</members>
+		<members>Quote.HRCSVC21_Pricing_Processing_Version__c</members>
+		<members>Quote.HRCSVC21_Error_Message__c</members>
+		<members>QuoteLineItem.HRCSVC21_Error_Message__c</members>
 		<name>CustomField</name>
 	</types>
 	<types>
@@ -1362,6 +1375,7 @@
 		<members>Standing_PO_Record_Page1</members>
 		<members>Work_Order_Record_Page1</members>
 		<members>HRCSVC_Order_Dynamic_Lightning_Record_Page</members>
+		<members>Quote_Record_Page</members>
 		<name>FlexiPage</name>
 	</types>
 	<types>
@@ -1509,6 +1523,7 @@
 		<members>HRCSVC21_Create_Parts_Order_From_Quote</members>
 		<members>HRCSVC21_Get_UnitPrice</members>
 		<members>HRCFSL_Capture_Signature</members>
+		<members>HRCSVC21_Quote_Actions</members>
 		<name>Flow</name>
 	</types>
 	<types>
