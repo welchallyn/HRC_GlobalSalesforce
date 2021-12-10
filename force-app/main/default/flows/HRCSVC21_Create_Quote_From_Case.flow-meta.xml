@@ -1,27 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <actionCalls>
-        <name>Navigate_to_Quote</name>
-        <label>Navigate to Quote</label>
-        <locationX>50</locationX>
-        <locationY>998</locationY>
-        <actionName>c:navigateToRecord</actionName>
-        <actionType>component</actionType>
-        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
-        <inputParameters>
-            <name>sObject</name>
-            <value>
-                <stringValue>Quote</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>recordId</name>
-            <value>
-                <elementReference>Quote</elementReference>
-            </value>
-        </inputParameters>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </actionCalls>
     <apiVersion>53.0</apiVersion>
     <decisions>
         <name>CheckPricebook</name>
@@ -40,12 +18,12 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>RecordType</targetReference>
+                <targetReference>Check_the_Order_Type_Status_0</targetReference>
             </connector>
             <label>PricebookNotNull</label>
         </rules>
     </decisions>
-    <description>Added navigation to Quote record. This flow was created as part of the story SE-2798 and this flow creates Opportunity and Quote from Case</description>
+    <description>This flow was created as part of the story SE-2798 and this flow creates Opportunity and Quote from Case</description>
     <dynamicChoiceSets>
         <name>OrderType</name>
         <dataType>Picklist</dataType>
@@ -148,9 +126,9 @@ TEXT({!GetCaserecords.HRCSVC_Location__r.HRCFSL_Country__c}) +&apos; &apos; +{!$
         <name>Create_Opportunity</name>
         <label>Create Opportunity</label>
         <locationX>50</locationX>
-        <locationY>638</locationY>
+        <locationY>758</locationY>
         <connector>
-            <targetReference>Check_the_Order_Type_Status</targetReference>
+            <targetReference>Create_Quote_Fields</targetReference>
         </connector>
         <inputAssignments>
             <field>AccountId</field>
@@ -204,7 +182,7 @@ TEXT({!GetCaserecords.HRCSVC_Location__r.HRCFSL_Country__c}) +&apos; &apos; +{!$
         <locationY>878</locationY>
         <assignRecordIdToReference>Quote</assignRecordIdToReference>
         <connector>
-            <targetReference>Navigate_to_Quote</targetReference>
+            <targetReference>QuoteNavScreen</targetReference>
         </connector>
         <inputAssignments>
             <field>ContactId</field>
@@ -308,7 +286,7 @@ TEXT({!GetCaserecords.HRCSVC_Location__r.HRCFSL_Country__c}) +&apos; &apos; +{!$
         <name>RecordType</name>
         <label>RecordType</label>
         <locationX>50</locationX>
-        <locationY>518</locationY>
+        <locationY>638</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Create_Opportunity</targetReference>
@@ -328,19 +306,19 @@ TEXT({!GetCaserecords.HRCSVC_Location__r.HRCFSL_Country__c}) +&apos; &apos; +{!$
         </outputAssignments>
     </recordLookups>
     <screens>
-        <name>Check_the_Order_Type_Status</name>
+        <name>Check_the_Order_Type_Status_0</name>
         <label>Check the Order Type Status</label>
         <locationX>50</locationX>
-        <locationY>758</locationY>
+        <locationY>518</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
         <connector>
-            <targetReference>Create_Quote_Fields</targetReference>
+            <targetReference>RecordType</targetReference>
         </connector>
         <fields>
-            <name>Please_select_the_Order_Type</name>
-            <fieldText>&lt;p&gt;Please Select Order Type&lt;/p&gt;</fieldText>
+            <name>Please_select_the_Order_Type_0</name>
+            <fieldText>&lt;p&gt;Please select Order Type (if known)&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
@@ -350,6 +328,22 @@ TEXT({!GetCaserecords.HRCSVC_Location__r.HRCFSL_Country__c}) +&apos; &apos; +{!$
             <fieldText>Order Type</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>false</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>QuoteNavScreen</name>
+        <label>QuoteNavScreen</label>
+        <locationX>50</locationX>
+        <locationY>998</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>lblNavToQuote</name>
+            <fieldText>&lt;p&gt;Please click &lt;a href=&quot;/{!Quote}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;here &lt;/a&gt;to navigate to the Quote.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>true</showHeader>

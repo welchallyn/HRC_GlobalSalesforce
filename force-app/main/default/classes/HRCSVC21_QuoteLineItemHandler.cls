@@ -22,7 +22,7 @@ public class HRCSVC21_QuoteLineItemHandler {
     public void onAfterUpdate(List<QuoteLineItem> NewQuoteLines, Map<id,QuoteLineItem> OldQuoteLines){
         Set<id> QuoteLines = new Set<id>();
         for(QuoteLineItem q : NewQuoteLines){
-            if(q.Product2Id != OldQuoteLines.get(q.id).Product2Id){
+            if(q.Quantity != OldQuoteLines.get(q.id).Quantity){
                 QuoteLines.add(q.id);
             }
         }

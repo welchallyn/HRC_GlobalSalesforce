@@ -65,9 +65,10 @@ public class HRCSVC21_QuoteLineItemHandlerTest implements HttpCalloutMock {
          insert q;
         QuoteLineItem qli= new QuoteLineItem(QuoteId=q.id,Product2Id=product1.id,Quantity=100,UnitPrice=100,PricebookEntryId=testStdPBE.id);
         insert qli;
-      /*  qli.Product2Id=product.id;
-        update qli;*/
+       qli.Quantity=10;
+        update qli;
         system.debug('quuiii'+qli);
+        test.stopTest();
         
     }
 }

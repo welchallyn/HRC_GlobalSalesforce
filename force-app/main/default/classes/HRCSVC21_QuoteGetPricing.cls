@@ -27,11 +27,7 @@ public class HRCSVC21_QuoteGetPricing {
             String result=response.getBody();
             if(response.getStatusCode() == 200){      
                 Map<String, String> mapOrd = (Map<String, String>) JSON.deserialize(result, Map<String, String>.class);
-                //String unitprice= mapOrd.get('priceUnit');
-                //String curCode = mapOrd.get('currencyCode');
-                qli.HRCSVC21_Unit_Price__c=decimal.valueOf(mapOrd.get('priceUnit'));
-               // qli.UnitPrice=decimal.valueOf(unitprice);
-               // qli.CurrencyIsoCode = mapOrd.get('currencyCode');
+               	qli.UnitPrice=decimal.valueOf(mapOrd.get('priceUnit'));
                 if(qli.HRCSVC21_Error_Message__c != NULL){
                     qli.HRCSVC21_Error_Message__c = NULL;
                 }              

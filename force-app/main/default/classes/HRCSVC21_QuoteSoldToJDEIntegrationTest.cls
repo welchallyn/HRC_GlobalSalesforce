@@ -53,7 +53,7 @@ public class HRCSVC21_QuoteSoldToJDEIntegrationTest implements HttpCalloutMock {
         try{
     	     
 		// Set mock callout class 
-        Test.setMock(HttpCalloutMock.class, new HRCSVC21_SoldToJDEIntegrationTest());
+        Test.setMock(HttpCalloutMock.class, new HRCSVC21_QuoteSoldToJDEIntegrationTest());
         Test.startTest();
         Schema.Location loc = HRCFSL_TestUtilityClass.createCustomer(true, 'Customer1234');
         //Account acc = new Account (name ='Test Account', CurrencyIsoCode = 'USD - U.S. Dollar');
