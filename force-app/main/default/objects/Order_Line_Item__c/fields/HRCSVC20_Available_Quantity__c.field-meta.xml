@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Quantity__c</fullName>
+    <fullName>HRCSVC20_Available_Quantity__c</fullName>
+    <description>Available Quantity of a part returned by Inventory check integration to JDE. SE-2780</description>
     <externalId>false</externalId>
-    <label>Quantity</label>
+    <label>Available Quantity</label>
     <precision>18</precision>
     <required>false</required>
     <scale>0</scale>
