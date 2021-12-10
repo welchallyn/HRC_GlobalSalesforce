@@ -998,6 +998,8 @@
 		<members>Quote.HRCSVC21_Pricing_Processing_Version__c</members>
 		<members>Quote.HRCSVC21_Error_Message__c</members>
 		<members>QuoteLineItem.HRCSVC21_Error_Message__c</members>
+		<members>QuoteLineItem.HRCSVC21_Product_Description__c</members>
+		<members>Quote.HRCSVC21_Order__c</members>
 		<name>CustomField</name>
 	</types>
 	<types>
@@ -1524,6 +1526,7 @@
 		<members>HRCSVC21_Get_UnitPrice</members>
 		<members>HRCFSL_Capture_Signature</members>
 		<members>HRCSVC21_Quote_Actions</members>
+		<members>HRCSVC21_Get_SoldTo</members>
 		<name>Flow</name>
 	</types>
 	<types>
@@ -2152,6 +2155,7 @@
 		<members>WorkOrder.Estimate_Form</members>
 		<members>Quote.HRCSVC20_Generate_Quote_PDF</members>
 		<members>Order_Line_Item__c.HRCSVC21_Get_Unit_Price</members>
+		<members>Order__c.Get_SoldTo</members>
 		<name>WebLink</name>
 	</types>
 	<types>
