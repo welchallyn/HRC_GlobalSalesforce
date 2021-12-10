@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Created as part of SE-2798. On click of this quick action flow(Create_Parts_Order_from_Quote) is invoked to create Parts Order</description>
+    <flowDefinition>HRCSVC21_Create_Parts_Order_From_Quote</flowDefinition>
+    <label>Create Parts Order</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

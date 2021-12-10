@@ -442,11 +442,6 @@
             <sortOrder>31</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>Clone</actionName>
-            <actionType>StandardButton</actionType>
-            <sortOrder>32</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
             <actionName>Case.HRCSVC_New_Reference</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>33</sortOrder>
@@ -540,6 +535,11 @@
             <actionName>ChangeRecordType</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>20</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>Clone</actionName>
+            <actionType>StandardButton</actionType>
+            <sortOrder>32</sortOrder>
         </platformActionListItems>
     </platformActionList>
     <quickActionList>
