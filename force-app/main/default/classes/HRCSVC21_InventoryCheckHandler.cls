@@ -109,8 +109,8 @@ global class HRCSVC21_InventoryCheckHandler {
         
         Http http = new Http();
         HttpRequest request = new HttpRequest();
-        request.setHeader('clientid',(String) mapEd.get('HRCSVC21_Inventory').HRCSVC21_Client_Id__c);
-        request.setHeader('clientsecret', mapEd.get('HRCSVC21_Inventory').HRCSVC21_Client_Secret__c);
+        request.setHeader('client_id',(String) mapEd.get('HRCSVC21_Inventory').HRCSVC21_Client_Id__c);
+        request.setHeader('client_secret', mapEd.get('HRCSVC21_Inventory').HRCSVC21_Client_Secret__c);
         request.setHeader('X-Correlation-ID', mapEd.get('HRCSVC21_Inventory').HRCSVC21_X_Correlation_ID__c);
         request.setHeader('Content-Type',mapEd.get('HRCSVC21_Inventory').HRCSVC21_Content_Type__c);
         //String endpoint = mapEd.get('HRCSVC21_Inventory').HRCSVC21_URL__c+'?businessUnit=99635&processingVersion=HRC0005A&shipToEntityId=3200864&partsNumber=159964';
