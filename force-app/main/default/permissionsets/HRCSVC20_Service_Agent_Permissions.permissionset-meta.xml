@@ -29,6 +29,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>HRCSVC21_CQ_TriggerHandler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>HRCSVC21_Get_Pricing</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -42,6 +46,18 @@
     </classAccesses>
     <classAccesses>
         <apexClass>HRCSVC21_OLI_Handler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>HRCSVC21_QuoteGetPricing</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>HRCSVC21_QuoteLineItemHandler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>HRCSVC21_QuoteSoldToJDEIntegration</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -220,6 +236,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>HRCSVC_Complaint_Qualification__c.HRCSVC_PM_sticker_date_if_present__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>HRCSVC_Complaint_Qualification__c.HRCSVC_Patient_Identifier_PersonImpacted__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -384,6 +405,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Order_Line_Item__c.HRCSVC20_Extended_Price__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Order_Line_Item__c.HRCSVC20_Unit_Price__c</field>
         <readable>true</readable>
@@ -410,6 +436,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Order__c.HRCSVC21_Quote__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Order__c.HRCSVC21_Service_Location__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -429,8 +460,18 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Quote.HRCSVC21_Business_Unit__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Quote.HRCSVC21_Comments__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Quote.HRCSVC21_Error_Message__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -439,8 +480,18 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Quote.HRCSVC21_Pricing_Processing_Version__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Quote.HRCSVC21_Sold_to_location__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>QuoteLineItem.HRCSVC21_Error_Message__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -522,6 +573,10 @@
         <apexPage>HRCSVC20_Quote_PDF_Generation</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
+    <recordTypeVisibilities>
+        <recordType>Opportunity.Quote</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
     <recordTypeVisibilities>
         <recordType>Order__c.HRCSVC_Evaluation_Orders</recordType>
         <visible>true</visible>
