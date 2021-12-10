@@ -1,11 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <actionCalls>
+        <name>Navigate_to_Parts_Order</name>
+        <label>Navigate to Parts Order</label>
+        <locationX>50</locationX>
+        <locationY>1694</locationY>
+        <actionName>c:navigateToRecord</actionName>
+        <actionType>component</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>sObject</name>
+            <value>
+                <stringValue>Order__c</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>Order</elementReference>
+            </value>
+        </inputParameters>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <actionCalls>
+        <name>Navigate_to_Parts_Order_0</name>
+        <label>Navigate to Parts Order</label>
+        <locationX>314</locationX>
+        <locationY>1238</locationY>
+        <actionName>c:navigateToRecord</actionName>
+        <actionType>component</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>sObject</name>
+            <value>
+                <stringValue>Order__c</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>Order</elementReference>
+            </value>
+        </inputParameters>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <actionCalls>
+        <name>Navigate_to_Quote</name>
+        <label>Navigate to Quote</label>
+        <locationX>578</locationX>
+        <locationY>518</locationY>
+        <actionName>c:navigateToRecord</actionName>
+        <actionType>component</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>sObject</name>
+            <value>
+                <stringValue>Quote</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </inputParameters>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
     <apiVersion>53.0</apiVersion>
     <assignments>
         <name>Create_0_0_0</name>
         <label>Create</label>
         <locationX>138</locationX>
-        <locationY>998</locationY>
+        <locationY>1238</locationY>
         <assignmentItems>
             <assignToReference>OLIVar.Product__c</assignToReference>
             <operator>Assign</operator>
@@ -56,7 +122,7 @@
         <name>Create_0_0_0_0</name>
         <label>Create</label>
         <locationX>138</locationX>
-        <locationY>1118</locationY>
+        <locationY>1358</locationY>
         <assignmentItems>
             <assignToReference>OliCollection</assignToReference>
             <operator>Add</operator>
@@ -68,11 +134,27 @@
             <targetReference>Loop</targetReference>
         </connector>
     </assignments>
+    <assignments>
+        <name>Set_Order_On_Quote</name>
+        <label>Set Order On Quote</label>
+        <locationX>182</locationX>
+        <locationY>758</locationY>
+        <assignmentItems>
+            <assignToReference>CheckQuoteStatus.HRCSVC21_Order__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Order</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Quote</targetReference>
+        </connector>
+    </assignments>
     <decisions>
         <name>Check_if_QLi_is_available</name>
         <label>Check if QLi is available</label>
         <locationX>182</locationX>
-        <locationY>758</locationY>
+        <locationY>998</locationY>
         <defaultConnector>
             <targetReference>OrderLineItems_0_0</targetReference>
         </defaultConnector>
@@ -119,12 +201,20 @@
                     <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
+            <conditions>
+                <leftValueReference>CheckQuoteStatus.HRCSVC21_Order_Type__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
             <connector>
                 <targetReference>Get_Quote_line_Item_records</targetReference>
             </connector>
             <label>Status is Accepted</label>
         </rules>
     </decisions>
+    <description>DB 8-Dec 2021: added navigation to Parts Order</description>
     <dynamicChoiceSets>
         <name>OrderId</name>
         <dataType>String</dataType>
@@ -158,7 +248,7 @@
         <name>Loop</name>
         <label>Loop</label>
         <locationX>50</locationX>
-        <locationY>878</locationY>
+        <locationY>1118</locationY>
         <collectionReference>QLIRec</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -194,7 +284,7 @@
         <locationY>638</locationY>
         <assignRecordIdToReference>Order</assignRecordIdToReference>
         <connector>
-            <targetReference>Check_if_QLi_is_available</targetReference>
+            <targetReference>Set_Order_On_Quote</targetReference>
         </connector>
         <inputAssignments>
             <field>HRCSVC21_Quote__c</field>
@@ -244,9 +334,9 @@
         <name>OrderLineItems_0</name>
         <label>OrderLineItems</label>
         <locationX>50</locationX>
-        <locationY>1334</locationY>
+        <locationY>1574</locationY>
         <connector>
-            <targetReference>Successful_0</targetReference>
+            <targetReference>Navigate_to_Parts_Order</targetReference>
         </connector>
         <inputReference>OliCollection</inputReference>
     </recordCreates>
@@ -254,10 +344,10 @@
         <name>OrderLineItems_0_0</name>
         <label>OrderLineItems</label>
         <locationX>314</locationX>
-        <locationY>878</locationY>
+        <locationY>1118</locationY>
         <assignRecordIdToReference>OrderLineItem</assignRecordIdToReference>
         <connector>
-            <targetReference>Successful_0_0</targetReference>
+            <targetReference>Navigate_to_Parts_Order_0</targetReference>
         </connector>
         <inputAssignments>
             <field>HRCSVC20_Extended_Price__c</field>
@@ -367,6 +457,16 @@
             <field>Id</field>
         </outputAssignments>
     </recordLookups>
+    <recordUpdates>
+        <name>Update_Quote</name>
+        <label>Update Quote</label>
+        <locationX>182</locationX>
+        <locationY>878</locationY>
+        <connector>
+            <targetReference>Check_if_QLi_is_available</targetReference>
+        </connector>
+        <inputReference>CheckQuoteStatus</inputReference>
+    </recordUpdates>
     <screens>
         <name>Error_Screen</name>
         <label>Error Screen</label>
@@ -375,6 +475,9 @@
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Navigate_to_Quote</targetReference>
+        </connector>
         <fields>
             <name>Fault_Screen</name>
             <fieldText>&lt;p&gt;&lt;b&gt;Please check the quote status&lt;/b&gt;&lt;/p&gt;</fieldText>
@@ -392,7 +495,7 @@
         </fields>
         <fields>
             <name>ExpirationDatecheck</name>
-            <fieldText>&lt;p&gt;The Quote was expired. &lt;/p&gt;&lt;p&gt;You cannot create Parts Order&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;The Quote has expired or hasn&apos;t been accepted yet.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(250, 1, 1);&quot;&gt;You cannot create a Parts Order at this time&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Please click &quot;&lt;b&gt;Finish&lt;/b&gt;&quot; to return to the Quote.&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
             <visibilityRule>
                 <conditionLogic>and</conditionLogic>
@@ -405,37 +508,20 @@
                 </conditions>
             </visibilityRule>
         </fields>
-        <showFooter>true</showFooter>
-        <showHeader>true</showHeader>
-    </screens>
-    <screens>
-        <name>Successful_0</name>
-        <label>Successful</label>
-        <locationX>50</locationX>
-        <locationY>1454</locationY>
-        <allowBack>true</allowBack>
-        <allowFinish>true</allowFinish>
-        <allowPause>true</allowPause>
         <fields>
-            <name>redirectViaURL_0</name>
-            <fieldText>&lt;p&gt;Click &lt;a href=&quot;/{!Order}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;here &lt;/a&gt;to view this record&lt;/p&gt;</fieldText>
+            <name>Order_Type</name>
+            <fieldText>&lt;p&gt;&lt;b&gt;The Order Type is blank&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Please select the value to create a Parts Order&lt;/b&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
-        </fields>
-        <showFooter>true</showFooter>
-        <showHeader>true</showHeader>
-    </screens>
-    <screens>
-        <name>Successful_0_0</name>
-        <label>Successful</label>
-        <locationX>314</locationX>
-        <locationY>998</locationY>
-        <allowBack>true</allowBack>
-        <allowFinish>true</allowFinish>
-        <allowPause>true</allowPause>
-        <fields>
-            <name>redirectViaURL_0_0</name>
-            <fieldText>&lt;p&gt;Click &lt;a href=&quot;/{!Order}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;here &lt;/a&gt;to view this record&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>CheckQuoteStatus.HRCSVC21_Order_Type__c</leftValueReference>
+                    <operator>IsNull</operator>
+                    <rightValue>
+                        <booleanValue>true</booleanValue>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>true</showHeader>
