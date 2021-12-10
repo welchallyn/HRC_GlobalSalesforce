@@ -68,7 +68,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>HRCSVC_ETQ_Workflow__c</field>
+                <field>HRCSVC21_Display_ETQ_Workflow__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -131,6 +131,10 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
+                <field>HRCSVC_Contact_Details__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
                 <field>HRCSVC_Delay_in_treatment_or_Procedure__c</field>
             </layoutItems>
         </layoutColumns>
@@ -152,7 +156,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>HRCSVC_Date_of_the_Event__c</field>
+                <field>HRCSVC_Individual_s_Outcome__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -162,7 +166,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>HRCSVC_Individual_s_Outcome__c</field>
+                <field>HRCSVC_Date_of_the_Event__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
@@ -214,7 +218,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>HRCSVC_Weight_unit_of_measure__c</field>
+                <field>HRCSVC_Weight__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -228,7 +232,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>HRCSVC_Weight__c</field>
+                <field>HRCSVC_Weight_unit_of_measure__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
@@ -245,11 +249,11 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>HRCSVC20_Complaint_Resolution__c</field>
+                <field>HRCSVC_Test_performed_per_service_manual__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>HRCSVC_Test_performed_per_service_manual__c</field>
+                <field>HRCSVC20_Complaint_Resolution__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -267,7 +271,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>HRCSVC_PM_Sticker_Present__c</field>
+                <field>HRCSVC_PM_sticker_date_if_present__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
