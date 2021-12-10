@@ -271,7 +271,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>HRCSVC_PM_Sticker_Present__c</field>
+                <field>HRCSVC_PM_sticker_date_if_present__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
