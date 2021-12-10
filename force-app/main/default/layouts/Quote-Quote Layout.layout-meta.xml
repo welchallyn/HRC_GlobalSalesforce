@@ -49,10 +49,10 @@
                 <behavior>Required</behavior>
                 <field>HRCSVC21_Ship_to_location__c</field>
             </layoutItems>
-            <!--<layoutItems>
+            <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Name__c</field>
-            </layoutItems>-->
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
