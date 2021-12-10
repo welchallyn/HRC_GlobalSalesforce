@@ -68,6 +68,7 @@
 		<members>HRCSVC21_QuoteLineItemHandlerTest</members>
 		<members>HRCSVC21_QuoteSoldToJDEIntegration</members>
 		<members>HRCSVC21_QuoteSoldToJDEIntegrationTest</members>
+		<members>HRCSVC21_InventoryCheckHandler_Test</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
