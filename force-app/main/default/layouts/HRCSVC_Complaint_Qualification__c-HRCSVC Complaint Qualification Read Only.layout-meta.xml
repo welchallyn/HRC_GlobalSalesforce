@@ -25,7 +25,7 @@
                 <field>HRCSVC_ETQ_Complaint__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRCSVC_Case__c</field>
             </layoutItems>
             <layoutItems>
@@ -33,25 +33,25 @@
                 <field>HRCSVC21_Location__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRCSVC_Aware_Date__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRCSVC_Source_Of_Complaint__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRCSVC_Describe_Malfunction_Event__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRCSVC_Injury_or_Death__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>OwnerId</field>
             </layoutItems>
             <layoutItems>
@@ -63,7 +63,7 @@
                 <field>HRCSVC_Resolution_Status__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRCSVC_Contact__c</field>
             </layoutItems>
             <layoutItems>
@@ -71,19 +71,19 @@
                 <field>HRCSVC21_Display_ETQ_Workflow__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRCSVC_Complaint_Occupation__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRCSVC_Document_troubleshooting__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRCSVC_Condition__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRCSVC20_Describe_Other_Condition__c</field>
             </layoutItems>
         </layoutColumns>
@@ -96,41 +96,41 @@
         <label>Conditional Questions</label>
         <layoutColumns>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRCSVC_Device_Message_Alert__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRCSVC_Occurrence_Location_Complaint__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRCSVC_Occurrence_Date_Known__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRCSVC_Healthcare_Professional__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRCSVC_Medical_Treatment_or_Intervention__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRCSVC_Specific_Error_Message__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRCSVC_Occurrence_Location_Other__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRCSVC_Occurrence_Date__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRCSVC_Delay_in_treatment_or_Procedure__c</field>
             </layoutItems>
         </layoutColumns>
@@ -143,25 +143,25 @@
         <label>Injury/Patient Involvement Questions</label>
         <layoutColumns>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRCSVC_What_was_the_Injury__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRCSVC_Is_the_date_of_the_injury_known__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRCSVC_Individual_s_Outcome__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRCSVC_Individual_s_Medical_Diagnosis__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRCSVC_Date_of_the_Event__c</field>
             </layoutItems>
         </layoutColumns>
@@ -174,25 +174,25 @@
         <label>Death Questions</label>
         <layoutColumns>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRCSVC_Device_Used_On_With_Individual__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRCSVC_Cause_of_death_if_known__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRCSVC_Is_the_date_of_the_death_known__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRCSVC_Individual_Medical_Diagnosis__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRCSVC_What_is_the_date_of_the_death__c</field>
             </layoutItems>
         </layoutColumns>
@@ -205,29 +205,29 @@
         <label>Patient Information</label>
         <layoutColumns>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRCSVC_Patient_Identifier__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRCSVC_Age__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRCSVC_Weight__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRCSVC_Gender__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRCSVC_Age_unit_of_measure__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRCSVC_Weight_unit_of_measure__c</field>
             </layoutItems>
         </layoutColumns>
@@ -240,45 +240,45 @@
         <label>Resolution</label>
         <layoutColumns>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRC_Functioning_as_designed_post_repair__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRCSVC_Test_performed_per_service_manual__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRCSVC20_Complaint_Resolution__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRCSVC_Occurrence_Location__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRCSVC_Second_device_relationship_Model__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRCSVC_Explain_if_No__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRCSVC_PM_sticker_date_if_present__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRCSVC_PCMS_ID__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRCSVC_Investigation_ID__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRCSVC_Additional_Information__c</field>
             </layoutItems>
         </layoutColumns>
@@ -372,7 +372,7 @@
                 <field>HRCSVC21_Assigned_Engineer__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>HRCSVC_Return_Order_Line_Item__c</field>
             </layoutItems>
         </layoutColumns>
@@ -446,22 +446,16 @@
     <platformActionList>
         <actionListContext>Record</actionListContext>
         <platformActionListItems>
-            <actionName>HRCSVC_Complaint_Qualification__c.HRCSVC20_Mark_as_Translated</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>1</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
             <actionName>HRCSVC_Complaint_Qualification__c.HRCSVC20_Requires_Translation</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>0</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>Submit</actionName>
-            <actionType>StandardButton</actionType>
-            <sortOrder>2</sortOrder>
+            <actionName>HRCSVC_Complaint_Qualification__c.HRCSVC20_Mark_as_Translated</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>1</sortOrder>
         </platformActionListItems>
     </platformActionList>
-    <quickActionList/>
     <relatedLists>
         <relatedList>RelatedNoteList</relatedList>
     </relatedLists>
@@ -490,6 +484,9 @@
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
+        <fields>OBJECT_ID</fields>
+        <fields>HRCFSL_SA_Status__c</fields>
+        <fields>HRCFSL_Status_Change_Time__c</fields>
         <relatedList>HRCFSL_Platform_Event_Log__c.Complaint_Qualification__c</relatedList>
     </relatedLists>
     <relatedLists>
@@ -504,7 +501,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h4W00000WUUC8</masterLabel>
+        <masterLabel>00h75000000RGlY</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>
