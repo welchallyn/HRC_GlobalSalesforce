@@ -993,7 +993,7 @@
 		<members>Order_Line_Item__c.HRCSVC20_Unit_Price__c</members>
 		<members>Order_Line_Item__c.HRCSVC21_Error_Message__c</members>
 		<members>HRCSVC_Complaint_Qualification__c.HRCSVC21_Complaint_Attachment_Info__c</members>
-		<members>Workorder.HRCSVC21_Has_CQ__c</members>
+		<!--<members>Workorder.HRCSVC21_Has_CQ__c</members>-->
 		<members>Quote.HRCSVC21_Business_Unit__c</members>
 		<members>Quote.HRCSVC21_Pricing_Processing_Version__c</members>
 		<members>Quote.HRCSVC21_Error_Message__c</members>
@@ -1524,7 +1524,7 @@
 		<members>HRCSVC21_Create_Quote_From_Case</members>
 		<members>HRCSVC21_Create_Parts_Order_From_Quote</members>
 		<members>HRCSVC21_Get_UnitPrice</members>
-		<members>HRCFSL_Capture_Signature</members>
+		<!--<members>HRCFSL_Capture_Signature</members>-->
 		<members>HRCSVC21_Quote_Actions</members>
 		<members>HRCSVC21_Get_SoldTo</members>
 		<name>Flow</name>
@@ -2137,15 +2137,15 @@
 		<members>Case.SW_Version_Required_to_Close</members>
         <members>WorkOrder.HRCFSL_Comments_Are_Required</members>
 		<members>Order__c.HRCSVC20_Order_Not_Allowed_For_Customer</members>
-		<members>ServiceAppointment.HRCSVC20_Occurence_loc_Reqd_On_Closure</members>
+		<!--<members>ServiceAppointment.HRCSVC20_Occurence_loc_Reqd_On_Closure</members>
 		<members>ServiceAppointment.HRCSVC21_Describe_Cause_Reqd_On_Closure</members>
 		<members>ServiceAppointment.HRCSVC21_Resolution_Reqd_On_Closure</members>
-		<members>ServiceAppointment.HRCSVC20_Test_Performed_Reqd_on_Closure</members>
+		<members>ServiceAppointment.HRCSVC20_Test_Performed_Reqd_on_Closure</members>-->
 		<members>Case.HRCSVC21_Reqd_fields_on_CQ_check</members>
 		<members>Quote.HRCSVC21_Quote_Expiration_Date</members>
 		<members>Quote.HRCSVC21_Quote_Status_Accepted</members>
 		<members>QuoteLineItem.HRCSVC21_QuoteLineItem_ExpirationDate</members>
-		<members>ServiceAppointment.HRCSVC20_fnc_on_post_rep_Reqd_On_Closure</members>
+		<!--<members>ServiceAppointment.HRCSVC20_fnc_on_post_rep_Reqd_On_Closure</members>-->
 		<name>ValidationRule</name>
 	</types>
 	<types>
