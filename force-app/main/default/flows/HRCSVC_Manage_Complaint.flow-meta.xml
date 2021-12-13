@@ -617,13 +617,6 @@
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>myComplaintQualification.HRCSVC_Contact__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>Get_Case.ContactId</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
             <assignToReference>myComplaintQualification.HRCSVC_Complaint_Occupation__c</assignToReference>
             <operator>Assign</operator>
             <value>
@@ -673,13 +666,6 @@
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>myComplaintQualification.HRCSVC_Contact_Details__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>Contact_Deatils</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
             <assignToReference>myComplaintQualification.HRCSVC_Describe_Malfunction_Event__c</assignToReference>
             <operator>Assign</operator>
             <value>
@@ -698,6 +684,13 @@
             <operator>Assign</operator>
             <value>
                 <elementReference>Describe_Other_Condition</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>myComplaintQualification.HRCSVC_Patient_Identifier__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Patient_Identifier_Person_Impacted_first_last_name</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -802,6 +795,20 @@
             <operator>Assign</operator>
             <value>
                 <elementReference>Resolution</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>myComplaintQualification.HRCSVC_Explain_if_No__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Explain_If_No</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>myComplaintQualification.HRC_Functioning_as_designed_post_repair__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Functioning_as_designed_post_repair</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -2053,6 +2060,9 @@
         <fields>
             <name>Patient_Identifier_Person_Impacted_first_last_name</name>
             <dataType>String</dataType>
+            <defaultValue>
+                <elementReference>myComplaintQualification.HRCSVC_Patient_Identifier__c</elementReference>
+            </defaultValue>
             <fieldText>Patient Identifier/Person Impacted (first/last name)</fieldText>
             <fieldType>InputField</fieldType>
             <isRequired>false</isRequired>
@@ -2390,33 +2400,6 @@
                     <operator>EqualTo</operator>
                     <rightValue>
                         <stringValue>No</stringValue>
-                    </rightValue>
-                </conditions>
-            </visibilityRule>
-        </fields>
-        <fields>
-            <name>Contact_Deatils</name>
-            <dataType>String</dataType>
-            <defaultValue>
-                <elementReference>myComplaintQualification.HRCSVC_Contact_Details__c</elementReference>
-            </defaultValue>
-            <fieldText>Contact Details</fieldText>
-            <fieldType>InputField</fieldType>
-            <isRequired>false</isRequired>
-            <visibilityRule>
-                <conditionLogic>and</conditionLogic>
-                <conditions>
-                    <leftValueReference>Injury_or_Death</leftValueReference>
-                    <operator>EqualTo</operator>
-                    <rightValue>
-                        <stringValue>No</stringValue>
-                    </rightValue>
-                </conditions>
-                <conditions>
-                    <leftValueReference>Condition</leftValueReference>
-                    <operator>NotEqualTo</operator>
-                    <rightValue>
-                        <stringValue>None</stringValue>
                     </rightValue>
                 </conditions>
             </visibilityRule>
