@@ -409,13 +409,6 @@
                 <stringValue></stringValue>
             </value>
         </assignmentItems>
-        <assignmentItems>
-            <assignToReference>myComplaintQualification.HRCSVC_Individual_Medical_Diagnosis__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue></stringValue>
-            </value>
-        </assignmentItems>
         <connector>
             <targetReference>Check_if_Asset_is_null</targetReference>
         </connector>
@@ -487,7 +480,7 @@
             <assignToReference>myComplaintQualification.HRCSVC_Individual_s_Medical_Diagnosis__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>INJURY_What_is_the_individual_s_current_medical_diagnosis_and_medical_history</elementReference>
+                <elementReference>What_is_the_individual_s_current_medical_diagnosis_and_medical_history</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -624,13 +617,6 @@
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>myComplaintQualification.HRCSVC_Contact__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>Get_Case.ContactId</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
             <assignToReference>myComplaintQualification.HRCSVC_Complaint_Occupation__c</assignToReference>
             <operator>Assign</operator>
             <value>
@@ -680,13 +666,6 @@
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>myComplaintQualification.HRCSVC_Contact_Details__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>Contact_Deatils</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
             <assignToReference>myComplaintQualification.HRCSVC_Describe_Malfunction_Event__c</assignToReference>
             <operator>Assign</operator>
             <value>
@@ -712,13 +691,6 @@
             <operator>Assign</operator>
             <value>
                 <elementReference>Patient_Identifier_Person_Impacted_first_last_name</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>myComplaintQualification.HRCSVC_Individual_Medical_Diagnosis__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>DEATH_What_is_the_individual_s_current_medical_diagnosis_and_medical_history</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -1183,7 +1155,7 @@
             <label>Resolution Yes</label>
         </rules>
     </decisions>
-    <description>v16: SE-2864 - Manage Complaint - Describe Other Condition</description>
+    <description>v13: Added Doc Troubleshooting field to Resolution screen</description>
     <dynamicChoiceSets>
         <name>AgeUnitOfMeasureDefault</name>
         <dataType>Picklist</dataType>
@@ -1748,9 +1720,6 @@
                 <fields>
                     <name>Describe_Other_Condition</name>
                     <dataType>String</dataType>
-                    <defaultValue>
-                        <elementReference>myComplaintQualification.HRCSVC20_Describe_Other_Condition__c</elementReference>
-                    </defaultValue>
                     <fieldText>Describe Other Condition</fieldText>
                     <fieldType>InputField</fieldType>
                     <isRequired>true</isRequired>
@@ -2062,7 +2031,7 @@
             </visibilityRule>
         </fields>
         <fields>
-            <name>INJURY_What_is_the_individual_s_current_medical_diagnosis_and_medical_history</name>
+            <name>What_is_the_individual_s_current_medical_diagnosis_and_medical_history</name>
             <dataType>String</dataType>
             <defaultValue>
                 <elementReference>myComplaintQualification.HRCSVC_Individual_s_Medical_Diagnosis__c</elementReference>
@@ -2071,7 +2040,7 @@
             <fieldType>InputField</fieldType>
             <isRequired>false</isRequired>
             <visibilityRule>
-                <conditionLogic>and</conditionLogic>
+                <conditionLogic>1 OR 2</conditionLogic>
                 <conditions>
                     <leftValueReference>Injury_or_Death</leftValueReference>
                     <operator>EqualTo</operator>
@@ -2079,19 +2048,6 @@
                         <stringValue>Injury/Patient Involvement</stringValue>
                     </rightValue>
                 </conditions>
-            </visibilityRule>
-        </fields>
-        <fields>
-            <name>DEATH_What_is_the_individual_s_current_medical_diagnosis_and_medical_history</name>
-            <dataType>String</dataType>
-            <defaultValue>
-                <elementReference>myComplaintQualification.HRCSVC_Individual_Medical_Diagnosis__c</elementReference>
-            </defaultValue>
-            <fieldText>What is the individual&apos;s current medical diagnosis and medical history?</fieldText>
-            <fieldType>InputField</fieldType>
-            <isRequired>false</isRequired>
-            <visibilityRule>
-                <conditionLogic>and</conditionLogic>
                 <conditions>
                     <leftValueReference>Injury_or_Death</leftValueReference>
                     <operator>EqualTo</operator>
@@ -2397,7 +2353,7 @@
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
             <visibilityRule>
-                <conditionLogic>(1 OR 3) AND 2</conditionLogic>
+                <conditionLogic>1 AND 2</conditionLogic>
                 <conditions>
                     <leftValueReference>Injury_or_Death</leftValueReference>
                     <operator>EqualTo</operator>
@@ -2412,13 +2368,6 @@
                         <stringValue>None</stringValue>
                     </rightValue>
                 </conditions>
-                <conditions>
-                    <leftValueReference>Injury_or_Death</leftValueReference>
-                    <operator>EqualTo</operator>
-                    <rightValue>
-                        <stringValue>Asked but not provided</stringValue>
-                    </rightValue>
-                </conditions>
             </visibilityRule>
         </fields>
         <fields>
@@ -2431,7 +2380,7 @@
             <fieldType>InputField</fieldType>
             <isRequired>true</isRequired>
             <visibilityRule>
-                <conditionLogic>1 AND 2 AND (3 OR 4)</conditionLogic>
+                <conditionLogic>and</conditionLogic>
                 <conditions>
                     <leftValueReference>Condition</leftValueReference>
                     <operator>NotEqualTo</operator>
@@ -2451,47 +2400,6 @@
                     <operator>EqualTo</operator>
                     <rightValue>
                         <stringValue>No</stringValue>
-                    </rightValue>
-                </conditions>
-                <conditions>
-                    <leftValueReference>Injury_or_Death</leftValueReference>
-                    <operator>EqualTo</operator>
-                    <rightValue>
-                        <stringValue>Asked but not provided</stringValue>
-                    </rightValue>
-                </conditions>
-            </visibilityRule>
-        </fields>
-        <fields>
-            <name>Contact_Deatils</name>
-            <dataType>String</dataType>
-            <defaultValue>
-                <elementReference>myComplaintQualification.HRCSVC_Contact_Details__c</elementReference>
-            </defaultValue>
-            <fieldText>Contact Details</fieldText>
-            <fieldType>InputField</fieldType>
-            <isRequired>false</isRequired>
-            <visibilityRule>
-                <conditionLogic>(1 OR 3) AND 2</conditionLogic>
-                <conditions>
-                    <leftValueReference>Injury_or_Death</leftValueReference>
-                    <operator>EqualTo</operator>
-                    <rightValue>
-                        <stringValue>No</stringValue>
-                    </rightValue>
-                </conditions>
-                <conditions>
-                    <leftValueReference>Condition</leftValueReference>
-                    <operator>NotEqualTo</operator>
-                    <rightValue>
-                        <stringValue>None</stringValue>
-                    </rightValue>
-                </conditions>
-                <conditions>
-                    <leftValueReference>Injury_or_Death</leftValueReference>
-                    <operator>EqualTo</operator>
-                    <rightValue>
-                        <stringValue>Asked but not provided</stringValue>
                     </rightValue>
                 </conditions>
             </visibilityRule>
