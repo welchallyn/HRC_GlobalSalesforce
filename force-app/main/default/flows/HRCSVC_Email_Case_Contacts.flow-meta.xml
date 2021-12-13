@@ -4,7 +4,7 @@
         <name>Send_Email</name>
         <label>Send Email</label>
         <locationX>50</locationX>
-        <locationY>3806</locationY>
+        <locationY>3590</locationY>
         <actionName>HRCSVC_Email_Case_Contacts</actionName>
         <actionType>apex</actionType>
         <connector>
@@ -41,7 +41,7 @@
         <name>Add_Case_Contact_Email</name>
         <label>Add Case Contact Email</label>
         <locationX>94</locationX>
-        <locationY>2366</locationY>
+        <locationY>2150</locationY>
         <assignmentItems>
             <assignToReference>emailAddresses</assignToReference>
             <operator>Add</operator>
@@ -57,7 +57,7 @@
         <name>Add_Contact_Email</name>
         <label>Add Contact Email</label>
         <locationX>512</locationX>
-        <locationY>3158</locationY>
+        <locationY>2942</locationY>
         <assignmentItems>
             <assignToReference>emailAddresses</assignToReference>
             <operator>Add</operator>
@@ -73,7 +73,7 @@
         <name>Add_Preferred_Email</name>
         <label>Add Preferred Email</label>
         <locationX>534</locationX>
-        <locationY>2246</locationY>
+        <locationY>2030</locationY>
         <assignmentItems>
             <assignToReference>emailAddresses</assignToReference>
             <operator>Add</operator>
@@ -86,10 +86,10 @@
         </connector>
     </assignments>
     <assignments>
-        <name>Assign_Account_Country_to_Case_0</name>
-        <label>Assign Account Country to Case</label>
-        <locationX>479</locationX>
-        <locationY>638</locationY>
+        <name>Assign_Account_Country</name>
+        <label>Assign Account Country</label>
+        <locationX>611</locationX>
+        <locationY>1094</locationY>
         <assignmentItems>
             <assignToReference>CaseCountry</assignToReference>
             <operator>Assign</operator>
@@ -98,30 +98,14 @@
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Assign_Case_Language_0</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>Assign_Case_Country</name>
-        <label>Assign Case Country</label>
-        <locationX>875</locationX>
-        <locationY>974</locationY>
-        <assignmentItems>
-            <assignToReference>CaseCountry</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>Get_Location_Details.HRCFSL_Country__c</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>Country_is_null</targetReference>
+            <targetReference>Get_Email_Body_Template</targetReference>
         </connector>
     </assignments>
     <assignments>
         <name>Assign_Case_Language</name>
         <label>Assign Case Language</label>
-        <locationX>875</locationX>
-        <locationY>518</locationY>
+        <locationX>611</locationX>
+        <locationY>398</locationY>
         <assignmentItems>
             <assignToReference>Caselanguage</assignToReference>
             <operator>Assign</operator>
@@ -134,26 +118,26 @@
         </connector>
     </assignments>
     <assignments>
-        <name>Assign_Case_Language_0</name>
-        <label>Assign Case Language</label>
-        <locationX>347</locationX>
-        <locationY>854</locationY>
+        <name>Assign_default_country</name>
+        <label>Assign default country</label>
+        <locationX>875</locationX>
+        <locationY>1094</locationY>
         <assignmentItems>
-            <assignToReference>Caselanguage</assignToReference>
+            <assignToReference>CaseCountry</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Get_Case_Details.Language</elementReference>
+                <elementReference>DefaultCountryCode</elementReference>
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Language_Is_null_0</targetReference>
+            <targetReference>Get_Email_Body_Template</targetReference>
         </connector>
     </assignments>
     <assignments>
         <name>Assign_Default_language</name>
         <label>Assign Default language</label>
-        <locationX>743</locationX>
-        <locationY>758</locationY>
+        <locationX>479</locationX>
+        <locationY>638</locationY>
         <assignmentItems>
             <assignToReference>Caselanguage</assignToReference>
             <operator>Assign</operator>
@@ -162,19 +146,19 @@
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Assign_Case_Country</targetReference>
+            <targetReference>Get_Location_Details_0</targetReference>
         </connector>
     </assignments>
     <assignments>
-        <name>Assign_Default_language_0_0</name>
-        <label>Assign Default language</label>
-        <locationX>215</locationX>
+        <name>Assign_Location_Country</name>
+        <label>Assign Location Country</label>
+        <locationX>347</locationX>
         <locationY>1094</locationY>
         <assignmentItems>
-            <assignToReference>Caselanguage</assignToReference>
+            <assignToReference>CaseCountry</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>EnglishLanguage</elementReference>
+                <elementReference>Get_Location_Details_0.HRCFSL_Country__c</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -185,7 +169,7 @@
         <name>Assign_Template</name>
         <label>Assign Template</label>
         <locationX>380</locationX>
-        <locationY>1886</locationY>
+        <locationY>1670</locationY>
         <assignmentItems>
             <assignToReference>emailTemplate</assignToReference>
             <operator>Assign</operator>
@@ -204,75 +188,11 @@
             <targetReference>Get_No_Reply_Email</targetReference>
         </connector>
     </assignments>
-    <assignments>
-        <name>Set_default_country_0</name>
-        <label>Set default country</label>
-        <locationX>743</locationX>
-        <locationY>1214</locationY>
-        <assignmentItems>
-            <assignToReference>CaseCountry</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>DefaultCountryCode</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>Get_Email_Body_Template</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>Set_default_country_0_0</name>
-        <label>Set default country</label>
-        <locationX>215</locationX>
-        <locationY>638</locationY>
-        <assignmentItems>
-            <assignToReference>CaseCountry</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>DefaultCountryCode</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>Assign_Case_Language_0</targetReference>
-        </connector>
-    </assignments>
-    <decisions>
-        <name>Account_Country_0</name>
-        <label>Account.Country</label>
-        <locationX>347</locationX>
-        <locationY>518</locationY>
-        <defaultConnector>
-            <targetReference>Assign_Account_Country_to_Case_0</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Account Country found</defaultConnectorLabel>
-        <rules>
-            <name>Blank_OR_FSL_Dummy_Account_0</name>
-            <conditionLogic>or</conditionLogic>
-            <conditions>
-                <leftValueReference>Get_Account_Details</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>Get_Account_Details.Name</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>FSL Dummy Account</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Set_default_country_0_0</targetReference>
-            </connector>
-            <label>Blank OR FSL Dummy Account</label>
-        </rules>
-    </decisions>
     <decisions>
         <name>Case_Contact_Exists</name>
         <label>Case Contact Exists, hasn&apos;t Opted Out?</label>
         <locationX>226</locationX>
-        <locationY>2246</locationY>
+        <locationY>2030</locationY>
         <defaultConnector>
             <targetReference>Email_Case_Contacts</targetReference>
         </defaultConnector>
@@ -311,7 +231,7 @@
         <name>Check_if_Metadata_record_is_available</name>
         <label>Check if Metadata record is available</label>
         <locationX>611</locationX>
-        <locationY>1766</locationY>
+        <locationY>1550</locationY>
         <defaultConnectorLabel>Not Available</defaultConnectorLabel>
         <rules>
             <name>Available</name>
@@ -337,42 +257,71 @@
         </rules>
     </decisions>
     <decisions>
-        <name>Country_is_null</name>
-        <label>Country is null?</label>
-        <locationX>875</locationX>
-        <locationY>1094</locationY>
+        <name>Determine_Country</name>
+        <label>Determine Country</label>
+        <locationX>611</locationX>
+        <locationY>974</locationY>
         <defaultConnector>
-            <targetReference>Get_Email_Body_Template</targetReference>
+            <targetReference>Assign_default_country</targetReference>
         </defaultConnector>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <defaultConnectorLabel>Use Default</defaultConnectorLabel>
         <rules>
-            <name>Yes_country_is_null</name>
-            <conditionLogic>or</conditionLogic>
+            <name>Valid_Location_Country</name>
+            <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>CaseCountry</leftValueReference>
+                <leftValueReference>Get_Location_Details_0</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
-                    <booleanValue>true</booleanValue>
+                    <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>CaseCountry</leftValueReference>
-                <operator>EqualTo</operator>
+                <leftValueReference>Get_Location_Details_0.HRCFSL_Country__c</leftValueReference>
+                <operator>IsNull</operator>
                 <rightValue>
-                    <stringValue></stringValue>
+                    <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Set_default_country_0</targetReference>
+                <targetReference>Assign_Location_Country</targetReference>
             </connector>
-            <label>Yes</label>
+            <label>Valid Location Country</label>
+        </rules>
+        <rules>
+            <name>Account_found_has_Country</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Account_Details</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Account_Details.BillingCountry</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Account_Details.Name</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>FSL Dummy Account</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Account_Country</targetReference>
+            </connector>
+            <label>Account found, has Country</label>
         </rules>
     </decisions>
     <decisions>
         <name>Email_Address_Not_Null</name>
         <label>Email Address Not Null</label>
         <locationX>380</locationX>
-        <locationY>3566</locationY>
+        <locationY>3350</locationY>
         <defaultConnectorLabel>No Email Address</defaultConnectorLabel>
         <rules>
             <name>Has_Email_Address</name>
@@ -394,7 +343,7 @@
         <name>Email_Case_Contacts</name>
         <label>Email Account Contacts?</label>
         <locationX>380</locationX>
-        <locationY>2678</locationY>
+        <locationY>2462</locationY>
         <defaultConnector>
             <targetReference>Email_Address_Not_Null</targetReference>
         </defaultConnector>
@@ -418,10 +367,10 @@
     <decisions>
         <name>Language_Is_null</name>
         <label>Language Is null?</label>
-        <locationX>875</locationX>
-        <locationY>638</locationY>
+        <locationX>611</locationX>
+        <locationY>518</locationY>
         <defaultConnector>
-            <targetReference>Assign_Case_Country</targetReference>
+            <targetReference>Get_Location_Details_0</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Not Null</defaultConnectorLabel>
         <rules>
@@ -441,60 +390,10 @@
         </rules>
     </decisions>
     <decisions>
-        <name>Language_Is_null_0</name>
-        <label>Language Is null?</label>
-        <locationX>347</locationX>
-        <locationY>974</locationY>
-        <defaultConnector>
-            <targetReference>Get_Email_Body_Template</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Not Null</defaultConnectorLabel>
-        <rules>
-            <name>Null_0_0</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>Caselanguage</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Assign_Default_language_0_0</targetReference>
-            </connector>
-            <label>Null</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>Location_Not_Null</name>
-        <label>Location Not Null</label>
-        <locationX>611</locationX>
-        <locationY>278</locationY>
-        <defaultConnector>
-            <targetReference>Get_Location_Details</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Not Null</defaultConnectorLabel>
-        <rules>
-            <name>Null_0</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>Get_Case_Details.HRCSVC_Location__c</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Get_Account_Details</targetReference>
-            </connector>
-            <label>Null</label>
-        </rules>
-    </decisions>
-    <decisions>
         <name>optedOut</name>
         <label>Has Opted Out?</label>
         <locationX>424</locationX>
-        <locationY>3038</locationY>
+        <locationY>2822</locationY>
         <defaultConnector>
             <targetReference>Add_Contact_Email</targetReference>
         </defaultConnector>
@@ -519,7 +418,7 @@
         <name>Preferred_Email_on_Case_is_Null</name>
         <label>Preferred Email on Case is Null?</label>
         <locationX>380</locationX>
-        <locationY>2126</locationY>
+        <locationY>1910</locationY>
         <defaultConnector>
             <targetReference>Add_Preferred_Email</targetReference>
         </defaultConnector>
@@ -544,7 +443,7 @@
         <name>Which_Email_Type</name>
         <label>Which Email Type?</label>
         <locationX>182</locationX>
-        <locationY>3686</locationY>
+        <locationY>3470</locationY>
         <defaultConnectorLabel>Default</defaultConnectorLabel>
         <rules>
             <name>Email_Type_not_null</name>
@@ -644,7 +543,7 @@ AND(ISPICKVAL({!Get_Case_Details.Origin} , &quot;Web&quot;),
         <name>Each_Account_Contact</name>
         <label>For Each Account Contact</label>
         <locationX>248</locationX>
-        <locationY>2918</locationY>
+        <locationY>2702</locationY>
         <collectionReference>Get_Account_Contacts</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -677,7 +576,7 @@ AND(ISPICKVAL({!Get_Case_Details.Origin} , &quot;Web&quot;),
         <name>Create_Mail_Message</name>
         <label>Create Mail Message</label>
         <locationX>50</locationX>
-        <locationY>3926</locationY>
+        <locationY>3710</locationY>
         <inputAssignments>
             <field>FromAddress</field>
             <value>
@@ -715,7 +614,7 @@ AND(ISPICKVAL({!Get_Case_Details.Origin} , &quot;Web&quot;),
         <name>Get_Account_Contacts</name>
         <label>Get Account Contacts</label>
         <locationX>248</locationX>
-        <locationY>2798</locationY>
+        <locationY>2582</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Each_Account_Contact</targetReference>
@@ -742,11 +641,11 @@ AND(ISPICKVAL({!Get_Case_Details.Origin} , &quot;Web&quot;),
     <recordLookups>
         <name>Get_Account_Details</name>
         <label>Get Account Details</label>
-        <locationX>347</locationX>
-        <locationY>398</locationY>
+        <locationX>611</locationX>
+        <locationY>278</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Account_Country_0</targetReference>
+            <targetReference>Assign_Case_Language</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -767,7 +666,7 @@ AND(ISPICKVAL({!Get_Case_Details.Origin} , &quot;Web&quot;),
         <locationY>158</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Location_Not_Null</targetReference>
+            <targetReference>Get_Account_Details</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -785,7 +684,7 @@ AND(ISPICKVAL({!Get_Case_Details.Origin} , &quot;Web&quot;),
         <name>Get_Email_Body_Template</name>
         <label>Get Email Body Template</label>
         <locationX>611</locationX>
-        <locationY>1526</locationY>
+        <locationY>1310</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Get_local_country_contact_info</targetReference>
@@ -820,7 +719,7 @@ AND(ISPICKVAL({!Get_Case_Details.Origin} , &quot;Web&quot;),
         <name>Get_local_country_contact_info</name>
         <label>Get local country contact info</label>
         <locationX>611</locationX>
-        <locationY>1646</locationY>
+        <locationY>1430</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Check_if_Metadata_record_is_available</targetReference>
@@ -859,13 +758,13 @@ AND(ISPICKVAL({!Get_Case_Details.Origin} , &quot;Web&quot;),
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordLookups>
-        <name>Get_Location_Details</name>
+        <name>Get_Location_Details_0</name>
         <label>Get Location Details</label>
-        <locationX>875</locationX>
-        <locationY>398</locationY>
+        <locationX>611</locationX>
+        <locationY>854</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Assign_Case_Language</targetReference>
+            <targetReference>Determine_Country</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -883,7 +782,7 @@ AND(ISPICKVAL({!Get_Case_Details.Origin} , &quot;Web&quot;),
         <name>Get_No_Reply_Email</name>
         <label>Get No-Reply Email Address</label>
         <locationX>380</locationX>
-        <locationY>2006</locationY>
+        <locationY>1790</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Preferred_Email_on_Case_is_Null</targetReference>
