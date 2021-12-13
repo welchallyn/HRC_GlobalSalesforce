@@ -14,22 +14,6 @@
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>check_if_WO_is_present</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>Set_Has_CQ_to_true</name>
-        <label>Set Has CQ to true</label>
-        <locationX>204</locationX>
-        <locationY>1343</locationY>
-        <assignmentItems>
-            <assignToReference>Get_related_WO.HRCSVC21_Has_CQ__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </assignmentItems>
-        <connector>
             <targetReference>Location_Check</targetReference>
         </connector>
     </assignments>
@@ -38,7 +22,7 @@
         <name>Update_Fields</name>
         <label>Update Fields</label>
         <locationX>270</locationX>
-        <locationY>1799</locationY>
+        <locationY>1343</locationY>
         <assignmentItems>
             <assignToReference>$Record.HRCSVC21_Translation_Status__c</assignToReference>
             <operator>Assign</operator>
@@ -55,26 +39,19 @@
         </assignmentItems>
     </assignments>
     <decisions>
-        <name>Asset_Check</name>
-        <label>Asset Check</label>
+        <name>Asset_Not_Null</name>
+        <label>Asset Not Null?</label>
         <locationX>336</locationX>
         <locationY>431</locationY>
         <defaultConnector>
-            <targetReference>check_if_WO_is_present</targetReference>
+            <targetReference>Location_Check</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Null</defaultConnectorLabel>
         <rules>
             <name>Not_Null</name>
-            <conditionLogic>or</conditionLogic>
+            <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.HRCSVC_Case__r.AssetId</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.HRCSVC_Work_Order__r.AssetId</leftValueReference>
+                <leftValueReference>$Record.HRCSVC_Asset__c</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
@@ -87,71 +64,10 @@
         </rules>
     </decisions>
     <decisions>
-        <name>check_if_WO_is_present</name>
-        <label>check if WO is present</label>
-        <locationX>336</locationX>
-        <locationY>1103</locationY>
-        <defaultConnector>
-            <targetReference>Location_Check</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>WO_present</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.HRCSVC_Work_Order__c</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Get_related_WO</targetReference>
-            </connector>
-            <label>WO present</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>Created_New</name>
-        <label>Created/New?</label>
-        <locationX>567</locationX>
-        <locationY>311</locationY>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>Is_New</name>
-            <conditionLogic>1 AND (2 OR 3)</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.Id</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.HRCSVC_Case__c</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.HRCSVC_Work_Order__c</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Asset_Check</targetReference>
-            </connector>
-            <label>Is New</label>
-        </rules>
-    </decisions>
-    <decisions>
         <name>Language_Check</name>
         <label>Language Check</label>
         <locationX>138</locationX>
-        <locationY>1679</locationY>
+        <locationY>1223</locationY>
         <defaultConnector>
             <targetReference>Update_Fields</targetReference>
         </defaultConnector>
@@ -194,7 +110,7 @@
         <name>Location_Check</name>
         <label>Location Check</label>
         <locationX>336</locationX>
-        <locationY>1559</locationY>
+        <locationY>1103</locationY>
         <defaultConnectorLabel>Location in Blank</defaultConnectorLabel>
         <rules>
             <name>Location_Exists</name>
@@ -220,12 +136,48 @@
         </rules>
     </decisions>
     <decisions>
+        <name>Populate_Product_Model</name>
+        <label>Populate Product Model</label>
+        <locationX>567</locationX>
+        <locationY>311</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Is_New</name>
+            <conditionLogic>1 AND (2 OR 3)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.HRCSVC_Case__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.HRCSVC_Work_Order__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Asset_Not_Null</targetReference>
+            </connector>
+            <label>Is New</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Workflow_Found</name>
         <label>Workflow Found</label>
         <locationX>182</locationX>
         <locationY>671</locationY>
         <defaultConnector>
-            <targetReference>check_if_WO_is_present</targetReference>
+            <targetReference>Location_Check</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -244,7 +196,6 @@
             <label>Yes, Workflow Found</label>
         </rules>
     </decisions>
-    <description>Merged SE-2620 Changes.</description>
     <formulas>
         <name>AssetProductModel</name>
         <dataType>String</dataType>
@@ -292,32 +243,11 @@
         <object>HRCSVC_Product_Model__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
-    <recordLookups>
-        <name>Get_related_WO</name>
-        <label>Get related WO</label>
-        <locationX>204</locationX>
-        <locationY>1223</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
-        <connector>
-            <targetReference>Set_Has_CQ_to_true</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Id</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>$Record.HRCSVC_Work_Order__c</elementReference>
-            </value>
-        </filters>
-        <getFirstRecordOnly>true</getFirstRecordOnly>
-        <object>WorkOrder</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordLookups>
     <start>
         <locationX>441</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Created_New</targetReference>
+            <targetReference>Populate_Product_Model</targetReference>
         </connector>
         <object>HRCSVC_Complaint_Qualification__c</object>
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
