@@ -8,6 +8,9 @@
         <field>Case$CaseNumber</field>
     </columns>
     <columns>
+        <field>Case.Complaint_Qualifications__r$HRCSVC_ETQ_Complaint__c</field>
+    </columns>
+    <columns>
         <field>Case$Priority</field>
     </columns>
     <columns>
@@ -65,8 +68,8 @@
     <showDetails>true</showDetails>
     <showGrandTotal>true</showGrandTotal>
     <showSubTotals>true</showSubTotals>
-    <sortColumn>Case.Complaint_Qualifications__r$HRCSVC21_CQ_Creation_Duration_From_Case__c</sortColumn>
-    <sortOrder>Asc</sortOrder>
+    <sortColumn>Case.Complaint_Qualifications__r$HRCSVC_ETQ_Complaint__c</sortColumn>
+    <sortOrder>Desc</sortOrder>
     <timeFrameFilter>
         <dateColumn>Case.Complaint_Qualifications__r$CreatedDate</dateColumn>
         <interval>INTERVAL_CUSTOM</interval>
