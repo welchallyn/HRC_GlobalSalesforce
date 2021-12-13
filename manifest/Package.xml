@@ -2147,6 +2147,7 @@
 		<members>Quote.HRCSVC21_Quote_Status_Accepted</members>
 		<members>QuoteLineItem.HRCSVC21_QuoteLineItem_ExpirationDate</members>
 		<!--<members>ServiceAppointment.HRCSVC20_fnc_on_post_rep_Reqd_On_Closure</members>-->
+		<members>ServiceAppointment.HRCFSL_Require_Q5_on_Repair_Template</members>
 		<name>ValidationRule</name>
 	</types>
 	<types>
