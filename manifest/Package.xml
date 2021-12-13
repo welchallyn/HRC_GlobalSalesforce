@@ -1676,6 +1676,7 @@
 		<members>Quote-Quote Layout</members>
 		<members>QuoteLineItem-Quote Line Item Layout</members>
 		<members>Opportunity-Opportunity created from Case</members>
+		<members>HRCSVC_Complaint_Qualification__c-HRCSVC Complaint Qualification Read Only</members>
 		<name>Layout</name>
 	</types>
 	<types>
