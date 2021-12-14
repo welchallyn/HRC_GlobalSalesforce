@@ -7,8 +7,12 @@
         <value xsi:type="xsd:string">(0031) 0347 32 35 32</value>
     </values>
     <values>
-        <field>HRCSVC21_Country__c</field>
+        <field>HRCSVC21_Country_Code__c</field>
         <value xsi:type="xsd:string">NL</value>
+    </values>
+    <values>
+        <field>HRCSVC21_Country__c</field>
+        <value xsi:type="xsd:string">Netherlands</value>
     </values>
     <values>
         <field>HRCSVC21_Language__c</field>

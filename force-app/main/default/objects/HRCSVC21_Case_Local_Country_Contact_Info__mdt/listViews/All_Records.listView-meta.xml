@@ -3,7 +3,7 @@
     <fullName>All_Records</fullName>
     <columns>MasterLabel</columns>
     <columns>DeveloperName</columns>
-    <columns>HRCSVC21_Country__c</columns>
+    <columns>HRCSVC21_Country_Code__c</columns>
     <columns>HRCSVC21_Language__c</columns>
     <columns>HRCSVC21_Protocol_Category__c</columns>
     <columns>HRCSVC21_Type__c</columns>

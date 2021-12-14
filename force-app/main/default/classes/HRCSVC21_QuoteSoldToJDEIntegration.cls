@@ -20,8 +20,8 @@ public class HRCSVC21_QuoteSoldToJDEIntegration {
             Map<String, HRCSVC21_Parts_Order_Integration_Details__mdt> mapEd = HRCSVC21_Parts_Order_Integration_Details__mdt.getAll();
             Http http = new Http();
             HttpRequest request = new HttpRequest();
-            request.setHeader('clientid',(String) mapEd.get('HRCSVC21_Sold_To_Integration').HRCSVC21_Client_Id__c);
-        	request.setHeader('clientsecret', mapEd.get('HRCSVC21_Sold_To_Integration').HRCSVC21_Client_Secret__c);
+            request.setHeader('client_id',(String) mapEd.get('HRCSVC21_Sold_To_Integration').HRCSVC21_Client_Id__c);
+        	request.setHeader('client_secret', mapEd.get('HRCSVC21_Sold_To_Integration').HRCSVC21_Client_Secret__c);
             request.setHeader('X-Correlation-ID', mapEd.get('HRCSVC21_Sold_To_Integration').HRCSVC21_X_Correlation_ID__c);
             request.setHeader('Content-Type',mapEd.get('HRCSVC21_Sold_To_Integration').HRCSVC21_Content_Type__c);
             String endpoint = mapEd.get('HRCSVC21_Sold_To_Integration').HRCSVC21_URL__c+quote.HRCSVC21_Ship_to_location__r.HRCFSL_Customer_ID__c;

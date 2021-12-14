@@ -7,8 +7,12 @@
         <value xsi:type="xsd:string">0033 820012345</value>
     </values>
     <values>
-        <field>HRCSVC21_Country__c</field>
+        <field>HRCSVC21_Country_Code__c</field>
         <value xsi:type="xsd:string">FR</value>
+    </values>
+    <values>
+        <field>HRCSVC21_Country__c</field>
+        <value xsi:type="xsd:string">France</value>
     </values>
     <values>
         <field>HRCSVC21_Language__c</field>
