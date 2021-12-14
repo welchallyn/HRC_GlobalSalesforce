@@ -256,6 +256,38 @@
             <targetReference>Selected_Status</targetReference>
         </connector>
     </assignments>
+    <assignments>
+        <name>Test_Performed_assigned_as_false</name>
+        <label>Test Performed assigned as false</label>
+        <locationX>1873</locationX>
+        <locationY>793</locationY>
+        <assignmentItems>
+            <assignToReference>TestPerformedcheckbox</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Missing_Required_Fields_on_RT</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Test_Performed_assigned_as_true</name>
+        <label>Test Performed assigned as true</label>
+        <locationX>1865</locationX>
+        <locationY>1089</locationY>
+        <assignmentItems>
+            <assignToReference>TestPerformedcheckbox</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Missing_Required_Fields_on_RT</targetReference>
+        </connector>
+    </assignments>
     <choices>
         <name>SA_AwaitingSignature</name>
         <choiceText>Awaiting signature</choiceText>
@@ -592,15 +624,29 @@
     <decisions>
         <name>Missing_Required_Fields_on_RT</name>
         <label>Missing Required Fields on RT</label>
-        <locationX>1629</locationX>
-        <locationY>963</locationY>
+        <locationX>1968</locationX>
+        <locationY>958</locationY>
         <defaultConnector>
             <targetReference>Success_message</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Missing_Required_Fields_on_RT_Yes</name>
-            <conditionLogic>1 OR 2 OR (3 AND 6) OR (4 AND 5) OR (7 AND 8 AND 9) OR 10</conditionLogic>
+            <conditionLogic>(1 AND 2) OR 3 OR 4 OR (5 AND 6) OR 7 OR 8</conditionLogic>
+            <conditions>
+                <leftValueReference>Q1_Found_During_PM_BPI</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>No</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Q6_Occurrence_Location</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
             <conditions>
                 <leftValueReference>Q3_Trb_Cause_Resolution</leftValueReference>
                 <operator>IsNull</operator>
@@ -623,20 +669,6 @@
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>Q1_Found_During_PM_BPI</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>No</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>Q6_Occurrence_Location</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
                 <leftValueReference>Q4b_Explain_If_No</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
@@ -644,31 +676,17 @@
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>Q4C_Audible</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>Q4C_Functional</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>Q4C_Visual</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>Q5_Resolution</leftValueReference>
+                <leftValueReference>Q5a_Resolution</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>TestPerformedcheckbox</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -825,6 +843,45 @@
                 <targetReference>Is_Work_Order_having_Duration</targetReference>
             </connector>
             <label>Cannot Complete Schedule FollowUp</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>test_performed_input_values_check</name>
+        <label>test performed input values check</label>
+        <locationX>1582</locationX>
+        <locationY>970</locationY>
+        <defaultConnector>
+            <targetReference>Test_Performed_assigned_as_true</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Checkbox Checked in repair template</defaultConnectorLabel>
+        <rules>
+            <name>Checkbox_False</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Q4C_Audible</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Q4C_Functional</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Q4C_Visual</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Test_Performed_assigned_as_false</targetReference>
+            </connector>
+            <label>Checkbox False</label>
         </rules>
     </decisions>
     <decisions>
@@ -1451,8 +1508,8 @@
     <screens>
         <name>Repair_Template_Error_Screen</name>
         <label>Repair Template Error Screen</label>
-        <locationX>1794</locationX>
-        <locationY>960</locationY>
+        <locationX>2256</locationX>
+        <locationY>950</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -1564,7 +1621,7 @@
         <name>Success_message</name>
         <label>Success message</label>
         <locationX>1444</locationX>
-        <locationY>854</locationY>
+        <locationY>853</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -1829,7 +1886,7 @@
         <locationX>1446</locationX>
         <locationY>969</locationY>
         <connector>
-            <targetReference>Missing_Required_Fields_on_RT</targetReference>
+            <targetReference>test_performed_input_values_check</targetReference>
         </connector>
         <flowName>HRCFSL_Repair_Template</flowName>
         <inputAssignments>
@@ -1867,7 +1924,7 @@
             <name>Q4C_Visual</name>
         </outputAssignments>
         <outputAssignments>
-            <assignToReference>Q5_Resolution</assignToReference>
+            <assignToReference>Q5a_Resolution</assignToReference>
             <name>Q5a_Resolution</name>
         </outputAssignments>
         <outputAssignments>
@@ -2020,7 +2077,7 @@ o Product: {!WorkOrderDetails.HRCFSL_Model_Description__c}
         <isOutput>false</isOutput>
     </variables>
     <variables>
-        <name>Q5_Resolution</name>
+        <name>Q5a_Resolution</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>
         <isInput>true</isInput>
@@ -2090,6 +2147,13 @@ o Product: {!WorkOrderDetails.HRCFSL_Model_Description__c}
     <variables>
         <name>TargetGroupName</name>
         <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>TestPerformedcheckbox</name>
+        <dataType>Boolean</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>
         <isOutput>false</isOutput>
