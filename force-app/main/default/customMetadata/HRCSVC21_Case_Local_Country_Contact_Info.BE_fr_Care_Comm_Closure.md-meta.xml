@@ -7,8 +7,12 @@
         <value xsi:type="xsd:string">+32 2 761 96 40</value>
     </values>
     <values>
-        <field>HRCSVC21_Country__c</field>
+        <field>HRCSVC21_Country_Code__c</field>
         <value xsi:type="xsd:string">BE</value>
+    </values>
+    <values>
+        <field>HRCSVC21_Country__c</field>
+        <value xsi:type="xsd:string">Belgium</value>
     </values>
     <values>
         <field>HRCSVC21_Language__c</field>

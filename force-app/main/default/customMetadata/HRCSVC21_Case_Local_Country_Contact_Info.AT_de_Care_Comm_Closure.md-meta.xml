@@ -7,8 +7,12 @@
         <value xsi:type="xsd:string">+43 2243 28550</value>
     </values>
     <values>
-        <field>HRCSVC21_Country__c</field>
+        <field>HRCSVC21_Country_Code__c</field>
         <value xsi:type="xsd:string">AT</value>
+    </values>
+    <values>
+        <field>HRCSVC21_Country__c</field>
+        <value xsi:type="xsd:string">Austria</value>
     </values>
     <values>
         <field>HRCSVC21_Language__c</field>

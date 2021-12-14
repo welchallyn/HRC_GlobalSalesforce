@@ -7,8 +7,12 @@
         <value xsi:type="xsd:string">020-78 10 30</value>
     </values>
     <values>
-        <field>HRCSVC21_Country__c</field>
+        <field>HRCSVC21_Country_Code__c</field>
         <value xsi:type="xsd:string">SE</value>
+    </values>
+    <values>
+        <field>HRCSVC21_Country__c</field>
+        <value xsi:type="xsd:string">Sweden</value>
     </values>
     <values>
         <field>HRCSVC21_Language__c</field>
