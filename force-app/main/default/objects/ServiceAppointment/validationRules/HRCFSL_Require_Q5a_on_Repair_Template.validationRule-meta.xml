@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRCFSL_Require_Q5a_on_Repair_Template</fullName>
+    <active>true</active>
+    <description>resolution required before moving to Awaiting Signature</description>
+    <errorConditionFormula>AND(
+NOT($Setup.HRCFSL_Org_Exception_Rule__c.HRCFSL_Validation_Rule__c), NOT(ISBLANK(HRCFSL_Work_Order__r.HRCFSL_Repair_Template__c)),
+ISBLANK(  HRCFSL_Work_Order__r.HRCSVC20_Repair_Template_Question_5a__c ),
+ISPICKVAL(Status, &quot;Awaiting Signature&quot;)
+
+)</errorConditionFormula>
+    <errorMessage>You must fill in the resolution in the Repair Template.</errorMessage>
+</ValidationRule>
