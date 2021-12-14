@@ -2159,6 +2159,7 @@
 		<members>Quote.HRCSVC20_Generate_Quote_PDF</members>
 		<members>Order_Line_Item__c.HRCSVC21_Get_Unit_Price</members>
 		<members>Order__c.Get_SoldTo</members>
+		<members>Order_Line_Item__c.Retrieve</members>
 		<name>WebLink</name>
 	</types>
 	<types>
