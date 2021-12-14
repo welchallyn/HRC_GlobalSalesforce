@@ -7,8 +7,12 @@
         <value xsi:type="xsd:string">01530 411 000</value>
     </values>
     <values>
-        <field>HRCSVC21_Country__c</field>
+        <field>HRCSVC21_Country_Code__c</field>
         <value xsi:type="xsd:string">GB</value>
+    </values>
+    <values>
+        <field>HRCSVC21_Country__c</field>
+        <value xsi:type="xsd:string">United Kingdom</value>
     </values>
     <values>
         <field>HRCSVC21_Language__c</field>

@@ -32,7 +32,7 @@ global class HRCSVC21_InventoryCheckHandler {
         returnmessage returnresults = new returnmessage();
         List<returnmessage> Output =new  List<returnmessage>();
         try{
-        List<Order_Line_Item__c> oliList = [SELECT Id,Product__c,HRCSVC20_Available_Quantity__c,order__r.id,Order__r.HRCSVC_Ship_To_Location__r.HRCFSL_Customer_ID__c,Order__r.HRCSVC20_Business_Unit__c,Order__r.HRCSVC20_Pricing_Processing_Version__c,Product__r.HRCFSL_Parts_Number__c FROM Order_Line_Item__c WHERE Order__r.id =:recordId]; 
+        List<Order_Line_Item__c> oliList = [SELECT Id,Product__c,HRCSVC20_Available_Quantity__c,order__r.id,Order__r.HRCSVC_Ship_To_Location__r.HRCFSL_Customer_ID__c,Order__r.HRCSVC20_Business_Unit__c,Order__r.HRCSVC20_Pricing_Processing_Version__c,Product__r.ProductCode FROM Order_Line_Item__c WHERE Order__r.id =:recordId]; 
         system.debug('olilist :---->>>>>>>' +oliList);
         
         List<Id> OLIId = new List<Id>();
@@ -105,7 +105,7 @@ global class HRCSVC21_InventoryCheckHandler {
         Map<String, HRCSVC21_Parts_Order_Integration_Details__mdt> mapEd = HRCSVC21_Parts_Order_Integration_Details__mdt.getAll();
         System.debug('MapEd values-->'+Json.serializePretty(mapEd.get('HRCSVC21_Inventory')));
         
-        oli = [Select id,Product__c,HRCSVC20_Available_Quantity__c,order__r.id,Order__r.HRCSVC_Ship_To_Location__r.HRCFSL_Customer_ID__c,Order__r.HRCSVC20_Business_Unit__c,Order__r.HRCSVC20_Pricing_Processing_Version__c,Product__r.HRCFSL_Parts_Number__c,HRCSVC21_Error_Message__c from Order_Line_Item__c where id = :oliIdnew LIMIT 1];
+        oli = [Select id,Product__c,HRCSVC20_Available_Quantity__c,order__r.id,Order__r.HRCSVC_Ship_To_Location__r.HRCFSL_Customer_ID__c,Order__r.HRCSVC20_Business_Unit__c,Order__r.HRCSVC20_Pricing_Processing_Version__c,Product__r.ProductCode,HRCSVC21_Error_Message__c from Order_Line_Item__c where id = :oliIdnew LIMIT 1];
         
         Http http = new Http();
         HttpRequest request = new HttpRequest();
@@ -114,7 +114,7 @@ global class HRCSVC21_InventoryCheckHandler {
         request.setHeader('X-Correlation-ID', mapEd.get('HRCSVC21_Inventory').HRCSVC21_X_Correlation_ID__c);
         request.setHeader('Content-Type',mapEd.get('HRCSVC21_Inventory').HRCSVC21_Content_Type__c);
         //String endpoint = mapEd.get('HRCSVC21_Inventory').HRCSVC21_URL__c+'?businessUnit=99635&processingVersion=HRC0005A&shipToEntityId=3200864&partsNumber=159964';
-        String endpoint = mapEd.get('HRCSVC21_Inventory').HRCSVC21_URL__c+'?shipToEntityId='+oli.Order__r.HRCSVC_Ship_To_Location__r.HRCFSL_Customer_ID__c+'&businessUnit='+oli.Order__r.HRCSVC20_Business_Unit__c+'&processingVersion='+oli.Order__r.HRCSVC20_Pricing_Processing_Version__c+'&partsNumber='+oli.Product__r.HRCFSL_Parts_Number__c+'';
+        String endpoint = mapEd.get('HRCSVC21_Inventory').HRCSVC21_URL__c+'?shipToEntityId='+oli.Order__r.HRCSVC_Ship_To_Location__r.HRCFSL_Customer_ID__c+'&businessUnit='+oli.Order__r.HRCSVC20_Business_Unit__c+'&processingVersion='+oli.Order__r.HRCSVC20_Pricing_Processing_Version__c+'&partsNumber='+oli.Product__r.ProductCode+'';
         request.setEndpoint(endpoint);
             system.debug('Endpoint' +endpoint);
         request.setMethod(mapEd.get('HRCSVC21_Inventory').HRCSVC21_Method__c);

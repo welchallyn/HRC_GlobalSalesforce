@@ -18,7 +18,7 @@ public class HRCSVC21_QuoteLineItemHandler {
             }
         }
     }
-    //Quantity is not going to impact the value of unit price(not passing as a endpoint parameter)  so we should not call this method on update?
+    //can we change product2id if not then this is unusable code.
     public void onAfterUpdate(List<QuoteLineItem> NewQuoteLines, Map<id,QuoteLineItem> OldQuoteLines){
         Set<id> QuoteLines = new Set<id>();
         for(QuoteLineItem q : NewQuoteLines){

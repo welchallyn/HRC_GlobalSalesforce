@@ -10,21 +10,22 @@ public class HRCSVC21_QuoteGetPricing {
         try{
             Map<String, HRCSVC21_Parts_Order_Integration_Details__mdt> mapEd = HRCSVC21_Parts_Order_Integration_Details__mdt.getAll();
             qli = [Select id, Quote.HRCSVC21_Ship_to_location__r.HRCFSL_Customer_ID__c, Quote.HRCSVC21_Business_Unit__c, Quote.HRCSVC21_Pricing_Processing_Version__c, 
-                   Product2.HRCFSL_Parts_Number__c, Quote.HRCSVC21_Sold_to_location__r.HRCFSL_Customer_ID__c, UnitPrice, HRCSVC21_Error_Message__c from QuoteLineItem where Id = :QuoteId];
+                   Product2.ProductCode, Quote.HRCSVC21_Sold_to_location__r.HRCFSL_Customer_ID__c, UnitPrice, HRCSVC21_Error_Message__c from QuoteLineItem where Id = :QuoteId];
             Http http = new Http(); 
             HttpRequest request = new HttpRequest();
-            request.setHeader('clientid',(String) mapEd.get('HRCSVC21_Get_Unit_Price').HRCSVC21_Client_Id__c);
-            request.setHeader('clientsecret', mapEd.get('HRCSVC21_Get_Unit_Price').HRCSVC21_Client_Secret__c);
+            request.setHeader('client_id',(String) mapEd.get('HRCSVC21_Get_Unit_Price').HRCSVC21_Client_Id__c);
+            request.setHeader('client_secret', mapEd.get('HRCSVC21_Get_Unit_Price').HRCSVC21_Client_Secret__c);
             request.setHeader('X-Correlation-ID', mapEd.get('HRCSVC21_Get_Unit_Price').HRCSVC21_X_Correlation_ID__c);
             request.setHeader('Content-Type',mapEd.get('HRCSVC21_Get_Unit_Price').HRCSVC21_Content_Type__c);
             //String endpoint = mapEd.get('HRCSVC21_Get_Unit_Price').HRCSVC21_URL__c+'?soldToEntityId=600077&businessUnit=99635&processingVersion=HRC0005A&shipToEntityId=600077&partsNumber=P2217A';
-            String endpoint = mapEd.get('HRCSVC21_Get_Unit_Price').HRCSVC21_URL__c+'?soldToEntityId='+qli.Quote.HRCSVC21_Sold_to_location__r.HRCFSL_Customer_ID__c+'&businessUnit='+qli.Quote.HRCSVC21_Business_Unit__c+'&processingVersion='+qli.Quote.HRCSVC21_Pricing_Processing_Version__c+'&shipToEntityId='+qli.Quote.HRCSVC21_Ship_to_location__r.HRCFSL_Customer_ID__c+'&partsNumber='+qli.Product2.HRCFSL_Parts_Number__c+'';
+            String endpoint = mapEd.get('HRCSVC21_Get_Unit_Price').HRCSVC21_URL__c+'?soldToEntityId='+qli.Quote.HRCSVC21_Sold_to_location__r.HRCFSL_Customer_ID__c+'&businessUnit='+qli.Quote.HRCSVC21_Business_Unit__c+'&processingVersion='+qli.Quote.HRCSVC21_Pricing_Processing_Version__c+'&shipToEntityId='+qli.Quote.HRCSVC21_Ship_to_location__r.HRCFSL_Customer_ID__c+'&partsNumber='+qli.Product2.ProductCode+'';
             system.debug('endpoint'+endpoint);
             request.setEndpoint(endpoint);
             request.setMethod(mapEd.get('HRCSVC21_Get_Unit_Price').HRCSVC21_Method__c);
             request.setTimeout(120000);
             HttpResponse response = Http.send(request);
             String result=response.getBody();
+            System.debug(result);
             if(response.getStatusCode() == 200){      
                 Map<String, String> mapOrd = (Map<String, String>) JSON.deserialize(result, Map<String, String>.class);
                	qli.UnitPrice=decimal.valueOf(mapOrd.get('priceUnit'));

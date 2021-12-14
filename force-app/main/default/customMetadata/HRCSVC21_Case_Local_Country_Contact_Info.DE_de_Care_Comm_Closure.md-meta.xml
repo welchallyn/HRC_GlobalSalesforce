@@ -8,8 +8,12 @@
 Technischer Support: +49 (0)201 49869 500</value>
     </values>
     <values>
-        <field>HRCSVC21_Country__c</field>
+        <field>HRCSVC21_Country_Code__c</field>
         <value xsi:type="xsd:string">DE</value>
+    </values>
+    <values>
+        <field>HRCSVC21_Country__c</field>
+        <value xsi:type="xsd:string">Germany</value>
     </values>
     <values>
         <field>HRCSVC21_Language__c</field>
