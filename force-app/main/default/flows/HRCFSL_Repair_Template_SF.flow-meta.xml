@@ -356,7 +356,7 @@
             <defaultValue>
                 <elementReference>WorkOrder_RepairTemplate_Info.HRCFSL_Repair_Template_Question_2__c</elementReference>
             </defaultValue>
-            <fieldText>3) Describe Malfunction/Event (please also provide allegation details if question #2 has been answered as “Injury/Patient Involvement&quot; or &quot;Death”):</fieldText>
+            <fieldText>3) Describe Malfunction/Event (please also provide negative impact to patient/caregiver if question #2 has been answered as “Injury/Patient Involvement” or “death”):</fieldText>
             <fieldType>InputField</fieldType>
             <isRequired>true</isRequired>
         </fields>
