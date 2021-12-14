@@ -977,6 +977,7 @@
 		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.HRCSVC21_Language__c</members>
 		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.HRCSVC21_Protocol_Category__c</members>
 		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.HRCSVC21_Type__c</members>
+		<members>HRCSVC21_Case_Local_Country_Contact_Info__mdt.HRCSVC21_Country_Code__c</members>
 		<members>Quote.HRCSVC21_Comments__c</members>
 		<members>Quote.HRCSVC21_Ship_to_location__c</members>
 		<members>Quote.HRCSVC21_Sold_to_location__c</members>
@@ -2147,7 +2148,7 @@
 		<members>Quote.HRCSVC21_Quote_Status_Accepted</members>
 		<members>QuoteLineItem.HRCSVC21_QuoteLineItem_ExpirationDate</members>
 		<!--<members>ServiceAppointment.HRCSVC20_fnc_on_post_rep_Reqd_On_Closure</members>-->
-		<members>ServiceAppointment.HRCFSL_Require_Q5_on_Repair_Template</members>
+		<members>ServiceAppointment.HRCFSL_Require_Q5a_on_Repair_Template</members>
 		<name>ValidationRule</name>
 	</types>
 	<types>
