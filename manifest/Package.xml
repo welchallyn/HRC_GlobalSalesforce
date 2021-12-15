@@ -1528,6 +1528,7 @@
 		<!--<members>HRCFSL_Capture_Signature</members>-->
 		<members>HRCSVC21_Quote_Actions</members>
 		<members>HRCSVC21_Get_SoldTo</members>
+		<members>HRCSVC20_Back_up_CQ_text_values</members>
 		<name>Flow</name>
 	</types>
 	<types>
