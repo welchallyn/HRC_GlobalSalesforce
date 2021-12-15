@@ -29,6 +29,7 @@ public class HRCSVC21_QuoteSoldToJDEIntegrationTest implements HttpCalloutMock {
         oppObj.RMA_Price_1__c = 200.00 ;
         oppObj.RMA_Product_1__c = 'test product' ;
         oppObj.RMA_Quantity_1__c = 10 ;
+        oppObj.WatchCare_on_Bed__c='No';
         Test.startTest();
         insert oppObj;
         User uObj = new User(LastName = 'Shaik',
