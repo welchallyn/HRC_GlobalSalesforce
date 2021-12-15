@@ -28,6 +28,7 @@ public class HRCSVC20_Quote_Create_PDF_ControllerTest {
         testOpp.RMA_Product_1__c = 'test product' ;
         testOpp.RMA_Quantity_1__c = 10 ;
         //testOpp.Order_Contact__c = testcontact.id;
+        testOpp.WatchCare_on_Bed__c='No';
         insert testOpp;
             test.stopTest();
     }
