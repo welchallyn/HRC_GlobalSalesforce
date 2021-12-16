@@ -3,7 +3,7 @@
     <assignments>
         <name>Assign_Audible</name>
         <label>Assign Audible</label>
-        <locationX>50</locationX>
+        <locationX>94</locationX>
         <locationY>1094</locationY>
         <assignmentItems>
             <assignToReference>AudibleValue</assignToReference>
@@ -19,8 +19,8 @@
     <assignments>
         <name>Assign_Audible_0</name>
         <label>Assign Audible</label>
-        <locationX>534</locationX>
-        <locationY>3134</locationY>
+        <locationX>182</locationX>
+        <locationY>3014</locationY>
         <assignmentItems>
             <assignToReference>TestsPerfomedValues</assignToReference>
             <operator>Add</operator>
@@ -35,7 +35,7 @@
     <assignments>
         <name>Assign_Complaint_Defaults_0</name>
         <label>Assign Complaint Defaults</label>
-        <locationX>490</locationX>
+        <locationX>534</locationX>
         <locationY>854</locationY>
         <assignmentItems>
             <assignToReference>complaintQualification.HRC_Functioning_as_designed_post_repair__c</assignToReference>
@@ -147,8 +147,8 @@
     <assignments>
         <name>Assign_CQ_Inputs</name>
         <label>Assign CQ Inputs</label>
-        <locationX>666</locationX>
-        <locationY>4022</locationY>
+        <locationX>314</locationX>
+        <locationY>3902</locationY>
         <assignmentItems>
             <assignToReference>complaintQualification.HRCSVC_Describe_Malfunction_Event__c</assignToReference>
             <operator>Assign</operator>
@@ -233,7 +233,7 @@
     <assignments>
         <name>Assign_CQ_Inputs_0</name>
         <label>Assign CQ Inputs</label>
-        <locationX>886</locationX>
+        <locationX>930</locationX>
         <locationY>854</locationY>
         <assignmentItems>
             <assignToReference>complaintQualification.HRCSVC_Describe_Malfunction_Event__c</assignToReference>
@@ -267,7 +267,7 @@
             <assignToReference>complaintQualification.HRCSVC20_Complaint_Resolution__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>WorkOrder_RepairTemplate_Info.HRCFSL_Repair_Template_Question_5__c</elementReference>
+                <elementReference>WorkOrder_RepairTemplate_Info.HRCSVC20_Repair_Template_Question_5a__c</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -333,7 +333,7 @@
     <assignments>
         <name>Assign_Default</name>
         <label>Assign Default</label>
-        <locationX>754</locationX>
+        <locationX>798</locationX>
         <locationY>1094</locationY>
         <assignmentItems>
             <assignToReference>complaintQualification.HRCSVC_Injury_or_Death__c</assignToReference>
@@ -349,7 +349,7 @@
     <assignments>
         <name>Assign_Found</name>
         <label>Assign Found</label>
-        <locationX>182</locationX>
+        <locationX>226</locationX>
         <locationY>854</locationY>
         <assignmentItems>
             <assignToReference>ComplaintFound</assignToReference>
@@ -365,7 +365,7 @@
     <assignments>
         <name>Assign_Functional</name>
         <label>Assign Functional</label>
-        <locationX>50</locationX>
+        <locationX>94</locationX>
         <locationY>1430</locationY>
         <assignmentItems>
             <assignToReference>FunctionalValue</assignToReference>
@@ -381,8 +381,8 @@
     <assignments>
         <name>Assign_Functional_0</name>
         <label>Assign Functional</label>
-        <locationX>534</locationX>
-        <locationY>3470</locationY>
+        <locationX>182</locationX>
+        <locationY>3350</locationY>
         <assignmentItems>
             <assignToReference>TestsPerfomedValues</assignToReference>
             <operator>Add</operator>
@@ -397,7 +397,7 @@
     <assignments>
         <name>Assign_record_Id_0_0</name>
         <label>Assign record Id</label>
-        <locationX>402</locationX>
+        <locationX>446</locationX>
         <locationY>278</locationY>
         <assignmentItems>
             <assignToReference>Id</assignToReference>
@@ -420,7 +420,7 @@
     <assignments>
         <name>Assign_Visual</name>
         <label>Assign Visual</label>
-        <locationX>50</locationX>
+        <locationX>94</locationX>
         <locationY>1766</locationY>
         <assignmentItems>
             <assignToReference>VisualValue</assignToReference>
@@ -436,8 +436,8 @@
     <assignments>
         <name>Assign_Visual_0</name>
         <label>Assign Visual</label>
-        <locationX>534</locationX>
-        <locationY>3806</locationY>
+        <locationX>182</locationX>
+        <locationY>3686</locationY>
         <assignmentItems>
             <assignToReference>TestsPerfomedValues</assignToReference>
             <operator>Add</operator>
@@ -452,8 +452,8 @@
     <assignments>
         <name>Set_Question_Variables</name>
         <label>Set Question Variables</label>
-        <locationX>930</locationX>
-        <locationY>2654</locationY>
+        <locationX>578</locationX>
+        <locationY>2534</locationY>
         <assignmentItems>
             <assignToReference>Q4_Functioning_As_Designed</assignToReference>
             <operator>Assign</operator>
@@ -628,8 +628,8 @@
     <decisions>
         <name>AudibleTrue</name>
         <label>Audible</label>
-        <locationX>666</locationX>
-        <locationY>3014</locationY>
+        <locationX>314</locationX>
+        <locationY>2894</locationY>
         <defaultConnector>
             <targetReference>FunctionalTrue</targetReference>
         </defaultConnector>
@@ -651,34 +651,9 @@
         </rules>
     </decisions>
     <decisions>
-        <name>Check_user_inputs</name>
-        <label>Check user inputs</label>
-        <locationX>534</locationX>
-        <locationY>2198</locationY>
-        <defaultConnector>
-            <targetReference>Go_to_Section_B</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>InjuryDeath_Check</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>X7_Injury_or_Death</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Blank</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Fault_Screen</targetReference>
-            </connector>
-            <label>InjuryDeath Check</label>
-        </rules>
-    </decisions>
-    <decisions>
         <name>Contains_Audible</name>
         <label>Contains Audible?</label>
-        <locationX>182</locationX>
+        <locationX>226</locationX>
         <locationY>974</locationY>
         <defaultConnector>
             <targetReference>Contains_Functional</targetReference>
@@ -703,7 +678,7 @@
     <decisions>
         <name>Contains_Functional</name>
         <label>Contains Functional?</label>
-        <locationX>182</locationX>
+        <locationX>226</locationX>
         <locationY>1310</locationY>
         <defaultConnector>
             <targetReference>Contains_Visual</targetReference>
@@ -728,7 +703,7 @@
     <decisions>
         <name>Contains_Visual</name>
         <label>Contains Visual?</label>
-        <locationX>182</locationX>
+        <locationX>226</locationX>
         <locationY>1646</locationY>
         <defaultConnector>
             <targetReference>Section_A</targetReference>
@@ -753,7 +728,7 @@
     <decisions>
         <name>Desktop_or_Mobile</name>
         <label>Desktop or Mobile</label>
-        <locationX>534</locationX>
+        <locationX>578</locationX>
         <locationY>158</locationY>
         <defaultConnector>
             <targetReference>WO_Repair_Template_info_0_0_0_0</targetReference>
@@ -778,8 +753,8 @@
     <decisions>
         <name>FunctionalTrue</name>
         <label>Functional</label>
-        <locationX>666</locationX>
-        <locationY>3350</locationY>
+        <locationX>314</locationX>
+        <locationY>3230</locationY>
         <defaultConnector>
             <targetReference>VisualTrue</targetReference>
         </defaultConnector>
@@ -803,8 +778,8 @@
     <decisions>
         <name>Go_to_Section_B</name>
         <label>Go to Section B?</label>
-        <locationX>930</locationX>
-        <locationY>2318</locationY>
+        <locationX>578</locationX>
+        <locationY>2198</locationY>
         <defaultConnector>
             <targetReference>Set_Question_Variables</targetReference>
         </defaultConnector>
@@ -828,8 +803,8 @@
     <decisions>
         <name>Has_Existing_CQ</name>
         <label>Has Existing CQ</label>
-        <locationX>666</locationX>
-        <locationY>4142</locationY>
+        <locationX>314</locationX>
+        <locationY>4022</locationY>
         <defaultConnectorLabel>No CQ or Case</defaultConnectorLabel>
         <rules>
             <name>Existing_CQ</name>
@@ -865,8 +840,8 @@
     <decisions>
         <name>Has_Existing_CQ_0</name>
         <label>Has Existing CQ</label>
-        <locationX>930</locationX>
-        <locationY>2894</locationY>
+        <locationX>578</locationX>
+        <locationY>2774</locationY>
         <defaultConnectorLabel>No CQ or Case</defaultConnectorLabel>
         <rules>
             <name>Existing_CQ_or_Case</name>
@@ -894,7 +869,7 @@
     <decisions>
         <name>Has_Existing_CQ_0_0</name>
         <label>Has Existing CQ</label>
-        <locationX>534</locationX>
+        <locationX>578</locationX>
         <locationY>734</locationY>
         <defaultConnector>
             <targetReference>Assign_CQ_Inputs_0</targetReference>
@@ -934,7 +909,7 @@
     <decisions>
         <name>Injury_or_Death</name>
         <label>Injury or Death</label>
-        <locationX>886</locationX>
+        <locationX>930</locationX>
         <locationY>974</locationY>
         <defaultConnector>
             <targetReference>Section_A</targetReference>
@@ -959,8 +934,8 @@
     <decisions>
         <name>VisualTrue</name>
         <label>Visual</label>
-        <locationX>666</locationX>
-        <locationY>3686</locationY>
+        <locationX>314</locationX>
+        <locationY>3566</locationY>
         <defaultConnector>
             <targetReference>Assign_CQ_Inputs</targetReference>
         </defaultConnector>
@@ -981,6 +956,7 @@
             <label>Yes</label>
         </rules>
     </decisions>
+    <description>Updated Resolution assignment based on repair template question 5*a*</description>
     <dynamicChoiceSets>
         <name>ConditionDefault</name>
         <dataType>Picklist</dataType>
@@ -1071,14 +1047,14 @@
     <recordCreates>
         <name>Create_CQ_0_0</name>
         <label>Create CQ</label>
-        <locationX>666</locationX>
-        <locationY>4262</locationY>
+        <locationX>314</locationX>
+        <locationY>4142</locationY>
         <inputReference>complaintQualification</inputReference>
     </recordCreates>
     <recordLookups>
         <name>Complaint_Qualification_0</name>
         <label>Complaint Qualification</label>
-        <locationX>534</locationX>
+        <locationX>578</locationX>
         <locationY>614</locationY>
         <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -1154,7 +1130,7 @@
     <recordLookups>
         <name>WO_Repair_Template_info_0_0_0_0</name>
         <label>WO Repair Template info</label>
-        <locationX>534</locationX>
+        <locationX>578</locationX>
         <locationY>494</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -1193,15 +1169,15 @@
     <recordUpdates>
         <name>Update_CQ</name>
         <label>Update CQ</label>
-        <locationX>402</locationX>
-        <locationY>4262</locationY>
+        <locationX>50</locationX>
+        <locationY>4142</locationY>
         <inputReference>complaintQualification</inputReference>
     </recordUpdates>
     <recordUpdates>
         <name>Update_Repair_Template_on_WO</name>
         <label>Update Repair Template on WO</label>
-        <locationX>930</locationX>
-        <locationY>2774</locationY>
+        <locationX>578</locationX>
+        <locationY>2654</locationY>
         <connector>
             <targetReference>Has_Existing_CQ_0</targetReference>
         </connector>
@@ -1306,39 +1282,24 @@
         <object>WorkOrder</object>
     </recordUpdates>
     <screens>
-        <name>Fault_Screen</name>
-        <label>Fault Screen</label>
-        <locationX>138</locationX>
-        <locationY>2318</locationY>
-        <allowBack>true</allowBack>
-        <allowFinish>false</allowFinish>
-        <allowPause>false</allowPause>
-        <fields>
-            <name>Injury_Death_Check_Screen</name>
-            <fieldText>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 11.36px; font-family: Arial, Helvetica, sans-serif; color: rgb(0, 0, 0);&quot;&gt;Complaint cannot be created if the Injury or Death field is set to blank value&lt;/span&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <showFooter>true</showFooter>
-        <showHeader>true</showHeader>
-    </screens>
-    <screens>
         <name>Section_A</name>
         <label>Section A</label>
-        <locationX>534</locationX>
+        <locationX>578</locationX>
         <locationY>2078</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <connector>
-            <targetReference>Check_user_inputs</targetReference>
+            <targetReference>Go_to_Section_B</targetReference>
         </connector>
         <fields>
             <name>X1_Issue_covered_by_and_found_during_PM_or_BPI_PDI</name>
             <choiceReferences>Choice_Yes</choiceReferences>
             <choiceReferences>Choice_No</choiceReferences>
-            <choiceReferences>Choice_Question1_DefaultValue</choiceReferences>
             <dataType>String</dataType>
-            <defaultSelectedChoiceReference>Choice_Question1_DefaultValue</defaultSelectedChoiceReference>
+            <defaultValue>
+                <elementReference>Choice_Question1_DefaultValue</elementReference>
+            </defaultValue>
             <fieldText>1) Issue covered by and found during PM or BPI/PDI?</fieldText>
             <fieldType>RadioButtons</fieldType>
             <isRequired>true</isRequired>
@@ -1346,9 +1307,10 @@
         <fields>
             <name>X7_Injury_or_Death</name>
             <choiceReferences>injuryOrDeath</choiceReferences>
-            <choiceReferences>injuryOrDeathDefaultChoice</choiceReferences>
             <dataType>String</dataType>
-            <defaultSelectedChoiceReference>injuryOrDeathDefaultChoice</defaultSelectedChoiceReference>
+            <defaultValue>
+                <elementReference>complaintQualification.HRCSVC_Injury_or_Death__c</elementReference>
+            </defaultValue>
             <fieldText>2) Allegation of Injury/Patient Involvement or Death:</fieldText>
             <fieldType>RadioButtons</fieldType>
             <isRequired>true</isRequired>
@@ -1445,8 +1407,8 @@
     <screens>
         <name>Section_B</name>
         <label>Section B</label>
-        <locationX>798</locationX>
-        <locationY>2438</locationY>
+        <locationX>446</locationX>
+        <locationY>2318</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -1483,7 +1445,7 @@
             <choiceReferences>PM_Sticker_Present</choiceReferences>
             <dataType>String</dataType>
             <defaultValue>
-                <elementReference>PM_Sticker_Present_DefaultChoice</elementReference>
+                <elementReference>complaintQualification.HRCSVC_PM_Sticker_Present__c</elementReference>
             </defaultValue>
             <fieldText>9) PM Sticker Present</fieldText>
             <fieldType>RadioButtons</fieldType>
@@ -1507,7 +1469,7 @@
         <showHeader>true</showHeader>
     </screens>
     <start>
-        <locationX>408</locationX>
+        <locationX>452</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Desktop_or_Mobile</targetReference>
@@ -1671,6 +1633,16 @@ PM Sticker Date- {!X9_PM_sticker_date}</text>
         <isCollection>false</isCollection>
         <isInput>true</isInput>
         <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>var</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <elementReference>injuryOrDeathDefaultChoice</elementReference>
+        </value>
     </variables>
     <variables>
         <name>VisualValue</name>
