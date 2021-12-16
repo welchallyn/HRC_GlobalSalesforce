@@ -90,31 +90,6 @@
         </value>
     </choices>
     <decisions>
-        <name>Check_user_input</name>
-        <label>Check user input</label>
-        <locationX>191</locationX>
-        <locationY>341</locationY>
-        <defaultConnector>
-            <targetReference>Go_to_section_B</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>InjuryDeathcheck</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>X6_Injury_or_Death</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Blank</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>VR_Display</targetReference>
-            </connector>
-            <label>InjuryDeathcheck</label>
-        </rules>
-    </decisions>
-    <decisions>
         <name>Go_to_section_B</name>
         <label>Go to section B) ?</label>
         <locationX>421</locationX>
@@ -139,7 +114,7 @@
             <label>Yes</label>
         </rules>
     </decisions>
-    <description>Screen flow for Repair Template</description>
+    <description>Updates to remove default values in picklist options</description>
     <dynamicChoiceSets>
         <name>injuryOrDeath</name>
         <dataType>Picklist</dataType>
@@ -319,21 +294,22 @@
     <screens>
         <name>Section_A</name>
         <label>Section A</label>
-        <locationX>200</locationX>
-        <locationY>206</locationY>
+        <locationX>194</locationX>
+        <locationY>202</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <connector>
-            <targetReference>Check_user_input</targetReference>
+            <targetReference>Go_to_section_B</targetReference>
         </connector>
         <fields>
             <name>X1_Issue_covered_by_and_found_during_PM_or_BPI_PDI</name>
             <choiceReferences>Choice_Yes</choiceReferences>
             <choiceReferences>Choice_No</choiceReferences>
-            <choiceReferences>Choice_Question1_DefaultValue</choiceReferences>
             <dataType>String</dataType>
-            <defaultSelectedChoiceReference>Choice_Question1_DefaultValue</defaultSelectedChoiceReference>
+            <defaultValue>
+                <elementReference>Choice_Question1_DefaultValue</elementReference>
+            </defaultValue>
             <fieldText>1) Issue covered by and found during PM or BPI/PDI?</fieldText>
             <fieldType>RadioButtons</fieldType>
             <isRequired>true</isRequired>
@@ -341,10 +317,9 @@
         <fields>
             <name>X6_Injury_or_Death</name>
             <choiceReferences>injuryOrDeath</choiceReferences>
-            <choiceReferences>Choice_Question7_DefaultValue</choiceReferences>
             <dataType>String</dataType>
             <defaultValue>
-                <stringValue>Blank</stringValue>
+                <elementReference>Choice_Question7_DefaultValue</elementReference>
             </defaultValue>
             <fieldText>2) Allegation of Injury/Patient Involvement or Death:</fieldText>
             <fieldType>RadioButtons</fieldType>
@@ -384,9 +359,10 @@
             <name>X4A_Functioning_as_designed_post_repair</name>
             <choiceReferences>Choice_Yes</choiceReferences>
             <choiceReferences>Choice_No</choiceReferences>
-            <choiceReferences>Choice_Question4_DefaultValue</choiceReferences>
             <dataType>String</dataType>
-            <defaultSelectedChoiceReference>Choice_Question4_DefaultValue</defaultSelectedChoiceReference>
+            <defaultValue>
+                <elementReference>Choice_Question4_DefaultValue</elementReference>
+            </defaultValue>
             <fieldText>6) Functioning as designed post repair:</fieldText>
             <fieldType>RadioButtons</fieldType>
             <isRequired>false</isRequired>
@@ -479,9 +455,10 @@
             <name>X9_PM_Sticker_present</name>
             <choiceReferences>Choice_Yes</choiceReferences>
             <choiceReferences>Choice_No</choiceReferences>
-            <choiceReferences>Choice_Question9_DefaultValue</choiceReferences>
             <dataType>String</dataType>
-            <defaultSelectedChoiceReference>Choice_Question9_DefaultValue</defaultSelectedChoiceReference>
+            <defaultValue>
+                <elementReference>Choice_Question9_DefaultValue</elementReference>
+            </defaultValue>
             <fieldText>9) PM Sticker present</fieldText>
             <fieldType>RadioButtons</fieldType>
             <isRequired>false</isRequired>
@@ -499,22 +476,6 @@
                 <errorMessage>&lt;p&gt;Input a date, or mark &quot;No PM Sticker date&quot;&lt;/p&gt;</errorMessage>
                 <formulaExpression>MONTH({!X9_PM_sticker_date}) &gt;= 1</formulaExpression>
             </validationRule>
-        </fields>
-        <showFooter>true</showFooter>
-        <showHeader>true</showHeader>
-    </screens>
-    <screens>
-        <name>VR_Display</name>
-        <label>VR Display</label>
-        <locationX>204</locationX>
-        <locationY>483</locationY>
-        <allowBack>true</allowBack>
-        <allowFinish>false</allowFinish>
-        <allowPause>false</allowPause>
-        <fields>
-            <name>Injury_Death_VR_Display</name>
-            <fieldText>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 11.36px; font-family: Arial, Helvetica, sans-serif; color: rgb(0, 0, 0);&quot;&gt;Complaint cannot be created if the Injury or Death field is set to blank value&lt;/span&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>true</showHeader>
