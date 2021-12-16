@@ -30,9 +30,6 @@
         <assignmentItems>
             <assignToReference>myComplaintQualification.HRCSVC_Device_Message_Alert__c</assignToReference>
             <operator>Assign</operator>
-            <value>
-                <stringValue>Yes</stringValue>
-            </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>myComplaintQualification.HRCSVC_Device_Used_On_With_Individual__c</assignToReference>
@@ -211,7 +208,7 @@
             <assignToReference>myComplaintQualification.HRCSVC_Source_Of_Complaint__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <stringValue>Customer</stringValue>
+                <stringValue></stringValue>
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -229,9 +226,6 @@
         <assignmentItems>
             <assignToReference>myComplaintQualification.HRCSVC_Test_performed_per_service_manual__c</assignToReference>
             <operator>Assign</operator>
-            <value>
-                <stringValue>Functional</stringValue>
-            </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>myComplaintQualification.HRCSVC_Part_Serial_and_or_Revision__c</assignToReference>
@@ -265,16 +259,10 @@
         <assignmentItems>
             <assignToReference>myComplaintQualification.HRCSVC_Age_unit_of_measure__c</assignToReference>
             <operator>Assign</operator>
-            <value>
-                <stringValue>Days</stringValue>
-            </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>myComplaintQualification.HRCSVC_Weight_unit_of_measure__c</assignToReference>
             <operator>Assign</operator>
-            <value>
-                <stringValue>Pounds</stringValue>
-            </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>myComplaintQualification.HRCSVC_Is_the_cause_of_the_death_known__c</assignToReference>
@@ -352,9 +340,6 @@
         <assignmentItems>
             <assignToReference>myComplaintQualification.HRCSVC_Occurrence_Location_Complaint__c</assignToReference>
             <operator>Assign</operator>
-            <value>
-                <stringValue>Unknown</stringValue>
-            </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>myComplaintQualification.HRCSVC_Occurrence_Location_Other__c</assignToReference>
@@ -366,9 +351,6 @@
         <assignmentItems>
             <assignToReference>myComplaintQualification.HRCSVC_Healthcare_Professional__c</assignToReference>
             <operator>Assign</operator>
-            <value>
-                <stringValue>Unknown</stringValue>
-            </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>myComplaintQualification.HRCSVC_Occurrence_Date_Known__c</assignToReference>
@@ -432,8 +414,8 @@
     <assignments>
         <name>Assign_QC_from_Qualification_Screen</name>
         <label>Assign QC from Qualification Screen</label>
-        <locationX>453</locationX>
-        <locationY>1089</locationY>
+        <locationX>443</locationX>
+        <locationY>1091</locationY>
         <assignmentItems>
             <assignToReference>myComplaintQualification.HRCSVC_Injury_or_Death__c</assignToReference>
             <operator>Assign</operator>
@@ -912,46 +894,6 @@
         </rules>
     </decisions>
     <decisions>
-        <name>Check_User_s_input</name>
-        <label>Check User&apos;s input</label>
-        <locationX>186</locationX>
-        <locationY>964</locationY>
-        <defaultConnector>
-            <targetReference>Assign_QC_from_Qualification_Screen</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>Injury_Death_Blank_Value</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>Injury_or_Death</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>None</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Fault_Screen</targetReference>
-            </connector>
-            <label>Injury Death Blank Value</label>
-        </rules>
-        <rules>
-            <name>Condition_is_Other</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>Condition</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Blank</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Fault_Screen</targetReference>
-            </connector>
-            <label>Condition is Other</label>
-        </rules>
-    </decisions>
-    <decisions>
         <name>Complaint_Qualified</name>
         <label>Complaint Qualified?</label>
         <locationX>660</locationX>
@@ -1155,7 +1097,7 @@
             <label>Resolution Yes</label>
         </rules>
     </decisions>
-    <description>v13: Added Doc Troubleshooting field to Resolution screen</description>
+    <description>v14: Fix for SE-2868: Complaint Qualification - Condition error message (remove reference to Condition field)</description>
     <dynamicChoiceSets>
         <name>AgeUnitOfMeasureDefault</name>
         <dataType>Picklist</dataType>
@@ -1526,47 +1468,6 @@
         <showHeader>true</showHeader>
     </screens>
     <screens>
-        <name>Fault_Screen</name>
-        <label>Fault Screen</label>
-        <locationX>190</locationX>
-        <locationY>1235</locationY>
-        <allowBack>true</allowBack>
-        <allowFinish>false</allowFinish>
-        <allowPause>false</allowPause>
-        <fields>
-            <name>Injury_Death_VR_Display</name>
-            <fieldText>&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif; font-size: 11.36px;&quot;&gt;Complaint cannot be created if the Injury or Death field is set to None value&lt;/span&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-            <visibilityRule>
-                <conditionLogic>and</conditionLogic>
-                <conditions>
-                    <leftValueReference>Injury_or_Death</leftValueReference>
-                    <operator>EqualTo</operator>
-                    <rightValue>
-                        <stringValue>None</stringValue>
-                    </rightValue>
-                </conditions>
-            </visibilityRule>
-        </fields>
-        <fields>
-            <name>Condition_VR_display</name>
-            <fieldText>&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif; font-size: 11.36px;&quot;&gt;Complaint cannot be created if the condition field is set to None&lt;/span&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-            <visibilityRule>
-                <conditionLogic>and</conditionLogic>
-                <conditions>
-                    <leftValueReference>Condition</leftValueReference>
-                    <operator>EqualTo</operator>
-                    <rightValue>
-                        <stringValue>None</stringValue>
-                    </rightValue>
-                </conditions>
-            </visibilityRule>
-        </fields>
-        <showFooter>true</showFooter>
-        <showHeader>true</showHeader>
-    </screens>
-    <screens>
         <description>Please Check the associated case and fill KB Article field</description>
         <name>KB_Article_Is_Not_There_Please_Check</name>
         <label>KB Article Is Not There Please Check</label>
@@ -1606,12 +1507,12 @@
         <name>Qualification_Form</name>
         <label>Qualification Form</label>
         <locationX>443</locationX>
-        <locationY>868</locationY>
+        <locationY>869</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
         <connector>
-            <targetReference>Check_User_s_input</targetReference>
+            <targetReference>Assign_QC_from_Qualification_Screen</targetReference>
         </connector>
         <fields>
             <name>Qualification_Form_Section1</name>
@@ -1657,9 +1558,10 @@
                 <fields>
                     <name>Source_of_Complaint</name>
                     <choiceReferences>sourceOfComplaint</choiceReferences>
-                    <choiceReferences>sourceOfComplaintDefault</choiceReferences>
                     <dataType>String</dataType>
-                    <defaultSelectedChoiceReference>sourceOfComplaintDefault</defaultSelectedChoiceReference>
+                    <defaultValue>
+                        <elementReference>myComplaintQualification.HRCSVC_Source_Of_Complaint__c</elementReference>
+                    </defaultValue>
                     <fieldText>Source of Complaint</fieldText>
                     <fieldType>DropdownBox</fieldType>
                     <isRequired>true</isRequired>
@@ -1667,9 +1569,10 @@
                 <fields>
                     <name>Complaint_Occupation</name>
                     <choiceReferences>complaintOccupation</choiceReferences>
-                    <choiceReferences>complaintOccupationDefault</choiceReferences>
                     <dataType>String</dataType>
-                    <defaultSelectedChoiceReference>complaintOccupationDefault</defaultSelectedChoiceReference>
+                    <defaultValue>
+                        <elementReference>myComplaintQualification.HRCSVC_Complaint_Occupation__c</elementReference>
+                    </defaultValue>
                     <fieldText>Complaint Occupation</fieldText>
                     <fieldType>DropdownBox</fieldType>
                     <isRequired>true</isRequired>
@@ -1708,7 +1611,6 @@
                 <fields>
                     <name>Condition</name>
                     <choiceReferences>ConditionDefault</choiceReferences>
-                    <choiceReferences>Condition1</choiceReferences>
                     <dataType>String</dataType>
                     <defaultValue>
                         <elementReference>myComplaintQualification.HRCSVC_Condition__c</elementReference>
@@ -1872,7 +1774,7 @@
                     </defaultValue>
                     <fieldText>At the time the issue was found, was device being used on or with an individual (Caregiver, Patient, Biomed, etc)?</fieldText>
                     <fieldType>DropdownBox</fieldType>
-                    <isRequired>true</isRequired>
+                    <isRequired>false</isRequired>
                     <visibilityRule>
                         <conditionLogic>1</conditionLogic>
                         <conditions>
@@ -1913,7 +1815,7 @@
                     </defaultValue>
                     <fieldText>Is the date of the death known?</fieldText>
                     <fieldType>DropdownBox</fieldType>
-                    <isRequired>true</isRequired>
+                    <isRequired>false</isRequired>
                     <visibilityRule>
                         <conditionLogic>and</conditionLogic>
                         <conditions>
@@ -1981,7 +1883,7 @@
                     </defaultValue>
                     <fieldText>Individual&apos;s Outcome</fieldText>
                     <fieldType>DropdownBox</fieldType>
-                    <isRequired>true</isRequired>
+                    <isRequired>false</isRequired>
                     <visibilityRule>
                         <conditionLogic>1</conditionLogic>
                         <conditions>
@@ -2093,7 +1995,7 @@
             </defaultValue>
             <fieldText>What is the individual’s gender?</fieldText>
             <fieldType>DropdownBox</fieldType>
-            <isRequired>true</isRequired>
+            <isRequired>false</isRequired>
             <visibilityRule>
                 <conditionLogic>1 OR 2</conditionLogic>
                 <conditions>
@@ -2149,7 +2051,7 @@
             </defaultValue>
             <fieldText>Age Unit Of Measure</fieldText>
             <fieldType>DropdownBox</fieldType>
-            <isRequired>true</isRequired>
+            <isRequired>false</isRequired>
             <visibilityRule>
                 <conditionLogic>1 OR 2</conditionLogic>
                 <conditions>
@@ -2205,7 +2107,7 @@
             </defaultValue>
             <fieldText>Weight Unit Of Measure</fieldText>
             <fieldType>DropdownBox</fieldType>
-            <isRequired>true</isRequired>
+            <isRequired>false</isRequired>
             <visibilityRule>
                 <conditionLogic>1 OR 2</conditionLogic>
                 <conditions>
@@ -2302,7 +2204,7 @@
             </defaultValue>
             <fieldText>Was the operator of the device a healthcare professional (Dr/Nurse/Therapist)?</fieldText>
             <fieldType>DropdownBox</fieldType>
-            <isRequired>true</isRequired>
+            <isRequired>false</isRequired>
             <visibilityRule>
                 <conditionLogic>(1 OR 5) AND (2)  OR 3 OR 4</conditionLogic>
                 <conditions>
@@ -2411,7 +2313,7 @@
         <name>Resolution_Information</name>
         <label>Resolution Information</label>
         <locationX>1394</locationX>
-        <locationY>801</locationY>
+        <locationY>802</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -2421,9 +2323,10 @@
         <fields>
             <name>Functioning_as_designed_post_repair</name>
             <choiceReferences>functioningAsDesigned</choiceReferences>
-            <choiceReferences>functioningAsDesignedDefault</choiceReferences>
             <dataType>String</dataType>
-            <defaultSelectedChoiceReference>functioningAsDesignedDefault</defaultSelectedChoiceReference>
+            <defaultValue>
+                <elementReference>myComplaintQualification.HRC_Functioning_as_designed_post_repair__c</elementReference>
+            </defaultValue>
             <fieldText>Functioning as designed post repair:</fieldText>
             <fieldType>RadioButtons</fieldType>
             <isRequired>false</isRequired>
