@@ -11,5 +11,5 @@ OR(
  ISPICKVAL(Status, &apos;Resolved&apos;),
  ISPICKVAL(Status, &apos;Closed&apos;))
 )</errorConditionFormula>
-    <errorMessage>Please ensure Describe Cause Troubleshooting, Resolution, Occurrence Location on complaint qualification is filled in before closing a case</errorMessage>
+    <errorMessage>Please ensure Describe Cause Troubleshooting, Resolution, Occurrence Location, Functioning as designed post repair, Tests performed per service manual on complaint qualification is filled in before closing a case</errorMessage>
 </ValidationRule>
